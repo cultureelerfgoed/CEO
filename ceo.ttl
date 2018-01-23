@@ -6,6 +6,7 @@
 # prefix: ceo
 
 @prefix ceo: <https://data.cultureelerfgoed.nl/vocab/def/ceo#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -14,16 +15,10 @@
 <https://data.cultureelerfgoed.nl/vocab/def/ceo>
   rdf:type owl:Ontology ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports dcterms: ;
   owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
-.
-ceo:Aanwijzingsreden
-  rdf:type owl:Class ;
-  rdfs:comment "De reden waarom een (rijks)monument is aangewezen."@nl ;
-  rdfs:label "Aanwijzingsreden"@nl ;
-  rdfs:subClassOf owl:Thing ;
 .
 ceo:ArcheologischComplex
   rdf:type owl:Class ;
@@ -49,10 +44,11 @@ ceo:ArcheologischeWaardering
   rdfs:label "Archeologische waardering"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
-ceo:BebouwdeKomType
+ceo:BeschermdeOnroerendeZaakOmschrijving
   rdf:type owl:Class ;
-  rdfs:comment "Nog toevoegen"@nl ;
-  rdfs:label "Bebouwde kom type"@nl ;
+  dcterms:valid "2018-01-23" ;
+  rdfs:comment "Aanduiding of omschrijving van de beschermde onroerende zaak of zaken."@nl ;
+  rdfs:label "Beschermde onroerende zaak omschrijving"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:Complex
@@ -132,11 +128,6 @@ ceo:behoortTotComplex
   rdfs:comment "Property voor het samenstellen van complexen."@nl ;
   rdfs:label "behoort tot complex"@nl ;
 .
-ceo:heeftAanwijzingsReden
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "Nog toevoegen"@nl ;
-  rdfs:label "heeft aanwijzings reden"@nl ;
-.
 ceo:heeftActor
   rdf:type owl:ObjectProperty ;
   rdfs:comment "Dit is een persoon of organisatie die iets doet bij een bepaald proces van cultureel erfgoed."@nl ;
@@ -147,10 +138,10 @@ ceo:heeftArcheologischeWaardering
   rdfs:comment "Nog toevoegen."@nl ;
   rdfs:label "heeft archeologische waardering"@nl ;
 .
-ceo:heeftBebouwdeKomType
+ceo:heeftBeschermdeOnroerendeZaakOmschrijving
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "Nog toevoegen. "@nl ;
-  rdfs:label "heeft bebouwde kom type"@nl ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft beschermde onroerende zaak omschrijving"@nl ;
 .
 ceo:heeftFunctie
   rdf:type owl:ObjectProperty ;
@@ -218,4 +209,9 @@ ceo:heeftWerelderfgoedStatus
   rdf:type owl:ObjectProperty ;
   rdfs:comment "Nog toevoegen."@nl ;
   rdfs:label "heeft werelderfgoed status"@nl ;
+.
+ceo:ligtInGemeente
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Deze property legt vast dat een CultuurHistorischObject gevoed uit overheid:gemeenten."@nl ;
+  rdfs:label "ligt in gemeente"@nl ;
 .
