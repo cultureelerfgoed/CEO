@@ -19,8 +19,203 @@
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
-ceo:CultuurHistorischObject
+ceo:Aanwijzingsreden
   rdf:type owl:Class ;
-  rdfs:label "Cultuur historisch object" ;
+  rdfs:comment "De reden waarom een (rijks)monument is aangewezen."@nl ;
+  rdfs:label "Aanwijzingsreden"@nl ;
   rdfs:subClassOf owl:Thing ;
+.
+ceo:ArcheologischComplex
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Archeologisch complex"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:ArcheologischOnderzoeksgebied
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Archeologisch onderzoeksgebied"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:ArcheologischTerrein
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Archeologisch terrein"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:ArcheologischeWaardering
+  rdf:type owl:Class ;
+  rdfs:comment "Waardering archeologische terreinen in vier categorieën."@nl ;
+  rdfs:label "Archeologische waardering"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceo:BebouwdeKomType
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Bebouwde kom type"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceo:Complex
+  rdf:type owl:Class ;
+  rdfs:comment "Rijksmonumenten die als complex zijn aangewezen."@nl ;
+  rdfs:label "Complex"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:CultuurhistorischObject
+  rdf:type owl:Class ;
+  rdfs:comment "OWL Class die het cultuurhistorisch object representeerd."@nl ;
+  rdfs:label "Cultuur historisch object"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceo:Gezicht
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Gezicht"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:Grondsporen
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Grondsporen"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:JuridischeStatus
+  rdf:type owl:Class ;
+  rdfs:comment "Class voor alle voorkomende juridische statussen met betrekking tot rijksmonumenten."@nl ;
+  rdfs:label "Juridische status"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceo:Kwaliteitswaarde
+  rdf:type owl:Class ;
+  rdfs:comment "Aanduiding of de geometrie of de koppeling met de basisregistratie de (geometrische) plaats globaal of exact aangeeft."@nl ;
+  rdfs:label "Kwaliteitswaarde"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceo:MonumentAard
+  rdf:type owl:Class ;
+  rdfs:comment "De waarde die aangeeft of de aard van een monument archeologisch of gebouwd is."@nl ;
+  rdfs:label "Monument aard"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceo:Rijksmonument
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Rijksmonument"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:Toestandswaarde
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Toestandswaarde"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceo:Vondsten
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Vondsten"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:Werelderfgoed
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Werelderfgoed"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:WerelderfgoedStatus
+  rdf:type owl:Class ;
+  rdfs:comment "Werelderfgoed is cultureel en natuurlijk erfgoed dat wordt beschouwd als onvervangbaar, uniek en eigendom van de hele wereld, en waarvan het van groot belang wordt geacht om te behouden.  Alleen erfgoed dat is ingeschreven op de werelderfgoedlijst van UNESCO mag deze titel dragen."@nl ;
+  rdfs:label "Werelderfgoed status"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceo:behoortTotComplex
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Property voor het samenstellen van complexen."@nl ;
+  rdfs:label "behoort tot complex"@nl ;
+.
+ceo:heeftAanwijzingsReden
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "heeft aanwijzings reden"@nl ;
+.
+ceo:heeftActor
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Dit is een persoon of organisatie die iets doet bij een bepaald proces van cultureel erfgoed."@nl ;
+  rdfs:label "heeft actor"@nl ;
+.
+ceo:heeftArcheologischeWaardering
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft archeologische waardering"@nl ;
+.
+ceo:heeftBebouwdeKomType
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen. "@nl ;
+  rdfs:label "heeft bebouwde kom type"@nl ;
+.
+ceo:heeftFunctie
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft functie"@nl ;
+.
+ceo:heeftHuidigeFunctie
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft huidige functie"@nl ;
+  rdfs:subPropertyOf ceo:heeftFunctie ;
+.
+ceo:heeftJuridischeStatus
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Feitelijke juridische status."@nl ;
+  rdfs:label "heeft juridische status"@nl ;
+.
+ceo:heeftKwaliteitswaarde
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft kwaliteitswaarde"@nl ;
+.
+ceo:heeftMonumentAard
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft monument aard"@nl ;
+.
+ceo:heeftOorspronkelijkeFunctie
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft oorspronkelijke functie"@nl ;
+  rdfs:subPropertyOf ceo:heeftFunctie ;
+.
+ceo:heeftRijksmonument
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft rijksmonument"@nl ;
+.
+ceo:heeftSitueringBij
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Geeft de situering aan van een rijksmonument ten opzichte van een adres; namelijk bij."@nl ;
+  rdfs:label "heeft situering bij"@nl ;
+.
+ceo:heeftSitueringTegenover
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Geeft de situering aan van een rijksmonument ten opzichte van een adres; namelijk tegenover."@nl ;
+  rdfs:label "heeft situering tegenover"@nl ;
+.
+ceo:heeftStatus
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Feitelijke juridische status van een rijksmonumentale bescherming."@nl ;
+  rdfs:label "heeft status"@nl ;
+.
+ceo:heeftToestandswaarde
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft toestandswaarde"@nl ;
+.
+ceo:heeftType
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft type"@nl ;
+.
+ceo:heeftWerelderfgoedStatus
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "Nog toevoegen."@nl ;
+  rdfs:label "heeft werelderfgoed status"@nl ;
 .
