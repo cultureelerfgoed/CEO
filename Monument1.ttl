@@ -1,0 +1,50 @@
+@prefix bag: <http://bag.basisregistraties.overheid.nl/def/bag#> .
+@prefix ceo: <https://data.cultureelerfgoed.nl/vocab/def/ceo2#> .
+@prefix ceo_beg: <http://data.cultureelerfgoed.nl/ceo2/begrip/id/> .
+@prefix ceo_col: <http://data.cultureelerfgoed.nl/ceo2/collectie/id/> .
+@prefix ceo_sh: <https://data.cultureelerfgoed.nl/vocab/def/ceo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ogc: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owms: <http://standaarden.overheid.nl/owms/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.cultureelerfgoed.nl/ceo/doc/monument/1>
+  rdf:type ceo:CultuurHistorischObjectbeschrijving ;
+  ceo:beginGeldigheid "1970-03-26"^^xsd:date ;
+  ceo:beginRegistratie "1970-03-26"^^xsd:date ;
+  prov:wasAttributedTo owms:Rijksdienst_voor_het_Cultureel_Erfgoed ;
+  ceo:isVertrouwelijk false ;
+  foaf:primaryTopic <http://data.cultureelerfgoed.nl/ceo/id/monument/1> ;
+.
+
+<http://data.cultureelerfgoed.nl/ceo/id/monument/1>
+  rdf:type ceo:Rijksmonument ;
+  rdfs:label """Monumentnummer: 1
+Oudezijds Achterburgwal 19 1012DA te Amsterdam"""@nl
+  ceo:rijksmonumentnummer "1" ;
+  ceo:status ceo_beg:Rijksmonument_Status ;
+  ceo:internationaalKenteken false ;
+  ceo:cultuurhistorischeOmschrijving "Pand met halsgevel met gelobde afdekking (plm 1750)."@nl ;
+  foaf:isPrimaryTopicOf <http://data.cultureelerfgoed.nl/ceo/doc/monument/1> ;
+  wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/monument/1> ;
+  #TODO
+  ceo:adres [
+    owl:sameAs <http://bag.basisregistraties.overheid.nl/bag/id/nummeraanduiding/0363200000427285>
+  ]
+.
+
+<http://bag.basisregistraties.overheid.nl/bag/id/verblijfsobject/0363010000758690>
+  rdf:type bag:verblijfsobject ;
+  bag:hoofdadres <http://bag.basisregistraties.overheid.nl/bag/id/nummeraanduiding/0363200000427285> ;
+  bag:pandrelatering <http://bag.basisregistraties.overheid.nl/bag/id/pand/0363100012177986> ;
+.
