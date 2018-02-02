@@ -1,6 +1,11 @@
 # baseURI: https://data.cultureelerfgoed.nl/vocab/def/ceo
+# imports: file:///TopBraid/RCE/Gemeente.rdf
+# imports: file:///TopBraid/RCE/Provincie.rdf
+# imports: http://data.pdok.nl/def/pdok
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/dc/terms/
+# imports: http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf
+# imports: http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/
 # imports: http://www.w3.org/2003/01/geo/wgs84_pos
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/ns/locn
@@ -14,10 +19,18 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://www.w3.org/ns/locn#addressArea>
+  rdfs:comment "In de CEO ontologie wordt deze property ook gebruikt om de locatieregistratie weer te geven voor rijksmonumenten die geen verblijfsobject zijn."@nl ;
+.
 <https://data.cultureelerfgoed.nl/vocab/def/ceo>
   rdf:type owl:Ontology ;
+  owl:imports <file:///TopBraid/RCE/Gemeente.rdf> ;
+  owl:imports <file:///TopBraid/RCE/Provincie.rdf> ;
+  owl:imports <http://data.pdok.nl/def/pdok> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports dcterms: ;
+  owl:imports <http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf> ;
+  owl:imports <http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> ;
   owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/ns/locn> ;
@@ -83,9 +96,15 @@ ceo:Grondsporen
 ceo:JuridischeStatus
   rdf:type owl:Class ;
   dcterms:created "2018-01-30" ;
-  rdfs:comment "Hier wordt aangegeven wat de juridische status is van een object."@nl ;
+  rdfs:comment "Deze class JuridischeStatus is de representatie van de mogelijke juridische statussen die een rijksmonument kan hebben."@nl ;
   rdfs:label "Juridische status"@nl ;
   rdfs:subClassOf owl:Thing ;
+.
+ceo:Kennisregistratie
+  rdf:type owl:Class ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "De class Kennisregistratie is de representatie van vastgelegde kennisfeiten met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:label "Kennisregistratie"@nl ;
 .
 ceo:MonumentAard
   rdf:type owl:Class ;
@@ -126,11 +145,42 @@ ceo:heeftBeschermdeOnroerendeZaakOmschrijving
   rdfs:comment "Nog toevoegen."@nl ;
   rdfs:label "heeft beschermde onroerende zaak omschrijving"@nl ;
 .
+ceo:heeftBetrekkingOp
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "Deze property heeftBetrekkingOp"@nl ;
+  rdfs:label "Heeft betrekking op"@nl ;
+.
+ceo:heeftGemeente
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "De property heeftGemeente wordt gebruikt om de gemeente waarin het cultuurhistorisch object zich bevindt vast te leggen."@nl ;
+  rdfs:domain <http://www.w3.org/ns/locn#Address> ;
+  rdfs:label "Heeft gemeente"@nl ;
+  rdfs:range <http://standaarden.overheid.nl/owms/terms/Gemeente> ;
+  skos:editorialNote "Indien een cultuurhistorisch object rijksmonument is, dan heeft de property heeftGemeente, maar één waarde (functional property; cardinaliteit 1)."@nl ;
+.
+ceo:heeftHoofdadres
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "De property heeftHoofdadres wordt gebruikt om het hoofdadres van het rijksmonument vast te leggen."@nl ;
+  rdfs:label "heeft hoofdadres"@nl ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
+.
 ceo:heeftJuridischeStatus
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-01-30" ;
-  rdfs:comment "Feitelijke juridische status."@nl ;
+  rdfs:comment "De property heeftJuridischeStatus geeft aan of de status van het rijksmonument \"voorbeschermd\" of \"rijksmonument\" is."@nl ;
   rdfs:label "heeft juridische status"@nl ;
+.
+ceo:heeftLand
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "De property heeftLand wordt gebruikt om het land waarin het cultuurhistorisch object zich bevindt vast te leggen."@nl ;
+  rdfs:domain <http://www.w3.org/ns/locn#Address> ;
+  rdfs:label "heeft land"@nl ;
+  rdfs:range <http://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country> ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#adminUnitL1> ;
 .
 ceo:heeftMonumentAard
   rdf:type owl:ObjectProperty ;
@@ -138,12 +188,48 @@ ceo:heeftMonumentAard
   rdfs:comment "Nog toevoegen."@nl ;
   rdfs:label "heeft monument aard"@nl ;
 .
+ceo:heeftProvincie
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "De property heeftProvincie wordt gebruikt om de provincie waarin het cultuurhistorisch object zich bevindt vast te leggen."@nl ;
+  rdfs:domain <http://www.w3.org/ns/locn#Address> ;
+  rdfs:label "heeft provincie"@nl ;
+  rdfs:range <http://standaarden.overheid.nl/owms/terms/Provincie> ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#adminUnitL2> ;
+.
+ceo:heeftRegisteradres
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "De property heeftRegisteradres wordt gebruikt om het registeradres van het rijksmonument vast te leggen."@nl ;
+  rdfs:label "heeft registeradres"@nl ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
+.
 ceo:heeftRijksmonumentnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "30-1-18 11:39" ;
   rdfs:comment "Het unieke nummer waaronder het rijksmonument bekend is in het monumentenregister."@nl ;
   rdfs:label "heeft rijksmonumentnummer"@nl ;
   rdfs:range xsd:string ;
+.
+ceo:heeftSitueringBijAdres
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "De property heeftSitueringBijAdres wordt gebruikt om de situering van het rijksmonument dat geen verblijfsobject in de BAG is vast te leggen."@nl ;
+  rdfs:label "Heeft situering bij adres"@nl ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
+.
+ceo:heeftSitueringTegenoverAdres
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "De property heeftSitueringTegenoverAdres wordt gebruikt om de situering van het rijksmonument dat geen verblijfsobject in de BAG is vast te leggen."@nl ;
+  rdfs:label "Heeft situering tegenover adres"@nl ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
+.
+ceo:locatieOmschrijving
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-2-2" ;
+  rdfs:comment "De property locatieOmschrijving wordt gebruikt om de locatie registratie van een rijksmonument te omschrijven als het rijksmonument geen verblijfsobject in de BAG is."@nl ;
+  rdfs:label "Locatie omschrijving"@nl ;
 .
 ceo:onroerendGebouwd
   rdf:type ceo:MonumentAard ;
@@ -153,12 +239,13 @@ ceo:onroerendGebouwd
 ceo:rijksmonument
   rdf:type ceo:JuridischeStatus ;
   dcterms:created "2018-01-30" ;
-  rdfs:comment "Deze waarde geeft aan dat de juridische status rijksmonument is."@nl ;
+  rdfs:comment "Deze instantie van de class JuridischeStatus geeft aan dat de juridische status rijksmonument is."@nl ;
   rdfs:label "Rijksmonument"@nl ;
+  skos:editorialNote "link naar skos:concept in referentie netwerk toevoegen met owl:sameAs" ;
 .
 ceo:voorbeschermd
   rdf:type ceo:JuridischeStatus ;
   dcterms:created "30-1-18 9:13" ;
-  rdfs:comment "Deze waarde geeft aan dat de juridische status voorbeschermd is."@nl ;
+  rdfs:comment "Deze instantie van de class JuridischeStatus geeft aan dat de juridische status voorbeschermd is."@nl ;
   rdfs:label "Voorbeschermd"@nl ;
 .
