@@ -1,0 +1,621 @@
+# baseURI: https://data.cultureelerfgoed.nl/vocab/def/ceo2
+# imports: http://purl.org/dc/terms/
+# imports: http://rdfs.org/ns/void
+# imports: http://www.opengis.net/ont/geosparql#
+# imports: http://www.w3.org/2004/02/skos/core#
+# imports: http://www.w3.org/2007/05/powder-s#
+# imports: http://www.w3.org/ns/prov#
+# imports: http://www.w3.org/ns/shacl#
+# imports: http://xmlns.com/foaf/0.1/
+# prefix: ceo
+
+@prefix ceo: <https://data.cultureelerfgoed.nl/vocab/def/ceo2#> .
+@prefix ceo_beg: <http://data.cultureelerfgoed.nl/ceo2/begrip/id/> .
+@prefix ceo_col: <http://data.cultureelerfgoed.nl/ceo2/collectie/id/> .
+@prefix ceo_sh: <https://data.cultureelerfgoed.nl/vocab/def/ceo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ogc: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceo_beg:ArcheologischeKwaliteit
+  rdf:type skos:Concept ;
+  skos:narrower ceo_beg:Hoog_ArcheologischeKwaliteit ;
+  skos:narrower ceo_beg:Laag_ArcheologischeKwaliteit ;
+  skos:narrower ceo_beg:Middel_ArcheologischeKwaliteit ;
+  skos:prefLabel "Archeologische kwaliteit"@nl ;
+.
+ceo_beg:BouwkundigeKwaliteit
+  rdf:type skos:Concept ;
+  skos:narrower ceo_beg:Goed_BouwkundigeKwaliteit ;
+  skos:narrower ceo_beg:Matig_BouwkundigeKwaliteit ;
+  skos:narrower ceo_beg:Redelijk_BouwkundigeKwaliteit ;
+  skos:narrower ceo_beg:Slecht_BouwkundigeKwaliteit ;
+  skos:prefLabel "Bouwkundige kwaliteit"@nl ;
+.
+ceo_beg:Exact_Geometriekwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:Geometriekwaliteit ;
+  skos:notation "Exact" ;
+  skos:prefLabel "Exact (Geometriekwaliteit)"@nl ;
+.
+ceo_beg:Geometriekwaliteit
+  rdf:type skos:Concept ;
+  skos:narrower ceo_beg:Exact_Geometriekwaliteit ;
+  skos:narrower ceo_beg:Globaal_Geometriekwaliteit ;
+  skos:narrower ceo_beg:Onbekend_Geometriekwaliteit ;
+  skos:prefLabel "Geometriekwaliteit"@nl ;
+.
+ceo_beg:Globaal_Geometriekwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:Geometriekwaliteit ;
+  skos:notation "Globaal" ;
+  skos:prefLabel "Globaal (Geometriekwaliteit)"@nl ;
+.
+ceo_beg:Goed_BouwkundigeKwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:BouwkundigeKwaliteit ;
+  skos:notation "goed" ;
+  skos:prefLabel "Goed (Bouwkundige kwaliteit)"@nl ;
+.
+ceo_beg:Hoog_ArcheologischeKwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:ArcheologischeKwaliteit ;
+  skos:notation "Hoog" ;
+  skos:prefLabel "Hoog (Archeologische kwaliteit)"@nl ;
+.
+ceo_beg:Laag_ArcheologischeKwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:ArcheologischeKwaliteit ;
+  skos:notation "Laag" ;
+  skos:prefLabel "Laag (Archeologische kwaliteit)"@nl ;
+.
+ceo_beg:Matig_BouwkundigeKwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:BouwkundigeKwaliteit ;
+  skos:notation "matig" ;
+  skos:prefLabel "Matig (Bouwkundige kwaliteit)"@nl ;
+.
+ceo_beg:Middel_ArcheologischeKwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:ArcheologischeKwaliteit ;
+  skos:notation "Middel" ;
+  skos:prefLabel "Middel (Archeologische kwaliteit)"@nl ;
+.
+ceo_beg:NietBeschermd
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:Status ;
+  skos:notation "Niet beschermd" ;
+  skos:prefLabel "Niet beschermd"@nl ;
+.
+ceo_beg:Onbekend_Geometriekwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:Geometriekwaliteit ;
+  skos:notation "Onbekend" ;
+  skos:prefLabel "Onbekend (Geometriekwaliteit)"@nl ;
+.
+ceo_beg:Onbekend_Status
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:Status ;
+  skos:notation "Onbekend" ;
+  skos:prefLabel "Onbekend (Status)"@nl ;
+.
+ceo_beg:Redelijk_BouwkundigeKwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:BouwkundigeKwaliteit ;
+  skos:notation "redelijk" ;
+  skos:prefLabel "Redelijk (Bouwkundige kwaliteit)"@nl ;
+.
+ceo_beg:Rijksmonument_Status
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:Status ;
+  skos:notation "Rijksmonument" ;
+  skos:prefLabel "Rijksmonument (Status)"@nl ;
+.
+ceo_beg:Slecht_BouwkundigeKwaliteit
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:BouwkundigeKwaliteit ;
+  skos:notation "slecht" ;
+  skos:prefLabel "Slecht (Bouwkundige kwaliteit)"@nl ;
+.
+ceo_beg:Status
+  rdf:type skos:Concept ;
+  skos:narrower ceo_beg:NietBeschermd ;
+  skos:narrower ceo_beg:Onbekend_Status ;
+  skos:narrower ceo_beg:Rijksmonument_Status ;
+  skos:narrower ceo_beg:Voorbeschermd_Aangewezen ;
+  skos:narrower ceo_beg:Voorbeschermd_Adviesaanvraag ;
+  skos:narrower ceo_beg:Voorbeschermd_NietAangewezen ;
+  skos:prefLabel "Status"@nl ;
+.
+ceo_beg:Voorbeschermd_Aangewezen
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:Status ;
+  skos:notation "Voorbeschermd-Aangewezen" ;
+  skos:prefLabel "Voorbeschermd-aangewezen"@nl ;
+.
+ceo_beg:Voorbeschermd_Adviesaanvraag
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:Status ;
+  skos:notation "Voorbeschermd-Adviesaanvraag" ;
+  skos:prefLabel "Voorbeschermd-adviesaanvraag"@nl ;
+.
+ceo_beg:Voorbeschermd_NietAangewezen
+  rdf:type skos:Concept ;
+  skos:broader ceo_beg:Status ;
+  skos:notation "Voorbeschermd-Niet aangewezen" ;
+  skos:prefLabel "Voorbeschermd-niet-aangewezen"@nl ;
+.
+ceo_col:BouwkundigeStaat
+  rdf:type skos:Collection ;
+  rdfs:label "Bouwkundige staat waardenlijst"@nl ;
+  skos:member ceo_beg:Goed_BouwkundigeKwaliteit ;
+  skos:member ceo_beg:Matig_BouwkundigeKwaliteit ;
+  skos:member ceo_beg:Redelijk_BouwkundigeKwaliteit ;
+  skos:member ceo_beg:Slecht_BouwkundigeKwaliteit ;
+.
+ceo_col:JuridischeStatus
+  rdf:type skos:Collection ;
+  rdfs:label "Juridische status waardenlijst"@nl ;
+  skos:member ceo_beg:NietBeschermd ;
+  skos:member ceo_beg:Onbekend_Status ;
+  skos:member ceo_beg:Rijksmonument_Status ;
+  skos:member ceo_beg:Voorbeschermd_Aangewezen ;
+  skos:member ceo_beg:Voorbeschermd_Adviesaanvraag ;
+  skos:member ceo_beg:Voorbeschermd_NietAangewezen ;
+.
+ceo_col:Kwaliteitswaarde_Archeologie
+  rdf:type skos:Collection ;
+  rdfs:label "Kwaliteitswaarde (Archeologie) waardenlijst"@nl ;
+  skos:member ceo_beg:Hoog_ArcheologischeKwaliteit ;
+  skos:member ceo_beg:Laag_ArcheologischeKwaliteit ;
+  skos:member ceo_beg:Middel_ArcheologischeKwaliteit ;
+.
+ceo_col:Kwaliteitswaarde_Geometrie
+  rdf:type skos:Collection ;
+  rdfs:label "Kwaliteitswaarde (Geometrie) waardenlijst"@nl ;
+  skos:member ceo_beg:Exact_Geometriekwaliteit ;
+  skos:member ceo_beg:Globaal_Geometriekwaliteit ;
+  skos:member ceo_beg:Onbekend_Geometriekwaliteit ;
+.
+ceo_sh:CultuurhistorischObjectbeschrijving
+  rdf:type sh:NodeShape ;
+  rdfs:label "Cultuurhistorisch objectbeschrijving shape"@nl ;
+  sh:property [
+      sh:path prov:wasAttributedTo ;
+      sh:class prov:Agent ;
+      sh:name "was attributed to" ;
+    ] ;
+  sh:property [
+      sh:path foaf:primaryTopic ;
+      sh:class ceo:CultuurhistorischObject ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "hoofdonderwerp" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path foaf:topic ;
+      sh:name "onderwerp" ;
+      sh:nodeKind sh:BlankNodeOrIRI ;
+    ] ;
+  sh:property [
+      sh:path ceo:beginGeldigheid ;
+      sh:datatype xsd:date ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "begin geldigheid" ;
+    ] ;
+  sh:property [
+      sh:path ceo:beginRegistratie ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "begin registratie" ;
+    ] ;
+  sh:property [
+      sh:path ceo:eindGeldigheid ;
+      sh:datatype xsd:date ;
+      sh:maxCount 1 ;
+      sh:name "eind geldigheid" ;
+    ] ;
+  sh:property [
+      sh:path ceo:eindRegistratie ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:name "eind registratie" ;
+    ] ;
+  sh:property [
+      sh:path ceo:isVertrouwelijk ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "is vertrouwelijk" ;
+    ] ;
+  sh:targetClass ceo:CultuurHistorischObjectbeschrijving ;
+.
+ceo_sh:Cultuurhistorischobject
+  rdf:type sh:NodeShape ;
+  rdfs:label "Cultuurhistorisch object shape"@nl ;
+  sh:property [
+      sh:path wdrs:describedby ;
+      sh:class ceo:CultuurHistorischObjectbeschrijving ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "is beschreven door" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path foaf:isPrimaryTopicOf ;
+      sh:class ceo:CultuurHistorischObjectbeschrijving ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "is hoofdonderwerp van" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass ceo:CultuurhistorischObject ;
+.
+ceo_sh:Geometrie
+  rdf:type sh:NodeShape ;
+  rdfs:label "Geometrie shape "@nl ;
+  sh:property [
+      sh:path wdrs:describedby ;
+      sh:class ceo:CultuurHistorischObjectbeschrijving ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "is beschreven door" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path foaf:page ;
+      sh:class ceo:CultuurHistorischObjectbeschrijving ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "is onderwerp van" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      sh:path ceo:geometrieId ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "geometrie ID" ;
+      sh:pattern "^[a-zA-Z0-9]+$" ;
+    ] ;
+  sh:property [
+      sh:path ceo:geometriekwaliteit ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "geometriekwaliteit" ;
+      sh:node ceo_sh:Kwaliteitswaarde ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
+ceo_sh:JuridischeStatus
+  rdf:type sh:NodeShape ;
+  sh:name "Juridische status" ;
+  sh:property [
+      sh:path [
+          sh:inversePath skos:member ;
+        ] ;
+      sh:hasValue ceo_col:JuridischeStatus ;
+    ] ;
+.
+ceo_sh:Kwaliteitswaarde
+  rdf:type sh:NodeShape ;
+  sh:name "Kwaliteitswaarde" ;
+  sh:property [
+      sh:path [
+          sh:inversePath skos:member ;
+        ] ;
+      sh:hasValue ceo_col:Kwaliteitswaarde_Geometrie ;
+    ] ;
+.
+ceo_sh:Rijksmonument
+  rdf:type sh:NodeShape ;
+  rdfs:label "Rijksmonument shape"@nl ;
+  sh:property [
+      sh:path ceo:ligtBinnenBebouwdeKom ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:name "ligt binnen bebouwde kom" ;
+    ] ;
+  sh:property [
+      sh:path ceo:rijksmonumentnummer ;
+      skos:editorialNote "onduidelijk of het datatype hier een integer kan zijn." ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:maxLength 6 ;
+      sh:minCount 1 ;
+      sh:name "rijksmonumentnummer" ;
+      sh:pattern "^[0-9]+$" ;
+    ] ;
+  sh:property [
+      sh:path ceo:status ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "status" ;
+      sh:node ceo_sh:JuridischeStatus ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass ceo:Rijksmonument ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/ceo2>
+  rdf:type owl:Ontology ;
+  owl:imports dcterms: ;
+  owl:imports <http://rdfs.org/ns/void> ;
+  owl:imports ogc: ;
+  owl:imports skos: ;
+  owl:imports wdrs: ;
+  owl:imports prov: ;
+  owl:imports sh: ;
+  owl:imports foaf: ;
+.
+ceo:ArcheologischComplex
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Archeologisch complex"@nl ;
+  rdfs:subClassOf ceo:OnroerendCultuurhistorischObject ;
+.
+ceo:ArcheologischOnderzoeksgebied
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Archeologisch onderzoeksgebied"@nl ;
+  rdfs:subClassOf ceo:OnroerendCultuurhistorischObject ;
+.
+ceo:ArcheologischRijksmonument
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Archeologisch rijksmonument"@nl ;
+  rdfs:subClassOf ceo:Rijksmonument ;
+.
+ceo:ArcheologischTerrein
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Archeologisch terrein"@nl ;
+  rdfs:subClassOf ceo:OnroerendCultuurhistorischObject ;
+.
+ceo:Complex
+  rdf:type owl:Class ;
+  rdfs:comment "Rijksmonumenten die als complex zijn aangewezen."@nl ;
+  rdfs:label "Complex"@nl ;
+  rdfs:subClassOf ceo:OnroerendCultuurhistorischObject ;
+.
+ceo:CultuurHistorischObjectbeschrijving
+  rdf:type owl:Class ;
+  rdfs:comment "De beschrijving van een cultuurhistorisch object. Dit is de information resource die een beschrijving van een cultuurhistorisch object vanuit een bepaald context representeert"@nl ;
+  rdfs:label "Cultuurhistorisch objectbeschrijving"@nl ;
+  rdfs:subClassOf void:Dataset ;
+  rdfs:subClassOf prov:Entity ;
+  rdfs:subClassOf foaf:Document ;
+  skos:editorialNote """Hiermee representeren we een set uitspraken over een cultuurhistorisch object.
+De metadata die hoort bij de set uitspraken, zoals attributen voor geldigheidsdata en formele historie kunnen nu over de set uitspraken worden gesteld.
+Dit is ook weer het aanknopingspunt voor void metadata en provenance informatie."""@nl ;
+.
+ceo:CultuurhistorischObject
+  rdf:type owl:Class ;
+  rdfs:comment "OWL Class die het cultuurhistorisch object representeert."@nl ;
+  rdfs:label "Cultuurhistorisch object"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceo:Geometrie
+  rdf:type owl:Class ;
+  rdfs:subClassOf ogc:Geometry ;
+  skos:editorialNote "Het attribuut herkomst is niet gedefinieerd, maar kan worden afgeleid uit provenance metadata op CultuurHistorischObjectbeschrijving"@nl ;
+.
+ceo:Gezicht
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Gezicht"@nl ;
+  rdfs:subClassOf ceo:OnroerendCultuurhistorischObject ;
+.
+ceo:Grondsporen
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Grondsporen"@nl ;
+  rdfs:subClassOf ceo:OnroerendCultuurhistorischObject ;
+.
+ceo:OnroerendCultuurhistorischObject
+  rdf:type owl:Class ;
+  rdfs:label "Onroerend cultuurhistorisch object"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:OnroerendGebouwdRijksmonument
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Onroerend gebouwd rijksmonument"@nl ;
+  rdfs:subClassOf ceo:Rijksmonument ;
+.
+ceo:Rijksmonument
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Rijksmonument"@nl ;
+  rdfs:subClassOf ceo:OnroerendCultuurhistorischObject ;
+.
+ceo:RoerendCultuurhistorischObject
+  rdf:type owl:Class ;
+  rdfs:label "Roerend cultuurhistorisch object"@nl ;
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
+.
+ceo:Vondsten
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Vondsten"@nl ;
+  rdfs:subClassOf ceo:RoerendCultuurhistorischObject ;
+.
+ceo:Werelderfgoed
+  rdf:type owl:Class ;
+  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:label "Werelderfgoed"@nl ;
+  rdfs:subClassOf ceo:OnroerendCultuurhistorischObject ;
+.
+ceo:archeologischeKwaliteit
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "archeologische kwaliteit"@nl ;
+.
+ceo:archeologischeTerreinbeschrijving
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "archeologische terreinbeschrijving"@nl ;
+  rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:archeologischeWaarde
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "archeologische waarde"@nl ;
+  rdfs:subPropertyOf ceo:archeologischeKwaliteit ;
+.
+ceo:archeozoologischeBeschrijving
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "archeozoologische beschrijving"@nl ;
+  rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:beginGeldigheid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ceo:CultuurHistorischObjectbeschrijving ;
+  rdfs:label "begin geldigheid"@nl ;
+.
+ceo:beginRegistratie
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ceo:CultuurHistorischObjectbeschrijving ;
+  rdfs:label "begin registratie"@nl ;
+  rdfs:subPropertyOf prov:generatedAtTime ;
+.
+ceo:botanischeOpmerking
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "botanische opmerking"@nl ;
+  rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:bouwkundigeKwaliteit
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "bouwkundige kwaliteit"@nl ;
+.
+ceo:conservering
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "conservering"@nl ;
+  rdfs:subPropertyOf ceo:archeologischeKwaliteit ;
+.
+ceo:cultuurhistorischeOmschrijving
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "cultuurhistorische omschrijving"@nl ;
+  rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:eindGeldigheid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ceo:CultuurHistorischObjectbeschrijving ;
+  rdfs:label "eind geldigheid"@nl ;
+.
+ceo:eindRegistratie
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ceo:CultuurHistorischObjectbeschrijving ;
+  rdfs:label "eind registratie"@nl ;
+  rdfs:subPropertyOf prov:invalidatedAtTime ;
+.
+ceo:ensemblewaarde
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "ensemblewaarde"@nl ;
+  rdfs:subPropertyOf ceo:archeologischeKwaliteit ;
+.
+ceo:gaafheid
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "gaafheid"@nl ;
+  rdfs:subPropertyOf ceo:archeologischeKwaliteit ;
+.
+ceo:geometrieId
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain ceo:Geometrie ;
+  rdfs:label "geometrie ID"@nl ;
+.
+ceo:geometriekwaliteit
+  rdf:type owl:AnnotationProperty ;
+  dcterms:subject ceo_beg:Geometriekwaliteit ;
+  rdfs:labl "geometriekwaliteit"@nl ;
+.
+ceo:grondspoorbeschrijving
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "grondspoorbeschrijving"@nl ;
+  rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:herinneringswaarde
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "herinneringswaarde"@nl ;
+  rdfs:subPropertyOf ceo:archeologischeKwaliteit ;
+.
+ceo:informatiewaarde
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "informatiewaarde"@nl ;
+  rdfs:subPropertyOf ceo:archeologischeKwaliteit ;
+.
+ceo:internationaalKenteken
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "internationaal kenteken"@nl ;
+.
+ceo:internationaalKentekenOmschrijving
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "internationaal kenteken omschrijving"@nl ;
+  rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:isVertrouwelijk
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain ceo:CultuurHistorischObjectbeschrijving ;
+  rdfs:label "is vertrouwelijk"@nl ;
+.
+ceo:ligtBinnenBebouwdeKom
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "ligt binnen bebouwde kom"@nl ;
+  skos:editorialNote """Dit is de implementatie van attribuut 'BebouwdeKom' op klasse 'Rijksmonument' in de CHOI.
+Dit gegeven is vermoedelijk afleidbaar en niet specifiek voor een Rijksmonument. Daarom is het voor nu opgenomen als owl:AnnotationProperty.
+Gezien de enumeratie bestaat uit 'binnen bebouwde kom', 'buiten bebouwde kom', en 'onbekend', en omdat alles wat niet wordt uitgedrukt in RDF als onbekend beschouwd wordt, is gekozen om de overgebleven waarden uit te drukken als boolean.
+Wanneer verplichte invulling toch gewenst is, kunnen we er weer een enumeratie van maken."""@nl ;
+.
+ceo:omschrijving
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "omschrijving"@nl ;
+.
+ceo:planologischeBeschrijving
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "planologische beschrijving"@nl ;
+  rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:representativiteit
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "representativiteit"@nl ;
+  rdfs:subPropertyOf ceo:archeologischeKwaliteit ;
+.
+ceo:rijksmonumentnummer
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain ceo:Rijksmonument ;
+  rdfs:label "rijksmonumentnummer"@nl ;
+.
+ceo:schoonheid
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "schoonheid"@nl ;
+  rdfs:subPropertyOf ceo:archeologischeKwaliteit ;
+.
+ceo:status
+  rdf:type owl:AnnotationProperty ;
+  dcterms:subject ceo_beg:Status ;
+  rdfs:label "status"@nl ;
+.
+ceo:vondstbeschrijving
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "vondstbeschrijving"@nl ;
+  rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:waarderendeBeschrijving
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "waarderende beschrijving"@nl ;
+  rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:zeldzaamheid
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "zeldzaamheid"@nl ;
+  rdfs:subPropertyOf ceo:archeologischeKwaliteit ;
+.

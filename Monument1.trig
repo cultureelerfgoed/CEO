@@ -1,0 +1,204 @@
+@prefix bag: <http://bag.basisregistraties.overheid.nl/def/bag#> .
+@prefix ceo: <https://data.cultureelerfgoed.nl/vocab/def/ceo2#> .
+@prefix ceo_beg: <http://data.cultureelerfgoed.nl/ceo2/begrip/id/> .
+@prefix ceo_col: <http://data.cultureelerfgoed.nl/ceo2/collectie/id/> .
+@prefix ceo_sh: <https://data.cultureelerfgoed.nl/vocab/def/ceo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ogc: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owms: <http://standaarden.overheid.nl/owms/terms/> .
+@prefix pdok: <http://data.pdok.nl/def/pdok#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Huidig geldige graph
+<http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1> {
+
+  <http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1>
+    rdf:type ceo:CultuurHistorischObjectbeschrijving ;
+    ceo:beginGeldigheid "1970-03-26"^^xsd:dateTime ;
+    ceo:beginRegistratie "1970-03-26"^^xsd:dateTime ;
+    prov:wasAttributedTo owms:Rijksdienst_voor_het_Cultureel_Erfgoed ;
+    ceo:isVertrouwelijk false ;
+    foaf:primaryTopic <http://data.cultureelerfgoed.nl/ceo/id/monument/1> ;
+  .
+
+  <http://data.cultureelerfgoed.nl/ceo/id/monument/1>
+    rdf:type ceo:Rijksmonument ;
+    rdfs:label """Monumentnummer: 1
+  Oudezijds Achterburgwal 19 1012DA te Amsterdam"""@nl ;
+    ceo:rijksmonumentnummer "1" ;
+    ceo:status ceo_beg:Rijksmonument_Status ;
+    ceo:internationaalKenteken false ;
+    ceo:cultuurhistorischeOmschrijving "Pand met halsgevel met gelobde afdekking (plm 1750)."@nl ;
+    foaf:isPrimaryTopicOf <http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1> ;
+    ogc:hasGeometry <http://data.cultureelerfgoed.nl/ceo/id/geometrie/1> ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1> ;
+    #TODO in ontoloy
+    #----------------
+    ceo:adres [
+      owl:sameAs <http://bag.basisregistraties.overheid.nl/bag/id/nummeraanduiding/0363200000427285>
+    ] ;
+    ceo:bouwtype ceo_beg:Woonhuis_K_Bouwtype ;
+    ceo:hoofdfunctie _:hoofdfunctie_1 ;
+    ceo:functie _:hoofdfunctie_1 ;
+    ceo:functie _:functie_1 ;
+    #----------------
+  .
+
+  _:hoofdfunctie_1
+    rdf:type ceo:OorspronkelijkeFunctie ;
+    ceo:functiecategorie ceo_beg:Woonhuis_K_Bouwtype ;
+    foaf:page <http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1> ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1> ;
+  .
+
+  _:functie_1
+    rdf:type ceo:OorspronkelijkeFunctie ;
+    ceo:functiecategorie ceo_beg:KerkEnKerkonderdeel_ReligieuzeGebouwen ;
+    foaf:page <http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1> ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1> ;
+  .
+
+  <http://data.cultureelerfgoed.nl/ceo/id/geometrie/1>
+    rdf:type ceo:Geometrie ;
+    ceo:geometrieId "1" ;
+    ceo:geometriekwaliteit ceo_beg:Exact_Geometriekwaliteit ;
+    foaf:page <http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1> ;
+    ogc:asWKT "POINT (4.899977619327856 52.37415447580212)"^^ogc:wktLiteral ;
+    pdok:asWkt-RD "POINT (121826 487475)" ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19700326/monument/1> ;
+  .
+
+  <http://bag.basisregistraties.overheid.nl/bag/id/verblijfsobject/0363010000758690>
+    rdf:type bag:Verblijfsobject ;
+    bag:hoofdadres <http://bag.basisregistraties.overheid.nl/bag/id/nummeraanduiding/0363200000427285> ;
+    bag:pandrelatering <http://bag.basisregistraties.overheid.nl/bag/id/pand/0363100012177986> ;
+  .
+}
+
+# Vorige versie
+<http://data.cultureelerfgoed.nl/ceo/doc/19690510/monument/1> {
+
+  <http://data.cultureelerfgoed.nl/ceo/doc/19690510/monument/1>
+    rdf:type ceo:CultuurHistorischObjectbeschrijving ;
+    ceo:beginGeldigheid "1969-05-10"^^xsd:dateTime ;
+    ceo:beginRegistratie "1969-05-10"^^xsd:dateTime ;
+    ceo:eindGeldigheid "1970-03-26"^^xsd:dateTime ;
+    prov:wasAttributedTo owms:Rijksdienst_voor_het_Cultureel_Erfgoed ;
+    ceo:isVertrouwelijk false ;
+    foaf:primaryTopic <http://data.cultureelerfgoed.nl/ceo/id/monument/1> ;
+  .
+
+  <http://data.cultureelerfgoed.nl/ceo/id/monument/1>
+    rdf:type ceo:Rijksmonument ;
+    rdfs:label """Monumentnummer: 1
+  Oudezijds Achterburgwal 19 1012DA te Amsterdam"""@nl ;
+    ceo:rijksmonumentnummer "1" ;
+    ceo:status ceo_beg:Voorbeschermd_Aangewezen ;
+    ceo:internationaalKenteken false ;
+    ceo:cultuurhistorischeOmschrijving "Pand met halsgevel met gelobde afdekking (plm 1750)."@nl ;
+    foaf:isPrimaryTopicOf <http://data.cultureelerfgoed.nl/ceo/doc/19690510/monument/1> ;
+    ogc:hasGeometry <http://data.cultureelerfgoed.nl/ceo/id/geometrie/1> ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19690510/monument/1> ;
+    #TODO in ontoloy
+    #----------------
+    ceo:adres [
+      owl:sameAs <http://bag.basisregistraties.overheid.nl/bag/id/nummeraanduiding/0363200000427285>
+    ] ;
+    ceo:bouwtype ceo_beg:Woonhuis_K_Bouwtype ;
+    ceo:hoofdfunctie _:hoofdfunctie_1_2 ;
+    ceo:functie _:hoofdfunctie_1_2 ;
+    #----------------
+  .
+
+  _:hoofdfunctie_1_2
+    rdf:type ceo:OorspronkelijkeFunctie ;
+    ceo:functiecategorie ceo_beg:Woonhuis_K_Bouwtype ;
+    foaf:page <http://data.cultureelerfgoed.nl/ceo/doc/19690510/monument/1> ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19690510/monument/1> ;
+  .
+
+  <http://data.cultureelerfgoed.nl/ceo/id/geometrie/1>
+    rdf:type ceo:Geometrie ;
+    ceo:geometrieId "1" ;
+    ceo:geometriekwaliteit ceo_beg:Exact_Geometriekwaliteit ;
+    foaf:page <http://data.cultureelerfgoed.nl/ceo/doc/19690510/monument/1> ;
+    ogc:asWKT "POINT (4.899977619327856 52.37415447580212)"^^ogc:wktLiteral ;
+    pdok:asWkt-RD "POINT (121826 487475)" ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19690510/monument/1> ;
+  .
+
+  <http://bag.basisregistraties.overheid.nl/bag/id/verblijfsobject/0363010000758690>
+    rdf:type bag:Verblijfsobject ;
+    bag:hoofdadres <http://bag.basisregistraties.overheid.nl/bag/id/nummeraanduiding/0363200000427285> ;
+    bag:pandrelatering <http://bag.basisregistraties.overheid.nl/bag/id/pand/0363100012177986> ;
+  .
+}
+
+# Vorige versie
+<http://data.cultureelerfgoed.nl/ceo/doc/19620917/monument/1> {
+
+  <http://data.cultureelerfgoed.nl/ceo/doc/19620917/monument/1>
+    rdf:type ceo:CultuurHistorischObjectbeschrijving ;
+    ceo:beginGeldigheid "1962-09-17"^^xsd:dateTime ;
+    ceo:beginRegistratie "1962-09-17"^^xsd:dateTime ;
+    ceo:eindGeldigheid "1969-05-10"^^xsd:dateTime ;
+    prov:wasAttributedTo owms:Rijksdienst_voor_het_Cultureel_Erfgoed ;
+    ceo:isVertrouwelijk false ;
+    foaf:primaryTopic <http://data.cultureelerfgoed.nl/ceo/id/monument/1> ;
+  .
+
+  <http://data.cultureelerfgoed.nl/ceo/id/monument/1>
+    rdf:type ceo:Rijksmonument ;
+    rdfs:label """Monumentnummer: 1
+  Oudezijds Achterburgwal 19 1012DA te Amsterdam"""@nl ;
+    ceo:rijksmonumentnummer "1" ;
+    ceo:status ceo_beg:NietBeschermd ;
+    ceo:internationaalKenteken false ;
+    ceo:cultuurhistorischeOmschrijving "Pand met halsgevel met gelobde afdekking (plm 1750)."@nl ;
+    foaf:isPrimaryTopicOf <http://data.cultureelerfgoed.nl/ceo/doc/19620917/monument/1> ;
+    ogc:hasGeometry <http://data.cultureelerfgoed.nl/ceo/id/geometrie/1> ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19620917/monument/1> ;
+    #TODO in ontoloy
+    #----------------
+    ceo:adres [
+      owl:sameAs <http://bag.basisregistraties.overheid.nl/bag/id/nummeraanduiding/0363200000427285>
+    ] ;
+    ceo:bouwtype ceo_beg:Woonhuis_K_Bouwtype ;
+    ceo:hoofdfunctie _:hoofdfunctie_1_3 ;
+    ceo:functie _:hoofdfunctie_1_3 ;
+    #----------------
+  .
+
+  _:hoofdfunctie_1_3
+    rdf:type ceo:OorspronkelijkeFunctie ;
+    ceo:functiecategorie ceo_beg:Woonhuis_K_Bouwtype ;
+    foaf:page <http://data.cultureelerfgoed.nl/ceo/doc/19620917/monument/1> ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19620917/monument/1> ;
+  .
+
+  <http://data.cultureelerfgoed.nl/ceo/id/geometrie/1>
+    rdf:type ceo:Geometrie ;
+    ceo:geometrieId "1" ;
+    ceo:geometriekwaliteit ceo_beg:Exact_Geometriekwaliteit ;
+    foaf:page <http://data.cultureelerfgoed.nl/ceo/doc/19620917/monument/1> ;
+    ogc:asWKT "POINT (4.899977619327856 52.37415447580212)"^^ogc:wktLiteral ;
+    pdok:asWkt-RD "POINT (121826 487475)" ;
+    wdrs:describedby <http://data.cultureelerfgoed.nl/ceo/doc/19620917/monument/1> ;
+  .
+
+  <http://bag.basisregistraties.overheid.nl/bag/id/verblijfsobject/0363010000758690>
+    rdf:type bag:Verblijfsobject ;
+    bag:hoofdadres <http://bag.basisregistraties.overheid.nl/bag/id/nummeraanduiding/0363200000427285> ;
+    bag:pandrelatering <http://bag.basisregistraties.overheid.nl/bag/id/pand/0363100012177986> ;
+  .
+}
