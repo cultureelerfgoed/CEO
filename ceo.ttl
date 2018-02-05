@@ -44,7 +44,7 @@ ceo:ArcheologischComplex
 ceo:ArcheologischOnderzoeksgebied
   rdf:type owl:Class ;
   dcterms:created "2018-01-30" ;
-  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:comment "De class"@nl ;
   rdfs:label "Archeologisch onderzoeksgebied"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
