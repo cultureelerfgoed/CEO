@@ -5,7 +5,6 @@
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/dc/terms/
 # imports: http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf
-# imports: http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/
 # imports: http://www.w3.org/2003/01/geo/wgs84_pos
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/ns/locn
@@ -30,7 +29,6 @@
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports dcterms: ;
   owl:imports <http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf> ;
-  owl:imports <http://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/> ;
   owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/ns/locn> ;
@@ -39,7 +37,7 @@
 ceo:ArcheologischComplex
   rdf:type owl:Class ;
   dcterms:created "2018-01-30" ;
-  rdfs:comment "Nog toevoegen"@nl ;
+  rdfs:comment "De class ArcheologischComplex"@nl ;
   rdfs:label "Archeologisch complex"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
@@ -120,6 +118,13 @@ ceo:Rijksmonument
   rdfs:label "Rijksmonument"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
+ceo:Samenhang
+  rdf:type owl:Class ;
+  dcterms:created "2018-2-5" ;
+  rdfs:comment "De class Samenhang is de representatie van de relatie tussen twee cultuurhistorische objecten."@nl ;
+  rdfs:label "Samenhang"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
 ceo:Vondsten
   rdf:type owl:Class ;
   dcterms:created "2018-01-30" ;
@@ -142,14 +147,16 @@ ceo:archeologisch
 ceo:heeftBeschermdeOnroerendeZaakOmschrijving
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-01-30" ;
-  rdfs:comment "Nog toevoegen."@nl ;
-  rdfs:label "heeft beschermde onroerende zaak omschrijving"@nl ;
+  rdfs:comment "Deze property heeftBeschermdeOnroerendeZaakOmschrijving heeft betrekking op een korte aanduiding, of omschrijving, die volstaat om vast te stellen over welke onroerende zaak of zaken het gaat."@nl ;
+  rdfs:label "Heeft beschermde onroerende zaak omschrijving"@nl ;
 .
 ceo:heeftBetrekkingOp
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-2" ;
-  rdfs:comment "Deze property heeftBetrekkingOp"@nl ;
+  rdfs:comment "Deze property heeftBetrekkingOp wordt gebruikt om een kennisregistratie van een cultuurhistorisch object vast te leggen."@nl ;
+  rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Heeft betrekking op"@nl ;
+  rdfs:range ceo:CultuurhistorischObject ;
 .
 ceo:heeftGemeente
   rdf:type owl:ObjectProperty ;
@@ -173,20 +180,11 @@ ceo:heeftJuridischeStatus
   rdfs:comment "De property heeftJuridischeStatus geeft aan of de status van het rijksmonument \"voorbeschermd\" of \"rijksmonument\" is."@nl ;
   rdfs:label "heeft juridische status"@nl ;
 .
-ceo:heeftLand
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-2-2" ;
-  rdfs:comment "De property heeftLand wordt gebruikt om het land waarin het cultuurhistorisch object zich bevindt vast te leggen."@nl ;
-  rdfs:domain <http://www.w3.org/ns/locn#Address> ;
-  rdfs:label "heeft land"@nl ;
-  rdfs:range <http://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country> ;
-  rdfs:subPropertyOf <http://www.w3.org/ns/locn#adminUnitL1> ;
-.
 ceo:heeftMonumentAard
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-01-30" ;
-  rdfs:comment "Nog toevoegen."@nl ;
-  rdfs:label "heeft monument aard"@nl ;
+  rdfs:comment "Deze property heeftMonumentAard heeft betrekking op de aard van een rijksmonument."@nl ;
+  rdfs:label "Heeft monument aard"@nl ;
 .
 ceo:heeftProvincie
   rdf:type owl:ObjectProperty ;
@@ -210,6 +208,14 @@ ceo:heeftRijksmonumentnummer
   rdfs:comment "Het unieke nummer waaronder het rijksmonument bekend is in het monumentenregister."@nl ;
   rdfs:label "heeft rijksmonumentnummer"@nl ;
   rdfs:range xsd:string ;
+.
+ceo:heeftSamenhang
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-1-5" ;
+  rdfs:comment "Deze property heeftSamenhang wordt gebruikt om de samenhang tussen twee cultuurhistorische objecten aan te geven."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Heeft samenhang"@nl ;
+  rdfs:range ceo:Samenhang ;
 .
 ceo:heeftSitueringBijAdres
   rdf:type owl:ObjectProperty ;
