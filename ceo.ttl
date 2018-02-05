@@ -51,7 +51,7 @@ ceo:ArcheologischOnderzoeksgebied
 ceo:ArcheologischTerrein
   rdf:type owl:Class ;
   dcterms:created "2018-01-30" ;
-  rdfs:comment "De class Archeologisch Terrein bevat"@nl ;
+  rdfs:comment "De class Archeologisch Terrein bevat meerdere"@nl ;
   rdfs:label "Archeologisch terrein"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
