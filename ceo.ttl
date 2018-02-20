@@ -31,6 +31,14 @@
   rdfs:range ceo:Geometrie ;
   skos:editorialNote "De property hasGeometry legt de relatie tussen het cultuurhistorisch object en de geometrie vast."@nl ;
 .
+<http://www.opengis.net/ont/gml#Point>
+  rdfs:subClassOf ceo:Geometrie ;
+  skos:editorialNote "De class gml:Point is de representatie van een punt, in RD serialisatie, van een Cultuur historisch object."@nl ;
+.
+<http://www.opengis.net/ont/gml#Surface>
+  rdfs:subClassOf ceo:Geometrie ;
+  skos:editorialNote "De class gml:Surface is de representatie van een contour van een Cultuur historisch object."@nl ;
+.
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
   skos:editorialNote "De property lat legt de relatie tussen het cultuurhistorisch object en de breedtegraad vast."@nl ;
 .
@@ -262,14 +270,6 @@ ceo:heeftBetrekkingOp
   rdfs:label "Heeft betrekking op"@nl ;
   rdfs:range ceo:CultuurhistorischObject ;
 .
-ceo:heeftContour
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property heeftContour legt de relatie vast tussen cultuurhistorische objecten, als bijvoorbeeld aangelegde en archeologische rijksmonumenten, en de geografische weergave als contour."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Heeft contour"@nl ;
-  rdfs:range ceo:Geometrie ;
-  rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasGeometry> ;
-.
 ceo:heeftFunctie
   rdf:type owl:ObjectProperty ;
   rdfs:comment "De property heeftFunctie legt de relatie tussen het rijksmonument en de functie vast."@nl ;
@@ -445,7 +445,6 @@ ceo:rijksmonument
   dcterms:created "2018-01-30" ;
   rdfs:comment "Deze instantie van de class JuridischeStatus geeft aan dat de juridische status rijksmonument is."@nl ;
   rdfs:label "Rijksmonument"@nl ;
-  skos:editorialNote "link naar skos:concept in referentie netwerk toevoegen met owl:sameAs" ;
 .
 ceo:rijksmonumentnummer
   rdf:type owl:DatatypeProperty ;
