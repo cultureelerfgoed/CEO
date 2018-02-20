@@ -32,11 +32,9 @@
   skos:editorialNote "De property hasGeometry legt de relatie tussen het cultuurhistorisch object en de geometrie vast."@nl ;
 .
 <http://www.opengis.net/ont/gml#Point>
-  rdfs:subClassOf ceo:Geometrie ;
   skos:editorialNote "De class gml:Point is de representatie van een punt, in RD serialisatie, van een Cultuur historisch object."@nl ;
 .
 <http://www.opengis.net/ont/gml#Surface>
-  rdfs:subClassOf ceo:Geometrie ;
   skos:editorialNote "De class gml:Surface is de representatie van een contour van een Cultuur historisch object."@nl ;
 .
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
