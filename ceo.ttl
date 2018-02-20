@@ -21,6 +21,22 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://data.pdok.nl/def/pdok#asWKT-RD>
+  skos:editorialNote "De property asWKT-RD legt de relatie vast tussen een cultuurhistorisch object en een geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD)."@nl ;
+.
+<http://www.opengis.net/ont/geosparql#asWKT>
+  skos:editorialNote "De property asWKT legt de relatie vast tussen een cultuurhistorisch object en een geometrie."@nl ;
+.
+<http://www.opengis.net/ont/geosparql#hasGeometry>
+  rdfs:range ceo:Geometrie ;
+  skos:editorialNote "De property hasGeometry legt de relatie tussen het cultuurhistorisch object en de geometrie vast."@nl ;
+.
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat>
+  skos:editorialNote "De property lat legt de relatie tussen het cultuurhistorisch object en de breedtegraad vast."@nl ;
+.
+<http://www.w3.org/2003/01/geo/wgs84_pos#long>
+  skos:editorialNote "De property long legt de relatie tussen het cultuurhistorisch object en de lengtegraad vast."@nl ;
+.
 <http://www.w3.org/ns/locn#addressArea>
   rdfs:comment "In de CEO ontologie wordt deze property ook gebruikt om de locatieregistratie weer te geven voor rijksmonumenten die geen verblijfsobject zijn."@nl ;
 .
@@ -106,6 +122,13 @@ ceo:Functie
   rdfs:comment "De class Functie is de representatie van de functie van een rijksmonument."@nl ;
   rdfs:label "Functie"@nl ;
   rdfs:subClassOf ceo:Categorie ;
+.
+ceo:Geometrie
+  rdf:type owl:Class ;
+  dcterms:created "2018-2-19" ;
+  rdfs:comment "De class Geometrie is de representatie van de geometrie van een cultuurhistorisch object."@nl ;
+  rdfs:label "Geometrie"@nl ;
+  rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Geometry> ;
 .
 ceo:Gezicht
   rdf:type owl:Class ;
@@ -223,6 +246,13 @@ ceo:complexomschrijving
   rdfs:comment "De property complexomschrijving wordt gebruikt om de korte aanduiding, of omschrijving, die volstaat om vast te stellen over welke complexen het gaat vast te leggen."@nl ;
   rdfs:label "complexomschrijving"@nl ;
   rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:contour
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property contour legt de relatie vast tussen cultuurhistorische objecten, als bijvoorbeeld aangelegde en archeologische rijksmonumenten, en de geografische weergave als contour."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Contour"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:heeftBasisregistratieInstantie
   rdf:type owl:ObjectProperty ;
