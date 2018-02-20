@@ -268,13 +268,14 @@ ceo:complexomschrijving
   rdfs:label "complexomschrijving"@nl ;
   rdfs:subPropertyOf ceo:omschrijving ;
 .
-ceo:grondperceel
+ceo:grondPerceel
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-20" ;
-  rdfs:comment "De property grondperceel geeft een nummer aan dat..."@nl ;
+  rdfs:comment "De property rondPerceel geeft een nummer aan dat aan het cultuurhistorisch object is gegeven."@nl ;
   rdfs:domain ceo:Perceel ;
-  rdfs:label "grondperceel"@nl ;
+  rdfs:label "Grondperceel"@nl ;
   rdfs:range xsd:string ;
+  skos:editorialNote "Binnen de RCE data wordt het grondperceelnummer gegeven als nummer. Het wordt geconcat met sectie getoond in het register."@nl ;
 .
 ceo:heeftBasisregistratieInstantie
   rdf:type owl:ObjectProperty ;
@@ -462,7 +463,7 @@ ceo:perceelnummer
   rdfs:domain brk:Perceel ;
   rdfs:label "Perceelnummer"@nl ;
   rdfs:range xsd:string ;
-  skos:editorialNote "Binnen de RCE data wordt het perceel nummer gegeven als nummer. Het wordt geconcat met sectie getoond in het register."@nl ;
+  skos:editorialNote "Binnen de RCE data wordt het perceel nummer gegeven als kadastraal object nummer."@nl ;
 .
 ceo:registerComplexNaam
   rdf:type owl:DatatypeProperty ;
