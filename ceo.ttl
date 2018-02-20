@@ -198,6 +198,13 @@ ceo:OorspronkelijkeFunctie
   rdfs:label "Oorspronkelijke functie"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
+ceo:Perceel
+  rdf:type owl:Class ;
+  dcterms:created "2018-2-20" ;
+  rdfs:comment "De class Perceel is de representatie van het perceel waarop het cultuurhistorisch object zich bevindt."@nl ;
+  rdfs:label "Perceel"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
 ceo:Rijksmonument
   rdf:type owl:Class ;
   dcterms:created "2018-01-30" ;
@@ -233,6 +240,14 @@ ceo:Werelderfgoed
   rdfs:label "Werelderfgoed"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
+ceo:appartement
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-2-20" ;
+  rdfs:comment "De property appartement geeft aan om welk appartement het"@nl ;
+  rdfs:domain ceo:Perceel ;
+  rdfs:label "Appartement"@nl ;
+  rdfs:range xsd:string ;
+.
 ceo:archeologisch
   rdf:type ceo:MonumentAard ;
   dcterms:created "30-1-18 9:16" ;
@@ -252,6 +267,14 @@ ceo:complexomschrijving
   rdfs:comment "De property complexomschrijving wordt gebruikt om de korte aanduiding, of omschrijving, die volstaat om vast te stellen over welke complexen het gaat vast te leggen."@nl ;
   rdfs:label "complexomschrijving"@nl ;
   rdfs:subPropertyOf ceo:omschrijving ;
+.
+ceo:grondperceel
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-2-20" ;
+  rdfs:comment "De property grondperceel geeft een nummer aan dat..."@nl ;
+  rdfs:domain ceo:Perceel ;
+  rdfs:label "grondperceel"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:heeftBasisregistratieInstantie
   rdf:type owl:ObjectProperty ;
@@ -386,6 +409,14 @@ ceo:huidigeNaam
   rdfs:label "Huidige naam"@nl ;
   rdfs:subPropertyOf ceo:naam ;
 .
+ceo:kadastraleGemeente
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property kadastraleGemeente wordt gebruikt om de kadastrale gemeente van het cultuurhistorisch object vast te leggen."@nl ;
+  rdfs:domain ceo:Perceel ;
+  rdfs:label "Kadastrale gemeente"@nl ;
+  rdfs:range xsd:string ;
+  skos:editorialNote "Overwogen kan worden dit een object property te maken."@nl ;
+.
 ceo:locatieOmschrijving
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-2" ;
@@ -424,6 +455,15 @@ ceo:oorspronkelijkeNaam
   rdfs:label "Oorspronkelijke naam"@nl ;
   rdfs:subPropertyOf ceo:naam ;
 .
+ceo:perceelnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-2-20" ;
+  rdfs:comment "De property perceelnummer geeft het nummer aan dat een geheel perceel of een complex uniek identificeert binnen de sectie."@nl ;
+  rdfs:domain brk:Perceel ;
+  rdfs:label "Perceelnummer"@nl ;
+  rdfs:range xsd:string ;
+  skos:editorialNote "Binnen de RCE data wordt het perceel nummer gegeven als nummer. Het wordt geconcat met sectie getoond in het register."@nl ;
+.
 ceo:registerComplexNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
@@ -450,6 +490,14 @@ ceo:rijksmonumentnummer
   rdfs:comment "De property rijksmonumentnummer wordt gebruikt om het unieke nummer waaronder het rijksmonument bekend is, in het monumentenregister, vast te leggen."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Rijksmonumentnummer"@nl ;
+  rdfs:range xsd:string ;
+.
+ceo:sectie
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-2-20" ;
+  rdfs:comment "De property sectie geeft de sectie aan die de sectie binnen de kadastrale gemeente uniek identificeert."@nl ;
+  rdfs:domain ceo:Perceel ;
+  rdfs:label "Sectie"@nl ;
   rdfs:range xsd:string ;
 .
 ceo:voorbeschermd
