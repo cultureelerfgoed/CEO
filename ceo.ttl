@@ -247,13 +247,6 @@ ceo:complexomschrijving
   rdfs:label "complexomschrijving"@nl ;
   rdfs:subPropertyOf ceo:omschrijving ;
 .
-ceo:contour
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property contour legt de relatie vast tussen cultuurhistorische objecten, als bijvoorbeeld aangelegde en archeologische rijksmonumenten, en de geografische weergave als contour."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Contour"@nl ;
-  rdfs:range xsd:string ;
-.
 ceo:heeftBasisregistratieInstantie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-6" ;
@@ -268,6 +261,14 @@ ceo:heeftBetrekkingOp
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Heeft betrekking op"@nl ;
   rdfs:range ceo:CultuurhistorischObject ;
+.
+ceo:heeftContour
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property heeftContour legt de relatie vast tussen cultuurhistorische objecten, als bijvoorbeeld aangelegde en archeologische rijksmonumenten, en de geografische weergave als contour."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Heeft contour"@nl ;
+  rdfs:range ceo:Geometrie ;
+  rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasGeometry> ;
 .
 ceo:heeftFunctie
   rdf:type owl:ObjectProperty ;
