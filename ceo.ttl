@@ -350,6 +350,13 @@ ceo:heeftOorspronklijkeFunctie
   rdfs:label "Heeft oorspronkelijke functie"@nl ;
   rdfs:range ceo:OorspronkelijkeFunctie ;
 .
+ceo:heeftPerceel
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-22" ;
+  rdfs:comment "De property heeftPerceel legt de relatie tussen het rijksmonument en het perceel vast."@nl ;
+  rdfs:label "Heeft perceel"@nl ;
+  rdfs:range ceo:Perceel ;
+.
 ceo:heeftProvincie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-2" ;
