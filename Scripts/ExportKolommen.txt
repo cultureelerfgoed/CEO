@@ -1,0 +1,34 @@
+algemeen:
+V 	rijksmonumentnummer
+V	naam van het rijksmonument
+V	aanduiding / omschrijving van de beschermde onroerende zaak/ zaken (RO)
+
+adres (
+V	woonplaats, 
+V	postcode, 
+V	straat, 
+V	huisnummer)
+V	gemeente
+V	provincie
+V	status (‘rijksmonument’ ; ‘voorbeschermd’)
+
+locatie (
+V	omschrijving, 
+V	naam of 
+V	situering)
+
+kadastrale aanduiding (
+V	kadastrale gemeente, 
+	-sectie, 
+	-perceel(
+		kadastraal object, 
+		appartement)
+
+V	complexnummer
+V	complexnaam 
+V	complexomschrijving
+hoofdcategorie
+subcategorie
+oorspronkelijke functie
+V	x/y-coördinaten + RD
+V	geografische weergave van (contour) van aangelegde of archeologische rijksmonumenten
