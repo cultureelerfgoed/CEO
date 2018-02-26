@@ -33,7 +33,7 @@ CREATE TEMPORARY TABLE tmp_LDV_Export
 		--Basis gegevens:
 		rm.rijksmonument_nummer,
 		nrm.rijksmonument_naam,
-		regexp_replace(regexp_replace(o.omschrijving, replace_newline, '<n>', 'g'), replace_carriagereturn, '<r>', 'g') AS rijksmonument_omschrijving,
+		regexp_replace(regexp_replace(o.omschrijving, replace_newline, '<n>', 'g'), replace_carriagereturn, '<r>', 'g')::VARCHAR AS rijksmonument_omschrijving,
 		
 		--Adres:
 		la.straat::VARCHAR AS straat,
@@ -54,14 +54,14 @@ CREATE TEMPORARY TABLE tmp_LDV_Export
 				ELSE la.plaats_naam
 			END
 		)::VARCHAR AS plaats,
-		pl.plaatsnaam AS brk_plaats,
-		gem.gemeente AS brk_gemeente,
-		prv.provinciecode AS brk_provincie,
+		pl.plaatsnaam::VARCHAR AS brk_plaats,
+		gem.gemeente::VARCHAR AS brk_gemeente,
+		prv.provinciecode::VARCHAR AS brk_provincie,
 		
 		--Locatie:
 		la.situering AS locatie_situering,
 		ln.naam AS locatie_naam,
-		regexp_replace(regexp_replace(lo.omschrijving, replace_newline, '<n>', 'g'), replace_carriagereturn, '<r>', 'g') AS locatie_omschrijving,
+		regexp_replace(regexp_replace(lo.omschrijving, replace_newline, '<n>', 'g'), replace_carriagereturn, '<r>', 'g')::VARCHAR AS locatie_omschrijving,
 		
 		--Complex gegevens:
 		ttro.preflabel AS juridische_status,
@@ -73,7 +73,7 @@ CREATE TEMPORARY TABLE tmp_LDV_Export
 		)::BOOLEAN AS is_complex,
 		cpx.complex_nummer AS complex_nummer,
 		krcn.complex_naam AS complex_naam,
-		regexp_replace(regexp_replace(krco.complex_omschrijving, replace_newline, '<n>', 'g'), replace_carriagereturn, '<r>', 'g') AS complex_omschrijving,
+		regexp_replace(regexp_replace(krco.complex_omschrijving, replace_newline, '<n>', 'g'), replace_carriagereturn, '<r>', 'g')::VARCHAR AS complex_omschrijving,
 		
 		--Kadastraal:
 		rm.kio_datum::DATE AS kio_datum_inschrijving,
@@ -182,7 +182,7 @@ CREATE TEMPORARY TABLE tmp_LDV_Export
 	LEFT JOIN(
 			SELECT
 				cho_id,
-				regexp_replace(regexp_replace(omschrijving, replace_newline, '<n>', 'g'), replace_carriagereturn, '<r>', 'g') AS omschrijving
+				regexp_replace(regexp_replace(omschrijving, replace_newline, '<n>', 'g'), replace_carriagereturn, '<r>', 'g')::VARCHAR AS omschrijving
 			FROM
 				sch_kennis.kennisregistratie kr
 			INNER JOIN sch_kennis.omschrijving o ON
