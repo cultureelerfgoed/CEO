@@ -100,6 +100,7 @@ ceo:BasisregistratieRelatie
   rdfs:comment "De class BasisregistratieRelatie is de representatie van de administratieve vastlegging van de relatie tussen een cultuurhistorisch object en een instantie in een basisregistratie."@nl ;
   rdfs:label "Basisregistratie relatie"@nl ;
   rdfs:subClassOf owl:Thing ;
+  skos:editorialNote "De Class komt overeen met de Basisobjectrelatie in de CHOI." ;
 .
 ceo:Categorie
   rdf:type owl:Class ;
@@ -243,7 +244,7 @@ ceo:Werelderfgoed
 ceo:appartement
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-20" ;
-  rdfs:comment "De property appartement geeft aan om welk appartement het"@nl ;
+  rdfs:comment "De property appartement wordt gebruikt om aan te geven om welk appartement het gaat."@nl ;
   rdfs:domain ceo:Perceel ;
   rdfs:label "Appartement"@nl ;
   rdfs:range xsd:string ;
@@ -271,7 +272,7 @@ ceo:complexomschrijving
 ceo:grondPerceel
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-20" ;
-  rdfs:comment "De property rondPerceel geeft een nummer aan dat aan het cultuurhistorisch object is gegeven."@nl ;
+  rdfs:comment "De property rondPerceel wordt gebruikt om aan te geven of een nummer aan het cultuurhistorisch object is gegeven."@nl ;
   rdfs:domain ceo:Perceel ;
   rdfs:label "Grondperceel"@nl ;
   rdfs:range xsd:string ;
@@ -403,9 +404,16 @@ ceo:heeftSubcategorie
   rdfs:label "Heeft subcategorie"@nl ;
   rdfs:range ceo:Subcategorie ;
 .
+ceo:heeftZaakobject
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-26" ;
+  rdfs:comment "De property heeftZaakobject legt de relatie tussen Cultuurhistorisch Object en de Zaak."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Heeft zaakobject"@nl ;
+.
 ceo:hoofdfunctie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property hoofdfunctie legt de relatie tussen de oorspronkelijke functie van een rijksmonument en de hoofdfunctie."@nl ;
+  rdfs:comment "De property hoofdfunctie wordt gebruikt om aan te geven of een oorspronkelijke functie de hoofdfunctie van een rijksmonurent is."@nl ;
   rdfs:domain ceo:OorspronkelijkeFunctie ;
   rdfs:label "Hoofdfunctie"@nl ;
   rdfs:range xsd:boolean ;
@@ -466,7 +474,7 @@ ceo:oorspronkelijkeNaam
 ceo:perceelnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-20" ;
-  rdfs:comment "De property perceelnummer geeft het nummer aan dat een geheel perceel of een complex uniek identificeert binnen de sectie."@nl ;
+  rdfs:comment "De property perceelnummer wordt gebruikt om aan te geven of het nummer dat aan een geheel perceel of een complex, uniek identificeert wordt binnen de sectie."@nl ;
   rdfs:domain brk:Perceel ;
   rdfs:label "Perceelnummer"@nl ;
   rdfs:range xsd:string ;
@@ -503,7 +511,7 @@ ceo:rijksmonumentnummer
 ceo:sectie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-20" ;
-  rdfs:comment "De property sectie geeft de sectie aan die de sectie binnen de kadastrale gemeente uniek identificeert."@nl ;
+  rdfs:comment "De property sectie wordt gebruikt om aan te geven, de sectie die de sectie binnen de kadastrale gemeente uniek identificeert."@nl ;
   rdfs:domain ceo:Perceel ;
   rdfs:label "Sectie"@nl ;
   rdfs:range xsd:string ;
