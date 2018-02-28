@@ -244,7 +244,7 @@ ceo:Werelderfgoed
 ceo:appartement
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-20" ;
-  rdfs:comment "De property appartement wordt gebruikt om aan te geven om welk appartement het gaat."@nl ;
+  rdfs:comment "De property appartement wordt gebruikt om aan te geven om welk appartementnummer het gaat."@nl ;
   rdfs:domain ceo:Perceel ;
   rdfs:label "Appartement"@nl ;
   rdfs:range xsd:string ;
