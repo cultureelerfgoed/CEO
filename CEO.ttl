@@ -266,7 +266,7 @@ ceo:complexomschrijving
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property complexomschrijving wordt gebruikt om de korte aanduiding, of omschrijving, die volstaat om vast te stellen over welke complexen het gaat vast te leggen."@nl ;
-  rdfs:label "complexomschrijving"@nl ;
+  rdfs:label "Complexomschrijving"@nl ;
   rdfs:subPropertyOf ceo:omschrijving ;
 .
 ceo:grondPerceel
@@ -295,6 +295,7 @@ ceo:heeftBetrekkingOp
 .
 ceo:heeftFunctie
   rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-19" ;
   rdfs:comment "De property heeftFunctie legt de relatie tussen het rijksmonument en de functie vast."@nl ;
   rdfs:domain ceo:OorspronkelijkeFunctie ;
   rdfs:label "Heeft functie"@nl ;
@@ -346,17 +347,11 @@ ceo:heeftMonumentAard
 .
 ceo:heeftOorspronklijkeFunctie
   rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-19" ;
   rdfs:comment "De property heeftOorspronkelijkeFunctie legt de relatie tussen het Rijksmonument en de oorspronkelijke functie vast."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft oorspronkelijke functie"@nl ;
   rdfs:range ceo:OorspronkelijkeFunctie ;
-.
-ceo:heeftPerceel
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-2-22" ;
-  rdfs:comment "De property heeftPerceel legt de relatie tussen het rijksmonument en het perceel vast."@nl ;
-  rdfs:label "Heeft perceel"@nl ;
-  rdfs:range ceo:Perceel ;
 .
 ceo:heeftProvincie
   rdf:type owl:ObjectProperty ;
@@ -366,6 +361,13 @@ ceo:heeftProvincie
   rdfs:label "Heeft provincie"@nl ;
   rdfs:range <http://standaarden.overheid.nl/owms/terms/Provincie> ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#adminUnitL2> ;
+.
+ceo:heeftRegisterPerceel
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-22" ;
+  rdfs:comment "De property heeftRegisterPerceel legt de relatie tussen het rijksmonument en het perceel vast."@nl ;
+  rdfs:label "Heeft perceel"@nl ;
+  rdfs:range ceo:Perceel ;
 .
 ceo:heeftRegisteradres
   rdf:type owl:ObjectProperty ;
@@ -506,7 +508,7 @@ ceo:rijksmonumentnummer
   rdfs:comment "De property rijksmonumentnummer wordt gebruikt om het unieke nummer waaronder het rijksmonument bekend is, in het monumentenregister, vast te leggen."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Rijksmonumentnummer"@nl ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:integer ;
 .
 ceo:sectie
   rdf:type owl:DatatypeProperty ;
