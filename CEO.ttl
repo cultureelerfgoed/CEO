@@ -257,6 +257,12 @@ ceo:complexomschrijving
   rdfs:label "Complexomschrijving"@nl ;
   rdfs:subPropertyOf ceo:omschrijving ;
 .
+ceo:datumInschrijvingInMonumentenregister
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "5-3-18 15:00" ;
+  rdfs:comment "De property datumInschrijvingInMonumentenregister wordt gebruikt om de inschrijvingsdatum van het rijksmonument in het monumentenregister vast te leggen."@nl ;
+  rdfs:label "Datum inschrijving in monumentenregister" ;
+.
 ceo:grondPerceel
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-20" ;
@@ -332,6 +338,13 @@ ceo:heeftMonumentAard
   dcterms:created "2018-01-30" ;
   rdfs:comment "De property heeftMonumentAard legt de relatie tussen een Rijksmonument en de MonumentAard."@nl ;
   rdfs:label "Heeft monument aard"@nl ;
+.
+ceo:heeftNaam
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "5-3-18 14:50" ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "De property heeftNaam legt de relatie tussen een het Cultuurhistorisch Object en de subclass Naam van Kennisregistratie."@nl ;
+  rdfs:range ceo:Naam ;
 .
 ceo:heeftOorspronklijkeFunctie
   rdf:type owl:ObjectProperty ;
@@ -434,6 +447,7 @@ ceo:naam
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property naam wordt gebruikt om een naam van het cultuurhistorisch object vast te leggen."@nl ;
   rdfs:label "Naam"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:omschrijving
   rdf:type owl:DatatypeProperty ;
