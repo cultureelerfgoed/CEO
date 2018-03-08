@@ -254,7 +254,9 @@ ceo:complexomschrijving
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property complexomschrijving wordt gebruikt om de korte aanduiding, of omschrijving, die volstaat om vast te stellen over welke complexen het gaat vast te leggen."@nl ;
+  rdfs:domain ceo:Complex ;
   rdfs:label "Complexomschrijving"@nl ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:omschrijving ;
 .
 ceo:datumInschrijvingInMonumentenregister
@@ -425,7 +427,9 @@ ceo:huidigeNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property huidigeNaam wordt gebruikt om aan te geven welke huidige naam is gekoppeld aan het cultuurhistorische object."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Huidige naam"@nl ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:naam ;
 .
 ceo:kadastraleGemeente
@@ -440,12 +444,15 @@ ceo:locatieOmschrijving
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-2" ;
   rdfs:comment "De property locatieOmschrijving wordt gebruikt om de locatie registratie van een rijksmonument te omschrijven als het rijksmonument geen verblijfsobject in de BAG is."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Locatie omschrijving"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:naam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property naam wordt gebruikt om een naam van het cultuurhistorisch object vast te leggen."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Naam"@nl ;
   rdfs:range xsd:string ;
 .
@@ -453,7 +460,9 @@ ceo:omschrijving
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property omschrijving wordt gebruikt om een omschrijving van een cultuurhistorisch object vast te leggen."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Omschrijving"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:onroerendGebouwd
   rdf:type ceo:MonumentAard ;
@@ -465,14 +474,18 @@ ceo:onroerendeZaakomschrijving
   dcterms:created "2018-01-30" ;
   dcterms:modified "2018-2-6" ;
   rdfs:comment "Deze property onroerendeZaakomschrijving wordt gebruikt om de korte aanduiding, of omschrijving, die volstaat om vast te stellen over welke beschermde onroerende zaak of zaken het gaat."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Beschermde onroerende zaak omschrijving"@nl ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:omschrijving ;
 .
 ceo:oorspronkelijkeNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property oorspronkelijkeNaam wordt gebruikt om aan te geven welke oorspronkelijke naam is gekoppeld aan het cultuurhistorische object."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Oorspronkelijke naam"@nl ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:naam ;
 .
 ceo:perceelnummer
@@ -488,14 +501,18 @@ ceo:registerComplexNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property registerComplexNaam wordt gebruikt om aan te geven welke complexnaam in het register is gekoppeld aan het complex."@nl ;
+  rdfs:domain ceo:Complex ;
   rdfs:label "Register complex naam"@nl ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:naam ;
 .
 ceo:registerNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property registerNaam wordt gebruikt om aan te geven welke monumentennaam in het register is gekoppeld aan het rijksmonument. De naam van het monument staat in het register indien nodig voor identificatie."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Register naam"@nl ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:naam ;
 .
 ceo:rijksmonument
