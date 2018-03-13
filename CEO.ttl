@@ -345,6 +345,16 @@ ceo:heeftMonumentAard
   rdfs:comment "De property heeftMonumentAard legt de relatie tussen een Rijksmonument en de MonumentAard."@nl ;
   rdfs:label "Heeft monument aard"@nl ;
 .
+ceo:heeftNaam
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-03-13" ;
+  rdfs:label "Heeft naam"@nl ;
+.
+ceo:heeftOmschrijving
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-03-13" ;
+  rdfs:label "Heeft omschrijving"@nl ;
+.
 ceo:heeftOorspronklijkeFunctie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-19" ;
@@ -375,6 +385,18 @@ ceo:heeftRegisteradres
   rdfs:comment "De property heeftRegisteradres legt de relatie tussen het rijksmonument en het registeradres."@nl ;
   rdfs:label "Heeft registeradres"@nl ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
+.
+ceo:heeftRegisternaam
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-03-13" ;
+  rdfs:label "Heeft registernaam" ;
+  rdfs:subPropertyOf ceo:heeftNaam ;
+.
+ceo:heeftRegisteromschrijving
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-03-13" ;
+  rdfs:label "Heeft Registeromschrijving"@nl ;
+  rdfs:subPropertyOf ceo:heeftOmschrijving ;
 .
 ceo:heeftSamenhang
   rdf:type owl:ObjectProperty ;
