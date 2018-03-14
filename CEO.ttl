@@ -272,6 +272,12 @@ ceo:heeftFunctie
   rdfs:label "Heeft functie"@nl ;
   rdfs:range ceo:Functie ;
 .
+ceo:heeftFunctiesoort
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-2-14" ;
+  rdfs:domain ceo:Functie ;
+  rdfs:label "heeft functiesoort" ;
+.
 ceo:heeftGemeente
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-2" ;
