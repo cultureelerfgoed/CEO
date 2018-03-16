@@ -253,6 +253,7 @@ ceo:datumInschrijvingInMonumentenregister
   rdf:type owl:DatatypeProperty ;
   dcterms:created "5-3-18 15:00" ;
   rdfs:comment "De property datumInschrijvingInMonumentenregister wordt gebruikt om de inschrijvingsdatum van het rijksmonument in het monumentenregister vast te leggen."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Datum inschrijving in monumentenregister" ;
 .
 ceo:grondPerceel
