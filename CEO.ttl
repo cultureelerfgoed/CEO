@@ -24,10 +24,14 @@
 <http://data.pdok.nl/def/pdok#asWKT-RD>
   skos:editorialNote "De property asWKT-RD legt de relatie vast tussen een cultuurhistorisch object en een geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD)."@nl ;
 .
+dcterms:subject
+  rdfs:domain ceo:Functie ;
+.
 <http://www.opengis.net/ont/geosparql#asWKT>
   skos:editorialNote "De property asWKT legt de relatie vast tussen een cultuurhistorisch object en een geometrie."@nl ;
 .
 <http://www.opengis.net/ont/geosparql#hasGeometry>
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:range ceo:Geometrie ;
   skos:editorialNote "De property hasGeometry legt de relatie tussen het cultuurhistorisch object en de geometrie vast."@nl ;
 .
@@ -37,11 +41,20 @@
 <http://www.opengis.net/ont/gml#Surface>
   skos:editorialNote "De class gml:Surface is de representatie van een contour van een Cultuur historisch object."@nl ;
 .
+rdfs:heeftNauwekeurigheid
+  rdf:type owl:AnnotationProperty ;
+  dcterms:created "21-3-18 9:50" ;
+  rdfs:domain ceo:BasisregistratieRelatie ;
+  rdfs:label "Heeft nauwekeurigheid"@nl ;
+.
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
   skos:editorialNote "De property lat legt de relatie tussen het cultuurhistorisch object en de breedtegraad vast."@nl ;
 .
 <http://www.w3.org/2003/01/geo/wgs84_pos#long>
   skos:editorialNote "De property long legt de relatie tussen het cultuurhistorisch object en de lengtegraad vast."@nl ;
+.
+<http://www.w3.org/ns/locn#address>
+  rdfs:domain ceo:CultuurhistorischObject ;
 .
 <http://www.w3.org/ns/locn#addressArea>
   rdfs:comment "In de CEO ontologie wordt deze property ook gebruikt om de locatieregistratie weer te geven voor rijksmonumenten die geen verblijfsobject zijn."@nl ;
@@ -156,6 +169,13 @@ ceo:Kennisregistratie
   rdfs:comment "De class Kennisregistratie is de representatie van vastgelegde kennisfeiten met betrekking tot een cultuurhistorisch object."@nl ;
   rdfs:label "Kennisregistratie"@nl ;
 .
+ceo:LocatieAanduiding
+  rdf:type owl:Class ;
+  dcterms:created "21-3-18 10:30" ;
+  rdfs:comment "De class LocatieAanduiding is de representatie van de locatie aanduiding van een Cultuurhistorisch object."@nl ;
+  rdfs:label "Locatie aanduiding"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
 ceo:MonumentAard
   rdf:type owl:Class ;
   dcterms:created "2018-01-30" ;
@@ -183,13 +203,6 @@ ceo:OorspronkelijkeFunctie
   rdfs:comment "De class OorspronkelijkeFunctie is de representatie van de oorspronkelijke functie en categorieën van een rijksmonument."@nl ;
   rdfs:label "Oorspronkelijke functie"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
-.
-ceo:Perceel
-  rdf:type owl:Class ;
-  dcterms:created "2018-2-20" ;
-  rdfs:comment "De class Perceel is de representatie van het perceel waarop het cultuurhistorisch object zich bevindt."@nl ;
-  rdfs:label "Perceel"@nl ;
-  rdfs:subClassOf owl:Thing ;
 .
 ceo:Rijksmonument
   rdf:type owl:Class ;
@@ -219,13 +232,11 @@ ceo:Werelderfgoed
   rdfs:label "Werelderfgoed"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
-ceo:appartement
+ceo:appartementAanduiding
   rdf:type owl:DatatypeProperty ;
-  dcterms:created "2018-2-20" ;
-  rdfs:comment "De property appartement wordt gebruikt om aan te geven om welk appartementnummer het gaat."@nl ;
-  rdfs:domain ceo:Perceel ;
-  rdfs:label "Appartement"@nl ;
-  rdfs:range xsd:string ;
+  dcterms:created "21-3-18 11:00" ;
+  rdfs:comment "De property appartementAanduiding wordt gebruikt om aan te geven of een appartement aanduiding aan een rijksmonument is gegeven."@nl ;
+  rdfs:label "Appartement aanduiding"@nl ;
 .
 ceo:archeologisch
   rdf:type ceo:MonumentAard ;
@@ -256,14 +267,12 @@ ceo:datumInschrijvingInMonumentenregister
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Datum inschrijving in monumentenregister" ;
 .
-ceo:grondPerceel
+ceo:deelperceelnummer
   rdf:type owl:DatatypeProperty ;
-  dcterms:created "2018-2-20" ;
-  rdfs:comment "De property rondPerceel wordt gebruikt om aan te geven of een nummer aan het cultuurhistorisch object is gegeven."@nl ;
-  rdfs:domain ceo:Perceel ;
-  rdfs:label "Grondperceel"@nl ;
-  rdfs:range xsd:string ;
-  skos:editorialNote "Binnen de RCE data wordt het grondperceelnummer gegeven als nummer. Het wordt geconcat met sectie getoond in het register."@nl ;
+  dcterms:created "21-3-18 10:56" ;
+  rdfs:comment "De property deelperceelnummer wordt gebruikt om aan te geven of een deelperceelnummer aan een rijksmonument is gegeven."@nl ;
+  rdfs:label "Deelperceelnummer"@nl ;
+  rdfs:range xsd:integer ;
 .
 ceo:heeftBasisregistratie
   rdf:type owl:ObjectProperty ;
@@ -272,21 +281,6 @@ ceo:heeftBasisregistratie
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft basisregistratie"@nl ;
   rdfs:range ceo:BasisregistratieRelatie ;
-.
-ceo:heeftBasisregistratieInstantie
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-2-6" ;
-  rdfs:comment "De property heeftBasisregistratieInstantie legt de relatie tussen een BasisregistratieRelatie en een instantie van een basisregistratie."@nl ;
-  rdfs:domain ceo:BasisregistratieRelatie ;
-  rdfs:label "Heeft basisregistratie instantie"@nl ;
-.
-ceo:heeftBetrekkingOp
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-2-2" ;
-  rdfs:comment "De property heeftBetrekkingOp legt de relatie tussen een kennisregistratie en een cultuurhistorisch object."@nl ;
-  rdfs:domain ceo:Kennisregistratie ;
-  rdfs:label "Heeft betrekking op"@nl ;
-  rdfs:range ceo:CultuurhistorischObject ;
 .
 ceo:heeftFunctie
   rdf:type owl:ObjectProperty ;
@@ -301,7 +295,7 @@ ceo:heeftFunctiePeriode
   dcterms:created "2018-3-16" ;
   rdfs:comment "De property heeftFunctiePeriode legt de relatie tussen de Functie en Datering vast."@nl ;
   rdfs:domain ceo:Functie ;
-  rdfs:label "Heeft functie periode" ;
+  rdfs:label "Heeft functie periode"@nl ;
   rdfs:range ceo:Datering ;
 .
 ceo:heeftFunctiesoort
@@ -329,13 +323,6 @@ ceo:heeftHoofdadres
   rdfs:range <http://www.w3.org/ns/locn#Address> ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
-ceo:heeftHoofdcategorie
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-2-19" ;
-  rdfs:comment "De property heeftHoofdcategorie legt de relatie tussen een rijksmonument en een instantie van een hoofdcategorie."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Heeft hoofdcategorie"@nl ;
-.
 ceo:heeftHoofdfunctie
   rdf:type xsd:boolean ;
   rdfs:comment "Nog toe te voegen "@nl ;
@@ -346,13 +333,40 @@ ceo:heeftJuridischeStatus
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-01-30" ;
   rdfs:comment "De property heeftJuridischeStatus geeft aan of de status van het rijksmonument \"voorbeschermd\" of \"rijksmonument\" is."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft juridische status"@nl ;
+  rdfs:range ceo:JuridischeStatus ;
+.
+ceo:heeftLocatieAanduiding
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "21-3-18 10:28" ;
+  rdfs:comment "De property heeftLocatieAanduiding legt de relatie tussen het Cultuurhistorisch Object en de locatie aanduiding vast."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Heeft locatie aanduiding"@nl ;
+  rdfs:range ceo:LocatieAanduiding ;
+.
+ceo:heeftLocatieAdres
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "21-3-18 10:33" ;
+  rdfs:comment "De property heeftLocatieAdres legt de relatie tussen de locatie aanduiding en het adres vast."@nl ;
+  rdfs:domain ceo:LocatieAanduiding ;
+  rdfs:label "Heeft locactie adres"@nl ;
+  rdfs:range <http://www.w3.org/ns/locn#Address> ;
+.
+ceo:heeftMateOvername
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "21-3-18 9:47" ;
+  rdfs:comment "De property heeftMateOvername legt de relatie tussen de Basisregistratie en de mate van overname vast."@nl ;
+  rdfs:domain ceo:BasisregistratieRelatie ;
+  rdfs:label "Heeft mate Overname"@nl ;
 .
 ceo:heeftMonumentAard
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-01-30" ;
   rdfs:comment "De property heeftMonumentAard legt de relatie tussen een Rijksmonument en de MonumentAard."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft monument aard"@nl ;
+  rdfs:range ceo:MonumentAard ;
 .
 ceo:heeftNaam
   rdf:type owl:ObjectProperty ;
@@ -361,6 +375,12 @@ ceo:heeftNaam
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft naam"@nl ;
   rdfs:range ceo:Naam ;
+.
+ceo:heeftNauwkeurigheid
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "21-3-18 9:53" ;
+  rdfs:comment "De property heeftNauwkeurigheid legt de relatie tussen de Basisregistratie en de nauwkeurigheid vast."@nl ;
+  rdfs:label "Heeft nauwkeurigheid"@nl ;
 .
 ceo:heeftOmschrijving
   rdf:type owl:ObjectProperty ;
@@ -376,14 +396,6 @@ ceo:heeftOmschrijvingstype
   rdfs:comment "De property heeftOmschrijvingstype legt de relatie tussen de Omschrijving en de type omschrijving vast."@nl ;
   rdfs:domain ceo:Omschrijving ;
   rdfs:label "Heeft omschrijvingstype"@nl ;
-.
-ceo:heeftOorspronklijkeFunctie
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-2-19" ;
-  rdfs:comment "De property heeftOorspronkelijkeFunctie legt de relatie tussen het Rijksmonument en de oorspronkelijke functie vast."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Heeft oorspronkelijke functie"@nl ;
-  rdfs:range ceo:OorspronkelijkeFunctie ;
 .
 ceo:heeftPerceel
   rdf:type owl:ObjectProperty ;
@@ -403,16 +415,19 @@ ceo:heeftProvincie
 .
 ceo:heeftRegisterPerceel
   rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-2-22" ;
-  rdfs:comment "De property heeftRegisterPerceel legt de relatie tussen het rijksmonument en het perceel vast."@nl ;
-  rdfs:label "Heeft perceel"@nl ;
-  rdfs:range ceo:Perceel ;
+  dcterms:created "21-3-18 10:03" ;
+  rdfs:comment "De property heeftRegisterPerceel legt de relatie tussen het Rijksmonument en het Perceel vast."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
+  rdfs:label "Heeft Register Perceel"@nl ;
+  rdfs:subPropertyOf ceo:heeftPerceel ;
 .
 ceo:heeftRegisteradres
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-2" ;
   rdfs:comment "De property heeftRegisteradres legt de relatie tussen het rijksmonument en het registeradres."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft registeradres"@nl ;
+  rdfs:range <http://www.w3.org/ns/locn#Address> ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
 ceo:heeftRegisternaam
@@ -445,34 +460,38 @@ ceo:heeftSitueringBijAdres
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-2" ;
   rdfs:comment "De property heeftSitueringBijAdres legt de relatie tussen een rijksmonument dat geen verblijfsobject in de BAG is met een verblijfsobject inde BAG."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft situering bij adres"@nl ;
+  rdfs:range <http://www.w3.org/ns/locn#Address> ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
 ceo:heeftSitueringTegenoverAdres
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-2" ;
   rdfs:comment "De property heeftSitueringTegenoverAdres legt de relatie tussen een rijksmonument dat geen verblijfsobject in de BAG is met een verblijfsobject inde BAG."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft situering tegenover adres"@nl ;
+  rdfs:range <http://www.w3.org/ns/locn#Address> ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
-ceo:heeftSubcategorie
+ceo:heeftTopologischeRelatie
   rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-2-19" ;
-  rdfs:comment "De property heeftSubcategorie legt de relatie tussen een rijksmonument en een instantie van een subcategorie."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Heeft subcategorie"@nl ;
+  dcterms:created "21-3-18 9:41" ;
+  rdfs:comment "De property heeftTopologischeRelatie legt de relatie tussen de Basisregistratie en de topologische relatie vast."@nl ;
+  rdfs:domain ceo:BasisregistratieRelatie ;
+  rdfs:label "Heeft topologische relatie"@nl ;
 .
 ceo:heeftZaakobject
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-26" ;
-  rdfs:comment "De property heeftZaakobject legt de relatie tussen Cultuurhistorisch Object en de Zaak."@nl ;
+  rdfs:comment "De property heeftZaakobject legt de relatie tussen Cultuurhistorisch Object en het Zaakobject."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft zaakobject"@nl ;
 .
 ceo:hoofdfunctie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-3-13" ;
-  rdfs:comment "De property hoofdfunctie wordt gebruikt om aan te geven of een  functie de hoofdfunctie van een Cultuurhistorisch Object is."@nl ;
+  rdfs:comment "De property hoofdfunctie wordt gebruikt om aan te geven of een functie de hoofdfunctie van een Cultuurhistorisch Object is."@nl ;
   rdfs:domain ceo:Functie ;
   rdfs:label "Hoofdfunctie"@nl ;
   rdfs:range xsd:boolean ;
@@ -483,23 +502,30 @@ ceo:huidigeNaam
   rdfs:comment "De property huidigeNaam wordt gebruikt om aan te geven welke huidige naam is gekoppeld aan het cultuurhistorische object."@nl ;
   rdfs:domain ceo:Naam ;
   rdfs:label "Huidige naam"@nl ;
-  rdfs:range xsd:string ;
-  rdfs:subPropertyOf ceo:naam ;
+  rdfs:range xsd:boolean ;
 .
-ceo:kadastraleGemeente
+ceo:kaartbladcode
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property kadastraleGemeente wordt gebruikt om de kadastrale gemeente van het cultuurhistorisch object vast te leggen."@nl ;
-  rdfs:domain ceo:Perceel ;
-  rdfs:label "Kadastrale gemeente"@nl ;
+  dcterms:created "21-3-18 10:40" ;
+  rdfs:comment "De property kaartbladcode wordt gebruikt om aan te geven welke kaartbladcode is gekoppeld aan de locatie aanduiding."@nl ;
+  rdfs:domain ceo:LocatieAanduiding ;
+  rdfs:label "Kaartbladcode"@nl ;
   rdfs:range xsd:string ;
-  skos:editorialNote "Overwogen kan worden dit een object property te maken."@nl ;
 .
 ceo:locatieOmschrijving
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-2" ;
   rdfs:comment "De property locatieOmschrijving wordt gebruikt om de locatie registratie van een rijksmonument te omschrijven als het rijksmonument geen verblijfsobject in de BAG is."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
+  rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Locatie omschrijving"@nl ;
+  rdfs:range xsd:string ;
+.
+ceo:locatienaam
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "21-3-18 10:36" ;
+  rdfs:comment "De property locatienaam wordt gebruikt om aan te geven welke locatie naam is gekoppeld aan de locatie aanduiding"@nl ;
+  rdfs:domain ceo:LocatieAanduiding ;
+  rdfs:label "" ;
   rdfs:range xsd:string ;
 .
 ceo:naam
@@ -539,8 +565,7 @@ ceo:oorspronkelijkeNaam
   rdfs:comment "De property oorspronkelijkeNaam wordt gebruikt om aan te geven welke oorspronkelijke naam is gekoppeld aan het cultuurhistorische object."@nl ;
   rdfs:domain ceo:Naam ;
   rdfs:label "Oorspronkelijke naam"@nl ;
-  rdfs:range xsd:string ;
-  rdfs:subPropertyOf ceo:naam ;
+  rdfs:range xsd:boolean ;
 .
 ceo:perceelnummer
   rdf:type owl:DatatypeProperty ;
@@ -554,11 +579,19 @@ ceo:perceelnummer
 ceo:registerComplexNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
-  rdfs:comment "De property registerComplexNaam wordt gebruikt om aan te geven welke complexnaam in het register is gekoppeld aan het complex."@nl ;
+  rdfs:comment "De property registerComplexNaam wordt gebruikt om aan te geven welke complex naam in het register is gekoppeld aan het complex."@nl ;
   rdfs:domain ceo:Naam ;
   rdfs:label "Register complex naam"@nl ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:naam ;
+.
+ceo:registerComplexOmschrijving
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "21-3-18 10:10" ;
+  rdfs:comment "De property registerComplexOmschrijving wordt gebruikt om aan te geven welke complex omschrijving in het register is gekoppeld aan het complex."@nl ;
+  rdfs:domain ceo:Omschrijving ;
+  rdfs:label "Register complex omschrijving"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:registerNaam
   rdf:type owl:DatatypeProperty ;
@@ -582,14 +615,6 @@ ceo:rijksmonumentnummer
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Rijksmonumentnummer"@nl ;
   rdfs:range xsd:integer ;
-.
-ceo:sectie
-  rdf:type owl:DatatypeProperty ;
-  dcterms:created "2018-2-20" ;
-  rdfs:comment "De property sectie wordt gebruikt om aan te geven, de sectie die de sectie binnen de kadastrale gemeente uniek identificeert."@nl ;
-  rdfs:domain ceo:Perceel ;
-  rdfs:label "Sectie"@nl ;
-  rdfs:range xsd:string ;
 .
 ceo:voorbeschermd
   rdf:type ceo:JuridischeStatus ;
