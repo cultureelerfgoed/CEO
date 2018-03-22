@@ -59,10 +59,6 @@ rdfs:heeftNauwekeurigheid
 <http://www.w3.org/ns/locn#addressArea>
   rdfs:comment "In de CEO ontologie wordt deze property ook gebruikt om de locatieregistratie weer te geven voor rijksmonumenten die geen verblijfsobject zijn."@nl ;
 .
-rn:a358f121-1f23-4569-8fd6-3a3baf5edd56
-  rdf:type ceo:Functie ;
-  rdfs:label "Droogschuur"@nl ;
-.
 <https://data.cultureelerfgoed.nl/vocab/def/ceo>
   rdf:type owl:Ontology ;
   owl:imports <file:///TopBraid/RCE/Gemeente.rdf> ;
@@ -197,13 +193,6 @@ ceo:Omschrijving
   rdfs:label "Omschrijving"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
-ceo:OorspronkelijkeFunctie
-  rdf:type owl:Class ;
-  dcterms:created "2018-2-19" ;
-  rdfs:comment "De class OorspronkelijkeFunctie is de representatie van de oorspronkelijke functie en categorieën van een rijksmonument."@nl ;
-  rdfs:label "Oorspronkelijke functie"@nl ;
-  rdfs:subClassOf ceo:Kennisregistratie ;
-.
 ceo:Rijksmonument
   rdf:type owl:Class ;
   dcterms:created "2018-01-30" ;
@@ -326,7 +315,6 @@ ceo:heeftHoofdadres
 ceo:heeftHoofdfunctie
   rdf:type xsd:boolean ;
   rdfs:comment "Nog toe te voegen "@nl ;
-  rdfs:domain ceo:OorspronkelijkeFunctie ;
   rdfs:label "hoofdfunctie"@nl ;
 .
 ceo:heeftJuridischeStatus
