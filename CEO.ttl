@@ -316,7 +316,7 @@ ceo:heeftArcheologischeWaardering
   dcterms:created "27-3-18 9:45" ;
   rdfs:comment "" ;
   rdfs:domain ceo:ArcheologischTerrein ;
-  rdfs:label "Heeft Aacheologische waardering"@nl ;
+  rdfs:label "Heeft Archeologische waardering"@nl ;
 .
 ceo:heeftBasisregistratie
   rdf:type owl:ObjectProperty ;
