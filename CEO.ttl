@@ -248,6 +248,13 @@ ceo:archis2Complexnummer
   rdfs:domain ceo:ArcheologischComplex ;
   rdfs:label "Archis2Complexnummer"@nl ;
 .
+ceo:archis2Monumentnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "28-3-18 10:07" ;
+  rdfs:comment "" ;
+  rdfs:domain ceo:ArcheologischTerrein ;
+  rdfs:label "Archis2 Monumentnummer"@nl ;
+.
 ceo:archis2Vondstnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "27-3-18 9:24" ;
@@ -274,6 +281,14 @@ ceo:complexomschrijving
   rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:omschrijving ;
 .
+ceo:cultuurhistorischObjectnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "28-3-18 10:11" ;
+  rdfs:comment "" ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Cultuurhistorisch Objectnummer"@nl ;
+  rdfs:range xsd:string ;
+.
 ceo:datumInschrijvingInMonumentenregister
   rdf:type owl:DatatypeProperty ;
   dcterms:created "5-3-18 15:00" ;
@@ -294,6 +309,7 @@ ceo:geometetrieIdentificatie
   rdfs:comment "" ;
   rdfs:domain ceo:Geometrie ;
   rdfs:label "Geometetrie identificatie"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:heeftArcheologischeWaardering
   rdf:type owl:ObjectProperty ;
@@ -362,6 +378,13 @@ ceo:heeftGeometrieStatus
   rdfs:comment "" ;
   rdfs:domain ceo:Geometrie ;
   rdfs:label "Heeft geometrie status"@nl ;
+.
+ceo:heeftHerkomst
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "28-3-18 10:15" ;
+  rdfs:comment "" ;
+  rdfs:domain ceo:Geometrie ;
+  rdfs:label "Heeft herkomst"@nl ;
 .
 ceo:heeftHoofdadres
   rdf:type owl:ObjectProperty ;
@@ -435,6 +458,7 @@ ceo:heeftNauwkeurigheid
   rdf:type owl:ObjectProperty ;
   dcterms:created "21-3-18 9:53" ;
   rdfs:comment "De property heeftNauwkeurigheid legt de relatie tussen de Basisregistratie en de nauwkeurigheid vast."@nl ;
+  rdfs:domain ceo:BasisregistratieRelatie ;
   rdfs:label "Heeft nauwkeurigheid"@nl ;
 .
 ceo:heeftOmschrijving
@@ -489,7 +513,8 @@ ceo:heeftRegisternaam
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-03-13" ;
   rdfs:comment "De property heeftRegisternaam legt de relatie tussen het Cultuurhistorisch Object en de Naam in het register vast." ;
-  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:domain ceo:Complex ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft registernaam"@nl ;
   rdfs:range ceo:Naam ;
   rdfs:subPropertyOf ceo:heeftNaam ;
@@ -498,10 +523,18 @@ ceo:heeftRegisteromschrijving
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-03-13" ;
   rdfs:comment "De property heeftRegisteromschrijving legt de relatie tussen het Cultuurhistorisch Object en de Omschrijving in het register vast."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:domain ceo:Complex ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft Registeromschrijving"@nl ;
   rdfs:range ceo:Omschrijving ;
   rdfs:subPropertyOf ceo:heeftOmschrijving ;
+.
+ceo:heeftSKOSConcept
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "28-3-18 10:19" ;
+  rdfs:comment "" ;
+  rdfs:domain ceo:Functie ;
+  rdfs:label "Heeft SKOS concept"@nl ;
 .
 ceo:heeftSamenhang
   rdf:type owl:ObjectProperty ;
@@ -587,6 +620,7 @@ ceo:indicatieArcheologischeMonumentenKaartWaardig
   rdfs:comment "Indicatie Archeologische Monumenten Kaart Waardig"@nl ;
   rdfs:domain ceo:ArcheologischOnderzoeksgebied ;
   rdfs:label "" ;
+  rdfs:range xsd:boolean ;
 .
 ceo:internationaalKenteken
   rdf:type owl:DatatypeProperty ;
@@ -672,7 +706,9 @@ ceo:persitenteIdentificatie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "27-3-18 9:14" ;
   rdfs:comment "Persitente identificatie"@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "" ;
+  rdfs:range xsd:string ;
 .
 ceo:registerComplexNaam
   rdf:type owl:DatatypeProperty ;
@@ -720,6 +756,7 @@ ceo:samenhangToelichting
   rdfs:comment "" ;
   rdfs:domain ceo:Samenhang ;
   rdfs:label "Samenhang Toelichting"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:voorbeschermd
   rdf:type ceo:JuridischeStatus ;
