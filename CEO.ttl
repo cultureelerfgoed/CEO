@@ -497,7 +497,7 @@ ceo:heeftRegisterPerceel
   dcterms:created "21-3-18 10:03" ;
   rdfs:comment "De property heeftRegisterPerceel legt de relatie tussen het Rijksmonument en het Perceel vast."@nl ;
   rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Heeft Register Perceel"@nl ;
+  rdfs:label "Heeft register Perceel"@nl ;
   rdfs:subPropertyOf ceo:heeftPerceel ;
 .
 ceo:heeftRegisteradres
@@ -525,7 +525,7 @@ ceo:heeftRegisteromschrijving
   rdfs:comment "De property heeftRegisteromschrijving legt de relatie tussen het Cultuurhistorisch Object en de Omschrijving in het register vast."@nl ;
   rdfs:domain ceo:Complex ;
   rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Heeft Registeromschrijving"@nl ;
+  rdfs:label "Heeft registeromschrijving"@nl ;
   rdfs:range ceo:Omschrijving ;
   rdfs:subPropertyOf ceo:heeftOmschrijving ;
 .
@@ -617,9 +617,8 @@ ceo:huidigeNaam
 ceo:indicatieArcheologischeMonumentenKaartWaardig
   rdf:type owl:DatatypeProperty ;
   dcterms:created "27-3-18 9:50" ;
-  rdfs:comment "Indicatie Archeologische Monumenten Kaart Waardig"@nl ;
   rdfs:domain ceo:ArcheologischOnderzoeksgebied ;
-  rdfs:label "" ;
+  rdfs:label "Indicatie Archeologische Monumenten Kaart Waardig"@nl ;
   rdfs:range xsd:boolean ;
 .
 ceo:internationaalKenteken
@@ -651,7 +650,7 @@ ceo:locatienaam
   dcterms:created "21-3-18 10:36" ;
   rdfs:comment "De property locatienaam wordt gebruikt om aan te geven welke locatie naam is gekoppeld aan de locatie aanduiding"@nl ;
   rdfs:domain ceo:LocatieAanduiding ;
-  rdfs:label "" ;
+  rdfs:label "Locatienaam"@nl ;
   rdfs:range xsd:string ;
 .
 ceo:naam
@@ -681,7 +680,7 @@ ceo:onroerendeZaakomschrijving
   dcterms:modified "2018-2-6" ;
   rdfs:comment "Deze property onroerendeZaakomschrijving wordt gebruikt om de korte aanduiding, of omschrijving, die volstaat om vast te stellen over welke beschermde onroerende zaak of zaken het gaat."@nl ;
   rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Beschermde onroerende zaak omschrijving"@nl ;
+  rdfs:label "Onroerende zaak omschrijving"@nl ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:omschrijving ;
 .
@@ -705,9 +704,8 @@ ceo:perceelnummer
 ceo:persitenteIdentificatie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "27-3-18 9:14" ;
-  rdfs:comment "Persitente identificatie"@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "" ;
+  rdfs:label "Persitente identificatie"@nl ;
   rdfs:range xsd:string ;
 .
 ceo:registerComplexNaam
@@ -732,7 +730,7 @@ ceo:registerNaam
   dcterms:created "2018-2-6" ;
   rdfs:comment "De property registerNaam wordt gebruikt om aan te geven welke monumentennaam in het register is gekoppeld aan het rijksmonument. De naam van het monument staat in het register indien nodig voor identificatie."@nl ;
   rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Register naam"@nl ;
+  rdfs:label "Register Naam"@nl ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf ceo:naam ;
 .
