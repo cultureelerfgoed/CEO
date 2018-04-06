@@ -248,6 +248,7 @@ ceo:archis2Complexnummer
   rdfs:comment "De property archis2Complexnummer wordt gebruikt om aan te geven of een complexnummer uit Archis 2 aan een archeologisch complex is gekoppeld."@nl ;
   rdfs:domain ceo:ArcheologischComplex ;
   rdfs:label "Archis2Complexnummer"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:archis2Monumentnummer
   rdf:type owl:DatatypeProperty ;
@@ -255,6 +256,7 @@ ceo:archis2Monumentnummer
   rdfs:comment "De property archis2Monumentnummer wordt gebruikt om aan te geven of een monumentnummer uit Archis 2 aan een archeologisch terrein is gekoppeld."@nl ;
   rdfs:domain ceo:ArcheologischTerrein ;
   rdfs:label "Archis2 Monumentnummer"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:archis2Vondstnummer
   rdf:type owl:DatatypeProperty ;
@@ -304,12 +306,12 @@ ceo:deelperceelnummer
   rdfs:label "Deelperceelnummer"@nl ;
   rdfs:range xsd:integer ;
 .
-ceo:geometetrieIdentificatie
+ceo:geometrieIdentificatie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "27-3-18 10:29" ;
   rdfs:comment "De property geometrieIdentificatie wordt gebruikt om aan te geven welke geometrische identificatie aan de geometrie is gekoppeld."@nl ;
   rdfs:domain ceo:Geometrie ;
-  rdfs:label "Geometetrie identificatie"@nl ;
+  rdfs:label "Geometrie identificatie"@nl ;
   rdfs:range xsd:string ;
 .
 ceo:heeftArcheologischeWaardering
@@ -649,7 +651,9 @@ ceo:kadasterDeelEnNummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "5-4-18 15:08" ;
   rdfs:comment "De property kadasterDeelEnNummer wordt gebruikt om aan te geven of een kadasterDeelEnNummer aan een rijksmonument is gegeven."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Kadaster deel en nummer"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:locatieOmschrijving
   rdf:type owl:DatatypeProperty ;
