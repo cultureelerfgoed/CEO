@@ -136,14 +136,14 @@ zaak:archiefnominatie
 zaak:betreftCultuurhistorischObject
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De property betreftCultuurhistorischObject legt de relatie tussen Zaakobject en het CultuurhistorischObject."@nl ;
+  rdfs:comment "De property betreftCultuurhistorischObject legt de relatie tussen Zaakobject en het CultuurhistorischObject vast."@nl ;
   rdfs:domain zaak:Zaakobject ;
   rdfs:label "Betreft cultuurhistorisch object"@nl ;
 .
 zaak:betreftZaak
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De property isDeelzaakVan legt de relatie tussen Rol of Zaakdocument en Zaak."@nl ;
+  rdfs:comment "De property isDeelzaakVan legt de relatie tussen Rol of Zaakdocument en Zaak vast."@nl ;
   rdfs:label "Betreft zaak"@nl ;
   rdfs:range zaak:Zaak ;
   skos:editorialNote "Deze property heeft vanuit de aard van het gebruik geen domain, de vraag moeten we twee aparte properties modelleren voor Rol en Zaakdocument?" ;
@@ -167,7 +167,7 @@ zaak:einddatumZaak
 zaak:heeftBetrekkingOpAndereZaak
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De property heeftBetrekkingOpAndereZaak legt de relatie tussen Zaak en een andere Zaak."@nl ;
+  rdfs:comment "De property heeftBetrekkingOpAndereZaak legt de relatie tussen Zaak en een andere Zaak vast."@nl ;
   rdfs:domain zaak:Zaak ;
   rdfs:label "Heeft betrekking op andere zaak"@nl ;
   rdfs:range zaak:Zaak ;
@@ -175,7 +175,7 @@ zaak:heeftBetrekkingOpAndereZaak
 zaak:heeftRoltype
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-28" ;
-  rdfs:comment "De property heefRoltype legt de relatie tussen Rol en Roltype."@nl ;
+  rdfs:comment "De property heefRoltype legt de relatie tussen Rol en Roltype vast."@nl ;
   rdfs:domain zaak:Rol ;
   rdfs:label "Heeft roltype"@nl ;
   rdfs:range zaak:Roltype ;
@@ -183,7 +183,7 @@ zaak:heeftRoltype
 zaak:heeftStatus
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De property heeftStatus legt de relatie tussen Zaak en Status."@nl ;
+  rdfs:comment "De property heeftStatus legt de relatie tussen Zaak en Status vast."@nl ;
   rdfs:domain zaak:Zaak ;
   rdfs:label "Heeft status"@nl ;
   rdfs:range zaak:Status ;
@@ -196,10 +196,18 @@ zaak:heeftStatustype
   rdfs:label "Heeft statustype"@nl ;
   rdfs:range zaak:Statustype ;
 .
+zaak:heeftZaak
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "19-4-18 8:31" ;
+  rdfs:comment "De property heeftZaak legt de relatie tussen Zaak en Zaakobject vast."@nl ;
+  rdfs:domain zaak:Zaak ;
+  rdfs:label "Heeft zaak"@nl ;
+  rdfs:range zaak:Zaakobject ;
+.
 zaak:heeftZaaktype
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De property heeftZaaktype legt de relatie tussen Zaak en Zaaktype."@nl ;
+  rdfs:comment "De property heeftZaaktype legt de relatie tussen Zaak en Zaaktype vast."@nl ;
   rdfs:domain zaak:Zaak ;
   rdfs:label "Heeft zaaktype"@nl ;
   rdfs:range zaak:Zaaktype ;
@@ -207,7 +215,7 @@ zaak:heeftZaaktype
 zaak:isDeelzaakVan
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De property isDeelzaakVan legt de relatie tussen Zaak en deelzaak, die zelf ook een Zaak is."@nl ;
+  rdfs:comment "De property isDeelzaakVan legt de relatie tussen Zaak en deelzaak, die zelf ook een Zaak is vast."@nl ;
   rdfs:domain zaak:Zaak ;
   rdfs:label "Is deelzaak van"@nl ;
   rdfs:range zaak:Zaak ;
@@ -215,7 +223,7 @@ zaak:isDeelzaakVan
 zaak:isOnderwerpVan
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De property isOnderwerpVan legt de relatie tussen Zaakobject en Zaak."@nl ;
+  rdfs:comment "De property isOnderwerpVan legt de relatie tussen Zaakobject en Zaak vast."@nl ;
   rdfs:domain zaak:Zaakobject ;
   rdfs:label "Is onderwerp van"@nl ;
   rdfs:range zaak:Zaak ;
@@ -223,7 +231,7 @@ zaak:isOnderwerpVan
 zaak:isUitKomstVan
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De propertyisUitKomstVan legt de relatie tussen Besluit en Zaak."@nl ;
+  rdfs:comment "De propertyisUitKomstVan legt de relatie tussen Besluit en Zaak vast."@nl ;
   rdfs:domain zaak:Besluit ;
   rdfs:label "Is uit komst van"@nl ;
   rdfs:range zaak:Zaak ;
