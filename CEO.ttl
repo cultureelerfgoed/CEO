@@ -41,12 +41,6 @@ dcterms:subject
 <http://www.opengis.net/ont/gml#Surface>
   skos:editorialNote "De class gml:Surface is de representatie van een contour van een Cultuur historisch object."@nl ;
 .
-rdfs:heeftNauwekeurigheid
-  rdf:type owl:AnnotationProperty ;
-  dcterms:created "21-3-18 9:50" ;
-  rdfs:domain ceo:BasisregistratieRelatie ;
-  rdfs:label "Heeft nauwekeurigheid"@nl ;
-.
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
   skos:editorialNote "De property lat legt de relatie tussen het cultuurhistorisch object en de breedtegraad vast."@nl ;
 .
@@ -59,8 +53,21 @@ rdfs:heeftNauwekeurigheid
 <http://www.w3.org/ns/locn#addressArea>
   rdfs:comment "In de CEO ontologie wordt deze property ook gebruikt om de locatieregistratie weer te geven voor rijksmonumenten die geen verblijfsobject zijn."@nl ;
 .
+<https://creativecommons.org/licenses/by/4.0/>
+  rdf:type dcterms:Agent ;
+  dcterms:created "23-4-18 12:24" ;
+  rdfs:comment "" ;
+  rdfs:label "Creative Commons Licenses 4.0"@nl ;
+.
 <https://data.cultureelerfgoed.nl/vocab/def/ceo>
   rdf:type owl:Ontology ;
+  dcterms:created "2018-04-23" ;
+  dcterms:creator ceo:Frans_van_der_Zande ;
+  dcterms:creator ceo:Patrick_Mout ;
+  dcterms:hasVersion "0.7" ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:publisher ceo:Rijksdienst_voor_het_Cultureel_Erfgoed ;
+  dcterms:title "Cultureel Erfgoed Ontologie"@nl ;
   owl:imports <file:///TopBraid/RCE/Gemeente.rdf> ;
   owl:imports <file:///TopBraid/RCE/Provincie.rdf> ;
   owl:imports <file:///TopBraid/RCE/brk-model.rdf> ;
@@ -110,6 +117,12 @@ ceo:Complex
   rdfs:label "Complex"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
+<https://data.cultureelerfgoed.nl/vocab/def/ceo#CreativeCommonslLicense4.0>
+  rdf:type dcterms:Agent ;
+  dcterms:created "23-4-18 11:54" ;
+  rdfs:comment "" ;
+  rdfs:label "Creative Common License 4.0"@nl ;
+.
 ceo:CultuurhistorischObject
   rdf:type owl:Class ;
   dcterms:created "2018-01-30" ;
@@ -123,6 +136,12 @@ ceo:Datering
   rdfs:comment "De class Datering is een representatie van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
   rdfs:label "Datering"@nl ;
   rdfs:subClassOf owl:Thing ;
+.
+ceo:Frans_van_der_Zande
+  rdf:type dcterms:Agent ;
+  dcterms:created "23-4-18 11:44" ;
+  rdfs:comment "" ;
+  rdfs:label "Frans_van_der_Zande"@nl ;
 .
 ceo:Functie
   rdf:type owl:Class ;
@@ -200,12 +219,24 @@ ceo:Omschrijving
   rdfs:label "Omschrijving"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
+ceo:Patrick_Mout
+  rdf:type dcterms:Agent ;
+  dcterms:created "23-4-18 11:44" ;
+  rdfs:comment "" ;
+  rdfs:label "Patrick_Mout"@nl ;
+.
 ceo:Periode
   rdf:type owl:Class ;
   dcterms:created "10-4-18 10:28" ;
   rdfs:comment "De class Periode is een subclass van kennisregistratie en is de representatie van vastgelegde perioden met betrekking tot een cultuurhistorisch object."@nl ;
   rdfs:label "Periode"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
+.
+ceo:Rijksdienst_voor_het_Cultureel_Erfgoed
+  rdf:type dcterms:Agent ;
+  dcterms:created "23-4-18 10:52" ;
+  rdfs:comment "" ;
+  rdfs:label "Rijksdienst_voor_het_Cultureel_Erfgoed"@nl ;
 .
 ceo:Rijksmonument
   rdf:type owl:Class ;
