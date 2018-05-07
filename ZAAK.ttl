@@ -1,10 +1,8 @@
 # baseURI: https://data.cultureelerfgoed.nl/vocab/def/zaak
-# imports: http://purl.org/dc/elements/1.1/
-# imports: http://purl.org/dc/terms/
-# imports: http://www.w3.org/2004/02/skos/core
 # prefix: zaak
 
 @prefix : <https://data.cultureelerfgoed.nl/vocab/def/zaak#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -13,11 +11,26 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zaak: <https://data.cultureelerfgoed.nl/vocab/def/zaak#> .
 
+dcterms:Agent
+  rdf:type owl:Class ;
+  rdfs:subClassOf owl:Thing ;
+.
+dcterms:created
+  rdf:type rdf:Property ;
+.
+dcterms:creator
+  rdf:type rdf:Property ;
+  rdfs:label "creator "@nl ;
+.
+dcterms:date
+  rdf:type rdf:Property ;
+.
+dcterms:description
+  rdf:type rdf:Property ;
+  rdfs:label "description "@nl ;
+.
 <https://data.cultureelerfgoed.nl/vocab/def/zaak>
   rdf:type owl:Ontology ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports dcterms: ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionInfo "Created with TopBraid Composer" ;
 .
 zaak:Besluit
@@ -69,6 +82,21 @@ zaak:Eigenschaptype
   rdfs:label "Eigenschaptype"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
+zaak:EnkelvoudigDocument
+  rdf:type owl:Class ;
+  rdfs:label "Enkelvoudig document "@nl ;
+  rdfs:subClassOf zaak:Document ;
+.
+zaak:Medewerker
+  rdf:type owl:Class ;
+  rdfs:label "Medewerker "@nl ;
+  rdfs:subClassOf zaak:Betrokkene ;
+.
+zaak:OrganisatorischeEenheid
+  rdf:type owl:Class ;
+  rdfs:label "Organisatorische eenheid "@nl ;
+  rdfs:subClassOf zaak:Betrokkene ;
+.
 zaak:Rol
   rdf:type owl:Class ;
   dcterms:created "2018-2-26" ;
@@ -82,6 +110,11 @@ zaak:Roltype
   rdfs:comment "De class Roltype is een representatie van een generieke aanduiding van de aard van een rol die een betrokkene kan uitoefenen in Zaak en van een Zaaktype."@nl ;
   rdfs:label "Roltype"@nl ;
   rdfs:subClassOf owl:Thing ;
+.
+zaak:SamengesteldDocument
+  rdf:type owl:Class ;
+  rdfs:label "Samengesteld document "@nl ;
+  rdfs:subClassOf zaak:Document ;
 .
 zaak:Status
   rdf:type owl:Class ;
@@ -133,6 +166,12 @@ zaak:archiefnominatie
   rdfs:label "Archiefnominatie"@nl ;
   rdfs:range xsd:boolean ;
 .
+zaak:beginGeldigheid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "begin geldigheid "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
 zaak:betreftCultuurhistorischObject
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
@@ -156,13 +195,25 @@ zaak:deelzakenindicatie
   rdfs:label "Deelzaken indicatie"@nl ;
   rdfs:range xsd:boolean ;
 .
+zaak:eindGeldigheid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "eind geldigheid"@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
 zaak:einddatumZaak
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De property deelzaakindicatie wordt gebruikt om aan te geven of de datum waarop de uitvoering van de zaak is afgerond."@nl ;
+  rdfs:comment "De property einddatumZaak wordt gebruikt om aan te geven of de datum waarop de uitvoering van de zaak is afgerond."@nl ;
   rdfs:domain zaak:Zaak ;
   rdfs:label "Einddatum zaak"@nl ;
+  rdfs:range xsd:date ;
   skos:editorialNote "Welke datatype van data moeten we hier gebruiken?" ;
+.
+zaak:heeftBesluitType
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property legt de relatie tussen vast tussen een Besluit en een Besluittype"@nl ;
+  rdfs:label "heeft besluittype"@nl ;
 .
 zaak:heeftBetrekkingOpAndereZaak
   rdf:type owl:ObjectProperty ;
@@ -189,7 +240,7 @@ zaak:heeftStatus
   rdfs:range zaak:Status ;
 .
 zaak:heeftStatustype
-  rdf:type rdf:Property ;
+  rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-28" ;
   rdfs:comment "De property heeftStatusttype legt de relatie tussen Status en Statustype."@nl ;
   rdfs:domain zaak:Status ;
@@ -212,6 +263,12 @@ zaak:heeftZaaktype
   rdfs:label "Heeft zaaktype"@nl ;
   rdfs:range zaak:Zaaktype ;
 .
+zaak:ingangsdatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "ingangsdatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
 zaak:isDeelzaakVan
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
@@ -228,11 +285,86 @@ zaak:isOnderwerpVan
   rdfs:label "Is onderwerp van"@nl ;
   rdfs:range zaak:Zaak ;
 .
-zaak:isUitKomstVan
+zaak:isUitkomstVan
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-27" ;
-  rdfs:comment "De propertyisUitKomstVan legt de relatie tussen Besluit en Zaak vast."@nl ;
+  rdfs:comment "De propertyisUitkomstVan legt de relatie tussen Besluit en Zaak vast."@nl ;
   rdfs:domain zaak:Besluit ;
-  rdfs:label "Is uit komst van"@nl ;
+  rdfs:label "Is uitkomst van"@nl ;
   rdfs:range zaak:Zaak ;
+.
+zaak:isVanType
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property legt de relatie tussen vast tussen een object en een objecttype."@nl ;
+  rdfs:label "is van type "@nl ;
+.
+zaak:kanVastgelegdZijnAls
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property kanVastgelegdZijnAls legt de relatie tussen vast tussen een Besluit en een Document"@nl ;
+  rdfs:domain zaak:Besluit ;
+  rdfs:label "kan vastgelegd zijn als "@nl ;
+  rdfs:range zaak:Document ;
+.
+zaak:naam
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "naam "@nl ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf rdfs:label ;
+.
+zaak:objectId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "object id "@nl ;
+.
+zaak:omschrijving
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "omschrijving "@nl ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf dcterms:description ;
+.
+zaak:ontvangstdatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "ontvangstdatum"@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+zaak:toelichting
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "toelichting "@nl ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf rdfs:comment ;
+.
+zaak:uiterlijkeReactiedatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "uiterlijke reactiedatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+zaak:vertrouwelijk
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "vertrouwelijk"@nl ;
+  rdfs:range xsd:boolean ;
+.
+zaak:vervaldatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "vervaldatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+zaak:vervalreden
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "vervalreden "@nl ;
+  rdfs:range xsd:string ;
+.
+zaak:verzenddatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "verzenddatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+zaak:wordtVastgelegdIn
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property zaak:wordtVastgelegdIn legt de relatie tussen een BesluitType en een DocumentType vast."@nl ;
+  rdfs:domain zaak:Besluittype ;
+  rdfs:label "wordt vastgelegd in "@nl ;
+  rdfs:range zaak:Documenttype ;
 .
