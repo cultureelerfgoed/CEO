@@ -1,13 +1,208 @@
 # baseURI: https://data.cultureelerfgoed.nl/vocab/def/meta
 # prefix: meta
 
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix meta: <https://data.cultureelerfgoed.nl/vocab/def/meta#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dcterms:Agent
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+dcterms:created
+  rdf:type rdf:Property ;
+.
+dcterms:creator
+  rdf:type rdf:Property ;
+  rdfs:label "creator "@nl ;
+.
+dcterms:date
+  rdf:type rdf:Property ;
+.
+dcterms:description
+  rdf:type rdf:Property ;
+  rdfs:label "description "@nl ;
+.
+dcterms:identfier
+  rdf:type rdf:Property ;
+  rdfs:label "identfier "@nl ;
+.
+dcterms:title
+  rdf:type rdf:Property ;
+  rdfs:label "title "@nl ;
+.
+skos:altLabel
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "alt label "@nl ;
+.
+skos:definition
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "definition "@nl ;
+  rdfs:range xsd:string ;
+.
 <https://data.cultureelerfgoed.nl/vocab/def/meta>
   rdf:type owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
+  rdfs:label "Meta ontologie"@nl ;
+.
+meta:Periode
+  rdf:type owl:Class ;
+  rdfs:label "Periode "@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+meta:Periode_1
+  rdf:type meta:Periode ;
+  rdfs:label "maand"@nl ;
+.
+meta:Periode_2
+  rdf:type meta:Periode ;
+  rdfs:label "dag"@nl ;
+.
+meta:Periode_3
+  rdf:type meta:Periode ;
+  rdfs:label "week"@nl ;
+.
+meta:Periode_4
+  rdf:type meta:Periode ;
+  rdfs:label "jaar"@nl ;
+.
+meta:Periode_5
+  rdf:type meta:Periode ;
+  rdfs:label "twee weken"@nl ;
+.
+meta:Periode_6
+  rdf:type meta:Periode ;
+  rdfs:label "drie weken"@nl ;
+.
+meta:beginGeldigheidDatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "begin geldigheid datum"@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+meta:begindatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "begindatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+  skos:altLabel "ingangsdatum"@nl ;
+.
+meta:doorlooptijd
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "doorlooptijd"@nl ;
+  rdfs:range meta:Periode ;
+.
+meta:einddatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "einddatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+meta:eindeGeldigheidDatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "einde geldigheid datum"@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+meta:ontvangstdatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "ontvangstdatum"@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+meta:uiterlijkeReactiedatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "uiterlijke reactiedatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+meta:vervaldatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "vervaldatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+meta:verzenddatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "verzenddatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#Besluit>
+  dcterms:created "2018-2-26" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#Document>
+  dcterms:created "2018-2-26" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#Eigenschap>
+  dcterms:created "2018-2-26" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#Rol>
+  dcterms:created "2018-2-26" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#Status>
+  dcterms:created "2018-2-26" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#Zaak>
+  dcterms:created "2018-2-26" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#Zaakdocument>
+  dcterms:created "2018-2-26" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#Zaakobject>
+  dcterms:created "2018-2-26" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#archiefnominatie>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#betreftCultuurhistorischObject>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#betreftZaak>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#deelzakenindicatie>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#heeftBetrekkingOpAndereZaak>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#heeftRoltype>
+  dcterms:created "2018-2-28" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#heeftStatus>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#heeftStatustype>
+  dcterms:created "2018-2-28" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#heeftZaak>
+  dcterms:created "19-4-18 8:31" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#heeftZaaktype>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#isDeelzaakVan>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#isOnderwerpVan>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#isUitkomstVan>
+  dcterms:created "2018-2-27" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/ztc#Eigenschaptype>
+  skos:altLabel "EIT" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/ztc#Roltype>
+  skos:altLabel "RLT" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/ztc#Statustype>
+  skos:altLabel "STT" ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/ztc#Zaaktype>
+  skos:altLabel "ZKT" ;
 .
