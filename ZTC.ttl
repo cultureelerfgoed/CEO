@@ -1,5 +1,4 @@
 # baseURI: https://data.cultureelerfgoed.nl/vocab/def/ztc
-# imports: https://data.cultureelerfgoed.nl/vocab/def/meta
 # prefix: ztc
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -31,7 +30,6 @@ dcterms:Agent
 <https://data.cultureelerfgoed.nl/vocab/def/ztc>
   rdf:type owl:Ontology ;
   rdfs:label "Zaak Type Catalogus"@nl ;
-  owl:imports <https://data.cultureelerfgoed.nl/vocab/def/meta> ;
 .
 ztc:Besluittype
   rdf:type owl:Class ;

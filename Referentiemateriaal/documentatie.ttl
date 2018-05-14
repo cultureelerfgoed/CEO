@@ -1,0 +1,181 @@
+# baseURI: https://data.cultureelerfgoed.nl/id/tijdelijk/documentatie/
+# prefix: documentatie
+
+@prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix ann: <http://tijdelijk.nl/annotatie/> .
+@prefix backspin: <http://topbraid.org/backspin#> .
+@prefix corpus: <http://topbraid.org/corpus#> .
+@prefix crosswalk: <http://topbraid.org/crosswalk#> .
+@prefix crosswalkprojects: <http://teamwork.topbraidlive.org/crosswalkprojects#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix documentatie: <https://data.cultureelerfgoed.nl/id/tijdelijk/documentatie/> .
+@prefix edg: <http://edg.topbraid.solutions/model/> .
+@prefix evnconstraints: <http://topbraid.org/spin/evnconstraints#> .
+@prefix evnui: <http://evn.topbraidlive.org/ui#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix html: <http://uispin.org/html#> .
+@prefix jfn: <java:org.apache.jena.sparql.function.library.> .
+@prefix lfunctions: <http://example.org/lfunctions#> .
+@prefix lib-importer: <http://edg.topbraid.solutions/importer/lib#> .
+@prefix luc: <http://teamwork.topbraidlive.org/saf/lucene#> .
+@prefix ontologyprojects: <http://teamwork.topbraidlive.org/ontologyprojects#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owlrl: <http://topbraid.org/spin/owlrl#> .
+@prefix pf: <http://jena.hpl.hp.com/ARQ/property#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix savedQueries: <http://teamwork.topbraidlive.org/ui/savedQueries#> .
+@prefix search: <http://topbraid.org/search#> .
+@prefix sharepoint: <http://topbraid.org/sharepoint#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosspin: <http://topbraid.org/spin/skosspin#> .
+@prefix skostemplate: <http://topbraid.org/spin/skostemplates#> .
+@prefix sm: <http://topbraid.org/sparqlmotion#> .
+@prefix sm2wsdl: <http://topbraid.org/sparqlmotion/sm2wsdl.sms#> .
+@prefix smf: <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml: <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spinmap: <http://spinrdf.org/spinmap#> .
+@prefix spinmapl: <http://topbraid.org/spin/spinmapl#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix spr: <http://spinrdf.org/spr#> .
+@prefix spra: <http://spinrdf.org/spra#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix swaclasses: <http://topbraid.org/swaclasses#> .
+@prefix swaeditor: <http://topbraid.org/swaeditor#> .
+@prefix swauml: <http://topbraid.org/swauml#> .
+@prefix swon: <http://uispin.org/swon#> .
+@prefix tables: <http://topbraid.org/tables#> .
+@prefix tablesmap: <http://topbraid.org/spin/tablesmap#> .
+@prefix tagger: <http://evn.topbraidlive.org/tagger#> .
+@prefix tasks: <http://topbraid.org/tasks#> .
+@prefix taxonomies: <http://evn.topbraidlive.org/evnprojects#> .
+@prefix tbladmin: <http://server.topbraidlive.org/system-applications/tbladmin#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix tops: <http://www.topbraid.org/tops#> .
+@prefix tosh.ui: <http://topbraid.org/tosh.ui#> .
+@prefix tracker: <http://teamwork.topbraidlive.org/ui/tracker#> .
+@prefix ui: <http://uispin.org/ui#> .
+@prefix uix: <http://topbraidlive.org/uix#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ztc: <https://data.cultureelerfgoed.nl/vocab/def/ztc#> .
+
+ann:Datum_opname_attribuutsoort
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Datum_opname_objecttype
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Definitie_attribuutsoort
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Definitie_objecttype
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Formaat_attribuutsoort
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Herkomst_attribuutsoort
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Herkomst_objecttype
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Indicatie_authentiek
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Indicatie_formele_historie
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Indicatie_in_onderzoek
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Indicatie_kardinaliteit
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Indicatie_materiële_historie
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Issues
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Mnemonic_objecttype
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Naam_attribuutsoort
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Naam_objecttype
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Ontwerpbeslissingen
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Overzicht_Attributen
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Overzicht_relaties
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Populatie_objecttype
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Regels_attribuutsoort
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Toelichting_attribuutsoort
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+ann:Toelichting_objecttype
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Unieke_aanduiding_objecttype
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:Class ;
+.
+ann:Waardenverzameling
+  rdf:type owl:AnnotationProperty ;
+  rdfs:domain owl:DatatypeProperty ;
+  rdfs:domain owl:ObjectProperty ;
+.
+documentatie:
+  rdf:type owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
