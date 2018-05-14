@@ -311,7 +311,7 @@ ceo:Tijdvak
 ceo:Type
   rdf:type owl:Class ;
   dcterms:created "2-5-18 13:07" ;
-  rdfs:comment "De class Type is een subclass van kennisregistratie en is de representatie van vastgelegde typen van een cultuurhistorisch object."@nl ;
+  rdfs:comment "De class Typoe is een subclass van kennisregistratie en is de representatie van vastgelegde typen van een cultuurhistorisch object."@nl ;
   rdfs:label "Type"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
@@ -534,7 +534,7 @@ ceo:heeftBodemgebruik
   rdfs:label "Heeft bodemgebruik"@nl ;
   rdfs:range ceo:Bodemgebruik ;
 .
-ceo:heeftBodemgebruikNaam
+ceo:heeftBodemgebruiknaam
   rdf:type owl:ObjectProperty ;
   dcterms:created "2-5-18 13:43" ;
   rdfs:comment "De property heeftBodemgebruiknaam legt de relatie tussen het bodemgebruik en de naam van het  bodemgebruikvast."@nl ;
@@ -615,13 +615,6 @@ ceo:heeftFunctie
   rdfs:label "Heeft functie"@nl ;
   rdfs:range ceo:Functie ;
 .
-ceo:heeftFunctieNaam
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "28-3-18 10:19" ;
-  rdfs:comment "De property heeftFunctienaam legt de relatie tussen de Functie en de naam van de functie vast."@nl ;
-  rdfs:domain ceo:Functie ;
-  rdfs:label "Heeft functienaam"@nl ;
-.
 ceo:heeftFunctiePeriode
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-3-16" ;
@@ -629,6 +622,13 @@ ceo:heeftFunctiePeriode
   rdfs:domain ceo:Functie ;
   rdfs:label "Heeft functie periode"@nl ;
   rdfs:range ceo:Datering ;
+.
+ceo:heeftFunctienaam
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "28-3-18 10:19" ;
+  rdfs:comment "De property heeftFunctienaam legt de relatie tussen de Functie en de naam van de functie vast."@nl ;
+  rdfs:domain ceo:Functie ;
+  rdfs:label "Heeft functienaam"@nl ;
 .
 ceo:heeftFunctiesoort
   rdf:type owl:ObjectProperty ;
@@ -644,12 +644,12 @@ ceo:heeftGaafheid
   rdfs:domain ceo:ArcheologischeKwaliteit ;
   rdfs:label "Heeft gaafheid"@nl ;
 .
-ceo:heeftGebeurtenisNaam
+ceo:heeftGebeurtenis
   rdf:type owl:ObjectProperty ;
   dcterms:created "10-4-18 9:44" ;
   rdfs:comment "De property heeftGebeurtenis legt de relatie tussen het Cultuurhistorisch Object en de Gebeurtenis vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Heeft gebeurtenisnaam"@nl ;
+  rdfs:label "Heeft gebeurtenis"@nl ;
   rdfs:range ceo:Gebeurtenis ;
 .
 ceo:heeftGebeurtenisType
@@ -709,14 +709,6 @@ ceo:heeftHoofdfunctie
   rdf:type xsd:boolean ;
   rdfs:comment "Nog toe te voegen "@nl ;
   rdfs:label "hoofdfunctie"@nl ;
-.
-ceo:heeftHuidigeBestemming
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "8-5-18 10:27" ;
-  rdfs:comment "De property heeftHuidigeBestemming legt de relatie tussen het Cultuurhistorisch Object en de huidige bestemming vast."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Heeft huidige bestemming"@nl ;
-  rdfs:range ceo:Functie ;
 .
 ceo:heeftIndicatieNauwkeurigheid
   rdf:type owl:ObjectProperty ;
@@ -801,7 +793,7 @@ ceo:heeftMateriaal
   rdfs:label "Heeft Materiaal"@nl ;
   rdfs:range ceo:Materiaal ;
 .
-ceo:heeftMateriaalNaam
+ceo:heeftMateriaalnaam
   rdf:type owl:ObjectProperty ;
   dcterms:created "2-5-18 12:50" ;
   rdfs:comment "De property heeftMateriaalnaam legt de relatie tussen het Materiaal en de naam van het materiaal vast."@nl ;
@@ -860,14 +852,6 @@ ceo:heeftOmschrijvingstype
   rdfs:comment "De property heeftOmschrijvingstype legt de relatie tussen de Omschrijving en de type omschrijvings vast."@nl ;
   rdfs:domain ceo:Omschrijving ;
   rdfs:label "Heeft omschrijvingstype"@nl ;
-.
-ceo:heeftOorspronkelijkeFunctie
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "8-5-18 10:34" ;
-  rdfs:comment "De property heeftOorspronkelijkeFunctie legt de relatie tussen het Cultuurhistorisch Object en de oorspronkelijke functie vast."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Heeft oorspronkelijke functie"@nl ;
-  rdfs:range ceo:Functie ;
 .
 ceo:heeftPerceel
   rdf:type owl:ObjectProperty ;
@@ -983,11 +967,11 @@ ceo:heeftSitueringTegenoverAdres
   rdfs:range <http://www.w3.org/ns/locn#Address> ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
-ceo:heeftStijlEnCultuurNaam
+ceo:heeftStijlEnCultuur
   rdf:type owl:ObjectProperty ;
   dcterms:created "2-5-18 13:01" ;
   rdfs:comment "De property heeftStijlEnCultuur legt de relatie tussen het Cultuurhistorisch Object de StijlEnCultuur vast."@nl ;
-  rdfs:label "Heeft stijl en cultuurnaam"@nl ;
+  rdfs:label "Heeft stijl en cultuur"@nl ;
 .
 ceo:heeftTemporeleRelatie
   rdf:type owl:ObjectProperty ;
@@ -1248,12 +1232,12 @@ ceo:perceelnummer
   rdfs:range xsd:string ;
   skos:editorialNote "Binnen de RCE data wordt het perceel nummer gegeven als kadastraal object nummer."@nl ;
 .
-ceo:persitenteIdentificatie
+ceo:persistenteIdentificatie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "27-3-18 9:14" ;
-  rdfs:comment "De property persitenteIdentificatie wordt gebruikt om aan te geven welke persitente identificatie aan een Cultuurhistorisch object is gekoppeld."@nl ;
+  rdfs:comment "De property persistenteIdentificatie wordt gebruikt om aan te geven welke persitente identificatie aan een Cultuurhistorisch object is gekoppeld."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Persitente identificatie"@nl ;
+  rdfs:label "Persistente identificatie"@nl ;
   rdfs:range xsd:string ;
 .
 ceo:registerComplexNaam
