@@ -1,0 +1,135 @@
+# baseURI: https://data.cultureelerfgoed.nl/vocab/def/ztc
+# prefix: ztc
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ztc: <https://data.cultureelerfgoed.nl/vocab/def/ztc#> .
+
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#heeftRoltype>
+  rdfs:range ztc:Roltype ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#heeftStatustype>
+  rdfs:range ztc:Statustype ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#heeftZaaktype>
+  rdfs:range ztc:Zaaktype ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/zaak#wordtVastgelegdIn>
+  rdfs:domain ztc:Besluittype ;
+  rdfs:range ztc:Documenttype ;
+.
+<https://data.cultureelerfgoed.nl/vocab/def/ztc>
+  rdf:type owl:Ontology ;
+  rdfs:label "Zaak Type Catalogus"@nl ;
+.
+ztc:Besluittype
+  rdf:type owl:Class ;
+  <http://purl.org/dc/terms/created> "2018-2-26" ;
+  rdfs:comment "De class Besluittype is een representatie van een generieke aanduiding van de aard van een besluit."@nl ;
+  rdfs:label "Besluittype"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ztc:Documenttype
+  rdf:type owl:Class ;
+  <http://purl.org/dc/terms/created> "2018-2-26" ;
+  rdfs:comment "De class Documenttype is een representatie van de aanduiding van de aard van een document zoals gehanteerd door de RCE."@nl ;
+  rdfs:label "Documenttype"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ztc:Eigenschaptype
+  rdf:type owl:Class ;
+  <http://purl.org/dc/terms/created> "2018-2-26" ;
+  rdfs:comment "De class Eigenschaptype is een representatie van een relevant inhoudelijk gegeven dat bij Zaak en van dit Zaaktype geregistreerd moet kunnen worden en geen standaard kenmerk is van een zaaktype."@nl ;
+  rdfs:label "Eigenschaptype"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ztc:Roltype
+  rdf:type owl:Class ;
+  <http://purl.org/dc/terms/created> "2018-2-26" ;
+  rdfs:comment "De class Roltype is een representatie van een generieke aanduiding van de aard van een rol die een betrokkene kan uitoefenen in Zaak en van een Zaaktype."@nl ;
+  rdfs:label "Roltype"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ztc:Statustype
+  rdf:type owl:Class ;
+  <http://purl.org/dc/terms/created> "2018-2-26" ;
+  rdfs:comment "De class Statustype is een representatie van een generieke aanduiding van de aard van een status."@nl ;
+  rdfs:label "Statustype"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ztc:Zaaktype
+  rdf:type owl:Class ;
+  <http://purl.org/dc/terms/created> "2018-2-26" ;
+  rdfs:comment "De class Zaaktype is een representatie van een generieke aanduiding van een zaak."@nl ;
+  rdfs:label "Zaaktype"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ztc:aanleiding
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De class Zaaktype betreft de indeling of groepering van zaken naar hun aard, zoals “Behandelen aanvraag subsidie” en “Behandelen aanvraag bruikleen”."@nl ;
+  rdfs:label "aanleiding "@nl ;
+  rdfs:range xsd:string ;
+.
+ztc:heeftBetrekkingOpZaaktype
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property heeftBetrekkingOp legt de relatie vast  tussen twee Zaaktypen."@nl ;
+  rdfs:domain ztc:Zaaktype ;
+  rdfs:label "heeft betrekking op Zaaktype"@nl ;
+  rdfs:range ztc:Zaaktype ;
+.
+ztc:heeftBetrokkeneInRoltype
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property heeftBetrokkeneInRoltype legt de relatie vast tussen Zaaktype en Roltype."@nl ;
+  rdfs:domain ztc:Zaaktype ;
+  rdfs:label "heeft betrokkene in Roltype"@nl ;
+  rdfs:range ztc:Roltype ;
+.
+ztc:heeftDeelZaaktypen
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property heeftDeelZaaktypen legt de relatie vast tussen twee Zaaktypen."@nl ;
+  rdfs:domain ztc:Zaaktype ;
+  rdfs:label "heeft deelZaaktypen"@nl ;
+  rdfs:range ztc:Zaaktype ;
+.
+ztc:heeftRelevanteDocumenttype
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property heeftRelevanteDocumenttype legt de relatie vast tussen Zaaktype en Documenttype."@nl ;
+  rdfs:label "heeft relevante Documenttype"@nl ;
+.
+ztc:heeftStatustype
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property heeftStatustype legt de relatie vast tussen Zaaktype en Statustype."@nl ;
+  rdfs:domain ztc:Zaaktype ;
+  rdfs:label "heeft statustype "@nl ;
+  rdfs:range ztc:Statustype ;
+.
+ztc:isVanZaaktype
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property isVanZaaktype legt de relatie vast tussen Eigenschaptype en Zaaktype."@nl ;
+  rdfs:domain ztc:Eigenschaptype ;
+  rdfs:label "is van zaaktype"@nl ;
+  rdfs:range ztc:Zaaktype ;
+.
+ztc:isVerplichtBij
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property isVerplichtBij legt de relatie vast tussen Documenttype en Statustype."@nl ;
+  rdfs:domain ztc:Documenttype ;
+  rdfs:label "is verplicht bij "@nl ;
+  rdfs:range ztc:Statustype ;
+.
+ztc:wordtVastgelegdIn
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property wordtVastgelegdIn legt de relatie vast tussen Besluittype en Documenttype."@nl ;
+  rdfs:domain ztc:Besluittype ;
+  rdfs:label "wordt vastgelegd in "@nl ;
+  rdfs:range ztc:Documenttype ;
+.
+ztc:zetAlsBetrokkene
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property zetAlsBetrokkene legt de relatie vast tussen Roltype en Statustype."@nl ;
+  rdfs:domain ztc:Roltype ;
+  rdfs:label "zet als betrokkene "@nl ;
+  rdfs:range ztc:Statustype ;
+.

@@ -31,20 +31,13 @@ dcterms:description
 .
 <https://data.cultureelerfgoed.nl/vocab/def/zaak>
   rdf:type owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
+  rdfs:label "Zaaksysteem"@nl ;
 .
 zaak:Besluit
   rdf:type owl:Class ;
   dcterms:created "2018-2-26" ;
   rdfs:comment "De class Besluit is een representatie van een na overweging of beraadslaging vastgestelde beslissing voor een individueel of concreet geval."@nl ;
   rdfs:label "Besluit"@nl ;
-  rdfs:subClassOf owl:Thing ;
-.
-zaak:Besluittype
-  rdf:type owl:Class ;
-  dcterms:created "2018-2-26" ;
-  rdfs:comment "De class Besluittype is een representatie van een generieke aanduiding van de aard van een besluit."@nl ;
-  rdfs:label "Besluittype"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
 zaak:Betrokkene
@@ -61,25 +54,11 @@ zaak:Document
   rdfs:label "Document"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
-zaak:Documenttype
-  rdf:type owl:Class ;
-  dcterms:created "2018-2-26" ;
-  rdfs:comment "De class Documenttype is een representatie van de aanduiding van de aard van een document zoals gehanteerd door de RCE."@nl ;
-  rdfs:label "Documenttype"@nl ;
-  rdfs:subClassOf owl:Thing ;
-.
 zaak:Eigenschap
   rdf:type owl:Class ;
   dcterms:created "2018-2-26" ;
   rdfs:comment "Nog  toe te voegen"@nl ;
   rdfs:label "Eigenschap"@nl ;
-  rdfs:subClassOf owl:Thing ;
-.
-zaak:Eigenschaptype
-  rdf:type owl:Class ;
-  dcterms:created "2018-2-26" ;
-  rdfs:comment "De class Eigenschaptype is een representatie van een relevant inhoudelijk gegeven dat bij Zaak en van dit Zaaktype geregistreerd moet kunnen worden en geen standaard kenmerk is van een zaaktype."@nl ;
-  rdfs:label "Eigenschaptype"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
 zaak:EnkelvoudigDocument
@@ -104,13 +83,6 @@ zaak:Rol
   rdfs:label "Rol"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
-zaak:Roltype
-  rdf:type owl:Class ;
-  dcterms:created "2018-2-26" ;
-  rdfs:comment "De class Roltype is een representatie van een generieke aanduiding van de aard van een rol die een betrokkene kan uitoefenen in Zaak en van een Zaaktype."@nl ;
-  rdfs:label "Roltype"@nl ;
-  rdfs:subClassOf owl:Thing ;
-.
 zaak:SamengesteldDocument
   rdf:type owl:Class ;
   rdfs:label "Samengesteld document "@nl ;
@@ -121,13 +93,6 @@ zaak:Status
   dcterms:created "2018-2-26" ;
   rdfs:comment "De class Status is een representatie van een aanduiding van de stand zaken van een zaak op basis van betekenisvol behaald resultaat voor de initiator van de zaak."@nl ;
   rdfs:label "Status"@nl ;
-  rdfs:subClassOf owl:Thing ;
-.
-zaak:Statustype
-  rdf:type owl:Class ;
-  dcterms:created "2018-2-26" ;
-  rdfs:comment "De class Statustype is een representatie van een generieke aanduiding van de aard van een status."@nl ;
-  rdfs:label "Statustype"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
 zaak:Zaak
@@ -149,13 +114,6 @@ zaak:Zaakobject
   dcterms:created "2018-2-26" ;
   rdfs:comment "De class Zaakobject is een representatie van een object waarop de Zaak betrekking heeft."@nl ;
   rdfs:label "Zaakobject"@nl ;
-  rdfs:subClassOf owl:Thing ;
-.
-zaak:Zaaktype
-  rdf:type owl:Class ;
-  dcterms:created "2018-2-26" ;
-  rdfs:comment "De class Zaaktype is een representatie van een generieke aanduiding van een zaak."@nl ;
-  rdfs:label "Zaaktype"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
 zaak:archiefnominatie
@@ -229,7 +187,6 @@ zaak:heeftRoltype
   rdfs:comment "De property heefRoltype legt de relatie tussen Rol en Roltype vast."@nl ;
   rdfs:domain zaak:Rol ;
   rdfs:label "Heeft roltype"@nl ;
-  rdfs:range zaak:Roltype ;
 .
 zaak:heeftStatus
   rdf:type owl:ObjectProperty ;
@@ -245,7 +202,6 @@ zaak:heeftStatustype
   rdfs:comment "De property heeftStatusttype legt de relatie tussen Status en Statustype."@nl ;
   rdfs:domain zaak:Status ;
   rdfs:label "Heeft statustype"@nl ;
-  rdfs:range zaak:Statustype ;
 .
 zaak:heeftZaak
   rdf:type owl:ObjectProperty ;
@@ -261,7 +217,6 @@ zaak:heeftZaaktype
   rdfs:comment "De property heeftZaaktype legt de relatie tussen Zaak en Zaaktype vast."@nl ;
   rdfs:domain zaak:Zaak ;
   rdfs:label "Heeft zaaktype"@nl ;
-  rdfs:range zaak:Zaaktype ;
 .
 zaak:ingangsdatum
   rdf:type owl:DatatypeProperty ;
@@ -364,7 +319,5 @@ zaak:verzenddatum
 zaak:wordtVastgelegdIn
   rdf:type owl:ObjectProperty ;
   rdfs:comment "De property zaak:wordtVastgelegdIn legt de relatie tussen een BesluitType en een DocumentType vast."@nl ;
-  rdfs:domain zaak:Besluittype ;
   rdfs:label "wordt vastgelegd in "@nl ;
-  rdfs:range zaak:Documenttype ;
 .
