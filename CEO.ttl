@@ -52,6 +52,22 @@ dcterms:subject
 .
 <http://www.w3.org/ns/locn#addressArea>
   rdfs:comment "In de CEO ontologie wordt deze property ook gebruikt om de locatieregistratie weer te geven voor rijksmonumenten die geen verblijfsobject zijn."@nl ;
+  rdfs:domain ceo:LocatieAanduiding ;
+.
+<http://www.w3.org/ns/locn#fullAddress>
+  rdfs:domain ceo:Adresgegevens ;
+.
+<http://www.w3.org/ns/locn#locatorDesignator>
+  rdfs:domain ceo:Adresgegevens ;
+.
+<http://www.w3.org/ns/locn#postCode>
+  rdfs:domain ceo:Adresgegevens ;
+.
+<http://www.w3.org/ns/locn#postName>
+  rdfs:domain ceo:Adresgegevens ;
+.
+<http://www.w3.org/ns/locn#thoroughfare>
+  rdfs:domain ceo:Adresgegevens ;
 .
 <https://creativecommons.org/licenses/by/4.0/>
   rdf:type dcterms:Agent ;
@@ -86,6 +102,13 @@ ceo:ActorEnRol
   rdfs:comment "De class ActorEnRol s een subclass van kennisregistratie en is de representatie van de actor en rol van een Gebeurtenis."@nl ;
   rdfs:label "Actor en rol"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
+.
+ceo:Adresgegevens
+  rdf:type owl:Class ;
+  dcterms:created "24-5-18 12:53" ;
+  rdfs:comment "De class Adresgegevens is de representatie van de adresgegevens van een Cultuurhistorische Object."@nl ;
+  rdfs:label "Adresgegevens"@nl ;
+  rdfs:subClassOf <http://www.w3.org/ns/locn#Address> ;
 .
 ceo:ArcheologischComplex
   rdf:type owl:Class ;
@@ -332,7 +355,7 @@ ceo:Werelderfgoed
 ceo:Zichtbaarheid
   rdf:type owl:Class ;
   dcterms:created "18-4-18 10:24" ;
-  rdfs:comment "De class Zichtbaarheid is de representatie van de relatie tussen een cultuurhistorische object en de zichtbaarheid."@nl ;
+  rdfs:comment "De class Zichtbaarheid is de representatie van de relatie tussen een Cultuurhistorische Object en de Zichtbaarheid."@nl ;
   rdfs:label "Zichtbaarheid"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
@@ -389,6 +412,22 @@ ceo:bronIdentificatie
   rdfs:domain ceo:Bronverwijzing ;
   rdfs:label "bronIdentificatie"@nl ;
 .
+ceo:buurtOfWijkCode
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "24-5-18 13:13" ;
+  rdfs:comment "De property plaatsCode wordt gebruikt om aan te geven welke buurt of wijk code is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Buurt of wijk code"@nl ;
+  rdfs:range xsd:string ;
+.
+ceo:buurtOfWijkNaam
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "24-5-18 13:15" ;
+  rdfs:comment "De property plaatsCode wordt gebruikt om aan te geven welke buurt of wijk naam is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Buurt of wijk naam"@nl ;
+  rdfs:range xsd:string ;
+.
 ceo:complexnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
@@ -444,6 +483,14 @@ ceo:formeelStandpunt
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Formeel standpunt"@nl ;
   rdfs:range xsd:boolean ;
+.
+ceo:gemeenteCode
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "24-5-18 13:11" ;
+  rdfs:comment "De property plaatsCode wordt gebruikt om aan te geven welke gemeente code is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Gemeente code"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:geometrieIdentificatie
   rdf:type owl:DatatypeProperty ;
@@ -663,7 +710,7 @@ ceo:heeftGemeente
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-2" ;
   rdfs:comment "De property heeftGemeente legt de relatie tussen het adres van een cultuurhistorisch object en de gemeente waarin het cultuurhistorisch object zich bevindt."@nl ;
-  rdfs:domain <http://www.w3.org/ns/locn#Address> ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Heeft gemeente"@nl ;
   rdfs:range <http://standaarden.overheid.nl/owms/terms/Gemeente> ;
   skos:editorialNote "Indien een cultuurhistorisch object rijksmonument is, dan heeft de property heeftGemeente, maar één waarde (functional property; cardinaliteit 1)."@nl ;
@@ -702,7 +749,7 @@ ceo:heeftHoofdadres
   rdfs:comment "De property heeftHoofdadres legt de relatie tussen het Rijksmonument en het hoofdadres vast."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft hoofdadres"@nl ;
-  rdfs:range <http://www.w3.org/ns/locn#Address> ;
+  rdfs:range ceo:Adresgegevens ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
 ceo:heeftHoofdfunctie
@@ -784,7 +831,7 @@ ceo:heeftLocatieAdres
   rdfs:comment "De property heeftLocatieAdres legt de relatie tussen de LocatieAanduiding en het adres vast."@nl ;
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Heeft locactie adres"@nl ;
-  rdfs:range <http://www.w3.org/ns/locn#Address> ;
+  rdfs:range ceo:Adresgegevens ;
 .
 ceo:heeftMateOvername
   rdf:type owl:ObjectProperty ;
@@ -888,7 +935,7 @@ ceo:heeftProvincie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-2" ;
   rdfs:comment "De property heeftProvincie legt de relatie tussen het adres van een cultuurhistorisch object en de provincie waarin het cultuurhistorisch object zich bevindt."@nl ;
-  rdfs:domain <http://www.w3.org/ns/locn#Address> ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Heeft provincie"@nl ;
   rdfs:range <http://standaarden.overheid.nl/owms/terms/Provincie> ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#adminUnitL2> ;
@@ -914,7 +961,7 @@ ceo:heeftRegisteradres
   rdfs:comment "De property heeftRegisteradres legt de relatie tussen het Rijksmonument en het registeradres vast."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft registeradres"@nl ;
-  rdfs:range <http://www.w3.org/ns/locn#Address> ;
+  rdfs:range ceo:Adresgegevens ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
 ceo:heeftRegisternaam
@@ -971,7 +1018,7 @@ ceo:heeftSitueringBijAdres
   rdfs:comment "De property heeftSitueringBijAdres legt de relatie tussen een rijksmonument dat geen verblijfsobject in de BAG is met een verblijfsobject in de BAG."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft situering bij adres"@nl ;
-  rdfs:range <http://www.w3.org/ns/locn#Address> ;
+  rdfs:range ceo:Adresgegevens ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
 ceo:heeftSitueringTegenoverAdres
@@ -980,7 +1027,7 @@ ceo:heeftSitueringTegenoverAdres
   rdfs:comment "De property heeftSitueringTegenoverAdres legt de relatie tussen een rijksmonument dat geen verblijfsobject in de BAG is met een verblijfsobject inde BAG."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft situering tegenover adres"@nl ;
-  rdfs:range <http://www.w3.org/ns/locn#Address> ;
+  rdfs:range ceo:Adresgegevens ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
 ceo:heeftStijlEnCultuurNaam
@@ -1254,6 +1301,22 @@ ceo:persitenteIdentificatie
   rdfs:comment "De property persitenteIdentificatie wordt gebruikt om aan te geven welke persitente identificatie aan een Cultuurhistorisch object is gekoppeld."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Persitente identificatie"@nl ;
+  rdfs:range xsd:string ;
+.
+ceo:plaatsCode
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "24-5-18 13:07" ;
+  rdfs:comment "De property plaatsCode wordt gebruikt om aan te geven welke plaats code is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Plaats code"@nl ;
+  rdfs:range xsd:string ;
+.
+ceo:provincieCode
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "24-5-18 13:12" ;
+  rdfs:comment "" ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Provincie code"@nl ;
   rdfs:range xsd:string ;
 .
 ceo:registerComplexNaam
