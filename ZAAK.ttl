@@ -1,5 +1,4 @@
 # baseURI: https://data.cultureelerfgoed.nl/vocab/def/zaak
-# imports: https://data.cultureelerfgoed.nl/vocab/def/meta
 # imports: https://data.cultureelerfgoed.nl/vocab/def/ztc
 # prefix: zaak
 
@@ -16,7 +15,6 @@
 <https://data.cultureelerfgoed.nl/vocab/def/zaak>
   rdf:type owl:Ontology ;
   rdfs:label "Zaaksysteem"@nl ;
-  owl:imports <https://data.cultureelerfgoed.nl/vocab/def/meta> ;
   owl:imports <https://data.cultureelerfgoed.nl/vocab/def/ztc> ;
 .
 zaak:Besluit
@@ -111,6 +109,26 @@ zaak:archiefnominatie
   rdfs:label "Archiefnominatie"@nl ;
   rdfs:range xsd:boolean ;
 .
+zaak:besluitDatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property besluitDatum wordt gebruikt om aan te geven welke datum is gekoppeld aan het besluit."@nl ;
+  rdfs:domain zaak:Besluit ;
+  rdfs:label "besluit datum "@nl ;
+  rdfs:range xsd:date ;
+.
+zaak:besluitIdentificatie
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property besluitIdentificatie wordt gebruikt om aan te geven welke identificatie is gekoppeld aan het besluit."@nl ;
+  rdfs:domain zaak:Besluit ;
+  rdfs:label "besluit identificatie "@nl ;
+.
+zaak:besluitToelichting
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property besluitToeichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan het besluit."@nl ;
+  rdfs:domain zaak:Besluit ;
+  rdfs:label "besluit toelichting "@nl ;
+  rdfs:range xsd:string ;
+.
 zaak:betreftCultuurhistorischObject
   rdf:type owl:ObjectProperty ;
   rdfs:comment "De property betreftCultuurhistorischObject legt de relatie tussen Zaakobject en het CultuurhistorischObject vast."@nl ;
@@ -186,6 +204,12 @@ zaak:hoortBij
   rdfs:comment "De property hoortBij legt de relatie vast tussen Medewerker en  Organisatorische Eenheid."@nl ;
   rdfs:label "hoort bij "@nl ;
 .
+zaak:ingangsdatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property ingangsdatum wordt gebruikt om aan te geven welke ingangsdatum is gekoppeld aan het object."@nl ;
+  rdfs:label "ingangsdatum "@nl ;
+  rdfs:range xsd:date ;
+.
 zaak:isContactpersoonVoor
   rdf:type owl:ObjectProperty ;
   rdfs:comment "De property isContactpersoonVoor legt de relatie vast tussen Medewerker en Organisatorische Eenheid."@nl ;
@@ -259,15 +283,36 @@ zaak:toelichting
   rdfs:range xsd:string ;
   rdfs:subPropertyOf rdfs:comment ;
 .
+zaak:uiterlijkeReactiedatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property uiterlijke reactiedatum wordt gebruikt om aan te geven welke uiterlijke reactiedatum is gekoppeld aan het object."@nl ;
+  rdfs:label "uiterlijke reactiedatum "@nl ;
+  rdfs:range xsd:date ;
+  rdfs:subPropertyOf dcterms:date ;
+.
 zaak:vertrouwelijk
   rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property vertrouwelijk wordt gebruikt om aan te geven of een document vertrouwelijk is."@nl ;
+  rdfs:domain zaak:Document ;
   rdfs:label "vertrouwelijk"@nl ;
   rdfs:range xsd:boolean ;
 .
+zaak:vervaldatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "vervaldatum "@nl ;
+  rdfs:range xsd:date ;
+.
 zaak:vervalreden
   rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property vervalreden wordt gebruikt om aan te geven welke vervalreden is gekoppeld aan het object."@nl ;
   rdfs:label "vervalreden "@nl ;
   rdfs:range xsd:string ;
+.
+zaak:verzenddatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property verzenddatum wordt gebruikt om aan te geven welke verzenddatum is gekoppeld aan het object."@nl ;
+  rdfs:label "verzenddatum "@nl ;
+  rdfs:range xsd:date ;
 .
 zaak:wordtVastgelegdIn
   rdf:type owl:ObjectProperty ;

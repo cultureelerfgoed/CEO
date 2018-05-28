@@ -96,9 +96,30 @@ ztc:archieftermijn
   rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/meta#Periode> ;
   rdfs:subPropertyOf <https://data.cultureelerfgoed.nl/vocab/def/meta#doorlooptijd> ;
 .
+ztc:besluittypeOmschrijving
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property besluittypeOmschrijving  wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan het een Besluittype."@nl ;
+  rdfs:domain ztc:Besluittype ;
+  rdfs:label "besluittype omschrijving "@nl ;
+  rdfs:range xsd:string ;
+.
 ztc:brondatumArchiefprocedure
   rdf:type owl:DatatypeProperty ;
   rdfs:label "brondatum archiefprocedure "@nl ;
+  rdfs:range xsd:date ;
+.
+ztc:datumBeginGeldigheidBesluittype
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property datum begin geldigheid besluittype wordt gebruikt om aan te geven welke  datum begin geldigheid is gekoppeld aan het besluittype."@nl ;
+  rdfs:domain ztc:Besluittype ;
+  rdfs:label "datum begin geldigheid besluittype"@nl ;
+  rdfs:range xsd:date ;
+.
+ztc:datumEindeGeldigheidBesluittype
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property datum einde geldigheid besluittype wordt gebruikt om aan te geven welke  datum einde geldigheid is gekoppeld aan het besluittype."@nl ;
+  rdfs:domain ztc:Besluittype ;
+  rdfs:label "datum einde geldigheid besluittype"@nl ;
   rdfs:range xsd:date ;
 .
 ztc:doel
@@ -169,10 +190,8 @@ ztc:productDienst
   rdfs:range xsd:string ;
 .
 ztc:reactietermijn
-  rdf:type owl:ObjectProperty ;
+  rdf:type owl:DatatypeProperty ;
   rdfs:label "reactietermijn "@nl ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/meta#Periode> ;
-  rdfs:subPropertyOf <https://data.cultureelerfgoed.nl/vocab/def/meta#doorlooptijd> ;
 .
 ztc:servicenormBehandeling
   rdf:type owl:DatatypeProperty ;

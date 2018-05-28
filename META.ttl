@@ -77,12 +77,6 @@ meta:Periode_6
   rdf:type meta:Periode ;
   rdfs:label "drie weken"@nl ;
 .
-meta:beginGeldigheidDatum
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "begin geldigheid datum"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf dcterms:date ;
-.
 meta:begindatum
   rdf:type owl:DatatypeProperty ;
   rdfs:label "begindatum "@nl ;
@@ -101,33 +95,9 @@ meta:einddatum
   rdfs:range xsd:date ;
   rdfs:subPropertyOf dcterms:date ;
 .
-meta:eindeGeldigheidDatum
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "einde geldigheid datum"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf dcterms:date ;
-.
 meta:ontvangstdatum
   rdf:type owl:DatatypeProperty ;
   rdfs:label "ontvangstdatum"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf dcterms:date ;
-.
-meta:uiterlijkeReactiedatum
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "uiterlijke reactiedatum "@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf dcterms:date ;
-.
-meta:vervaldatum
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "vervaldatum "@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf dcterms:date ;
-.
-meta:verzenddatum
-  rdf:type owl:DatatypeProperty ;
-  rdfs:label "verzenddatum "@nl ;
   rdfs:range xsd:date ;
   rdfs:subPropertyOf dcterms:date ;
 .

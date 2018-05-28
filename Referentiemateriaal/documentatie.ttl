@@ -1,4 +1,6 @@
 # baseURI: https://data.cultureelerfgoed.nl/id/tijdelijk/documentatie/
+# imports: http://topbraid.org/tables
+# imports: https://data.cultureelerfgoed.nl/vocab/def/zaak
 # prefix: documentatie
 
 @prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
@@ -60,6 +62,7 @@
 @prefix ui: <http://uispin.org/ui#> .
 @prefix uix: <http://topbraidlive.org/uix#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zaak: <https://data.cultureelerfgoed.nl/vocab/def/zaak#> .
 @prefix ztc: <https://data.cultureelerfgoed.nl/vocab/def/ztc#> .
 
 ann:Datum_opname_attribuutsoort
@@ -92,6 +95,7 @@ ann:Herkomst_attribuutsoort
 .
 ann:Herkomst_objecttype
   rdf:type owl:AnnotationProperty ;
+  tables:columnIndex "2"^^xsd:int ;
   rdfs:domain owl:Class ;
 .
 ann:Indicatie_authentiek
@@ -125,6 +129,7 @@ ann:Issues
 .
 ann:Mnemonic_objecttype
   rdf:type owl:AnnotationProperty ;
+  tables:columnIndex "1"^^xsd:int ;
   rdfs:domain owl:Class ;
 .
 ann:Naam_attribuutsoort
@@ -134,7 +139,8 @@ ann:Naam_attribuutsoort
 .
 ann:Naam_objecttype
   rdf:type owl:AnnotationProperty ;
-  rdfs:domain owl:Class ;
+  tables:columnIndex "0"^^xsd:int ;
+  rdfs:domain zaak:Besluit ;
 .
 ann:Ontwerpbeslissingen
   rdf:type owl:AnnotationProperty ;
@@ -177,5 +183,10 @@ ann:Waardenverzameling
 .
 documentatie:
   rdf:type owl:Ontology ;
+  owl:imports <http://topbraid.org/tables> ;
+  owl:imports <https://data.cultureelerfgoed.nl/vocab/def/zaak> ;
   owl:versionInfo "Created with TopBraid Composer" ;
+.
+zaak:Besluit
+  tables:sheetIndex "0"^^xsd:int ;
 .
