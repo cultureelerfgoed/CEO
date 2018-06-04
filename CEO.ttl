@@ -368,6 +368,14 @@ ceo:aantal
   rdfs:label "Aantal"@nl ;
   rdfs:range xsd:integer ;
 .
+ceo:actor
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "4-6-18 9:42" ;
+  rdfs:comment "De property actor wordt gebruikt om aan te geven de actor die een rol speelt bij een Cultuurhistorisch Object."@nl ;
+  rdfs:domain ceo:ActorEnRol ;
+  rdfs:label "actor"@nl ;
+  rdfs:range xsd:string ;
+.
 ceo:appartementAanduiding
   rdf:type owl:DatatypeProperty ;
   dcterms:created "21-3-18 11:00" ;
@@ -1367,6 +1375,14 @@ ceo:rijksmonumentnummer
   rdfs:label "Rijksmonumentnummer"@nl ;
   rdfs:range xsd:string ;
 .
+ceo:rol
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "4-6-18 9:46" ;
+  rdfs:comment "De property rol wordt gebruikt om aan te geven de rol die een actor speelt bij een Cultuurhistorisch Object."@nl ;
+  rdfs:domain ceo:ActorEnRol ;
+  rdfs:label "rol"@nl ;
+  rdfs:range xsd:string ;
+.
 ceo:samenhangToelichting
   rdf:type owl:DatatypeProperty ;
   dcterms:created "27-3-18 10:12" ;
@@ -1390,6 +1406,12 @@ ceo:taal
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "taal"@nl ;
   rdfs:range xsd:string ;
+.
+ceo:test
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "4-6-18 10:29" ;
+  rdfs:comment "" ;
+  rdfs:label "test" ;
 .
 ceo:toelichting
   rdf:type owl:DatatypeProperty ;
