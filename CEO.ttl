@@ -24,9 +24,6 @@
 <http://data.pdok.nl/def/pdok#asWKT-RD>
   skos:editorialNote "De property asWKT-RD legt de relatie vast tussen een cultuurhistorisch object en een geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD)."@nl ;
 .
-dcterms:subject
-  rdfs:domain ceo:Functie ;
-.
 <http://www.opengis.net/ont/geosparql#asWKT>
   skos:editorialNote "De property asWKT legt de relatie vast tussen een cultuurhistorisch object en een geometrie."@nl ;
 .
