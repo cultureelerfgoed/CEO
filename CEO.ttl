@@ -24,9 +24,6 @@
 <http://data.pdok.nl/def/pdok#asWKT-RD>
   skos:editorialNote "De property asWKT-RD legt de relatie vast tussen een cultuurhistorisch object en een geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD)."@nl ;
 .
-dcterms:subject
-  rdfs:domain ceo:Functie ;
-.
 <http://www.opengis.net/ont/geosparql#asWKT>
   skos:editorialNote "De property asWKT legt de relatie vast tussen een cultuurhistorisch object en een geometrie."@nl ;
 .
@@ -367,6 +364,14 @@ ceo:aantal
   rdfs:domain ceo:Vondsten ;
   rdfs:label "Aantal"@nl ;
   rdfs:range xsd:integer ;
+.
+ceo:actor
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "4-6-18 9:42" ;
+  rdfs:comment "De property actor wordt gebruikt om aan te geven de actor die een rol speelt bij een Cultuurhistorisch Object."@nl ;
+  rdfs:domain ceo:ActorEnRol ;
+  rdfs:label "actor"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:appartementAanduiding
   rdf:type owl:DatatypeProperty ;
@@ -1367,6 +1372,14 @@ ceo:rijksmonumentnummer
   rdfs:label "Rijksmonumentnummer"@nl ;
   rdfs:range xsd:string ;
 .
+ceo:rol
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "4-6-18 9:46" ;
+  rdfs:comment "De property rol wordt gebruikt om aan te geven de rol die een actor speelt bij een Cultuurhistorisch Object."@nl ;
+  rdfs:domain ceo:ActorEnRol ;
+  rdfs:label "rol"@nl ;
+  rdfs:range xsd:string ;
+.
 ceo:samenhangToelichting
   rdf:type owl:DatatypeProperty ;
   dcterms:created "27-3-18 10:12" ;
@@ -1390,6 +1403,12 @@ ceo:taal
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "taal"@nl ;
   rdfs:range xsd:string ;
+.
+ceo:test
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "4-6-18 10:29" ;
+  rdfs:comment "" ;
+  rdfs:label "test" ;
 .
 ceo:toelichting
   rdf:type owl:DatatypeProperty ;
