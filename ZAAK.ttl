@@ -11,11 +11,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zaak: <https://data.cultureelerfgoed.nl/vocab/def/zaak#> .
+@prefix ztc: <https://data.cultureelerfgoed.nl/vocab/def/ztc#> .
 
 <http://linkeddata.overheid.nl/terms/Wet>
   rdf:type owl:Class ;
   rdfs:comment "Dit is de URI van de class Wet zoals hij bekend is bij Linked Data Overheid."@nl ;
   rdfs:label "Wet "@nl ;
+  skos:editorialNote "Deze is toegevoegd aan origineel om een instantie te hebben van een regime (=type wet). Er zijn bestaande URIs van deze regimes " ;
 .
 <http://linkeddata.overheid.nl/terms/bwb/id/BWBR0004471/1630144/2016-04-14/2016-04-14>
   rdf:type <http://linkeddata.overheid.nl/terms/Wet> ;
@@ -26,6 +28,10 @@
   rdf:type <http://linkeddata.overheid.nl/terms/Wet> ;
   rdfs:comment "Dit is de URI van de erfgoedwet zoals hij bekend is bij Linked Data Overheid."@nl ;
   rdfs:label "Erfgoedwet2016"@nl ;
+.
+skos:editorialNote
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "editorial note "@nl ;
 .
 <https://data.cultureelerfgoed.nl/vocab/def/zaak>
   rdf:type owl:Ontology ;
@@ -48,6 +54,7 @@ zaak:Document
   rdfs:comment "De class Document is de representatie van een geheel van gegevens met een eigen identiteit ongeacht zijn vorm, met de bijbehorende metadata ontvangen of opgemaakt door een natuurlijke en/of rechtspersoon bij de uitvoering van taken.."@nl ;
   rdfs:label "Document"@nl ;
   rdfs:subClassOf owl:Thing ;
+  skos:editorialNote "In het document \"Objectencatalogus RCE-Zaken\" staat een naamloze relatie tussen Document en Enkelvoudig respectievelijk Samengesteld Document. Dit is hier vertaald als een subClassOf relatie." ;
 .
 zaak:Eigenschap
   rdf:type owl:Class ;
@@ -102,6 +109,11 @@ zaak:Zaak
   rdfs:comment "De class Zaak is de representatie van een een samenhangende hoeveelheid werk met een welgedefinieerde aanleiding en een welgedefinieerd eindresultaat, waarvan kwaliteit en doorlooptijd bewaakt moeten worden.."@nl ;
   rdfs:label "Zaak"@nl ;
   rdfs:subClassOf owl:Thing ;
+.
+zaak:Zaak_1
+  rdf:type zaak:Zaak ;
+  rdfs:label "Zaak 1 "@nl ;
+  ztc:archisVeldwerkBevoegdGezag "Gemeente" ;
 .
 zaak:Zaakdocument
   rdf:type owl:Class ;
@@ -377,13 +389,13 @@ zaak:geslachtsaanduiding
 .
 zaak:heeft
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property Heeft legt de relatie tussen Zaak en Eigenschap vast."@nl ;
+  rdfs:comment "De property heeft legt de relatie tussen Zaak en Eigenschap vast."@nl ;
   rdfs:comment "De property heeft legt de relatie tussen Zaak en Status vast."@nl ;
   rdfs:domain zaak:Zaak ;
-  rdfs:label "Heeft"@nl ;
   rdfs:label "heeft"@nl ;
   rdfs:range zaak:Eigenschap ;
   rdfs:range zaak:Status ;
+  skos:editorialNote "misschien beter: in tweeen splitsen: heeftEigenschap en heeftStatus" ;
 .
 zaak:heeftBetrekkingOpAndere
   rdf:type owl:ObjectProperty ;
@@ -398,6 +410,7 @@ zaak:heeftEigenschap
   rdfs:domain zaak:Zaak ;
   rdfs:label "heeft eigenschap "@nl ;
   rdfs:range zaak:Eigenschap ;
+  skos:editorialNote "dit is een wijziging in het origineel: omdat er vele \"heeft\" relaties zijn is het beter om deze nieuwe namen te geven: heeftEigenschap enz" ;
 .
 zaak:heeftRegime
   rdf:type owl:ObjectProperty ;
@@ -406,6 +419,7 @@ zaak:heeftRegime
   rdfs:label "heeft regime "@nl ;
   rdfs:range <http://linkeddata.overheid.nl/terms/Wet> ;
   rdfs:subPropertyOf zaak:heeftEigenschap ;
+  skos:editorialNote "dit is een wijziging in het origineel: dit is een soort eigenschaptype (zie spreadsheet). Misschien kunnen dit subproperties worden van heeftEigenschap: heeftRegime enz" ;
 .
 zaak:hoortBij
   rdf:type owl:ObjectProperty ;
@@ -451,6 +465,7 @@ zaak:is
   rdfs:range zaak:Besluit ;
   rdfs:range zaak:Medewerker ;
   rdfs:range zaak:OrganisatorischeEenheid ;
+  skos:editorialNote "is er hier sprake van een subClassOf relatie?? En ook voor de \"is\" relatie tussen Object en Besluit?" ;
 .
 zaak:isContactpersoonVoor
   rdf:type owl:ObjectProperty ;
@@ -502,10 +517,11 @@ zaak:isVan
   rdfs:domain zaak:Status ;
   rdfs:domain zaak:Zaak ;
   rdfs:label "is van"@nl ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/ztc#Eigenschaptype> ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/ztc#Roltype> ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/ztc#Statustype> ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/ztc#Zaaktype> ;
+  rdfs:range ztc:Eigenschaptype ;
+  rdfs:range ztc:Roltype ;
+  rdfs:range ztc:Statustype ;
+  rdfs:range ztc:Zaaktype ;
+  skos:editorialNote "misschien beter: in tweeen splitsen: heeftBesluittype enz" ;
 .
 zaak:isVerantwoordelijkVoor
   rdf:type owl:ObjectProperty ;
@@ -521,7 +537,7 @@ zaak:isVerantwoordelijkeVoor
   rdfs:domain zaak:Medewerker ;
   rdfs:domain zaak:OrganisatorischeEenheid ;
   rdfs:label "is verantwoordelijke voor"@nl ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/ztc#Zaaktype> ;
+  rdfs:range ztc:Zaaktype ;
 .
 zaak:kanVastgelegdZijnAls
   rdf:type owl:ObjectProperty ;
