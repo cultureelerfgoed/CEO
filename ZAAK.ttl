@@ -59,7 +59,7 @@ zaak:EnkelvoudigDocument
   rdf:type owl:Class ;
   rdfs:comment "De class EnkelvoudigDocument is een representatie van een document waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl ;
   rdfs:label "Enkelvoudig Document"@nl ;
-  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf zaak:Document ;
 .
 zaak:Medewerker
   rdf:type owl:Class ;
@@ -89,7 +89,7 @@ zaak:SamengesteldDocument
   rdf:type owl:Class ;
   rdfs:comment "De class SamengesteldDocument is de representatie van een  ????? ."@nl ;
   rdfs:label "Samengesteld Document"@nl ;
-  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf zaak:Document ;
 .
 zaak:Status
   rdf:type owl:Class ;
@@ -747,20 +747,6 @@ zaak:wordtUitgeoefendDoor
   rdfs:domain zaak:Rol ;
   rdfs:label "wordt uitgeoefend door"@nl ;
   rdfs:range zaak:Betrokkene ;
-.
-zaak:xx
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property xx legt de relatie tussen Document en Enkelvoudigdocument vast."@nl ;
-  rdfs:domain zaak:Document ;
-  rdfs:label "xx"@nl ;
-  rdfs:range zaak:EnkelvoudigDocument ;
-.
-zaak:xxx
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property xxx legt de relatie tussen Document en Samengestelddocument vast."@nl ;
-  rdfs:domain zaak:Document ;
-  rdfs:label "xxx"@nl ;
-  rdfs:range zaak:SamengesteldDocument ;
 .
 zaak:zaakidentificatie
   rdf:type owl:DatatypeProperty ;
