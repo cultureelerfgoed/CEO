@@ -1,8 +1,7 @@
-# baseURI: https://data.cultureelerfgoed.nl/vocab/def/zaak
-# imports: https://data.cultureelerfgoed.nl/vocab/def/ztc
+# baseURI: https://linkeddata.cultureelerfgoed.nl/def/zaak
+# imports: https://linkeddata.cultureelerfgoed.nl/def/ztc
 # prefix: zaak
 
-@prefix : <https://data.cultureelerfgoed.nl/vocab/def/zaak#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,8 +9,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix zaak: <https://data.cultureelerfgoed.nl/vocab/def/zaak#> .
-@prefix ztc: <https://data.cultureelerfgoed.nl/vocab/def/ztc#> .
+@prefix zaak: <https://linkeddata.cultureelerfgoed.nl/def/zaak#> .
+@prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
 
 <http://linkeddata.overheid.nl/terms/Wet>
   rdf:type owl:Class ;
@@ -33,9 +32,9 @@ skos:editorialNote
   rdf:type owl:AnnotationProperty ;
   rdfs:label "editorial note "@nl ;
 .
-<https://data.cultureelerfgoed.nl/vocab/def/zaak>
+<https://linkeddata.cultureelerfgoed.nl/def/zaak>
   rdf:type owl:Ontology ;
-  owl:imports <https://data.cultureelerfgoed.nl/vocab/def/ztc> ;
+  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ztc> ;
 .
 zaak:Besluit
   rdf:type owl:Class ;
@@ -109,11 +108,6 @@ zaak:Zaak
   rdfs:comment "De class Zaak is de representatie van een een samenhangende hoeveelheid werk met een welgedefinieerde aanleiding en een welgedefinieerd eindresultaat, waarvan kwaliteit en doorlooptijd bewaakt moeten worden.."@nl ;
   rdfs:label "Zaak"@nl ;
   rdfs:subClassOf owl:Thing ;
-.
-zaak:Zaak_1
-  rdf:type zaak:Zaak ;
-  rdfs:label "Zaak 1 "@nl ;
-  ztc:archisVeldwerkBevoegdGezag "Gemeente" ;
 .
 zaak:Zaakdocument
   rdf:type owl:Class ;

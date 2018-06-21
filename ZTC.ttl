@@ -1,4 +1,4 @@
-# baseURI: https://data.cultureelerfgoed.nl/vocab/def/ztc
+# baseURI: https://linkeddata.cultureelerfgoed.nl/def/ztc
 # prefix: ztc
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -7,14 +7,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix zaak: <https://data.cultureelerfgoed.nl/vocab/def/zaak#> .
-@prefix ztc: <https://data.cultureelerfgoed.nl/vocab/def/ztc#> .
+@prefix zaak: <https://linkeddata.cultureelerfgoed.nl/def/zaak#> .
+@prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
 
 skos:editorialNote
   rdf:type owl:AnnotationProperty ;
   rdfs:label "editorial note "@nl ;
 .
-<https://data.cultureelerfgoed.nl/vocab/def/ztc>
+<https://linkeddata.cultureelerfgoed.nl/def/ztc>
   rdf:type owl:Ontology ;
   rdfs:label "Zaak Type Catalogus"@nl ;
 .
