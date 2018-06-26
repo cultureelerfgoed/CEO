@@ -60,10 +60,353 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zaak: <https://linkeddata.cultureelerfgoed.nl/def/zaak#> .
 @prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
+@prefix ztce: <https://linkeddata.cultureelerfgoed.nl/def/ztce#> .
 
+rdf:type
+  rdfs:label "Type" ;
+.
+rdf:first
+  rdfs:label "First" ;
+.
+rdf:langString
+  rdfs:label "LangString" ;
+.
+()
+  rdfs:label "Nil" ;
+.
+rdf:object
+  rdfs:label "Object" ;
+.
+rdf:predicate
+  rdfs:label "Predicate" ;
+.
+rdf:rest
+  rdfs:label "Rest" ;
+.
+rdf:subject
+  rdfs:label "Subject" ;
+.
+rdf:value
+  rdfs:label "Value" ;
+.
+rdfs:comment
+  rdfs:label "Comment" ;
+.
+rdfs:domain
+  rdfs:label "Domain" ;
+.
+rdfs:isDefinedBy
+  rdfs:label "IsDefInedBy" ;
+.
+rdfs:label
+  rdfs:label "LabeL" ;
+.
+rdfs:member
+  rdfs:label "MeMber" ;
+.
+rdfs:range
+  rdfs:label "Range" ;
+.
+rdfs:seeAlso
+  rdfs:label "SeeAlSo" ;
+.
+rdfs:subClassOf
+  rdfs:label "SubClaSSOf" ;
+.
+rdfs:subPropertyOf
+  rdfs:label "SubPropertyOf" ;
+.
+xsd:anySimpleType
+  rdfs:label "AnySimpleType" ;
+.
+xsd:anyURI
+  rdfs:label "AnyURI" ;
+.
+xsd:base64Binary
+  rdfs:label "Base64Binary" ;
+.
+xsd:boolean
+  rdfs:label "Boolean" ;
+.
+xsd:byte
+  rdfs:label "Byte" ;
+.
+xsd:date
+  rdfs:label "Date" ;
+.
+xsd:dateTime
+  rdfs:label "DateTime" ;
+.
+xsd:dateTimeStamp
+  rdfs:label "DateTimeStamp" ;
+.
+xsd:decimal
+  rdfs:label "Decimal" ;
+.
+xsd:double
+  rdfs:label "Double" ;
+.
+xsd:duration
+  rdfs:label "Duration" ;
+.
+xsd:float
+  rdfs:label "Float" ;
+.
+xsd:fractionDigits
+  rdfs:label "Fraction digits" ;
+.
+xsd:gDay
+  rdfs:label "GDay" ;
+.
+xsd:gMonth
+  rdfs:label "GMonth" ;
+.
+xsd:gMonthDay
+  rdfs:label "GMonthDay" ;
+.
+xsd:gYear
+  rdfs:label "GYear" ;
+.
+xsd:gYearMonth
+  rdfs:label "GYearMonth" ;
+.
+xsd:hexBinary
+  rdfs:label "HexBinary" ;
+.
+xsd:int
+  rdfs:label "Int" ;
+.
+xsd:integer
+  rdfs:label "Integer" ;
+.
+xsd:language
+  rdfs:label "Language" ;
+.
+xsd:length
+  rdfs:label "Length" ;
+.
+xsd:long
+  rdfs:label "Long" ;
+.
+xsd:maxExclusive
+  rdfs:label "Max exclusive" ;
+.
+xsd:maxInclusive
+  rdfs:label "Max inclusive" ;
+.
+xsd:maxLength
+  rdfs:label "Max length" ;
+.
+xsd:minExclusive
+  rdfs:label "Min exclusive" ;
+.
+xsd:minInclusive
+  rdfs:label "Min inclusive" ;
+.
+xsd:minLength
+  rdfs:label "Min length" ;
+.
+xsd:negativeInteger
+  rdfs:label "NegativeINteger" ;
+.
+xsd:nonNegativeInteger
+  rdfs:label "NoNNegativeINteger" ;
+.
+xsd:nonPositiveInteger
+  rdfs:label "NoNPositiveINteger" ;
+.
+xsd:normalizedString
+  rdfs:label "NormalizedStriNg" ;
+.
+xsd:pattern
+  rdfs:label "Pattern" ;
+.
+xsd:positiveInteger
+  rdfs:label "PositiveInteger" ;
+.
+xsd:short
+  rdfs:label "Short" ;
+.
+xsd:string
+  rdfs:label "String" ;
+.
+xsd:time
+  rdfs:label "Time" ;
+.
+xsd:token
+  rdfs:label "Token" ;
+.
+xsd:totalDigits
+  rdfs:label "ToTal digiTs" ;
+.
+xsd:unsignedByte
+  rdfs:label "UnsignedByte" ;
+.
+xsd:unsignedInt
+  rdfs:label "UnsignedInt" ;
+.
+xsd:unsignedLong
+  rdfs:label "UnsignedLong" ;
+.
+xsd:unsignedShort
+  rdfs:label "UnsignedShort" ;
+.
+owl:allValuesFrom
+  rdfs:label "AllVAluesFrom" ;
+.
+owl:annotatedProperty
+  rdfs:label "AnnotAtedProperty" ;
+.
+owl:annotatedSource
+  rdfs:label "AnnotAtedSource" ;
+.
+owl:annotatedTarget
+  rdfs:label "AnnotAtedTArget" ;
+.
+owl:assertionProperty
+  rdfs:label "AssertionProperty" ;
+.
+owl:backwardCompatibleWith
+  rdfs:label "BackwardCompatiBleWith" ;
+.
+owl:bottomDataProperty
+  rdfs:label "BottomDataProperty" ;
+.
+owl:bottomObjectProperty
+  rdfs:label "BottomOBjectProperty" ;
+.
+owl:cardinality
+  rdfs:label "Cardinality" ;
+.
+owl:complementOf
+  rdfs:label "ComplementOf" ;
+.
+owl:datatypeComplementOf
+  rdfs:label "DatatypeComplementOf" ;
+.
+owl:deprecated
+  rdfs:label "DeprecateD" ;
+.
+owl:differentFrom
+  rdfs:label "DifferentFrom" ;
+.
+owl:disjointUnionOf
+  rdfs:label "DisjointUnionOf" ;
+.
+owl:disjointWith
+  rdfs:label "DisjointWith" ;
+.
+owl:distinctMembers
+  rdfs:label "DistinctMembers" ;
+.
+owl:equivalentClass
+  rdfs:label "EquivalEntClass" ;
+.
+owl:equivalentProperty
+  rdfs:label "EquivalEntPropErty" ;
+.
+owl:hasKey
+  rdfs:label "HasKey" ;
+.
+owl:hasSelf
+  rdfs:label "HasSelf" ;
+.
+owl:hasValue
+  rdfs:label "HasValue" ;
+.
+owl:imports
+  rdfs:label "Imports" ;
+.
+owl:incompatibleWith
+  rdfs:label "IncompatIbleWIth" ;
+.
+owl:intersectionOf
+  rdfs:label "IntersectIonOf" ;
+.
+owl:inverseOf
+  rdfs:label "InverseOf" ;
+.
+owl:maxCardinality
+  rdfs:label "MaxCardinality" ;
+.
+owl:maxQualifiedCardinality
+  rdfs:label "MaxQualifiedCardinality" ;
+.
+owl:members
+  rdfs:label "MeMbers" ;
+.
+owl:minCardinality
+  rdfs:label "MinCardinality" ;
+.
+owl:minQualifiedCardinality
+  rdfs:label "MinQualifiedCardinality" ;
+.
+owl:onClass
+  rdfs:label "OnClass" ;
+.
+owl:onDataRange
+  rdfs:label "OnDataRange" ;
+.
+owl:onDatatype
+  rdfs:label "OnDatatype" ;
+.
+owl:onProperties
+  rdfs:label "OnPrOperties" ;
+.
+owl:onProperty
+  rdfs:label "OnPrOperty" ;
+.
+owl:oneOf
+  rdfs:label "OneOf" ;
+.
+owl:priorVersion
+  rdfs:label "PriorVersion" ;
+.
+owl:propertyChainAxiom
+  rdfs:label "ProPertyChainAxiom" ;
+.
+owl:propertyDisjointWith
+  rdfs:label "ProPertyDisjointWith" ;
+.
+owl:qualifiedCardinality
+  rdfs:label "QualifiedCardinality" ;
+.
+owl:sameAs
+  rdfs:label "SameAS" ;
+.
+owl:someValuesFrom
+  rdfs:label "SomeValueSFrom" ;
+.
+owl:sourceIndividual
+  rdfs:label "SourceIndividual" ;
+.
+owl:targetIndividual
+  rdfs:label "TargeTIndividual" ;
+.
+owl:targetValue
+  rdfs:label "TargeTValue" ;
+.
+owl:topDataProperty
+  rdfs:label "TopDaTaProperTy" ;
+.
+owl:topObjectProperty
+  rdfs:label "TopObjecTProperTy" ;
+.
+owl:unionOf
+  rdfs:label "UnionOf" ;
+.
+owl:versionIRI
+  rdfs:label "VersionIRI" ;
+.
+owl:versionInfo
+  rdfs:label "VersionInfo" ;
+.
+owl:withRestrictions
+  rdfs:label "WithRestrictions" ;
+.
 skos:editorialNote
   rdf:type owl:AnnotationProperty ;
-  rdfs:label "editorial note "@nl ;
+  rdfs:label "Editorial notE "@nl ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/ztc>
   rdf:type owl:Ontology ;
@@ -107,526 +450,299 @@ ztc:Zaaktype
 .
 ztc:aanleiding
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:aanleiding wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:aanleiding."@nl ;
+  rdfs:comment "De property aanleiding wordt gebruikt om aan te geven welke aanleiding is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Aanleiding"@nl ;
 .
 ztc:archiefnominatie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archiefnominatie wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:archiefnominatie."@nl ;
+  rdfs:comment "De property archiefnominatie wordt gebruikt om aan te geven welke archiefnominatie is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Archiefnominatie"@nl ;
 .
 ztc:archieftermijn
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archieftermijn wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:archieftermijn."@nl ;
+  rdfs:comment "De property archieftermijn wordt gebruikt om aan te geven welke archieftermijn is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Archieftermijn"@nl ;
 .
-ztc:archisMotief
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisMotief wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisMotief."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis2motief"@nl ;
-.
-ztc:archisOnderzoeksId
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisOnderzoeksId wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisOnderzoeksId."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis2Onderzoeks_id"@nl ;
-.
-ztc:archisOnderzoeksmeldingsnummer
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisOnderzoeksmeldingsnummer wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisOnderzoeksmeldingsnummer."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis2onderzoeksmeldingsnummer"@nl ;
-.
-ztc:archisVeldwerkBevoegdGezag
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisVeldwerkBevoegdGezag wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisVeldwerkBevoegdGezag."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis veldwerk: bevoegd gezag"@nl ;
-  rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "Gemeente"
-          "Waterschap"
-          "Provincie"
-          "Rijk"
-          "Geen"
-        ) ;
-    ] ;
-.
-ztc:archisVeldwerkDatumafronding
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisVeldwerkDatumafronding wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisVeldwerkDatumafronding."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis veldwerk: datum afronding"@nl ;
-.
-ztc:archisVeldwerkDatumafrondingRapport
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisVeldwerkDatumafrondingRapport wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisVeldwerkDatumafrondingRapport."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis veldwerk: datum afronding rapport"@nl ;
-.
-ztc:archisVeldwerkEinddatumGepland
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisVeldwerkEinddatumGepland wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisVeldwerkEinddatumGepland."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis veldwerk: einddatum gepland"@nl ;
-.
-ztc:archisVeldwerkStartdatum
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisVeldwerkStartdatum wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisVeldwerkStartdatum."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis veldwerk: startdatum"@nl ;
-.
-ztc:archisVeldwerkVerwachteDatumafrondingRapport
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisVeldwerkVerwachteDatumafrondingRapport wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisVeldwerkVerwachteDatumafrondingRapport."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis veldwerk: verwachte datum afronding rapport"@nl ;
-.
-ztc:archisVondstmeldingDatumVondst
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisVondstmeldingDatumVondst wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisVondstmeldingDatumVondst."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis Vondstmelding Datum Vondst"@nl ;
-.
-ztc:archisVondstmeldingsnummer
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisVondstmeldingsnummer wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisVondstmeldingsnummer."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis2Vondstmeldingsnummer"@nl ;
-.
-ztc:archisWaarnemingsnummer
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:archisWaarnemingsnummer wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:archisWaarnemingsnummer."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Archis2Waarnemingsnummer"@nl ;
-.
 ztc:besluittypeOmschrijving
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:besluittypeOmschrijving wordt gebruikt om aan te geven welke  ztc:Besluittype is gekoppeld aan een ztc:besluittypeOmschrijving."@nl ;
+  rdfs:comment "De property besluittypeOmschrijving wordt gebruikt om aan te geven welke besluittype-omschrijving is gekoppeld aan een Besluittype."@nl ;
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Besluittype-omschrijving"@nl ;
 .
 ztc:brondatumArchiefprocedure
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:brondatumArchiefprocedure wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:brondatumArchiefprocedure."@nl ;
+  rdfs:comment "De property brondatumArchiefprocedure wordt gebruikt om aan te geven welke brondatum archiefprocedure is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Brondatum archiefprocedure"@nl ;
 .
 ztc:datumBeginGeldigheidBesluittype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:datumBeginGeldigheidBesluittype wordt gebruikt om aan te geven welke  ztc:Besluittype is gekoppeld aan een ztc:datumBeginGeldigheidBesluittype."@nl ;
+  rdfs:comment "De property datumBeginGeldigheidBesluittype wordt gebruikt om aan te geven welke datum begin geldigheid besluittype is gekoppeld aan een Besluittype."@nl ;
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Datum begin geldigheid besluittype"@nl ;
 .
 ztc:datumBeginGeldigheidStatustype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:datumBeginGeldigheidStatustype wordt gebruikt om aan te geven welke  ztc:Statustype is gekoppeld aan een ztc:datumBeginGeldigheidStatustype."@nl ;
+  rdfs:comment "De property datumBeginGeldigheidStatustype wordt gebruikt om aan te geven welke datum begin geldigheid statustype is gekoppeld aan een Statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Datum begin geldigheid statustype"@nl ;
 .
 ztc:datumBeginGeldigheidZaaktype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:datumBeginGeldigheidZaaktype wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:datumBeginGeldigheidZaaktype."@nl ;
+  rdfs:comment "De property datumBeginGeldigheidZaaktype wordt gebruikt om aan te geven welke datum begin geldigheid zaaktype is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Datum begin geldigheid zaaktype"@nl ;
 .
 ztc:datumBeginGeldigheiddocumenttype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:datumBeginGeldigheiddocumenttype wordt gebruikt om aan te geven welke  ztc:Documenttype is gekoppeld aan een ztc:datumBeginGeldigheiddocumenttype."@nl ;
+  rdfs:comment "De property datumBeginGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum begin geldigheid documenttype is gekoppeld aan een Documenttype."@nl ;
   rdfs:domain ztc:Documenttype ;
   rdfs:label "Datum begin geldigheid documenttype"@nl ;
 .
 ztc:datumEindeGeldigheidBesluittype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:datumEindeGeldigheidBesluittype wordt gebruikt om aan te geven welke  ztc:Besluittype is gekoppeld aan een ztc:datumEindeGeldigheidBesluittype."@nl ;
+  rdfs:comment "De property datumEindeGeldigheidBesluittype wordt gebruikt om aan te geven welke datum einde geldigheid besluittype is gekoppeld aan een Besluittype."@nl ;
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Datum einde geldigheid besluittype"@nl ;
 .
 ztc:datumEindeGeldigheidStatustype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:datumEindeGeldigheidStatustype wordt gebruikt om aan te geven welke  ztc:Statustype is gekoppeld aan een ztc:datumEindeGeldigheidStatustype."@nl ;
+  rdfs:comment "De property datumEindeGeldigheidStatustype wordt gebruikt om aan te geven welke datum einde geldigheid statustype is gekoppeld aan een Statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Datum einde geldigheid statustype"@nl ;
 .
 ztc:datumEindeGeldigheidZaaktype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:datumEindeGeldigheidZaaktype wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:datumEindeGeldigheidZaaktype."@nl ;
+  rdfs:comment "De property datumEindeGeldigheidZaaktype wordt gebruikt om aan te geven welke datum einde geldigheid zaaktype is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Datum einde geldigheid zaaktype"@nl ;
 .
 ztc:datumEindeGeldigheiddocumenttype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:datumEindeGeldigheiddocumenttype wordt gebruikt om aan te geven welke  ztc:Documenttype is gekoppeld aan een ztc:datumEindeGeldigheiddocumenttype."@nl ;
+  rdfs:comment "De property datumEindeGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum einde geldigheid documenttype is gekoppeld aan een Documenttype."@nl ;
   rdfs:domain ztc:Documenttype ;
   rdfs:label "Datum einde geldigheid documenttype"@nl ;
 .
-ztc:datumUitstelRapportverplichting
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:datumUitstelRapportverplichting wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:datumUitstelRapportverplichting."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Datum uitstel rapportverplichting"@nl ;
-.
 ztc:definitie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:definitie wordt gebruikt om aan te geven welke  ztc:Eigenschaptype is gekoppeld aan een ztc:definitie."@nl ;
+  rdfs:comment "De property definitie wordt gebruikt om aan te geven welke definitie is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Definitie"@nl ;
 .
 ztc:documenttypeOmschrijving
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:documenttypeOmschrijving wordt gebruikt om aan te geven welke  ztc:Documenttype is gekoppeld aan een ztc:documenttypeOmschrijving."@nl ;
+  rdfs:comment "De property documenttypeOmschrijving wordt gebruikt om aan te geven welke documenttype-omschrijving is gekoppeld aan een Documenttype."@nl ;
   rdfs:domain ztc:Documenttype ;
   rdfs:label "Documenttype-omschrijving"@nl ;
 .
 ztc:doel
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:doel wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:doel."@nl ;
+  rdfs:comment "De property doel wordt gebruikt om aan te geven welke doel  is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
-  rdfs:label "doel "@nl ;
+  rdfs:label "Doel "@nl ;
 .
 ztc:doorlooptijdBehandeling
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:doorlooptijdBehandeling wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:doorlooptijdBehandeling."@nl ;
+  rdfs:comment "De property doorlooptijdBehandeling wordt gebruikt om aan te geven welke doorlooptijd behandeling is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Doorlooptijd behandeling"@nl ;
 .
 ztc:doorlooptijdStatus
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:doorlooptijdStatus wordt gebruikt om aan te geven welke  ztc:Statustype is gekoppeld aan een ztc:doorlooptijdStatus."@nl ;
+  rdfs:comment "De property doorlooptijdStatus wordt gebruikt om aan te geven welke doorlooptijd status is gekoppeld aan een Statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Doorlooptijd status"@nl ;
 .
-ztc:eerdereZaken
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:eerdereZaken wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:eerdereZaken."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Eerdere zaken"@nl ;
-.
 ztc:eigenschapnaam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:eigenschapnaam wordt gebruikt om aan te geven welke  ztc:Eigenschaptype is gekoppeld aan een ztc:eigenschapnaam."@nl ;
+  rdfs:comment "De property eigenschapnaam wordt gebruikt om aan te geven welke eigenschapnaam is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Eigenschapnaam"@nl ;
 .
 ztc:formaat
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:formaat wordt gebruikt om aan te geven welke  ztc:Eigenschaptype is gekoppeld aan een ztc:formaat."@nl ;
+  rdfs:comment "De property formaat wordt gebruikt om aan te geven welke formaat is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Formaat"@nl ;
 .
 ztc:formuliernaam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:formuliernaam wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:formuliernaam."@nl ;
+  rdfs:comment "De property formuliernaam wordt gebruikt om aan te geven welke formuliernaam is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Formuliernaam"@nl ;
 .
-ztc:heeft
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property ztc:heeft legt de relatie tussen ztc:Zaaktype en ztc:Statustype."@nl ;
-  rdfs:domain ztc:Zaaktype ;
-  rdfs:label "heeft"@nl ;
-  rdfs:range ztc:Statustype ;
-.
 ztc:heeftBetrekkingOp
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property ztc:heeftBetrekkingOp legt de relatie tussen ztc:Zaaktype en ztc:Zaaktype."@nl ;
+  rdfs:comment "De property heeftBetrekkingOp legt de relatie tussen Zaaktype en Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Heeft betrekking op"@nl ;
   rdfs:range ztc:Zaaktype ;
 .
 ztc:heeftBetrokkeneIn
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property ztc:heeftBetrokkeneIn legt de relatie tussen ztc:Zaaktype en ztc:Roltype."@nl ;
+  rdfs:comment "De property heeftBetrokkeneIn legt de relatie tussen Zaaktype en Roltype."@nl ;
   rdfs:domain ztc:Zaaktype ;
-  rdfs:label "heeft betrokkene in"@nl ;
+  rdfs:label "Heeft betrokkene in"@nl ;
   rdfs:range ztc:Roltype ;
 .
 ztc:heeftDeelzaken
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property ztc:heeftDeelzaken legt de relatie tussen ztc:Zaaktype en ztc:Zaaktype."@nl ;
+  rdfs:comment "De property heeftDeelzaken legt de relatie tussen Zaaktype en Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Heeft deelzaken"@nl ;
   rdfs:range ztc:Zaaktype ;
 .
 ztc:heeftRelevante
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property ztc:heeftRelevante legt de relatie tussen ztc:Zaaktype en ztc:Documenttype."@nl ;
+  rdfs:comment "De property heeftRelevante legt de relatie tussen Zaaktype en Documenttype."@nl ;
   rdfs:domain ztc:Zaaktype ;
-  rdfs:label "heeft relevante"@nl ;
+  rdfs:label "Heeft relevante"@nl ;
   rdfs:range ztc:Documenttype ;
 .
-ztc:isVan
+ztc:heeftStatustype
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property ztc:isVan legt de relatie tussen ztc:Eigenschaptype en ztc:Zaaktype."@nl ;
+  rdfs:comment "De property heeftStatustype legt de relatie tussen Zaaktype en Statustype."@nl ;
+  rdfs:domain ztc:Zaaktype ;
+  rdfs:label "Heeft statustype"@nl ;
+  rdfs:range ztc:Statustype ;
+.
+ztc:isVanZaaktype
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property isVanZaaktype legt de relatie tussen Eigenschaptype en Zaaktype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
-  rdfs:label "is van"@nl ;
+  rdfs:label "Is van"@nl ;
   rdfs:range ztc:Zaaktype ;
-  skos:editorialNote "misschien beter: isVanZaaktype" ;
 .
 ztc:isVerplichtBij
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property ztc:isVerplichtBij legt de relatie tussen ztc:Documenttype en ztc:Statustype."@nl ;
+  rdfs:comment "De property isVerplichtBij legt de relatie tussen Documenttype en Statustype."@nl ;
   rdfs:domain ztc:Documenttype ;
-  rdfs:label "is verplicht bij"@nl ;
+  rdfs:label "Is verplIcht bIj"@nl ;
   rdfs:range ztc:Statustype ;
 .
 ztc:kardinaliteit
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:kardinaliteit wordt gebruikt om aan te geven welke  ztc:Eigenschaptype is gekoppeld aan een ztc:kardinaliteit."@nl ;
+  rdfs:comment "De property kardinaliteit wordt gebruikt om aan te geven welke kardinaliteit is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Kardinaliteit"@nl ;
 .
 ztc:lengte
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:lengte wordt gebruikt om aan te geven welke  ztc:Eigenschaptype is gekoppeld aan een ztc:lengte."@nl ;
+  rdfs:comment "De property lengte wordt gebruikt om aan te geven welke lengte is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Lengte"@nl ;
 .
-ztc:mrsprojectcode
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:mrsprojectcode wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:mrsprojectcode."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "mrsprojectcode"@nl ;
-  rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "Wederopbouw 1940-1958~A"
-          "Nieuwe Hollandse Waterlinie~A"
-          "MSP~A"
-          "Archeologie 2008~A"
-          "Archeologie 2013~A"
-          "Wederopbouw 1959-1965~A"
-          "WKPB~W"
-          "Vestingwerken~W"
-          "Verbetervoorstellen algemeen~W"
-          "Verbetervoorstellen Molens~W"
-          "Verbetervoorstellen Kerken~W"
-          "Verbetervoorstellen Utrecht bruggen~W"
-          "Verbetervoorstellen subsidies~W"
-        ) ;
-    ] ;
-.
-ztc:onderzoeksnaam
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:onderzoeksnaam wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:onderzoeksnaam."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Onderzoeksnaam"@nl ;
-.
-ztc:opdrachtstype
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:opdrachtstype wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:opdrachtstype."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "opdrachtstype"@nl ;
-  rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "WKPB"
-        ) ;
-    ] ;
-.
-ztc:perceel
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:perceel wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:perceel."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Perceel"@nl ;
-.
 ztc:procesnaam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:procesnaam wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:procesnaam."@nl ;
+  rdfs:comment "De property procesnaam wordt gebruikt om aan te geven welke procesnaam is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Procesnaam"@nl ;
 .
 ztc:productDienst
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:productDienst wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:productDienst."@nl ;
+  rdfs:comment "De property productDienst wordt gebruikt om aan te geven welke product/Dienst is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Product/Dienst"@nl ;
 .
 ztc:reactietermijn
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:reactietermijn wordt gebruikt om aan te geven welke  ztc:Besluittype is gekoppeld aan een ztc:reactietermijn."@nl ;
+  rdfs:comment "De property reactietermijn wordt gebruikt om aan te geven welke reactietermijn is gekoppeld aan een Besluittype."@nl ;
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Reactietermijn"@nl ;
 .
-ztc:regime
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:regime wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:regime."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "regime"@nl ;
-  rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "Monumentenwet1988"
-          "Erfgoedwet2016"
-        ) ;
-    ] ;
-.
-ztc:rehypbedrag
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:rehypbedrag wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:rehypbedrag."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "ReHypBedrag"@nl ;
-.
-ztc:reikwijdte
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:reikwijdte wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:reikwijdte."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "reikwijdte"@nl ;
-  rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "Kort"
-          "Lang"
-          "Administratief"
-        ) ;
-    ] ;
-.
 ztc:roltypeomschrijving
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:roltypeomschrijving wordt gebruikt om aan te geven welke  ztc:Roltype is gekoppeld aan een ztc:roltypeomschrijving."@nl ;
+  rdfs:comment "De property roltypeomschrijving wordt gebruikt om aan te geven welke roltypeomschrijving is gekoppeld aan een Roltype."@nl ;
   rdfs:domain ztc:Roltype ;
   rdfs:label "Roltypeomschrijving"@nl ;
 .
 ztc:selectielijstTekst
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:selectielijstTekst wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:selectielijstTekst."@nl ;
+  rdfs:comment "De property selectielijstTekst wordt gebruikt om aan te geven welke selectielijst tekst is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Selectielijst tekst"@nl ;
 .
 ztc:servicenormBehandeling
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:servicenormBehandeling wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:servicenormBehandeling."@nl ;
+  rdfs:comment "De property servicenormBehandeling wordt gebruikt om aan te geven welke servicenorm behandeling is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Servicenorm behandeling"@nl ;
 .
 ztc:soortBetrokkene
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:soortBetrokkene wordt gebruikt om aan te geven welke  ztc:Roltype is gekoppeld aan een ztc:soortBetrokkene."@nl ;
+  rdfs:comment "De property soortBetrokkene wordt gebruikt om aan te geven welke soort betrokkene is gekoppeld aan een Roltype."@nl ;
   rdfs:domain ztc:Roltype ;
   rdfs:label "Soort betrokkene"@nl ;
 .
 ztc:statustypeOmschrijving
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:statustypeOmschrijving wordt gebruikt om aan te geven welke  ztc:Statustype is gekoppeld aan een ztc:statustypeOmschrijving."@nl ;
+  rdfs:comment "De property statustypeOmschrijving wordt gebruikt om aan te geven welke statustype-omschrijving is gekoppeld aan een Statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Statustype-omschrijving"@nl ;
 .
 ztc:statustypevolgnummer
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:statustypevolgnummer wordt gebruikt om aan te geven welke  ztc:Statustype is gekoppeld aan een ztc:statustypevolgnummer."@nl ;
+  rdfs:comment "De property statustypevolgnummer wordt gebruikt om aan te geven welke statustypevolgnummer is gekoppeld aan een Statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Statustypevolgnummer"@nl ;
 .
 ztc:toelichting
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:toelichting wordt gebruikt om aan te geven welke  ztc:Besluittype is gekoppeld aan een ztc:toelichting."@nl ;
-  rdfs:comment "De property ztc:toelichting wordt gebruikt om aan te geven welke  ztc:Documenttype is gekoppeld aan een ztc:toelichting."@nl ;
-  rdfs:comment "De property ztc:toelichting wordt gebruikt om aan te geven welke  ztc:Eigenschaptype is gekoppeld aan een ztc:toelichting."@nl ;
-  rdfs:comment "De property ztc:toelichting wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:toelichting."@nl ;
+  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een Besluittype."@nl ;
+  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een Documenttype."@nl ;
+  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een Eigenschaptype."@nl ;
+  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Besluittype ;
   rdfs:domain ztc:Documenttype ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Toelichting"@nl ;
 .
-ztc:typeOnderzoek
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:typeOnderzoek wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:typeOnderzoek."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Type onderzoek"@nl ;
-  rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "ABE - Archeologisch: begeleiding"
-          "ABO - Archeologisch: booronderzoek"
-          "ABU - Archeologisch: bureauonderzoek"
-          "ADU - Archeologisch: duikactiviteiten"
-          "AGO - Archeologisch: geofysisch onderzoek"
-          "AIN - Archeologisch: inspectie"
-          "AKA - Archeologisch: (veld)kartering"
-          "AOP - Archeologisch: opgraving"
-          "AOW - Archeologisch: onderwaterarcheologie"
-          "APP - Archeologisch: proefputten/proefsleuven"
-          "AVE - Archeologisch: verwachtingskaart"
-          "AXX - Archeologisch: onbepaald"
-          "IAR - Indirect: archief"
-          "ICO - Indirect: collectie"
-          "ILI - Indirect: literatuur"
-          "IXX - Indirect: onbepaald"
-          "LUC - Luchtfoto/remote sensing"
-          "NBA - Niet-archeologisch: baggerwerk"
-          "NBO - Niet-archeologisch: boring"
-          "NDE - Niet-archeologisch: metaaldetector"
-          "NDU - Niet archeologisch: duikactiviteiten"
-          "NGR - Niet-archeologisch: graafwerk"
-          "NKA - Niet-archeologisch: kartering"
-          "NWA - Niet archeologisch: waterwerk en exploitatie"
-          "NXX - Niet-archeologisch: onbepaald"
-          "XXX - Onbekend"
-        ) ;
-    ] ;
-.
 ztc:url
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:url wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:url."@nl ;
+  rdfs:comment "De property url wordt gebruikt om aan te geven welke uRL is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "URL"@nl ;
 .
 ztc:verantwoordelijke
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:verantwoordelijke wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:verantwoordelijke."@nl ;
+  rdfs:comment "De property verantwoordelijke wordt gebruikt om aan te geven welke verantwoordelijke is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Verantwoordelijke"@nl ;
 .
 ztc:vertrouwelijkAanduiding
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:vertrouwelijkAanduiding wordt gebruikt om aan te geven welke  ztc:Documenttype is gekoppeld aan een ztc:vertrouwelijkAanduiding."@nl ;
-  rdfs:comment "De property ztc:vertrouwelijkAanduiding wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:vertrouwelijkAanduiding."@nl ;
+  rdfs:comment "De property vertrouwelijkAanduiding wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een Documenttype."@nl ;
+  rdfs:comment "De property vertrouwelijkAanduiding wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Documenttype ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Vertrouwelijk aanduiding"@nl ;
 .
 ztc:waardenverzameling
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:waardenverzameling wordt gebruikt om aan te geven welke  ztc:Eigenschaptype is gekoppeld aan een ztc:waardenverzameling."@nl ;
+  rdfs:comment "De property waardenverzameling wordt gebruikt om aan te geven welke waardenverzameling is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Waardenverzameling"@nl ;
 .
-ztc:wijzigingstype
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:wijzigingstype wordt gebruikt om aan te geven welke  ztc:Zaak is gekoppeld aan een ztc:wijzigingstype."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "wijzigingstype"@nl ;
-  rdfs:range [
-      rdf:type rdfs:Datatype ;
-      owl:oneOf (
-          "Gemeentelijke herindeling"
-          "Met Kadaster en/of afhandelingsbericht"
-          "Zonder Kadaster en afhandelingsbericht"
-        ) ;
-    ] ;
-.
 ztc:wordtVastgelegdIn
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property ztc:wordtVastgelegdIn legt de relatie tussen ztc:Besluittype en ztc:Documenttype."@nl ;
+  rdfs:comment "De property wordtVastgelegdIn legt de relatie tussen Besluittype en Documenttype."@nl ;
   rdfs:domain ztc:Besluittype ;
-  rdfs:label "wordt vastgelegd in"@nl ;
+  rdfs:label "Wordt vastgelegd in"@nl ;
   rdfs:range ztc:Documenttype ;
 .
 ztc:zaaktypeOmschrijving
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ztc:zaaktypeOmschrijving wordt gebruikt om aan te geven welke  ztc:Zaaktype is gekoppeld aan een ztc:zaaktypeOmschrijving."@nl ;
+  rdfs:comment "De property zaaktypeOmschrijving wordt gebruikt om aan te geven welke zaaktype-omschrijving is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Zaaktype-omschrijving"@nl ;
 .
 ztc:zetAlsBetrokkene
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property ztc:zetAlsBetrokkene legt de relatie tussen ztc:Roltype en ztc:Statustype."@nl ;
+  rdfs:comment "De property zetAlsBetrokkene legt de relatie tussen Roltype en Statustype."@nl ;
   rdfs:domain ztc:Roltype ;
   rdfs:label "Zet als betrokkene"@nl ;
   rdfs:range ztc:Statustype ;
