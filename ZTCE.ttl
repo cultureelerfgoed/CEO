@@ -1,6 +1,8 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/ztce
+# imports: https://linkeddata.cultureelerfgoed.nl/def/ztc
 # prefix: ztce
 
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -351,25 +353,35 @@ owl:withRestrictions
 .
 <https://linkeddata.cultureelerfgoed.nl/def/ztce>
   rdf:type owl:Ontology ;
-  owl:versionInfo "Created with TopBraid Composer" ;
+  <http://purl.org/dc/terms/created> "2018-07-01" ;
+  <http://purl.org/dc/terms/creator> ceo:Frans_van_der_Zande ;
+  <http://purl.org/dc/terms/creator> ceo:Patrick_Mout ;
+  <http://purl.org/dc/terms/hasVersion> "0.1" ;
+  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+  <http://purl.org/dc/terms/publisher> ceo:Rijksdienst_voor_het_Cultureel_Erfgoed ;
+  rdfs:label "Zaak Type Catalogus Eigenschappen"@nl ;
+  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ztc> ;
 .
 ztce:archisMotief
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisMotief wordt gebruikt om aan te geven welke archis2motief is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2motief"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisOnderzoeksId
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisOnderzoeksId wordt gebruikt om aan te geven welke archis2Onderzoeks_id is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2Onderzoeks_id"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisOnderzoeksmeldingsnummer
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisOnderzoeksmeldingsnummer wordt gebruikt om aan te geven welke archis2onderzoeksmeldingsnummer is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2onderzoeksmeldingsnummer"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkBevoegdGezag
   rdf:type owl:DatatypeProperty ;
@@ -386,66 +398,77 @@ ztce:archisVeldwerkBevoegdGezag
           "Geen"
         ) ;
     ] ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkDatumafronding
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisVeldwerkDatumafronding wordt gebruikt om aan te geven welke archis veldwerk: datum afronding is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: datum afronding"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkDatumafrondingRapport
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisVeldwerkDatumafrondingRapport wordt gebruikt om aan te geven welke archis veldwerk: datum afronding rapport is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: datum afronding rapport"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkEinddatumGepland
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisVeldwerkEinddatumGepland wordt gebruikt om aan te geven welke archis veldwerk: einddatum gepland is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: einddatum gepland"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkStartdatum
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisVeldwerkStartdatum wordt gebruikt om aan te geven welke archis veldwerk: startdatum is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: startdatum"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkVerwachteDatumAfrondingRapport
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisVeldwerkVerwachteDatumAfrondingRapport wordt gebruikt om aan te geven welke archis veldwerk: verwachte datum afronding rapport is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: verwachte datum afronding rapport"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVondstmeldingDatumVondst
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisVondstmeldingDatumVondst wordt gebruikt om aan te geven welke archis Vondstmelding Datum Vondst is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis Vondstmelding Datum Vondst"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVondstmeldingsnummer
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisVondstmeldingsnummer wordt gebruikt om aan te geven welke archis2Vondstmeldingsnummer is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2Vondstmeldingsnummer"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisWaarnemingsnummer
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisWaarnemingsnummer wordt gebruikt om aan te geven welke archis2Waarnemingsnummer is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2Waarnemingsnummer"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:datumUitstelRapportverplichting
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumUitstelRapportverplichting wordt gebruikt om aan te geven welke datum uitstel rapportverplichting is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Datum uitstel rapportverplichting"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:eerdereZaken
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property eerdereZaken wordt gebruikt om aan te geven welke eerdere zaken is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Eerdere zaken"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:mrsprojectcode
   rdf:type owl:DatatypeProperty ;
@@ -470,12 +493,14 @@ ztce:mrsprojectcode
           "Verbetervoorstellen subsidies~W"
         ) ;
     ] ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:onderzoeksnaam
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property onderzoeksnaam wordt gebruikt om aan te geven welke onderzoeksnaam is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Onderzoeksnaam"@nl ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:regime
   rdf:type owl:DatatypeProperty ;
@@ -489,6 +514,7 @@ ztce:regime
           "Erfgoedwet2016"
         ) ;
     ] ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:reikwijdte
   rdf:type owl:DatatypeProperty ;
@@ -503,6 +529,7 @@ ztce:reikwijdte
           "Administratief"
         ) ;
     ] ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:typeOnderzoek
   rdf:type owl:DatatypeProperty ;
@@ -540,4 +567,5 @@ ztce:typeOnderzoek
           "XXX - Onbekend"
         ) ;
     ] ;
+  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .

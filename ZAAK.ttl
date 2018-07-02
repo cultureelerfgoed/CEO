@@ -1,4 +1,5 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/zaak
+# imports: https://linkeddata.cultureelerfgoed.nl/def/ztc
 # prefix: zaak
 
 @prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
@@ -424,6 +425,12 @@ skos:editorialNote
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zaak>
   rdf:type owl:Ontology ;
+  dcterms:created "2018-07-01" ;
+  dcterms:creator ceo:Frans_van_der_Zande ;
+  dcterms:creator ceo:Patrick_Mout ;
+  dcterms:hasVersion "0.1" ;
+  rdfs:label "Zaak Ontologie"@nl ;
+  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ztc> ;
 .
 zaak:Besluit
   rdf:type owl:Class ;

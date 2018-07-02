@@ -3,6 +3,7 @@
 
 @prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
 @prefix backspin: <http://topbraid.org/backspin#> .
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo#> .
 @prefix corpus: <http://topbraid.org/corpus#> .
 @prefix crosswalk: <http://topbraid.org/crosswalk#> .
 @prefix crosswalkprojects: <http://teamwork.topbraidlive.org/crosswalkprojects#> .
@@ -410,6 +411,10 @@ skos:editorialNote
 .
 <https://linkeddata.cultureelerfgoed.nl/def/ztc>
   rdf:type owl:Ontology ;
+  dcterms:created "2018-07-01" ;
+  dcterms:creator ceo:Frans_van_der_Zande ;
+  dcterms:creator ceo:Patrick_Mout ;
+  dcterms:hasVersion "0.1" ;
   rdfs:label "Zaak Type Catalogus"@nl ;
 .
 ztc:Besluittype
