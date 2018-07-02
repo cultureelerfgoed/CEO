@@ -405,10 +405,6 @@ owl:versionInfo
 owl:withRestrictions
   rdfs:label "WithRestrictions" ;
 .
-skos:editorialNote
-  rdf:type owl:AnnotationProperty ;
-  rdfs:label "Editorial notE "@nl ;
-.
 <https://linkeddata.cultureelerfgoed.nl/def/ztc>
   rdf:type owl:Ontology ;
   dcterms:created "2018-07-01" ;
@@ -562,7 +558,7 @@ ztc:doorlooptijdStatus
   rdfs:label "Doorlooptijd status"@nl ;
 .
 ztc:eigenschapnaam
-  rdf:type owl:DatatypeProperty ;
+  rdf:type rdf:Property ;
   rdfs:comment "De property eigenschapnaam wordt gebruikt om aan te geven welke eigenschapnaam is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Eigenschapnaam"@nl ;
