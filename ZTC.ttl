@@ -3,7 +3,6 @@
 
 @prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
 @prefix backspin: <http://topbraid.org/backspin#> .
-@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo#> .
 @prefix corpus: <http://topbraid.org/corpus#> .
 @prefix crosswalk: <http://topbraid.org/crosswalk#> .
 @prefix crosswalkprojects: <http://teamwork.topbraidlive.org/crosswalkprojects#> .
@@ -405,12 +404,12 @@ owl:versionInfo
 owl:withRestrictions
   rdfs:label "WithRestrictions" ;
 .
+skos:editorialNote
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "Editorial notE "@nl ;
+.
 <https://linkeddata.cultureelerfgoed.nl/def/ztc>
   rdf:type owl:Ontology ;
-  dcterms:created "2018-07-01" ;
-  dcterms:creator ceo:Frans_van_der_Zande ;
-  dcterms:creator ceo:Patrick_Mout ;
-  dcterms:hasVersion "0.1" ;
   rdfs:label "Zaak Type Catalogus"@nl ;
 .
 ztc:Besluittype
@@ -558,7 +557,7 @@ ztc:doorlooptijdStatus
   rdfs:label "Doorlooptijd status"@nl ;
 .
 ztc:eigenschapnaam
-  rdf:type rdf:Property ;
+  rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property eigenschapnaam wordt gebruikt om aan te geven welke eigenschapnaam is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Eigenschapnaam"@nl ;
@@ -582,9 +581,9 @@ ztc:heeftBetrekkingOp
   rdfs:label "Heeft betrekking op"@nl ;
   rdfs:range ztc:Zaaktype ;
 .
-ztc:heeftBetrokkeneIn
+ztc:heeftBetrokkene
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property heeftBetrokkeneIn legt de relatie tussen Zaaktype en Roltype."@nl ;
+  rdfs:comment "De property heeftBetrokkene legt de relatie tussen Zaaktype en Roltype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Heeft betrokkene in"@nl ;
   rdfs:range ztc:Roltype ;
