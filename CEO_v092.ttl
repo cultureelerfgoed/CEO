@@ -463,11 +463,11 @@ ceo:beginRegistratie
 ceo:bevatObject
   rdf:type owl:ObjectProperty ;
   dcterms:created "4-7-18 10:47" ;
-  dcterms:modified "12-9-18" ;
-  rdfs:comment "De property bevatObject legt de relatie tussen de ligging en de samenhang met betrekking tot een cultuurhistorisch object vast."@nl ;
+  dcterms:modified "25-9-18" ;
+  rdfs:comment "De property bevatObject legt de relatie tussen de ligging van een cultuurhistorisch object met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Bevat object"@nl ;
-  rdfs:range ceo:Samenhang ;
+  rdfs:range ceo:CultuurhistorischObject ;
   owl:inverseOf ceo:ligtInObject ;
 .
 ceo:bronIdentificatie
@@ -494,15 +494,6 @@ ceo:buurtOfWijkNaam
   rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Buurt of wijk naam"@nl ;
   rdfs:range xsd:string ;
-.
-ceo:complexBevat
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "4-7-18 10:35" ;
-  rdfs:comment "De property complexBevat legt de relatie tussen het complex en de samenhang met betrekking tot een rijksmonument vast."@nl ;
-  rdfs:domain ceo:Complex ;
-  rdfs:label "Complex bevat"@nl ;
-  rdfs:range ceo:Samenhang ;
-  owl:inverseOf ceo:isOnderdeelVanComplex ;
 .
 ceo:complexnummer
   rdf:type owl:DatatypeProperty ;
@@ -595,9 +586,8 @@ ceo:geometrieIdentificatie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "27-3-18 10:29" ;
   rdfs:comment "De property geometrieIdentificatie wordt gebruikt om aan te geven welke geometrische identificatie aan de geometrie is gekoppeld."@nl ;
-  rdfs:domain ceo:Geometrie ;
   rdfs:label "Geometrie identificatie"@nl ;
-  rdfs:range xsd:string ;
+  rdfs:range xsd:integer ;
 .
 ceo:heeftActor
   rdf:type owl:ObjectProperty ;
@@ -903,6 +893,15 @@ ceo:heeftHoofdfunctie
   rdfs:comment "Nog toe te voegen "@nl ;
   rdfs:label "hoofdfunctie"@nl ;
 .
+ceo:heeftHoofdobject
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "4-7-18 10:38" ;
+  rdfs:comment "De property heeftHoofdobject legt de relatie tussen het complex en het hoofdobject met betrekking tot een rijksmonument vast."@nl ;
+  rdfs:domain ceo:Complex ;
+  rdfs:label "Heeft hoofdobject"@nl ;
+  rdfs:range ceo:Rijksmonument ;
+  owl:inverseOf ceo:isHoofdobjectVanComplex ;
+.
 ceo:heeftHuidigeFunctie
   rdf:type owl:ObjectProperty ;
   dcterms:created "8-5-18 10:27" ;
@@ -1153,6 +1152,15 @@ ceo:heeftRepresentativiteit
   rdfs:label "Heeft representativiteit"@nl ;
   rdfs:range skos:Concept ;
 .
+ceo:heeftRijksmonument
+  rdf:type rdf:Property ;
+  dcterms:created "25-9-18 13:33" ;
+  rdfs:comment "De property heeftRijksmonument legt de relatie tussen het complex met betrekking tot een rijksmonument vast."@nl ;
+  rdfs:domain ceo:Complex ;
+  rdfs:label "Heeft Rijksmonument"@nl ;
+  rdfs:range ceo:Rijksmonument ;
+  owl:inverseOf ceo:isOnderdeelVanComplex ;
+.
 ceo:heeftRol
   rdf:type owl:ObjectProperty ;
   dcterms:created "10-4-18 10:22" ;
@@ -1165,10 +1173,11 @@ ceo:heeftRol
 ceo:heeftSamenhang
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-1-5" ;
+  dcterms:modified "25-9-18" ;
   rdfs:comment "De property heeftSamenhang legt de samenhangende relatie tussen twee cultuurhistorische objecten vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft samenhang"@nl ;
-  rdfs:range ceo:Samenhang ;
+  rdfs:range ceo:CultuurhistorischObject ;
 .
 ceo:heeftSchoonheid
   rdf:type owl:ObjectProperty ;
@@ -1297,8 +1306,6 @@ ceo:heeftVerwerving
   dcterms:created "27-3-18 9:41" ;
   dcterms:modified "3-9-18" ;
   rdfs:comment "De property heeftVerwerving legt de relatie tussen de vondst of grondspoor en de verwerving vast."@nl ;
-  rdfs:domain ceo:Grondsporen ;
-  rdfs:domain ceo:Vondsten ;
   rdfs:domain ceo:Vondstlocatie ;
   rdfs:label "Heeft verwerving"@nl ;
   rdfs:range skos:Concept ;
@@ -1385,11 +1392,12 @@ ceo:hoofdfunctie
 ceo:hoofdobjectBevat
   rdf:type owl:ObjectProperty ;
   dcterms:created "4-7-18 10:41" ;
-  rdfs:comment "De property hoofdobjectBevat legt de relatie tussen het hoofdobject en de samenhang met betrekking tot een rijksmonument vast."@nl ;
+  dcterms:modified "25-9-18" ;
+  rdfs:comment "De property isHoofdobjectVanComplex legt de relatie tussen het hoofdobject en het complex met betrekking tot een rijksmonument vast."@nl ;
   rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Hoofdobject bevat"@nl ;
-  rdfs:range ceo:Samenhang ;
-  owl:inverseOf ceo:isOnderdeelVanHoofdobject ;
+  rdfs:label "Is hoofdobject van complex"@nl ;
+  rdfs:range ceo:Complex ;
+  owl:inverseOf ceo:heeftHoofdobject ;
 .
 ceo:huidigeNaam
   rdf:type owl:DatatypeProperty ;
@@ -1424,23 +1432,24 @@ ceo:internationaalKenteken
   rdfs:label "Internationaal kenteken"@nl ;
   rdfs:range xsd:boolean ;
 .
+ceo:isHoofdobjectVanComplex
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "25-9-18 13:56" ;
+  rdfs:comment "De property heeftHoofdobject legt de relatie tussen een rijksmonument en het hoofdobject met betrekking tot een complex vast."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
+  rdfs:label "Is hoofdobject van complex"@nl ;
+  rdfs:range ceo:Complex ;
+  owl:inverseOf ceo:heeftHoofdobject ;
+.
 ceo:isOnderdeelVanComplex
   rdf:type owl:ObjectProperty ;
   dcterms:created "4-7-18 10:31" ;
-  rdfs:comment "De property isOnderdeelVanComplex legt de relatie tussen de samenhang en het complex met betrekking tot een rijksmonument vast."@nl ;
-  rdfs:domain ceo:Samenhang ;
+  dcterms:modified "25-9-18" ;
+  rdfs:comment "De property isOnderdeelVanComplex legt de relatie tussen het rijksmonument als onderdeel van een complex vast."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Is onderdeel van complex"@nl ;
   rdfs:range ceo:Complex ;
-  owl:inverseOf ceo:complexBevat ;
-.
-ceo:isOnderdeelVanHoofdobject
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "4-7-18 10:38" ;
-  rdfs:comment "De property isOnderdeelVanHoofdobject legt de relatie tussen de samenhang en het hoofdobject met betrekking tot een rijksmonument vast."@nl ;
-  rdfs:domain ceo:Samenhang ;
-  rdfs:label "Is onderdeel van hoofdobject"@nl ;
-  rdfs:range ceo:Rijksmonument ;
-  owl:inverseOf ceo:hoofdobjectBevat ;
+  owl:inverseOf ceo:heeftRijksmonument ;
 .
 ceo:isVolgensNorm
   rdf:type owl:DatatypeProperty ;
@@ -1469,9 +1478,9 @@ ceo:kadasterDeelEnNummer
 ceo:ligtInObject
   rdf:type owl:ObjectProperty ;
   dcterms:created "4-7-18 10:44" ;
-  dcterms:modified "12-9-18" ;
-  rdfs:comment "De property ligtInObject legt de relatie tussen de samenhang en de ligging met betrekking tot een cultuurhistorisch object vast."@nl ;
-  rdfs:domain ceo:Samenhang ;
+  dcterms:modified "25-9-18" ;
+  rdfs:comment "De property bevatObject legt de relatie tussen de ligging van een cultuurhistorisch object met betrekking tot een cultuurhistorisch object vast."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Ligt in object"@nl ;
   rdfs:range ceo:CultuurhistorischObject ;
   owl:inverseOf ceo:bevatObject ;
@@ -1556,14 +1565,6 @@ ceo:perceelnummer
   rdfs:label "Perceelnummer"@nl ;
   rdfs:range xsd:string ;
   skos:editorialNote "Binnen de RCE data wordt het perceel nummer gegeven als kadastraal object nummer."@nl ;
-.
-ceo:persistenteIdentificatie
-  rdf:type owl:DatatypeProperty ;
-  dcterms:created "27-3-18 9:14" ;
-  rdfs:comment "De property persitenteIdentificatie wordt gebruikt om aan te geven welke persitente identificatie aan een cultuurhistorisch object is gekoppeld."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Persistente identificatie"@nl ;
-  rdfs:range xsd:string ;
 .
 ceo:plaatsCode
   rdf:type owl:DatatypeProperty ;
