@@ -58,7 +58,7 @@
 @prefix ui: <http://uispin.org/ui#> .
 @prefix uix: <http://topbraidlive.org/uix#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix zaak: <https://linkeddata.cultureelerfgoed.nl/def/zaak#> .
+@prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zo#> .
 @prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
 @prefix ztce: <https://linkeddata.cultureelerfgoed.nl/def/ztce#> .
 
@@ -453,12 +453,14 @@ ztc:aanleiding
   rdfs:comment "De property aanleiding wordt gebruikt om aan te geven welke aanleiding is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Aanleiding"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:archiefnominatie
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archiefnominatie wordt gebruikt om aan te geven welke archiefnominatie is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Archiefnominatie"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:archieftermijn
   rdf:type owl:DatatypeProperty ;
@@ -471,78 +473,91 @@ ztc:besluittypeOmschrijving
   rdfs:comment "De property besluittypeOmschrijving wordt gebruikt om aan te geven welke besluittype-omschrijving is gekoppeld aan een Besluittype."@nl ;
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Besluittype-omschrijving"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:brondatumArchiefprocedure
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property brondatumArchiefprocedure wordt gebruikt om aan te geven welke brondatum archiefprocedure is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Brondatum archiefprocedure"@nl ;
+  rdfs:range xsd:date ;
 .
 ztc:datumBeginGeldigheidBesluittype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumBeginGeldigheidBesluittype wordt gebruikt om aan te geven welke datum begin geldigheid besluittype is gekoppeld aan een Besluittype."@nl ;
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Datum begin geldigheid besluittype"@nl ;
+  rdfs:range xsd:date ;
 .
 ztc:datumBeginGeldigheidDocumenttype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumBeginGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum begin geldigheid documenttype is gekoppeld aan een Documenttype."@nl ;
   rdfs:domain ztc:Documenttype ;
   rdfs:label "Datum begin geldigheid documenttype"@nl ;
+  rdfs:range xsd:date ;
 .
 ztc:datumBeginGeldigheidStatustype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumBeginGeldigheidStatustype wordt gebruikt om aan te geven welke datum begin geldigheid statustype is gekoppeld aan een Statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Datum begin geldigheid statustype"@nl ;
+  rdfs:range xsd:date ;
 .
 ztc:datumBeginGeldigheidZaaktype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumBeginGeldigheidZaaktype wordt gebruikt om aan te geven welke datum begin geldigheid zaaktype is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Datum begin geldigheid zaaktype"@nl ;
+  rdfs:range xsd:date ;
 .
 ztc:datumEindeGeldigheidBesluittype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumEindeGeldigheidBesluittype wordt gebruikt om aan te geven welke datum einde geldigheid besluittype is gekoppeld aan een Besluittype."@nl ;
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Datum einde geldigheid besluittype"@nl ;
+  rdfs:range xsd:date ;
+.
+ztc:datumEindeGeldigheidDocumenttype
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property datumEindeGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum einde geldigheid documenttype is gekoppeld aan een Documenttype."@nl ;
+  rdfs:domain ztc:Documenttype ;
+  rdfs:label "Datum einde geldigheid documenttype"@nl ;
+  rdfs:range xsd:date ;
 .
 ztc:datumEindeGeldigheidStatustype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumEindeGeldigheidStatustype wordt gebruikt om aan te geven welke datum einde geldigheid statustype is gekoppeld aan een Statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Datum einde geldigheid statustype"@nl ;
+  rdfs:range xsd:date ;
 .
 ztc:datumEindeGeldigheidZaaktype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumEindeGeldigheidZaaktype wordt gebruikt om aan te geven welke datum einde geldigheid zaaktype is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Datum einde geldigheid zaaktype"@nl ;
-.
-ztc:datumEindeGeldigheiddocumenttype
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property datumEindeGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum einde geldigheid documenttype is gekoppeld aan een Documenttype."@nl ;
-  rdfs:domain ztc:Documenttype ;
-  rdfs:label "Datum einde geldigheid documenttype"@nl ;
+  rdfs:range xsd:date ;
 .
 ztc:definitie
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property definitie wordt gebruikt om aan te geven welke definitie is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Definitie"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:documenttypeOmschrijving
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property documenttypeOmschrijving wordt gebruikt om aan te geven welke documenttype-omschrijving is gekoppeld aan een Documenttype."@nl ;
   rdfs:domain ztc:Documenttype ;
   rdfs:label "Documenttype-omschrijving"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:doel
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property doel wordt gebruikt om aan te geven welke doel  is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Doel "@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:doorlooptijdBehandeling
   rdf:type owl:DatatypeProperty ;
@@ -561,18 +576,21 @@ ztc:eigenschapnaam
   rdfs:comment "De property eigenschapnaam wordt gebruikt om aan te geven welke eigenschapnaam is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Eigenschapnaam"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:formaat
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property formaat wordt gebruikt om aan te geven welke formaat is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Formaat"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:formuliernaam
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property formuliernaam wordt gebruikt om aan te geven welke formuliernaam is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Formuliernaam"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:heeftBetrekkingOp
   rdf:type owl:ObjectProperty ;
@@ -628,6 +646,7 @@ ztc:kardinaliteit
   rdfs:comment "De property kardinaliteit wordt gebruikt om aan te geven welke kardinaliteit is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Kardinaliteit"@nl ;
+  rdfs:range xsd:integer ;
 .
 ztc:lengte
   rdf:type owl:DatatypeProperty ;
@@ -640,12 +659,14 @@ ztc:procesnaam
   rdfs:comment "De property procesnaam wordt gebruikt om aan te geven welke procesnaam is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Procesnaam"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:productDienst
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property productDienst wordt gebruikt om aan te geven welke product/Dienst is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Product/Dienst"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:reactietermijn
   rdf:type owl:DatatypeProperty ;
@@ -658,36 +679,42 @@ ztc:roltypeomschrijving
   rdfs:comment "De property roltypeomschrijving wordt gebruikt om aan te geven welke roltypeomschrijving is gekoppeld aan een Roltype."@nl ;
   rdfs:domain ztc:Roltype ;
   rdfs:label "Roltypeomschrijving"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:selectielijstTekst
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property selectielijstTekst wordt gebruikt om aan te geven welke selectielijst tekst is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Selectielijst tekst"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:servicenormBehandeling
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property servicenormBehandeling wordt gebruikt om aan te geven welke servicenorm behandeling is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Servicenorm behandeling"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:soortBetrokkene
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property soortBetrokkene wordt gebruikt om aan te geven welke soort betrokkene is gekoppeld aan een Roltype."@nl ;
   rdfs:domain ztc:Roltype ;
   rdfs:label "Soort betrokkene"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:statustypeOmschrijving
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property statustypeOmschrijving wordt gebruikt om aan te geven welke statustype-omschrijving is gekoppeld aan een Statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Statustype-omschrijving"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:statustypevolgnummer
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property statustypevolgnummer wordt gebruikt om aan te geven welke statustypevolgnummer is gekoppeld aan een Statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Statustypevolgnummer"@nl ;
+  rdfs:range xsd:integer ;
 .
 ztc:toelichting
   rdf:type owl:DatatypeProperty ;
@@ -700,18 +727,21 @@ ztc:toelichting
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Toelichting"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:url
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property url wordt gebruikt om aan te geven welke uRL is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "URL"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:verantwoordelijke
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property verantwoordelijke wordt gebruikt om aan te geven welke verantwoordelijke is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Verantwoordelijke"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:vertrouwelijkAanduiding
   rdf:type owl:DatatypeProperty ;
@@ -720,12 +750,14 @@ ztc:vertrouwelijkAanduiding
   rdfs:domain ztc:Documenttype ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Vertrouwelijk aanduiding"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:waardenverzameling
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property waardenverzameling wordt gebruikt om aan te geven welke waardenverzameling is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Waardenverzameling"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:wordtVastgelegdIn
   rdf:type owl:ObjectProperty ;
@@ -739,6 +771,7 @@ ztc:zaaktypeOmschrijving
   rdfs:comment "De property zaaktypeOmschrijving wordt gebruikt om aan te geven welke zaaktype-omschrijving is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Zaaktype-omschrijving"@nl ;
+  rdfs:range xsd:string ;
 .
 ztc:zetAlsBetrokkene
   rdf:type owl:ObjectProperty ;
