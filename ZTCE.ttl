@@ -1,13 +1,9 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/ztce
-# imports: http://www.w3.org/2004/02/skos/core
-# imports: https://linkeddata.cultureelerfgoed.nl/def/ztc
 # prefix: ztce
 
-@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ztce: <https://linkeddata.cultureelerfgoed.nl/def/ztce#> .
 
@@ -355,170 +351,193 @@ owl:withRestrictions
 .
 <https://linkeddata.cultureelerfgoed.nl/def/ztce>
   rdf:type owl:Ontology ;
-  <http://purl.org/dc/terms/created> "2018-07-01" ;
-  <http://purl.org/dc/terms/creator> ceo:Frans_van_der_Zande ;
-  <http://purl.org/dc/terms/creator> ceo:Patrick_Mout ;
-  <http://purl.org/dc/terms/hasVersion> "0.1" ;
-  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-  <http://purl.org/dc/terms/publisher> ceo:Rijksdienst_voor_het_Cultureel_Erfgoed ;
-  rdfs:label "Zaak Type Catalogus Eigenschappen"@nl ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ztc> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
 .
 ztce:archisMotief
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisMotief wordt gebruikt om aan te geven welke archis2motief is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2motief"@nl ;
-  rdfs:range xsd:string ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisOnderzoeksId
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archisOnderzoeksId wordt gebruikt om aan te geven welk  ID uit Archis2 tabel acs_onderzoeken is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archisOnderzoeksId wordt gebruikt om aan te geven welke archis2Onderzoeks_id is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2Onderzoeks_id"@nl ;
-  rdfs:range xsd:integer ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisOnderzoeksmeldingsnummer
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archisOnderzoeksmeldingsnummer wordt gebruikt om aan te geven welke archis2onderzoeksmeldingsnummer is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2onderzoeksmeldingsnummer"@nl ;
-  rdfs:range xsd:integer ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkBevoegdGezag
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property archisVeldwerkBevoegdGezag legt de relatie tussen diverse betrokkenen als bevoegd gezag en een Zaak."@nl ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property archisVeldwerkBevoegdGezag wordt gebruikt om aan te geven welke archis veldwerk: bevoegd gezag is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: bevoegd gezag"@nl ;
-  rdfs:range skos:Concept ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
-  skos:editorialNote "skos:Concept voor Gemeente;Waterschap;Provincie;Rijk;Geen" ;
+  rdfs:range [
+      rdf:type rdfs:Datatype ;
+      owl:oneOf (
+          "Gemeente"
+          "Waterschap"
+          "Provincie"
+          "Rijk"
+          "Geen"
+        ) ;
+    ] ;
 .
 ztce:archisVeldwerkDatumafronding
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archisVeldwerkDatumafronding wordt gebruikt om aan te geven welke datum dat het archisonderzoek is afgerond is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archisVeldwerkDatumafronding wordt gebruikt om aan te geven welke archis veldwerk: datum afronding is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: datum afronding"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkDatumafrondingRapport
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archisVeldwerkDatumafrondingRapport wordt gebruikt om aan te geven welke datum dat het archiseindonderzoeksrapport is ontvangen is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archisVeldwerkDatumafrondingRapport wordt gebruikt om aan te geven welke archis veldwerk: datum afronding rapport is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: datum afronding rapport"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkEinddatumGepland
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archisVeldwerkEinddatumGepland wordt gebruikt om aan te geven welke archis veldwerk einddatum gepland is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archisVeldwerkEinddatumGepland wordt gebruikt om aan te geven welke archis veldwerk: einddatum gepland is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: einddatum gepland"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkStartdatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archisVeldwerkStartdatum wordt gebruikt om aan te geven welke archis veldwerk startdatum is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archisVeldwerkStartdatum wordt gebruikt om aan te geven welke archis veldwerk: startdatum is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: startdatum"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVeldwerkVerwachteDatumAfrondingRapport
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archisVeldwerkVerwachteDatumAfrondingRapport wordt gebruikt om aan te geven welke archis veldwerk verwachte datum afronding rapport is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archisVeldwerkVerwachteDatumAfrondingRapport wordt gebruikt om aan te geven welke archis veldwerk: verwachte datum afronding rapport is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis veldwerk: verwachte datum afronding rapport"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVondstmeldingDatumVondst
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archisVondstmeldingDatumVondst wordt gebruikt om aan te geven welke datum van vondstmelding is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archisVondstmeldingDatumVondst wordt gebruikt om aan te geven welke archis Vondstmelding Datum Vondst is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis Vondstmelding Datum Vondst"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisVondstmeldingsnummer
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archisVondstmeldingsnummer wordt gebruikt om aan te geven welk Mdg_id uit Archis2 tabel acs_waarnemingen is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archisVondstmeldingsnummer wordt gebruikt om aan te geven welke archis2Vondstmeldingsnummer is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2Vondstmeldingsnummer"@nl ;
-  rdfs:range xsd:integer ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:archisWaarnemingsnummer
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archisWaarnemingsnummer wordt gebruikt om aan te geven welk waarnemingsnummer uit Archis2 tabel acs_waarnemingen is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archisWaarnemingsnummer wordt gebruikt om aan te geven welke archis2Waarnemingsnummer is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Archis2Waarnemingsnummer"@nl ;
-  rdfs:range xsd:integer ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:datumUitstelRapportverplichting
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumUitstelRapportverplichting wordt gebruikt om aan te geven welke datum uitstel rapportverplichting is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Datum uitstel rapportverplichting"@nl ;
-  rdfs:range xsd:date ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:eerdereZaken
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property eerdereZaken legt de relatie tussen eerdere zaken en een Zaak."@nl ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property eerdereZaken wordt gebruikt om aan te geven welke eerdere zaken is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Eerdere zaken"@nl ;
-  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:mrsprojectcode
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property mrsprojectcode legt de relatie tussen de verschillende MRS-Projecten binnen RCE en een Zaak."@nl ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property mrsprojectcode wordt gebruikt om aan te geven welke mrsprojectcode is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Mrsprojectcode"@nl ;
-  rdfs:range skos:Concept ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
-  skos:editorialNote "skos:concepts voor :   {\"Wederopbouw 1940-1958~A\" , \"Nieuwe Hollandse Waterlinie~A\" , \"MSP~A\" , \"Archeologie 2008~A\" , \"Archeologie 2013~A\" , \"Wederopbouw 1959-1965~A\" , \"WKPB~W\" , \"Vestingwerken~W\" , \"Verbetervoorstellen algemeen~W\" , \"Verbetervoorstellen Molens~W\" , \"Verbetervoorstellen Kerken~W\" , \"Verbetervoorstellen Utrecht bruggen~W\" , \"Verbetervoorstellen subsidies~W\"}" ;
+  rdfs:range [
+      rdf:type rdfs:Datatype ;
+      owl:oneOf (
+          "Wederopbouw 1940-1958~A"
+          "Nieuwe Hollandse Waterlinie~A"
+          "MSP~A"
+          "Archeologie 2008~A"
+          "Archeologie 2013~A"
+          "Wederopbouw 1959-1965~A"
+          "WKPB~W"
+          "Vestingwerken~W"
+          "Verbetervoorstellen algemeen~W"
+          "Verbetervoorstellen Molens~W"
+          "Verbetervoorstellen Kerken~W"
+          "Verbetervoorstellen Utrecht bruggen~W"
+          "Verbetervoorstellen subsidies~W"
+        ) ;
+    ] ;
 .
 ztce:onderzoeksnaam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property onderzoeksnaam wordt gebruikt om aan te geven welke naam die de onderzoeker aan het onderzoek heeft gegeven is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property onderzoeksnaam wordt gebruikt om aan te geven welke onderzoeksnaam is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Onderzoeksnaam"@nl ;
-  rdfs:range xsd:string ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
 .
 ztce:regime
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property regime legt de relatie tussen regimes onder welke een Zaak plaats heeft en een Zaak."@nl ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property regime wordt gebruikt om aan te geven welke regime is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Regime"@nl ;
-  rdfs:range skos:Concept ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
-  skos:editorialNote "skos:Concept {\"Monumentenwet1988\" , \"Erfgoedwet2016\"}" ;
+  rdfs:range [
+      rdf:type rdfs:Datatype ;
+      owl:oneOf (
+          "Monumentenwet1988"
+          "Erfgoedwet2016"
+        ) ;
+    ] ;
 .
 ztce:reikwijdte
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property reikwijdte legt de relatie tussen de reikweidte van een Zaak en een Zaak."@nl ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property reikwijdte wordt gebruikt om aan te geven welke reikwijdte is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Reikwijdte"@nl ;
-  rdfs:range skos:Concept ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
-  skos:editorialNote "{\"Kort\" , \"Lang\" , \"Administratief\"}" ;
+  rdfs:range [
+      rdf:type rdfs:Datatype ;
+      owl:oneOf (
+          "Kort"
+          "Lang"
+          "Administratief"
+        ) ;
+    ] ;
 .
 ztce:typeOnderzoek
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property typeOnderzoek legt de relatie tussen de verschillende Archeologische Projecten binnen RCE en een Zaak."@nl ;
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property typeOnderzoek wordt gebruikt om aan te geven welke type onderzoek is gekoppeld aan een Zaak."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zaak#Zaak> ;
   rdfs:label "Type onderzoek"@nl ;
-  rdfs:range skos:Concept ;
-  rdfs:subPropertyOf <https://linkeddata.cultureelerfgoed.nl/def/ztc#eigenschapnaam> ;
-  skos:editorialNote "skos:Concept {\"ABE - Archeologisch: begeleiding\" , \"ABO - Archeologisch: booronderzoek\" , \"ABU - Archeologisch: bureauonderzoek\" , \"ADU - Archeologisch: duikactiviteiten\" , \"AGO - Archeologisch: geofysisch onderzoek\" , \"AIN - Archeologisch: inspectie\" , \"AKA - Archeologisch: (veld)kartering\" , \"AOP - Archeologisch: opgraving\" , \"AOW - Archeologisch: onderwaterarcheologie\" , \"APP - Archeologisch: proefputten/proefsleuven\" , \"AVE - Archeologisch: verwachtingskaart\" , \"AXX - Archeologisch: onbepaald\" , \"IAR - Indirect: archief\" , \"ICO - Indirect: collectie\" , \"ILI - Indirect: literatuur\" , \"IXX - Indirect: onbepaald\" , \"LUC - Luchtfoto/remote sensing\" , \"NBA - Niet-archeologisch: baggerwerk\" , \"NBO - Niet-archeologisch: boring\" , \"NDE - Niet-archeologisch: metaaldetector\" , \"NDU - Niet archeologisch: duikactiviteiten\" , \"NGR - Niet-archeologisch: graafwerk\" , \"NKA - Niet-archeologisch: kartering\" , \"NWA - Niet archeologisch: waterwerk en exploitatie\" , \"NXX - Niet-archeologisch: onbepaald\" , \"XXX - Onbekend\"}" ;
+  rdfs:range [
+      rdf:type rdfs:Datatype ;
+      owl:oneOf (
+          "ABE - Archeologisch: begeleiding"
+          "ABO - Archeologisch: booronderzoek"
+          "ABU - Archeologisch: bureauonderzoek"
+          "ADU - Archeologisch: duikactiviteiten"
+          "AGO - Archeologisch: geofysisch onderzoek"
+          "AIN - Archeologisch: inspectie"
+          "AKA - Archeologisch: (veld)kartering"
+          "AOP - Archeologisch: opgraving"
+          "AOW - Archeologisch: onderwaterarcheologie"
+          "APP - Archeologisch: proefputten/proefsleuven"
+          "AVE - Archeologisch: verwachtingskaart"
+          "AXX - Archeologisch: onbepaald"
+          "IAR - Indirect: archief"
+          "ICO - Indirect: collectie"
+          "ILI - Indirect: literatuur"
+          "IXX - Indirect: onbepaald"
+          "LUC - Luchtfoto/remote sensing"
+          "NBA - Niet-archeologisch: baggerwerk"
+          "NBO - Niet-archeologisch: boring"
+          "NDE - Niet-archeologisch: metaaldetector"
+          "NDU - Niet archeologisch: duikactiviteiten"
+          "NGR - Niet-archeologisch: graafwerk"
+          "NKA - Niet-archeologisch: kartering"
+          "NWA - Niet archeologisch: waterwerk en exploitatie"
+          "NXX - Niet-archeologisch: onbepaald"
+          "XXX - Onbekend"
+        ) ;
+    ] ;
 .

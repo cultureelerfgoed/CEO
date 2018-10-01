@@ -1,4 +1,4 @@
-# baseURI: https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo
+# baseURI: https://linkeddata.cultureelerfgoed.nl/def/ceo
 # imports: file:///TopBraid/RCE/Gemeente.rdf
 # imports: file:///TopBraid/RCE/Provincie.rdf
 # imports: file:///TopBraid/RCE/brk-model.rdf
@@ -12,11 +12,11 @@
 # imports: http://www.w3.org/ns/locn
 # prefix: ceo
 
+@prefix : <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix brk: <http://brk.basisregistraties.overheid.nl/def/brk#> .
-@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo#> .
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix p1: <http://example.org/file1#> .
 @prefix pdok: <http://data.pdok.nl/def/pdok#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -86,7 +86,7 @@ pdok:asWKT-RD
   rdfs:comment "" ;
   rdfs:label "Creative Commons Licenses 4.0"@nl ;
 .
-<https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo>
+<https://linkeddata.cultureelerfgoed.nl/def/ceo>
   rdf:type owl:Ontology ;
   dcterms:created "2018-04-23" ;
   dcterms:creator ceo:Frans_van_der_Zande ;
@@ -190,7 +190,7 @@ ceo:Complex
   rdfs:label "Complex"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
-<https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo#CreativeCommonslLicense4.0>
+<https://linkeddata.cultureelerfgoed.nl/def/ceo#CreativeCommonslLicense4.0>
   rdf:type dcterms:Agent ;
   dcterms:created "23-4-18 11:54" ;
   rdfs:comment "" ;

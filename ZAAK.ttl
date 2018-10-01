@@ -1,5 +1,4 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/zaak
-# imports: https://linkeddata.cultureelerfgoed.nl/def/ztc
 # prefix: zaak
 
 @prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
@@ -425,12 +424,6 @@ skos:editorialNote
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zaak>
   rdf:type owl:Ontology ;
-  dcterms:created "2018-07-01" ;
-  dcterms:creator ceo:Frans_van_der_Zande ;
-  dcterms:creator ceo:Patrick_Mout ;
-  dcterms:hasVersion "0.1" ;
-  rdfs:label "Zaak Ontologie"@nl ;
-  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ztc> ;
 .
 zaak:Besluit
   rdf:type owl:Class ;
@@ -523,23 +516,23 @@ zaak:archiefnominatieZaak
   rdfs:domain zaak:Zaak ;
   rdfs:label "Archiefnominatie Zaak"@nl ;
 .
+zaak:besluitIdentificatie
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property besluitidentificatie wordt gebruikt om aan te geven welke besluitidentificatie is gekoppeld aan een Besluit."@nl ;
+  rdfs:domain zaak:Besluit ;
+  rdfs:label "Besluit identificatie"@nl ;
+.
+zaak:besluitToelichting
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property besluittoelichting wordt gebruikt om aan te geven welke besluittoelichting is gekoppeld aan een Besluit."@nl ;
+  rdfs:domain zaak:Besluit ;
+  rdfs:label "Besluit toelichting"@nl ;
+.
 zaak:besluitdatum
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property besluitdatum wordt gebruikt om aan te geven welke besluitdatum is gekoppeld aan een Besluit."@nl ;
   rdfs:domain zaak:Besluit ;
   rdfs:label "Besluitdatum"@nl ;
-.
-zaak:besluitidentificatie
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property besluitidentificatie wordt gebruikt om aan te geven welke besluitidentificatie is gekoppeld aan een Besluit."@nl ;
-  rdfs:domain zaak:Besluit ;
-  rdfs:label "Besluitidentificatie"@nl ;
-.
-zaak:besluittoelichting
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property besluittoelichting wordt gebruikt om aan te geven welke besluittoelichting is gekoppeld aan een Besluit."@nl ;
-  rdfs:domain zaak:Besluit ;
-  rdfs:label "Besluittoelichting"@nl ;
 .
 zaak:bestandsnaam
   rdf:type owl:DatatypeProperty ;
@@ -643,12 +636,6 @@ zaak:deelzakenindicatie
   rdfs:domain zaak:Zaak ;
   rdfs:label "Deelzakenindicatie"@nl ;
 .
-zaak:documentVerzenddatum
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentVerzenddatum wordt gebruikt om aan te geven welke document verzenddatum is gekoppeld aan een Document."@nl ;
-  rdfs:domain zaak:Document ;
-  rdfs:label "Document verzenddatum"@nl ;
-.
 zaak:documentauteur
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property documentauteur wordt gebruikt om aan te geven welke documentauteur is gekoppeld aan een Document."@nl ;
@@ -721,6 +708,12 @@ zaak:documentversie
   rdfs:domain zaak:EnkelvoudigDocument ;
   rdfs:label "Documentversie"@nl ;
 .
+zaak:documentverzenddatum
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property documentVerzenddatum wordt gebruikt om aan te geven welke document verzenddatum is gekoppeld aan een Document."@nl ;
+  rdfs:domain zaak:Document ;
+  rdfs:label "Documentverzenddatum"@nl ;
+.
 zaak:duurVerlenging
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property duurVerlenging wordt gebruikt om aan te geven welke duur verlenging is gekoppeld aan een Zaak."@nl ;
@@ -745,13 +738,13 @@ zaak:einddatumGepland
   rdfs:domain zaak:Zaak ;
   rdfs:label "Einddatum gepland"@nl ;
 .
-zaak:emailAdres
+zaak:emailadres
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property emailAdres wordt gebruikt om aan te geven welke e-mail adres is gekoppeld aan een Medewerker."@nl ;
   rdfs:comment "De property emailAdres wordt gebruikt om aan te geven welke e-mail adres is gekoppeld aan een OrganisatorischeEenheid."@nl ;
   rdfs:domain zaak:Medewerker ;
   rdfs:domain zaak:OrganisatorischeEenheid ;
-  rdfs:label "E-mail adres"@nl ;
+  rdfs:label "Emailadres"@nl ;
 .
 zaak:faxnummer
   rdf:type owl:DatatypeProperty ;

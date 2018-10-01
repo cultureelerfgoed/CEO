@@ -484,6 +484,12 @@ ztc:datumBeginGeldigheidBesluittype
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Datum begin geldigheid besluittype"@nl ;
 .
+ztc:datumBeginGeldigheidDocumenttype
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property datumBeginGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum begin geldigheid documenttype is gekoppeld aan een Documenttype."@nl ;
+  rdfs:domain ztc:Documenttype ;
+  rdfs:label "Datum begin geldigheid documenttype"@nl ;
+.
 ztc:datumBeginGeldigheidStatustype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumBeginGeldigheidStatustype wordt gebruikt om aan te geven welke datum begin geldigheid statustype is gekoppeld aan een Statustype."@nl ;
@@ -495,12 +501,6 @@ ztc:datumBeginGeldigheidZaaktype
   rdfs:comment "De property datumBeginGeldigheidZaaktype wordt gebruikt om aan te geven welke datum begin geldigheid zaaktype is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Datum begin geldigheid zaaktype"@nl ;
-.
-ztc:datumBeginGeldigheiddocumenttype
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property datumBeginGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum begin geldigheid documenttype is gekoppeld aan een Documenttype."@nl ;
-  rdfs:domain ztc:Documenttype ;
-  rdfs:label "Datum begin geldigheid documenttype"@nl ;
 .
 ztc:datumEindeGeldigheidBesluittype
   rdf:type owl:DatatypeProperty ;
