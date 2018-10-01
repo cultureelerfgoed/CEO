@@ -1,5 +1,4 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/ztc
-# imports: https://linkeddata.cultureelerfgoed.nl/def/ztce
 # prefix: ztc
 
 @prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
@@ -63,11 +62,355 @@
 @prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
 @prefix ztce: <https://linkeddata.cultureelerfgoed.nl/def/ztce#> .
 
-
+rdf:type
+  rdfs:label "Type" ;
+.
+rdf:first
+  rdfs:label "First" ;
+.
+rdf:langString
+  rdfs:label "LangString" ;
+.
+()
+  rdfs:label "Nil" ;
+.
+rdf:object
+  rdfs:label "Object" ;
+.
+rdf:predicate
+  rdfs:label "Predicate" ;
+.
+rdf:rest
+  rdfs:label "Rest" ;
+.
+rdf:subject
+  rdfs:label "Subject" ;
+.
+rdf:value
+  rdfs:label "Value" ;
+.
+rdfs:comment
+  rdfs:label "Comment" ;
+.
+rdfs:domain
+  rdfs:label "Domain" ;
+.
+rdfs:isDefinedBy
+  rdfs:label "IsDefInedBy" ;
+.
+rdfs:label
+  rdfs:label "LabeL" ;
+.
+rdfs:member
+  rdfs:label "MeMber" ;
+.
+rdfs:range
+  rdfs:label "Range" ;
+.
+rdfs:seeAlso
+  rdfs:label "SeeAlSo" ;
+.
+rdfs:subClassOf
+  rdfs:label "SubClaSSOf" ;
+.
+rdfs:subPropertyOf
+  rdfs:label "SubPropertyOf" ;
+.
+xsd:anySimpleType
+  rdfs:label "AnySimpleType" ;
+.
+xsd:anyURI
+  rdfs:label "AnyURI" ;
+.
+xsd:base64Binary
+  rdfs:label "Base64Binary" ;
+.
+xsd:boolean
+  rdfs:label "Boolean" ;
+.
+xsd:byte
+  rdfs:label "Byte" ;
+.
+xsd:date
+  rdfs:label "Date" ;
+.
+xsd:dateTime
+  rdfs:label "DateTime" ;
+.
+xsd:dateTimeStamp
+  rdfs:label "DateTimeStamp" ;
+.
+xsd:decimal
+  rdfs:label "Decimal" ;
+.
+xsd:double
+  rdfs:label "Double" ;
+.
+xsd:duration
+  rdfs:label "Duration" ;
+.
+xsd:float
+  rdfs:label "Float" ;
+.
+xsd:fractionDigits
+  rdfs:label "Fraction digits" ;
+.
+xsd:gDay
+  rdfs:label "GDay" ;
+.
+xsd:gMonth
+  rdfs:label "GMonth" ;
+.
+xsd:gMonthDay
+  rdfs:label "GMonthDay" ;
+.
+xsd:gYear
+  rdfs:label "GYear" ;
+.
+xsd:gYearMonth
+  rdfs:label "GYearMonth" ;
+.
+xsd:hexBinary
+  rdfs:label "HexBinary" ;
+.
+xsd:int
+  rdfs:label "Int" ;
+.
+xsd:integer
+  rdfs:label "Integer" ;
+.
+xsd:language
+  rdfs:label "Language" ;
+.
+xsd:length
+  rdfs:label "Length" ;
+.
+xsd:long
+  rdfs:label "Long" ;
+.
+xsd:maxExclusive
+  rdfs:label "Max exclusive" ;
+.
+xsd:maxInclusive
+  rdfs:label "Max inclusive" ;
+.
+xsd:maxLength
+  rdfs:label "Max length" ;
+.
+xsd:minExclusive
+  rdfs:label "Min exclusive" ;
+.
+xsd:minInclusive
+  rdfs:label "Min inclusive" ;
+.
+xsd:minLength
+  rdfs:label "Min length" ;
+.
+xsd:negativeInteger
+  rdfs:label "NegativeINteger" ;
+.
+xsd:nonNegativeInteger
+  rdfs:label "NoNNegativeINteger" ;
+.
+xsd:nonPositiveInteger
+  rdfs:label "NoNPositiveINteger" ;
+.
+xsd:normalizedString
+  rdfs:label "NormalizedStriNg" ;
+.
+xsd:pattern
+  rdfs:label "Pattern" ;
+.
+xsd:positiveInteger
+  rdfs:label "PositiveInteger" ;
+.
+xsd:short
+  rdfs:label "Short" ;
+.
+xsd:string
+  rdfs:label "String" ;
+.
+xsd:time
+  rdfs:label "Time" ;
+.
+xsd:token
+  rdfs:label "Token" ;
+.
+xsd:totalDigits
+  rdfs:label "ToTal digiTs" ;
+.
+xsd:unsignedByte
+  rdfs:label "UnsignedByte" ;
+.
+xsd:unsignedInt
+  rdfs:label "UnsignedInt" ;
+.
+xsd:unsignedLong
+  rdfs:label "UnsignedLong" ;
+.
+xsd:unsignedShort
+  rdfs:label "UnsignedShort" ;
+.
+owl:allValuesFrom
+  rdfs:label "AllVAluesFrom" ;
+.
+owl:annotatedProperty
+  rdfs:label "AnnotAtedProperty" ;
+.
+owl:annotatedSource
+  rdfs:label "AnnotAtedSource" ;
+.
+owl:annotatedTarget
+  rdfs:label "AnnotAtedTArget" ;
+.
+owl:assertionProperty
+  rdfs:label "AssertionProperty" ;
+.
+owl:backwardCompatibleWith
+  rdfs:label "BackwardCompatiBleWith" ;
+.
+owl:bottomDataProperty
+  rdfs:label "BottomDataProperty" ;
+.
+owl:bottomObjectProperty
+  rdfs:label "BottomOBjectProperty" ;
+.
+owl:cardinality
+  rdfs:label "Cardinality" ;
+.
+owl:complementOf
+  rdfs:label "ComplementOf" ;
+.
+owl:datatypeComplementOf
+  rdfs:label "DatatypeComplementOf" ;
+.
+owl:deprecated
+  rdfs:label "DeprecateD" ;
+.
+owl:differentFrom
+  rdfs:label "DifferentFrom" ;
+.
+owl:disjointUnionOf
+  rdfs:label "DisjointUnionOf" ;
+.
+owl:disjointWith
+  rdfs:label "DisjointWith" ;
+.
+owl:distinctMembers
+  rdfs:label "DistinctMembers" ;
+.
+owl:equivalentClass
+  rdfs:label "EquivalEntClass" ;
+.
+owl:equivalentProperty
+  rdfs:label "EquivalEntPropErty" ;
+.
+owl:hasKey
+  rdfs:label "HasKey" ;
+.
+owl:hasSelf
+  rdfs:label "HasSelf" ;
+.
+owl:hasValue
+  rdfs:label "HasValue" ;
+.
+owl:imports
+  rdfs:label "Imports" ;
+.
+owl:incompatibleWith
+  rdfs:label "IncompatIbleWIth" ;
+.
+owl:intersectionOf
+  rdfs:label "IntersectIonOf" ;
+.
+owl:inverseOf
+  rdfs:label "InverseOf" ;
+.
+owl:maxCardinality
+  rdfs:label "MaxCardinality" ;
+.
+owl:maxQualifiedCardinality
+  rdfs:label "MaxQualifiedCardinality" ;
+.
+owl:members
+  rdfs:label "MeMbers" ;
+.
+owl:minCardinality
+  rdfs:label "MinCardinality" ;
+.
+owl:minQualifiedCardinality
+  rdfs:label "MinQualifiedCardinality" ;
+.
+owl:onClass
+  rdfs:label "OnClass" ;
+.
+owl:onDataRange
+  rdfs:label "OnDataRange" ;
+.
+owl:onDatatype
+  rdfs:label "OnDatatype" ;
+.
+owl:onProperties
+  rdfs:label "OnPrOperties" ;
+.
+owl:onProperty
+  rdfs:label "OnPrOperty" ;
+.
+owl:oneOf
+  rdfs:label "OneOf" ;
+.
+owl:priorVersion
+  rdfs:label "PriorVersion" ;
+.
+owl:propertyChainAxiom
+  rdfs:label "ProPertyChainAxiom" ;
+.
+owl:propertyDisjointWith
+  rdfs:label "ProPertyDisjointWith" ;
+.
+owl:qualifiedCardinality
+  rdfs:label "QualifiedCardinality" ;
+.
+owl:sameAs
+  rdfs:label "SameAS" ;
+.
+owl:someValuesFrom
+  rdfs:label "SomeValueSFrom" ;
+.
+owl:sourceIndividual
+  rdfs:label "SourceIndividual" ;
+.
+owl:targetIndividual
+  rdfs:label "TargeTIndividual" ;
+.
+owl:targetValue
+  rdfs:label "TargeTValue" ;
+.
+owl:topDataProperty
+  rdfs:label "TopDaTaProperTy" ;
+.
+owl:topObjectProperty
+  rdfs:label "TopObjecTProperTy" ;
+.
+owl:unionOf
+  rdfs:label "UnionOf" ;
+.
+owl:versionIRI
+  rdfs:label "VersionIRI" ;
+.
+owl:versionInfo
+  rdfs:label "VersionInfo" ;
+.
+owl:withRestrictions
+  rdfs:label "WithRestrictions" ;
+.
+skos:editorialNote
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "Editorial notE "@nl ;
+.
 <https://linkeddata.cultureelerfgoed.nl/def/ztc>
   rdf:type owl:Ontology ;
   rdfs:label "Zaak Type Catalogus"@nl ;
-  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ztce> ;
 .
 ztc:Besluittype
   rdf:type owl:Class ;
@@ -141,6 +484,12 @@ ztc:datumBeginGeldigheidBesluittype
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Datum begin geldigheid besluittype"@nl ;
 .
+ztc:datumBeginGeldigheidDocumenttype
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property datumBeginGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum begin geldigheid documenttype is gekoppeld aan een Documenttype."@nl ;
+  rdfs:domain ztc:Documenttype ;
+  rdfs:label "Datum begin geldigheid documenttype"@nl ;
+.
 ztc:datumBeginGeldigheidStatustype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property datumBeginGeldigheidStatustype wordt gebruikt om aan te geven welke datum begin geldigheid statustype is gekoppeld aan een Statustype."@nl ;
@@ -152,12 +501,6 @@ ztc:datumBeginGeldigheidZaaktype
   rdfs:comment "De property datumBeginGeldigheidZaaktype wordt gebruikt om aan te geven welke datum begin geldigheid zaaktype is gekoppeld aan een Zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Datum begin geldigheid zaaktype"@nl ;
-.
-ztc:datumBeginGeldigheiddocumenttype
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property datumBeginGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum begin geldigheid documenttype is gekoppeld aan een Documenttype."@nl ;
-  rdfs:domain ztc:Documenttype ;
-  rdfs:label "Datum begin geldigheid documenttype"@nl ;
 .
 ztc:datumEindeGeldigheidBesluittype
   rdf:type owl:DatatypeProperty ;
@@ -214,7 +557,7 @@ ztc:doorlooptijdStatus
   rdfs:label "Doorlooptijd status"@nl ;
 .
 ztc:eigenschapnaam
-  rdf:type rdf:Property ;
+  rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property eigenschapnaam wordt gebruikt om aan te geven welke eigenschapnaam is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Eigenschapnaam"@nl ;
