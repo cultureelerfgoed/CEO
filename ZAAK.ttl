@@ -1,5 +1,4 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/zaak
-# imports: https://linkeddata.cultureelerfgoed.nl/def/ztc
 # prefix: zaak
 
 @prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
@@ -64,373 +63,18 @@
 @prefix zaak: <https://linkeddata.cultureelerfgoed.nl/def/zaak#> .
 @prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
 
-rdf:type
-  rdfs:label "Type" ;
-.
 <http://linkeddata.overheid.nl/terms/Wet>
   rdf:type owl:Class ;
   rdfs:label "Wet "@nl ;
   skos:editorialNote "Deze is toegevoegd aan origineel om een instantie te hebben van een regime (=type wet). Er zijn bestaande URIs van deze regimes " ;
-.
-<http://linkeddata.overheid.nl/terms/bwb/id/BWBR0004471/1630144/2016-04-14/2016-04-14>
-  rdf:type <http://linkeddata.overheid.nl/terms/Wet> ;
-  rdfs:label "Monumentenwet1988"@nl ;
-.
-<http://linkeddata.overheid.nl/terms/bwb/id/BWBR0037521/13357674/2017-09-01/2017-09-01>
-  rdf:type <http://linkeddata.overheid.nl/terms/Wet> ;
-  rdfs:label "Erfgoedwet2016"@nl ;
-.
-rdf:first
-  rdfs:label "First" ;
-.
-rdf:langString
-  rdfs:label "LangString" ;
-.
-()
-  rdfs:label "Nil" ;
-.
-rdf:object
-  rdfs:label "Object" ;
-.
-rdf:predicate
-  rdfs:label "Predicate" ;
-.
-rdf:rest
-  rdfs:label "Rest" ;
-.
-rdf:subject
-  rdfs:label "Subject" ;
-.
-rdf:value
-  rdfs:label "Value" ;
-.
-rdfs:comment
-  rdfs:label "Comment" ;
-.
-rdfs:domain
-  rdfs:label "Domain" ;
-.
-rdfs:isDefinedBy
-  rdfs:label "IsDefInedBy" ;
-.
-rdfs:label
-  rdfs:label "LabeL" ;
-.
-rdfs:member
-  rdfs:label "MeMber" ;
-.
-rdfs:range
-  rdfs:label "Range" ;
-.
-rdfs:seeAlso
-  rdfs:label "SeeAlSo" ;
-.
-rdfs:subClassOf
-  rdfs:label "SubClaSSOf" ;
-.
-rdfs:subPropertyOf
-  rdfs:label "SubPropertyOf" ;
-.
-xsd:anySimpleType
-  rdfs:label "AnySimpleType" ;
-.
-xsd:anyURI
-  rdfs:label "AnyURI" ;
-.
-xsd:base64Binary
-  rdfs:label "Base64Binary" ;
-.
-xsd:boolean
-  rdfs:label "Boolean" ;
-.
-xsd:byte
-  rdfs:label "Byte" ;
-.
-xsd:date
-  rdfs:label "Date" ;
-.
-xsd:dateTime
-  rdfs:label "DateTime" ;
-.
-xsd:dateTimeStamp
-  rdfs:label "DateTimeStamp" ;
-.
-xsd:decimal
-  rdfs:label "Decimal" ;
-.
-xsd:double
-  rdfs:label "Double" ;
-.
-xsd:duration
-  rdfs:label "Duration" ;
-.
-xsd:float
-  rdfs:label "Float" ;
-.
-xsd:fractionDigits
-  rdfs:label "Fraction digits" ;
-.
-xsd:gDay
-  rdfs:label "GDay" ;
-.
-xsd:gMonth
-  rdfs:label "GMonth" ;
-.
-xsd:gMonthDay
-  rdfs:label "GMonthDay" ;
-.
-xsd:gYear
-  rdfs:label "GYear" ;
-.
-xsd:gYearMonth
-  rdfs:label "GYearMonth" ;
-.
-xsd:hexBinary
-  rdfs:label "HexBinary" ;
-.
-xsd:int
-  rdfs:label "Int" ;
-.
-xsd:integer
-  rdfs:label "Integer" ;
-.
-xsd:language
-  rdfs:label "Language" ;
-.
-xsd:length
-  rdfs:label "Length" ;
-.
-xsd:long
-  rdfs:label "Long" ;
-.
-xsd:maxExclusive
-  rdfs:label "Max exclusive" ;
-.
-xsd:maxInclusive
-  rdfs:label "Max inclusive" ;
-.
-xsd:maxLength
-  rdfs:label "Max length" ;
-.
-xsd:minExclusive
-  rdfs:label "Min exclusive" ;
-.
-xsd:minInclusive
-  rdfs:label "Min inclusive" ;
-.
-xsd:minLength
-  rdfs:label "Min length" ;
-.
-xsd:negativeInteger
-  rdfs:label "NegativeINteger" ;
-.
-xsd:nonNegativeInteger
-  rdfs:label "NoNNegativeINteger" ;
-.
-xsd:nonPositiveInteger
-  rdfs:label "NoNPositiveINteger" ;
-.
-xsd:normalizedString
-  rdfs:label "NormalizedStriNg" ;
-.
-xsd:pattern
-  rdfs:label "Pattern" ;
-.
-xsd:positiveInteger
-  rdfs:label "PositiveInteger" ;
-.
-xsd:short
-  rdfs:label "Short" ;
-.
-xsd:string
-  rdfs:label "String" ;
-.
-xsd:time
-  rdfs:label "Time" ;
-.
-xsd:token
-  rdfs:label "Token" ;
-.
-xsd:totalDigits
-  rdfs:label "ToTal digiTs" ;
-.
-xsd:unsignedByte
-  rdfs:label "UnsignedByte" ;
-.
-xsd:unsignedInt
-  rdfs:label "UnsignedInt" ;
-.
-xsd:unsignedLong
-  rdfs:label "UnsignedLong" ;
-.
-xsd:unsignedShort
-  rdfs:label "UnsignedShort" ;
-.
-owl:allValuesFrom
-  rdfs:label "AllVAluesFrom" ;
-.
-owl:annotatedProperty
-  rdfs:label "AnnotAtedProperty" ;
-.
-owl:annotatedSource
-  rdfs:label "AnnotAtedSource" ;
-.
-owl:annotatedTarget
-  rdfs:label "AnnotAtedTArget" ;
-.
-owl:assertionProperty
-  rdfs:label "AssertionProperty" ;
-.
-owl:backwardCompatibleWith
-  rdfs:label "BackwardCompatiBleWith" ;
-.
-owl:bottomDataProperty
-  rdfs:label "BottomDataProperty" ;
-.
-owl:bottomObjectProperty
-  rdfs:label "BottomOBjectProperty" ;
-.
-owl:cardinality
-  rdfs:label "Cardinality" ;
-.
-owl:complementOf
-  rdfs:label "ComplementOf" ;
-.
-owl:datatypeComplementOf
-  rdfs:label "DatatypeComplementOf" ;
-.
-owl:deprecated
-  rdfs:label "DeprecateD" ;
-.
-owl:differentFrom
-  rdfs:label "DifferentFrom" ;
-.
-owl:disjointUnionOf
-  rdfs:label "DisjointUnionOf" ;
-.
-owl:disjointWith
-  rdfs:label "DisjointWith" ;
-.
-owl:distinctMembers
-  rdfs:label "DistinctMembers" ;
-.
-owl:equivalentClass
-  rdfs:label "EquivalEntClass" ;
-.
-owl:equivalentProperty
-  rdfs:label "EquivalEntPropErty" ;
-.
-owl:hasKey
-  rdfs:label "HasKey" ;
-.
-owl:hasSelf
-  rdfs:label "HasSelf" ;
-.
-owl:hasValue
-  rdfs:label "HasValue" ;
-.
-owl:imports
-  rdfs:label "Imports" ;
-.
-owl:incompatibleWith
-  rdfs:label "IncompatIbleWIth" ;
-.
-owl:intersectionOf
-  rdfs:label "IntersectIonOf" ;
-.
-owl:inverseOf
-  rdfs:label "InverseOf" ;
-.
-owl:maxCardinality
-  rdfs:label "MaxCardinality" ;
-.
-owl:maxQualifiedCardinality
-  rdfs:label "MaxQualifiedCardinality" ;
-.
-owl:members
-  rdfs:label "MeMbers" ;
-.
-owl:minCardinality
-  rdfs:label "MinCardinality" ;
-.
-owl:minQualifiedCardinality
-  rdfs:label "MinQualifiedCardinality" ;
-.
-owl:onClass
-  rdfs:label "OnClass" ;
-.
-owl:onDataRange
-  rdfs:label "OnDataRange" ;
-.
-owl:onDatatype
-  rdfs:label "OnDatatype" ;
-.
-owl:onProperties
-  rdfs:label "OnPrOperties" ;
-.
-owl:onProperty
-  rdfs:label "OnPrOperty" ;
-.
-owl:oneOf
-  rdfs:label "OneOf" ;
-.
-owl:priorVersion
-  rdfs:label "PriorVersion" ;
-.
-owl:propertyChainAxiom
-  rdfs:label "ProPertyChainAxiom" ;
-.
-owl:propertyDisjointWith
-  rdfs:label "ProPertyDisjointWith" ;
-.
-owl:qualifiedCardinality
-  rdfs:label "QualifiedCardinality" ;
-.
-owl:sameAs
-  rdfs:label "SameAS" ;
-.
-owl:someValuesFrom
-  rdfs:label "SomeValueSFrom" ;
-.
-owl:sourceIndividual
-  rdfs:label "SourceIndividual" ;
-.
-owl:targetIndividual
-  rdfs:label "TargeTIndividual" ;
-.
-owl:targetValue
-  rdfs:label "TargeTValue" ;
-.
-owl:topDataProperty
-  rdfs:label "TopDaTaProperTy" ;
-.
-owl:topObjectProperty
-  rdfs:label "TopObjecTProperTy" ;
-.
-owl:unionOf
-  rdfs:label "UnionOf" ;
-.
-owl:versionIRI
-  rdfs:label "VersionIRI" ;
-.
-owl:versionInfo
-  rdfs:label "VersionInfo" ;
-.
-owl:withRestrictions
-  rdfs:label "WithRestrictions" ;
-.
-skos:editorialNote
-  rdf:type owl:AnnotationProperty ;
-  rdfs:label "Editorial note"@nl ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zaak>
   rdf:type owl:Ontology ;
   dcterms:created "2018-07-01" ;
   dcterms:creator ceo:Frans_van_der_Zande ;
   dcterms:creator ceo:Patrick_Mout ;
-  dcterms:hasVersion "0.1" ;
+  dcterms:hasVersion "0.2" ;
   rdfs:label "Zaak Ontologie"@nl ;
-  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ztc> ;
 .
 zaak:Besluit
   rdf:type owl:Class ;
@@ -785,15 +429,6 @@ zaak:heeftEigenschap
   rdfs:label "Heeft eigenschap"@nl ;
   rdfs:range zaak:Eigenschap ;
   skos:editorialNote "dit is een wijziging in het origineel: omdat er vele \"heeft\" relaties zijn is het beter om deze nieuwe namen te geven: heeftEigenschap enz" ;
-.
-zaak:heeftRegime
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property heeftRegime legt de relatie tussen Zaak en ."@nl ;
-  rdfs:domain zaak:Zaak ;
-  rdfs:label "Heeft regime"@nl ;
-  rdfs:range <http://linkeddata.overheid.nl/terms/Wet> ;
-  rdfs:subPropertyOf zaak:heeftEigenschap ;
-  skos:editorialNote "dit is een wijziging in het origineel: dit is een soort eigenschaptype (zie spreadsheet). Misschien kunnen dit subproperties worden van heeftEigenschap: heeftRegime enz" ;
 .
 zaak:heeftStatus
   rdf:type owl:ObjectProperty ;
@@ -1184,10 +819,12 @@ zaak:zetAlsBetrokkene
 .
 ceo:CultuurhistorischObject
   rdf:type owl:Class ;
-  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf zaak:Zaakobject ;
   skos:editorialNote "Deze class is in de praktijk hetzelfde als een CHO, daarom is deze class vervangen door de class CHO." ;
 .
 ceo:heeftZaakobject
   rdf:type owl:ObjectProperty ;
+  rdfs:domain zaak:Zaak ;
   rdfs:label "Heeft zaakobject"@nl ;
+  rdfs:range ceo:CultuurhistorischObject ;
 .
