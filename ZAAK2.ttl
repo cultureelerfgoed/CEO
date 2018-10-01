@@ -1,4 +1,4 @@
-# baseURI: https://linkeddata.cultureelerfgoed.nl/def/zaak
+# baseURI: https://linkeddata.cultureelerfgoed.nl/def/zo
 # prefix: zo
 
 @prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
@@ -60,7 +60,7 @@
 @prefix ui: <http://uispin.org/ui#> .
 @prefix uix: <http://topbraidlive.org/uix#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zaak#> .
+@prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zo#> .
 @prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
 
 <http://linkeddata.overheid.nl/terms/Wet>
@@ -68,7 +68,7 @@
   rdfs:label "Wet "@nl ;
   skos:editorialNote "Deze is toegevoegd aan origineel om een instantie te hebben van een regime (=type wet). Er zijn bestaande URIs van deze regimes " ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zaak>
+<https://linkeddata.cultureelerfgoed.nl/def/zo>
   rdf:type owl:Ontology ;
   dcterms:created "2018-07-01" ;
   dcterms:creator ceo:Frans_van_der_Zande ;
@@ -439,14 +439,8 @@ zo:heeftStatus
 .
 zo:heeftZaakobject
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property heeftZaakobject legt de relatie tussen Zaak of Cultuurhistorisch Object en Zaakobject."@nl ;
-  rdfs:domain [
-      rdf:type owl:Class ;
-      owl:unionOf (
-          zo:Zaak
-          <https://linkeddata.cultureelerfgoed.nl/def/ceo#CultuurhistorischObject>
-        ) ;
-    ] ;
+  rdfs:comment "De property heeftZaakobject legt de relatie tussen Zaak en Zaakobject."@nl ;
+  rdfs:domain zo:Zaak ;
   rdfs:label "heeft zaakobject "@nl ;
   rdfs:range zo:Zaakobject ;
 .
@@ -461,7 +455,13 @@ zo:identificatie
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property identificatie wordt gebruikt om aan te geven welke identificatie is gekoppeld aan een Betrokkene."@nl ;
   rdfs:comment "De property identificatie wordt gebruikt om aan te geven welke identificatie is gekoppeld aan een CultuurhistorischObject."@nl ;
-  rdfs:domain zo:Betrokkene ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          zo:Betrokkene
+          <https://linkeddata.cultureelerfgoed.nl/def/ceo#CultuurhistorischObject>
+        ) ;
+    ] ;
   rdfs:label "Identificatie"@nl ;
 .
 zo:indicatieLaatstGezetteStatus
@@ -622,6 +622,7 @@ zo:naam
   rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een Betrokkene."@nl ;
   rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een CultuurhistorischObject."@nl ;
   rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een OrganisatorischeEenheid."@nl ;
+  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ceo#CultuurhistorischObject> ;
   rdfs:domain zo:Betrokkene ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:label "Naam"@nl ;
@@ -641,6 +642,7 @@ zo:objectId
 zo:objecttype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property objecttype wordt gebruikt om aan te geven welke objecttype is gekoppeld aan een CultuurhistorischObject."@nl ;
+  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ceo#CultuurhistorischObject> ;
   rdfs:label "Objecttype"@nl ;
 .
 zo:omschrijving
@@ -832,4 +834,3 @@ ceo:heeftZaakobject
   rdfs:domain zo:Zaak ;
   rdfs:label "Heeft zaakobject"@nl ;
 .
-
