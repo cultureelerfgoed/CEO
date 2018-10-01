@@ -466,7 +466,7 @@ ceo:bevatObject
   dcterms:modified "25-9-18" ;
   rdfs:comment "De property bevatObject legt de relatie tussen de ligging van een cultuurhistorisch object met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Bevat object"@nl ;
+  rdfs:label "Bevat object {@nl} " ;
   rdfs:range ceo:CultuurhistorischObject ;
   owl:inverseOf ceo:ligtInObject ;
 .
