@@ -1177,7 +1177,7 @@ ceo:heeftSamenhang
   rdfs:comment "De property heeftSamenhang legt de samenhangende relatie tussen twee cultuurhistorische objecten vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft samenhang"@nl ;
-  rdfs:range ceo:CultuurhistorischObject ;
+  rdfs:range ceo:Samenhang ;
 .
 ceo:heeftSchoonheid
   rdf:type owl:ObjectProperty ;
@@ -1326,7 +1326,7 @@ ceo:heeftZaak
   rdfs:comment "De property heeftZaak legt de relatie tussen de kennisregistratie en de zaak vast."@nl ;
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Heeft zaak"@nl ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/zaak#Zaak> ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
 .
 ceo:heeftZaakobject
   rdf:type owl:ObjectProperty ;
@@ -1335,7 +1335,7 @@ ceo:heeftZaakobject
   rdfs:comment "De property heeftZaakobject legt de relatie tussen Cultuurhistorisch Object en het Zaakobject."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft zaakobject"@nl ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/zaak#Zaakobject> ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaakobject> ;
 .
 ceo:heeftZekerheidsaanduiding
   rdf:type owl:ObjectProperty ;
@@ -1389,16 +1389,6 @@ ceo:hoofdfunctie
   rdfs:label "Hoofdfunctie"@nl ;
   rdfs:range xsd:boolean ;
 .
-ceo:hoofdobjectBevat
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "4-7-18 10:41" ;
-  dcterms:modified "25-9-18" ;
-  rdfs:comment "De property isHoofdobjectVanComplex legt de relatie tussen het hoofdobject en het complex met betrekking tot een rijksmonument vast."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Is hoofdobject van complex"@nl ;
-  rdfs:range ceo:Complex ;
-  owl:inverseOf ceo:heeftHoofdobject ;
-.
 ceo:huidigeNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
@@ -1435,7 +1425,7 @@ ceo:internationaalKenteken
 ceo:isHoofdobjectVanComplex
   rdf:type owl:ObjectProperty ;
   dcterms:created "25-9-18 13:56" ;
-  rdfs:comment "De property heeftHoofdobject legt de relatie tussen een rijksmonument en het hoofdobject met betrekking tot een complex vast."@nl ;
+  rdfs:comment "De property isHoofdobjectVanComplex legt de relatie tussen een rijksmonument en het hoofdobject met betrekking tot een complex vast."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Is hoofdobject van complex"@nl ;
   rdfs:range ceo:Complex ;
