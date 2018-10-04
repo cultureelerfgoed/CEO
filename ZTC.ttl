@@ -410,6 +410,7 @@ skos:editorialNote
 .
 <https://linkeddata.cultureelerfgoed.nl/def/ztc>
   rdf:type owl:Ontology ;
+  rdfs:comment "Deze ontologie werkt samen met de zaak ontologie en de zaak type eigenschappen ontologie."@nl ;
   rdfs:label "Zaak Type Catalogus"@nl ;
 .
 ztc:Besluittype
