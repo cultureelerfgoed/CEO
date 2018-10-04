@@ -383,6 +383,22 @@ ceo:actor
   rdfs:label "Actor"@nl ;
   rdfs:range xsd:string ;
 .
+ceo:actorEnRolnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 9:45" ;
+  rdfs:comment "De property actorEnRolnummer wordt gebruikt om aan te geven het unieke nummer waaronder de actor en rol instance bekend is."@nl ;
+  rdfs:domain ceo:ActorEnRol ;
+  rdfs:label "Actor en rolnummer"@nl ;
+  rdfs:range xsd:integer ;
+.
+ceo:adresgegevensnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 9:51" ;
+  rdfs:comment "De property adresgegevensnummer wordt gebruikt om aan te geven het unieke nummer waaronder de adresgegevens instance bekend is."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Adresgegevensnummer"@nl ;
+  rdfs:range xsd:integer ;
+.
 ceo:appartementAanduiding
   rdf:type owl:DatatypeProperty ;
   dcterms:created "21-3-18 11:00" ;
@@ -444,6 +460,14 @@ ceo:asWKT-RD
   rdfs:range xsd:string ;
   rdfs:subPropertyOf pdok:asWKT-RD ;
 .
+ceo:basisregistratieRelatienummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 9:54" ;
+  rdfs:comment "De property basisregistratieRelatienummer wordt gebruikt om aan te geven het unieke nummer waaronder de basisregistratie relatie instance bekend is."@nl ;
+  rdfs:domain ceo:BasisregistratieRelatie ;
+  rdfs:label "Basisregistratie relatienummer"@nl ;
+  rdfs:range xsd:integer ;
+.
 ceo:beginGeldigheid
   rdf:type owl:DatatypeProperty ;
   dcterms:created "4-7-18 12:20" ;
@@ -478,6 +502,14 @@ ceo:bronIdentificatie
   rdfs:domain ceo:Bronverwijzing ;
   rdfs:label "bronIdentificatie"@nl ;
   rdfs:range xsd:string ;
+.
+ceo:bronverwijzingsnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 9:55" ;
+  rdfs:comment "e property bronverwijzingnummer wordt gebruikt om aan te geven het unieke nummer waaronder de bronverwijzing instance bekend is."@nl ;
+  rdfs:domain ceo:Bronverwijzing ;
+  rdfs:label "Bronverwijzingnummer"@nl ;
+  rdfs:range xsd:integer ;
 .
 ceo:buurtOfWijkCode
   rdf:type owl:DatatypeProperty ;
@@ -521,6 +553,14 @@ ceo:cultuurhistorischObjectnummer
   rdfs:comment "De property cultuurhistorischObjectnummer wordt gebruikt om aan te geven of een cultuurhistorischObjectnummer aan een Cultuurhistorisch object is gegeven."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Cultuurhistorisch objectnummer"@nl ;
+  rdfs:range xsd:integer ;
+.
+ceo:dateringnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 9:59" ;
+  rdfs:comment "e property dateringnummer wordt gebruikt om aan te geven het unieke nummer waaronder de datering instance bekend is."@nl ;
+  rdfs:domain ceo:Datering ;
+  rdfs:label "Dateringnummer"@nl ;
   rdfs:range xsd:integer ;
 .
 ceo:datumInschrijvingInMonumentenregister
@@ -587,6 +627,14 @@ ceo:geometrieIdentificatie
   dcterms:created "27-3-18 10:29" ;
   rdfs:comment "De property geometrieIdentificatie wordt gebruikt om aan te geven welke geometrische identificatie aan de geometrie is gekoppeld."@nl ;
   rdfs:label "Geometrie identificatie"@nl ;
+  rdfs:range xsd:integer ;
+.
+ceo:geometrienummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 10:01" ;
+  rdfs:comment "e property geometrienummer wordt gebruikt om aan te geven het unieke nummer waaronder de geometrie instance bekend is."@nl ;
+  rdfs:domain ceo:Geometrie ;
+  rdfs:label "Geometrienummer"@nl ;
   rdfs:range xsd:integer ;
 .
 ceo:heeftActor
@@ -1153,7 +1201,7 @@ ceo:heeftRepresentativiteit
   rdfs:range skos:Concept ;
 .
 ceo:heeftRijksmonument
-  rdf:type rdf:Property ;
+  rdf:type owl:ObjectProperty ;
   dcterms:created "25-9-18 13:33" ;
   rdfs:comment "De property heeftRijksmonument legt de relatie tussen het complex met betrekking tot een rijksmonument vast."@nl ;
   rdfs:domain ceo:Complex ;
@@ -1177,7 +1225,7 @@ ceo:heeftSamenhang
   rdfs:comment "De property heeftSamenhang legt de samenhangende relatie tussen twee cultuurhistorische objecten vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft samenhang"@nl ;
-  rdfs:range ceo:CultuurhistorischObject ;
+  rdfs:range ceo:Samenhang ;
 .
 ceo:heeftSchoonheid
   rdf:type owl:ObjectProperty ;
@@ -1326,7 +1374,7 @@ ceo:heeftZaak
   rdfs:comment "De property heeftZaak legt de relatie tussen de kennisregistratie en de zaak vast."@nl ;
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Heeft zaak"@nl ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/zaak#Zaak> ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
 .
 ceo:heeftZaakobject
   rdf:type owl:ObjectProperty ;
@@ -1335,7 +1383,7 @@ ceo:heeftZaakobject
   rdfs:comment "De property heeftZaakobject legt de relatie tussen Cultuurhistorisch Object en het Zaakobject."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft zaakobject"@nl ;
-  rdfs:range <https://data.cultureelerfgoed.nl/vocab/def/zaak#Zaakobject> ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaakobject> ;
 .
 ceo:heeftZekerheidsaanduiding
   rdf:type owl:ObjectProperty ;
@@ -1389,16 +1437,6 @@ ceo:hoofdfunctie
   rdfs:label "Hoofdfunctie"@nl ;
   rdfs:range xsd:boolean ;
 .
-ceo:hoofdobjectBevat
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "4-7-18 10:41" ;
-  dcterms:modified "25-9-18" ;
-  rdfs:comment "De property isHoofdobjectVanComplex legt de relatie tussen het hoofdobject en het complex met betrekking tot een rijksmonument vast."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Is hoofdobject van complex"@nl ;
-  rdfs:range ceo:Complex ;
-  owl:inverseOf ceo:heeftHoofdobject ;
-.
 ceo:huidigeNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
@@ -1435,7 +1473,7 @@ ceo:internationaalKenteken
 ceo:isHoofdobjectVanComplex
   rdf:type owl:ObjectProperty ;
   dcterms:created "25-9-18 13:56" ;
-  rdfs:comment "De property heeftHoofdobject legt de relatie tussen een rijksmonument en het hoofdobject met betrekking tot een complex vast."@nl ;
+  rdfs:comment "De property isHoofdobjectVanComplex legt de relatie tussen een rijksmonument en het hoofdobject met betrekking tot een complex vast."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Is hoofdobject van complex"@nl ;
   rdfs:range ceo:Complex ;
@@ -1475,6 +1513,14 @@ ceo:kadasterDeelEnNummer
   rdfs:label "Kadaster deel en nummer"@nl ;
   rdfs:range xsd:string ;
 .
+ceo:kennisregistratienummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 10:30" ;
+  rdfs:comment "De property kennisegistratienummer wordt gebruikt om aan te geven het unieke nummer waaronder de kennisregistratie instance bekend is."@nl ;
+  rdfs:domain ceo:Kennisregistratie ;
+  rdfs:label "Kennisegistratienummer"@nl ;
+  rdfs:range xsd:integer ;
+.
 ceo:ligtInObject
   rdf:type owl:ObjectProperty ;
   dcterms:created "4-7-18 10:44" ;
@@ -1484,6 +1530,14 @@ ceo:ligtInObject
   rdfs:label "Ligt in object"@nl ;
   rdfs:range ceo:CultuurhistorischObject ;
   owl:inverseOf ceo:bevatObject ;
+.
+ceo:locatieAanduidingnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 10:18" ;
+  rdfs:comment "De property locatieAanduidingnummer wordt gebruikt om aan te geven het unieke nummer waaronder de locatie aanduiding instance bekend is."@nl ;
+  rdfs:domain ceo:LocatieAanduiding ;
+  rdfs:label "Locatie aanduidingnummer"@nl ;
+  rdfs:range xsd:integer ;
 .
 ceo:locatienaam
   rdf:type owl:DatatypeProperty ;
@@ -1626,6 +1680,14 @@ ceo:samenhangToelichting
   rdfs:label "Samenhang toelichting"@nl ;
   rdfs:range xsd:string ;
 .
+ceo:samenhangnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 10:22" ;
+  rdfs:comment "De property samenhangnummer wordt gebruikt om aan te geven het unieke nummer waaronder de samenhang instance bekend is."@nl ;
+  rdfs:domain ceo:Samenhang ;
+  rdfs:label "Samenhangnummer"@nl ;
+  rdfs:range xsd:integer ;
+.
 ceo:startdatum
   rdf:type owl:DatatypeProperty ;
   dcterms:created "10-4-18 11:18" ;
@@ -1642,6 +1704,14 @@ ceo:taal
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Taal"@nl ;
   rdfs:range xsd:string ;
+.
+ceo:tijdvaknummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "3-10-18 10:23" ;
+  rdfs:comment "De property tijdvaknummer wordt gebruikt om aan te geven het unieke nummer waaronder de tijdvak instance bekend is."@nl ;
+  rdfs:domain ceo:Tijdvak ;
+  rdfs:label "Tijdvaknummer"@nl ;
+  rdfs:range xsd:integer ;
 .
 ceo:toelichting
   rdf:type owl:DatatypeProperty ;
