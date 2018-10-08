@@ -1,21 +1,19 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/ztc
 # prefix: ztc
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zo#> .
 @prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
 @prefix ztce: <https://linkeddata.cultureelerfgoed.nl/def/ztce#> .
-@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-
 
 <https://linkeddata.cultureelerfgoed.nl/def/ztc>
   rdf:type owl:Ontology ;
-  rdfs:label "Zaak Type Catalogus"@nl ;
   dcterms:created "2018-11-01" ;
   dcterms:creator ceo:Frans_van_der_Zande ;
   dcterms:creator ceo:Patrick_Mout ;
@@ -23,6 +21,7 @@
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:title "Zaak Type Catalogus"@nl ;
+  rdfs:label "Zaak Type Catalogus"@nl ;
 .
 ztc:Besluittype
   rdf:type owl:Class ;
@@ -214,7 +213,7 @@ ztc:heeftBetrekkingOp
 ztc:heeftBetrokkene
   rdf:type owl:ObjectProperty ;
   rdfs:comment "De property heeftBetrokkene legt de relatie tussen zaaktype en roltype."@nl ;
-  rdfs:domain ztc:Zztc:Zaaktypeaaktype ;
+  rdfs:domain ztc:Zaaktype ;
   rdfs:label "Heeft betrokkene"@nl ;
   rdfs:range ztc:Roltype ;
 .
@@ -334,10 +333,15 @@ ztc:toelichting
   rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een documenttype."@nl ;
   rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een eigenschaptype."@nl ;
   rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een zaaktype."@nl ;
-  rdfs:domain ztc:Besluittype ;
-  rdfs:domain ztc:Documenttype ;
-  rdfs:domain ztc:Eigenschaptype ;
-  rdfs:domain ztc:Zaaktype ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ztc:Besluittype
+          ztc:Documenttype
+          ztc:Eigenschaptype
+          ztc:Zaaktype
+        ) ;
+    ] ;
   rdfs:label "Toelichting"@nl ;
   rdfs:range xsd:string ;
 .
@@ -359,8 +363,13 @@ ztc:vertrouwelijkAanduiding
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property vertrouwelijkAanduiding wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een documenttype."@nl ;
   rdfs:comment "De property vertrouwelijkAanduiding wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een zaaktype."@nl ;
-  rdfs:domain ztc:Documenttype ;
-  rdfs:domain ztc:Zaaktype ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          ztc:Documenttype
+          ztc:Zaaktype
+        ) ;
+    ] ;
   rdfs:label "Vertrouwelijk aanduiding"@nl ;
   rdfs:range xsd:string ;
 .

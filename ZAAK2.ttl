@@ -1,17 +1,16 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/zo
 # prefix: zo
 
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zo#> .
 @prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
 @prefix ztce: <https://linkeddata.cultureelerfgoed.nl/def/ztce#> .
-@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://linkeddata.overheid.nl/terms/Wet>
   rdf:type owl:Class ;
@@ -20,7 +19,6 @@
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo>
   rdf:type owl:Ontology ;
-  rdfs:label "Zaak Ontologie"@nl ;
   dcterms:created "2018-11-01" ;
   dcterms:creator ceo:Frans_van_der_Zande ;
   dcterms:creator ceo:Patrick_Mout ;
@@ -28,6 +26,7 @@
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:title "Zaak Ontologie"@nl ;
+  rdfs:label "Zaak Ontologie"@nl ;
 .
 zo:Besluit
   rdf:type owl:Class ;
@@ -382,8 +381,13 @@ zo:emailAdres
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property emailAdres wordt gebruikt om aan te geven welke e-mail adres is gekoppeld aan een medewerker."@nl ;
   rdfs:comment "De property emailAdres wordt gebruikt om aan te geven welke e-mail adres is gekoppeld aan een organisatorische eenheid."@nl ;
-  rdfs:domain zo:Medewerker ;
-  rdfs:domain zo:OrganisatorischeEenheid ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          zo:Medewerker
+          zo:OrganisatorischeEenheid
+        ) ;
+    ] ;
   rdfs:label "E-mail adres"@nl ;
   rdfs:range xsd:string ;
 .
@@ -452,7 +456,7 @@ zo:identificatie
       rdf:type owl:Class ;
       owl:unionOf (
           zo:Betrokkene
-          <https://linkeddata.cultureelerfgoed.nl/def/ceo#CultuurhistorischObject>
+          ceo:CultuurhistorischObject
         ) ;
     ] ;
   rdfs:label "Identificatie"@nl ;
@@ -576,8 +580,13 @@ zo:isVerantwoordelijkeVoor
   rdf:type owl:ObjectProperty ;
   rdfs:comment "De property isVerantwoordelijkeVoor legt de relatie tussen medewerker en zaaktype."@nl ;
   rdfs:comment "De property isVerantwoordelijkeVoor legt de relatie tussen organisatorische eenheid en zaaktype."@nl ;
-  rdfs:domain zo:Medewerker ;
-  rdfs:domain zo:OrganisatorischeEenheid ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          zo:Medewerker
+          zo:OrganisatorischeEenheid
+        ) ;
+    ] ;
   rdfs:label "Is verantwoordelIjke voor"@nl ;
   rdfs:range ztc:Zaaktype ;
 .
@@ -620,9 +629,14 @@ zo:naam
   rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een betrokkene."@nl ;
   rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een cultuurhistorisch object."@nl ;
   rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een organisatorische eenheid."@nl ;
-  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ceo#CultuurhistorischObject> ;
-  rdfs:domain zo:Betrokkene ;
-  rdfs:domain zo:OrganisatorischeEenheid ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          zo:Betrokkene
+          ceo:CultuurhistorischObject
+          zo:OrganisatorischeEenheid
+        ) ;
+    ] ;
   rdfs:label "Naam"@nl ;
   rdfs:range xsd:string ;
 .
@@ -642,7 +656,7 @@ zo:objectId
 zo:objecttype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property objecttype wordt gebruikt om aan te geven welke objecttype is gekoppeld aan een cultuurhistorisch object."@nl ;
-  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ceo#CultuurhistorischObject> ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Objecttype"@nl ;
   rdfs:range xsd:string ;
 .
@@ -650,8 +664,13 @@ zo:omschrijving
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property omschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:comment "De property omschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een zaak."@nl ;
-  rdfs:domain zo:OrganisatorischeEenheid ;
-  rdfs:domain zo:Zaak ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          zo:OrganisatorischeEenheid
+          zo:Zaak
+        ) ;
+    ] ;
   rdfs:label "Omschrijving"@nl ;
   rdfs:range xsd:string ;
 .
@@ -700,8 +719,13 @@ zo:registratiedatum
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven welke registratiedatum is gekoppeld aan een zaak."@nl ;
   rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven welke registratiedatum is gekoppeld aan een zaakdocument."@nl ;
-  rdfs:domain zo:Zaak ;
-  rdfs:domain zo:Zaakdocument ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          zo:Zaak
+          zo:Zaakdocument
+        ) ;
+    ] ;
   rdfs:label "Registratiedatum"@nl ;
   rdfs:range xsd:date ;
 .
@@ -758,8 +782,13 @@ zo:telefoonnummer
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property telefoonnummer wordt gebruikt om aan te geven welke telefoonnummer is gekoppeld aan een medewerker."@nl ;
   rdfs:comment "De property telefoonnummer wordt gebruikt om aan te geven welke telefoonnummer is gekoppeld aan een organisatorische eenheid."@nl ;
-  rdfs:domain zo:Medewerker ;
-  rdfs:domain zo:OrganisatorischeEenheid ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          zo:Medewerker
+          zo:OrganisatorischeEenheid
+        ) ;
+    ] ;
   rdfs:label "Telefoonnummer"@nl ;
   rdfs:range xsd:string ;
 .
@@ -767,8 +796,13 @@ zo:toelichting
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een zaak."@nl ;
-  rdfs:domain zo:OrganisatorischeEenheid ;
-  rdfs:domain zo:Zaak ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          zo:OrganisatorischeEenheid
+          zo:Zaak
+        ) ;
+    ] ;
   rdfs:label "Toelichting"@nl ;
   rdfs:range xsd:string ;
 .
