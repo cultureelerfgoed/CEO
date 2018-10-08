@@ -1,67 +1,14 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/zo
 # prefix: zo
 
-@prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
-@prefix backspin: <http://topbraid.org/backspin#> .
-@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo#> .
-@prefix corpus: <http://topbraid.org/corpus#> .
-@prefix crosswalk: <http://topbraid.org/crosswalk#> .
-@prefix crosswalkprojects: <http://teamwork.topbraidlive.org/crosswalkprojects#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix edg: <http://edg.topbraid.solutions/model/> .
-@prefix evnconstraints: <http://topbraid.org/spin/evnconstraints#> .
-@prefix evnui: <http://evn.topbraidlive.org/ui#> .
-@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
-@prefix html: <http://uispin.org/html#> .
-@prefix jfn: <java:org.apache.jena.sparql.function.library.> .
-@prefix lfunctions: <http://example.org/lfunctions#> .
-@prefix lib-importer: <http://edg.topbraid.solutions/importer/lib#> .
-@prefix luc: <http://teamwork.topbraidlive.org/saf/lucene#> .
-@prefix ontologyprojects: <http://teamwork.topbraidlive.org/ontologyprojects#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix owlrl: <http://topbraid.org/spin/owlrl#> .
-@prefix pf: <http://jena.hpl.hp.com/ARQ/property#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix savedQueries: <http://teamwork.topbraidlive.org/ui/savedQueries#> .
-@prefix search: <http://topbraid.org/search#> .
-@prefix sharepoint: <http://topbraid.org/sharepoint#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix skosspin: <http://topbraid.org/spin/skosspin#> .
-@prefix skostemplate: <http://topbraid.org/spin/skostemplates#> .
-@prefix sm: <http://topbraid.org/sparqlmotion#> .
-@prefix sm2wsdl: <http://topbraid.org/sparqlmotion/sm2wsdl.sms#> .
-@prefix smf: <http://topbraid.org/sparqlmotionfunctions#> .
-@prefix sml: <http://topbraid.org/sparqlmotionlib#> .
-@prefix sp: <http://spinrdf.org/sp#> .
-@prefix spif: <http://spinrdf.org/spif#> .
-@prefix spin: <http://spinrdf.org/spin#> .
-@prefix spinmap: <http://spinrdf.org/spinmap#> .
-@prefix spinmapl: <http://topbraid.org/spin/spinmapl#> .
-@prefix spl: <http://spinrdf.org/spl#> .
-@prefix spr: <http://spinrdf.org/spr#> .
-@prefix spra: <http://spinrdf.org/spra#> .
-@prefix swa: <http://topbraid.org/swa#> .
-@prefix swaclasses: <http://topbraid.org/swaclasses#> .
-@prefix swaeditor: <http://topbraid.org/swaeditor#> .
-@prefix swauml: <http://topbraid.org/swauml#> .
-@prefix swon: <http://uispin.org/swon#> .
-@prefix tables: <http://topbraid.org/tables#> .
-@prefix tablesmap: <http://topbraid.org/spin/tablesmap#> .
-@prefix tagger: <http://evn.topbraidlive.org/tagger#> .
-@prefix tasks: <http://topbraid.org/tasks#> .
-@prefix taxonomies: <http://evn.topbraidlive.org/evnprojects#> .
-@prefix tbladmin: <http://server.topbraidlive.org/system-applications/tbladmin#> .
-@prefix teamwork: <http://topbraid.org/teamwork#> .
-@prefix tops: <http://www.topbraid.org/tops#> .
-@prefix tosh.ui: <http://topbraid.org/tosh.ui#> .
-@prefix tracker: <http://teamwork.topbraidlive.org/ui/tracker#> .
-@prefix ui: <http://uispin.org/ui#> .
-@prefix uix: <http://topbraidlive.org/uix#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zo#> .
 @prefix ztc: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
+@prefix ztce: <https://linkeddata.cultureelerfgoed.nl/def/ztce#> .
 
 <http://linkeddata.overheid.nl/terms/Wet>
   rdf:type owl:Class ;
@@ -70,11 +17,14 @@
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo>
   rdf:type owl:Ontology ;
-  dcterms:created "2018-07-01" ;
+  rdfs:label "Zaak Ontologie"@nl ;
+  dcterms:created "2018-11-01" ;
   dcterms:creator ceo:Frans_van_der_Zande ;
   dcterms:creator ceo:Patrick_Mout ;
-  dcterms:hasVersion "0.2" ;
-  rdfs:label "Zaak Ontologie"@nl ;
+  dcterms:hasVersion "0.90" ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:title "Zaak Ontologie"@nl ;
 .
 zo:Besluit
   rdf:type owl:Class ;
@@ -84,7 +34,7 @@ zo:Besluit
 .
 zo:Betrokkene
   rdf:type owl:Class ;
-  rdfs:comment "De class zaak:Betrokkene is een representatie van een SUBJECT, zijnde een NATUURLIJK PERSOON, NIET-NATUURLIJK PERSOON of VESTIGING, ORGANISATORISCHE EENHEID (binnen een vestiging van de zaak-behandelende niet-natuurlijk persoon), of MEDEWERKER (van die organisatorische eenheid) die een rol kan spelen bij een ZAAK."@nl ;
+  rdfs:comment "De class zaak:Betrokkene is een representatie van een subject, zijnde een natuurlijk persoon, niet-natuurlijk persoon of vestiging, organisatorische eenheid (binnen een vestiging van de zaak-behandelende niet-natuurlijk persoon), of medewerker (van die organisatorische eenheid) die een rol kan spelen bij een zaak."@nl ;
   rdfs:label "Betrokkene"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
@@ -93,7 +43,7 @@ zo:Document
   rdfs:comment "De class zaak:Document is een representatie van het geheel van gegevens met een eigen identiteit ongeacht zijn vorm, met de bijbehorende metadata ontvangen of opgemaakt door een natuurlijke en/of rechtspersoon bij de uitvoering van taken."@nl ;
   rdfs:label "Document"@nl ;
   rdfs:subClassOf owl:Thing ;
-  skos:editorialNote "In het document \"Objectencatalogus RCE-Zaken\" staat een naamloze relatie tussen Document en Enkelvoudig respectievelijk Samengesteld Document. Dit is hier vertaald als een subClassOf relatie." ;
+  skos:editorialNote "In het document \"Objectencatalogus RCE-Zaken\" staat een naamloze relatie tussen document en enkelvoudig respectievelijk samengesteld document. Dit is hier vertaald als een subClassOf relatie." ;
 .
 zo:Eigenschap
   rdf:type owl:Class ;
@@ -103,19 +53,19 @@ zo:Eigenschap
 .
 zo:EnkelvoudigDocument
   rdf:type owl:Class ;
-  rdfs:comment "De class zaak:EnkelvoudigDocument is een representatie van een DOCUMENT waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl ;
+  rdfs:comment "De class zaak:EnkelvoudigDocument is een representatie van een document waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl ;
   rdfs:label "Enkelvoudig Document"@nl ;
   rdfs:subClassOf zo:Document ;
 .
 zo:Medewerker
   rdf:type owl:Class ;
-  rdfs:comment "De class zaak:Medewerker is een representatie van een medewerker van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een ORGANISATORISCHE EENHEID."@nl ;
+  rdfs:comment "De class zaak:Medewerker is een representatie van een medewerker van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een organisatorische eenheid."@nl ;
   rdfs:label "Medewerker"@nl ;
   rdfs:subClassOf zo:Betrokkene ;
 .
 zo:OrganisatorischeEenheid
   rdf:type owl:Class ;
-  rdfs:comment "De class zaak:OrganisatorischeEenheid is een representatie van het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een VESTIGING VAN ZAAKBEHANDELENDE ORGANISATIE en die verantwoordelijk is voor de behandeling van zaken."@nl ;
+  rdfs:comment "De class zaak:OrganisatorischeEenheid is een representatie van het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een vestiging van zaakbehandelende organisatie en die verantwoordelijk is voor de behandeling van zaken."@nl ;
   rdfs:label "Organisatorische Eenheid"@nl ;
   rdfs:subClassOf zo:Betrokkene ;
 .
@@ -145,74 +95,74 @@ zo:Zaak
 .
 zo:Zaakdocument
   rdf:type owl:Class ;
-  rdfs:comment "De class zaak:Zaakdocument is een representatie van een DOCUMENT dat relevant is voor de behandeling van de ZAAK en/of gecreëerd is in het kader van de behandeling van de ZAAK."@nl ;
+  rdfs:comment "De class zaak:Zaakdocument is een representatie van een document dat relevant is voor de behandeling van de zaak en/of gecreëerd is in het kader van de behandeling van de zaak."@nl ;
   rdfs:label "Zaakdocument"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
 zo:Zaakobject
   rdf:type owl:Class ;
-  rdfs:comment "De class zaak:Zaakobject is een representatie van een OBJECT waarop de ZAAK betrekking heeft."@nl ;
+  rdfs:comment "De class zaak:Zaakobject is een representatie van een object waarop de zaak betrekking heeft."@nl ;
   rdfs:label "Zaakobject"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
 zo:achternaam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property achternaam wordt gebruikt om aan te geven welke achternaam is gekoppeld aan een Medewerker."@nl ;
+  rdfs:comment "De property achternaam wordt gebruikt om aan te geven welke achternaam is gekoppeld aan een medewerker."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Achternaam"@nl ;
   rdfs:range xsd:string ;
 .
 zo:archiefnominatieZaak
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property archiefnominatieZaak wordt gebruikt om aan te geven welke archiefnominatie Zaak is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property archiefnominatieZaak wordt gebruikt om aan te geven welke archiefnominatie zaak is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
-  rdfs:label "Archiefnominatie Zaak"@nl ;
+  rdfs:label "Archiefnominatie zaak"@nl ;
   rdfs:range xsd:string ;
 .
 zo:besluitdatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property besluitdatum wordt gebruikt om aan te geven welke besluitdatum is gekoppeld aan een Besluit."@nl ;
+  rdfs:comment "De property besluitdatum wordt gebruikt om aan te geven welke besluitdatum is gekoppeld aan een besluit."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Besluitdatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:besluitidentificatie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property besluitidentificatie wordt gebruikt om aan te geven welke besluitidentificatie is gekoppeld aan een Besluit."@nl ;
+  rdfs:comment "De property besluitidentificatie wordt gebruikt om aan te geven welke besluitidentificatie is gekoppeld aan een besluit."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Besluitidentificatie"@nl ;
   rdfs:range xsd:integer ;
 .
 zo:besluittoelichting
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property besluittoelichting wordt gebruikt om aan te geven welke besluittoelichting is gekoppeld aan een Besluit."@nl ;
+  rdfs:comment "De property besluittoelichting wordt gebruikt om aan te geven welke besluittoelichting is gekoppeld aan een besluit."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Besluittoelichting"@nl ;
   rdfs:range xsd:string ;
 .
 zo:bestandsnaam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property bestandsnaam wordt gebruikt om aan te geven welke bestandsnaam is gekoppeld aan een EnkelvoudigDocument."@nl ;
+  rdfs:comment "De property bestandsnaam wordt gebruikt om aan te geven welke bestandsnaam is gekoppeld aan een enkelvoudig document."@nl ;
   rdfs:domain zo:EnkelvoudigDocument ;
   rdfs:label "Bestandsnaam"@nl ;
   rdfs:range xsd:string ;
 .
 zo:betalingsindicatie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property betalingsindicatie wordt gebruikt om aan te geven welke betalingsindicatie is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property betalingsindicatie wordt gebruikt om aan te geven welke betalingsindicatie is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Betalingsindicatie"@nl ;
 .
 zo:betreftDocument
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property betreftDocument legt de relatie tussen Zaakdocument en Document."@nl ;
+  rdfs:comment "De property betreftDocument legt de relatie tussen zaakdocument en document."@nl ;
   rdfs:domain zo:Zaakdocument ;
   rdfs:label "Betreft document"@nl ;
   rdfs:range zo:Document ;
 .
 zo:betreftZaak
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property betreftZaak legt de relatie tussen Zaakdocument of Rol en Zaak."@nl ;
+  rdfs:comment "De property betreftZaak legt de relatie tussen zaakdocument of rol en zaak."@nl ;
   rdfs:domain [
       rdf:type owl:Class ;
       owl:unionOf (
@@ -225,9 +175,9 @@ zo:betreftZaak
 .
 zo:buitenlandsCorrespondentieadres
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property buitenlandsCorrespondentieadres wordt gebruikt om aan te geven welke buitenlands correspondentieadres 1 is gekoppeld aan een Rol."@nl ;
-  rdfs:comment "De property buitenlandsCorrespondentieadres wordt gebruikt om aan te geven welke buitenlands correspondentieadres 2 is gekoppeld aan een Rol."@nl ;
-  rdfs:comment "De property buitenlandsCorrespondentieadres wordt gebruikt om aan te geven welke buitenlands correspondentieadres 3 is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property buitenlandsCorrespondentieadres wordt gebruikt om aan te geven welke buitenlands correspondentieadres 1 is gekoppeld aan een rol."@nl ;
+  rdfs:comment "De property buitenlandsCorrespondentieadres wordt gebruikt om aan te geven welke buitenlands correspondentieadres 2 is gekoppeld aan een rol."@nl ;
+  rdfs:comment "De property buitenlandsCorrespondentieadres wordt gebruikt om aan te geven welke buitenlands correspondentieadres 3 is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Buitenlands correspondentieadres 1"@nl ;
   rdfs:label "Buitenlands correspondentieadres 2"@nl ;
@@ -236,199 +186,199 @@ zo:buitenlandsCorrespondentieadres
 .
 zo:buitenlandsCorrespondentieadresLand
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property buitenlandsCorrespondentieadresLand wordt gebruikt om aan te geven welke buitenlands correspondentieadres land is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property buitenlandsCorrespondentieadresLand wordt gebruikt om aan te geven welke buitenlands correspondentieadres land is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Buitenlands correspondentieadres land"@nl ;
   rdfs:range xsd:string ;
 .
 zo:contactpersoonEmailadres
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property contactpersoonEmailadres wordt gebruikt om aan te geven welke contactpersoon emailadres is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property contactpersoonEmailadres wordt gebruikt om aan te geven welke contactpersoon emailadres is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Contactpersoon emailadres"@nl ;
   rdfs:range xsd:string ;
 .
 zo:contactpersoonFunctie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property contactpersoonFunctie wordt gebruikt om aan te geven welke contactpersoon functie is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property contactpersoonFunctie wordt gebruikt om aan te geven welke contactpersoon functie is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Contactpersoon functie"@nl ;
   rdfs:range xsd:string ;
 .
 zo:contactpersoonTelefoonnummer
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property contactpersoonTelefoonnummer wordt gebruikt om aan te geven welke contactpersoon telefoonnummer is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property contactpersoonTelefoonnummer wordt gebruikt om aan te geven welke contactpersoon telefoonnummer is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Contactpersoon telefoonnummer"@nl ;
   rdfs:range xsd:string ;
 .
 zo:contactpersoonnaam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property contactpersoonnaam wordt gebruikt om aan te geven welke contactpersoonnaam is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property contactpersoonnaam wordt gebruikt om aan te geven welke contactpersoonnaam is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Contactpersoonnaam"@nl ;
   rdfs:range xsd:string ;
 .
 zo:datumOntstaan
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property datumOntstaan wordt gebruikt om aan te geven welke datum ontstaan is gekoppeld aan een OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property datumOntstaan wordt gebruikt om aan te geven welke datum ontstaan is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:label "Datum ontstaan"@nl ;
   rdfs:range xsd:date ;
 .
 zo:datumOpheffing
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property datumOpheffing wordt gebruikt om aan te geven welke datum opheffing is gekoppeld aan een OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property datumOpheffing wordt gebruikt om aan te geven welke datum opheffing is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:label "Datum opheffing"@nl ;
   rdfs:range xsd:date ;
 .
 zo:datumStatusGezet
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property datumStatusGezet wordt gebruikt om aan te geven welke datum status gezet is gekoppeld aan een Status."@nl ;
+  rdfs:comment "De property datumStatusGezet wordt gebruikt om aan te geven welke datum status gezet is gekoppeld aan een status."@nl ;
   rdfs:domain zo:Status ;
   rdfs:label "Datum status gezet"@nl ;
   rdfs:range xsd:date ;
 .
 zo:datumUitDienst
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property datumUitDienst wordt gebruikt om aan te geven welke datum uit dienst is gekoppeld aan een Medewerker."@nl ;
+  rdfs:comment "De property datumUitDienst wordt gebruikt om aan te geven welke datum uit dienst is gekoppeld aan een medewerker."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Datum uit dienst"@nl ;
   rdfs:range xsd:date ;
 .
 zo:datumVernietigingdossier
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property datumVernietigingdossier wordt gebruikt om aan te geven welke datum vernietiging dossier is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property datumVernietigingdossier wordt gebruikt om aan te geven welke datum vernietiging dossier is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Datum vernietiging dossier"@nl ;
   rdfs:range xsd:date ;
 .
 zo:deelzakenindicatie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property deelzakenindicatie wordt gebruikt om aan te geven welke deelzakenindicatie is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property deelzakenindicatie wordt gebruikt om aan te geven welke deelzakenindicatie is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Deelzakenindicatie"@nl ;
 .
 zo:documentVerzenddatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentVerzenddatum wordt gebruikt om aan te geven welke document verzenddatum is gekoppeld aan een Document."@nl ;
+  rdfs:comment "De property documentVerzenddatum wordt gebruikt om aan te geven welke document verzenddatum is gekoppeld aan een document."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Document verzenddatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:documentauteur
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentauteur wordt gebruikt om aan te geven welke documentauteur is gekoppeld aan een Document."@nl ;
+  rdfs:comment "De property documentauteur wordt gebruikt om aan te geven welke documentauteur is gekoppeld aan een document."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Documentauteur"@nl ;
   rdfs:range xsd:string ;
 .
 zo:documentbeschrijving
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentbeschrijving wordt gebruikt om aan te geven welke documentbeschrijving is gekoppeld aan een Document."@nl ;
+  rdfs:comment "De property documentbeschrijving wordt gebruikt om aan te geven welke documentbeschrijving is gekoppeld aan een document."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Documentbeschrijving"@nl ;
   rdfs:range xsd:string ;
 .
 zo:documentcreatiedatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentcreatiedatum wordt gebruikt om aan te geven welke documentcreatiedatum is gekoppeld aan een Document."@nl ;
+  rdfs:comment "De property documentcreatiedatum wordt gebruikt om aan te geven welke documentcreatiedatum is gekoppeld aan een document."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Documentcreatiedatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:documentformaat
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentformaat wordt gebruikt om aan te geven welke documentformaat is gekoppeld aan een EnkelvoudigDocument."@nl ;
+  rdfs:comment "De property documentformaat wordt gebruikt om aan te geven welke documentformaat is gekoppeld aan een enkelvoudig document."@nl ;
   rdfs:domain zo:EnkelvoudigDocument ;
   rdfs:label "Documentformaat"@nl ;
   rdfs:range xsd:string ;
 .
 zo:documentidentificatie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentidentificatie wordt gebruikt om aan te geven welke documentidentificatie is gekoppeld aan een Document."@nl ;
+  rdfs:comment "De property documentidentificatie wordt gebruikt om aan te geven welke documentidentificatie is gekoppeld aan een document."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Documentidentificatie"@nl ;
 .
 zo:documentinhoud
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentinhoud wordt gebruikt om aan te geven welke documentinhoud is gekoppeld aan een EnkelvoudigDocument."@nl ;
+  rdfs:comment "De property documentinhoud wordt gebruikt om aan te geven welke documentinhoud is gekoppeld aan een enkelvoudig document."@nl ;
   rdfs:domain zo:EnkelvoudigDocument ;
   rdfs:label "Documentinhoud"@nl ;
   rdfs:range xsd:string ;
 .
 zo:documentlink
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentlink wordt gebruikt om aan te geven welke documentlink is gekoppeld aan een EnkelvoudigDocument."@nl ;
+  rdfs:comment "De property documentlink wordt gebruikt om aan te geven welke documentlink is gekoppeld aan een enkelvoudig document."@nl ;
   rdfs:domain zo:EnkelvoudigDocument ;
   rdfs:label "Documentlink"@nl ;
   rdfs:range xsd:string ;
 .
 zo:documentontvangstdatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentontvangstdatum wordt gebruikt om aan te geven welke documentontvangstdatum is gekoppeld aan een Document."@nl ;
+  rdfs:comment "De property documentontvangstdatum wordt gebruikt om aan te geven welke documentontvangstdatum is gekoppeld aan een document."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Documentontvangstdatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:documentstatus
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentstatus wordt gebruikt om aan te geven welke documentstatus is gekoppeld aan een EnkelvoudigDocument."@nl ;
+  rdfs:comment "De property documentstatus wordt gebruikt om aan te geven welke documentstatus is gekoppeld aan een enkelvoudig document."@nl ;
   rdfs:domain zo:EnkelvoudigDocument ;
   rdfs:label "Documentstatus"@nl ;
   rdfs:range xsd:string ;
 .
 zo:documenttaal
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documenttaal wordt gebruikt om aan te geven welke documenttaal is gekoppeld aan een EnkelvoudigDocument."@nl ;
+  rdfs:comment "De property documenttaal wordt gebruikt om aan te geven welke documenttaal is gekoppeld aan een enkelvoudig document."@nl ;
   rdfs:domain zo:EnkelvoudigDocument ;
   rdfs:label "Documenttaal"@nl ;
   rdfs:range xsd:string ;
 .
 zo:documenttitel
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documenttitel wordt gebruikt om aan te geven welke documenttitel is gekoppeld aan een Document."@nl ;
+  rdfs:comment "De property documenttitel wordt gebruikt om aan te geven welke documenttitel is gekoppeld aan een document."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Documenttitel"@nl ;
   rdfs:range xsd:string ;
 .
 zo:documentversie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property documentversie wordt gebruikt om aan te geven welke documentversie is gekoppeld aan een EnkelvoudigDocument."@nl ;
+  rdfs:comment "De property documentversie wordt gebruikt om aan te geven welke documentversie is gekoppeld aan een enkelvoudig document."@nl ;
   rdfs:domain zo:EnkelvoudigDocument ;
   rdfs:label "Documentversie"@nl ;
 .
 zo:duurVerlenging
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property duurVerlenging wordt gebruikt om aan te geven welke duur verlenging is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property duurVerlenging wordt gebruikt om aan te geven welke duur verlenging is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Duur verlenging"@nl ;
 .
 zo:eigenschapwaarde
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property eigenschapwaarde wordt gebruikt om aan te geven welke eigenschapwaarde is gekoppeld aan een Eigenschap."@nl ;
+  rdfs:comment "De property eigenschapwaarde wordt gebruikt om aan te geven welke eigenschapwaarde is gekoppeld aan een eigenschap."@nl ;
   rdfs:domain zo:Eigenschap ;
   rdfs:label "Eigenschapwaarde"@nl ;
 .
 zo:einddatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property einddatum wordt gebruikt om aan te geven welke einddatum is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property einddatum wordt gebruikt om aan te geven welke einddatum is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Einddatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:einddatumGepland
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property einddatumGepland wordt gebruikt om aan te geven welke einddatum gepland is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property einddatumGepland wordt gebruikt om aan te geven welke einddatum gepland is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Einddatum gepland"@nl ;
   rdfs:range xsd:date ;
 .
 zo:emailAdres
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property emailAdres wordt gebruikt om aan te geven welke e-mail adres is gekoppeld aan een Medewerker."@nl ;
-  rdfs:comment "De property emailAdres wordt gebruikt om aan te geven welke e-mail adres is gekoppeld aan een OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property emailAdres wordt gebruikt om aan te geven welke e-mail adres is gekoppeld aan een medewerker."@nl ;
+  rdfs:comment "De property emailAdres wordt gebruikt om aan te geven welke e-mail adres is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:label "E-mail adres"@nl ;
@@ -436,35 +386,35 @@ zo:emailAdres
 .
 zo:faxnummer
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property faxnummer wordt gebruikt om aan te geven welke faxnummer is gekoppeld aan een OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property faxnummer wordt gebruikt om aan te geven welke faxnummer is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:label "Faxnummer"@nl ;
   rdfs:range xsd:string ;
 .
 zo:functie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property functie wordt gebruikt om aan te geven welke functie is gekoppeld aan een Medewerker."@nl ;
+  rdfs:comment "De property functie wordt gebruikt om aan te geven welke functie is gekoppeld aan een medewerker."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Functie"@nl ;
   rdfs:range xsd:string ;
 .
 zo:geslachtsaanduiding
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property geslachtsaanduiding wordt gebruikt om aan te geven welke geslachtsaanduiding is gekoppeld aan een Medewerker."@nl ;
+  rdfs:comment "De property geslachtsaanduiding wordt gebruikt om aan te geven welke geslachtsaanduiding is gekoppeld aan een medewerker."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Geslachtsaanduiding"@nl ;
   rdfs:range xsd:string ;
 .
 zo:heeftBetrekkingOpAndere
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property heeftBetrekkingOpAndere legt de relatie tussen Zaak en Zaak."@nl ;
+  rdfs:comment "De property heeftBetrekkingOpAndere legt de relatie tussen zaak en zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Heeft betrekking op andere"@nl ;
   rdfs:range zo:Zaak ;
 .
 zo:heeftEigenschap
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property heeftEigenschap legt de relatie tussen Zaak en Eigenschap."@nl ;
+  rdfs:comment "De property heeftEigenschap legt de relatie tussen zaak en eigenschap."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Heeft eigenschap"@nl ;
   rdfs:range zo:Eigenschap ;
@@ -472,29 +422,29 @@ zo:heeftEigenschap
 .
 zo:heeftStatus
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property heeftStatus legt de relatie tussen Zaak en Status."@nl ;
+  rdfs:comment "De property heeftStatus legt de relatie tussen zaak en status."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Heeft status"@nl ;
   rdfs:range zo:Status ;
 .
 zo:heeftZaakobject
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property heeftZaakobject legt de relatie tussen Zaak en Zaakobject."@nl ;
+  rdfs:comment "De property heeftZaakobject legt de relatie tussen zaak en zaakobject."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "heeft zaakobject "@nl ;
   rdfs:range zo:Zaakobject ;
 .
 zo:hoortBij
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property hoortBij legt de relatie tussen Medewerker en OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property hoortBij legt de relatie tussen Medewerker en organisatorische eenheid."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Hoort bij"@nl ;
   rdfs:range zo:OrganisatorischeEenheid ;
 .
 zo:identificatie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property identificatie wordt gebruikt om aan te geven welke identificatie is gekoppeld aan een Betrokkene."@nl ;
-  rdfs:comment "De property identificatie wordt gebruikt om aan te geven welke identificatie is gekoppeld aan een CultuurhistorischObject."@nl ;
+  rdfs:comment "De property identificatie wordt gebruikt om aan te geven welke identificatie is gekoppeld aan een betrokkene."@nl ;
+  rdfs:comment "De property identificatie wordt gebruikt om aan te geven welke identificatie is gekoppeld aan een cultuurhistorisch object."@nl ;
   rdfs:domain [
       rdf:type owl:Class ;
       owl:unionOf (
@@ -507,55 +457,55 @@ zo:identificatie
 .
 zo:indicatieLaatstGezetteStatus
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property indicatieLaatstGezetteStatus wordt gebruikt om aan te geven welke indicatie laatst gezette status is gekoppeld aan een Status."@nl ;
+  rdfs:comment "De property indicatieLaatstGezetteStatus wordt gebruikt om aan te geven welke indicatie laatst gezette status is gekoppeld aan een status."@nl ;
   rdfs:domain zo:Status ;
   rdfs:label "Indicatie laatst gezette status"@nl ;
   rdfs:range xsd:string ;
 .
 zo:indicatieOpschorting
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property indicatieOpschorting wordt gebruikt om aan te geven welke indicatie opschorting is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property indicatieOpschorting wordt gebruikt om aan te geven welke indicatie opschorting is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Indicatie opschorting"@nl ;
 .
 zo:ingangsdatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property ingangsdatum wordt gebruikt om aan te geven welke ingangsdatum is gekoppeld aan een Besluit."@nl ;
+  rdfs:comment "De property ingangsdatum wordt gebruikt om aan te geven welke ingangsdatum is gekoppeld aan een besluit."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Ingangsdatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:isContactpersoonVoor
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isContactpersoonVoor legt de relatie tussen Medewerker en OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property isContactpersoonVoor legt de relatie tussen medewerker en organisatorische eenheid."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Is contactpersoon voor"@nl ;
   rdfs:range zo:OrganisatorischeEenheid ;
 .
 zo:isDeelzaakVan
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isDeelzaakVan legt de relatie tussen Zaak en Zaak."@nl ;
+  rdfs:comment "De property isDeelzaakVan legt de relatie tussen zaak en zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Is deelzaak van"@nl ;
   rdfs:range zo:Zaak ;
 .
 zo:isOnderwerpVan
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isOnderwerpVan legt de relatie tussen Zaakobject en Zaak."@nl ;
+  rdfs:comment "De property isOnderwerpVan legt de relatie tussen zaakobject en zaak."@nl ;
   rdfs:domain zo:Zaakobject ;
   rdfs:label "Is onderwerp van"@nl ;
   rdfs:range zo:Zaak ;
 .
 zo:isRelevantVoor
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isRelevantVoor legt de relatie tussen Zaakdocument en Status."@nl ;
+  rdfs:comment "De property isRelevantVoor legt de relatie tussen zaakdocument en status."@nl ;
   rdfs:domain zo:Zaakdocument ;
   rdfs:label "Is relevant voor"@nl ;
   rdfs:range zo:Status ;
 .
 zo:isUitkomstVan
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isUitkomstVan legt de relatie tussen Besluit en Zaak."@nl ;
+  rdfs:comment "De property isUitkomstVan legt de relatie tussen besluit en zaak."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Is uitkomst van"@nl ;
   rdfs:range zo:Zaak ;
@@ -566,7 +516,7 @@ zo:isVan
 .
 zo:isVanBesluittype
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isVanBesluittype legt de relatie tussen Besluit en Besluittype."@nl ;
+  rdfs:comment "De property isVanBesluittype legt de relatie tussen besluit en besluittype."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Is van besluIttype "@nl ;
   rdfs:range ztc:Besluittype ;
@@ -574,7 +524,7 @@ zo:isVanBesluittype
 .
 zo:isVanDocumenttype
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isVanDocumenttype legt de relatie tussen Document en Documenttype."@nl ;
+  rdfs:comment "De property isVanDocumenttype legt de relatie tussen document en documenttype."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Is van documenttype"@nl ;
   rdfs:range ztc:Documenttype ;
@@ -582,7 +532,7 @@ zo:isVanDocumenttype
 .
 zo:isVanEigenschapstype
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isVanEigenschapstype legt de relatie tussen Eigenschap en Eigenschaptype."@nl ;
+  rdfs:comment "De property isVanEigenschapstype legt de relatie tussen eigenschap en eigenschaptype."@nl ;
   rdfs:domain zo:Eigenschap ;
   rdfs:label "Is van eIgenschaptype"@nl ;
   rdfs:range ztc:Eigenschaptype ;
@@ -590,7 +540,7 @@ zo:isVanEigenschapstype
 .
 zo:isVanRoltype
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isVanRoltype legt de relatie tussen Rol en Roltype."@nl ;
+  rdfs:comment "De property isVanRoltype legt de relatie tussen rol en roltype."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Is van roltype"@nl ;
   rdfs:range ztc:Roltype ;
@@ -598,7 +548,7 @@ zo:isVanRoltype
 .
 zo:isVanStatustype
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isVanStatustype legt de relatie tussen Status en Statustype."@nl ;
+  rdfs:comment "De property isVanStatustype legt de relatie tussen status en statustype."@nl ;
   rdfs:domain zo:Status ;
   rdfs:label "Is van statustype"@nl ;
   rdfs:range ztc:Statustype ;
@@ -606,7 +556,7 @@ zo:isVanStatustype
 .
 zo:isVanZaaktype
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isVanZaaktype legt de relatie tussen Zaak en Zaaktype."@nl ;
+  rdfs:comment "De property isVanZaaktype legt de relatie tussen zaak en zaaktype."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Is van zaaktype"@nl ;
   rdfs:range ztc:Zaaktype ;
@@ -614,15 +564,15 @@ zo:isVanZaaktype
 .
 zo:isVerantwoordelijkVoor
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isVerantwoordelijkVoor legt de relatie tussen Medewerker en OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property isVerantwoordelijkVoor legt de relatie tussen medewerker en organisatorische eenheid."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Is verantwoordelIjk voor"@nl ;
   rdfs:range zo:OrganisatorischeEenheid ;
 .
 zo:isVerantwoordelijkeVoor
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isVerantwoordelijkeVoor legt de relatie tussen Medewerker en Zaaktype."@nl ;
-  rdfs:comment "De property isVerantwoordelijkeVoor legt de relatie tussen OrganisatorischeEenheid en Zaaktype."@nl ;
+  rdfs:comment "De property isVerantwoordelijkeVoor legt de relatie tussen medewerker en zaaktype."@nl ;
+  rdfs:comment "De property isVerantwoordelijkeVoor legt de relatie tussen organisatorische eenheid en zaaktype."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:label "Is verantwoordelIjke voor"@nl ;
@@ -630,43 +580,43 @@ zo:isVerantwoordelijkeVoor
 .
 zo:kanVastgelegdZijnAls
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property kanVastgelegdZijnAls legt de relatie tussen Besluit en Document."@nl ;
+  rdfs:comment "De property kanVastgelegdZijnAls legt de relatie tussen besluit en document."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Kan vastgelegd zijn als"@nl ;
   rdfs:range zo:Document ;
 .
 zo:laatsteBetaaldatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property laatsteBetaaldatum wordt gebruikt om aan te geven welke laatste betaaldatum  is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property laatsteBetaaldatum wordt gebruikt om aan te geven welke laatste betaaldatum is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Laatste betaaldatum "@nl ;
   rdfs:range xsd:date ;
 .
 zo:maaktDeelUitVan
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property maaktDeelUitVan legt de relatie tussen EnkelvoudigDocument en SamengesteldDocument."@nl ;
+  rdfs:comment "De property maaktDeelUitVan legt de relatie tussen enkelvoudig document en samengesteld document."@nl ;
   rdfs:domain zo:EnkelvoudigDocument ;
   rdfs:label "Maakt deel uit van"@nl ;
   rdfs:range zo:SamengesteldDocument ;
 .
 zo:medewerkeridentificatie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property medewerkeridentificatie wordt gebruikt om aan te geven welke medewerkeridentificatie is gekoppeld aan een Medewerker."@nl ;
+  rdfs:comment "De property medewerkeridentificatie wordt gebruikt om aan te geven welke medewerkeridentificatie is gekoppeld aan een medewerker."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Medewerkeridentificatie"@nl ;
 .
 zo:medewerkertoelichting
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property medewerkertoelichting wordt gebruikt om aan te geven welke medewerkertoelichting is gekoppeld aan een Medewerker."@nl ;
+  rdfs:comment "De property medewerkertoelichting wordt gebruikt om aan te geven welke medewerkertoelichting is gekoppeld aan een medewerker."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Medewerkertoelichting"@nl ;
   rdfs:range xsd:string ;
 .
 zo:naam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een Betrokkene."@nl ;
-  rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een CultuurhistorischObject."@nl ;
-  rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een betrokkene."@nl ;
+  rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een cultuurhistorisch object."@nl ;
+  rdfs:comment "De property naam wordt gebruikt om aan te geven welke naam is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ceo#CultuurhistorischObject> ;
   rdfs:domain zo:Betrokkene ;
   rdfs:domain zo:OrganisatorischeEenheid ;
@@ -675,28 +625,28 @@ zo:naam
 .
 zo:naamVerkort
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property naamVerkort wordt gebruikt om aan te geven welke naam verkort is gekoppeld aan een OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property naamVerkort wordt gebruikt om aan te geven welke naam verkort is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:label "Naam verkort"@nl ;
   rdfs:range xsd:string ;
 .
 zo:objectId
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property objectId wordt gebruikt om aan te geven welke object-id is gekoppeld aan een Document."@nl ;
+  rdfs:comment "De property objectId wordt gebruikt om aan te geven welke object-id is gekoppeld aan een document."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Object-id"@nl ;
 .
 zo:objecttype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property objecttype wordt gebruikt om aan te geven welke objecttype is gekoppeld aan een CultuurhistorischObject."@nl ;
+  rdfs:comment "De property objecttype wordt gebruikt om aan te geven welke objecttype is gekoppeld aan een cultuurhistorisch object."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ceo#CultuurhistorischObject> ;
   rdfs:label "Objecttype"@nl ;
   rdfs:range xsd:string ;
 .
 zo:omschrijving
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property omschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een OrganisatorischeEenheid."@nl ;
-  rdfs:comment "De property omschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property omschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een organisatorische eenheid."@nl ;
+  rdfs:comment "De property omschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Omschrijving"@nl ;
@@ -704,49 +654,49 @@ zo:omschrijving
 .
 zo:organisatieidentificatie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property organisatieidentificatie wordt gebruikt om aan te geven welke organisatieidentificatie is gekoppeld aan een OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property organisatieidentificatie wordt gebruikt om aan te geven welke organisatieidentificatie is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:label "Organisatieidentificatie"@nl ;
 .
 zo:postadrespostcode
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property postadrespostcode wordt gebruikt om aan te geven welke postadres postcode is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property postadrespostcode wordt gebruikt om aan te geven welke postadres postcode is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Postadres postcode"@nl ;
   rdfs:range xsd:string ;
 .
 zo:postadrestype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property postadrestype wordt gebruikt om aan te geven welke postadrestype is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property postadrestype wordt gebruikt om aan te geven welke postadrestype is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Postadrestype"@nl ;
   rdfs:range xsd:string ;
 .
 zo:postbusOfAntwoordnummer
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property postbusOfAntwoordnummer wordt gebruikt om aan te geven welke postbus- of antwoordnummer is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property postbusOfAntwoordnummer wordt gebruikt om aan te geven welke postbus- of antwoordnummer is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Postbus- of antwoordnummer"@nl ;
   rdfs:range xsd:string ;
 .
 zo:redenOpschorting
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property redenOpschorting wordt gebruikt om aan te geven welke reden opschorting is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property redenOpschorting wordt gebruikt om aan te geven welke reden opschorting is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Reden opschorting"@nl ;
   rdfs:range xsd:string ;
 .
 zo:redenVerlenging
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property redenVerlenging wordt gebruikt om aan te geven welke reden verlenging is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property redenVerlenging wordt gebruikt om aan te geven welke reden verlenging is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Reden verlenging"@nl ;
   rdfs:range xsd:string ;
 .
 zo:registratiedatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven welke registratiedatum is gekoppeld aan een Zaak."@nl ;
-  rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven welke registratiedatum is gekoppeld aan een Zaakdocument."@nl ;
+  rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven welke registratiedatum is gekoppeld aan een zaak."@nl ;
+  rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven welke registratiedatum is gekoppeld aan een zaakdocument."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:domain zo:Zaakdocument ;
   rdfs:label "Registratiedatum"@nl ;
@@ -754,57 +704,57 @@ zo:registratiedatum
 .
 zo:relatieOmschrijving
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property relatieOmschrijving wordt gebruikt om aan te geven welke relatie-omschrijving is gekoppeld aan een Zaakobject."@nl ;
+  rdfs:comment "De property relatieOmschrijving wordt gebruikt om aan te geven welke relatie-omschrijving is gekoppeld aan een zaakobject."@nl ;
   rdfs:domain zo:Zaakobject ;
   rdfs:label "Relatie-omschrijving"@nl ;
   rdfs:range xsd:string ;
 .
 zo:resultaatomschrijving
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property resultaatomschrijving wordt gebruikt om aan te geven welke resultaatomschrijving is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property resultaatomschrijving wordt gebruikt om aan te geven welke resultaatomschrijving is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Resultaatomschrijving"@nl ;
   rdfs:range xsd:string ;
 .
 zo:resultaattoelichting
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property resultaattoelichting wordt gebruikt om aan te geven welke resultaattoelichting is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property resultaattoelichting wordt gebruikt om aan te geven welke resultaattoelichting is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Resultaattoelichting"@nl ;
   rdfs:range xsd:string ;
 .
 zo:roepnaam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property roepnaam wordt gebruikt om aan te geven welke roepnaam is gekoppeld aan een Medewerker."@nl ;
+  rdfs:comment "De property roepnaam wordt gebruikt om aan te geven welke roepnaam is gekoppeld aan een medewerker."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Roepnaam"@nl ;
   rdfs:range xsd:string ;
 .
 zo:roltoelichting
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property roltoelichting wordt gebruikt om aan te geven welke roltoelichting is gekoppeld aan een Rol."@nl ;
+  rdfs:comment "De property roltoelichting wordt gebruikt om aan te geven welke roltoelichting is gekoppeld aan een rol."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Roltoelichting"@nl ;
   rdfs:range xsd:string ;
 .
 zo:startdatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property startdatum wordt gebruikt om aan te geven welke startdatum is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property startdatum wordt gebruikt om aan te geven welke startdatum is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Startdatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:statustoelichting
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property statustoelichting wordt gebruikt om aan te geven welke statustoelichting is gekoppeld aan een Status."@nl ;
+  rdfs:comment "De property statustoelichting wordt gebruikt om aan te geven welke statustoelichting is gekoppeld aan een status."@nl ;
   rdfs:domain zo:Status ;
   rdfs:label "Statustoelichting"@nl ;
   rdfs:range xsd:string ;
 .
 zo:telefoonnummer
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property telefoonnummer wordt gebruikt om aan te geven welke telefoonnummer is gekoppeld aan een Medewerker."@nl ;
-  rdfs:comment "De property telefoonnummer wordt gebruikt om aan te geven welke telefoonnummer is gekoppeld aan een OrganisatorischeEenheid."@nl ;
+  rdfs:comment "De property telefoonnummer wordt gebruikt om aan te geven welke telefoonnummer is gekoppeld aan een medewerker."@nl ;
+  rdfs:comment "De property telefoonnummer wordt gebruikt om aan te geven welke telefoonnummer is gekoppeld aan een organisatorische eenheid."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:label "Telefoonnummer"@nl ;
@@ -812,8 +762,8 @@ zo:telefoonnummer
 .
 zo:toelichting
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een OrganisatorischeEenheid."@nl ;
-  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een organisatorische eenheid."@nl ;
+  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:OrganisatorischeEenheid ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Toelichting"@nl ;
@@ -821,83 +771,83 @@ zo:toelichting
 .
 zo:uiterlijkeEinddatumAfdoening
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property uiterlijkeEinddatumAfdoening wordt gebruikt om aan te geven welke uiterlijke einddatum afdoening is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property uiterlijkeEinddatumAfdoening wordt gebruikt om aan te geven welke uiterlijke einddatum afdoening is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Uiterlijke einddatum afdoening"@nl ;
   rdfs:range xsd:date ;
 .
 zo:uiterlijkeReactiedatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property uiterlijkeReactiedatum wordt gebruikt om aan te geven welke uiterlijke reactiedatum is gekoppeld aan een Besluit."@nl ;
+  rdfs:comment "De property uiterlijkeReactiedatum wordt gebruikt om aan te geven welke uiterlijke reactiedatum is gekoppeld aan een besluit."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Uiterlijke reactiedatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:vertrouwelijkAanduiding
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property vertrouwelijkAanduiding wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een Document."@nl ;
+  rdfs:comment "De property vertrouwelijkAanduiding wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een document."@nl ;
   rdfs:domain zo:Document ;
   rdfs:label "Vertrouwelijk aanduiding"@nl ;
   rdfs:range xsd:string ;
 .
 zo:vervaldatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property vervaldatum wordt gebruikt om aan te geven welke vervaldatum is gekoppeld aan een Besluit."@nl ;
+  rdfs:comment "De property vervaldatum wordt gebruikt om aan te geven welke vervaldatum is gekoppeld aan een besluit."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Vervaldatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:vervalreden
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property vervalreden wordt gebruikt om aan te geven welke vervalreden is gekoppeld aan een Besluit."@nl ;
+  rdfs:comment "De property vervalreden wordt gebruikt om aan te geven welke vervalreden is gekoppeld aan een besluit."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Vervalreden"@nl ;
   rdfs:range xsd:string ;
 .
 zo:verzenddatum
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property verzenddatum wordt gebruikt om aan te geven welke verzenddatum is gekoppeld aan een Besluit."@nl ;
+  rdfs:comment "De property verzenddatum wordt gebruikt om aan te geven welke verzenddatum is gekoppeld aan een besluit."@nl ;
   rdfs:domain zo:Besluit ;
   rdfs:label "Verzenddatum"@nl ;
   rdfs:range xsd:date ;
 .
 zo:voorletters
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property voorletters wordt gebruikt om aan te geven welke voorletters is gekoppeld aan een Medewerker."@nl ;
+  rdfs:comment "De property voorletters wordt gebruikt om aan te geven welke voorletters is gekoppeld aan een medewerker."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Voorletters"@nl ;
   rdfs:range xsd:string ;
 .
 zo:voorvoegselAchternaam
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property voorvoegselAchternaam wordt gebruikt om aan te geven welke voorvoegsel achternaam is gekoppeld aan een Medewerker."@nl ;
+  rdfs:comment "De property voorvoegselAchternaam wordt gebruikt om aan te geven welke voorvoegsel achternaam is gekoppeld aan een medewerker."@nl ;
   rdfs:domain zo:Medewerker ;
   rdfs:label "Voorvoegsel achternaam"@nl ;
   rdfs:range xsd:string ;
 .
 zo:wordtUitgeoefendDoor
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property wordtUitgeoefendDoor legt de relatie tussen Rol en Betrokkene."@nl ;
+  rdfs:comment "De property wordtUitgeoefendDoor legt de relatie tussen rol en betrokkene."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Wordt uitgeoefend door"@nl ;
   rdfs:range zo:Betrokkene ;
 .
 zo:zaakidentificatie
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property zaakidentificatie wordt gebruikt om aan te geven welke zaakidentificatie is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property zaakidentificatie wordt gebruikt om aan te geven welke zaakidentificatie is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Zaakidentificatie"@nl ;
 .
 zo:zaakniveau
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property zaakniveau wordt gebruikt om aan te geven welke zaakniveau is gekoppeld aan een Zaak."@nl ;
+  rdfs:comment "De property zaakniveau wordt gebruikt om aan te geven welke zaakniveau is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Zaakniveau"@nl ;
   rdfs:range xsd:string ;
 .
 zo:zetAlsBetrokkene
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property zetAlsBetrokkene legt de relatie tussen Rol en Status."@nl ;
+  rdfs:comment "De property zetAlsBetrokkene legt de relatie tussen rol en status."@nl ;
   rdfs:domain zo:Rol ;
   rdfs:label "Zet als betrokkene"@nl ;
   rdfs:range zo:Status ;
