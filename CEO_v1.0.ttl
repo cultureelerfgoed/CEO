@@ -98,7 +98,7 @@ pdok:asWKT-RD
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/ns/locn> ;
   owl:versionInfo "Created with TopBraid Composer" ;
-  skos:editorialNote "Dit betreft voor extern, richting Kadaster toe versie 1.0. Intern wordt deze status pas bereikt na testen van de ontologie op basis van het testplan."@nl ;
+  skos:editorialNote "Dit betreft voor extern, richting Kadaster versie 1.0. Intern wordt deze status pas bereikt na testen, aanpassen van de ontologie op basis van het testplan."@nl ;
 .
 ceo:ActorEnRol
   rdf:type owl:Class ;
