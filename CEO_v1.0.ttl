@@ -1182,14 +1182,6 @@ ceo:heeftOorspronkelijkeFunctie
   rdfs:range ceo:Functie ;
   rdfs:subPropertyOf ceo:heeftFunctie ;
 .
-ceo:heeftPerceel
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-3-16" ;
-  dcterms:modified "11-6-18" ;
-  rdfs:comment "De property heeftPerceel legt de relatie tussen de basisregistratie en het perceel met betrekking tot een cultuurhistorisch object vast."@nl ;
-  rdfs:domain ceo:BasisregistratieRelatie ;
-  rdfs:label "Heeft perceel"@nl ;
-.
 ceo:heeftPeriode
   rdf:type owl:ObjectProperty ;
   dcterms:created "10-4-18 10:50" ;
