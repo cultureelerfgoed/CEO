@@ -1355,6 +1355,7 @@ ceo:heeftVertrouwelijkAanduiding
   dcterms:modified "23-10-18" ;
   rdfs:comment "De property heeftVertrouwelijkAanduiding legt de relatie tussen het cultuurhistorisch object en de vertrouwelijkheid aanduiding vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Heeft vertrouwelijk aanduiding"@nl ;
   rdfs:range skos:Concept ;
 .
