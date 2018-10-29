@@ -289,13 +289,6 @@ ceo:Materiaal
   rdfs:label "Materiaal"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
-ceo:MaterieleFormeleHistorie
-  rdf:type owl:Class ;
-  dcterms:created "4-7-18 12:10" ;
-  rdfs:comment "De class MaterieleFormeleHistorie is de representatie van de materiele en formele historie betreffende de samenhang, geometrie, locatie aanduiding, basisregistratie en cultuurhistorisch object."@nl ;
-  rdfs:label "Materiele formele historie"@nl ;
-  rdfs:subClassOf owl:Thing ;
-.
 ceo:Naam
   rdf:type owl:Class ;
   dcterms:created "2018-2-6" ;
@@ -487,7 +480,6 @@ ceo:beginGeldigheid
   rdf:type owl:DatatypeProperty ;
   dcterms:created "4-7-18 12:20" ;
   rdfs:comment "De property beginGeldigheid wordt gebruikt om aan te geven welke begin geldigheidsdatum is gekoppeld aan een instance."@nl ;
-  rdfs:domain ceo:MaterieleFormeleHistorie ;
   rdfs:label "Begin geldigheid"@nl ;
   rdfs:range xsd:date ;
 .
@@ -495,7 +487,6 @@ ceo:beginRegistratie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "4-7-18 12:23" ;
   rdfs:comment "De property beginRegistratie wordt gebruikt om aan te geven welke begin registratiedatum is gekoppeld aan een instance."@nl ;
-  rdfs:domain ceo:MaterieleFormeleHistorie ;
   rdfs:label "Begin registratie"@nl ;
   rdfs:range xsd:date ;
 .
@@ -600,7 +591,6 @@ ceo:eindGeldigheid
   rdf:type owl:DatatypeProperty ;
   dcterms:created "4-7-18 12:22" ;
   rdfs:comment "De property eindGeldigheid wordt gebruikt om aan te geven welke eind geldigheidsdatum is gekoppeld aan een instance."@nl ;
-  rdfs:domain ceo:MaterieleFormeleHistorie ;
   rdfs:label "Eind geldigheid"@nl ;
   rdfs:range xsd:date ;
 .
@@ -608,7 +598,6 @@ ceo:eindRegistratie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "4-7-18 12:24" ;
   rdfs:comment "De property eindRegistratie wordt gebruikt om aan te geven welke eind registratiedatum is gekoppeld aan een instance."@nl ;
-  rdfs:domain ceo:MaterieleFormeleHistorie ;
   rdfs:label "Eind registratie"@nl ;
   rdfs:range xsd:date ;
 .
@@ -641,7 +630,7 @@ ceo:formeelStandpunt
 ceo:gemeenteCode
   rdf:type owl:DatatypeProperty ;
   dcterms:created "24-5-18 13:11" ;
-  rdfs:comment "De property gemeenteCode weenordt gebruikt om aan te geven welke gemeente code is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:comment "De property gemeenteCode wordt gebruikt om aan te geven welke gemeente code is gekoppeld aan het rijksmonument."@nl ;
   rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Gemeente code"@nl ;
   rdfs:range xsd:string ;
@@ -660,16 +649,6 @@ ceo:geometrienummer
   rdfs:domain ceo:Geometrie ;
   rdfs:label "Geometrienummer"@nl ;
   rdfs:range xsd:integer ;
-  rdfs:subPropertyOf pdok:asWKT-RD ;
-.
-ceo:heeftActor
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "10-4-18 9:57" ;
-  dcterms:modified "7-6-18" ;
-  rdfs:comment "De property heeftActor legt de relatie tussen de ActorEnRol en de actor met betrekking tot een cultuurhistorisch object vast."@nl ;
-  rdfs:domain ceo:ActorEnRol ;
-  rdfs:label "Heeft actor"@nl ;
-  rdfs:range skos:Concept ;
 .
 ceo:heeftActorEnRol
   rdf:type owl:ObjectProperty ;
@@ -691,9 +670,9 @@ ceo:heeftArcheologischeKwaliteit
 ceo:heeftArcheologischeWaarde
   rdf:type owl:ObjectProperty ;
   dcterms:created "2-5-18 9:38" ;
-  dcterms:modified "11-6-18" ;
+  dcterms:modified "29-10-18" ;
   rdfs:comment "De property heeftArcheologischeWaarde legt de relatie tussen de archeologische kwaliteit en de archeologische waarde met betrekking tot een cultuurhistorisch object vast."@nl ;
-  rdfs:domain ceo:ArcheologischeKwaliteit ;
+  rdfs:domain ceo:ArcheologischTerrein ;
   rdfs:label "Heeft archeologische waarde"@nl ;
   rdfs:range skos:Concept ;
 .
@@ -800,7 +779,7 @@ ceo:heeftBronhouder
   rdfs:comment "De property heeftBronhouder legt de relatie tussen de bronverwijzing en de bronhouder met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:Bronverwijzing ;
   rdfs:label "Heeft bronhouder"@nl ;
-  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/ztc#heeftBetrokkene> ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Betrokkene> ;
 .
 ceo:heeftBrontype
   rdf:type owl:ObjectProperty ;
@@ -1017,7 +996,7 @@ ceo:heeftInvoerder
   dcterms:created "18-4-18 9:09" ;
   dcterms:modified "28-6-18" ;
   rdfs:comment "De property heeftInvoerder legt de relatie tussen de kennisregistratie en de invoerder vast."@nl ;
-  rdfs:domain ceo:Kennisregistratie ;
+  rdfs:domain owl:Thing ;
   rdfs:label "Heeft invoerder"@nl ;
   rdfs:range skos:Concept ;
 .
@@ -1099,18 +1078,6 @@ ceo:heeftMateriaalNaam
   rdfs:domain ceo:Materiaal ;
   rdfs:label "Heeft materiaalnaam"@nl ;
   rdfs:range skos:Concept ;
-.
-ceo:heeftMaterieleFormeleHistorie
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "4-7-18 12:26" ;
-  rdfs:comment "De property heeftMaterieleFormeleHistorie legt de relatie tussen samenhang, geometrie, locatie aanduiding, basisregistratie, cultuurhistorisch object en de materiele en formele historie vast."@nl ;
-  rdfs:domain ceo:BasisregistratieRelatie ;
-  rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:domain ceo:Geometrie ;
-  rdfs:domain ceo:LocatieAanduiding ;
-  rdfs:domain ceo:Samenhang ;
-  rdfs:label "Heeft materiele formele historie"@nl ;
-  rdfs:range ceo:MaterieleFormeleHistorie ;
 .
 ceo:heeftMelder
   rdf:type owl:ObjectProperty ;
@@ -1227,15 +1194,6 @@ ceo:heeftRijksmonument
   rdfs:range ceo:Rijksmonument ;
   owl:inverseOf ceo:isOnderdeelVanComplex ;
 .
-ceo:heeftRol
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "10-4-18 10:22" ;
-  dcterms:modified "8-6-18" ;
-  rdfs:comment "De property heeftRol legt de relatie tussen de ActorEnRol en de actor rol met betrekking tot een cultuurhistorisch object vast."@nl ;
-  rdfs:domain ceo:ActorEnRol ;
-  rdfs:label "Heeft rol"@nl ;
-  rdfs:range skos:Concept ;
-.
 ceo:heeftSamenhang
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-1-5" ;
@@ -1257,11 +1215,11 @@ ceo:heeftSchoonheid
 ceo:heeftSitueringBijAdres
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-2-2" ;
+  dcterms:modified "29-10-18" ;
   rdfs:comment "De property heeftSitueringBijAdres legt de relatie tussen een rijksmonument dat geen verblijfsobject in de BAG is met een verblijfsobject in de BAG."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft situering bij adres"@nl ;
   rdfs:range ceo:Adresgegevens ;
-  rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
 .
 ceo:heeftSitueringTegenoverAdres
   rdf:type owl:ObjectProperty ;
