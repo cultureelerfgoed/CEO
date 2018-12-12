@@ -467,7 +467,7 @@ ceo:asWKT-RD
   rdfs:comment "De property asWKT-RD legt de relatie vast tussen een cultuurhistorisch object en een geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD)."@nl ;
   rdfs:domain ceo:Geometrie ;
   rdfs:label "asWKT-RD"@nl ;
-  rdfs:range xsd:string ;
+  rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> ;
   rdfs:subPropertyOf pdok:asWKT-RD ;
 .
 ceo:basisregistratieRelatienummer
