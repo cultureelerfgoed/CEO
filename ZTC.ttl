@@ -77,6 +77,7 @@ ztc:aanleiding
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Aanleiding"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Een omschrijving van de gebeurtenis/trigger die leidt tot het starten van een zaak van dit zaaktype. Dit veld heeft vooral een documentatiefunctie en is bedoeld om een omschrijving te geven van de gebeurtenis - de gedefinieerde aanleiding uit de definitie van een zaak - die leidt tot zaaken van dit zaaktype. Denk bij het uitwerken ook aan de kanalen waarlangs deze trigger kan binnenkomen. "@nl ;
 .
 ztc:archiefnominatie
   rdf:type owl:DatatypeProperty ;
@@ -84,12 +85,15 @@ ztc:archiefnominatie
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Archiefnominatie"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Aanduiding die aangeeft of zaaken van dit zaaktype blijvend moeten worden bewaard, vernietigd of overgebracht naar een archiefbewaarplaats. Bij vernietiging en overbrenging wordt middels het veld Archieftermijn aangegeven na verloop van hoeveel tijd wordt overgegaan tot vernietiging c.q. overbrenging. De waarde 'O' voor overbrenging dient uitsluitend te worden gebruikt indien - conform art. 13 van de Archiefwet 1995 - eerder of later dan na verloop van de in art. 12 van de Archiefwet 1995 bepaalde algemene termijn van 20 jaar wordt overgegaan tot overbrenging. Waardenverzameling: B: Blijvend bewaren, V: Vernietigen, O: Overbrengen (van blijvend te bewaren archiefbescheiden)."@nl ;
 .
 ztc:archieftermijn
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property archieftermijn wordt gebruikt om aan te geven welke archieftermijn is gekoppeld aan een zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Archieftermijn"@nl ;
+skos:definition "De termijn in maanden waarna het zaakdossier (de zaak met alle bijbehorende documenten) van een zaak van dit type vernietigd of overgebracht moet worden."@nl ;
+
 .
 ztc:besluittypeOmschrijving
   rdf:type owl:DatatypeProperty ;
@@ -97,6 +101,7 @@ ztc:besluittypeOmschrijving
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Besluittypeomschrijving"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Omschrijving van de aard van besluiten van het besluitype."@nl ;
 .
 ztc:brondatumArchiefprocedure
   rdf:type owl:DatatypeProperty ;
@@ -104,6 +109,8 @@ ztc:brondatumArchiefprocedure
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Brondatum archiefprocedure"@nl ;
   rdfs:range xsd:date ;
+skos:definition "Welk datumveld geldt als de start van de bewaar- of overbrengingstermijn, per zaaktype kan een andere soort datum gelden als brondatum."@nl ;
+
 .
 ztc:datumBeginGeldigheidBesluittype
   rdf:type owl:DatatypeProperty ;
@@ -111,6 +118,7 @@ ztc:datumBeginGeldigheidBesluittype
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Datum begin geldigheid besluittype"@nl ;
   rdfs:range xsd:date ;
+skos:definition "De datum van wanneer het besluittype geldig is."@nl ;
 .
 ztc:datumBeginGeldigheidDocumenttype
   rdf:type owl:DatatypeProperty ;
@@ -118,6 +126,7 @@ ztc:datumBeginGeldigheidDocumenttype
   rdfs:domain ztc:Documenttype ;
   rdfs:label "Datum begin geldigheid documenttype"@nl ;
   rdfs:range xsd:date ;
+skos:definition "De datum van wanneer het documenttype geldig is."@nl ;
 .
 ztc:datumBeginGeldigheidStatustype
   rdf:type owl:DatatypeProperty ;
@@ -125,6 +134,7 @@ ztc:datumBeginGeldigheidStatustype
   rdfs:domain ztc:Statustype ;
   rdfs:label "Datum begin geldigheid statustype"@nl ;
   rdfs:range xsd:date ;
+skos:definition "De begindatum waarop het statustype is geldig is."@nl ;
 .
 ztc:datumBeginGeldigheidZaaktype
   rdf:type owl:DatatypeProperty ;
@@ -132,6 +142,7 @@ ztc:datumBeginGeldigheidZaaktype
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Datum begin geldigheid zaaktype"@nl ;
   rdfs:range xsd:date ;
+skos:definition "De datum van wanneer het zaaktype geldig is."@nl ;
 .
 ztc:datumEindeGeldigheidBesluittype
   rdf:type owl:DatatypeProperty ;
@@ -139,6 +150,7 @@ ztc:datumEindeGeldigheidBesluittype
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Datum einde geldigheid besluittype"@nl ;
   rdfs:range xsd:date ;
+skos:definition "De datum van wanneer het besluittype niet meer geldig is."@nl ;
 .
 ztc:datumEindeGeldigheidDocumenttype
   rdf:type owl:DatatypeProperty ;
@@ -146,6 +158,7 @@ ztc:datumEindeGeldigheidDocumenttype
   rdfs:domain ztc:Documenttype ;
   rdfs:label "Datum einde geldigheid documenttype"@nl ;
   rdfs:range xsd:date ;
+skos:definition "De datum van wanneer het documenttype niet meer geldig is."@nl ;
 .
 ztc:datumEindeGeldigheidStatustype
   rdf:type owl:DatatypeProperty ;
@@ -153,6 +166,7 @@ ztc:datumEindeGeldigheidStatustype
   rdfs:domain ztc:Statustype ;
   rdfs:label "Datum einde geldigheid statustype"@nl ;
   rdfs:range xsd:date ;
+skos:definition "De datum waarop het statustype niet meer geldig is."@nl ;
 .
 ztc:datumEindeGeldigheidZaaktype
   rdf:type owl:DatatypeProperty ;
@@ -160,6 +174,7 @@ ztc:datumEindeGeldigheidZaaktype
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Datum einde geldigheid zaaktype"@nl ;
   rdfs:range xsd:date ;
+skos:definition "De datum van wanneer het zaaktype niet meer geldig is."@nl ;
 .
 ztc:definitie
   rdf:type owl:DatatypeProperty ;
@@ -167,6 +182,8 @@ ztc:definitie
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Definitie"@nl ;
   rdfs:range xsd:string ;
+skos:definition "De beschrijving van de betekenis van deze eigenschap"@nl ;
+
 .
 ztc:documenttypeOmschrijving
   rdf:type owl:DatatypeProperty ;
@@ -174,6 +191,7 @@ ztc:documenttypeOmschrijving
   rdfs:domain ztc:Documenttype ;
   rdfs:label "Documenttypeomschrijving"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Omschrijving van de aard van documenten van dit documenttype."@nl ;
 .
 ztc:doel
   rdf:type owl:DatatypeProperty ;
@@ -181,18 +199,22 @@ ztc:doel
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Doel "@nl ;
   rdfs:range xsd:string ;
+skos:definition "Een omschrijving van wat het doel is. Dit veld heeft vooral een documentatiefunctie en is bedoeld om een omschrijving te geven van het doel dat wordt nagestreefd in zaaken van dit zaaktype. Denk aan het beoordelen van een subsidie aanvraag met het oogmerk daarover een besluit te nemen, het innemen van een standpunt na aanleiding van een ingediend bezwaar, et cetera. "@nl ;
 .
 ztc:doorlooptijdBehandeling
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property doorlooptijdBehandeling wordt gebruikt om aan te geven welke doorlooptijd behandeling is gekoppeld aan een zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Doorlooptijd behandeling"@nl ;
+skos:definition "De periode waarbinnen volgens wet- en regelgeving een zaak van het zaaktype afgerond dient te zijn"@nl ;
+
 .
 ztc:doorlooptijdStatus
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property doorlooptijdStatus wordt gebruikt om aan te geven welke doorlooptijd status is gekoppeld aan een statustype."@nl ;
   rdfs:domain ztc:Statustype ;
   rdfs:label "Doorlooptijd status"@nl ;
+skos:definition "De door de RCE gestelde norm voor de doorlooptijd voor het bereiken van statussen van dit statustype bij het desbetreffende zaaktype."@nl ;
 .
 ztc:eigenschapnaam
   rdf:type owl:DatatypeProperty ;
@@ -200,6 +222,7 @@ ztc:eigenschapnaam
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Eigenschapnaam"@nl ;
   rdfs:range xsd:string ;
+skos:definition "De naam van de eigenschap"@nl ;
 .
 ztc:formaat
   rdf:type owl:DatatypeProperty ;
@@ -207,6 +230,7 @@ ztc:formaat
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Formaat"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Het soort tekens waarmee waarden van de eigenschap kunnen worden vastgelegd."@nl ;
 .
 ztc:formuliernaam
   rdf:type owl:DatatypeProperty ;
@@ -214,6 +238,8 @@ ztc:formuliernaam
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Formuliernaam"@nl ;
   rdfs:range xsd:string ;
+skos:definition "De naam van het formulier, waarmee de klant het product of dienst kan aanvragen. "@nl ;
+
 .
 ztc:heeftBetrekkingOp
   rdf:type owl:ObjectProperty ;
@@ -222,12 +248,14 @@ ztc:heeftBetrekkingOp
   rdfs:label "Heeft betrekking op"@nl ;
   rdfs:range ztc:Zaaktype ;
 .
-ztc:heeftBetrokkene
+ztc:heeftBetrokkeneIn
   rdf:type owl:ObjectProperty ;
   rdfs:comment "De property heeftBetrokkene legt de relatie tussen zaaktype en roltype."@nl ;
   rdfs:domain ztc:Zaaktype ;
-  rdfs:label "Heeft betrokkene"@nl ;
+  rdfs:label "Heeft betrokkene in"@nl ;
   rdfs:range ztc:Roltype ;
+skos:definition "Het zaaktype van zaken waarin betrokkenen rollen van dit roltype kunnen uitoefenen."@nl ;
+
 .
 ztc:heeftDeelzaken
   rdf:type owl:ObjectProperty ;
@@ -242,6 +270,8 @@ ztc:heeftRelevante
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Heeft relevante"@nl ;
   rdfs:range ztc:Documenttype ;
+skos:definition "De documenttypen die relevant kunnen zijn voor zaaken van dit zaaktype."@nl ;
+
 .
 ztc:heeftStatustype
   rdf:type owl:ObjectProperty ;
@@ -249,20 +279,32 @@ ztc:heeftStatustype
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Heeft statustype"@nl ;
   rdfs:range ztc:Statustype ;
+skos:definition "De statustypen die bereikt kunnen worden bij behandeling van zaken van het zaaktype."@nl ;
+
+
 .
-ztc:isVanzaaktype
+ztc:isVanZaaktype
   rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property isVanzaaktype legt de relatie tussen eigenschaptype en zaaktype."@nl ;
-  rdfs:domain ztc:Eigenschaptype ;
-  rdfs:label "Is van"@nl ;
+  rdfs:comment "De property isVanZaaktype legt de relatie tussen eigenschap en zaaktype."@nl ;
+  rdfs:domain ztc:Eigenschap ;
+  rdfs:label "Is van zaaktype"@nl ;
   rdfs:range ztc:Zaaktype ;
 .
+ztc:isVanEigenschaptype
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property isVanEigenschaptype legt de relatie tussen eigenschap en eigenschaptype."@nl ;
+  rdfs:domain ztc:Eigenschap ;
+  rdfs:label "Is van eigenschaptype"@nl ;
+  rdfs:range ztc:Eigenschaptype ;
+.
+
 ztc:isVerplichtBij
   rdf:type owl:ObjectProperty ;
   rdfs:comment "De property isVerplichtBij legt de relatie tussen documenttype en statustype."@nl ;
   rdfs:domain ztc:Documenttype ;
-  rdfs:label "Is verplIcht bIj"@nl ;
+  rdfs:label "Is verplicht bij"@nl ;
   rdfs:range ztc:Statustype ;
+skos:definition "De statustype waarvoor geldt dat er een document van dit documenttype verplicht aanwezig moet zijn in het zaakdossier van een zaak voordat de status van dit statustype kan worden gezet."@nl ;
 .
 ztc:kardinaliteit
   rdf:type owl:DatatypeProperty ;
@@ -270,12 +312,14 @@ ztc:kardinaliteit
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Kardinaliteit"@nl ;
   rdfs:range xsd:integer ;
+skos:definition "Het aantal mogelijke voorkomens van deze eigenschap binnen het zaaktype."@nl ;
 .
 ztc:lengte
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property lengte wordt gebruikt om aan te geven welke lengte is gekoppeld aan een eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Lengte"@nl ;
+skos:definition "Het aantal karakters (lengte) waarmee waarden van de eigenschap worden vastgelegd."@nl ;
 .
 ztc:procesnaam
   rdf:type owl:DatatypeProperty ;
@@ -283,6 +327,8 @@ ztc:procesnaam
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Procesnaam"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Naam van het proces dat het zaaktype uitvoert."@nl ;
+
 .
 ztc:productDienst
   rdf:type owl:DatatypeProperty ;
@@ -290,12 +336,15 @@ ztc:productDienst
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Product/Dienst"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Het product of de dienst die geleverd wordt door dit zaaktype. "@nl ;
+
 .
 ztc:reactietermijn
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property reactietermijn wordt gebruikt om aan te geven welke reactietermijn is gekoppeld aan een besluittype."@nl ;
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Reactietermijn"@nl ;
+skos:definition "Het aantal dagen, gerekend vanaf de verzend- of publicatiedatum, waarbinnen verweer tegen een besluit van het besluittype mogelijk is."@nl ;
 .
 ztc:roltypeomschrijving
   rdf:type owl:DatatypeProperty ;
@@ -303,6 +352,7 @@ ztc:roltypeomschrijving
   rdfs:domain ztc:Roltype ;
   rdfs:label "Roltypeomschrijving"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Omschrijving van de aard van de rol."@nl ;
 .
 ztc:selectielijstTekst
   rdf:type owl:DatatypeProperty ;
@@ -310,6 +360,8 @@ ztc:selectielijstTekst
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Selectielijst tekst"@nl ;
   rdfs:range xsd:string ;
+skos:definition "De relevante tekst die voor dit zaaktype dient te worden / is opgenomen in het Basisselectiedocument betreffende de eisen vanuit archivering."@nl ;
+
 .
 ztc:servicenormBehandeling
   rdf:type owl:DatatypeProperty ;
@@ -317,6 +369,8 @@ ztc:servicenormBehandeling
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Servicenorm behandeling"@nl ;
   rdfs:range xsd:string ;
+skos:definition "De periode waarbinnen verwacht wordt dat een zaak van het zaaktype afgerond wordt conform de geldende servicenormen van RCE"@nl ;
+
 .
 ztc:soortBetrokkene
   rdf:type owl:DatatypeProperty ;
@@ -324,6 +378,7 @@ ztc:soortBetrokkene
   rdfs:domain ztc:Roltype ;
   rdfs:label "Soort betrokkene"@nl ;
   rdfs:range xsd:string ;
+skos:definition "De (soort) betrokkene die een rol van dit roltype mag uitoefenen."@nl ;
 .
 ztc:statustypeOmschrijving
   rdf:type owl:DatatypeProperty ;
@@ -331,6 +386,7 @@ ztc:statustypeOmschrijving
   rdfs:domain ztc:Statustype ;
   rdfs:label "Statustypeomschrijving"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Een korte, voor de initiator van de zaak relevante, omschrijving van de aard van de status van zaken van een zaaktype."@nl ;
 .
 ztc:statustypevolgnummer
   rdf:type owl:DatatypeProperty ;
@@ -338,31 +394,41 @@ ztc:statustypevolgnummer
   rdfs:domain ztc:Statustype ;
   rdfs:label "Statustypevolgnummer"@nl ;
   rdfs:range xsd:integer ;
+skos:definition "Een volgnummer voor de status binnen een zaak."@nl ;
 .
-ztc:toelichting
+ztc:toelichtingBesluittype
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een besluittype."@nl ;
-  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een documenttype."@nl ;
-  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een eigenschaptype."@nl ;
-  rdfs:comment "De property toelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een zaaktype."@nl ;
-  rdfs:domain [
-      rdf:type owl:Class ;
-      owl:unionOf (
-          ztc:Besluittype
-          ztc:Documenttype
-          ztc:Eigenschaptype
-          ztc:Zaaktype
-        ) ;
-    ] ;
-  rdfs:label "Toelichting"@nl ;
+  rdfs:comment "De property toelichtingBesluittype wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een besluittype."@nl ;
+  rdfs:domain ztc:Besluittype;
+  rdfs:label "Toelichting besluittype"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Een eventuele toelichting op dit besluittype. Dit veld heeft vooral een documentatiefunctie en is bedoeld om een toelichting te geven op dit besluittype. Hier kan bijvoorbeeld een beschrijving worden gegeven van de betekenis van het besluit voor - het verloop van - een zaaktype."@nl ;
+.
+ztc:toelichtingDocumenttype
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property toelichtingDocumenttype wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een documenttype."@nl ;
+  rdfs:domain ztc:Documenttype;
+  rdfs:label "Toelichting documenttype"@nl ;
+  rdfs:range xsd:string ;
+skos:definition "Een eventuele toelichting op dit documenttype. Dit veld heeft vooral een documentatiefunctie en is bedoeld om een toelichting te geven op dit documenttype. Hier kan bijvoorbeeld een beschrijving worden gegeven van de betekenis van het documenttype en de aard van de documenten die ertoe behoren."@nl ;
+.
+ztc:toelichtingZaaktype
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property toelichtingZaaktype wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een documenttype."@nl ;
+  rdfs:domain ztc:Zaaktype;
+  rdfs:label "Toelichting zaaktype"@nl ;
+  rdfs:range xsd:string ;
+
+skos:definition "Een eventuele toelichting op dit zaaktype. Dit attribuut heeft vooral een documentatiefunctie en is bedoeld om een toelichting te geven op dit zaaktype. Hier kan bijvoorbeeld een beschrijving van het procesverloop op hoofdlijnen worden gegeven. "@nl ;
 .
 ztc:url
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment "De property url wordt gebruikt om aan te geven welke uRL is gekoppeld aan een zaaktype."@nl ;
+  rdfs:comment "De property url wordt gebruikt om aan te geven welke url is gekoppeld aan een zaaktype."@nl ;
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "URL"@nl ;
   rdfs:range xsd:string ;
+skos:definition "De URL naar het formulier."@nl ;
+
 .
 ztc:verantwoordelijke
   rdf:type owl:DatatypeProperty ;
@@ -370,27 +436,40 @@ ztc:verantwoordelijke
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "Verantwoordelijke"@nl ;
   rdfs:range xsd:string ;
+skos:definition "De verantwoordelijke organisatorische eenheid of medewerker voor zaken van het zaaktype."@nl ;
+
 .
-ztc:vertrouwelijkAanduiding
+ztc:vertrouwelijkAanduidingDocumenttype
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property vertrouwelijkAanduiding wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een documenttype."@nl ;
-  rdfs:comment "De property vertrouwelijkAanduiding wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een zaaktype."@nl ;
-  rdfs:domain [
-      rdf:type owl:Class ;
-      owl:unionOf (
-          ztc:Documenttype
-          ztc:Zaaktype
-        ) ;
-    ] ;
-  rdfs:label "Vertrouwelijk aanduiding"@nl ;
+
+  rdfs:domain 
+          ztc:Documenttype ;
+        
+  rdfs:label "Vertrouwelijk aanduiding documenttype"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Aanduiding van de mate waarin documenten van dit documenttype voor de openbaarheid bestemd zijn. Middels deze attribuutsoort kan worden vastgelegd in welke mate documenten van dit documenttype bestemd zijn voor de openbaarheid. Zo kan een zaak waarvoor in het zaaktype is vastgelegd dat de Vertrouwelijkaanduiding 'Openbaar' is, toch documenten bevatten die op basis van hun documenttype niet - samen met de openbare zaakinformatie - 'Openbaar' worden gemaakt. "@nl ;
 .
+
+ztc:vertrouwelijkAanduidingZaaktype
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "De property vertrouwelijkAanduidingZaaktype wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een zaaktype."@nl ;
+
+  rdfs:domain 
+          ztc:Zaaktype ;
+        
+  rdfs:label "Vertrouwelijk aanduiding zaaktype"@nl ;
+  rdfs:range xsd:string ;
+skos:definition "Aanduiding van de mate waarin zaakdossiers van zaken van dit zaaktype voor de openbaarheid bestemd zijn."@nl ;
+.
+
 ztc:waardenverzameling
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property waardenverzameling wordt gebruikt om aan te geven welke waardenverzameling is gekoppeld aan een eigenschaptype."@nl ;
   rdfs:domain ztc:Eigenschaptype ;
   rdfs:label "Waardenverzameling"@nl ;
   rdfs:range xsd:string ;
+skos:definition "De - verzameling van - waarden die gegevens van deze eigenschap kunnen hebben."@nl ;
 .
 ztc:wordtVastgelegdIn
   rdf:type owl:ObjectProperty ;
@@ -398,6 +477,7 @@ ztc:wordtVastgelegdIn
   rdfs:domain ztc:Besluittype ;
   rdfs:label "Wordt vastgelegd in"@nl ;
   rdfs:range ztc:Documenttype ;
+skos:definition "Het documenttype waarin besluiten van dit besluittype worden vastgelegd"@nl ;
 .
 ztc:zaaktypeOmschrijving
   rdf:type owl:DatatypeProperty ;
@@ -405,6 +485,7 @@ ztc:zaaktypeOmschrijving
   rdfs:domain ztc:Zaaktype ;
   rdfs:label "zaaktypeomschrijving"@nl ;
   rdfs:range xsd:string ;
+skos:definition "Korte omschrijving van de aard van zaaken van het zaaktype."@nl ;
 .
 ztc:zetAlsBetrokkene
   rdf:type owl:ObjectProperty ;
@@ -412,4 +493,5 @@ ztc:zetAlsBetrokkene
   rdfs:domain ztc:Roltype ;
   rdfs:label "Zet als betrokkene"@nl ;
   rdfs:range ztc:Statustype ;
+skos:definition "De statustypen die een betrokkene in een rol van dit roltype mag zetten"@nl ;
 .
