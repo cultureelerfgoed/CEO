@@ -1,4 +1,5 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/zo
+# imports: https://linkeddata.cultureelerfgoed.nl/def/ztc
 # prefix: zo
 
 @prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
@@ -17,6 +18,20 @@
   rdfs:label "Wet "@nl ;
   skos:editorialNote "Deze is toegevoegd aan origineel om een instantie te hebben van een regime (=type wet). Er zijn bestaande URIs van deze regimes " ;
 .
+skos:definition
+  rdf:type owl:AnnotationProperty ;
+  rdfs:label "definitie van de relatiesoort"@nl ;
+  rdfs:range xsd:string ;
+.
+ceo:heeftZaakobject
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property heeftZaakobject legt de relatie tussen CultuurhistorischObject en Zaakobject."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "heeft zaakobject "@nl ;
+  rdfs:range zo:Zaakobject ;
+  owl:inverseOf zo:betreftCultuurhistorischObject ;
+  skos:definition "Het zaakobject waarop een zaak betrekking heeft."@nl ;
+.
 <https://linkeddata.cultureelerfgoed.nl/def/zo>
   rdf:type owl:Ontology ;
   dcterms:created "2018-11-01" ;
@@ -27,18 +42,21 @@
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:title "Zaak Ontologie"@nl ;
   rdfs:label "Zaak Ontologie"@nl ;
+  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ztc> ;
 .
 zo:Besluit
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:Besluit is een representatie van een na overweging of beraadslaging vastgestelde beslissing voor een individueel of concreet geval."@nl ;
   rdfs:label "Besluit"@nl ;
   rdfs:subClassOf owl:Thing ;
+skos:definition "Een na overweging of beraadslaging vastgestelde beslissing voor een individueel of concreet geval."@nl ;
 .
 zo:Betrokkene
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:Betrokkene is een representatie van een subject, zijnde een natuurlijk persoon, niet-natuurlijk persoon of vestiging, organisatorische eenheid (binnen een vestiging van de zaak-behandelende niet-natuurlijk persoon), of medewerker (van die organisatorische eenheid) die een rol kan spelen bij een zaak."@nl ;
   rdfs:label "Betrokkene"@nl ;
   rdfs:subClassOf owl:Thing ;
+skos:definition "Definitie RGBZ: Een subject, zijnde een natuurlijk persoon, niet-natuurlijk persoon of vestiging, organisatorische eenheid (binnen een vestiging van de zaak-behandelende niet-natuurlijk persoon), of medewerker (van die organisatorische eenheid) die een rol kan spelen bij een zaak."@nl;
 .
 zo:Document
   rdf:type owl:Class ;
@@ -46,67 +64,78 @@ zo:Document
   rdfs:label "Document"@nl ;
   rdfs:subClassOf owl:Thing ;
   skos:editorialNote "In het document \"Objectencatalogus RCE-Zaken\" staat een naamloze relatie tussen document en enkelvoudig respectievelijk samengesteld document. Dit is hier vertaald als een subClassOf relatie." ;
+skos:definition "Geheel van gegevens met een eigen identiteit ongeacht zijn vorm, met de bijbehorende metadata ontvangen of opgemaakt door een natuurlijke en/of rechtspersoon bij de uitvoering van taken."@nl;
 .
 zo:Eigenschap
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:Eigenschap is een representatie van (definitie ontbreekt)."@nl ;
   rdfs:label "Eigenschap"@nl ;
   rdfs:subClassOf owl:Thing ;
+skos:definition "Combinatie van de unieke aanduidingen van de gerelateerde zaak en het gerelateerde eigenschaptype."@nl;
 .
 zo:EnkelvoudigDocument
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:EnkelvoudigDocument is een representatie van een document waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl ;
   rdfs:label "Enkelvoudig Document"@nl ;
   rdfs:subClassOf zo:Document ;
+skos:definition "Een document waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl;
+
 .
 zo:Medewerker
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:Medewerker is een representatie van een medewerker van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een organisatorische eenheid."@nl ;
   rdfs:label "Medewerker"@nl ;
   rdfs:subClassOf zo:Betrokkene ;
+skos:definition "Definitie RGBZ: Een medewerker van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een organisatorische eenheid."@nl;
 .
 zo:OrganisatorischeEenheid
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:OrganisatorischeEenheid is een representatie van het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een vestiging van zaakbehandelende organisatie en die verantwoordelijk is voor de behandeling van zaken."@nl ;
   rdfs:label "Organisatorische Eenheid"@nl ;
   rdfs:subClassOf zo:Betrokkene ;
+skos:definition "Definitie RGBZ: Het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een vestiging van zaakbehandelende organisatie en die verantwoordelijk is voor de behandeling van zaken."@nl;
 .
 zo:Rol
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:Rol is een representatie van de taken, rechten en/of verplichtingen die een specifieke betrokkene heeft ten aanzien van een specifieke zaak."@nl ;
   rdfs:label "Rol"@nl ;
   rdfs:subClassOf owl:Thing ;
+skos:definition "De taken, rechten en/of verplichtingen die een specifieke betrokkene heeft ten aanzien van een specifieke zaak."@nl;
 .
 zo:SamengesteldDocument
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:SamengesteldDocument is een representatie van (definitie ontbreekt)."@nl ;
   rdfs:label "Samengesteld Document"@nl ;
   rdfs:subClassOf zo:Document ;
+skos:definition "Er is geen definitie van dit begrip beschikbaar."@nl;
 .
 zo:Status
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:Status is een representatie van een aanduiding van de stand van zaken van een zaak op basis van betekenisvol behaald resultaat voor de initiator van de zaak."@nl ;
   rdfs:label "Status"@nl ;
   rdfs:subClassOf owl:Thing ;
+skos:definition "Een aanduiding van de stand van zaken van een zaak op basis van betekenisvol behaald resultaat voor de initiator van de zaak."@nl;
 .
 zo:Zaak
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:Zaak is een representatie van een samenhangende hoeveelheid werk met een welgedefinieerde aanleiding en een welgedefinieerd eindresultaat, waarvan kwaliteit en doorlooptijd bewaakt moeten worden."@nl ;
   rdfs:label "Zaak"@nl ;
   rdfs:subClassOf owl:Thing ;
+skos:definition "Een samenhangende hoeveelheid werk met een welgedefinieerde aanleiding en een welgedefinieerd eindresultaat, waarvan kwaliteit en doorlooptijd bewaakt moeten worden."@nl;
 .
 zo:Zaakdocument
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:Zaakdocument is een representatie van een document dat relevant is voor de behandeling van de zaak en/of gecreëerd is in het kader van de behandeling van de zaak."@nl ;
   rdfs:label "Zaakdocument"@nl ;
   rdfs:subClassOf owl:Thing ;
+skos:definition "Een document dat relevant is voor de behandeling van de zaak en/of gecreëerd is in het kader van de behandeling van de zaak."@nl
 .
 zo:Zaakobject
   rdf:type owl:Class ;
   rdfs:comment "De class zaak:Zaakobject is een representatie van een object waarop de zaak betrekking heeft."@nl ;
   rdfs:label "Zaakobject"@nl ;
   rdfs:subClassOf owl:Thing ;
-.
+skos:definition "Een object waarop de zaak betrekking heeft."@nl;.
 zo:achternaam
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "De property achternaam wordt gebruikt om aan te geven welke achternaam is gekoppeld aan een medewerker."@nl ;
@@ -154,6 +183,13 @@ zo:betalingsindicatie
   rdfs:comment "De property betalingsindicatie wordt gebruikt om aan te geven welke betalingsindicatie is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Betalingsindicatie"@nl ;
+.
+zo:betreftCultuurhistorischObject
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment "De property betreftCultuurhistorischObject legt de relatie tussen een Zaak en een Cultuurhistorisch Object"@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "betreft cultuurhistorisch object "@nl ;
+  rdfs:range ceo:CultuurhistorischObject ;
 .
 zo:betreftDocument
   rdf:type owl:ObjectProperty ;
@@ -433,13 +469,6 @@ zo:heeftStatus
   rdfs:domain zo:Zaak ;
   rdfs:label "Heeft status"@nl ;
   rdfs:range zo:Status ;
-.
-zo:heeftZaakobject
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "De property heeftZaakobject legt de relatie tussen zaak en zaakobject."@nl ;
-  rdfs:domain zo:Zaak ;
-  rdfs:label "heeft zaakobject "@nl ;
-  rdfs:range zo:Zaakobject ;
 .
 zo:hoortBij
   rdf:type owl:ObjectProperty ;
