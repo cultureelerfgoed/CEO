@@ -1,0 +1,1130 @@
+# baseURI: https://linkeddata.cultureelerfgoed.nl/def/ceo.shapes
+# imports: http://datashapes.org/dash
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: https://linkeddata.cultureelerfgoed.nl/def/ceo
+
+@prefix : <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
+@prefix brk: <http://brk.basisregistraties.overheid.nl/def/brk#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix gml: <http://www.opengis.net/ont/gml#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pdok: <http://data.pdok.nl/def/pdok#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rec: <http://www.w3.org/2001/02pd/rec54#> .
+@prefix rn: <https://data.cultureelerfgoed.nl/term/id/rn/> .
+@prefix schema: <http://schema.org/> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wdsr: <http://www.w3.org/2007/05/powder-s#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.cultureelerfgoed.nl/term/id/rn/2e93edd1-098f-4f31-ae7e-72cb77f4d2ca>
+  a skos:Concept ;
+  skos:prefLabel "voorbeschermd"@nl ;
+.
+<https://data.cultureelerfgoed.nl/term/id/rn/53f1b4fc-00e8-4f35-b6d6-2a901445d24f>
+  a skos:Concept ;
+  skos:prefLabel "stads- of dorpsgezicht"@nl ;
+.
+rn:b2d9a59a-fe1e-4552-9a05-3c2acddff864
+  a skos:Concept ;
+  skos:prefLabel "rijksmonument"@nl ;
+.
+rn:b673c8c1-5d93-496d-8f9e-89133d579d77
+  a skos:Concept ;
+  skos:prefLabel "archeologisch"@nl ;
+.
+rn:fc966a68-8863-4970-a83e-110f96006c21
+  a skos:Concept ;
+  skos:prefLabel "onroerend gebouwd"@nl ;
+.
+ceo:ActorEnRol
+  a sh:NodeShape ;
+  sh:property ceo:ActorEnRol-actor ;
+  sh:property ceo:ActorEnRol-actorEnRolnummer ;
+  sh:property ceo:ActorEnRol-rol ;
+.
+ceo:ActorEnRol-actor
+  a sh:PropertyShape ;
+  sh:path ceo:actor ;
+  sh:datatype xsd:string ;
+.
+ceo:ActorEnRol-actorEnRolnummer
+  a sh:PropertyShape ;
+  sh:path ceo:actorEnRolnummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:ActorEnRol-rol
+  a sh:PropertyShape ;
+  sh:path ceo:rol ;
+  sh:datatype xsd:string ;
+.
+ceo:Adresgegevens
+  a sh:NodeShape ;
+  sh:property ceo:Adresgegevens-adresgegevensnummer ;
+  sh:property ceo:Adresgegevens-buurtOfWijkCode ;
+  sh:property ceo:Adresgegevens-buurtOfWijkNaam ;
+  sh:property ceo:Adresgegevens-gemeenteCode ;
+  sh:property ceo:Adresgegevens-heeftGemeente ;
+  sh:property ceo:Adresgegevens-heeftProvincie ;
+  sh:property ceo:Adresgegevens-huisnummer ;
+  sh:property ceo:Adresgegevens-openbareRuimte ;
+  sh:property ceo:Adresgegevens-plaatsCode ;
+  sh:property ceo:Adresgegevens-postcode ;
+  sh:property ceo:Adresgegevens-provincieCode ;
+  sh:property ceo:Adresgegevens-volledigAdres ;
+  sh:property ceo:Adresgegevens-woonplaatsnaam ;
+.
+ceo:Adresgegevens-adresgegevensnummer
+  a sh:PropertyShape ;
+  sh:path ceo:adresgegevensnummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:Adresgegevens-buurtOfWijkCode
+  a sh:PropertyShape ;
+  sh:path ceo:buurtOfWijkCode ;
+  sh:datatype xsd:string ;
+.
+ceo:Adresgegevens-buurtOfWijkNaam
+  a sh:PropertyShape ;
+  sh:path ceo:buurtOfWijkNaam ;
+  sh:datatype xsd:string ;
+.
+ceo:Adresgegevens-gemeenteCode
+  a sh:PropertyShape ;
+  sh:path ceo:gemeenteCode ;
+  sh:datatype xsd:string ;
+.
+ceo:Adresgegevens-heeftGemeente
+  a sh:PropertyShape ;
+  sh:path ceo:heeftGemeente ;
+  sh:class <http://standaarden.overheid.nl/owms/terms/Gemeente> ;
+.
+ceo:Adresgegevens-heeftProvincie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftProvincie ;
+  sh:class <http://standaarden.overheid.nl/owms/terms/Provincie> ;
+.
+ceo:Adresgegevens-huisnummer
+  a sh:PropertyShape ;
+  sh:path ceo:huisnummer ;
+  sh:datatype xsd:string ;
+.
+ceo:Adresgegevens-openbareRuimte
+  a sh:PropertyShape ;
+  sh:path ceo:openbareRuimte ;
+  sh:datatype xsd:string ;
+.
+ceo:Adresgegevens-plaatsCode
+  a sh:PropertyShape ;
+  sh:path ceo:plaatsCode ;
+  sh:datatype xsd:string ;
+.
+ceo:Adresgegevens-postcode
+  a sh:PropertyShape ;
+  sh:path ceo:postcode ;
+  sh:datatype xsd:string ;
+  sh:pattern """^[0-9]{4}                            
+            """ ;
+  sh:severity sh:Violation ;
+.
+ceo:Adresgegevens-provincieCode
+  a sh:PropertyShape ;
+  sh:path ceo:provincieCode ;
+  sh:datatype xsd:string ;
+.
+ceo:Adresgegevens-volledigAdres
+  a sh:PropertyShape ;
+  sh:path ceo:volledigAdres ;
+  sh:datatype xsd:string ;
+.
+ceo:Adresgegevens-woonplaatsnaam
+  a sh:PropertyShape ;
+  sh:path ceo:woonplaatsnaam ;
+  sh:datatype xsd:string ;
+.
+ceo:ArcheologischComplex
+  a sh:NodeShape ;
+  sh:property ceo:ArcheologischComplex-archis2Complexnummer ;
+.
+ceo:ArcheologischComplex-archis2Complexnummer
+  a sh:PropertyShape ;
+  sh:path ceo:archis2Complexnummer ;
+  sh:datatype xsd:string ;
+.
+ceo:ArcheologischOnderzoeksgebied
+  a sh:NodeShape ;
+  sh:property ceo:ArcheologischOnderzoeksgebied-indicatieArcheologischeMonumentenKaartWaardig ;
+.
+ceo:ArcheologischOnderzoeksgebied-indicatieArcheologischeMonumentenKaartWaardig
+  a sh:PropertyShape ;
+  sh:path ceo:indicatieArcheologischeMonumentenKaartWaardig ;
+  sh:datatype xsd:boolean ;
+.
+ceo:ArcheologischTerrein
+  a sh:NodeShape ;
+  sh:property ceo:ArcheologischTerrein-archis2Monumentnummer ;
+  sh:property ceo:ArcheologischTerrein-heeftArcheologischeWaardering ;
+.
+ceo:ArcheologischTerrein-archis2Monumentnummer
+  a sh:PropertyShape ;
+  sh:path ceo:archis2Monumentnummer ;
+  sh:datatype xsd:string ;
+.
+ceo:ArcheologischTerrein-heeftArcheologischeWaardering
+  a sh:PropertyShape ;
+  sh:path ceo:heeftArcheologischeWaardering ;
+  sh:class skos:Concept ;
+.
+ceo:ArcheologischeKwaliteit
+  a sh:NodeShape ;
+  sh:property ceo:ArcheologischeKwaliteit-heeftArcheologischeWaarde ;
+  sh:property ceo:ArcheologischeKwaliteit-heeftConservering ;
+  sh:property ceo:ArcheologischeKwaliteit-heeftEnsemblewaarde ;
+  sh:property ceo:ArcheologischeKwaliteit-heeftGaafheid ;
+  sh:property ceo:ArcheologischeKwaliteit-heeftHerinneringswaarde ;
+  sh:property ceo:ArcheologischeKwaliteit-heeftInformatiewaarde ;
+  sh:property ceo:ArcheologischeKwaliteit-heeftRepresentativiteit ;
+  sh:property ceo:ArcheologischeKwaliteit-heeftSchoonheid ;
+  sh:property ceo:ArcheologischeKwaliteit-heeftZeldzaamheid ;
+.
+ceo:ArcheologischeKwaliteit-heeftArcheologischeWaarde
+  a sh:PropertyShape ;
+  sh:path ceo:heeftArcheologischeWaarde ;
+  sh:class skos:Concept ;
+.
+ceo:ArcheologischeKwaliteit-heeftConservering
+  a sh:PropertyShape ;
+  sh:path ceo:heeftConservering ;
+  sh:class skos:Concept ;
+.
+ceo:ArcheologischeKwaliteit-heeftEnsemblewaarde
+  a sh:PropertyShape ;
+  sh:path ceo:heeftEnsemblewaarde ;
+  sh:class skos:Concept ;
+.
+ceo:ArcheologischeKwaliteit-heeftGaafheid
+  a sh:PropertyShape ;
+  sh:path ceo:heeftGaafheid ;
+  sh:class skos:Concept ;
+.
+ceo:ArcheologischeKwaliteit-heeftHerinneringswaarde
+  a sh:PropertyShape ;
+  sh:path ceo:heeftHerinneringswaarde ;
+  sh:class skos:Concept ;
+.
+ceo:ArcheologischeKwaliteit-heeftInformatiewaarde
+  a sh:PropertyShape ;
+  sh:path ceo:heeftInformatiewaarde ;
+  sh:class skos:Concept ;
+.
+ceo:ArcheologischeKwaliteit-heeftRepresentativiteit
+  a sh:PropertyShape ;
+  sh:path ceo:heeftRepresentativiteit ;
+  sh:class skos:Concept ;
+.
+ceo:ArcheologischeKwaliteit-heeftSchoonheid
+  a sh:PropertyShape ;
+  sh:path ceo:heeftSchoonheid ;
+  sh:class skos:Concept ;
+.
+ceo:ArcheologischeKwaliteit-heeftZeldzaamheid
+  a sh:PropertyShape ;
+  sh:path ceo:heeftZeldzaamheid ;
+  sh:class skos:Concept ;
+.
+ceo:BAGRelatie
+  a sh:NodeShape ;
+  sh:property ceo:BAGRelatie-BAGRelatienummer ;
+  sh:property ceo:BAGRelatie-pandIdentificatie ;
+  sh:property ceo:BAGRelatie-verblijfsobjectIdentificatie ;
+.
+ceo:BAGRelatie-BAGRelatienummer
+  a sh:PropertyShape ;
+  sh:path ceo:BAGRelatienummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:BAGRelatie-pandIdentificatie
+  a sh:PropertyShape ;
+  sh:path ceo:pandIdentificatie ;
+  sh:datatype xsd:string ;
+.
+ceo:BAGRelatie-verblijfsobjectIdentificatie
+  a sh:PropertyShape ;
+  sh:path ceo:verblijfsobjectIdentificatie ;
+  sh:datatype xsd:string ;
+.
+ceo:BRKRelatie
+  a sh:NodeShape ;
+  sh:property ceo:BRKRelatie-BRKRelatienummer ;
+  sh:property ceo:BRKRelatie-appartementAanduiding ;
+  sh:property ceo:BRKRelatie-deelperceelnummer ;
+  sh:property ceo:BRKRelatie-kadastraleGemeentecode ;
+  sh:property ceo:BRKRelatie-perceelnummer ;
+  sh:property ceo:BRKRelatie-sectie ;
+.
+ceo:BRKRelatie-BRKRelatienummer
+  a sh:PropertyShape ;
+  sh:path ceo:BRKRelatienummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:BRKRelatie-appartementAanduiding
+  a sh:PropertyShape ;
+  sh:path ceo:appartementAanduiding ;
+  sh:datatype xsd:string ;
+.
+ceo:BRKRelatie-deelperceelnummer
+  a sh:PropertyShape ;
+  sh:path ceo:deelperceelnummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:BRKRelatie-kadastraleGemeentecode
+  a sh:PropertyShape ;
+  sh:path ceo:kadastraleGemeentecode ;
+  sh:datatype xsd:string ;
+.
+ceo:BRKRelatie-perceelnummer
+  a sh:PropertyShape ;
+  sh:path ceo:perceelnummer ;
+  sh:datatype xsd:string ;
+.
+ceo:BRKRelatie-sectie
+  a sh:PropertyShape ;
+  sh:path ceo:sectie ;
+  sh:datatype xsd:string ;
+.
+ceo:BasisregistratieRelatie
+  a sh:NodeShape ;
+  sh:property ceo:BasisregistratieRelatie-basisregistratieRelatienummer ;
+  sh:property ceo:BasisregistratieRelatie-heeftBAGRelatie ;
+  sh:property ceo:BasisregistratieRelatie-heeftBRKRelatie ;
+  sh:property ceo:BasisregistratieRelatie-heeftMateOvername ;
+  sh:property ceo:BasisregistratieRelatie-heeftNauwkeurigheid ;
+  sh:property ceo:BasisregistratieRelatie-heeftTopologischeRelatie ;
+.
+ceo:BasisregistratieRelatie-basisregistratieRelatienummer
+  a sh:PropertyShape ;
+  sh:path ceo:basisregistratieRelatienummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:BasisregistratieRelatie-heeftBAGRelatie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBAGRelatie ;
+  sh:class ceo:BAGRelatie ;
+.
+ceo:BasisregistratieRelatie-heeftBRKRelatie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBRKRelatie ;
+  sh:class ceo:BRKRelatie ;
+.
+ceo:BasisregistratieRelatie-heeftMateOvername
+  a sh:PropertyShape ;
+  sh:path ceo:heeftMateOvername ;
+  sh:class skos:Concept ;
+.
+ceo:BasisregistratieRelatie-heeftNauwkeurigheid
+  a sh:PropertyShape ;
+  sh:path ceo:heeftNauwkeurigheid ;
+  sh:class skos:Concept ;
+.
+ceo:BasisregistratieRelatie-heeftTopologischeRelatie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftTopologischeRelatie ;
+  sh:class skos:Concept ;
+.
+ceo:Bodemgebruik
+  a sh:NodeShape ;
+  sh:property ceo:Bodemgebruik-heeftBodemgebruikNaam ;
+.
+ceo:Bodemgebruik-heeftBodemgebruikNaam
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBodemgebruikNaam ;
+  sh:class skos:Concept ;
+.
+ceo:BouwkundigeKwaliteit
+  a sh:NodeShape ;
+  sh:property ceo:BouwkundigeKwaliteit-heeftBouwkundigeStaat ;
+.
+ceo:BouwkundigeKwaliteit-heeftBouwkundigeStaat
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBouwkundigeStaat ;
+  sh:class skos:Concept ;
+.
+ceo:Bronverwijzing
+  a sh:NodeShape ;
+  sh:property ceo:Bronverwijzing-bronIdentificatie ;
+  sh:property ceo:Bronverwijzing-bronverwijzingnummer ;
+  sh:property ceo:Bronverwijzing-heeftBronhouder ;
+  sh:property ceo:Bronverwijzing-heeftBrontype ;
+  sh:property ceo:Bronverwijzing-paginaverwijzing ;
+  sh:property ceo:Bronverwijzing-toelichting ;
+  sh:property ceo:Bronverwijzing-verwijzing ;
+.
+ceo:Bronverwijzing-bronIdentificatie
+  a sh:PropertyShape ;
+  sh:path ceo:bronIdentificatie ;
+  sh:datatype xsd:string ;
+.
+ceo:Bronverwijzing-bronverwijzingnummer
+  a sh:PropertyShape ;
+  sh:path ceo:bronverwijzingnummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:Bronverwijzing-heeftBronhouder
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBronhouder ;
+  sh:class <https://linkeddata.cultureelerfgoed.nl/def/zo#Betrokkene> ;
+.
+ceo:Bronverwijzing-heeftBrontype
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBrontype ;
+  sh:class skos:Concept ;
+.
+ceo:Bronverwijzing-paginaverwijzing
+  a sh:PropertyShape ;
+  sh:path ceo:paginaverwijzing ;
+  sh:datatype xsd:string ;
+.
+ceo:Bronverwijzing-toelichting
+  a sh:PropertyShape ;
+  sh:path ceo:toelichting ;
+  sh:datatype xsd:string ;
+.
+ceo:Bronverwijzing-verwijzing
+  a sh:PropertyShape ;
+  sh:path ceo:verwijzing ;
+  sh:datatype xsd:string ;
+.
+ceo:Complex
+  a sh:NodeShape ;
+  sh:property ceo:Complex-complexnummer ;
+  sh:property ceo:Complex-complexomschrijving ;
+  sh:property ceo:Complex-heeftHoofdobject ;
+  sh:property ceo:Complex-heeftRijksmonument ;
+.
+ceo:Complex-complexnummer
+  a sh:PropertyShape ;
+  sh:path ceo:complexnummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:Complex-complexomschrijving
+  a sh:PropertyShape ;
+  sh:path ceo:complexomschrijving ;
+  sh:datatype xsd:string ;
+.
+ceo:Complex-heeftHoofdobject
+  a sh:PropertyShape ;
+  sh:path ceo:heeftHoofdobject ;
+  sh:class ceo:Rijksmonument ;
+.
+ceo:Complex-heeftRijksmonument
+  a sh:PropertyShape ;
+  sh:path ceo:heeftRijksmonument ;
+  sh:class ceo:Rijksmonument ;
+.
+ceo:CultuurhistorischObject
+  a sh:NodeShape ;
+  sh:property ceo:CultuurhistorischObject-address ;
+  sh:property ceo:CultuurhistorischObject-bevatObject ;
+  sh:property ceo:CultuurhistorischObject-cultuurhistorischObjectnummer ;
+  sh:property ceo:CultuurhistorischObject-heeftArcheologischeKwaliteit ;
+  sh:property ceo:CultuurhistorischObject-heeftBasisregistratieRelatie ;
+  sh:property ceo:CultuurhistorischObject-heeftBodemgebruik ;
+  sh:property ceo:CultuurhistorischObject-heeftBouwkundigeKwaliteit ;
+  sh:property ceo:CultuurhistorischObject-heeftFunctie ;
+  sh:property ceo:CultuurhistorischObject-heeftGebeurtenis ;
+  sh:property ceo:CultuurhistorischObject-heeftGeometrie ;
+  sh:property ceo:CultuurhistorischObject-heeftHuidigeFunctie ;
+  sh:property ceo:CultuurhistorischObject-heeftKennisregistratie ;
+  sh:property ceo:CultuurhistorischObject-heeftLocatieAanduiding ;
+  sh:property ceo:CultuurhistorischObject-heeftMateriaal ;
+  sh:property ceo:CultuurhistorischObject-heeftNaam ;
+  sh:property ceo:CultuurhistorischObject-heeftOmschrijving ;
+  sh:property ceo:CultuurhistorischObject-heeftOorspronkelijkeFunctie ;
+  sh:property ceo:CultuurhistorischObject-heeftSamenhang ;
+  sh:property ceo:CultuurhistorischObject-heeftStijlEnCultuur ;
+  sh:property ceo:CultuurhistorischObject-heeftType ;
+  sh:property ceo:CultuurhistorischObject-heeftVertrouwelijkAanduiding ;
+  sh:property ceo:CultuurhistorischObject-heeftZaakobject ;
+  sh:property ceo:CultuurhistorischObject-heeftZichtbaarheid ;
+  sh:property ceo:CultuurhistorischObject-internationaalKenteken ;
+  sh:property ceo:CultuurhistorischObject-ligtInObject ;
+.
+ceo:CultuurhistorischObject-address
+  a sh:PropertyShape ;
+  sh:path locn:address ;
+.
+ceo:CultuurhistorischObject-bevatObject
+  a sh:PropertyShape ;
+  sh:path ceo:bevatObject ;
+  sh:class ceo:CultuurhistorischObject ;
+.
+ceo:CultuurhistorischObject-cultuurhistorischObjectnummer
+  a sh:PropertyShape ;
+  sh:path ceo:cultuurhistorischObjectnummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:CultuurhistorischObject-heeftArcheologischeKwaliteit
+  a sh:PropertyShape ;
+  sh:path ceo:heeftArcheologischeKwaliteit ;
+  sh:class ceo:ArcheologischeKwaliteit ;
+.
+ceo:CultuurhistorischObject-heeftBasisregistratieRelatie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBasisregistratieRelatie ;
+  sh:class ceo:BasisregistratieRelatie ;
+.
+ceo:CultuurhistorischObject-heeftBodemgebruik
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBodemgebruik ;
+  sh:class ceo:Bodemgebruik ;
+.
+ceo:CultuurhistorischObject-heeftBouwkundigeKwaliteit
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBouwkundigeKwaliteit ;
+  sh:class ceo:BouwkundigeKwaliteit ;
+.
+ceo:CultuurhistorischObject-heeftFunctie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftFunctie ;
+  sh:class ceo:Functie ;
+.
+ceo:CultuurhistorischObject-heeftGebeurtenis
+  a sh:PropertyShape ;
+  sh:path ceo:heeftGebeurtenis ;
+  sh:class ceo:Gebeurtenis ;
+.
+ceo:CultuurhistorischObject-heeftGeometrie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftGeometrie ;
+  sh:class ceo:Geometrie ;
+.
+ceo:CultuurhistorischObject-heeftHuidigeFunctie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftHuidigeFunctie ;
+  sh:class ceo:Functie ;
+.
+ceo:CultuurhistorischObject-heeftKennisregistratie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftKennisregistratie ;
+  sh:class ceo:Kennisregistratie ;
+.
+ceo:CultuurhistorischObject-heeftLocatieAanduiding
+  a sh:PropertyShape ;
+  sh:path ceo:heeftLocatieAanduiding ;
+  sh:class ceo:LocatieAanduiding ;
+.
+ceo:CultuurhistorischObject-heeftMateriaal
+  a sh:PropertyShape ;
+  sh:path ceo:heeftMateriaal ;
+  sh:class ceo:Materiaal ;
+.
+ceo:CultuurhistorischObject-heeftNaam
+  a sh:PropertyShape ;
+  sh:path ceo:heeftNaam ;
+  sh:class ceo:Naam ;
+.
+ceo:CultuurhistorischObject-heeftOmschrijving
+  a sh:PropertyShape ;
+  sh:path ceo:heeftOmschrijving ;
+  sh:class ceo:Omschrijving ;
+.
+ceo:CultuurhistorischObject-heeftOorspronkelijkeFunctie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftOorspronkelijkeFunctie ;
+  sh:class ceo:Functie ;
+.
+ceo:CultuurhistorischObject-heeftSamenhang
+  a sh:PropertyShape ;
+  sh:path ceo:heeftSamenhang ;
+  sh:class ceo:Samenhang ;
+.
+ceo:CultuurhistorischObject-heeftStijlEnCultuur
+  a sh:PropertyShape ;
+  sh:path ceo:heeftStijlEnCultuur ;
+  sh:class ceo:StijlEnCultuur ;
+.
+ceo:CultuurhistorischObject-heeftType
+  a sh:PropertyShape ;
+  sh:path ceo:heeftType ;
+  sh:class ceo:Type ;
+.
+ceo:CultuurhistorischObject-heeftVertrouwelijkAanduiding
+  a sh:PropertyShape ;
+  sh:path ceo:heeftVertrouwelijkAanduiding ;
+  sh:class skos:Concept ;
+.
+ceo:CultuurhistorischObject-heeftZaakobject
+  a sh:PropertyShape ;
+  sh:path ceo:heeftZaakobject ;
+  sh:class <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaakobject> ;
+.
+ceo:CultuurhistorischObject-heeftZichtbaarheid
+  a sh:PropertyShape ;
+  sh:path ceo:heeftZichtbaarheid ;
+  sh:class ceo:Zichtbaarheid ;
+.
+ceo:CultuurhistorischObject-internationaalKenteken
+  a sh:PropertyShape ;
+  sh:path ceo:internationaalKenteken ;
+  sh:datatype xsd:boolean ;
+.
+ceo:CultuurhistorischObject-ligtInObject
+  a sh:PropertyShape ;
+  sh:path ceo:ligtInObject ;
+  sh:class ceo:CultuurhistorischObject ;
+.
+ceo:Datering
+  a sh:NodeShape ;
+  sh:property ceo:Datering-dateringnummer ;
+  sh:property ceo:Datering-heeftBetrouwbaarheid ;
+  sh:property ceo:Datering-heeftDateringsmethode ;
+  sh:property ceo:Datering-heeftIndicatieNauwkeurigheid ;
+  sh:property ceo:Datering-heeftPeriode ;
+  sh:property ceo:Datering-heeftTemporeleRelatie ;
+  sh:property ceo:Datering-heeftTijdvak ;
+.
+ceo:Datering-dateringnummer
+  a sh:PropertyShape ;
+  sh:path ceo:dateringnummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:Datering-heeftBetrouwbaarheid
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBetrouwbaarheid ;
+  sh:class skos:Concept ;
+.
+ceo:Datering-heeftDateringsmethode
+  a sh:PropertyShape ;
+  sh:path ceo:heeftDateringsmethode ;
+  sh:class skos:Concept ;
+.
+ceo:Datering-heeftIndicatieNauwkeurigheid
+  a sh:PropertyShape ;
+  sh:path ceo:heeftIndicatieNauwkeurigheid ;
+  sh:class skos:Concept ;
+.
+ceo:Datering-heeftPeriode
+  a sh:PropertyShape ;
+  sh:path ceo:heeftPeriode ;
+  sh:class skos:Concept ;
+.
+ceo:Datering-heeftTemporeleRelatie
+  a sh:PropertyShape ;
+  sh:path ceo:heeftTemporeleRelatie ;
+  sh:class skos:Concept ;
+.
+ceo:Datering-heeftTijdvak
+  a sh:PropertyShape ;
+  sh:path ceo:heeftTijdvak ;
+  sh:class ceo:Tijdvak ;
+.
+ceo:Functie
+  a sh:NodeShape ;
+  sh:property ceo:Functie-heeftFunctieNaam ;
+  sh:property ceo:Functie-heeftFunctiePeriode ;
+  sh:property ceo:Functie-hoofdfunctie ;
+.
+ceo:Functie-heeftFunctieNaam
+  a sh:PropertyShape ;
+  sh:path ceo:heeftFunctieNaam ;
+  sh:class skos:Concept ;
+.
+ceo:Functie-heeftFunctiePeriode
+  a sh:PropertyShape ;
+  sh:path ceo:heeftFunctiePeriode ;
+  sh:class ceo:Datering ;
+.
+ceo:Functie-hoofdfunctie
+  a sh:PropertyShape ;
+  sh:path ceo:hoofdfunctie ;
+  sh:datatype xsd:boolean ;
+.
+ceo:Gebeurtenis
+  a sh:NodeShape ;
+  sh:property ceo:Gebeurtenis-heeftActorEnRol ;
+  sh:property ceo:Gebeurtenis-heeftDatering ;
+  sh:property ceo:Gebeurtenis-heeftGebeurtenisNaam ;
+  sh:property ceo:Gebeurtenis-heeftVoorganger ;
+.
+ceo:Gebeurtenis-heeftActorEnRol
+  a sh:PropertyShape ;
+  sh:path ceo:heeftActorEnRol ;
+  sh:class ceo:ActorEnRol ;
+.
+ceo:Gebeurtenis-heeftDatering
+  a sh:PropertyShape ;
+  sh:path ceo:heeftDatering ;
+  sh:class ceo:Datering ;
+.
+ceo:Gebeurtenis-heeftGebeurtenisNaam
+  a sh:PropertyShape ;
+  sh:path ceo:heeftGebeurtenisNaam ;
+  sh:class skos:Concept ;
+.
+ceo:Gebeurtenis-heeftVoorganger
+  a sh:PropertyShape ;
+  sh:path ceo:heeftVoorganger ;
+  sh:class ceo:Gebeurtenis ;
+.
+ceo:Geometrie
+  a sh:NodeShape ;
+  sh:property ceo:Geometrie-asWKT-RD ;
+  sh:property ceo:Geometrie-geometrienummer ;
+  sh:property ceo:Geometrie-heeftGeometrieKwaliteit ;
+  sh:property ceo:Geometrie-heeftGeometrieStatus ;
+  sh:property ceo:Geometrie-heeftHerkomst ;
+.
+ceo:Geometrie-asWKT-RD
+  a sh:PropertyShape ;
+  sh:path ceo:asWKT-RD ;
+  sh:datatype xsd:string ;
+.
+ceo:Geometrie-geometrienummer
+  a sh:PropertyShape ;
+  sh:path ceo:geometrienummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:Geometrie-heeftGeometrieKwaliteit
+  a sh:PropertyShape ;
+  sh:path ceo:heeftGeometrieKwaliteit ;
+  sh:class skos:Concept ;
+.
+ceo:Geometrie-heeftGeometrieStatus
+  a sh:PropertyShape ;
+  sh:path ceo:heeftGeometrieStatus ;
+  sh:class skos:Concept ;
+.
+ceo:Geometrie-heeftHerkomst
+  a sh:PropertyShape ;
+  sh:path ceo:heeftHerkomst ;
+  sh:class skos:Concept ;
+.
+ceo:Grondsporen
+  a sh:NodeShape ;
+  sh:property ceo:Grondsporen-aantal ;
+  sh:property ceo:Grondsporen-archis2Vondstnummer ;
+.
+ceo:Grondsporen-aantal
+  a sh:PropertyShape ;
+  sh:path ceo:aantal ;
+  sh:datatype xsd:integer ;
+.
+ceo:Grondsporen-archis2Vondstnummer
+  a sh:PropertyShape ;
+  sh:path ceo:archis2Vondstnummer ;
+  sh:datatype xsd:string ;
+.
+ceo:Kennisregistratie
+  a sh:NodeShape ;
+  sh:property ceo:Kennisregistratie-formeelStandpunt ;
+  sh:property ceo:Kennisregistratie-heeftBetrekkingOp ;
+  sh:property ceo:Kennisregistratie-heeftBronverwijzing ;
+  sh:property ceo:Kennisregistratie-heeftInvoerder ;
+  sh:property ceo:Kennisregistratie-heeftKennisdomein ;
+  sh:property ceo:Kennisregistratie-heeftMelder ;
+  sh:property ceo:Kennisregistratie-heeftObservatiedatum ;
+  sh:property ceo:Kennisregistratie-heeftRecordhouder ;
+  sh:property ceo:Kennisregistratie-heeftVertrouwelijkAanduiding ;
+  sh:property ceo:Kennisregistratie-heeftVervanger ;
+  sh:property ceo:Kennisregistratie-heeftZaak ;
+  sh:property ceo:Kennisregistratie-isVolgensNorm ;
+  sh:property ceo:Kennisregistratie-kennisregistratienummer ;
+  sh:property ceo:Kennisregistratie-registratiedatum ;
+  sh:property ceo:Kennisregistratie-taal ;
+  sh:property ceo:Kennisregistratie-toelichting ;
+.
+ceo:Kennisregistratie-formeelStandpunt
+  a sh:PropertyShape ;
+  sh:path ceo:formeelStandpunt ;
+  sh:datatype xsd:boolean ;
+.
+ceo:Kennisregistratie-heeftBetrekkingOp
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBetrekkingOp ;
+  sh:class ceo:CultuurhistorischObject ;
+.
+ceo:Kennisregistratie-heeftBronverwijzing
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBronverwijzing ;
+  sh:class ceo:Bronverwijzing ;
+.
+ceo:Kennisregistratie-heeftInvoerder
+  a sh:PropertyShape ;
+  sh:path ceo:heeftInvoerder ;
+  sh:class <https://linkeddata.cultureelerfgoed.nl/def/zo#Betrokkene> ;
+.
+ceo:Kennisregistratie-heeftKennisdomein
+  a sh:PropertyShape ;
+  sh:path ceo:heeftKennisdomein ;
+  sh:class skos:Concept ;
+.
+ceo:Kennisregistratie-heeftMelder
+  a sh:PropertyShape ;
+  sh:path ceo:heeftMelder ;
+  sh:class <https://linkeddata.cultureelerfgoed.nl/def/zo#Betrokkene> ;
+.
+ceo:Kennisregistratie-heeftObservatiedatum
+  a sh:PropertyShape ;
+  sh:path ceo:heeftObservatiedatum ;
+  sh:class ceo:Datering ;
+.
+ceo:Kennisregistratie-heeftRecordhouder
+  a sh:PropertyShape ;
+  sh:path ceo:heeftRecordhouder ;
+  sh:class <https://linkeddata.cultureelerfgoed.nl/def/zo#Betrokkene> ;
+.
+ceo:Kennisregistratie-heeftVertrouwelijkAanduiding
+  a sh:PropertyShape ;
+  sh:path ceo:heeftVertrouwelijkAanduiding ;
+  sh:class skos:Concept ;
+.
+ceo:Kennisregistratie-heeftVervanger
+  a sh:PropertyShape ;
+  sh:path ceo:heeftVervanger ;
+  sh:class ceo:Kennisregistratie ;
+.
+ceo:Kennisregistratie-heeftZaak
+  a sh:PropertyShape ;
+  sh:path ceo:heeftZaak ;
+  sh:class <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
+.
+ceo:Kennisregistratie-isVolgensNorm
+  a sh:PropertyShape ;
+  sh:path ceo:isVolgensNorm ;
+  sh:datatype xsd:boolean ;
+.
+ceo:Kennisregistratie-kennisregistratienummer
+  a sh:PropertyShape ;
+  sh:path ceo:kennisregistratienummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:Kennisregistratie-registratiedatum
+  a sh:PropertyShape ;
+  sh:path ceo:registratiedatum ;
+  sh:datatype xsd:date ;
+.
+ceo:Kennisregistratie-taal
+  a sh:PropertyShape ;
+  sh:path ceo:taal ;
+  sh:datatype xsd:string ;
+.
+ceo:Kennisregistratie-toelichting
+  a sh:PropertyShape ;
+  sh:path ceo:toelichting ;
+  sh:datatype xsd:string ;
+.
+ceo:LocatieAanduiding
+  a sh:NodeShape ;
+  sh:property ceo:LocatieAanduiding-addressArea ;
+  sh:property ceo:LocatieAanduiding-heeftLocatieAanduidingStatus ;
+  sh:property ceo:LocatieAanduiding-heeftLocatieAdres ;
+  sh:property ceo:LocatieAanduiding-kaartbladcode ;
+  sh:property ceo:LocatieAanduiding-locatieAanduidingnummer ;
+  sh:property ceo:LocatieAanduiding-locatienaam ;
+  sh:property ceo:LocatieAanduiding-locatieomschrijving ;
+.
+ceo:LocatieAanduiding-addressArea
+  a sh:PropertyShape ;
+  sh:path locn:addressArea ;
+.
+ceo:LocatieAanduiding-heeftLocatieAanduidingStatus
+  a sh:PropertyShape ;
+  sh:path ceo:heeftLocatieAanduidingStatus ;
+  sh:class skos:Concept ;
+.
+ceo:LocatieAanduiding-heeftLocatieAdres
+  a sh:PropertyShape ;
+  sh:path ceo:heeftLocatieAdres ;
+  sh:class ceo:Adresgegevens ;
+.
+ceo:LocatieAanduiding-kaartbladcode
+  a sh:PropertyShape ;
+  sh:path ceo:kaartbladcode ;
+  sh:datatype xsd:string ;
+.
+ceo:LocatieAanduiding-locatieAanduidingnummer
+  a sh:PropertyShape ;
+  sh:path ceo:locatieAanduidingnummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:LocatieAanduiding-locatienaam
+  a sh:PropertyShape ;
+  sh:path ceo:locatienaam ;
+  sh:datatype xsd:string ;
+.
+ceo:LocatieAanduiding-locatieomschrijving
+  a sh:PropertyShape ;
+  sh:path ceo:locatieomschrijving ;
+  sh:datatype xsd:string ;
+.
+ceo:Materiaal
+  a sh:NodeShape ;
+  sh:property ceo:Materiaal-heeftMateriaalNaam ;
+.
+ceo:Materiaal-heeftMateriaalNaam
+  a sh:PropertyShape ;
+  sh:path ceo:heeftMateriaalNaam ;
+  sh:class skos:Concept ;
+.
+ceo:Naam
+  a sh:NodeShape ;
+  sh:property ceo:Naam-huidigeNaam ;
+  sh:property ceo:Naam-naam ;
+  sh:property ceo:Naam-oorspronkelijkeNaam ;
+.
+ceo:Naam-huidigeNaam
+  a sh:PropertyShape ;
+  sh:path ceo:huidigeNaam ;
+  sh:datatype xsd:boolean ;
+.
+ceo:Naam-naam
+  a sh:PropertyShape ;
+  sh:path ceo:naam ;
+  sh:datatype xsd:string ;
+.
+ceo:Naam-oorspronkelijkeNaam
+  a sh:PropertyShape ;
+  sh:path ceo:oorspronkelijkeNaam ;
+  sh:datatype xsd:boolean ;
+.
+ceo:Omschrijving
+  a sh:NodeShape ;
+  sh:property ceo:Omschrijving-heeftOmschrijvingstype ;
+  sh:property ceo:Omschrijving-omschrijving ;
+.
+ceo:Omschrijving-heeftOmschrijvingstype
+  a sh:PropertyShape ;
+  sh:path ceo:heeftOmschrijvingstype ;
+  sh:class skos:Concept ;
+.
+ceo:Omschrijving-omschrijving
+  a sh:PropertyShape ;
+  sh:path ceo:omschrijving ;
+  sh:datatype xsd:string ;
+.
+ceo:Rijksmonument
+  a sh:NodeShape ;
+  sh:property ceo:Rijksmonument-heeftJuridischeStatus ;
+  sh:property ceo:Rijksmonument-heeftMonumentAard ;
+  sh:property ceo:Rijksmonument-rijksmonumentnummer ;
+.
+ceo:Rijksmonument-heeftBebouwdeKomType
+  a sh:PropertyShape ;
+  sh:path ceo:heeftBebouwdeKomType ;
+  sh:class skos:Concept ;
+.
+ceo:Rijksmonument-heeftJuridischeStatus
+  a sh:PropertyShape ;
+  sh:path ceo:heeftJuridischeStatus ;
+  sh:class skos:Concept ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:IRI ;
+  sh:or (
+      rn:b2d9a59a-fe1e-4552-9a05-3c2acddff864
+      <https://data.cultureelerfgoed.nl/term/id/rn/2e93edd1-098f-4f31-ae7e-72cb77f4d2ca>
+    ) ;
+  sh:severity sh:Violation ;
+.
+ceo:Rijksmonument-heeftMonumentAard
+  a sh:PropertyShape ;
+  sh:path ceo:heeftMonumentAard ;
+  sh:class skos:Concept ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:IRI ;
+  sh:or (
+      rn:fc966a68-8863-4970-a83e-110f96006c21
+      rn:b673c8c1-5d93-496d-8f9e-89133d579d77
+      <https://data.cultureelerfgoed.nl/term/id/rn/53f1b4fc-00e8-4f35-b6d6-2a901445d24f>
+    ) ;
+  sh:severity sh:Violation ;
+.
+ceo:Rijksmonument-isHoofdobjectVanComplex
+  a sh:PropertyShape ;
+  sh:path ceo:isHoofdobjectVanComplex ;
+  sh:class ceo:Complex ;
+.
+ceo:Rijksmonument-isOnderdeelVanComplex
+  a sh:PropertyShape ;
+  sh:path ceo:isOnderdeelVanComplex ;
+  sh:class ceo:Complex ;
+.
+ceo:Rijksmonument-onroerendeZaakomschrijving
+  a sh:PropertyShape ;
+  sh:path ceo:onroerendeZaakomschrijving ;
+  sh:datatype xsd:string ;
+.
+ceo:Rijksmonument-rijksmonumentnummer
+  a sh:PropertyShape ;
+  sh:path ceo:rijksmonumentnummer ;
+  sh:datatype xsd:integer ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+.
+ceo:Samenhang
+  a sh:NodeShape ;
+  sh:property ceo:Samenhang-samenhangToelichting ;
+  sh:property ceo:Samenhang-samenhangnummer ;
+.
+ceo:Samenhang-samenhangToelichting
+  a sh:PropertyShape ;
+  sh:path ceo:samenhangToelichting ;
+  sh:datatype xsd:string ;
+.
+ceo:Samenhang-samenhangnummer
+  a sh:PropertyShape ;
+  sh:path ceo:samenhangnummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:StijlEnCultuur
+  a sh:NodeShape ;
+  sh:property ceo:StijlEnCultuur-heeftStijlEnCultuurNaam ;
+  sh:property ceo:StijlEnCultuur-heeftZuiverheid ;
+.
+ceo:StijlEnCultuur-heeftStijlEnCultuurNaam
+  a sh:PropertyShape ;
+  sh:path ceo:heeftStijlEnCultuurNaam ;
+  sh:class skos:Concept ;
+.
+ceo:StijlEnCultuur-heeftZuiverheid
+  a sh:PropertyShape ;
+  sh:path ceo:heeftZuiverheid ;
+  sh:class skos:Concept ;
+.
+ceo:Tijdvak
+  a sh:NodeShape ;
+  sh:property ceo:Tijdvak-einddatum ;
+  sh:property ceo:Tijdvak-startdatum ;
+  sh:property ceo:Tijdvak-tijdvaknaam ;
+  sh:property ceo:Tijdvak-tijdvaknummer ;
+.
+ceo:Tijdvak-einddatum
+  a sh:PropertyShape ;
+  sh:path ceo:einddatum ;
+  sh:datatype xsd:date ;
+.
+ceo:Tijdvak-startdatum
+  a sh:PropertyShape ;
+  sh:path ceo:startdatum ;
+  sh:datatype xsd:date ;
+.
+ceo:Tijdvak-tijdvaknaam
+  a sh:PropertyShape ;
+  sh:path ceo:tijdvaknaam ;
+  sh:datatype xsd:string ;
+.
+ceo:Tijdvak-tijdvaknummer
+  a sh:PropertyShape ;
+  sh:path ceo:tijdvaknummer ;
+  sh:datatype xsd:integer ;
+.
+ceo:Type
+  a sh:NodeShape ;
+  sh:property ceo:Type-heeftTypeNaam ;
+  sh:property ceo:Type-heeftTypekenmerk ;
+  sh:property ceo:Type-heeftZekerheidsaanduiding ;
+.
+ceo:Type-heeftTypeNaam
+  a sh:PropertyShape ;
+  sh:path ceo:heeftTypeNaam ;
+  sh:class skos:Concept ;
+.
+ceo:Type-heeftTypekenmerk
+  a sh:PropertyShape ;
+  sh:path ceo:heeftTypekenmerk ;
+  sh:class skos:Concept ;
+.
+ceo:Type-heeftZekerheidsaanduiding
+  a sh:PropertyShape ;
+  sh:path ceo:heeftZekerheidsaanduiding ;
+  sh:class skos:Concept ;
+.
+ceo:Vondsten
+  a sh:NodeShape ;
+  sh:property ceo:Vondsten-aantal ;
+  sh:property ceo:Vondsten-archis2Vondstnummer ;
+  sh:property ceo:Vondsten-heeftToestand ;
+.
+ceo:Vondsten-aantal
+  a sh:PropertyShape ;
+  sh:path ceo:aantal ;
+  sh:datatype xsd:integer ;
+.
+ceo:Vondsten-archis2Vondstnummer
+  a sh:PropertyShape ;
+  sh:path ceo:archis2Vondstnummer ;
+  sh:datatype xsd:string ;
+.
+ceo:Vondsten-heeftToestand
+  a sh:PropertyShape ;
+  sh:path ceo:heeftToestand ;
+  sh:class skos:Concept ;
+.
+ceo:Vondstlocatie
+  a sh:NodeShape ;
+  sh:property ceo:Vondstlocatie-archis2Complexnummer ;
+  sh:property ceo:Vondstlocatie-archis2Vondstmeldingsnummer ;
+  sh:property ceo:Vondstlocatie-archis2Waarnemingsnummer ;
+  sh:property ceo:Vondstlocatie-heeftVerwerving ;
+.
+ceo:Vondstlocatie-archis2Complexnummer
+  a sh:PropertyShape ;
+  sh:path ceo:archis2Complexnummer ;
+  sh:datatype xsd:string ;
+.
+ceo:Vondstlocatie-archis2Vondstmeldingsnummer
+  a sh:PropertyShape ;
+  sh:path ceo:archis2Vondstmeldingsnummer ;
+  sh:datatype xsd:string ;
+.
+ceo:Vondstlocatie-archis2Waarnemingsnummer
+  a sh:PropertyShape ;
+  sh:path ceo:archis2Waarnemingsnummer ;
+  sh:datatype xsd:string ;
+.
+ceo:Vondstlocatie-heeftVerwerving
+  a sh:PropertyShape ;
+  sh:path ceo:heeftVerwerving ;
+  sh:class skos:Concept ;
+.
+ceo:Zichtbaarheid
+  a sh:NodeShape ;
+  sh:property ceo:Zichtbaarheid-heeftZichtbaarheidsaanduiding ;
+.
+ceo:Zichtbaarheid-heeftZichtbaarheidsaanduiding
+  a sh:PropertyShape ;
+  sh:path ceo:heeftZichtbaarheidsaanduiding ;
+  sh:class skos:Concept ;
+.
+ceo:adres123
+  a ceo:Adresgegevens ;
+  skos:prefLabel "postcode123" ;
+  ceo:postcode "3445" ;
+.
+<https://linkeddata.cultureelerfgoed.nl/def/ceo.shapes>
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
+.
