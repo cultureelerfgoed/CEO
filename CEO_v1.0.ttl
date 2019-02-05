@@ -4,8 +4,6 @@
 # imports: file:///TopBraid/RCE/brk-model.rdf
 # imports: http://brk.basisregistraties.overheid.nl/def/brk
 # imports: http://data.pdok.nl/def/pdok
-# imports: http://purl.org/dc/elements/1.1/
-# imports: http://purl.org/dc/terms/
 # imports: http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf
 # imports: http://www.w3.org/2003/01/geo/wgs84_pos
 # imports: http://www.w3.org/2004/02/skos/core
@@ -16,6 +14,7 @@
 @prefix brk: <http://brk.basisregistraties.overheid.nl/def/brk#> .
 @prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pdok: <http://data.pdok.nl/def/pdok#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -82,7 +81,10 @@ pdok:asWKT-RD
   dcterms:created "2018-04-23" ;
   dcterms:creator ceo:Frans_van_der_Zande ;
   dcterms:creator ceo:Patrick_Mout ;
+  dcterms:description "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE." ;
   dcterms:hasVersion "1.0" ;
+  dcterms:issued "2018-12-01" ;
+  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:title "Cultureel Erfgoed Ontologie"@nl ;
@@ -91,14 +93,12 @@ pdok:asWKT-RD
   owl:imports <file:///TopBraid/RCE/brk-model.rdf> ;
   owl:imports <http://brk.basisregistraties.overheid.nl/def/brk> ;
   owl:imports <http://data.pdok.nl/def/pdok> ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports dcterms: ;
   owl:imports <http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf> ;
   owl:imports <http://www.w3.org/2003/01/geo/wgs84_pos> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/ns/locn> ;
   owl:versionInfo "Created with TopBraid Composer" ;
-  skos:editorialNote "Dit betreft voor extern, richting Kadaster versie 1.0. Intern wordt deze status pas bereikt na testen, aanpassen van de ontologie op basis van het testplan."@nl ;
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
 .
 ceo:ActorEnRol
   a owl:Class ;
@@ -375,15 +375,22 @@ ceo:Zichtbaarheid
   rdfs:label "Zichtbaarheid"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
-ceo:aantal
+ceo:aantalGrondsporen
   a owl:DatatypeProperty ;
   dcterms:created "27-3-18 9:19" ;
-  dcterms:modified "8-6-18" ;
-  rdfs:comment "De property aantal wordt gebruikt om aan te geven het aantal grondsporen en vondsten."@nl ;
+  dcterms:modified "5-2-19" ;
+  rdfs:comment "De property aantalGrondsporen wordt gebruikt om aan te geven het aantal grondsporen."@nl ;
   rdfs:domain ceo:Grondsporen ;
-  rdfs:domain ceo:Vondsten ;
-  rdfs:label "Aantal"@nl ;
+  rdfs:label "Aantal grondsporen"@nl ;
   rdfs:range xsd:integer ;
+.
+ceo:aantalVondsten
+  a owl:DatatypeProperty ;
+  rdfs:comment "De property aantalGrondsporen wordt gebruikt om aan te geven het aantal vondsten."@nl ;
+  rdfs:domain ceo:Vondsten ;
+  rdfs:label "Aantal vondsten"@nl ;
+  rdfs:range xsd:integer ;
+  skos:prefLabel "aantal vondsten" ;
 .
 ceo:actor
   a owl:DatatypeProperty ;
@@ -467,7 +474,7 @@ ceo:asWKT-RD
   rdfs:comment "De property asWKT-RD legt de relatie vast tussen een cultuurhistorisch object en een geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD)."@nl ;
   rdfs:domain ceo:Geometrie ;
   rdfs:label "asWKT-RD"@nl ;
-  rdfs:range <http://www.opengis.net/ont/geosparql#wktLiteral> ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf pdok:asWKT-RD ;
 .
 ceo:basisregistratieRelatienummer
@@ -530,16 +537,6 @@ ceo:complexnummer
   rdfs:domain ceo:Complex ;
   rdfs:label "Complexnummer"@nl ;
   rdfs:range xsd:integer ;
-.
-ceo:complexomschrijving
-  a owl:DatatypeProperty ;
-  dcterms:created "2018-2-6" ;
-  dcterms:modified "11-6-18" ;
-  rdfs:comment "De property complexomschrijving wordt gebruikt om aan te geven de korte aanduiding, of omschrijving, die volstaat om vast te stellen over welke complexen het gaat."@nl ;
-  rdfs:domain ceo:Complex ;
-  rdfs:label "Complexomschrijving"@nl ;
-  rdfs:range xsd:string ;
-  rdfs:subPropertyOf ceo:omschrijving ;
 .
 ceo:cultuurhistorischObjectnummer
   a owl:DatatypeProperty ;
@@ -1440,6 +1437,13 @@ ceo:kadastraleGemeentecode
   rdfs:comment "De property kadastraleGemeentecode wordt gebruikt om aan te geven of een kadastrale gemeente code aan een rijksmonument is gegeven."@nl ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Kadastrale gemeentecode"@nl ;
+  rdfs:range xsd:string ;
+.
+ceo:kennisregistratieToelichting
+  a owl:DatatypeProperty ;
+  rdfs:comment "De property kennisegistratieToelichting wordt gebruikt om aan te geven de toelichting op de kennisregistratie instance."@nl ;
+  rdfs:domain ceo:Kennisregistratie ;
+  rdfs:label "Kennisregistratie toelichting"@nl ;
   rdfs:range xsd:string ;
 .
 ceo:kennisregistratienummer
