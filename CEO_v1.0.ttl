@@ -28,7 +28,6 @@ pdok:asWKT-RD
   dcterms:created "28-6-18 15:30" ;
   rdfs:comment "" ;
   rdfs:label "" ;
-  rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#asWKT> ;
 .
 <http://www.opengis.net/ont/geosparql#asWKT>
   skos:editorialNote "De property asWKT legt de relatie vast tussen een cultuurhistorisch object en een geometrie."@nl ;
