@@ -299,6 +299,15 @@ ztco:heeftEigenschaptype
   rdfs:range ztco:Eigenschaptype ;
   owl:inverseOf ztco:isVanZaaktype ;
 .
+ztco:heeftEigenschapwaardeNaam
+  a owl:ObjectProperty ;
+  dcterms:created "" ;
+  dcterms:modified "" ;
+  rdfs:comment "De property wordtUitgeoefendDoorBetrokkene legt de relatie tussen eigenschaptype en waarde vast."@nl ;
+  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ztc#Eigenschaptype> ;
+  rdfs:label "heeft eigenschapwaarde naam" ;
+  rdfs:range skos:Concept ;
+.
 ztco:heeftRelevanteDocumentype
   a owl:ObjectProperty ;
   dcterms:modified "2019-02-20" ;
