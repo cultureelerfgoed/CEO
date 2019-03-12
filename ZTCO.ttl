@@ -1,4 +1,4 @@
-# baseURI: https://linkeddata.cultureelerfgoed.nl/def/ztc
+# baseURI: https://linkeddata.cultureelerfgoed.nl/def/ztco
 # imports: http://purl.org/dc/elements/1.1/
 # imports: https://linkeddata.cultureelerfgoed.nl/def/ztce
 # prefix: ztco
@@ -12,9 +12,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zo#> .
 @prefix ztceo: <https://linkeddata.cultureelerfgoed.nl/def/ztce#> .
-@prefix ztco: <https://linkeddata.cultureelerfgoed.nl/def/ztc#> .
+@prefix ztco: <https://linkeddata.cultureelerfgoed.nl/def/ztco#> .
 
-<https://linkeddata.cultureelerfgoed.nl/def/ztc>
+<https://linkeddata.cultureelerfgoed.nl/def/ztco>
   a owl:Ontology ;
   dcterms:created "2018-11-01" ;
   dcterms:creator ceo:Frans_van_der_Zande ;
@@ -91,6 +91,7 @@ ztco:archieftermijn
   rdfs:comment "De property archieftermijn wordt gebruikt om aan te geven welke archieftermijn is gekoppeld aan een zaaktype."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "Archieftermijn"@nl ;
+  rdfs:range xsd:integer ;
   skos:definition "De termijn in maanden waarna het zaakdossier (de zaak met alle bijbehorende documenten) van een zaak van dit type vernietigd of overgebracht moet worden."@nl ;
 .
 ztco:besluittypeOmschrijving
@@ -173,11 +174,12 @@ ztco:datumEindeGeldigheidZaaktype
   rdfs:range xsd:date ;
   skos:definition "De datum van wanneer het zaaktype niet meer geldig is."@nl ;
 .
-ztco:definitie
+ztco:definitieEigenschaptype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property definitie wordt gebruikt om aan te geven welke definitie is gekoppeld aan een eigenschaptype."@nl ;
+  dcterms:modified "2019-03-04" ;
+  rdfs:comment "De property definitieEigenschaptype wordt gebruikt om aan te geven welke definitie is gekoppeld aan een eigenschaptype."@nl ;
   rdfs:domain ztco:Eigenschaptype ;
-  rdfs:label "Definitie"@nl ;
+  rdfs:label "Definitie eigenschaptype"@nl ;
   rdfs:range xsd:string ;
   skos:definition "De beschrijving van de betekenis van deze eigenschap"@nl ;
 .
@@ -185,7 +187,7 @@ ztco:documenttypeOmschrijving
   a owl:DatatypeProperty ;
   rdfs:comment "De property documenttypeOmschrijving wordt gebruikt om aan te geven welke documenttypeomschrijving is gekoppeld aan een documenttype."@nl ;
   rdfs:domain ztco:Documenttype ;
-  rdfs:label "Documenttypeomschrijving"@nl ;
+  rdfs:label "Documenttype omschrijving"@nl ;
   rdfs:range xsd:string ;
   skos:definition "Omschrijving van de aard van documenten van dit documenttype."@nl ;
 .
@@ -211,21 +213,24 @@ ztco:doorlooptijdStatus
   rdfs:comment "De property doorlooptijdStatus wordt gebruikt om aan te geven welke doorlooptijd status is gekoppeld aan een statustype."@nl ;
   rdfs:domain ztco:Statustype ;
   rdfs:label "Doorlooptijd status"@nl ;
+  rdfs:range xsd:integer ;
   skos:definition "De door de RCE gestelde norm voor de doorlooptijd voor het bereiken van statussen van dit statustype bij het desbetreffende zaaktype."@nl ;
 .
-ztco:eigenschapnaam
+ztco:eigenschapnaamEigenschaptype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property eigenschapnaam wordt gebruikt om aan te geven welke eigenschapnaam is gekoppeld aan een eigenschaptype."@nl ;
+  dcterms:modified "2019-03-04" ;
+  rdfs:comment "De property eigenschapnaamEigenschaptype wordt gebruikt om aan te geven welke eigenschapnaam is gekoppeld aan een eigenschaptype."@nl ;
   rdfs:domain ztco:Eigenschaptype ;
-  rdfs:label "Eigenschapnaam"@nl ;
+  rdfs:label "Eigenschapnaam eigenschaptype"@nl ;
   rdfs:range xsd:string ;
   skos:definition "De naam van de eigenschap"@nl ;
 .
-ztco:formaat
+ztco:formaatEigenschaptype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property formaat wordt gebruikt om aan te geven welke formaat is gekoppeld aan een eigenschaptype."@nl ;
+  dcterms:modified "2019-03-04" ;
+  rdfs:comment "De property formaatEigenschaptype wordt gebruikt om aan te geven welke formaat is gekoppeld aan een eigenschaptype."@nl ;
   rdfs:domain ztco:Eigenschaptype ;
-  rdfs:label "Formaat"@nl ;
+  rdfs:label "Formaat eigenschaptype"@nl ;
   rdfs:range xsd:string ;
   skos:definition "Het soort tekens waarmee waarden van de eigenschap kunnen worden vastgelegd."@nl ;
 .
@@ -237,18 +242,28 @@ ztco:formuliernaam
   rdfs:range xsd:string ;
   skos:definition "De naam van het formulier, waarmee de klant het product of dienst kan aanvragen. "@nl ;
 .
+ztco:heeftBetrekkingOpAndereZaaktype
+  a owl:SymmetricProperty ;
+  dcterms:created "2019-03-12" ;
+  dcterms:modified "" ;
+  rdfs:comment "De propertyeeftBetrekkingOpAndereZaaktype legt de relatie tussen zaaktype en zaaktype vast."@nl ;
+  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ztc#Zaaktype> ;
+  rdfs:label "heeft betrekking op andere zaaktype" ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/ztc#Zaaktype> ;
+.
 ztco:heeftBetrekkingOpZaaktype
   a owl:ObjectProperty ;
-  dcterms:modified "2019-02-20" ;
-  rdfs:comment "De property heeftBetrekkingOpZaaktype legt de relatie tussen zaaktype en zaaktype."@nl ;
-  rdfs:domain ztco:Zaaktype ;
+  dcterms:modified "2019-03-12" ;
+  rdfs:comment "De property heeftBetrekkingOpZaaktype legt de relatie tussen statustype en zaaktype vast."@nl ;
+  rdfs:domain ztco:Statustype ;
   rdfs:label "Heeft betrekking op zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
+  owl:inverseOf ztco:heeftStatustype ;
 .
 ztco:heeftBetrokkeneInRoltype
   a owl:ObjectProperty ;
   dcterms:modified "2019-02-20" ;
-  rdfs:comment "De property heeftBetrokkeneInRoltype legt de relatie tussen zaaktype en roltype."@nl ;
+  rdfs:comment "De property heeftBetrokkeneInRoltype legt de relatie tussen zaaktype en roltype vast."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "Heeft betrokkene in roltype"@nl ;
   rdfs:range ztco:Roltype ;
@@ -259,7 +274,7 @@ ztco:heeftBetrokkeneOpZaaktype
   a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
   dcterms:modified "" ;
-  rdfs:comment "De property wordtUitgeoefendDoorBetrokkene legt de relatie tussen roltype en zaaktype. "@nl ;
+  rdfs:comment "De property wordtUitgeoefendDoorBetrokkene legt de relatie tussen roltype en zaaktype vast."@nl ;
   rdfs:domain ztco:Roltype ;
   rdfs:label "heeft betrokkene op zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
@@ -268,17 +283,17 @@ ztco:heeftBetrokkeneOpZaaktype
 ztco:heeftDeelzakenZaaktype
   a owl:ObjectProperty ;
   dcterms:modified "2019-02-20" ;
-  rdfs:comment "De property heeftDeelzakenZaaktype legt de relatie tussen deelzaken en zaaktype."@nl ;
+  rdfs:comment "De property heeftDeelzakenZaaktype legt de relatie tussen deelzaken en zaaktype vast."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "Heeft deelzaken zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
   owl:inverseOf ztco:isDeelzakenVanZaaktype ;
 .
 ztco:heeftEigenschaptype
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
   dcterms:modified "" ;
-  rdfs:comment "De property heeftEigenschaptype legt de relatie tussen zaaktype en eigenschaptype. "@nl ;
+  rdfs:comment "De property heeftEigenschaptype legt de relatie tussen zaaktype en eigenschaptype vast."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "heeft eigenschaptype"@nl ;
   rdfs:range ztco:Eigenschaptype ;
@@ -287,25 +302,28 @@ ztco:heeftEigenschaptype
 ztco:heeftRelevanteDocumentype
   a owl:ObjectProperty ;
   dcterms:modified "2019-02-20" ;
-  rdfs:comment "De property heeftRelevanteDocumenttype legt de relatie tussen zaaktype en documenttype."@nl ;
+  rdfs:comment "De property heeftRelevanteDocumenttype legt de relatie tussen zaaktype en documenttype vast."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "Heeft relevante documenttype"@nl ;
   rdfs:range ztco:Documenttype ;
+  owl:inverseOf ztco:isRelevantVoorZaaktype ;
   skos:definition "De documenttypen die relevant kunnen zijn voor zaaken van dit zaaktype."@nl ;
 .
 ztco:heeftStatustype
   a owl:ObjectProperty ;
-  rdfs:comment "De property heeftStatustype legt de relatie tussen zaaktype en statustype."@nl ;
+  dcterms:modified "2019-03-12" ;
+  rdfs:comment "De property heeftStatustype legt de relatie tussen zaaktype en statustype vast."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "Heeft statustype"@nl ;
   rdfs:range ztco:Statustype ;
+  owl:inverseOf ztco:heeftBetrekkingOpZaaktype ;
   skos:definition "De statustypen die bereikt kunnen worden bij behandeling van zaken van het zaaktype."@nl ;
 .
 ztco:hoortBijDocumenttype
   a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
   dcterms:modified "" ;
-  rdfs:comment "De property hoortBijDocumenttype legt de relatie tussen statustype en documenttype. "@nl ;
+  rdfs:comment "De property hoortBijDocumenttype legt de relatie tussen statustype en documenttype vast."@nl ;
   rdfs:domain ztco:Statustype ;
   rdfs:label "hoort bij documenttype"@nl ;
   rdfs:range ztco:Documenttype ;
@@ -315,7 +333,7 @@ ztco:isDeelzakenVanZaaktype
   a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
   dcterms:modified "" ;
-  rdfs:comment "De property isDeelzakenVanZaaktype legt de relatie tussen zaaktype en deelzaken. "@nl ;
+  rdfs:comment "De property isDeelzakenVanZaaktype legt de relatie tussen zaaktype en deelzaken vast."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "is deelzaken van zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
@@ -325,7 +343,7 @@ ztco:isGezetDoorRoltype
   a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
   dcterms:modified "" ;
-  rdfs:comment "De property isGezetDoorRoltype legt de relatie tussen statustype en roltype."@nl ;
+  rdfs:comment "De property isGezetDoorRoltype legt de relatie tussen statustype en roltype vast."@nl ;
   rdfs:domain ztco:Statustype ;
   rdfs:label "is gezet door roltype"@nl ;
   rdfs:range ztco:Roltype ;
@@ -335,15 +353,15 @@ ztco:isRelevantVoorZaaktype
   a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
   dcterms:modified "" ;
-  rdfs:comment "De property wordtUitgeoefendDoorBetrokkene legt de relatie tussen documenttype en zaakttype. "@nl ;
-  rdfs:domain ztco:Documentype ;
+  rdfs:comment "De property wordtUitgeoefendDoorBetrokkene legt de relatie tussen documenttype en zaakttype vast."@nl ;
+  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ztc#Documentype> ;
   rdfs:label "is relevant voor zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
-  owl:inverseOf ztco:heeftRelevanteDocumenttype ;
+  owl:inverseOf ztco:heeftRelevanteDocumentype ;
 .
 ztco:isVanEigenschaptype
   a owl:ObjectProperty ;
-  rdfs:comment "De property isVanEigenschaptype legt de relatie tussen eigenschap en eigenschaptype."@nl ;
+  rdfs:comment "De property isVanEigenschaptype legt de relatie tussen eigenschap en eigenschaptype vast."@nl ;
   rdfs:domain zo:Eigenschap ;
   rdfs:label "Is van eigenschaptype"@nl ;
   rdfs:range ztco:Eigenschaptype ;
@@ -351,16 +369,17 @@ ztco:isVanEigenschaptype
 ztco:isVanZaaktype
   a owl:ObjectProperty ;
   dcterms:modified "2019-02-20" ;
-  rdfs:comment "De property isVanZaaktype legt de relatie tussen eigenschap en zaaktype."@nl ;
+  rdfs:comment "De property isVanZaaktype legt de relatie tussen eigenschap en zaaktype vast."@nl ;
   rdfs:domain ztco:Eigenschaptype ;
   rdfs:label "Is van zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
 .
-ztco:kardinaliteit
+ztco:kardinaliteitEigenschaptype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property kardinaliteit wordt gebruikt om aan te geven welke kardinaliteit is gekoppeld aan een eigenschaptype."@nl ;
+  dcterms:modified "2019-03-04" ;
+  rdfs:comment "De property kardinaliteitEigenschaptype wordt gebruikt om aan te geven welke kardinaliteit is gekoppeld aan een eigenschaptype."@nl ;
   rdfs:domain ztco:Eigenschaptype ;
-  rdfs:label "Kardinaliteit"@nl ;
+  rdfs:label "Kardinaliteit eigenschaptype"@nl ;
   rdfs:range xsd:integer ;
   skos:definition "Het aantal mogelijke voorkomens van deze eigenschap binnen het zaaktype."@nl ;
 .
@@ -368,17 +387,19 @@ ztco:legtVastBesluit
   a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
   dcterms:modified "" ;
-  rdfs:comment "De property legtVastBesluit legt de relatie tussen documenttype en besluittype. "@nl ;
-  rdfs:domain ztco:Documentype ;
+  rdfs:comment "De property legtVastBesluit legt de relatie tussen documenttype en besluittype vast."@nl ;
+  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ztc#Documentype> ;
   rdfs:label "legt vast besluit"@nl ;
-  rdfs:range ztco:Besluitype ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/ztc#Besluitype> ;
   owl:inverseOf ztco:wordtVastgelegdInDocumenttype ;
 .
-ztco:lengte
+ztco:lengteEigenschaptype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property lengte wordt gebruikt om aan te geven welke lengte is gekoppeld aan een eigenschaptype."@nl ;
+  dcterms:modified "2019-03-04" ;
+  rdfs:comment "De property lengteEigenschaptype wordt gebruikt om aan te geven welke lengte is gekoppeld aan een eigenschaptype."@nl ;
   rdfs:domain ztco:Eigenschaptype ;
-  rdfs:label "Lengte"@nl ;
+  rdfs:label "Lengte eigenschaptype"@nl ;
+  rdfs:range xsd:integer ;
   skos:definition "Het aantal karakters (lengte) waarmee waarden van de eigenschap worden vastgelegd."@nl ;
 .
 ztco:procesnaam
@@ -402,6 +423,7 @@ ztco:reactietermijn
   rdfs:comment "De property reactietermijn wordt gebruikt om aan te geven welke reactietermijn is gekoppeld aan een besluittype."@nl ;
   rdfs:domain ztco:Besluittype ;
   rdfs:label "Reactietermijn"@nl ;
+  rdfs:range xsd:integer ;
   skos:definition "Het aantal dagen, gerekend vanaf de verzend- of publicatiedatum, waarbinnen verweer tegen een besluit van het besluittype mogelijk is."@nl ;
 .
 ztco:roltypeomschrijving
@@ -503,10 +525,11 @@ ztco:verantwoordelijke
 ztco:verplichtBijStatustype
   a owl:ObjectProperty ;
   dcterms:modified "2019-02-20" ;
-  rdfs:comment "De property verplichtBijStatustype legt de relatie tussen documenttype en statustype."@nl ;
+  rdfs:comment "De property verplichtBijStatustype legt de relatie tussen documenttype en statustype vast."@nl ;
   rdfs:domain ztco:Documenttype ;
   rdfs:label "Verplicht bij statustype"@nl ;
   rdfs:range ztco:Statustype ;
+  owl:inverseOf ztco:hoortBijDocumenttype ;
   skos:definition "De statustype waarvoor geldt dat er een document van dit documenttype verplicht aanwezig moet zijn in het zaakdossier van een zaak voordat de status van dit statustype kan worden gezet."@nl ;
 .
 ztco:vertrouwelijkAanduidingDocumenttype
@@ -525,20 +548,21 @@ ztco:vertrouwelijkAanduidingZaaktype
   rdfs:range xsd:string ;
   skos:definition "Aanduiding van de mate waarin zaakdossiers van zaken van dit zaaktype voor de openbaarheid bestemd zijn."@nl ;
 .
-ztco:waardenverzameling
+ztco:waardenverzamelingEigenschaptype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property waardenverzameling wordt gebruikt om aan te geven welke waardenverzameling is gekoppeld aan een eigenschaptype."@nl ;
+  rdfs:comment "De property waardenverzamelingEigenschaptype wordt gebruikt om aan te geven welke waardenverzameling is gekoppeld aan een eigenschaptype."@nl ;
   rdfs:domain ztco:Eigenschaptype ;
-  rdfs:label "Waardenverzameling"@nl ;
+  rdfs:label "Waardenverzameling eigenschaptype"@nl ;
   rdfs:range xsd:string ;
   skos:definition "De - verzameling van - waarden die gegevens van deze eigenschap kunnen hebben."@nl ;
 .
 ztco:wordtVastgelegdInDocumenttype
   a owl:ObjectProperty ;
-  rdfs:comment "De property wordtVastgelegdInDocumenttype legt de relatie tussen besluittype en documenttype."@nl ;
+  rdfs:comment "De property wordtVastgelegdInDocumenttype legt de relatie tussen besluittype en documenttype vast."@nl ;
   rdfs:domain ztco:Besluittype ;
   rdfs:label "Wordt vastgelegd in documenttype"@nl ;
   rdfs:range ztco:Documenttype ;
+  owl:inverseOf ztco:legtVastBesluit ;
   skos:definition "Het documenttype waarin besluiten van dit besluittype worden vastgelegd"@nl ;
 .
 ztco:zaaktypeOmschrijving
@@ -552,7 +576,7 @@ ztco:zaaktypeOmschrijving
 ztco:zetAlsBetrokkeneStatustype
   a owl:ObjectProperty ;
   dcterms:modified "2019-02-20" ;
-  rdfs:comment "De property zetAlsBetrokkeneStatustype legt de relatie tussen roltype en statustype."@nl ;
+  rdfs:comment "De property zetAlsBetrokkeneStatustype legt de relatie tussen roltype en statustype vast."@nl ;
   rdfs:domain ztco:Roltype ;
   rdfs:label "Zet als betrokkene statustype"@nl ;
   rdfs:range ztco:Statustype ;

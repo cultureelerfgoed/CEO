@@ -1361,6 +1361,15 @@ ceo:hoofdfunctie
   rdfs:label "Hoofdfunctie"@nl ;
   rdfs:range xsd:boolean ;
 .
+ceo:hoortBijZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-03-12" ;
+  dcterms:modified "" ;
+  rdfs:comment "De property hoortBijZaak legt de relatie tussen de kennisregistratie en de zaak vast."@nl ;
+  rdfs:domain ceo:Kennisregistratie ;
+  rdfs:label "Hoort bij zaak"@nl ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
+.
 ceo:huidigeNaam
   a owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
