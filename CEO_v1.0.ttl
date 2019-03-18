@@ -1369,6 +1369,7 @@ ceo:hoortBijZaak
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Hoort bij zaak"@nl ;
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
+  owl:inverseOf ceo:isKennisregistratieVanZaak ;
 .
 ceo:huidigeNaam
   a owl:DatatypeProperty ;
@@ -1411,6 +1412,16 @@ ceo:isHoofdobjectVanComplex
   rdfs:label "Is hoofdobject van complex"@nl ;
   rdfs:range ceo:Complex ;
   owl:inverseOf ceo:heeftHoofdobject ;
+.
+ceo:isKennisregistratieVanZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-03-18" ;
+  dcterms:modified "" ;
+  rdfs:comment "De property #isKennisregistratieVanZaak legt de relatie tussen rol en betrokkene."@nl ;
+  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
+  rdfs:label "Is kennisregistratie van zaak"@nl ;
+  rdfs:range ceo:Kennisregistratie ;
+  owl:inverseOf ceo:hoortBijZaak ;
 .
 ceo:isOnderdeelVanComplex
   a owl:ObjectProperty ;

@@ -243,10 +243,12 @@ zo:betreftBesluit
 .
 zo:betreftCultuurhistorischObject
   a owl:ObjectProperty ;
-  rdfs:comment "De property betreftCultuurhistorischObject legt de relatie tussen een Zaak en een Cultuurhistorisch Object"@nl ;
-  rdfs:domain zo:Zaak ;
+  dcterms:modified "2019-03-18" ;
+  rdfs:comment "De property betreftCultuurhistorischObject legt de relatie tussen een Zaakobject en een Cultuurhistorisch Object"@nl ;
+  rdfs:domain zo:Zaakobject ;
   rdfs:label "betreft cultuurhistorisch object "@nl ;
   rdfs:range ceo:CultuurhistorischObject ;
+  owl:inverseOf zo:heeftZaakobject ;
 .
 zo:betreftDocument
   a owl:ObjectProperty ;
@@ -597,6 +599,16 @@ zo:heeftBetrekkingOpBesluit
   rdfs:range zo:Besluit ;
   owl:inverseOf zo:isVanBesluittype ;
 .
+zo:heeftBetrekkingOpCultuurhistorischObject
+  a owl:ObjectProperty ;
+  dcterms:created "2019-03-18" ;
+  dcterms:modified "" ;
+  rdfs:comment "De property heeftBetrekkingOpCultuurhistorischObject legt de relatie tussen document en cultuurhistorisch object."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "heeft betrekking op cultuurhistorisch object" ;
+  rdfs:range ceo:CultuurhistorischObject ;
+  owl:inverseOf zo:heeftDocument ;
+.
 zo:heeftBetrekkingOpDocument
   a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
@@ -655,6 +667,16 @@ zo:heeftDeelzaak
   rdfs:domain zo:Zaak ;
   rdfs:label "heeft deelzaak"@nl ;
   rdfs:range zo:Zaak ;
+.
+zo:heeftDocument
+  a owl:ObjectProperty ;
+  dcterms:created "2019-03-18" ;
+  dcterms:modified "" ;
+  rdfs:comment "De property heeftDocument legt de relatie tussen cultuurhistorisch object en document."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "heeft document" ;
+  rdfs:range zo:Document ;
+  owl:inverseOf zo:heeftBetrekkingOpCultuurhistorischObject ;
 .
 zo:heeftEigenschap
   a owl:ObjectProperty ;
@@ -762,16 +784,6 @@ zo:heeftZaak
   rdfs:range zo:Zaak ;
   owl:inverseOf zo:heeftMrsProjectcode ;
 .
-zo:heeftZaakObject
-  a owl:ObjectProperty ;
-  dcterms:created "2019-02-19" ;
-  dcterms:modified "" ;
-  rdfs:comment "De property heeftZaakObject legt de relatie tussen zaak en zaakobject vast."@nl ;
-  rdfs:domain zo:Zaak ;
-  rdfs:label "Heeft zaak object"@nl ;
-  rdfs:range zo:Zaakobject ;
-  owl:inverseOf zo:isOnderwerpVanZaak ;
-.
 zo:heeftZaakdocument
   a owl:ObjectProperty ;
   dcterms:created "2019-02-19" ;
@@ -781,6 +793,16 @@ zo:heeftZaakdocument
   rdfs:label "Heeft zaakdocument"@nl ;
   rdfs:range zo:Zaakdocument ;
   owl:inverseOf zo:zaakdocumentBetreftZaak ;
+.
+zo:heeftZaakobject
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19" ;
+  dcterms:modified "2019-03-18" ;
+  rdfs:comment "De property heeftZaakObject legt de relatie tussen zaak en zaakobject vast."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Heeft zaak object"@nl ;
+  rdfs:range zo:Zaakobject ;
+  owl:inverseOf zo:betreftCultuurhistorischObject ;
 .
 zo:hoortBij
   a owl:ObjectProperty ;
