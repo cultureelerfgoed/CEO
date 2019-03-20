@@ -1300,15 +1300,6 @@ ceo:heeftZaak
   rdfs:label "Heeft zaak"@nl ;
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
 .
-ceo:heeftZaakobject
-  a owl:ObjectProperty ;
-  dcterms:created "2018-2-26" ;
-  dcterms:modified "8-6-18" ;
-  rdfs:comment "De property heeftZaakobject legt de relatie tussen Cultuurhistorisch Object en het Zaakobject."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Heeft zaakobject"@nl ;
-  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaakobject> ;
-.
 ceo:heeftZekerheidsaanduiding
   a owl:ObjectProperty ;
   dcterms:created "2-5-18 13:18" ;
@@ -1364,8 +1355,8 @@ ceo:hoofdfunctie
 ceo:hoortBijZaak
   a owl:ObjectProperty ;
   dcterms:created "2019-03-12" ;
-  dcterms:modified "" ;
-  rdfs:comment "De property hoortBijZaak legt de relatie tussen de kennisregistratie en de zaak vast."@nl ;
+  dcterms:modified "2019-03-19" ;
+  rdfs:comment "De property hoortBijZaak legt de relatie tussen kennisregistratie en zaak vast."@nl ;
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Hoort bij zaak"@nl ;
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
@@ -1416,8 +1407,8 @@ ceo:isHoofdobjectVanComplex
 ceo:isKennisregistratieVanZaak
   a owl:ObjectProperty ;
   dcterms:created "2019-03-18" ;
-  dcterms:modified "" ;
-  rdfs:comment "De property #isKennisregistratieVanZaak legt de relatie tussen rol en betrokkene."@nl ;
+  dcterms:modified "2019-03-19" ;
+  rdfs:comment "De property #isKennisregistratieVanZaak legt de relatie tussen zaak en kennisregistratie vast."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
   rdfs:label "Is kennisregistratie van zaak"@nl ;
   rdfs:range ceo:Kennisregistratie ;

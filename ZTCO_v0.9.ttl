@@ -5,6 +5,7 @@
 
 @prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -19,14 +20,15 @@
   dcterms:created "2018-11-01" ;
   dcterms:creator ceo:Frans_van_der_Zande ;
   dcterms:creator ceo:Patrick_Mout ;
-  dcterms:hasVersion "0.90" ;
+  dcterms:description "De ZTCO is de volledige semantische representatie van het logische datamodel Zaaktype uit de datalaag van de RCE"@nl ;
+  dcterms:hasVersion "0.9" ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dcterms:modified "2019-01-18" ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
-  dcterms:title "Zaak Type Catalogus"@nl ;
+  dcterms:title "Zaak Type Catalogus Ontologie"@nl ;
   rdfs:label "Zaak Type Catalogus"@nl ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ztce> ;
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
 .
 ztco:Besluittype
   a owl:Class ;
@@ -96,7 +98,8 @@ ztco:archieftermijn
 .
 ztco:besluittypeOmschrijving
   a owl:DatatypeProperty ;
-  rdfs:comment "De property besluittypeOmschrijving wordt gebruikt om aan te geven welke besluittypeomschrijving is gekoppeld aan een besluittype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property besluittypeOmschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een besluittype."@nl ;
   rdfs:domain ztco:Besluittype ;
   rdfs:label "Besluittypeomschrijving"@nl ;
   rdfs:range xsd:string ;
@@ -112,7 +115,7 @@ ztco:brondatumArchiefprocedure
 .
 ztco:datumBeginGeldigheidBesluittype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property datumBeginGeldigheidBesluittype wordt gebruikt om aan te geven welke datum begin geldigheid besluittype is gekoppeld aan een besluittype."@nl ;
+  rdfs:comment "De property datumBeginGeldigheidBesluittype wordt gebruikt om aan te geven welke datum begin geldigheid is gekoppeld aan een besluittype."@nl ;
   rdfs:domain ztco:Besluittype ;
   rdfs:label "Datum begin geldigheid besluittype"@nl ;
   rdfs:range xsd:date ;
@@ -120,7 +123,8 @@ ztco:datumBeginGeldigheidBesluittype
 .
 ztco:datumBeginGeldigheidDocumenttype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property datumBeginGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum begin geldigheid documenttype is gekoppeld aan een documenttype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property datumBeginGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum begin geldigheid is gekoppeld aan een documenttype."@nl ;
   rdfs:domain ztco:Documenttype ;
   rdfs:label "Datum begin geldigheid documenttype"@nl ;
   rdfs:range xsd:date ;
@@ -128,7 +132,8 @@ ztco:datumBeginGeldigheidDocumenttype
 .
 ztco:datumBeginGeldigheidStatustype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property datumBeginGeldigheidStatustype wordt gebruikt om aan te geven welke datum begin geldigheid statustype is gekoppeld aan een statustype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property datumBeginGeldigheidStatustype wordt gebruikt om aan te geven welke datum begin geldigheid is gekoppeld aan een statustype."@nl ;
   rdfs:domain ztco:Statustype ;
   rdfs:label "Datum begin geldigheid statustype"@nl ;
   rdfs:range xsd:date ;
@@ -136,7 +141,8 @@ ztco:datumBeginGeldigheidStatustype
 .
 ztco:datumBeginGeldigheidZaaktype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property datumBeginGeldigheidZaaktype wordt gebruikt om aan te geven welke datum begin geldigheid zaaktype is gekoppeld aan een zaaktype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property datumBeginGeldigheidZaaktype wordt gebruikt om aan te geven welke datum begin geldigheid is gekoppeld aan een zaaktype."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "Datum begin geldigheid zaaktype"@nl ;
   rdfs:range xsd:date ;
@@ -144,7 +150,7 @@ ztco:datumBeginGeldigheidZaaktype
 .
 ztco:datumEindeGeldigheidBesluittype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property datumEindeGeldigheidBesluittype wordt gebruikt om aan te geven welke datum einde geldigheid besluittype is gekoppeld aan een besluittype."@nl ;
+  rdfs:comment "De property datumEindeGeldigheidBesluittype wordt gebruikt om aan te geven welke datum einde geldigheid is gekoppeld aan een besluittype."@nl ;
   rdfs:domain ztco:Besluittype ;
   rdfs:label "Datum einde geldigheid besluittype"@nl ;
   rdfs:range xsd:date ;
@@ -152,7 +158,8 @@ ztco:datumEindeGeldigheidBesluittype
 .
 ztco:datumEindeGeldigheidDocumenttype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property datumEindeGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum einde geldigheid documenttype is gekoppeld aan een documenttype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property datumEindeGeldigheiddocumenttype wordt gebruikt om aan te geven welke datum einde geldigheid  is gekoppeld aan een documenttype."@nl ;
   rdfs:domain ztco:Documenttype ;
   rdfs:label "Datum einde geldigheid documenttype"@nl ;
   rdfs:range xsd:date ;
@@ -160,7 +167,8 @@ ztco:datumEindeGeldigheidDocumenttype
 .
 ztco:datumEindeGeldigheidStatustype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property datumEindeGeldigheidStatustype wordt gebruikt om aan te geven welke datum einde geldigheid statustype is gekoppeld aan een statustype."@nl ;
+  dcterms:modified "20129-03-20" ;
+  rdfs:comment "De property datumEindeGeldigheidStatustype wordt gebruikt om aan te geven welke datum einde geldigheid is gekoppeld aan een statustype."@nl ;
   rdfs:domain ztco:Statustype ;
   rdfs:label "Datum einde geldigheid statustype"@nl ;
   rdfs:range xsd:date ;
@@ -168,7 +176,8 @@ ztco:datumEindeGeldigheidStatustype
 .
 ztco:datumEindeGeldigheidZaaktype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property datumEindeGeldigheidZaaktype wordt gebruikt om aan te geven welke datum einde geldigheid zaaktype is gekoppeld aan een zaaktype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property datumEindeGeldigheidZaaktype wordt gebruikt om aan te geven welke datum einde geldigheid  is gekoppeld aan een zaaktype."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "Datum einde geldigheid zaaktype"@nl ;
   rdfs:range xsd:date ;
@@ -185,7 +194,8 @@ ztco:definitieEigenschaptype
 .
 ztco:documenttypeOmschrijving
   a owl:DatatypeProperty ;
-  rdfs:comment "De property documenttypeOmschrijving wordt gebruikt om aan te geven welke documenttypeomschrijving is gekoppeld aan een documenttype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property documenttypeOmschrijving wordt gebruikt om aan te geven welke eomschrijving is gekoppeld aan een documenttype."@nl ;
   rdfs:domain ztco:Documenttype ;
   rdfs:label "Documenttype omschrijving"@nl ;
   rdfs:range xsd:string ;
@@ -246,7 +256,7 @@ ztco:heeftBetrekkingOpAndereZaaktype
   a owl:SymmetricProperty ;
   dcterms:created "2019-03-12" ;
   dcterms:modified "" ;
-  rdfs:comment "De propertyeeftBetrekkingOpAndereZaaktype legt de relatie tussen zaaktype en zaaktype vast."@nl ;
+  rdfs:comment "De property heeftBetrekkingOpAndereZaaktype legt de relatie tussen zaaktype en zaaktype vast."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ztc#Zaaktype> ;
   rdfs:label "heeft betrekking op andere zaaktype" ;
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/ztc#Zaaktype> ;
@@ -274,9 +284,9 @@ ztco:heeftBetrokkeneOpZaaktype
   a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
   dcterms:modified "" ;
-  rdfs:comment "De property wordtUitgeoefendDoorBetrokkene legt de relatie tussen roltype en zaaktype vast."@nl ;
+  rdfs:comment "De property heeftBetrokkeneOpZaaktype legt de relatie tussen roltype en zaaktype vast."@nl ;
   rdfs:domain ztco:Roltype ;
-  rdfs:label "heeft betrokkene op zaaktype"@nl ;
+  rdfs:label "Heeft betrokkene op zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
   owl:inverseOf ztco:heeftBetrokkeneInRoltype ;
 .
@@ -302,8 +312,8 @@ ztco:heeftEigenschaptype
 ztco:heeftEigenschapwaardeNaam
   a owl:ObjectProperty ;
   dcterms:created "" ;
-  dcterms:modified "" ;
-  rdfs:comment "De property wordtUitgeoefendDoorBetrokkene legt de relatie tussen eigenschaptype en waarde vast."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property heeftEigenschapwaardeNaam legt de relatie tussen eigenschaptype en waarde vast."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ztc#Eigenschaptype> ;
   rdfs:label "heeft eigenschapwaarde naam" ;
   rdfs:range skos:Concept ;
@@ -316,7 +326,7 @@ ztco:heeftRelevanteDocumentype
   rdfs:label "Heeft relevante documenttype"@nl ;
   rdfs:range ztco:Documenttype ;
   owl:inverseOf ztco:isRelevantVoorZaaktype ;
-  skos:definition "De documenttypen die relevant kunnen zijn voor zaaken van dit zaaktype."@nl ;
+  skos:definition "De documenttypen die relevant kunnen zijn voor zaken van dit zaaktype."@nl ;
 .
 ztco:heeftStatustype
   a owl:ObjectProperty ;
@@ -334,7 +344,7 @@ ztco:hoortBijDocumenttype
   dcterms:modified "" ;
   rdfs:comment "De property hoortBijDocumenttype legt de relatie tussen statustype en documenttype vast."@nl ;
   rdfs:domain ztco:Statustype ;
-  rdfs:label "hoort bij documenttype"@nl ;
+  rdfs:label "Hoort bij documenttype"@nl ;
   rdfs:range ztco:Documenttype ;
   owl:inverseOf ztco:verplichtBijStatustype ;
 .
@@ -344,7 +354,7 @@ ztco:isDeelzakenVanZaaktype
   dcterms:modified "" ;
   rdfs:comment "De property isDeelzakenVanZaaktype legt de relatie tussen zaaktype en deelzaken vast."@nl ;
   rdfs:domain ztco:Zaaktype ;
-  rdfs:label "is deelzaken van zaaktype"@nl ;
+  rdfs:label "Is deelzaken van zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
   owl:inverseOf ztco:heeftDeelzakenZaaktype ;
 .
@@ -362,7 +372,7 @@ ztco:isRelevantVoorZaaktype
   a owl:ObjectProperty ;
   dcterms:created "2019-02-20" ;
   dcterms:modified "" ;
-  rdfs:comment "De property wordtUitgeoefendDoorBetrokkene legt de relatie tussen documenttype en zaakttype vast."@nl ;
+  rdfs:comment "De property IsRelevantVoorZaaktype legt de relatie tussen documenttype en zaakttype vast."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ztc#Documentype> ;
   rdfs:label "is relevant voor zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
@@ -377,11 +387,12 @@ ztco:isVanEigenschaptype
 .
 ztco:isVanZaaktype
   a owl:ObjectProperty ;
-  dcterms:modified "2019-02-20" ;
+  dcterms:modified "2019-03-20" ;
   rdfs:comment "De property isVanZaaktype legt de relatie tussen eigenschap en zaaktype vast."@nl ;
   rdfs:domain ztco:Eigenschaptype ;
   rdfs:label "Is van zaaktype"@nl ;
   rdfs:range ztco:Zaaktype ;
+  owl:inverseOf ztco:isVanEigenschaptype ;
 .
 ztco:kardinaliteitEigenschaptype
   a owl:DatatypeProperty ;
@@ -398,7 +409,7 @@ ztco:legtVastBesluit
   dcterms:modified "" ;
   rdfs:comment "De property legtVastBesluit legt de relatie tussen documenttype en besluittype vast."@nl ;
   rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ztc#Documentype> ;
-  rdfs:label "legt vast besluit"@nl ;
+  rdfs:label "Legt vast besluit"@nl ;
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/ztc#Besluitype> ;
   owl:inverseOf ztco:wordtVastgelegdInDocumenttype ;
 .
@@ -437,7 +448,8 @@ ztco:reactietermijn
 .
 ztco:roltypeomschrijving
   a owl:DatatypeProperty ;
-  rdfs:comment "De property roltypeomschrijving wordt gebruikt om aan te geven welke roltypeomschrijving is gekoppeld aan een roltype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property roltypeomschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een roltype."@nl ;
   rdfs:domain ztco:Roltype ;
   rdfs:label "Roltypeomschrijving"@nl ;
   rdfs:range xsd:string ;
@@ -469,7 +481,8 @@ ztco:soortBetrokkene
 .
 ztco:statustypeOmschrijving
   a owl:DatatypeProperty ;
-  rdfs:comment "De property statustypeOmschrijving wordt gebruikt om aan te geven welke statustypeomschrijving is gekoppeld aan een statustype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property statustypeOmschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een statustype."@nl ;
   rdfs:domain ztco:Statustype ;
   rdfs:label "Statustypeomschrijving"@nl ;
   rdfs:range xsd:string ;
@@ -477,7 +490,8 @@ ztco:statustypeOmschrijving
 .
 ztco:statustypevolgnummer
   a owl:DatatypeProperty ;
-  rdfs:comment "De property statustypevolgnummer wordt gebruikt om aan te geven welke statustypevolgnummer is gekoppeld aan een statustype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property statustypevolgnummer wordt gebruikt om aan te geven welk volgnummer is gekoppeld aan een statustype."@nl ;
   rdfs:domain ztco:Statustype ;
   rdfs:label "Statustypevolgnummer"@nl ;
   rdfs:range xsd:integer ;
@@ -503,13 +517,14 @@ ztco:toelichtingEigenschaptype
   a owl:DatatypeProperty ;
   rdfs:comment "De property toelichtingEigenschaptype wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een Eigenschaptype."@nl ;
   rdfs:domain ztco:Eigenschaptype ;
-  rdfs:label "toelichting eigenschaptype" ;
+  rdfs:label "Toelichting eigenschaptype"@nl ;
   rdfs:range xsd:string ;
   skos:definition "Een toelichting op deze eigenschap en het belang hiervan voor zaak en van dit zaaktype."@nl ;
 .
 ztco:toelichtingZaaktype
   a owl:DatatypeProperty ;
-  rdfs:comment "De property toelichtingZaaktype wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een documenttype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property toelichtingZaaktype wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een zaaktype."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "Toelichting zaaktype"@nl ;
   rdfs:range xsd:string ;
@@ -576,7 +591,8 @@ ztco:wordtVastgelegdInDocumenttype
 .
 ztco:zaaktypeOmschrijving
   a owl:DatatypeProperty ;
-  rdfs:comment "De property zaaktypeOmschrijving wordt gebruikt om aan te geven welke zaaktypeomschrijving is gekoppeld aan een zaaktype."@nl ;
+  dcterms:modified "2019-03-20" ;
+  rdfs:comment "De property zaaktypeOmschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een zaaktype."@nl ;
   rdfs:domain ztco:Zaaktype ;
   rdfs:label "zaaktypeomschrijving"@nl ;
   rdfs:range xsd:string ;
