@@ -118,7 +118,7 @@ ceo:ArcheologischComplex
   a owl:Class ;
   dcterms:created "2018-01-30" ;
   dcterms:modified "2019-05-13" ;
-  rdfs:comment "De class ArcheologischComplex is de representatie van een verzameling, in tijd en ruimte, geassioceerde vondsten en/of grondsporen."@nl ;
+  rdfs:comment "De class ArcheologischComplex is de representatie van een verzameling, in tijd en ruimte, geassocieerde vondsten en/of grondsporen."@nl ;
   rdfs:label "Archeologisch complex"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
@@ -163,7 +163,7 @@ ceo:BAGRelatienummer
 ceo:BRKRelatie
   a owl:Class ;
   dcterms:created "23-10-18 9:31" ;
-  rdfs:comment "De class BRKRelatie is de representatie van vastgelegde Basisregistratie Kadaster (BRK)  met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "De class BRKRelatie is de representatie van vastgelegde Basisregistratie Kadaster (BRK) met betrekking tot een cultuurhistorisch object."@nl ;
   rdfs:label "BRK relatie"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
@@ -370,7 +370,7 @@ ceo:Vondstlocatie
 ceo:Zichtbaarheid
   a owl:Class ;
   dcterms:created "18-4-18 10:24" ;
-  rdfs:comment "De class Zichtbaarheid is de representatie van de relatie tussen een cultuurhistorische object en de Zichtbaarheid."@nl ;
+  rdfs:comment "De class Zichtbaarheid is de representatie van de relatie tussen een cultuurhistorisch object en de Zichtbaarheid."@nl ;
   rdfs:label "Zichtbaarheid"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
@@ -619,7 +619,7 @@ ceo:heeftActorEnRol
 ceo:heeftArcheologischeKwaliteit
   a owl:ObjectProperty ;
   dcterms:created "2-5-18 9:23" ;
-  rdfs:comment "De property heeftArcheologischeKwaliteit legt de relatie tussen een cultuurhistorische object en de archeologische kwaliteit vast."@nl ;
+  rdfs:comment "De property heeftArcheologischeKwaliteit legt de relatie tussen een cultuurhistorisch object en de archeologische kwaliteit vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft archeologische kwaliteit"@nl ;
   rdfs:range ceo:ArcheologischeKwaliteit ;
@@ -664,7 +664,7 @@ ceo:heeftBasisregistratieRelatie
   dcterms:modified "11-6-18" ;
   rdfs:comment "De property heeftBasisregistratieRelatie legt de relatie tussen het cultuurhistorisch object en de basisregistratie relatie vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "Heeft basisregistratie  relatie"@nl ;
+  rdfs:label "Heeft basisregistratie relatie"@nl ;
   rdfs:range ceo:BasisregistratieRelatie ;
 .
 ceo:heeftBebouwdeKomType
@@ -706,7 +706,7 @@ ceo:heeftBodemgebruikNaam
   a owl:ObjectProperty ;
   dcterms:created "2-5-18 13:43" ;
   dcterms:modified "7-6-18" ;
-  rdfs:comment "De property heeftBodemgebruiknaam legt de relatie tussen het bodemgebruik en de naam van het  bodemgebruik vast."@nl ;
+  rdfs:comment "De property heeftBodemgebruiknaam legt de relatie tussen het bodemgebruik en de naam van het bodemgebruik vast."@nl ;
   rdfs:domain ceo:Bodemgebruik ;
   rdfs:label "Heeft bodemgebruiknaam"@nl ;
   rdfs:range skos:Concept ;
@@ -751,7 +751,7 @@ ceo:heeftBronverwijzing
   a owl:ObjectProperty ;
   dcterms:created "2-5-18 10:17" ;
   dcterms:modified "7-6-18" ;
-  rdfs:comment "De property heeftBronverwijzing legt de relatie tussen een cultuurhistorische object en de bronverwijzing vast."@nl ;
+  rdfs:comment "De property heeftBronverwijzing legt de relatie tussen een cultuurhistorisch object en de bronverwijzing vast."@nl ;
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Heeft bronverwijzing"@nl ;
   rdfs:range ceo:Bronverwijzing ;
@@ -883,7 +883,7 @@ ceo:heeftHerinneringswaarde
   a owl:ObjectProperty ;
   dcterms:created "2-5-18 9:27" ;
   dcterms:modified "11-6-18" ;
-  rdfs:comment "De property heeftHerinneringswaarde legt de relatie tussen de archeologische kwaliteit en de herinneringswaarde  met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "De property heeftHerinneringswaarde legt de relatie tussen de archeologische kwaliteit en de herinneringswaarde met betrekking tot een cultuurhistorisch object."@nl ;
   rdfs:domain ceo:ArcheologischeKwaliteit ;
   rdfs:label "Heeft herinneringswaarde"@nl ;
   rdfs:range skos:Concept ;
@@ -997,7 +997,7 @@ ceo:heeftLocatieAanduidingStatus
   a owl:ObjectProperty ;
   dcterms:created "27-3-18 10:37" ;
   dcterms:modified "11-7-18" ;
-  rdfs:comment "De property heeftLocatieAanduidingStatus legt de relatie tussen de locatie aanduiding en de status van de  locatie Aanduiding met betrekking tot een cultuurhistorisch object vast."@nl ;
+  rdfs:comment "De property heeftLocatieAanduidingStatus legt de relatie tussen de locatie aanduiding en de status van de locatie Aanduiding met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Heeft locatie aanduiding status"@nl ;
   rdfs:range skos:Concept ;
@@ -1332,7 +1332,7 @@ ceo:heeftZeldzaamheid
 ceo:heeftZichtbaarheid
   a owl:ObjectProperty ;
   dcterms:created "18-4-18 10:28" ;
-  rdfs:comment "De property heeftZichtbaarheid legt de relatie tussen een cultuurhistorische object en de zichtbaarheid vast."@nl ;
+  rdfs:comment "De property heeftZichtbaarheid legt de relatie tussen een cultuurhistorisch object en de zichtbaarheid vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft zichtbaarheid"@nl ;
   rdfs:range ceo:Zichtbaarheid ;
@@ -1401,7 +1401,7 @@ ceo:indicatieArcheologischeMonumentenKaartWaardig
 ceo:internationaalKenteken
   a owl:DatatypeProperty ;
   dcterms:created "27-3-18 9:07" ;
-  rdfs:comment "De property internationaalKenteken wordt gebruikt om aan te geven of een internationaal kenteken aan een Cultuuurhistorisch object is gegeven."@nl ;
+  rdfs:comment "De property internationaalKenteken wordt gebruikt om aan te geven of een internationaal kenteken aan een Cultuurhistorisch object is gegeven."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Internationaal kenteken"@nl ;
   rdfs:range xsd:boolean ;
