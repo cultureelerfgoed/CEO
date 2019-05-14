@@ -36,10 +36,10 @@ pdok:asWKT-RD
   skos:editorialNote "De property hasGeometry legt de relatie tussen het cultuurhistorisch object en de geometrie vast."@nl ;
 .
 <http://www.opengis.net/ont/gml#Point>
-  skos:editorialNote "De class gml:Point is de representatie van een punt, in RD serialisatie, van een Cultuur historisch object."@nl ;
+  skos:editorialNote "De class gml:Point is de representatie van een punt, in RD serialisatie, van een Cultuurhistorisch object."@nl ;
 .
 <http://www.opengis.net/ont/gml#Surface>
-  skos:editorialNote "De class gml:Surface is de representatie van een contour van een Cultuur historisch object."@nl ;
+  skos:editorialNote "De class gml:Surface is de representatie van een contour van een Cultuurhistorisch object."@nl ;
 .
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat>
   skos:editorialNote "De property lat legt de relatie tussen het cultuurhistorisch object en de breedtegraad vast."@nl ;
@@ -110,7 +110,7 @@ ceo:ActorEnRol
 ceo:Adresgegevens
   a owl:Class ;
   dcterms:created "24-5-18 12:53" ;
-  rdfs:comment "De class Adresgegevens is de representatie van de adresgegevens van een Cultuurhistorische Object."@nl ;
+  rdfs:comment "De class Adresgegevens is de representatie van de adresgegevens van een Cultuurhistorisch Object."@nl ;
   rdfs:label "Adresgegevens"@nl ;
   rdfs:subClassOf <http://www.w3.org/ns/locn#Address> ;
 .
@@ -1376,7 +1376,7 @@ ceo:hoortBijZaak
 ceo:huidigeNaam
   a owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
-  rdfs:comment "De property huidigeNaam wordt gebruikt om aan te geven of de naam, de huidige naam is van een cultuurhistorische object."@nl ;
+  rdfs:comment "De property huidigeNaam wordt gebruikt om aan te geven of de naam, de huidige naam is van een cultuurhistorisch object."@nl ;
   rdfs:domain ceo:Naam ;
   rdfs:label "Huidige naam"@nl ;
   rdfs:range xsd:boolean ;
@@ -1542,7 +1542,7 @@ ceo:onroerendeZaakomschrijving
 ceo:oorspronkelijkeNaam
   a owl:DatatypeProperty ;
   dcterms:created "2018-2-6" ;
-  rdfs:comment "De property oorspronkelijkeNaam wordt gebruikt om aan te geven of de naam, de oorspronkelijke naam is van een cultuurhistorische object."@nl ;
+  rdfs:comment "De property oorspronkelijkeNaam wordt gebruikt om aan te geven of de naam, de oorspronkelijke naam is van een cultuurhistorisch object."@nl ;
   rdfs:domain ceo:Naam ;
   rdfs:label "Oorspronkelijke naam"@nl ;
   rdfs:range xsd:boolean ;
