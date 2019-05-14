@@ -2,6 +2,8 @@
 # imports: http://purl.org/dc/dcmitype/
 # imports: http://purl.org/dc/terms/
 # imports: https://linkeddata.cultureelerfgoed.nl/def/ceo
+# imports: https://linkeddata.cultureelerfgoed.nl/def/zo
+# prefix: ceo-ext
 
 @prefix : <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext#> .
 @prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
@@ -19,8 +21,20 @@ ceo:CultuurhistorischObject
   rdfs:subClassOf <http://purl.org/dc/terms/PhysicalResource> ;
 .
 ceo:Gebeurtenis
-  rdfs:comment "DCMI Event is een rdfs:Resource en daardoor een abstracter begrip dan een ceo:Gebeurtenis. ceo:Gebeurtenis is een specificatie van een DCMI Event."@nl ;
+  rdfs:comment "DCMI Event is een rdfs:Class en daardoor een abstractere representatie dan een ceo:Gebeurtenis. ceo:Gebeurtenis is een specificatie van een DCMI Event."@nl ;
   rdfs:subClassOf dcmi:Event ;
+.
+ceo:Tijdvak
+  rdfs:comment "DCterms PeriodOfTime is een rdfs:Class en daardoor een abstractere representatie dan een ceo:Tijdvak. ceo:Tijdvak is een specificatie van een DCterms PeriodOfTimeon."@nl ;
+  rdfs:subClassOf <http://purl.org/dc/terms/PeriodOfTime> ;
+.
+ceo:Vondstlocatie
+  rdfs:comment "DCterms Location is een abstracter begrip dan een ceo:Vondstlocatie. ceo:Vondstlocatie is een specificatie van een DCterms Location."@nl ;
+  rdfs:subClassOf <http://purl.org/dc/terms/Location> ;
+.
+<https://linkeddata.cultureelerfgoed.nl/def/zbo#Betrokkene>
+  rdfs:comment "DCterms Agent is een rdfs:Resource en daardoor een abstractere representatie dan een zbo:Betrokkene. zbo:Betrokkene is een specificatie van een DCterms Agent."@nl ;
+  rdfs:subClassOf <http://purl.org/dc/terms/Agent> ;
 .
 <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext>
   a owl:Ontology ;
@@ -28,4 +42,5 @@ ceo:Gebeurtenis
   owl:imports dcmi: ;
   owl:imports <http://purl.org/dc/terms/> ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
+  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/zo> ;
 .
