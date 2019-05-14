@@ -22,6 +22,7 @@ ceo:CultuurhistorischObject
 .
 ceo:Gebeurtenis
   rdfs:comment "DCMI Event is een rdfs:Class en daardoor een abstractere representatie dan een ceo:Gebeurtenis. ceo:Gebeurtenis is een specificatie van een DCMI Event."@nl ;
+  rdfs:comment "DCMI Event is een rdfs:Resource en daardoor een abstracter begrip dan een ceo:Gebeurtenis. ceo:Gebeurtenis is een specificatie van een DCMI Event."@nl ;
   rdfs:subClassOf dcmi:Event ;
 .
 ceo:Tijdvak
@@ -31,6 +32,20 @@ ceo:Tijdvak
 ceo:Vondstlocatie
   rdfs:comment "DCterms Location is een abstracter begrip dan een ceo:Vondstlocatie. ceo:Vondstlocatie is een specificatie van een DCterms Location."@nl ;
   rdfs:subClassOf <http://purl.org/dc/terms/Location> ;
+.
+ceo:naam
+  rdfs:comment "DCterms title, rdfs:label, skos:prefLabel zijn een abstractere representatie dan een ceo:naam. ceo:naam is een specificatie van DCterms title, rdfs:label, skos:prefLabel."@nl ;
+  rdfs:subPropertyOf <http://purl.org/dc/terms/title> ;
+  rdfs:subPropertyOf rdfs:label ;
+  rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+.
+ceo:registratiedatum
+  rdfs:comment "DCterms date is een abstractere representatie dan een ceo:registratiedatum. ceo:registratiedatum is een specificatie van een DCterms date."@nl ;
+  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
+.
+ceo:startdatum
+  rdfs:comment "DCterms date is een abstractere representatie dan een ceo:startdatum. ceo:startdatum is een specificatie van een DCterms date."@nl ;
+  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zbo#Betrokkene>
   rdfs:comment "DCterms Agent is een rdfs:Resource en daardoor een abstractere representatie dan een zbo:Betrokkene. zbo:Betrokkene is een specificatie van een DCterms Agent."@nl ;
@@ -43,16 +58,4 @@ ceo:Vondstlocatie
   owl:imports <http://purl.org/dc/terms/> ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/zo> ;
-.
-
-
-ceo:CultuurhistorischObject
-  rdfs:comment "DCMI PhysicalObject is een abstracter begrip dan een ceo:CultuurhistorischObject. ceo:CultuurhistorischObject is een specificatie van een DCMI PhysicalObject."@nl ;
-  rdfs:comment "DCterms PhysicalResource is een abstracter begrip dan een ceo:CultuurhistorischObject. ceo:CultuurhistorischObject is een specificatie van een DCterms PhysicalResource."@nl ;
-  rdfs:subClassOf dcmi:PhysicalObject ;
-  rdfs:subClassOf <http://purl.org/dc/terms/PhysicalResource> ;
-.
-ceo:Gebeurtenis
-  rdfs:comment "DCMI Event is een rdfs:Resource en daardoor een abstracter begrip dan een ceo:Gebeurtenis. ceo:Gebeurtenis is een specificatie van een DCMI Event."@nl ;
-  rdfs:subClassOf dcmi:Event ;
 .
