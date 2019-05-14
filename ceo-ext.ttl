@@ -44,3 +44,15 @@ ceo:Vondstlocatie
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/zo> ;
 .
+
+
+ceo:CultuurhistorischObject
+  rdfs:comment "DCMI PhysicalObject is een abstracter begrip dan een ceo:CultuurhistorischObject. ceo:CultuurhistorischObject is een specificatie van een DCMI PhysicalObject."@nl ;
+  rdfs:comment "DCterms PhysicalResource is een abstracter begrip dan een ceo:CultuurhistorischObject. ceo:CultuurhistorischObject is een specificatie van een DCterms PhysicalResource."@nl ;
+  rdfs:subClassOf dcmi:PhysicalObject ;
+  rdfs:subClassOf <http://purl.org/dc/terms/PhysicalResource> ;
+.
+ceo:Gebeurtenis
+  rdfs:comment "DCMI Event is een rdfs:Resource en daardoor een abstracter begrip dan een ceo:Gebeurtenis. ceo:Gebeurtenis is een specificatie van een DCMI Event."@nl ;
+  rdfs:subClassOf dcmi:Event ;
+.
