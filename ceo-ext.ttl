@@ -1,0 +1,31 @@
+# baseURI: https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext
+# imports: http://purl.org/dc/dcmitype/
+# imports: http://purl.org/dc/terms/
+# imports: https://linkeddata.cultureelerfgoed.nl/def/ceo
+
+@prefix : <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext#> .
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
+@prefix ceo-ext: <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext#> .
+@prefix dcmi: <http://purl.org/dc/dcmitype/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceo:CultuurhistorischObject
+  rdfs:comment "DCMI PhysicalObject is een abstracter begrip dan een ceo:CultuurhistorischObject. ceo:CultuurhistorischObject is een specificatie van een DCMI PhysicalObject."@nl ;
+  rdfs:comment "DCterms PhysicalResource is een abstracter begrip dan een ceo:CultuurhistorischObject. ceo:CultuurhistorischObject is een specificatie van een DCterms PhysicalResource."@nl ;
+  rdfs:subClassOf dcmi:PhysicalObject ;
+  rdfs:subClassOf <http://purl.org/dc/terms/PhysicalResource> ;
+.
+ceo:Gebeurtenis
+  rdfs:comment "DCMI Event is een rdfs:Resource en daardoor een abstracter begrip dan een ceo:Gebeurtenis. ceo:Gebeurtenis is een specificatie van een DCMI Event."@nl ;
+  rdfs:subClassOf dcmi:Event ;
+.
+<https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext>
+  a owl:Ontology ;
+  rdfs:comment "Dit linkset bevat koppelingen tussen de RCE ontologieën en externe ontologieën." ;
+  owl:imports dcmi: ;
+  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
+.
