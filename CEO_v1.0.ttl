@@ -1,15 +1,11 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/ceo
-# imports: http://brk.basisregistraties.overheid.nl/def/brk
-# imports: http://data.pdok.nl/def/pdok
-# imports: http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf
-# imports: http://www.w3.org/2003/01/geo/wgs84_pos
-# imports: http://www.w3.org/2004/02/skos/core
-# imports: http://www.w3.org/ns/locn
+# prefix: ceo
 
 @prefix brk: <http://brk.basisregistraties.overheid.nl/def/brk#> .
 @prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lxr: <https://linkeddata.cultureelerfgoed.nl/def/lxr#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pdok: <http://data.pdok.nl/def/pdok#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -21,7 +17,6 @@
 pdok:asWKT-RD
   a owl:DatatypeProperty ;
   dcterms:created "2018-06-28"^^xsd:date ;
-  
 .
 <http://www.opengis.net/ont/geosparql#asWKT>
   skos:editorialNote "De property asWKT legt de relatie vast tussen een cultuurhistorisch object en een geometrie."@nl ;
@@ -79,11 +74,11 @@ pdok:asWKT-RD
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:title "Cultureel Erfgoed Ontologie"@nl ;
-  foaf:mbox "thesauri@cultureelerfgoed.nl"^^xsd:string ;
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
 .
 ceo:ActorEnRol
   a owl:Class ;
-  dcterms:created "2018-05-02"^^xsd:date;
+  dcterms:created "2018-05-02"^^xsd:date ;
   dcterms:modified "11-6-18"^^xsd:date ;
   rdfs:comment "De class ActorEnRol is de representatie van de actor en rol met betrekking tot een gebeurtenis."@nl ;
   rdfs:label "Actor en rol"@nl ;
@@ -864,15 +859,6 @@ ceo:heeftHerkomst
   rdfs:label "Heeft herkomst"@nl ;
   rdfs:range skos:Concept ;
 .
-ceo:heeftHoofdadres
-  a owl:ObjectProperty ;
-  dcterms:created "2018-02-02"^^xsd:date ;
-  dcterms:modified "2018-06-28"^^xsd:date ;
-  rdfs:comment "De property heeftHoofdadres legt de relatie tussen een rijksmonument en het hoofdadres vast."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Heeft hoofdadres"@nl ;
-  rdfs:range ceo:LocatieAanduiding ;
-.
 ceo:heeftHoofdobject
   a owl:ObjectProperty ;
   dcterms:created "2018-07-04"^^xsd:date ;
@@ -1131,23 +1117,13 @@ ceo:heeftSchoonheid
   rdfs:label "Heeft schoonheid"@nl ;
   rdfs:range skos:Concept ;
 .
-ceo:heeftSitueringBijAdres
+ceo:heeftSituering
   a owl:ObjectProperty ;
-  dcterms:created "2018-02-02"^^xsd:date ;
-  dcterms:modified "2018-11-05"^^xsd:date ;
-  rdfs:comment "De property heeftSitueringBijAdres legt de relatie tussen een rijksmonument dat geen verblijfsobject in de BAG is met een verblijfsobject in de BAG."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Heeft situering bij adres"@nl ;
-  rdfs:range ceo:LocatieAanduiding ;
-.
-ceo:heeftSitueringTegenoverAdres
-  a owl:ObjectProperty ;
-  dcterms:created "2018-02-02"^^xsd:date ;
-  dcterms:modified "2018-11-05"^^xsd:date ;
-  rdfs:comment "De property heeftSitueringTegenoverAdres legt de relatie tussen een rijksmonument dat geen verblijfsobject in de BAG is met een verblijfsobject inde BAG."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
-  rdfs:label "Heeft situering tegenover adres"@nl ;
-  rdfs:range ceo:LocatieAanduiding ;
+  dcterms:created "2019-05-15"^^xsd:date ;
+  rdfs:comment "De property heeftSituering legt de relatie tussen een rijksmonument dat geen verblijfsobject in de BAG is met een verblijfsobject in de BAG."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Heeft situering"@nl ;
+  rdfs:range skos:Concept ;
 .
 ceo:heeftStijlEnCultuur
   a owl:ObjectProperty ;
@@ -1316,6 +1292,14 @@ ceo:heeftZuiverheid
   rdfs:domain ceo:StijlEnCultuur ;
   rdfs:label "Heeft zuiverheid"@nl ;
   rdfs:range skos:Concept ;
+.
+ceo:hoofdadres
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-05-15"^^xsd:date ;
+  rdfs:comment "De property hoofdadres wordt gebruikt om aan te geven het hoofdadres van een rijksmonument."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Hoofdadres @nl" ;
+  rdfs:range xsd:boolean ;
 .
 ceo:hoofdfunctie
   a owl:DatatypeProperty ;
@@ -1699,4 +1683,16 @@ ceo:woonplaatsnaam
   rdfs:label "Woonplaatsnaam"@nl ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#postName> ;
+.
+lxr:heeftCBSGemeentecode
+  a owl:ObjectProperty ;
+  dcterms:created "2019-05-15"^^xsd:date ;
+  rdfs:comment "De property heeftCBSGemeentecode legt de relatie tussen gemeente en CBS gemeentecode vast."@nl ;
+  rdfs:label "Heeft CBS gemeentecode @nl" ;
+.
+lxr:heeftCBSProvinciecode
+  a owl:ObjectProperty ;
+  dcterms:created "2019-05-15"^^xsd:date ;
+  rdfs:comment "De property heeftCBSProvinciecode legt de relatie tussen provincie en CBS provinciecode vast."@nl ;
+  rdfs:label "Heeft CBS provinciecode @nl" ;
 .
