@@ -13,11 +13,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix zbo: <https://linkeddata.cultureelerfgoed.nl/def/zbo#> .
 @prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zo#> .
+@prefix ztco: <https://linkeddata.cultureelerfgoed.nl/def/ztco#> .
 
-<http://linkeddata.overheid.nl/terms/Wet>
-  a owl:Class ;
-  rdfs:label "Wet "@nl ;
-.
 skos:definition
   a owl:AnnotationProperty ;
   rdfs:label "definitie van de relatiesoort"@nl ;
@@ -25,21 +22,25 @@ skos:definition
 .
 ceo:CultuurhistorischObject
   a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class CultuurhistorischObject is de representatie van een fenomeen in de werkelijkheid met een zekere cultuurhistorische waarde."@nl ;
   rdfs:label "Cultuurhistorisch object "@nl ;
   rdfs:subClassOf owl:Thing ;
-  skos:definition "Het OBJECT waarop een ZAAK betrekking kan hebben zijnde één of meer voorkomens van de in de CHOI, SACE en ADLIB onderscheiden objecttypen. "@nl ;
+  skos:definition "Het Object waarop een Zaak betrekking kan hebben zijnde één of meer voorkomens van de in de CHOI, SACE en ADLIB onderscheiden objecttypen. "@nl ;
 .
 ceo:heeftZaakobject
   a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
   rdfs:comment "De property heeftZaakobject legt de relatie tussen CultuurhistorischObject en Zaakobject."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:label "heeft zaakobject "@nl ;
+  rdfs:label "Heeft zaakobject "@nl ;
   rdfs:range zo:Zaakobject ;
   owl:inverseOf zo:betreftCultuurhistorischObject ;
   skos:definition "Het zaakobject waarop een zaak betrekking heeft."@nl ;
 .
 zbo:Betrokkene
   a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
   rdfs:comment "De class Betrokkene is een representatie van een subject, zijnde een natuurlijk persoon, niet-natuurlijk persoon of vestiging, organisatorische eenheid (binnen een vestiging van de zaak-behandelende niet-natuurlijk persoon), of medewerker (van die organisatorische eenheid) die een rol kan spelen bij een zaak."@nl ;
   rdfs:label "Betrokkene"@nl ;
   rdfs:subClassOf owl:Thing ;
@@ -47,16 +48,17 @@ zbo:Betrokkene
 .
 zbo:Medewerker
   a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
   dcterms:modified "2019-03-19" ;
-  rdfs:comment "De class zo:Medewerker is een representatie van een medewerker van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een organisatorische eenheid."@nl ;
+  rdfs:comment "De class Medewerker is een representatie van een medewerker van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een organisatorische eenheid."@nl ;
   rdfs:label "Medewerker"@nl ;
   rdfs:subClassOf zbo:Betrokkene ;
   skos:definition "Definitie RGBZ: Een medewerker van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een organisatorische eenheid."@nl ;
 .
 zbo:OrganisatorischeEenheid
   a owl:Class ;
-  dcterms:modified "2019-03-19" ;
-  rdfs:comment "De class zo:OrganisatorischeEenheid is een representatie van het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een vestiging van zaakbehandelende organisatie en die verantwoordelijk is voor de behandeling van zaken."@nl ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De class OrganisatorischeEenheid is een representatie van het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een vestiging van zaakbehandelende organisatie en die verantwoordelijk is voor de behandeling van zaken."@nl ;
   rdfs:label "Organisatorische Eenheid"@nl ;
   rdfs:subClassOf zbo:Betrokkene ;
   skos:definition "Definitie RGBZ: Het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een vestiging van zaakbehandelende organisatie en die verantwoordelijk is voor de behandeling van zaken."@nl ;
@@ -65,8 +67,7 @@ zbo:OrganisatorischeEenheid
 <https://linkeddata.cultureelerfgoed.nl/def/zo>
   a owl:Ontology ;
   dcterms:created "2019-01-01" ;
-  dcterms:creator ceo:Frans_van_der_Zande ;
-  dcterms:creator ceo:Patrick_Mout ;
+  dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:description "De ZO is de volledige semantische representatie van het logische datamodel Zaak uit de datalaag van de RCE"@nl ;
   dcterms:hasVersion "1.0" ;
   dcterms:issued "2019-05-06" ;
@@ -75,9 +76,6 @@ zbo:OrganisatorischeEenheid
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:title "Zaak Ontologie"@nl ;
   rdfs:label "Zaak Ontologie"@nl ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports dcterms: ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   foaf:mbox "thesauri@cultureelerfgoed.nl" ;
 .
 zo:Besluit
@@ -107,8 +105,8 @@ zo:Eigenschap
 zo:EnkelvoudigDocument
   a owl:Class ;
   dcterms:created "2019-01-01"^^xsd:date ;
-  rdfs:comment "De class zo:EnkelvoudigDocument is een representatie van een document waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl ;
-  rdfs:label "Enkelvoudig Document"@nl ;
+  rdfs:comment "De class EnkelvoudigDocument is een representatie van een document waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl ;
+  rdfs:label "Enkelvoudig document"@nl ;
   rdfs:subClassOf zo:Document ;
   skos:definition "Een document waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl ;
 .
@@ -123,7 +121,7 @@ zo:Rol
 zo:SamengesteldDocument
   a owl:Class ;
   dcterms:created "2019-01-01"^^xsd:date ;
-  rdfs:comment "De class zo:SamengesteldDocument is een representatie van (definitie ontbreekt)."@nl ;
+  rdfs:comment "De class SamengesteldDocument is een representatie van (definitie ontbreekt)."@nl ;
   rdfs:label "Samengesteld Document"@nl ;
   rdfs:subClassOf zo:Document ;
   skos:definition "Er is geen definitie beschikbaar."@nl ;
@@ -184,7 +182,7 @@ zo:besluitidentificatie
   dcterms:created "2019-01-01"^^xsd:date ;
   rdfs:comment "De property besluitIdentificatie wordt gebruikt om aan te geven welke besluitidentificatie is gekoppeld aan een besluit."@nl ;
   rdfs:domain zo:Besluit ;
-  rdfs:label "Besluitidentificatie"@nl ;
+  rdfs:label "Besluit identificatie"@nl ;
   rdfs:range xsd:integer ;
   skos:definition "Identificatie van het besluit."@nl ;
 .
@@ -570,7 +568,7 @@ zo:heeftBetrekkingOpEigenschap
   a owl:ObjectProperty ;
   dcterms:created "2019-01-01"^^xsd:date ;
   rdfs:comment "De property heeftBetrekkingOpEigenschap legt de relatie tussen eigenschaptype en eigenschap vast."@nl ;
-  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/ztco#Eigenschaptype> ;
+  rdfs:domain ztco:Eigenschaptype ;
   rdfs:label "Heeft betrekking op eigenschap"@nl ;
   rdfs:range zo:Eigenschap ;
   owl:inverseOf zo:isVanEigenschaptype ;
@@ -663,7 +661,7 @@ zo:heeftRol
   dcterms:created "2019-02-19"^^xsd:date ;
   rdfs:comment "De property heeftRol legt de relatie tussen zaak en rol vast."@nl ;
   rdfs:domain zo:Zaak ;
-  rdfs:label "heeft rol"@nl ;
+  rdfs:label "Heeft rol"@nl ;
   rdfs:range zo:Rol ;
   owl:inverseOf zo:rolBetreftZaak ;
 .
@@ -814,7 +812,7 @@ zo:isVanEigenschaptype
   dcterms:created "2019-01-01"^^xsd:date ;
   rdfs:comment "De property isVanEigenschaptype legt de relatie tussen eigenschap en eigenschaptype vast."@nl ;
   rdfs:domain zo:Eigenschap ;
-  rdfs:label "Is van eIgenschaptype"@nl ;
+  rdfs:label "Is van eigenschaptype"@nl ;
   rdfs:range ztco:Eigenschaptype ;
   rdfs:subPropertyOf zo:isVan ;
   owl:inverseOf zo:heeftBetrekkingOpEigenschap ;
@@ -898,7 +896,7 @@ zo:oefendUitRol
 zo:omschrijvingZaak
   a owl:DatatypeProperty ;
   dcterms:created "2019-01-01"^^xsd:date ;
-  rdfs:comment "De property omschrijving wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een zaak."@nl ;
+  rdfs:comment "De property omschrijvingZaak wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een zaak."@nl ;
   rdfs:domain zo:Zaak ;
   rdfs:label "Omschrijving zaak"@nl ;
   rdfs:range xsd:string ;
@@ -972,7 +970,7 @@ zo:relatieOmschrijving
   dcterms:created "2019-01-01"^^xsd:date ;
   rdfs:comment "De property relatieOmschrijving wordt gebruikt om aan te geven welke relatie-omschrijving is gekoppeld aan een zaakobject."@nl ;
   rdfs:domain zo:Zaakobject ;
-  rdfs:label "Relatie-omschrijving"@nl ;
+  rdfs:label "Relatie omschrijving"@nl ;
   rdfs:range xsd:string ;
   skos:definition "Omschrijving van de betrekking tussen de zaak en het object"@nl ;
 .
