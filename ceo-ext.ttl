@@ -2,6 +2,7 @@
 # imports: http://purl.org/dc/dcmitype/
 # imports: http://purl.org/dc/terms/
 # imports: http://rdfs.org/ns/void
+# imports: http://www.cidoc-crm.org/sites/default/files/cidoc_crm_v5.0.4_official_release.rdfs
 # imports: http://www.europeana.eu/schemas/edm/
 # imports: https://linkeddata.cultureelerfgoed.nl/def/ceo
 # imports: https://linkeddata.cultureelerfgoed.nl/def/zo
@@ -20,6 +21,14 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ceo:ActorEnRol
+  rdfs:comment "ceo:ActorEnRol is een specificatie van een CIDOC-CRM Legal Body. CDOC-CRM Legal Body is een abstractere representatie dan een ceo:ActorEnRol."@nl ;
+  rdfs:comment "ceo:ActorEnRol is een specificatie van een DC terms Agent. DC terms Agent is een abstractere representatie dan een ceo:ActorEnRol."@nl ;
+  rdfs:comment "ceo:ActorEnRol is een specificatie van een EDM Agent. EDM Agent is een abstractere representatie dan een ceo:ActorEnRol."@nl ;
+  rdfs:subClassOf dcterms:Agent ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body> ;
+  rdfs:subClassOf edm:Agent ;
+.
 ceo:ArcheologischComplex
   rdfs:comment "ceo:ArcheologischComplex is een specificatie van een schema:LandmarksOrHistoricalBuildings. schema:LandmarksOrHistoricalBuildings is een abstracter begrip dan een ceo:ArcheologischComplex."@nl ;
   rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
@@ -33,25 +42,38 @@ ceo:ArcheologischTerrein
   rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
 .
 ceo:CultuurhistorischObject
+  rdfs:comment "ceo:CultuurhistorischObject is een specificatie van een CIDOC-CRM Physical_Thing. CIDOC-CRM Physical_Thing is een abstracter begrip dan een ceo:CultuurhistorischObject."@nl ;
   rdfs:comment "ceo:CultuurhistorischObject is een specificatie van een DCMI PhysicalObject. DCMI PhysicalObject is een abstracter begrip dan een ceo:CultuurhistorischObject. "@nl ;
   rdfs:comment "ceo:CultuurhistorischObject is een specificatie van een DCterms PhysicalResource. DCterms PhysicalResource is een abstracter begrip dan een ceo:CultuurhistorischObject. "@nl ;
   rdfs:comment "ceo:CultuurhistorischObject is een specificatie van een EDM ProvidedCHO. EDM ProvidedCHO is een abstracter begrip dan een ceo:CultuurhistorischObject."@nl ;
   rdfs:subClassOf dcmi:PhysicalObject ;
   rdfs:subClassOf dcterms:PhysicalResource ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing> ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E19_Physical_Object> ;
   rdfs:subClassOf edm:ProvidedCHO ;
 .
 ceo:Gebeurtenis
+  rdfs:comment "ceo:Gebeurtenis is een specificatie van een CIDOC-CRM Event. CDOC-CRM Event is een abstractere representatie dan een ceo:Gebeurtenis."@nl ;
   rdfs:comment "ceo:Gebeurtenis is een specificatie van een DCMI Event. DCMI Event is een rdfs:Class en daardoor een abstractere representatie dan een ceo:Gebeurtenis. "@nl ;
-  rdfs:comment "ceo:Gebeurtenis is een specificatie van een DCMI Event. DCMI Event is een rdfs:Resource en daardoor een abstracter begrip dan een ceo:Gebeurtenis. "@nl ;
+  rdfs:comment "ceo:Gebeurtenis is een specificatie van een EDM Event. EDM Event is een abstractere representatie dan een ceo:Gebeurtenis."@nl ;
   rdfs:comment "ceo:Gebeurtenis is een specificatie van een Schema Event. Schema Event is een abstracter begrip dan een ceo:Gebeurtenis omdat Schema.org een eigen structuur heeft lost van het RDF of OWL schema."@nl ;
   rdfs:subClassOf dcmi:Event ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E5_Event> ;
+  rdfs:subClassOf edm:Event ;
+  rdfs:subClassOf schema:Event ;
 .
 ceo:Grondsporen
   rdfs:comment "ceo:Grondsporen is een specificatie van een schema:LandmarksOrHistoricalBuildings. schema:LandmarksOrHistoricalBuildings is een abstracter begrip dan een ceo:Grondsporen."@nl ;
   rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
 .
 ceo:LocatieAanduiding
+  rdfs:comment "ceo:LocatieAanduiding is een specificatie van een CIDOC-CRM Place. CIDOC-CRM Place is een abstracter begrip dan een ceo:LocatieAanduiding."@nl ;
+  rdfs:comment "ceo:LocatieAanduiding is een specificatie van een DC terms Location. DC terms Location is een abstracter begrip dan een ceo:LocatieAanduiding."@nl ;
+  rdfs:comment "ceo:LocatieAanduiding is een specificatie van een EDM Place. EDM Place is een abstracter begrip dan een ceo:LocatieAanduiding."@nl ;
   rdfs:comment "ceo:LocatieAanduiding is een specificatie van een Schema Place. Schema Place is een abstracter begrip dan een ceo:LocatieAanduiding."@nl ;
+  rdfs:subClassOf dcterms:Location ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E53_Place> ;
+  rdfs:subClassOf edm:Place ;
   rdfs:subClassOf schema:Place ;
 .
 ceo:Rijksmonument
@@ -66,9 +88,8 @@ ceo:Vondsten
   rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
 .
 ceo:Vondstlocatie
-  rdfs:comment "ceo:Vondstlocatie is een specificatie van een DCterms Location. DCterms Location is een abstracter begrip dan een ceo:Vondstlocatie. "@nl ;
   rdfs:comment "ceo:Vondstlocatie is een specificatie van een schema:LandmarksOrHistoricalBuildings. schema:LandmarksOrHistoricalBuildings is een abstracter begrip dan een ceo:Vondstlocatie."@nl ;
-  rdfs:subClassOf dcterms:Location ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
 .
 ceo:einddatum
   rdfs:comment "ceo:einddatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:einddatum. "@nl ;
@@ -167,6 +188,7 @@ ceo:startdatum
   owl:imports dcmi: ;
   owl:imports dcterms: ;
   owl:imports <http://rdfs.org/ns/void> ;
+  owl:imports <http://www.cidoc-crm.org/sites/default/files/cidoc_crm_v5.0.4_official_release.rdfs> ;
   owl:imports edm: ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/zo> ;
