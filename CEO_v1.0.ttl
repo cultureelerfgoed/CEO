@@ -1686,16 +1686,17 @@ ceo:woonplaatsnaam
   rdfs:range xsd:string ;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#postName> ;
 .
-lxr:heeftCBSGemeentecode
-  a owl:ObjectProperty ;
+lxr:cbsGemeentecode
+  a owl:DatatypeProperty ;
   dcterms:created "2019-05-15"^^xsd:date ;
-  rdfs:comment "De property heeftCBSGemeentecode legt de relatie tussen gemeente en CBS gemeentecode vast."@nl ;
-  rdfs:label "Heeft CBS gemeentecode @nl" ;
+  rdfs:comment "De property cbsGemeentecode wordt gebruikt om aan te geven de CBS code bij de OWMS gemeente uri."@nl ;
+  rdfs:label "CBS gemeentecode @nl" ;
   skos:editorialNote "De officiele bron van de Gemeentecode is de Gemeentelijke Basisadministratie. (GBA)" ;
 .
-lxr:heeftCBSProvinciecode
-  a owl:ObjectProperty ;
+lxr:cbsProvinciecode
+  a owl:DatatypeProperty ;
   dcterms:created "2019-05-15"^^xsd:date ;
-  rdfs:comment "De property heeftCBSProvinciecode legt de relatie tussen provincie en CBS provinciecode vast."@nl ;
-  rdfs:label "Heeft CBS provinciecode @nl" ;
+  dcterms:modified "2019-05-21"^^xsd:date ;
+  rdfs:comment "De property cbsProvinciecode wordt gebruikt om aan te geven de CBS code bij de OWMS provincie uri."@nl ;
+  rdfs:label "CBS provinciecode @nl" ;
 .
