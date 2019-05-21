@@ -89,7 +89,7 @@ ceo:ActorEnRol
 ceo:Adresgegevens
   a owl:Class ;
   dcterms:created "2018-05-24"^^xsd:date ;
-  rdfs:comment "De class Adresgegevens is de representatie van de adresgegevens van een Cultuurhistorische Object."@nl ;
+  rdfs:comment "De class Adresgegevens is de representatie van de adresgegevens van een Cultuurhistorisch Object."@nl ;
   rdfs:label "Adresgegevens"@nl ;
   rdfs:subClassOf <http://www.w3.org/ns/locn#Address> ;
 .
@@ -1324,7 +1324,7 @@ ceo:hoortBijZaak
 ceo:huidigeNaam
   a owl:DatatypeProperty ;
   dcterms:created "2018-02-06"^^xsd:date ;
-  rdfs:comment "De property huidigeNaam wordt gebruikt om aan te geven of de naam, de huidige naam is van een cultuurhistorische object."@nl ;
+  rdfs:comment "De property huidigeNaam wordt gebruikt om aan te geven of de naam, de huidige naam is van een cultuurhistorisch object."@nl ;
   rdfs:domain ceo:Naam ;
   rdfs:label "Huidige naam"@nl ;
   rdfs:range xsd:boolean ;
@@ -1491,7 +1491,7 @@ ceo:onroerendeZaakomschrijving
 ceo:oorspronkelijkeNaam
   a owl:DatatypeProperty ;
   dcterms:created "2018-02-06"^^xsd:date ;
-  rdfs:comment "De property oorspronkelijkeNaam wordt gebruikt om aan te geven of de naam, de oorspronkelijke naam is van een cultuurhistorische object."@nl ;
+  rdfs:comment "De property oorspronkelijkeNaam wordt gebruikt om aan te geven of de naam, de oorspronkelijke naam is van een cultuurhistorisch object."@nl ;
   rdfs:domain ceo:Naam ;
   rdfs:label "Oorspronkelijke naam"@nl ;
   rdfs:range xsd:boolean ;
