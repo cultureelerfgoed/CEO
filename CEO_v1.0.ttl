@@ -1,4 +1,5 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/def/ceo
+# imports: http://www.w3.org/2004/02/skos/core
 # prefix: ceo
 
 @prefix brk: <http://brk.basisregistraties.overheid.nl/def/brk#> .
@@ -74,6 +75,7 @@ pdok:asWKT-RD
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:title "Cultureel Erfgoed Ontologie"@nl ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
   foaf:mbox "thesauri@cultureelerfgoed.nl" ;
 .
 ceo:ActorEnRol
@@ -1689,6 +1691,7 @@ lxr:heeftCBSGemeentecode
   dcterms:created "2019-05-15"^^xsd:date ;
   rdfs:comment "De property heeftCBSGemeentecode legt de relatie tussen gemeente en CBS gemeentecode vast."@nl ;
   rdfs:label "Heeft CBS gemeentecode @nl" ;
+  skos:editorialNote "De officiele bron van de Gemeentecode is de Gemeentelijke Basisadministratie. (GBA)" ;
 .
 lxr:heeftCBSProvinciecode
   a owl:ObjectProperty ;
