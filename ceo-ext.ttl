@@ -11,128 +11,161 @@
 @prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix ceo-ext: <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext#> .
 @prefix dcmi: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix edm: <http://www.europeana.eu/schemas/edm/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ceo:ArcheologischComplex
+  rdfs:comment "ceo:ArcheologischComplex is een specificatie van een schema:LandmarksOrHistoricalBuildings. schema:LandmarksOrHistoricalBuildings is een abstracter begrip dan een ceo:ArcheologischComplex."@nl ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
+.
+ceo:ArcheologischOnderzoeksgebied
+  rdfs:comment "ceo:ArcheologischOnderzoeksgebied is een specificatie van een schema:LandmarksOrHistoricalBuildings. schema:LandmarksOrHistoricalBuildings is een abstracter begrip dan een ceo:ArcheologischOnderzoeksgebied."@nl ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
+.
+ceo:ArcheologischTerrein
+  rdfs:comment "ceo:ArcheologischTerrein is een specificatie van een schema:LandmarksOrHistoricalBuildings. schema:LandmarksOrHistoricalBuildings is een abstracter begrip dan een ceo:ArcheologischTerrein."@nl ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
+.
 ceo:CultuurhistorischObject
   rdfs:comment "ceo:CultuurhistorischObject is een specificatie van een DCMI PhysicalObject. DCMI PhysicalObject is een abstracter begrip dan een ceo:CultuurhistorischObject. "@nl ;
   rdfs:comment "ceo:CultuurhistorischObject is een specificatie van een DCterms PhysicalResource. DCterms PhysicalResource is een abstracter begrip dan een ceo:CultuurhistorischObject. "@nl ;
+  rdfs:comment "ceo:CultuurhistorischObject is een specificatie van een EDM ProvidedCHO. EDM ProvidedCHO is een abstracter begrip dan een ceo:CultuurhistorischObject."@nl ;
   rdfs:subClassOf dcmi:PhysicalObject ;
-  rdfs:subClassOf <http://purl.org/dc/terms/PhysicalResource> ;
+  rdfs:subClassOf dcterms:PhysicalResource ;
+  rdfs:subClassOf edm:ProvidedCHO ;
 .
 ceo:Gebeurtenis
   rdfs:comment "ceo:Gebeurtenis is een specificatie van een DCMI Event. DCMI Event is een rdfs:Class en daardoor een abstractere representatie dan een ceo:Gebeurtenis. "@nl ;
   rdfs:comment "ceo:Gebeurtenis is een specificatie van een DCMI Event. DCMI Event is een rdfs:Resource en daardoor een abstracter begrip dan een ceo:Gebeurtenis. "@nl ;
+  rdfs:comment "ceo:Gebeurtenis is een specificatie van een Schema Event. Schema Event is een abstracter begrip dan een ceo:Gebeurtenis omdat Schema.org een eigen structuur heeft lost van het RDF of OWL schema."@nl ;
   rdfs:subClassOf dcmi:Event ;
+.
+ceo:Grondsporen
+  rdfs:comment "ceo:Grondsporen is een specificatie van een schema:LandmarksOrHistoricalBuildings. schema:LandmarksOrHistoricalBuildings is een abstracter begrip dan een ceo:Grondsporen."@nl ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
+.
+ceo:LocatieAanduiding
+  rdfs:comment "ceo:LocatieAanduiding is een specificatie van een Schema Place. Schema Place is een abstracter begrip dan een ceo:LocatieAanduiding."@nl ;
+  rdfs:subClassOf schema:Place ;
+.
+ceo:Rijksmonument
+  rdfs:comment "ceo:Rijksmonument is een specificatie van een schema:LandmarksOrHistoricalBuildings. schema:LandmarksOrHistoricalBuildings is een abstracter begrip dan een ceo:Rijksmonument."@nl ;
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
 .
 ceo:Tijdvak
   rdfs:comment "ceo:Tijdvak is een specificatie van een DCterms PeriodOfTime. DCterms PeriodOfTime is een rdfs:Class en daardoor een abstractere representatie dan een ceo:Tijdvak. ceo:Tijdvak is een specificatie van een DCterms PeriodOfTime."@nl ;
-  rdfs:subClassOf <http://purl.org/dc/terms/PeriodOfTime> ;
+  rdfs:subClassOf dcterms:PeriodOfTime ;
+.
+ceo:Vondsten
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
 .
 ceo:Vondstlocatie
   rdfs:comment "ceo:Vondstlocatie is een specificatie van een DCterms Location. DCterms Location is een abstracter begrip dan een ceo:Vondstlocatie. "@nl ;
-  rdfs:subClassOf <http://purl.org/dc/terms/Location> ;
+  rdfs:comment "ceo:Vondstlocatie is een specificatie van een schema:LandmarksOrHistoricalBuildings. schema:LandmarksOrHistoricalBuildings is een abstracter begrip dan een ceo:Vondstlocatie."@nl ;
+  rdfs:subClassOf dcterms:Location ;
 .
 ceo:einddatum
   rdfs:comment "ceo:einddatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:einddatum. "@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 ceo:naam
   rdfs:comment "ceo:naam is een specificatie van DCterms title, rdfs:label, skos:prefLabel. DCterms title, rdfs:label, skos:prefLabel zijn een abstractere representatie dan een ceo:naam. "@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/title> ;
+  rdfs:subPropertyOf dcterms:title ;
   rdfs:subPropertyOf rdfs:label ;
   rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#prefLabel> ;
 .
 ceo:registratiedatum
   rdfs:comment "ceo:registratiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:registratiedatum. "@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 ceo:startdatum
   rdfs:comment "ceo:startdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:startdatum. "@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zbo#Betrokkene>
   rdfs:comment "zbo:Betrokkene is een specificatie van een DCterms Agent. DCterms Agent is een rdfs:Resource en daardoor een abstractere representatie dan een zbo:Betrokkene. "@nl ;
-  rdfs:subClassOf <http://purl.org/dc/terms/Agent> ;
+  rdfs:subClassOf dcterms:Agent ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#besluitdatum>
   rdfs:comment "ceo:besluitdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:besluitdatum. "@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#datumStatusGezet>
   rdfs:comment "ceo:datumStatusGezet is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:datumStatusGezet. "@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#datumVernietigingDossier>
   rdfs:comment "ceo:datumVernietigingDossier is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:datumVernietigingDossier.  "@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#documentcreatiedatum>
   rdfs:comment "ceo:documentcreatiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:documentcreatiedatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#documentontvangstdatum>
   rdfs:comment "ceo:documentontvangstdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:documentontvangstdatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#documentverzenddatum>
   rdfs:comment "ceo:documentverzenddatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:documentverzenddatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#einddatum>
   rdfs:comment "ceo:einddatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:einddatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#einddatumGepland>
   rdfs:comment "ceo:einddatumGepland is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:einddatumGepland."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#ingangsdatum>
   rdfs:comment "ceo:ingangsdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:ingangsdatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#laatsteBetaaldatum>
   rdfs:comment "ceo:laatsteBetaaldatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:laatsteBetaaldatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#registratiedatum>
   rdfs:comment "ceo: registratiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo: registratiedatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#registratiedatumZaak>
   rdfs:comment "ceo:registratiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:registratiedatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#startdatum>
   rdfs:comment "ceo:startdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:startdatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#uiterlijkeEinddatumAfdoening>
   rdfs:comment "ceo:uiterlijkeEinddatumAfdoening is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:uiterlijkeEinddatumAfdoening."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#uiterlijkeReactiedatum>
   rdfs:comment "ceo:uiterlijkeReactiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:uiterlijkeReactiedatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#vervaldatum>
   rdfs:comment "ceo:vervaldatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:vervaldatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zo#verzenddatum>
   rdfs:comment "ceo:verzenddatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:verzenddatum."@nl ;
-  rdfs:subPropertyOf <http://purl.org/dc/terms/date> ;
+  rdfs:subPropertyOf dcterms:date ;
 .
 <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext>
   a void:Linkset ;
   a owl:Ontology ;
   rdfs:comment "Dit linkset bevat koppelingen tussen de RCE ontologieën CEO en ZO en de externe ontologieën Dublin Core (terms), Schema.org en EDM. De koppeling beperkt zich tot Plaats, Tijd, CH Object en Actor/Agent." ;
   owl:imports dcmi: ;
-  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports dcterms: ;
   owl:imports <http://rdfs.org/ns/void> ;
   owl:imports edm: ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
