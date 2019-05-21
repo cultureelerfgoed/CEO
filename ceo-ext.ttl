@@ -1,6 +1,7 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext
 # imports: http://purl.org/dc/dcmitype/
 # imports: http://purl.org/dc/terms/
+# imports: http://www.europeana.eu/schemas/edm/
 # imports: https://linkeddata.cultureelerfgoed.nl/def/ceo
 # imports: https://linkeddata.cultureelerfgoed.nl/def/zo
 # prefix: ceo-ext
@@ -9,6 +10,7 @@
 @prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix ceo-ext: <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext#> .
 @prefix dcmi: <http://purl.org/dc/dcmitype/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -125,9 +127,10 @@ ceo:startdatum
 .
 <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext>
   a owl:Ontology ;
-  rdfs:comment "Dit linkset bevat koppelingen tussen de RCE ontologieën en externe ontologieën." ;
+  rdfs:comment "Dit linkset bevat koppelingen tussen de RCE ontologieën CEO en ZO en de externe ontologieën Dublin Core (terms), Schema.org en EDM. De koppeling beperkt zich tot Plaats, Tijd, CH Object en Actor/Agent." ;
   owl:imports dcmi: ;
   owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports edm: ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/zo> ;
 .
