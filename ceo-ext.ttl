@@ -1,9 +1,4 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext
-# imports: http://purl.org/dc/dcmitype/
-# imports: http://purl.org/dc/terms/
-# imports: http://rdfs.org/ns/void
-# imports: http://www.cidoc-crm.org/sites/default/files/cidoc_crm_v5.0.4_official_release.rdfs
-# imports: http://www.europeana.eu/schemas/edm/
 # imports: https://linkeddata.cultureelerfgoed.nl/def/ceo
 # imports: https://linkeddata.cultureelerfgoed.nl/def/zo
 # prefix: ceo-ext
@@ -81,8 +76,14 @@ ceo:Rijksmonument
   rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
 .
 ceo:Tijdvak
+  rdfs:comment "ceo:Tijdvak is een specificatie van EDM TimeSpan."@nl ;
+  rdfs:comment "ceo:Tijdvak is een specificatie van een CDOC-CRM Time-Span."@nl ;
   rdfs:comment "ceo:Tijdvak is een specificatie van een DCterms PeriodOfTime. DCterms PeriodOfTime is een rdfs:Class en daardoor een abstractere representatie dan een ceo:Tijdvak. ceo:Tijdvak is een specificatie van een DCterms PeriodOfTime."@nl ;
+  rdfs:comment "ceo:Tijdvak is een specificatie van een DCterms SizeOrDuration."@nl ;
   rdfs:subClassOf dcterms:PeriodOfTime ;
+  rdfs:subClassOf dcterms:SizeOrDuration ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+  rdfs:subClassOf edm:TimeSpan ;
 .
 ceo:Vondsten
   rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
@@ -92,22 +93,42 @@ ceo:Vondstlocatie
   rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
 .
 ceo:einddatum
+  rdfs:comment "ceo:einddatum is een specificatie van een CIDOC-CRM end is qualified by. CIDOC-CRM end is qualified by is een abstractere representatie dan een ceo:einddatum."@nl ;
   rdfs:comment "ceo:einddatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:einddatum. "@nl ;
+  rdfs:comment "ceo:einddatum is een specificatie van een EDM end. EDM end is een abstractere representatie dan een ceo:einddatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
+  rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by> ;
+  rdfs:subPropertyOf edm:end ;
+.
+ceo:heeftLocatieAanduiding
+  rdfs:comment "ceo:heeftLocatieAanduiding is een specificatie van DC terms spatial. DC terms spatial is een abstractere representatie dan een ceo:heeftLocatieAanduiding."@nl ;
+  rdfs:subPropertyOf dcterms:spatial ;
+.
+ceo:heeftTijdvak
+  rdfs:comment "ceo:heeftLocatieAanduiding is een specificatie van DC terms temporal. DC terms temporal is een abstractere representatie dan een ceo:heeftLocatieAanduiding."@nl ;
+  rdfs:subPropertyOf dcterms:temporal ;
 .
 ceo:naam
-  rdfs:comment "ceo:naam is een specificatie van DCterms title, rdfs:label, skos:prefLabel. DCterms title, rdfs:label, skos:prefLabel zijn een abstractere representatie dan een ceo:naam. "@nl ;
+  rdfs:comment "ceo:naam is een specificatie van DCterms title. DCterms title is een abstractere representatie dan een ceo:naam."@nl ;
+  rdfs:comment "ceo:naam is een specificatie van rdfs:label. rdfs:label is een abstractere representatie dan een ceo:naam."@nl ;
+  rdfs:comment "ceo:naam is een specificatie van schema name. Schema name is een abstractere representatie dan een ceo:naam."@nl ;
+  rdfs:comment "ceo:naam is een specificatie van skos:prefLabel. skos:prefLabel is een abstractere representatie dan een ceo:naam."@nl ;
   rdfs:subPropertyOf dcterms:title ;
   rdfs:subPropertyOf rdfs:label ;
   rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+  rdfs:subPropertyOf schema:name ;
 .
 ceo:registratiedatum
   rdfs:comment "ceo:registratiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:registratiedatum. "@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
 ceo:startdatum
+  rdfs:comment "ceo:startdatum is een specificatie van EDM begin. EDM begin is een abstractere representatie dan een ceo:startdatum."@nl ;
+  rdfs:comment "ceo:startdatum is een specificatie van een CIDOC-CRM beginning is qualified by. CIDOC-CRM beginning is qualified by is een abstractere representatie dan een ceo:startdatum."@nl ;
   rdfs:comment "ceo:startdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:startdatum. "@nl ;
   rdfs:subPropertyOf dcterms:date ;
+  rdfs:subPropertyOf <http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by> ;
+  rdfs:subPropertyOf edm:begin ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/zbo#Betrokkene>
   rdfs:comment "zbo:Betrokkene is een specificatie van een DCterms Agent. DCterms Agent is een rdfs:Resource en daardoor een abstractere representatie dan een zbo:Betrokkene. "@nl ;
@@ -184,12 +205,7 @@ ceo:startdatum
 <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext>
   a void:Linkset ;
   a owl:Ontology ;
-  rdfs:comment "Dit linkset bevat koppelingen tussen de RCE ontologieën CEO en ZO en de externe ontologieën Dublin Core (terms), Schema.org en EDM. De koppeling beperkt zich tot Plaats, Tijd, CH Object en Actor/Agent." ;
-  owl:imports dcmi: ;
-  owl:imports dcterms: ;
-  owl:imports <http://rdfs.org/ns/void> ;
-  owl:imports <http://www.cidoc-crm.org/sites/default/files/cidoc_crm_v5.0.4_official_release.rdfs> ;
-  owl:imports edm: ;
+  rdfs:comment "Dit linkset bevat koppelingen tussen de RCE ontologieën CEO en ZO en de externe ontologieën Dublin Core (terms), Schema.org, CIDOC-CRM en EDM. De koppeling beperkt zich tot Plaats, Tijd, CH Object en Actor/Agent." ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
   owl:imports <https://linkeddata.cultureelerfgoed.nl/def/zo> ;
 .
