@@ -1,4 +1,5 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext
+# imports: https://linkeddata.cultureelerfgoed.nl/def/zo
 # prefix: ceo-ext
 
 @prefix : <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext#> .
@@ -13,6 +14,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zo#> .
 
 ceo:ActorEnRol
   rdfs:comment "ceo:ActorEnRol is een specificatie van een CIDOC-CRM Legal Body. CDOC-CRM Legal Body is een abstractere representatie dan een ceo:ActorEnRol."@nl ;
@@ -132,71 +134,71 @@ ceo:startdatum
   rdfs:comment "zbo:Betrokkene is een specificatie van een DCterms Agent. DCterms Agent is een rdfs:Resource en daardoor een abstractere representatie dan een zbo:Betrokkene. "@nl ;
   rdfs:subClassOf dcterms:Agent ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#besluitdatum>
+zo:besluitdatum
   rdfs:comment "ceo:besluitdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:besluitdatum. "@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#datumStatusGezet>
+zo:datumStatusGezet
   rdfs:comment "ceo:datumStatusGezet is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:datumStatusGezet. "@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#datumVernietigingDossier>
+zo:datumVernietigingDossier
   rdfs:comment "ceo:datumVernietigingDossier is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:datumVernietigingDossier.  "@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#documentcreatiedatum>
+zo:documentcreatiedatum
   rdfs:comment "ceo:documentcreatiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:documentcreatiedatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#documentontvangstdatum>
+zo:documentontvangstdatum
   rdfs:comment "ceo:documentontvangstdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:documentontvangstdatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#documentverzenddatum>
+zo:documentverzenddatum
   rdfs:comment "ceo:documentverzenddatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:documentverzenddatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#einddatum>
+zo:einddatum
   rdfs:comment "ceo:einddatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:einddatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#einddatumGepland>
+zo:einddatumGepland
   rdfs:comment "ceo:einddatumGepland is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:einddatumGepland."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#ingangsdatum>
+zo:ingangsdatum
   rdfs:comment "ceo:ingangsdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:ingangsdatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#laatsteBetaaldatum>
+zo:laatsteBetaaldatum
   rdfs:comment "ceo:laatsteBetaaldatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:laatsteBetaaldatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#registratiedatum>
+zo:registratiedatum
   rdfs:comment "ceo: registratiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo: registratiedatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#registratiedatumZaak>
+zo:registratiedatumZaak
   rdfs:comment "ceo:registratiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:registratiedatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#startdatum>
+zo:startdatum
   rdfs:comment "ceo:startdatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:startdatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#uiterlijkeEinddatumAfdoening>
+zo:uiterlijkeEinddatumAfdoening
   rdfs:comment "ceo:uiterlijkeEinddatumAfdoening is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:uiterlijkeEinddatumAfdoening."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#uiterlijkeReactiedatum>
+zo:uiterlijkeReactiedatum
   rdfs:comment "ceo:uiterlijkeReactiedatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:uiterlijkeReactiedatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#vervaldatum>
+zo:vervaldatum
   rdfs:comment "ceo:vervaldatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:vervaldatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/zo#verzenddatum>
+zo:verzenddatum
   rdfs:comment "ceo:verzenddatum is een specificatie van een DCterms date. DCterms date is een abstractere representatie dan een ceo:verzenddatum."@nl ;
   rdfs:subPropertyOf dcterms:date ;
 .
@@ -204,4 +206,5 @@ ceo:startdatum
   a void:Linkset ;
   a owl:Ontology ;
   rdfs:comment "Dit linkset bevat koppelingen tussen de RCE ontologieën CEO en ZO en de externe ontologieën Dublin Core (terms), Schema.org, CIDOC-CRM en EDM. De koppeling beperkt zich tot Plaats, Tijd, CH Object en Actor/Agent." ;
+  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/zo> ;
 .
