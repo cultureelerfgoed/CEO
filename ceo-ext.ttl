@@ -1,6 +1,4 @@
 # baseURI: https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext
-# imports: https://linkeddata.cultureelerfgoed.nl/def/ceo
-# imports: https://linkeddata.cultureelerfgoed.nl/def/zo
 # prefix: ceo-ext
 
 @prefix : <https://linkeddata.cultureelerfgoed.nl/linkset/ceo-ext#> .
@@ -206,6 +204,4 @@ ceo:startdatum
   a void:Linkset ;
   a owl:Ontology ;
   rdfs:comment "Dit linkset bevat koppelingen tussen de RCE ontologieën CEO en ZO en de externe ontologieën Dublin Core (terms), Schema.org, CIDOC-CRM en EDM. De koppeling beperkt zich tot Plaats, Tijd, CH Object en Actor/Agent." ;
-  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/ceo> ;
-  owl:imports <https://linkeddata.cultureelerfgoed.nl/def/zo> ;
 .
