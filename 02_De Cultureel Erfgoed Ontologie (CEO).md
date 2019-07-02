@@ -14,22 +14,28 @@ In de CEO wordt brondata die overeenkomen met de logische modellen CHOI en KENNI
 
 <span id="anchor-4"></span>Cultureel Erfgoed Ontologie (CEO)
 
-Base URI: [*https://linkeddata.cultureelerfgoed.nl/def/ceo*](https://linkeddata.cultureelerfgoed.nl/def/ceo)
+**Ontologie overzicht**
 
-<span id="anchor-5"></span>Imports
 
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
+
+Base URI: https://linkeddata.cultureelerfgoed.nl/def/ceo
+
+
+
+| **prefix** | **Namespace URI**                                |
+| ---------- | ------------------------------------------------ |
+| brk        | http://brk.basisregistratie.overheid.nl/def/brk# |
+| ceo        | https://linkeddata.cultureelerfgoed.nl/def/ceo#  |
+| dcterms    | http://purl.org/dc/terms/                        |
+| foaf       | http://xmlns.com/foaf/0.1/                       |
+| lxr        | https://linkeddata.cultureelerfgoed.nl/def/lxr#  |
+| owl        | http://www.w3.org/2002/07/owl#                   |
+| pdok       | http://data.pdok.nl/def/pdok#                    |
+| rdf        | http://www.w3.org/1999/02/22-rdf-syntax-ns#      |
+| rdfs       | http://www.w3.org/2000/01/rdf-schema#            |
+| skos       | http://www.w3.org/2004/02/skos/core#             |
+| xsd        | http://www.w3.org/2001/XMLSchema#                |
+
 
 <span id="anchor-6"></span>Afwijkingen in de ontologie t.o.v. de logische modellen
 
