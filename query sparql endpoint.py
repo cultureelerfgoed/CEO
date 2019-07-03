@@ -6,8 +6,8 @@
 import os, time
 from SPARQLWrapper import SPARQLWrapper, XML
 
-querydir = "C:\\Users\\lieke\\OneDrive - INFORMAGIC\\Code\\Python\\RDF\\queries\\"
-logfile = "C:\\Users\\lieke\\OneDrive - INFORMAGIC\\Code\\Python\\RDF\\logs\\logfile.txt"
+querydir = "C:\\Users\\YOUR NAME HERE\\Code\\Python\\RDF\\queries\\"
+logfile = "C:\\Users\\YOUR NAME HERE\\Code\\Python\\RDF\\logs\\logfile.txt"
 
 # dit is de URL van het endpoint
 sparql = SPARQLWrapper("https://linkeddata.cultureelerfgoed.nl/sparql")
