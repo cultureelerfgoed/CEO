@@ -1,3 +1,5 @@
+# Dit script maakt het mogelijk om onderdelen van je Python routine mee te nemen in een SPARQL query. 
+# De querystring wordt dynamish opgebouwd
 #Python versie 3
 import os, time, re
 
@@ -10,7 +12,7 @@ sparql.setReturnFormat(JSON)
 prefix = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/vocab/def/ceo#>"
 query_select = "SELECT"
 query_where = "where {"
-query_var = "?patrick "
+query_var = "?rm "
 query_condition = "a <https://linkeddata.cultureelerfgoed.nl/def/ceo#Rijksmonument> .\
           ?rm <https://linkeddata.cultureelerfgoed.nl/def/ceo#cultuurhistorischObjectnummer> ?nr \
                 } \
