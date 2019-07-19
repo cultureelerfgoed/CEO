@@ -1,0 +1,351 @@
+# baseURI: https://linkeddata.cultureelerfgoed.nl/def/ztceo
+# imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.w3.org/2004/02/skos/core
+# prefix: ztceo
+
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ztceo: <https://linkeddata.cultureelerfgoed.nl/def/ztceo#> .
+
+<https://linkeddata.cultureelerfgoed.nl/def/ztceo>
+  a owl:Ontology ;
+  dcterms:created "2019-06-24" ;
+  dcterms:creator ceo:Frans_van_der_Zande ;
+  dcterms:creator ceo:Patrick_Mout ;
+  dcterms:description "De ZTCO is de volledige semantische representatie van het logische datamodel Zaaktype eigenschappen uit de datalaag van de RCE"@nl ;
+  dcterms:hasVersion "1.0" ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:title "Zaak Type Catalogus Eigenschappen Ontologie"@nl ;
+  rdfs:label "Zaak Type Catalogus Ontologie"@nl ;
+  owl:imports <http://purl.org/dc/elements/1.1/> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
+.
+ztceo:AchisVeldwerkDatumafrondingRapport
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie ArchisVeldwerkDatumafrondingRapport wordt gebruikt om aan te geven welke Archis veldwerk datum afronding rapport is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis veldwerk: datum afronding rapport"@nl ;
+  ztceo:toelichtingEigenschaptype "Datum dat het archiseindonderzoeksrapport is ontvangen."@nl ;
+.
+ztceo:Archis2Motief
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  dcterms:modified "" ;
+  rdfs:comment "De Eigenschaptype instantie Archis2Motief wordt gebruikt om aan te geven welke Archis2 motief is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis2 motief"@nl ;
+.
+ztceo:Archis2OnderzoeksId
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie Archis2OnderzoeksId wordt gebruikt om aan te geven welke Archis2 onderzoeksidentificatie is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis2 onderzoeks_id"@nl ;
+  ztceo:toelichtingEigenschaptype "ID uit Archis2 tabel acs_onderzoeken"@nl ;
+.
+ztceo:Archis2Onderzoeksmeldingsnummer
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie Archis2Onderzoeksmeldingsnummer wordt gebruikt om aan te geven welke archis2onderzoeksmeldingsnummer is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis2onderzoeksmeldingsnummer"@nl ;
+  ztceo:toelichtingEigenschaptype "Archis2onderzoeksmeldingsnummer"@nl ;
+.
+ztceo:Archis2Vondstmeldingsnummer
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie Archis2Vondstmeldingsnummer wordt gebruikt om aan te geven welke Archis2 vondstmeldingsnummer is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis2 vondstmeldingsnummer"@nl ;
+  ztceo:toelichtingEigenschaptype "Mdg_id uit Archis2 tabel acs_waarnemingen"@nl ;
+.
+ztceo:Archis2Waarnemingsnummer
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie Archis2Waarnemingsnummer wordt gebruikt om aan te geven welke Archis2 waarnemingsnummer is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis2 waarnemingsnummer"@nl ;
+  ztceo:toelichtingEigenschaptype "Waarnemingsnummer uit Archis2 tabel acs_waarnemingen"@nl ;
+.
+ztceo:ArchisVeldwerkBevoegdGezag
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie ArchisVeldwerkBevoegdGezag wordt gebruikt om aan te geven welke Archis veldwerk bevoegd gezag is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis veldwerk: bevoegd gezag"@nl ;
+  ztceo:toelichtingEigenschaptype "Lijst van diversen betrokkenen als bevoegd gezag"@nl ;
+  ztceo:waardenverzamelingEigenschaptype "Gemeente;Waterschap;Provincie;Rijk;Geen" ;
+.
+ztceo:ArchisVeldwerkDatumafronding
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie ArchisVeldwerkDatumafronding wordt gebruikt om aan te geven welke Archis veldwerk datum afronding is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis veldwerk: datum afronding"@nl ;
+  ztceo:toelichtingEigenschaptype "Datum dat het archisonderzoek is afgerond."@nl ;
+.
+ztceo:ArchisVeldwerkEinddatumGepland
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie ArchisVeldwerkEinddatumGepland wordt gebruikt om aan te geven welke Archis veldwerk einddatum gepland is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis veldwerk: einddatum gepland"@nl ;
+  ztceo:toelichtingEigenschaptype "Veldwerk einddatum gepland"@nl ;
+.
+ztceo:ArchisVeldwerkStartdatum
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie ArchisVeldwerkStartdatum wordt gebruikt om aan te geven welke Archis veldwerk startdatum is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis veldwerk: startdatum"@nl ;
+  ztceo:toelichtingEigenschaptype "Veldwerk startdatum"@nl ;
+.
+ztceo:ArchisVeldwerkVerwachteDatumAfrondingRapport
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie AchisVeldwerkVerwachteDatumAfrondingRapport wordt gebruikt om aan te geven welke Archis veldwerk verwachte datum afronding rapport is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis veldwerk: verwachte datum afronding rapport"@nl ;
+  ztceo:toelichtingEigenschaptype "Veldwerk verwachte datum afronding rapport"@nl ;
+.
+ztceo:ArchisVondstmeldingDatumVondst
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie ArchisVondstmeldingDatumVondst wordt gebruikt om aan te geven welke Archis vondstmelding datum vondst is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Archis Vondstmelding Datum Vondst"@nl ;
+  ztceo:toelichtingEigenschaptype "Datum van vondstmelding."@nl ;
+.
+ztceo:Eigenschaptype
+  a owl:Class ;
+  rdfs:comment "De class Eigenschaptype is een representatie van (definitie ontbreekt)."@nl ;
+  rdfs:label "Eigenschaptype" ;
+  rdfs:subClassOf owl:Thing ;
+.
+ztceo:MRSprojectcode
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie MRSprojectcode wordt gebruikt om aan te geven welke  MRS projectcode is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Mrsprojectcode"@nl ;
+  ztceo:toelichtingEigenschaptype "De verschillende MRS-Projecten binnen RCE"@nl ;
+  ztceo:waardenverzamelingEigenschaptype "Wederopbouw 1940-1958 ;Nieuwe Hollandse Waterlinie ;MSP ;Archeologie 2008 ;Archeologie 2013 ;Wederopbouw 1959-1965 ;WKPB ;Vestingwerken ;Verbetervoorstellen algemeen ;Verbetervoorstellen Molens ;Verbetervoorstellen Kerken ;Verbetervoorstellen Utrecht bruggen ;Verbetervoorstellen subsidies " ;
+.
+ztceo:datumUitstelRapportverplichting
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie datumUitstelRapportverplichting wordt gebruikt om aan te geven welke datum uitstel rapportverplichting is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Datum uitstel rapportverplichting"@nl ;
+  ztceo:toelichtingEigenschaptype "Datum uitstel rapportverplichting"@nl ;
+.
+ztceo:definitieEigenschaptype
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De property definitieEigenschaptype wordt gebruikt om aan te geven welke definitie is gekoppeld aan een eigenschaptype."@nl ;
+  rdfs:domain ztceo:Eigenschaptype ;
+  rdfs:label "Definitie eigenschaptype"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De beschrijving van de betekenis van deze eigenschap"@nl ;
+.
+ztceo:eerdereZaken
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie eerdereZaken wordt gebruikt om aan te geven welke eerdere zaken zijn gekoppeld aan een zaak."@nl ;
+  rdfs:label "Eerdere zaken"@nl ;
+  ztceo:toelichtingEigenschaptype "Geeft aan welke andere zaken betrekking hebben op dit onderzoek/zaak"@nl ;
+.
+ztceo:eigenschapnaamEigenschaptype
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De property eigenschapnaamEigenschaptype wordt gebruikt om aan te geven welke eigenschapnaam is gekoppeld aan een eigenschaptype."@nl ;
+  rdfs:domain ztceo:Eigenschaptype ;
+  rdfs:label "Eigenschapnaam eigenschaptype"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De naam van de eigenschap"@nl ;
+.
+ztceo:formaatEigenschaptype
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De property formaatEigenschaptype wordt gebruikt om aan te geven welke formaat is gekoppeld aan een eigenschaptype."@nl ;
+  rdfs:domain ztceo:Eigenschaptype ;
+  rdfs:label "Formaat eigenschaptype"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Het soort tekens waarmee waarden van de eigenschap kunnen worden vastgelegd."@nl ;
+.
+ztceo:heeftEigenschapswaardeNaam
+  a owl:ObjectProperty ;
+  dcterms:created "2019-06-24" ;
+  dcterms:modified "" ;
+  rdfs:comment "De property heeftEigenschapswaardeNaam legt de relatie tussen eigenschapswaarde en de naam van de eigenschapswaarde vast."@nl ;
+  rdfs:domain ztceo:Eigenschaptype ;
+  rdfs:label "Heeft eigenschapswaarde naam"@nl ;
+  rdfs:range skos:Concept ;
+.
+ztceo:kardinaliteitEigenschaptype
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De property kardinaliteitEigenschaptype wordt gebruikt om aan te geven welke kardinaliteit is gekoppeld aan een eigenschaptype."@nl ;
+  rdfs:domain ztceo:Eigenschaptype ;
+  rdfs:label "Kardinaliteit eigenschaptype"@nl ;
+  rdfs:range xsd:integer ;
+  skos:definition "Het aantal mogelijke voorkomens van deze eigenschap binnen het zaaktype."@nl ;
+.
+ztceo:lengteEigenschaptype
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De property lengteEigenschaptype wordt gebruikt om aan te geven welke lengte is gekoppeld aan een eigenschaptype."@nl ;
+  rdfs:domain ztceo:Eigenschaptype ;
+  rdfs:label "Lengte eigenschaptype"@nl ;
+  rdfs:range xsd:integer ;
+  skos:definition "Het aantal karakters (lengte) waarmee waarden van de eigenschap worden vastgelegd."@nl ;
+.
+ztceo:onderzoeksnaam
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie onderzoeksnaam wordt gebruikt om aan te geven welke onderzoeksnaam is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Onderzoeksnaam"@nl ;
+  ztceo:toelichtingEigenschaptype "Naam die de onderzoeker aan het onderzoek heeft gegeven."@nl ;
+.
+ztceo:opdrachtstype
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  dcterms:modified "" ;
+  rdfs:comment "De Eigenschaptype instantie opdrachtstype wordt gebruikt om aan te geven welk opdrachtstype is gekoppeld aan een zaak."@nl ;
+  rdfs:label "opdrachtstype" ;
+  ztceo:waardenverzamelingEigenschaptype "WKPB" ;
+.
+ztceo:perceel
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  dcterms:modified "" ;
+  rdfs:comment "De Eigenschaptype instantie perceel wordt gebruikt om aan te geven welk perceel is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Perceel"@nl ;
+.
+ztceo:regime
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie regime wordt gebruikt om aan te geven welke regime is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Regime"@nl ;
+  ztceo:toelichtingEigenschaptype "Onder welk regime heeft de zaak plaats"@nl ;
+  ztceo:waardenverzamelingEigenschaptype "Monumentenwet1988;Erfgoedwet2016" ;
+.
+ztceo:reikwijdte
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie reikwijdte wordt gebruikt om aan te geven welke reikwijdte is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Reikwijdte"@nl ;
+  ztceo:toelichtingEigenschaptype "reikwijdte van de zaak"@nl ;
+  ztceo:waardenverzamelingEigenschaptype "Kort;Lang;Administratief" ;
+.
+ztceo:restauratieHypotheekBedrag
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  dcterms:modified "" ;
+  rdfs:comment "De Eigenschaptype instantie restauratieHypotheekBedragwordt gebruikt om aan te geven welk restauratie hypotheek bedrag is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Restauratie hypotheek bedrag"@nl ;
+.
+ztceo:toelichtingEigenschaptype
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De property toelichtingEigenschaptype wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een Eigenschaptype."@nl ;
+  rdfs:domain ztceo:Eigenschaptype ;
+  rdfs:label "Toelichting eigenschaptype"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Een toelichting op deze eigenschap en het belang hiervan voor zaak en van dit zaaktype."@nl ;
+.
+ztceo:typeOnderzoek
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De Eigenschaptype instantie typeOnderzoek wordt gebruikt om aan te geven welke type onderzoek is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Type onderzoek"@nl ;
+  ztceo:toelichtingEigenschaptype "De verschillende Archeologische Projecten binnen RCE"@nl ;
+  ztceo:waardenverzamelingEigenschaptype "ABE - Archeologisch: begeleiding;ABO - Archeologisch: booronderzoek;ABU - Archeologisch: bureauonderzoek;ADU - Archeologisch: duikactiviteiten;AGO - Archeologisch: geofysisch onderzoek;AIN - Archeologisch: inspectie;AKA - Archeologisch: (veld)kartering;AOP - Archeologisch: opgraving;AOW - Archeologisch: onderwaterarcheologie;APP - Archeologisch: proefputten/proefsleuven;AVE - Archeologisch: verwachtingskaart;AXX - Archeologisch: onbepaald;IAR - Indirect: archief;ICO - Indirect: collectie;ILI - Indirect: literatuur;IXX - Indirect: onbepaald;LUC - Luchtfoto/remote sensing;NBA - Niet-archeologisch: baggerwerk;NBO - Niet-archeologisch: boring;NDE - Niet-archeologisch: metaaldetector;NDU - Niet archeologisch: duikactiviteiten;NGR - Niet-archeologisch: graafwerk;NKA - Niet-archeologisch: kartering;NWA - Niet archeologisch: waterwerk en exploitatie;NXX - Niet-archeologisch: onbepaald;XXX - Onbekend" ;
+.
+ztceo:waardenverzamelingEigenschaptype
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-06-24" ;
+  rdfs:comment "De property waardenverzamelingEigenschaptype wordt gebruikt om aan te geven welke waardenverzameling is gekoppeld aan een eigenschaptype."@nl ;
+  rdfs:domain ztceo:Eigenschaptype ;
+  rdfs:label "Waardenverzameling eigenschaptype"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De - verzameling van - waarden die gegevens van deze eigenschap kunnen hebben."@nl ;
+.
+ztceo:wijzigingstype
+  a ztceo:Eigenschaptype ;
+  dcterms:created "2019-06-24" ;
+  dcterms:modified "" ;
+  rdfs:comment "De Eigenschaptype instantie wijzigingstype wordt gebruikt om aan te geven welk wijzigingstype is gekoppeld aan een zaak."@nl ;
+  rdfs:label "Wijzigingstype"@nl ;
+  ztceo:waardenverzamelingEigenschaptype "Gemeentelijke herindeling;Met Kadaster en/of afhandelingsbericht; Zonder Kadaster en afhandelingsbericht" ;
+.
+[
+  a rdfs:Datatype ;
+  owl:oneOf (
+      "ABE - Archeologisch: begeleiding"
+      "ABO - Archeologisch: booronderzoek"
+      "ABU - Archeologisch: bureauonderzoek"
+      "ADU - Archeologisch: duikactiviteiten"
+      "AGO - Archeologisch: geofysisch onderzoek"
+      "AIN - Archeologisch: inspectie"
+      "AKA - Archeologisch: (veld)kartering"
+      "AOP - Archeologisch: opgraving"
+      "AOW - Archeologisch: onderwaterarcheologie"
+      "APP - Archeologisch: proefputten/proefsleuven"
+      "AVE - Archeologisch: verwachtingskaart"
+      "AXX - Archeologisch: onbepaald"
+      "IAR - Indirect: archief"
+      "ICO - Indirect: collectie"
+      "ILI - Indirect: literatuur"
+      "IXX - Indirect: onbepaald"
+      "LUC - Luchtfoto/remote sensing"
+      "NBA - Niet-archeologisch: baggerwerk"
+      "NBO - Niet-archeologisch: boring"
+      "NDE - Niet-archeologisch: metaaldetector"
+      "NDU - Niet archeologisch: duikactiviteiten"
+      "NGR - Niet-archeologisch: graafwerk"
+      "NKA - Niet-archeologisch: kartering"
+      "NWA - Niet archeologisch: waterwerk en exploitatie"
+      "NXX - Niet-archeologisch: onbepaald"
+      "XXX - Onbekend"
+    ) ;
+].
+[
+  a rdfs:Datatype ;
+  owl:oneOf (
+      "Gemeente"
+      "Waterschap"
+      "Provincie"
+      "Rijk"
+      "Geen"
+    ) ;
+].
+[
+  a rdfs:Datatype ;
+  owl:oneOf (
+      "Kort"
+      "Lang"
+      "Administratief"
+    ) ;
+].
+[
+  a rdfs:Datatype ;
+  owl:oneOf (
+      "Monumentenwet 1988"
+      "Erfgoedwet 2016"
+    ) ;
+].
+[
+  a rdfs:Datatype ;
+  owl:oneOf (
+      "Wederopbouw 1940-1958"
+      "Nieuwe Hollandse Waterlinie"
+      "MSP"
+      "Archeologie 2008"
+      "Archeologie 2013"
+      "Wederopbouw 1959-1965"
+      "WKPB"
+      "Vestingwerken"
+      "Verbetervoorstellen algemeen"
+      "Verbetervoorstellen Molens"
+      "Verbetervoorstellen Kerken"
+      "Verbetervoorstellen Utrecht bruggen"
+      "Verbetervoorstellen subsidies"
+    ) ;
+].
