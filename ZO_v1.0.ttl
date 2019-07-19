@@ -1,0 +1,1154 @@
+# baseURI: https://linkeddata.cultureelerfgoed.nl/def/zo
+# imports: http://purl.org/dc/elements/1.1/
+# prefix: zo
+
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix zbo: <https://linkeddata.cultureelerfgoed.nl/def/zbo#> .
+@prefix zo: <https://linkeddata.cultureelerfgoed.nl/def/zo#> .
+@prefix ztco: <https://linkeddata.cultureelerfgoed.nl/def/ztco#> .
+
+skos:definition
+  a owl:AnnotationProperty ;
+  rdfs:label "definitie van de relatiesoort"@nl ;
+  rdfs:range xsd:string ;
+.
+ceo:CultuurhistorischObject
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class CultuurhistorischObject is de representatie van een fenomeen in de werkelijkheid met een zekere cultuurhistorische waarde."@nl ;
+  rdfs:label "Cultuurhistorisch object "@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "Het Object waarop een Zaak betrekking kan hebben zijnde één of meer voorkomens van de in de CHOI, SACE en ADLIB onderscheiden objecttypen. "@nl ;
+.
+ceo:heeftZaakobject
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property heeftZaakobject legt de relatie tussen CultuurhistorischObject en Zaakobject."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Heeft zaakobject "@nl ;
+  rdfs:range zo:Zaakobject ;
+  owl:inverseOf zo:betreftCultuurhistorischObject ;
+  skos:definition "Het zaakobject waarop een zaak betrekking heeft."@nl ;
+.
+zbo:Betrokkene
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class Betrokkene is een representatie van een subject, zijnde een natuurlijk persoon, niet-natuurlijk persoon of vestiging, organisatorische eenheid (binnen een vestiging van de zaak-behandelende niet-natuurlijk persoon), of medewerker (van die organisatorische eenheid) die een rol kan spelen bij een zaak."@nl ;
+  rdfs:label "Betrokkene"@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "Definitie RGBZ: Een subject, zijnde een natuurlijk persoon, niet-natuurlijk persoon of vestiging, organisatorische eenheid (binnen een vestiging van de zaak-behandelende niet-natuurlijk persoon), of medewerker (van die organisatorische eenheid) die een rol kan spelen bij een zaak."@nl ;
+.
+zbo:Medewerker
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19" ;
+  rdfs:comment "De class Medewerker is een representatie van een medewerker van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een organisatorische eenheid."@nl ;
+  rdfs:label "Medewerker"@nl ;
+  rdfs:subClassOf zbo:Betrokkene ;
+  skos:definition "Definitie RGBZ: Een medewerker van de organisatie die zaken behandelt uit hoofde van zijn of haar functie binnen een organisatorische eenheid."@nl ;
+.
+zbo:OrganisatorischeEenheid
+  a owl:Class ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De class OrganisatorischeEenheid is een representatie van het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een vestiging van zaakbehandelende organisatie en die verantwoordelijk is voor de behandeling van zaken."@nl ;
+  rdfs:label "Organisatorische Eenheid"@nl ;
+  rdfs:subClassOf zbo:Betrokkene ;
+  skos:definition "Definitie RGBZ: Het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een vestiging van zaakbehandelende organisatie en die verantwoordelijk is voor de behandeling van zaken."@nl ;
+  skos:definition "Een organisatorische eenheid als specialisatie van betrokkene."@nl ;
+.
+<https://linkeddata.cultureelerfgoed.nl/def/zo>
+  a owl:Ontology ;
+  dcterms:created "2019-01-01" ;
+  dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:description "De ZO is de volledige semantische representatie van het logische datamodel Zaak uit de datalaag van de RCE"@nl ;
+  dcterms:hasVersion "1.0" ;
+  dcterms:issued "2019-05-06" ;
+  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:title "Zaak Ontologie"@nl ;
+  rdfs:label "Zaak Ontologie"@nl ;
+  owl:imports <http://purl.org/dc/elements/1.1/> ;
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
+.
+zo:Besluit
+  a owl:Class ;
+  dcterms:created "2019-01-01" ;
+  rdfs:comment "De class Besluit is een representatie van een na overweging of beraadslaging vastgestelde beslissing voor een individueel of concreet geval."@nl ;
+  rdfs:label "Besluit"@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "Een na overweging of beraadslaging vastgestelde beslissing voor een individueel of concreet geval."@nl ;
+.
+zo:Document
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class Document is een representatie van het geheel van gegevens met een eigen identiteit ongeacht zijn vorm, met de bijbehorende metadata ontvangen of opgemaakt door een natuurlijke en/of rechtspersoon bij de uitvoering van taken."@nl ;
+  rdfs:label "Document"@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "Geheel van gegevens met een eigen identiteit ongeacht zijn vorm, met de bijbehorende metadata ontvangen of opgemaakt door een natuurlijke en/of rechtspersoon bij de uitvoering van taken."@nl ;
+.
+zo:Eigenschap
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class Eigenschap is een representatie van (definitie ontbreekt)."@nl ;
+  rdfs:label "Eigenschap"@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "Er is geen definitie beschikbaar."@nl ;
+.
+zo:EnkelvoudigDocument
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class EnkelvoudigDocument is een representatie van een document waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl ;
+  rdfs:label "Enkelvoudig document"@nl ;
+  rdfs:subClassOf zo:Document ;
+  skos:definition "Een document waarvan aard, omvang en/of vorm aanleiding geven het als één geheel te behandelen en te beheren."@nl ;
+.
+zo:Rol
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class Rol is een representatie van de taken, rechten en/of verplichtingen die een specifieke betrokkene heeft ten aanzien van een specifieke zaak."@nl ;
+  rdfs:label "Rol"@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "De taken, rechten en/of verplichtingen die een specifieke betrokkene heeft ten aanzien van een specifieke zaak."@nl ;
+.
+zo:SamengesteldDocument
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class SamengesteldDocument is een representatie van (definitie ontbreekt)."@nl ;
+  rdfs:label "Samengesteld Document"@nl ;
+  rdfs:subClassOf zo:Document ;
+  skos:definition "Er is geen definitie beschikbaar."@nl ;
+.
+zo:Status
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class Status is een representatie van een aanduiding van de stand van zaken van een zaak op basis van betekenisvol behaald resultaat voor de initiator van de zaak."@nl ;
+  rdfs:label "Status"@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "Een aanduiding van de stand van zaken van een zaak op basis van betekenisvol behaald resultaat voor de initiator van de zaak."@nl ;
+.
+zo:Zaak
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class Zaak is een representatie van een samenhangende hoeveelheid werk met een welgedefinieerde aanleiding en een welgedefinieerd eindresultaat, waarvan kwaliteit en doorlooptijd bewaakt moeten worden."@nl ;
+  rdfs:label "Zaak"@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "Een samenhangende hoeveelheid werk met een welgedefinieerde aanleiding en een welgedefinieerd eindresultaat, waarvan kwaliteit en doorlooptijd bewaakt moeten worden."@nl ;
+.
+zo:Zaakdocument
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class Zaakdocument is een representatie van een document dat relevant is voor de behandeling van de zaak en/of gecreëerd is in het kader van de behandeling van de zaak."@nl ;
+  rdfs:label "Zaakdocument"@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "Een document dat relevant is voor de behandeling van de zaak en/of gecreëerd is in het kader van de behandeling van de zaak."@nl ;
+.
+zo:Zaakobject
+  a owl:Class ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De class Zaakobject is een representatie van een object waarop de zaak betrekking heeft."@nl ;
+  rdfs:label "Zaakobject"@nl ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "Een object waarop de zaak betrekking heeft."@nl ;
+.
+zo:archiefnominatieZaak
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property archiefnominatieZaak wordt gebruikt om aan te geven welke archiefnominatie is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Archiefnominatie zaak"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Indicatie of het zaakdossier (de zaak met alle bijbehorende documenten) gearchiveerd dient te worden"@nl ;
+.
+zo:besluitdatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property besluitdatum wordt gebruikt om aan te geven welke besluitdatum is gekoppeld aan een besluit."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Besluitdatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De beslisdatum (AWB) van het besluit."@nl ;
+.
+zo:besluitidentificatie
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property besluitIdentificatie wordt gebruikt om aan te geven welke besluitidentificatie is gekoppeld aan een besluit."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Besluit identificatie"@nl ;
+  rdfs:range xsd:integer ;
+  skos:definition "Identificatie van het besluit."@nl ;
+.
+zo:besluittoelichting
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property besluittoelichting wordt gebruikt om aan te geven welke besluittoelichting is gekoppeld aan een besluit."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Besluittoelichting"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Toelichting bij het besluit."@nl ;
+.
+zo:bestandsnaam
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property bestandsnaam wordt gebruikt om aan te geven welke bestandsnaam is gekoppeld aan een enkelvoudig document."@nl ;
+  rdfs:domain zo:EnkelvoudigDocument ;
+  rdfs:label "Bestandsnaam"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De naam van het fysieke bestand waarin de documentinhoud is vastgelegd."@nl ;
+.
+zo:betalingsindicatie
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property betalingsindicatie wordt gebruikt om aan te geven welke betalingsindicatie is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Betalingsindicatie"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Indicatie of de, met behandeling van de zaak gemoeide, kosten betaald zijn door de desbetreffende betrokkene."@nl ;
+.
+zo:betreftBesluit
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-20" ;
+  rdfs:comment "De property betreftBesluit legt de relatie tussen document en besluit vast."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Betreft besluit"@nl ;
+  rdfs:range zo:Besluit ;
+  owl:inverseOf zo:isVastgelegdInDocument ;
+.
+zo:betreftCultuurhistorischObject
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property betreftCultuurhistorischObject legt de relatie tussen zaakobject en cultuurhistorisch object vast."@nl ;
+  rdfs:domain zo:Zaakobject ;
+  rdfs:label "Betreft cultuurhistorisch object"@nl ;
+  rdfs:range ceo:CultuurhistorischObject ;
+  owl:inverseOf zo:betreftZaakobject ;
+.
+zo:betreftDocument
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property betreftDocument legt de relatie tussen zaakdocument en document vast."@nl ;
+  rdfs:domain zo:Zaakdocument ;
+  rdfs:label "Betreft document"@nl ;
+  rdfs:range zo:Document ;
+.
+zo:betreftZaakobject
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property betreftZaakObject legt de relatie tussen het cultuurhistorisch object en zaakobject vast."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Betreft zaakobject"@nl ;
+  rdfs:range zo:Zaakobject ;
+  owl:inverseOf zo:betreftCultuurhistorischObject ;
+.
+zo:buitenlandsCorrespondentieadres
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property buitenlandsCorrespondentieadres wordt gebruikt om aan te geven welk buitenlands correspondentieadres is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Buitenlands correspondentieadres"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De gegevens van het adres in het buitenland waarop betrokkene in zijn/haar rol in de zaak in de regel schriftelijk bereikbaar zoals dat gebruikt is in de behandeling van de zaak."@nl ;
+.
+zo:buitenlandsCorrespondentieadresLand
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property buitenlandsCorrespondentieadresLand wordt gebruikt om aan te geven welk land van een buitenlands correspondentieadres is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Buitenlands correspondentieadres land"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Het land dat behoort bij het afwijkend buitenlandse correspondentieadres van de betrokkene in zijn/haar rol bij de zaak"@nl ;
+.
+zo:contactpersoonEmailadres
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property contactpersoonEmailadres wordt gebruikt om aan te geven welk emailadres van een contactpersoon is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Contactpersoon emailadres"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Elektronich postadres waaronder de contactpersoon in de regel bereikbaar is."@nl ;
+.
+zo:contactpersoonFunctie
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property contactpersoonFunctie wordt gebruikt om aan te geven welke functie van een contactpersoon is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Contactpersoon functie"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De aanduiding van de taken, rechten en plichten die de contactpersoon heeft binnen de organisatie van betrokkene"@nl ;
+.
+zo:contactpersoonTelefoonnummer
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property contactpersoonTelefoonnummer wordt gebruikt om aan te geven welk telefoonnummer van een contactpersoon is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Contactpersoon telefoonnummer"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Telefoonnummer waaronder de contactpersoon in de regel bereikbaar is."@nl ;
+.
+zo:contactpersoonnaam
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property contactpersoonnaam wordt gebruikt om aan te geven welke naam van een contactpersoon is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Contactpersoonnaam"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De opgemaakte naam van de contactpersoon namens de betrokkene."@nl ;
+.
+zo:datumStatusGezet
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property datumStatusGezet wordt gebruikt om aan te geven welke gezette statusdatum is gekoppeld aan een status."@nl ;
+  rdfs:domain zo:Status ;
+  rdfs:label "Datum status gezet"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum waarop de zaak de status heeft verkregen."@nl ;
+.
+zo:datumVernietigingDossier
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property datumVernietigingDossier wordt gebruikt om aan te geven welke datum vernietiging dossier is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Datum vernietiging dossier"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum waarop het, al dan niet gearchiveerde, zaakdossier (de zaak met alle bijbehorende documenten) vernietigd mag/moet worden."@nl ;
+.
+zo:deelzakenindicatie
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property deelzakenindicatie wordt gebruikt om aan te geven welke deelzakenindicatie is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Deelzakenindicatie"@nl ;
+  rdfs:range xsd:boolean ;
+  skos:definition "De aanduiding of een zaak behandeld wordt in deelzaken."@nl ;
+.
+zo:documentAuteur
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property documentAuteur wordt gebruikt om aan te geven welke auteur is gekoppeld aan een document."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Document auteur"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De persoon of organisatie die in de eerste plaats verantwoordelijk is voor het creëren van de inhoud van het document."@nl ;
+.
+zo:documentbeschrijving
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property documentbeschrijving wordt gebruikt om aan te geven welke beschrijving is gekoppeld aan een document."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Documentbeschrijving"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Een generieke beschrijving van de inhoud van het document."@nl ;
+.
+zo:documentcreatiedatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property documentcreatiedatum wordt gebruikt om aan te geven welke creatiedatum is gekoppeld aan een document."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Documentcreatiedatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De creatiedatum het document."@nl ;
+.
+zo:documentformaat
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property documentformaat wordt gebruikt om aan te geven welke documentformaat is gekoppeld aan een enkelvoudig document."@nl ;
+  rdfs:domain zo:EnkelvoudigDocument ;
+  rdfs:label "Documentformaat"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De digitale manifestatie van het enkelvoudig document"@nl ;
+.
+zo:documentidentificatie
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property documentidentificatie wordt gebruikt om aan te geven welke documentidentificatie is gekoppeld aan een document."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Documentidentificatie"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Een binnen een gegeven context ondubbelzinnige referentie naar het document."@nl ;
+.
+zo:documentinhoud
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property documentinhoud wordt gebruikt om aan te geven welke documentinhoud is gekoppeld aan een enkelvoudig document."@nl ;
+  rdfs:domain zo:EnkelvoudigDocument ;
+  rdfs:label "Documentinhoud"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Datgene wat in een enkelvoudig document wordt meegedeeld."@nl ;
+.
+zo:documentlink
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property documentlink wordt gebruikt om aan te geven welke link is gekoppeld aan een enkelvoudig document."@nl ;
+  rdfs:domain zo:EnkelvoudigDocument ;
+  rdfs:label "Documentlink"@nl ;
+  rdfs:range xsd:string ;
+.
+zo:documentontvangstdatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property documentontvangstdatum wordt gebruikt om aan te geven welke ontvangstdatum is gekoppeld aan een document."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Documentontvangstdatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum waarop het document ontvangen is."@nl ;
+.
+zo:documentstatus
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property documentstatus wordt gebruikt om aan te geven welke status is gekoppeld aan een enkelvoudig document."@nl ;
+  rdfs:domain zo:EnkelvoudigDocument ;
+  rdfs:label "Documentstatus"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Aanduiding van de stand van zaken van een enkelvoudig document"@nl ;
+.
+zo:documenttaal
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property documenttaal wordt gebruikt om aan te geven welke taal is gekoppeld aan een enkelvoudig document."@nl ;
+  rdfs:domain zo:EnkelvoudigDocument ;
+  rdfs:label "Documenttaal"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De gebruikte taal van het enkelvoudig document"@nl ;
+.
+zo:documenttitel
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property documenttitel wordt gebruikt om aan te geven welke titel is gekoppeld aan een document."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Documenttitel"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De naam waaronder het document formeel bekend is."@nl ;
+.
+zo:documentversie
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property documentversie wordt gebruikt om aan te geven welke documentversie is gekoppeld aan een enkelvoudig document."@nl ;
+  rdfs:domain zo:EnkelvoudigDocument ;
+  rdfs:label "Documentversie"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Aanduiding van de bewerkingsversie van het enkelvoudig document"@nl ;
+.
+zo:documentverzenddatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property documentverzenddatum wordt gebruikt om aan te geven welke verzenddatum is gekoppeld aan een document."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Documentverzenddatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum waarop het document verzonden is."@nl ;
+.
+zo:duurVerlenging
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property duurVerlenging wordt gebruikt om aan te geven welke verlengingsduur is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Duur verlenging"@nl ;
+  rdfs:range xsd:integer ;
+  skos:definition "Het aantal werkbare dagen waarmee de doorlooptijd van de behandeling van de zaak is verlengd (of verkort) ten opzichte van de eerder gecommuniceerde doorlooptijd."@nl ;
+.
+zo:eigenschapBetreftZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:created "2019-02-20"^^xsd:date ;
+  dcterms:modified "" ;
+  rdfs:comment "De property eigenschapBetreftZaak legt de relatie tussen eigenschap en zaak vast."@nl ;
+  rdfs:domain zo:Eigenschap ;
+  rdfs:label "Eigenschap betreft zaak"@nl ;
+  rdfs:range zo:Zaak ;
+  owl:inverseOf zo:heeftEigenschap ;
+.
+zo:eigenschapwaardeEigenschap
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-04"^^xsd:date ;
+  rdfs:comment "De property eigenschapwaardeEigenschap wordt gebruikt om aan te geven welke eigenschapwaarde is gekoppeld aan een eigenschap."@nl ;
+  rdfs:domain zo:Eigenschap ;
+  rdfs:label "Eigenschapwaarde eigenschap"@nl ;
+  rdfs:range xsd:string ;
+.
+zo:einddatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property einddatum wordt gebruikt om aan te geven welke einddatum is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Einddatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum waarop de uitvoering van de zaak afgerond is."@nl ;
+.
+zo:einddatumGepland
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property einddatumGepland wordt gebruikt om aan te geven welke geplande einddatum is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Einddatum gepland"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum waarop volgens de planning verwacht wordt dat de zaak afgerond wordt."@nl ;
+.
+zo:heeftBesluit
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  dcterms:modified "" ;
+  rdfs:comment "De property heeftBesluit legt de relatie tussen zaak en besluit vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Heeft besluit"@nl ;
+  rdfs:range zo:Besluit ;
+  owl:inverseOf zo:isUitkomstVanZaak ;
+.
+zo:heeftBetrekkingOpAndereZaak
+  a owl:SymmetricProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property heeftBetrekkingOpAndereZaak legt de relatie tussen zaak en zaak vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Heeft betrekking op andere zaak"@nl ;
+  rdfs:range zo:Zaak ;
+  skos:definition "De andere zaken die het onderwerp zijn van de zaak."@nl ;
+.
+zo:heeftBetrekkingOpBesluit
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:created "2019-02-20"^^xsd:date ;
+  dcterms:modified "" ;
+  rdfs:comment "De property heeftBetrekkingOpBesluit legt de relatie tussen besluittype en besluit vast."@nl ;
+  rdfs:domain ztco:Besluittype ;
+  rdfs:label "Heeft betrekking op besluit"@nl ;
+  rdfs:range zo:Besluit ;
+  owl:inverseOf zo:isVanBesluittype ;
+.
+zo:heeftBetrekkingOpCultuurhistorischObject
+  a owl:ObjectProperty ;
+  dcterms:created "2019-03-18"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property heeftBetrekkingOpCultuurhistorischObject legt de relatie tussen document en cultuurhistorisch object vast."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Heeft betrekking op cultuurhistorisch object"@nl ;
+  rdfs:range ceo:CultuurhistorischObject ;
+  owl:inverseOf zo:heeftDocument ;
+.
+zo:heeftBetrekkingOpDocument
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-20"^^xsd:date ;
+  rdfs:comment "De property heeftBetrekkingOpDocumen legt de relatie tussen documenttype en document vast."@nl ;
+  rdfs:domain ztco:Documenttype ;
+  rdfs:label "Heeft betrekking op document"@nl ;
+  rdfs:range zo:Document ;
+  owl:inverseOf zo:isVanDocumenttype ;
+.
+zo:heeftBetrekkingOpEigenschap
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property heeftBetrekkingOpEigenschap legt de relatie tussen eigenschaptype en eigenschap vast."@nl ;
+  rdfs:domain ztco:Eigenschaptype ;
+  rdfs:label "Heeft betrekking op eigenschap"@nl ;
+  rdfs:range zo:Eigenschap ;
+  owl:inverseOf <https://linkeddata.cultureelerfgoed.nl/def/ztceo#Eigenschaptype> ;
+.
+zo:heeftBetrekkingOpRol
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-20"^^xsd:date ;
+  rdfs:comment "De property heeftBetrekkingOpRol legt de relatie tussen roltype en rol vast."@nl ;
+  rdfs:domain ztco:Roltype ;
+  rdfs:label "Heeft betrekking op rol"@nl ;
+  rdfs:range zo:Rol ;
+  owl:inverseOf zo:isVanRoltype ;
+.
+zo:heeftBetrekkingOpStatus
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-20"^^xsd:date ;
+  rdfs:comment "De property heeftBetrekkingOpStatus legt de relatie tussen statustype en status vast."@nl ;
+  rdfs:domain ztco:Statustype ;
+  rdfs:label "Heeft betrekking op status"@nl ;
+  rdfs:range zo:Status ;
+  owl:inverseOf zo:isVanStatustype ;
+.
+zo:heeftBetrekkingOpZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-20"^^xsd:date ;
+  rdfs:comment "De property heeftBetrekkingOpZaak legt de relatie tussen zaaktype en zaak vast."@nl ;
+  rdfs:domain ztco:Zaaktype ;
+  rdfs:label "heeft betrekking op zaak"@nl ;
+  rdfs:range zo:Zaak ;
+  owl:inverseOf zo:isVanZaaktype ;
+.
+zo:heeftDeelzaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property heeftDeelzaak legt de relatie tussen zaak en zaak vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "heeft deelzaak"@nl ;
+  rdfs:range zo:Zaak ;
+  owl:inverseOf zo:isDeelzaakVanZaak ;
+.
+zo:heeftDocument
+  a owl:ObjectProperty ;
+  dcterms:created "2019-03-18"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property heeftDocument legt de relatie tussen cultuurhistorisch object en document vast."@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
+  rdfs:label "Heeft document"@nl ;
+  rdfs:range zo:Document ;
+  owl:inverseOf zo:heeftBetrekkingOpCultuurhistorischObject ;
+.
+zo:heeftEigenschap
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property heeftEigenschap legt de relatie tussen zaak en eigenschap vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Heeft eigenschap"@nl ;
+  rdfs:range zo:Eigenschap ;
+  owl:inverseOf zo:eigenschapBetreftZaak ;
+  skos:definition "Geen definitie aanwezig."@nl ;
+.
+zo:heeftEigenschapwaardeEigenschap
+  a owl:ObjectProperty ;
+  dcterms:created "2019-03-04"^^xsd:date ;
+  rdfs:comment "De property heeftEigenschapwaardeEigenschap legt de relatie tussen eigenschap en eigenschapwaarde vast."@nl ;
+  rdfs:domain zo:Eigenschap ;
+  rdfs:label "Heeft eigenschapwaarde eigenschap"@nl ;
+  rdfs:range skos:Concept ;
+  owl:inverseOf zo:isEigenschapwaardeVan ;
+.
+zo:heeftEnkelvoudigDocument
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-20"^^xsd:date ;
+  rdfs:comment "De property heeftEnkelvoudigDocument legt de relatie tussen samengesteld document en enkelvoudig document vast."@nl ;
+  rdfs:domain zo:SamengesteldDocument ;
+  rdfs:label "Heeft enkelvoudig document"@nl ;
+  rdfs:range zo:EnkelvoudigDocument ;
+  owl:inverseOf zo:maaktDeelUitVanSamengesteldDocument ;
+.
+zo:heeftRelevantZaakdocument
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property heeftRelevantZaakdocument legt de relatie tussen status en zaakdocument vast."@nl ;
+  rdfs:domain zo:Status ;
+  rdfs:label "Heeft relevant zaakdocument"@nl ;
+  rdfs:range zo:Zaakdocument ;
+  owl:inverseOf zo:isRelevantVoorStatus ;
+.
+zo:heeftRol
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property heeftRol legt de relatie tussen zaak en rol vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Heeft rol"@nl ;
+  rdfs:range zo:Rol ;
+  owl:inverseOf zo:rolBetreftZaak ;
+.
+zo:heeftStatus
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property heeftStatus legt de relatie tussen zaak en status vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Heeft status"@nl ;
+  rdfs:range zo:Status ;
+  owl:inverseOf zo:statusBetreftZaak ;
+  skos:definition "De statussen die bereikt zijn gedurende de behandeling van de zaak."@nl ;
+.
+zo:heeftZaakdocument
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property heeftZaakdocument legt de relatie tussen zaak en zaakdocument vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Heeft zaakdocument"@nl ;
+  rdfs:range zo:Zaakdocument ;
+  owl:inverseOf zo:zaakdocumentBetreftZaak ;
+.
+zo:heeftZaakobject
+  a owl:ObjectProperty ;
+  dcterms:created "2019-03-19" ;
+  rdfs:comment "De property heeftZaak legt de relatie tussen zaak en zaakobject vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Heeft zaakobject"@nl ;
+  rdfs:range zo:Zaakobject ;
+  owl:inverseOf zo:isOnderwerpVanZaak ;
+  skos:definition "Het object waarop een zaak via het zaakobject betrekking heeft."@nl ;
+.
+zo:indicatieLaatstGezetteStatus
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property indicatieLaatstGezetteStatus wordt gebruikt om aan te geven welke indicatie laatst gezette status is gekoppeld aan een status."@nl ;
+  rdfs:domain zo:Status ;
+  rdfs:label "Indicatie laatst gezette status"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Aanduiding of het de laatst bekende bereikte status betreft."@nl ;
+.
+zo:indicatieOpschorting
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property indicatieOpschorting wordt gebruikt om aan te geven welke indicatie opschorting is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Indicatie opschorting"@nl ;
+  rdfs:range xsd:boolean ;
+  skos:definition "Aanduiding of de behandeling van de zaak tijdelijk is opgeschort."@nl ;
+.
+zo:ingangsdatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property ingangsdatum wordt gebruikt om aan te geven welke ingangsdatum is gekoppeld aan een besluit."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "ingangsdatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "Ingangsdatum van de werkingsperiode van het besluit"@nl ;
+.
+zo:isDeelzaakVanZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-12"^^xsd:date ;
+  rdfs:comment "De property isDeelzaakVanZaak legt de relatie tussen zaak en zaak vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Is deelzaak van zaak"@nl ;
+  rdfs:range zo:Zaak ;
+  owl:inverseOf zo:heeftDeelzaak ;
+  skos:definition "De verwijzing naar de zaak, waarom verzocht is door de initiator daarvan, die door de zaakbehandelende organisatie is opgedeeld in twee of meer separaat te behandelen zaken waarvan de onderhavige zaak er één is."@nl ;
+.
+zo:isEigenschapwaardeVan
+  a owl:ObjectProperty ;
+  dcterms:created "2019-03-04"^^xsd:date ;
+  rdfs:comment "De property EigenschapwaardeVan legt de relatie tussen eigenschapwaarde en eigenschap vast."@nl ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Is eigenschapwaarde van"@nl ;
+  rdfs:range zo:Eigenschap ;
+  owl:inverseOf zo:heeftEigenschapwaardeEigenschap ;
+.
+zo:isGezetDoorRol
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property isGezetDoorRol legt de relatie tussen status en rol vast."@nl ;
+  rdfs:domain zo:Status ;
+  rdfs:label "Is gezet door rol"@nl ;
+  rdfs:range zo:Rol ;
+  owl:inverseOf zo:zetAlsBetrokkeneStatus ;
+.
+zo:isOnderwerpVanZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19" ;
+  rdfs:comment "De property isOnderwerpVanZaak legt de relatie tussen zaakobject en zaak vast."@nl ;
+  rdfs:domain zo:Zaakobject ;
+  rdfs:label "Is onderwerp van zaak"@nl ;
+  rdfs:range zo:Zaak ;
+  owl:inverseOf zo:heeftZaakobject ;
+.
+zo:isRelevantVoorStatus
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property isRelevantVoorStatus legt de relatie tussen zaakdocument en status vast."@nl ;
+  rdfs:domain zo:Zaakdocument ;
+  rdfs:label "Is relevant voor status"@nl ;
+  rdfs:range zo:Status ;
+  owl:inverseOf zo:heeftRelevantZaakdocument ;
+.
+zo:isUitkomstVanZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-02-20"^^xsd:date ;
+  rdfs:comment "De property isUitkomstVan legt de relatie tussen besluit en zaak vast."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Is uitkomst van zaak"@nl ;
+  rdfs:range zo:Zaak ;
+  owl:inverseOf zo:heeftBesluit ;
+  skos:definition "Aanduiding van de zaak waarbinnen het besluit genomen is."@nl ;
+.
+zo:isVan
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:label "Is van"@nl ;
+.
+zo:isVanBesluittype
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property isVanBesluittype legt de relatie tussen besluit en besluittype vast."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Is van besluittype"@nl ;
+  rdfs:range ztco:Besluittype ;
+  rdfs:subPropertyOf zo:isVan ;
+  owl:inverseOf zo:heeftBetrekkingOpBesluit ;
+  skos:definition "Aanduiding van de aard van het besluit."@nl ;
+.
+zo:isVanDocumenttype
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property isVanDocumenttype legt de relatie tussen document en documenttype vast."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Is van documenttype"@nl ;
+  rdfs:range ztco:Documenttype ;
+  rdfs:subPropertyOf zo:isVan ;
+  owl:inverseOf zo:heeftBetrekkingOpDocument ;
+  skos:definition "Aanduiding van de aard van het document."@nl ;
+.
+zo:isVanEigenschaptype
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-06-24" ;
+  rdfs:comment "De property isVanEigenschaptype legt de relatie tussen eigenschap en eigenschaptype vast."@nl ;
+  rdfs:domain zo:Eigenschap ;
+  rdfs:label "Is van eigenschaptype"@nl ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/ztceo#Eigenschaptype> ;
+  rdfs:subPropertyOf zo:isVan ;
+  owl:inverseOf zo:heeftBetrekkingOpEigenschap ;
+.
+zo:isVanRoltype
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-02-20"^^xsd:date ;
+  rdfs:comment "De property isVanRoltype legt de relatie tussen rol en roltype vast."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Is van roltype"@nl ;
+  rdfs:range ztco:Roltype ;
+  rdfs:subPropertyOf zo:isVan ;
+  owl:inverseOf zo:heeftBetrekkingOpRol ;
+  skos:definition "Aanduiding van de aard van de rol"@nl ;
+.
+zo:isVanStatustype
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-02-20"^^xsd:date ;
+  rdfs:comment "De property isVanStatustype legt de relatie tussen status en statustype vast."@nl ;
+  rdfs:domain zo:Status ;
+  rdfs:label "Is van statustype"@nl ;
+  rdfs:range ztco:Statustype ;
+  rdfs:subPropertyOf zo:isVan ;
+  owl:inverseOf zo:heeftBetrekkingOpStatus ;
+  skos:definition "Aanduiding van de aard van de status"@nl ;
+.
+zo:isVanZaaktype
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-02-20"^^xsd:date ;
+  rdfs:comment "De property isVanZaaktype legt de relatie tussen zaak en zaaktype vast."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Is van zaaktype"@nl ;
+  rdfs:range ztco:Zaaktype ;
+  rdfs:subPropertyOf zo:isVan ;
+  owl:inverseOf zo:heeftBetrekkingOpZaak ;
+  skos:definition "Aanduiding van de aard van de zaak."@nl ;
+.
+zo:isVastgelegdInDocument
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property isVastgelegdInDocument legt de relatie tussen besluit en document vast."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Is vastgelegd in document"@nl ;
+  rdfs:range zo:Document ;
+  owl:inverseOf zo:betreftBesluit ;
+  skos:definition "Aanduiding van het (de) document(en) waarin het besluit beschreven is."@nl ;
+.
+zo:laatsteBetaaldatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property laatsteBetaaldatum wordt gebruikt om aan te geven welke laatste betaaldatum is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Laatste betaaldatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum waarop de meest recente betaling is verwerkt van kosten die gemoeid zijn met behandeling van de zaak."@nl ;
+.
+zo:maaktDeelUitVanSamengesteldDocument
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property maaktDeelUitVanSamengesteldDocument legt de relatie tussen enkelvoudig document en samengesteld document vast."@nl ;
+  rdfs:domain zo:EnkelvoudigDocument ;
+  rdfs:label "Maakt deel uit van samengesteld document"@nl ;
+  rdfs:range zo:SamengesteldDocument ;
+  owl:inverseOf zo:heeftEnkelvoudigDocument ;
+  skos:definition "De verwijzing naar het samengesteld document waarvan het enkelvoudig document met nog andere enkelvoudige documenten, deel uitmaakt."@nl ;
+.
+zo:oefendUitRol
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property oefendUitRol legt de relatie tussen betrokkene en rol vast."@nl ;
+  rdfs:domain zbo:Betrokkene ;
+  rdfs:label "Oefend uit rol"@nl ;
+  rdfs:range zo:Rol ;
+  owl:inverseOf zo:wordtUitgeoefendDoorBetrokkene ;
+.
+zo:omschrijvingZaak
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property omschrijvingZaak wordt gebruikt om aan te geven welke omschrijving is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Omschrijving zaak"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Een korte omschrijving van een zaak."@nl ;
+.
+zo:postadresPostcode
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property postadresPostcode wordt gebruikt om aan te geven welke postcode van een postadres is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Postadres postcode"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De officiële Nederlandse PTT codering, bestaande uit een numerieke woonplaatscode en een alfabetische lettercode."@nl ;
+.
+zo:postadrestype
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property postadrestype wordt gebruikt om aan te geven welk postadrestype is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Postadrestype"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Aanduiding van het soort postadres"@nl ;
+.
+zo:postbusOfAntwoordnummer
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property postbusOfAntwoordnummer wordt gebruikt om aan te geven welk postbus- of antwoordnummer is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Postbus- of antwoordnummer"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De numerieke aanduiding zoals deze door de Nederlandse PTT is vastgesteld voor postbusadressen en antwoordnummeradressen"@nl ;
+.
+zo:redenOpschorting
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property redenOpschorting wordt gebruikt om aan te geven welke reden voor opschorting is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Reden opschorting"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Omschrijving van de reden voor het opschorten van de behandeling van de zaak."@nl ;
+.
+zo:redenVerlenging
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property redenVerlenging wordt gebruikt om aan te geven welke reden voor verlenging is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Reden verlenging"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Omschrijving van de reden voor het verlengen van de behandeling van de zaak."@nl ;
+.
+zo:registratiedatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven welke registratiedatum is gekoppeld aan een zaakdocument."@nl ;
+  rdfs:domain zo:Zaakdocument ;
+  rdfs:label "Registratiedatum"@nl ;
+  rdfs:range xsd:date ;
+.
+zo:registratiedatumZaak
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven welke registratiedatum is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Registratiedatum zaak"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum waarop RCE de zaak heeft geregistreerd"@nl ;
+.
+zo:relatieOmschrijving
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property relatieOmschrijving wordt gebruikt om aan te geven welke relatie-omschrijving is gekoppeld aan een zaakobject."@nl ;
+  rdfs:domain zo:Zaakobject ;
+  rdfs:label "Relatie omschrijving"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Omschrijving van de betrekking tussen de zaak en het object"@nl ;
+.
+zo:resultaatomschrijving
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property resultaatomschrijving wordt gebruikt om aan te geven welke resultaatomschrijving is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Resultaatomschrijving"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Een korte omschrijving wat het resultaat van de zaak inhoudt."@nl ;
+.
+zo:resultaattoelichting
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property resultaattoelichting wordt gebruikt om aan te geven welke resultaattoelichting is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Resultaattoelichting"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Een toelichting op wat het resultaat van de zaak inhoudt."@nl ;
+.
+zo:rolBetreftZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property rolBetreftZaak legt de relatie tussen rol en zaak vast."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "rol betreft zaak"@nl ;
+  rdfs:range zo:Zaak ;
+  owl:inverseOf zo:heeftRol ;
+.
+zo:roltoelichting
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property roltoelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een rol."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Roltoelichting"@nl ;
+  rdfs:range xsd:string ;
+.
+zo:startdatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property startdatum wordt gebruikt om aan te geven welke startdatum is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Startdatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum waarop met de uitvoering van de zaak is gestart."@nl ;
+.
+zo:statusBetreftZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property statusBetreftZaak legt de relatie tussen status en zaak vast."@nl ;
+  rdfs:domain zo:Status ;
+  rdfs:label "Status betreft zaak"@nl ;
+  rdfs:range zo:Zaak ;
+  owl:inverseOf zo:heeftStatus ;
+.
+zo:statustoelichting
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-25"^^xsd:date ;
+  rdfs:comment "De property statustoelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een status."@nl ;
+  rdfs:domain zo:Status ;
+  rdfs:label "Statustoelichting"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Een, voor de initiator van de zaak relevante, toelichting/notitie op de status van een zaak."@nl ;
+.
+zo:uiterlijkeEinddatumAfdoening
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property uiterlijkeEinddatumAfdoening wordt gebruikt om aan te geven welke uiterlijke einddatum afdoening is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Uiterlijke einddatum afdoening"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De laatste datum waarop volgens wet- en regelgeving de zaak afgerond dient te zijn."@nl ;
+.
+zo:uiterlijkeReactiedatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property uiterlijkeReactiedatum wordt gebruikt om aan te geven welke uiterlijke reactiedatum is gekoppeld aan een besluit."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Uiterlijke reactiedatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "De datum tot wanneer verweer tegen het besluit mogelijk is."@nl ;
+.
+zo:vertrouwelijkAanduiding
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property vertrouwelijkAanduiding wordt gebruikt om aan te geven welke vertrouwelijk aanduiding is gekoppeld aan een document."@nl ;
+  rdfs:domain zo:Document ;
+  rdfs:label "Vertrouwelijk aanduiding"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Aanduiding van de mate waarin het document voor de openbaarheid bestemd is"@nl ;
+.
+zo:vervaldatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property vervaldatum wordt gebruikt om aan te geven welke vervaldatum is gekoppeld aan een besluit."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Vervaldatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "Datum waarop de werkingsperiode van het besluit eindigt."@nl ;
+.
+zo:vervalreden
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property vervalreden wordt gebruikt om aan te geven welke vervalreden is gekoppeld aan een besluit."@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Vervalreden"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "De omschrijving die aangeeft op grond waarvan het besluit is of komt te vervallen."@nl ;
+.
+zo:verzenddatum
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property verzenddatum wordt gebruikt om aan te geven welke verzenddatum is gekoppeld aan een besluit. {@nl}"@nl ;
+  rdfs:domain zo:Besluit ;
+  rdfs:label "Verzenddatum"@nl ;
+  rdfs:range xsd:date ;
+  skos:definition "Datum waarop het besluit verzonden is."@nl ;
+.
+zo:wordtUitgeoefendDoorBetrokkene
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property wordtUitgeoefendDoorBetrokkene legt de relatie tussen rol en betrokkene vast."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Wordt uitgeoefend door betrokkene"@nl ;
+  rdfs:range zbo:Betrokkene ;
+  owl:inverseOf zo:oefendUitRol ;
+  skos:definition "De betrokkene die de rol heeft in desbetreffende zaak."@nl ;
+.
+zo:zaakdocumentBetreftZaak
+  a owl:ObjectProperty ;
+  dcterms:created "2019-02-19"^^xsd:date ;
+  rdfs:comment "De property zaakdocumentBetreftZaak legt de relatie tussen zaakdocument en zaak vast."@nl ;
+  rdfs:domain zo:Zaakdocument ;
+  rdfs:label "Zaakdocument betreft zaak"@nl ;
+  rdfs:range zo:Zaak ;
+  owl:inverseOf zo:heeftZaakdocument ;
+.
+zo:zaakidentificatie
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property zaakidentificatie wordt gebruikt om aan te geven welke identificatie is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Zaakidentificatie"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Een identificatie van de zaak."@nl ;
+.
+zo:zaakniveau
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property zaakniveau wordt gebruikt om aan te geven welke zaakniveau is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Zaakniveau"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Het niveau van een zaak in de hierarchie van hoofdzaak met deelzaken."@nl ;
+.
+zo:zaaktoelichting
+  a owl:DatatypeProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  dcterms:modified "2019-03-19"^^xsd:date ;
+  rdfs:comment "De property zaaktoelichting wordt gebruikt om aan te geven welke toelichting is gekoppeld aan een zaak."@nl ;
+  rdfs:domain zo:Zaak ;
+  rdfs:label "Zaaktoelichting"@nl ;
+  rdfs:range xsd:string ;
+  skos:definition "Een toelichting op de zaak."@nl ;
+.
+zo:zetAlsBetrokkeneStatus
+  a owl:ObjectProperty ;
+  dcterms:created "2019-01-01"^^xsd:date ;
+  rdfs:comment "De property zetAlsBetrokkeneStatus legt de relatie tussen rol en status vast."@nl ;
+  rdfs:domain zo:Rol ;
+  rdfs:label "Zet als betrokkene status"@nl ;
+  rdfs:range zo:Status ;
+  owl:inverseOf zo:isGezetDoorRol ;
+  skos:definition "De betrokkene die in zijn/haar rol in een zaak heeft geregistreerd dat statussen in die zaak bereikt zijn."@nl ;
+.
