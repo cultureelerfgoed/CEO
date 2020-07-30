@@ -1,0 +1,567 @@
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#>  .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix beeld: <https://linkeddata.cultureelerfgoed.nl/def/beeld#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix schema: <https://schema.org/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix bieb: <https://linkeddata.cultureelerfgoed.nl/def/bieb#> .
+
+<https://linkeddata.cultureelerfgoed.nl/def/beeld>
+  a owl:Ontology ;
+  dcterms:created "2020-05-15"^^xsd:date ;
+  dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:description "De Beeld ontologie is de volledige semantische representatie van het datamodel Beeld uit de datalaag van de RCE."@nl ;
+  dcterms:hasVersion "0.22"^^xsd:integer ;
+  dcterms:issued "2020-05-15"^^xsd:date ;
+  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:title "Beeld Ontologie"@nl ;
+  rdfs:comment "De Beeld ontologie is de volledige semantische representatie van het datamodel Beeld uit de datalaag van de RCE."@nl ;
+  rdfs:label "Beeld Ontologie"@nl ;
+  owl:imports dc: ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
+.
+beeld:Afbeelding
+  a owl:Class ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Afbeelding"@nl ;
+  rdfs:label "Image"@en ;
+  rdfs:comment "De class Afbeelding geeft aan of het een afbeelding is."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  rdfs:subClassOf owl:Thing
+.
+beeld:AfgebeeldObject
+  a owl:Class ;
+  dcterms:created "2020-05-26"^^xsd:date ;
+  rdfs:label "Afgebeeld object"@nl ;
+  rdfs:label "Image"@en ;
+  rdfs:comment "De class AfgebeeldObject geeft aan het afbeelde object op de afbeelding."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  rdfs:subClassOf owl:Thing
+.
+beeld:Foto
+  a owl:Class ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Foto"@nl ;
+  rdfs:label "Photo"@en ;
+  rdfs:comment "De class Foto geeft aan of het een foto is."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  rdfs:subClassOf beeld:AfbeeldObject
+.
+beeld:Kaart
+  a owl:Class ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Kaart"@nl ;
+  rdfs:label "Map"@en ;
+  rdfs:comment "De class Kaart geeft aan of het een kaart is."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  rdfs:subClassOf beeld:AfbeeldObject ;
+  skos:note "Het betreft hier afbeeldingen van kaarten."@nl
+.
+beeld:Tekening
+  a owl:Class ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Tekening"@nl ;
+  rdfs:label "Drawing"@en ;
+  rdfs:comment "De class Tekening geeft aan of het een tekening is."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  rdfs:subClassOf beeld:AfgebeeldObject ;
+  skos:note "Het betreft hier prenten en tekeningen, m.u.v. bouwkundige tekeningen."@nl
+.
+beeld:Scan
+  a owl:Class ;
+  dcterms:created "2020-06-05"^^xsd:date ;
+  rdfs:label "Scan"@nl ;
+  rdfs:label "Scan"@en ;
+  rdfs:comment "De class Scan geeft aan of het een scan is."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  rdfs:subClassOf beeld:AfgebeeldObject ;
+.
+beeld:CultuurhistorischObject
+  a owl:Class ;
+  dcterms:created "2020-05-28"^^xsd:date ;
+  rdfs:label "Cultuurhistorisch object"@nl ;
+  rdfs:label "Image"@en ;
+  rdfs:comment "De class CultuurhistorischObject geeft aan of het een cultuurhistorisch object is."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  rdfs:subClassOf beeld:AfgebeeldObject
+.
+beeld:ActorEnRol
+  rdf:type owl:Class ;
+  dcterms:created "2020-05-15"^^xsd:date ;
+  rdfs:comment "De class ActorEnRol is de representatie van de actor en rol."@nl ;
+  rdfs:label "Actor en rol"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+dcterms:LicenseDocument
+  a rdfs:Class ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#LicenseDocument-001> ;
+  dcterms:issued "2008-01-14" ;
+  rdfs:comment "A legal document giving official permission to do something with a Resource."@en-US ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "License Document"@en-US ;
+  rdfs:subClassOf dcterms:RightsStatement ;
+.
+dcterms:Agent
+  a dcterms:AgentClass, rdfs:Class ;
+  dcterms:description "Examples of Agent include person, organization, and software agent."@en-US ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#Agent-001> ;
+  dcterms:issued "2008-01-14" ;
+  rdfs:comment "A resource that acts or has the power to act."@en-US ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "Agent"@en-US ;
+.
+dcterms:LocationPeriodOrJurisdiction
+  rdf:type rdfs:Class ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#LocationPeriodOrJurisdiction-001> ;
+  dcterms:issued "2008-01-14" ;
+  rdfs:comment "A location, period of time, or jurisdiction."@en-US ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "Location, Period, or Jurisdiction"@en-US ;
+.
+skos:Concept
+  a owl:Class ;
+  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+  rdfs:label "Concept"@en ;
+  rdfs:subClassOf owl:Thing ;
+  skos:definition "An idea or notion; a unit of thought."@en ;
+.
+edm:WebResource
+  a owl:Class ;
+	rdfs:label "Web Resource"@en ;
+	skos:definition """Information Resources that have at least one Web Representation and at least
+  a URI."""@en ;
+	rdfs:subClassOf edm:InformationResource
+.
+dcterms:type
+  a rdf:Property ;
+  dcterms:description "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en-US ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#type-006> ;
+  dcterms:issued "1999-07-02" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "The nature or genre of the resource."@en-US ;
+  rdfs:comment "Bij de RCE wordt deze property gebruikt om het objecttype te benoemen."@nl ;
+  skos:example "Glasnegatief"@nl ;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+  rdfs:label "Type"@en-US ;
+  skos:note "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en-US ;
+  skos:note " Hier wordt een string ingevuld"@nl
+.
+dcterms:creator
+  rdf:type rdf:Property ;
+  dcterms:description "Examples of a Creator include a person, an organization, or a service."@en-US ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#creatorT-002> ;
+  dcterms:issued "2008-01-14" ;
+  dcterms:modified "2010-10-11" ;
+  rdfs:comment "An entity primarily responsible for making the resource."@en-US ;
+  rdfs:comment "Bij de RCE wordt deze property gebruikt om de maker van het object aan te geven."@nl ;
+  skos:note "Het betreft hier niet om de maker op het afgebeelde object"@nl ;
+  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+  rdfs:label "Creator"@en-US ;
+  rdfs:domain beeld:ActorEnRol ;
+  rdfs:range dcterms:Agent ;
+  rdfs:subPropertyOf dc:creator ;
+  rdfs:subPropertyOf dcterms:contributor ;
+  owl:equivalentProperty foaf:maker ;
+.
+dcterms:format
+  rdf:type rdf:Property ;
+  dcterms:description "Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME]."@en-US ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#formatT-001> ;
+  dcterms:issued "2008-01-14" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "The file format, physical medium, or dimensions of the resource."@en-US ;
+  rdfs:comment "Bij de RCE wordt deze property gebruikt om het formaat van het afgebeelde object aan te geven."@nl ;
+  skos:example "100 x 78 cm." ;
+  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+  rdfs:label "Format"@en-US ;
+  rdfs:range dcterms:MediaTypeOrExtent ;
+  rdfs:subPropertyOf dc:format ;
+  skos:note " Hier wordt een string ingevuld"@nl
+.
+dcterms:license
+  rdf:type rdf:Property ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#license-002> ;
+  dcterms:issued "2004-06-14" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "A legal document giving official permission to do something with the resource."@en-US ;
+  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+  rdfs:label "License"@en-US ;
+  rdfs:range dcterms:LicenseDocument ;
+  rdfs:subPropertyOf dc:rights ;
+  rdfs:subPropertyOf dcterms:rights ;
+  skos:example "http://creativecommons.org/licenses/by-sa/4.0/"@nl
+.
+dcterms:modified
+  rdf:type rdf:Property ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#modified-003> ;
+  dcterms:issued "2000-07-11" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "Date on which the resource was changed."@en-US ;
+  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+  rdfs:label "Date Modified"@en-US ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf dc:date ;
+  rdfs:subPropertyOf dcterms:date
+.
+dcterms:rightsHolder
+  rdf:type rdf:Property ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#rightsHolder-002> ;
+  dcterms:issued "2004-06-14" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "A person or organization owning or managing rights over the resource."@en-US ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "Rights Holder"@en-US ;
+  rdfs:range dcterms:Agent ;
+  skos:example "http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed"@nl
+.
+dcterms:subject
+  rdf:type rdf:Property ;
+  dcterms:description "Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary. To describe the spatial or temporal topic of the resource, use the Coverage element."@en-US ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#subjectT-001> ;
+  dcterms:issued "2008-01-14" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "The topic of the resource."@en-US ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "Subject"@en-US ;
+  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/subject> ;
+  skos:note "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."@en-US ;
+  skos:note "Hier gebruiken we de uri uit een externe thesaurus."@nl ;
+  skos:example "https://data.cultureelerfgoed.nl/term/id/cht/00f67241-70d4-4703-9f25-d2163c0ad43d"@nl
+.
+dcterms:modified
+  rdf:type rdf:Property ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#modified-003> ;
+  dcterms:issued "2000-07-11" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "Date on which the resource was changed."@en-US ;
+  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+  rdfs:label "Date Modified"@en-US ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf dc:date ;
+  rdfs:subPropertyOf dcterms:date
+.
+dcterms:created
+  rdf:type rdf:Property ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#created-003> ;
+  dcterms:issued "2000-07-11" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "Date of creation of the resource."@en-US ;
+  rdfs:comment "Deze property wordt gebruikt voor creatiedatum van het object."@nl ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "Date Created"@en-US ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
+  rdfs:subPropertyOf dcterms:date
+.
+dcterms:description
+  rdf:type rdf:Property ;
+  dcterms:description "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en-US ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#descriptionT-001> ;
+  dcterms:issued "2008-01-14" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "An account of the resource."@en-US ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "Description"@en-US ;
+  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> ;
+  skos:note "Wordt gebruikt bij objectbeschrijving in de Beeldbank, daarom niet gekozen voor dcterms:title."@nl
+.
+dcterms:coverage
+  rdf:type rdf:Property ;
+  dcterms:description "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges."@en-US ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#coverageT-001> ;
+  dcterms:issued "2008-01-14" ;
+  dcterms:modified "2008-01-14" ;
+  rdfs:comment "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."@en-US ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "Coverage"@en-US ;
+  rdfs:range dcterms:LocationPeriodOrJurisdiction ;
+  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/coverage> ;
+  rdfs:comment "Bij de RCE wordt deze property gebruikt het geotrefwoord te representeren."@nl
+.
+dcterms:title
+  rdf:type rdf:Property ;
+  dcterms:hasVersion <http://dublincore.org/usage/terms/history/#titleT-002> ;
+  dcterms:issued "2008-01-14" ;
+  dcterms:modified "2010-10-11" ;
+  rdfs:comment "A name given to the resource."@en-US ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "Title"@en-US ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> ;
+.
+beeld:opschrift
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Opschrift"@nl ;
+  rdfs:comment "De property opschrift wordt bij de RCE gebruikt om het opschrift op het object te benoemen."@nl ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  skos:note "Hier wordt niet de titel van het object bedoeld, die wordt beschreven in dcterms:description."@nl
+.
+beeld:alternatiefNummer
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Alternatief nummer"@nl ;
+  rdfs:comment "De property alternatiefNummer wordt bij de RCE gebruikt om alternatieve nummers waaronder het object bekend is te benoemen."@nl ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#>
+.
+beeld:schaal
+  a rdf:Property ;
+  dcterms:created "2020-06-08"^^xsd:date ;
+  rdfs:label "Schaal"@nl ;
+  rdfs:comment "De property schaal wordt gebruikt om de toegepaste schaal van het object als afgebeelde object aan te geven."@nl ;
+  rdfs:range xsd:string ;
+  skos:example "1:1000"@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#>
+.
+beeld:techniek
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Techniek"@nl ;
+  rdfs:comment "De property techniek wordt gebruikt om de toegepaste techniek van het object als afgebeelde object aan te geven."@nl ;
+  rdfs:range xsd:string ;
+  skos:example "zwartwit"@nl, "aquarel op kalk"@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  skos:note "Het betreft niet de titel van het object."@nl
+.
+beeld:collectie
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Collectie"@nl ;
+  rdfs:comment "De property collectie wordt gebruikt om aan te geven tot welke collectie een afbeelding toebehoord."@nl ;
+  rdfs:range xsd:string ;
+  skos:example "RCE - Gebouwd"@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#>
+.
+beeld:deelcollectie
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Deelcollectie"@nl ;
+  rdfs:comment "De property deelcollectie wordt gebruikt om aan te geven tot welke deelcollectie een afbeelding toebehoord."@nl ;
+  rdfs:range xsd:string ;
+  skos:example "Collectie Prenten en Oude Tekeningen"@nl, "Collectie Sipman"@nl  ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#>
+.
+beeld:land
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "land"@nl ;
+  rdfs:comment "De property land wordt gebruikt om het land van het afdgebeelde object aan te geven."@nl ;
+  skos:example "zwartwit"@nl, "aquarel op kalk"@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  skos:note "Wordt gebruikt bij invoer van string of uri van het land."@nl ;
+  skos:example "http://standaarden.overheid.nl/owms/terms/Nederland"
+.
+beeld:annotatie
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Annotatie"@nl ;
+  rdfs:comment "De property annotatie wordt gebruikt om aan te geven (alternatief) nummer waaronder afgebeelde object ook bekend is."@nl ;
+  rdfs:range xsd:string ;
+  skos:example "TenBruggecatenummer: 123"@nl, "Historisch nummer: 5835"@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#>
+.
+beeld:gemeente
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Gemeente"@nl ;
+  rdfs:comment "De property gemeente wordt gebruikt om aan te geven in welke gemeente het afgebeelde object staat."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  owl:equivalentProperty ceo:heeftGemeente, locn:adminUnitL2, bieb:gemeente
+.
+beeld:provincie
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Provincie"@nl ;
+  rdfs:comment "De property provincie wordt gebruikt om aan te geven in welke provincie het afgebeelde object staat."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  owl:equivalentProperty ceo:heeftProvincie, bieb:provincie
+.
+beeld:volledigAdres
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Volledig adres"@nl ;
+  rdfs:comment "De property volledigAdres wordt gebruikt om aan te geven het volledige adres van het afgebeelde object."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  owl:equivalentProperty ceo:volledigAdres, locn:fullAddress, bieb:volledigAdres
+.
+beeld:straat
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Straat"@nl ;
+  rdfs:comment "De property straat wordt gebruikt om aan te geven de straat waarin het afgebeelde object staat."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  owl:equivalentProperty ceo:straat, locn:thoroughfare, bieb:straat
+.
+beeld:huisnummer
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Huisnummer"@nl ;
+  rdfs:comment "De property huisnummer wordt gebruikt om aan te geven het huisnummer van het afgebeelde object."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  owl:equivalentProperty ceo:huisnummer, locn:locatorDesignator, bieb:huisnummer
+.
+beeld:postcode
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Postcode"@nl ;
+  rdfs:comment "De property postcode wordt gebruikt om aan te geven de postcode behorende bij het adres van het afgebeelde object."@nl ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  owl:equivalentProperty ceo:postcode, locn:postCode, bieb:postcode
+.
+beeld:voormaligeLocatiegegevens
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Voormalige locatiegegevens"@nl ;
+  rdfs:comment "De property voormaligeLocatiegegevens wordt gebruikt voor de beschrijving van oude c.q. voormalige locatiegegevens, zoals oude adressen."@nl ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#>
+.
+beeld:naamAfgebeeldObject
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Naam afgebeeld object"@nl ;
+  rdfs:comment "De property naamAfgebeeldObject wordt gebruikt voor de naam van het afgebeelde object."@nl ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  skos:note "Het betreft naam van het afgebeelde object (zoals monumentnaam) niet gebruiken voor opschrift, title, description."@nl ;
+  skos:example "Beziendershuis"@nl
+.
+beeld:rol
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Rol"@nl ;
+  rdfs:comment "De property rol wordt gebruikt voor om de rol van de creator aan te geven."@nl ;
+  rdfs:domain beeld:ActorEnRol ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  owl:equivalentProperty ceo:rol
+.
+beeld:woonplaatsnaam
+  a rdf:Property ;
+  dcterms:created "2020-05-12"^^xsd:date ;
+  rdfs:label "Woonplaatsnaam"@nl ;
+  rdfs:comment "De property woonplaatsnaam wordt gebruikt om aan te geven de woonplaats waarin het afgebeelde object staat."@nl ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://linkeddata.cultureelerfgoed.nl/def/beeld#> ;
+  owl:equivalentProperty ceo:woonplaatsnaam
+.
+beeld:heeftActorEnRol
+  a rdf:Property ;
+  dcterms:created "2020-05-26"^^xsd:date ;
+  rdfs:comment "De property heeftActorEnRol legt de relatie tussen (afgebeeld) object en actor en zijn rol vast."@nl ;
+  rdfs:label "Heeft actor en rol"@nl ;
+  rdfs:range beeld:ActorEnRol
+.
+beeld:isActorEnRolVan
+  a rdf:Property ;
+  dcterms:created "2020-05-26"^^xsd:date ;
+  rdfs:comment "De property isActorEnRolVan legt de relatie tussen actor en rol en (afgebeeld) object vast."@nl ;
+  rdfs:label "Is actor en rol van"@nl ;
+.
+beeld:heeftRol
+  a rdf:Property ;
+  dcterms:created "2020-06-05"^^xsd:date ;
+  rdfs:comment "De property heeftRol legt de relatie tussen de actor en rol en rol vast."@nl ;
+  rdfs:label "Heeft rol "@nl ;
+  rdfs:range skos:Concept
+.
+beeld:heeftAfgebeeld
+  a rdf:Property ;
+  dcterms:created "2020-05-15"^^xsd:date ;
+  rdfs:comment "De property heeftAfgebeeld legt de relatie tussen de afbeelding en afgebeeld object."@nl ;
+  rdfs:label "Heeft afgebeeld "@nl ;
+  rdfs:range beeld:AfgebeeldObject
+.
+beeld:isAfgebeeldOp
+a rdf:Property ;
+dcterms:created "2020-05-15"^^xsd:date ;
+rdfs:comment "De property isAfgebeeldOp legt de relatie tussen afgebeeld object en de afbeelding."@nl ;
+rdfs:label "Heeft afbeeld object"@nl ;
+rdfs:range beeld:Afbeelding
+.
+beeld:heeftCultuurhistorischObject
+  a rdf:Property ;
+  dcterms:created "2020-06-05"^^xsd:date ;
+  rdfs:comment "De property heeftCultuurhistorischObject legt de relatie tussen een afbeeld object en het Cultuurhistorisch object."@nl ;
+  rdfs:label "Heeft Cultureelhistorisch object"@nl ;
+  rdfs:range beeld:cultuurhistorischObject
+.
+schema:keywords
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas." ;
+  rdfs:domain schema:CreativeWork ;
+  rdfs:label "keywords" ;
+  rdfs:range xsd:string ;
+  skos:note "Hier gebruiken als trefwoord wanneer het een string is."@nl ;
+  skos:example "kerk"@nl
+.
+edm:year
+  a rdf:Property ;
+	rdfs:label "Europeana Year"@en ;
+	skos:definition """A point of time associated with an event in the life of the original analog or
+  born digital object."""@en ;
+  rdfs:comment "Bij de RCE wordt deze property gebruikt om het jaar van de creatie van het object en/of het afgebeelde of bibliografische gegevens aan te geven."@nl ;
+	rdfs:subPropertyOf dcterms:temporal ;
+  rdfs:comment "Deze property wordt gebruikt voor creatie jaar van het afgebeelde object of bibliografische gegevens."@nl
+.
+edm:isShownAt
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "Is Shown At"@en ;
+  rdfs:range edm:WebResource ;
+  rdfs:subPropertyOf edm:hasView ;
+  skos:definition "An unambiguous URL reference to the digital object on the provider’s web site in its full information context."@en ;
+  skos:note "Is verwijzing naar afbeelding in de Beeldbank."@nl
+.
+edm:isShownBy
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "Is Shown By"@en ;
+  rdfs:range edm:WebResource ;
+  rdfs:subPropertyOf edm:hasView ;
+  skos:definition "An unambiguous URL reference to the digital object on the provider’s web site in the best available resolution/quality."@en ;
+  skos:note "Is de rechtstreekse verwijzing naar de afbeelding."@nl
+.
+geosparql:asWKT
+  rdf:type owl:DatatypeProperty ;
+  dc:contributor "Matthew Perry" ;
+  dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+  dc:date "2011-06-16" ;
+  dc:description "The WKT serialization of a geometry" ;
+  rdfs:comment "The WKT serialization of a geometry" ;
+  rdfs:domain gsp:Geometry ;
+  rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+  rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
+  rdfs:label "asWKT"@en ;
+  rdfs:range gsp:wktLiteral
+.
+ceo:complexnummer
+  a owl:DatatypeProperty ;
+  dcterms:created "2018-02-06"^^xsd:date ;
+  dcterms:modified "2018-06-28"^^xsd:date ;
+  rdfs:comment "De property complexnummer wordt gebruikt om aan te geven het unieke nummer waaronder het complex van rijksmonumenten bekend is in het monumentenregister."@nl ;
+  rdfs:domain ceo:Complex ;
+  rdfs:label "Complexnummer"@nl ;
+  rdfs:range xsd:integer ;
+.
+ceo:rijksmonumentnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-01-30"^^xsd:date ;
+  dcterms:modified "2018-06-28"^^xsd:date ;
+  rdfs:comment "De property rijksmonumentnummer wordt gebruikt om aan te geven het unieke nummer waaronder het rijksmonument bekend is in het monumentenregister."@nl ;
+  rdfs:domain ceo:Rijksmonument ;
+  rdfs:label "Rijksmonumentnummer"@nl ;
+  rdfs:range xsd:integer ;
+.
