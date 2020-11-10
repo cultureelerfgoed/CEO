@@ -435,8 +435,8 @@ ceo:archis2Complexnummer
   dcterms:created "2018-03-27"^^xsd:date ;
   dcterms:modified "2018-09-03"^^xsd:date ;
   rdfs:comment "De property archis2Complexnummer wordt gebruikt om aan te geven of een complexnummer uit Archis 2 aan een archeologisch complex of vondstlocatie is gekoppeld."@nl ;
-  rdfs:domain ceo:ArcheologischComplex ;
-  rdfs:domain ceo:Vondstlocatie ;
+  rdfs:domain [a owl:Class ;
+  owl:unionOf (ceo:ArcheologischComplex ceo:Vondstlocatie)] ;
   rdfs:label "Archis2 complexnummer"@nl ;
   rdfs:range xsd:string ;
 .
@@ -460,8 +460,8 @@ ceo:archis2Vondstnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
   rdfs:comment "De property archis2Vondstnummer wordt gebruikt om aan te geven of een vondstnummer uit Archis 2 aan een vondst, grondspoor is gekoppeld."@nl ;
-  rdfs:domain ceo:Grondsporen ;
-  rdfs:domain ceo:Vondsten ;
+  rdfs:domain [a owl:Class ;
+  owl:unionOf (ceo:Grondsporen ceo:Vondsten)] ;
   rdfs:label "Archis2 vondstnummer"@nl ;
   rdfs:range xsd:string ;
 .
@@ -1292,8 +1292,8 @@ ceo:heeftVertrouwelijkAanduiding
   dcterms:created "2018-03-27"^^xsd:date ;
   dcterms:modified "2018-10-23"^^xsd:date ;
   rdfs:comment "De property heeftVertrouwelijkAanduiding legt de relatie tussen het cultuurhistorisch object en de vertrouwelijkheid aanduiding vast."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
-  rdfs:domain ceo:Kennisregistratie ;
+  rdfs:domain [a owl:Class ;
+  owl:unionOf (ceo:CultuurhistorischObject ceo:Kennisregistratie)] ;
   rdfs:label "Heeft vertrouwelijk aanduiding"@nl ;
   rdfs:range skos:Concept ;
 .
