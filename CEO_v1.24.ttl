@@ -1153,7 +1153,7 @@ ceo:heeftProvincie
   rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Heeft provincie"@nl ;
   rdfs:range <http://standaarden.overheid.nl/owms/terms/Provincie> ;
-  rdfs:subPropertyOf <locn:adminUnitL2> ;
+  rdfs:subPropertyOf locn:adminUnitL2 ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
 ceo:heeftRecordhouder
@@ -1428,7 +1428,7 @@ ceo:huisnummer
   rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Huisnummer"@nl ;
   rdfs:range xsd:string ;
-  rdfs:subPropertyOf <locn:locatorDesignator> ;
+  rdfs:subPropertyOf locn:locatorDesignator ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
 ceo:indicatieArcheologischeMonumentenKaartWaardig
@@ -1545,7 +1545,7 @@ ceo:locatienaam
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Locatienaam"@nl ;
   rdfs:range xsd:string ;
-  rdfs:subPropertyOf <locn:addressArea> ;
+  rdfs:subPropertyOf locn:addressArea ;
 .
 ceo:locatieomschrijving
   rdf:type owl:DatatypeProperty ;
@@ -1605,7 +1605,7 @@ ceo:openbareRuimte
   rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Openbare ruimte"@nl ;
   rdfs:range xsd:string ;
-  rdfs:subPropertyOf <locn:thoroughfare> ;
+  rdfs:subPropertyOf locn:thoroughfare ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
 ceo:paginaverwijzing
@@ -1654,7 +1654,7 @@ ceo:postcode
   rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Postcode"@nl ;
   rdfs:range xsd:string ;
-  rdfs:subPropertyOf <locn:postCode> ;
+  rdfs:subPropertyOf locn:postCode ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
 ceo:provincieCode
@@ -1795,7 +1795,7 @@ ceo:volledigAdres
   rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Volledig adres"@nl ;
   rdfs:range xsd:string ;
-  rdfs:subPropertyOf <locn:fullAddress> ;
+  rdfs:subPropertyOf locn:fullAddress ;
 .
 ceo:werelderfgoednummer
   rdf:type owl:DatatypeProperty ;
@@ -1814,7 +1814,7 @@ ceo:woonplaatsnaam
   rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Woonplaatsnaam"@nl ;
   rdfs:range xsd:string ;
-  rdfs:subPropertyOf <locn:postName> ;
+  rdfs:subPropertyOf locn:postName ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
 lxr:cbsGemeentecode
@@ -1831,22 +1831,22 @@ lxr:cbsProvinciecode
   rdfs:comment "De property cbsProvinciecode wordt gebruikt om aan te geven de CBS code bij de OWMS provincie uri."@nl ;
   rdfs:label "CBS provinciecode @nl" ;
 .
-<locn:addressArea>
+locn:addressArea
   rdfs:comment "In de CEO ontologie wordt deze property ook gebruikt om de locatieregistratie weer te geven voor rijksmonumenten die geen verblijfsobject zijn."@nl ;
   rdfs:domain ceo:LocatieAanduiding ;
 .
-<locn:fullAddress>
+locn:fullAddress
   rdfs:domain ceo:Adresgegevens ;
 .
-<locn:locatorDesignator>
+locn:locatorDesignator
   rdfs:domain ceo:Adresgegevens ;
 .
-<locn:postCode>
+locn:postCode
   rdfs:domain ceo:Adresgegevens ;
 .
-<locn:postName>
+locn:postName
   rdfs:domain ceo:Adresgegevens ;
 .
-<locn:thoroughfare>
+locn:thoroughfare
   rdfs:domain ceo:Adresgegevens ;
 .
