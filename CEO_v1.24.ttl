@@ -110,7 +110,7 @@ ceo:Adresgegevens
   dcterms:created "2018-05-24"^^xsd:date ;
   rdfs:comment "De class Adresgegevens is de representatie van de adresgegevens van een Cultuurhistorisch Object."@nl ;
   rdfs:label "Adresgegevens"@nl ;
-  rdfs:subClassOf <locn:Address> ;
+  rdfs:subClassOf locn:Address ;
 .
 ceo:Afbeelding
   rdf:type owl:Class ;
