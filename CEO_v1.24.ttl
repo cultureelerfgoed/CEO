@@ -77,7 +77,7 @@ gsp:wktLiteral
 .
 <https://creativecommons.org/licenses/by/4.0/>
   rdf:type dcterms:Agent ;
-  dcterms:created "23-4-18 12:24"^^xsd:date ;
+  dcterms:created "2018-04-23"^^xsd:date ;
   rdfs:label "Creative Commons Licenses 4.0"@nl ;
 .
 <https://linkeddata.cultureelerfgoed.nl/def/ceo>
@@ -85,7 +85,7 @@ gsp:wktLiteral
   dcterms:created "2018-04-23"^^xsd:date ;
   dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:description "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
-  dcterms:hasVersion "1.0"^^xsd:integer ;
+  #dcterms:hasVersion "1.0"^^xsd:integer ;
   dcterms:issued "2018-12-01"^^xsd:date ;
   dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
@@ -100,7 +100,7 @@ gsp:wktLiteral
 ceo:ActorEnRol
   rdf:type owl:Class ;
   dcterms:created "2018-05-02"^^xsd:date ;
-  dcterms:modified "11-6-18"^^xsd:date ;
+  dcterms:modified "2018-11-06"^^xsd:date ;
   rdfs:comment "De class ActorEnRol is de representatie van de actor en rol met betrekking tot een gebeurtenis."@nl ;
   rdfs:label "Actor en rol"@nl ;
   rdfs:subClassOf owl:Thing ;
@@ -144,7 +144,7 @@ ceo:ArcheologischTerrein
 ceo:ArcheologischeKwaliteit
   rdf:type owl:Class ;
   dcterms:created "2018-05-02"^^xsd:date ;
-  dcterms:modified "11-6-18"^^xsd:date ;
+  dcterms:modified "2018-11-06"^^xsd:date ;
   rdfs:comment "De class ArcheologischeKwaliteit is een subclass van kennisregistratie en is de representatie van de archeologische kwaliteit met betrekking tot een cultuurhistorisch object."@nl ;
   rdfs:label "Archeologische kwaliteit"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
@@ -601,7 +601,7 @@ ceo:deelperceelnummer
 ceo:einddatum
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-04-10"^^xsd:date ;
-  dcterms:modified "28-6-18"^^xsd:date ;
+  dcterms:modified "2018-06-28"^^xsd:date ;
   rdfs:comment "De property einddatum wordt gebruikt om aan te geven welke einddatum is gekoppeld aan een instance."@nl ;
   rdfs:domain ceo:Tijdvak ;
   rdfs:label "Einddatum"@nl ;
@@ -719,7 +719,7 @@ ceo:heeftBetrekkingOp
 .
 ceo:heeftBetrouwbaarheid
   rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-04-2018"^^xsd:date ;
+  dcterms:created "2018-04-06"^^xsd:date ;
   dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De property heeftBetrouwbaarheid legt de relatie tussen de datering en de mate van betrouwbaarheid vast."@nl ;
   rdfs:domain ceo:Datering ;
@@ -790,8 +790,8 @@ ceo:heeftBronverwijzing
 .
 ceo:heeftConservering
   rdf:type owl:ObjectProperty ;
-  dcterms:created "2-5-18 9:40"^^xsd:date ;
-  dcterms:modified "11-6-18"^^xsd:date ;
+  dcterms:created "2018-05-02"^^xsd:date ;
+  dcterms:modified "2018-11-06"^^xsd:date ;
   rdfs:comment "De property heeftConservering legt de relatie tussen de archeologische kwaliteit en de conservering met betrekking tot een cultuurhistorisch object."@nl ;
   rdfs:domain ceo:ArcheologischeKwaliteit ;
   rdfs:label "Heeft conservering"@nl ;
@@ -1069,7 +1069,7 @@ ceo:heeftMelder
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-18"^^xsd:date ;
   dcterms:modified "2018-06-28"^^xsd:date ;
-  rdfs:comment "De property heeftMelder legt de relatie tussen de kennisregistratie en de melder vast."^^xsd:date ;
+  rdfs:comment "De property heeftMelder legt de relatie tussen de kennisregistratie en de melder vast."@nl ;
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Heeft melder"@nl ;
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Betrokkene> ;
@@ -1299,7 +1299,7 @@ ceo:heeftVertrouwelijkAanduiding
 .
 ceo:heeftVervanger
   rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-04-18 9:24"^^xsd:date ;
+  dcterms:created "2018-04-18"^^xsd:date ;
   dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De property heeftVervanger legt de relatie tussen de kennisregistratie en de vervangende kennisregistratie met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:Kennisregistratie ;
@@ -1334,7 +1334,7 @@ ceo:heeftWerelerfgoedstatus
 .
 ceo:heeftZaak
   rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-04-18 9:30"^^xsd:date ;
+  dcterms:created "2018-04-18"^^xsd:date ;
   dcterms:modified "2018-06-08"^^xsd:date ;
   rdfs:comment "De property heeftZaak legt de relatie tussen de kennisregistratie en de zaak vast."@nl ;
   rdfs:domain ceo:Kennisregistratie ;
@@ -1627,7 +1627,7 @@ ceo:pandIdentificatie
 .
 ceo:perceelnummer
   rdf:type owl:DatatypeProperty ;
-  dcterms:created "2018-2-20"^^xsd:date ;
+  dcterms:created "2018-02-20"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
   rdfs:comment "De property perceelnummer wordt gebruikt om aan te geven of het nummer dat aan een geheel perceel of een complex, uniek identificeert wordt binnen de sectie."@nl ;
   rdfs:comment "De property perceelnummer is een registergegeven binnen de class Rijksmonument."@nl ;
