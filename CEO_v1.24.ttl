@@ -100,6 +100,13 @@ ceo:ActorEnRol
   rdfs:label "Actor en rol"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
+ceo:Adresgegevens
+  rdf:type owl:Class ;
+  dcterms:created "2018-05-24"^^xsd:date ;
+  rdfs:comment "De class Adresgegevens is de representatie van de adresgegevens van een Cultuurhistorisch Object."@nl ;
+  rdfs:label "Adresgegevens"@nl ;
+  rdfs:subClassOf locn:Address ;
+.
 ceo:Afbeelding
   rdf:type owl:Class ;
   dcterms:created "2020-0428" ;
@@ -147,7 +154,7 @@ ceo:BAGRelatie
 ceo:BAGRelatienummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-23"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
+  dcterms:modified "2018-11-06"^^xsd:date ;
   rdfs:comment "De property BAGRelatienummer wordt gebruikt om aan te geven het unieke nummer waaronder de BAG relatie instance bekend is."@nl ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "BAG relatienummer"@nl ;
@@ -176,12 +183,6 @@ ceo:BasisregistratieRelatie
   rdfs:label "Basisregistratie relatie"@nl ;
   rdfs:subClassOf owl:Thing ;
   skos:editorialNote "De Class komt overeen met de Basisobjectrelatie in de CHOI."@nl ;
-.
-ceo:BeginDatering
-  rdf:type owl:Class ;
-  dcterms:created "2020-11-11"^^xsd:date ;
-  rdfs:comment "De class BeginDatering is de representatie van de vastgelegde begin datering van een datering."@nl ;
-  rdfs:label "Begin datering"@nl ;
 .
 ceo:Bodemgebruik
   rdf:type owl:Class ;
@@ -231,12 +232,6 @@ ceo:Datering
   rdfs:comment "De class Datering is een representatie van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
   rdfs:label "Datering"@nl ;
   rdfs:subClassOf owl:Thing ;
-.
-ceo:EindDatering
-  rdf:type owl:Class ;
-  dcterms:created "2020-11-11"^^xsd:date ;
-  rdfs:comment "De class EindDatering is de representatie van de vastgelegde eind datering van een datering."@nl ;
-  rdfs:label "Eind datering"@nl ;
 .
 ceo:Functie
   rdf:type owl:Class ;
@@ -329,6 +324,13 @@ ceo:StijlEnCultuur
   rdfs:label "Stijl en cultuur"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
+ceo:Tijdvak
+  rdf:type owl:Class ;
+  dcterms:created "2018-04-10"^^xsd:date ;
+  rdfs:comment "De class Tijdvak is de representatie van vastgelegde tijdvakken met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:label "Tijdvak"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
 ceo:Type
   rdf:type owl:Class ;
   dcterms:created "2018-05-02"^^xsd:date ;
@@ -383,13 +385,13 @@ ceo:aantalVondsten
   rdfs:range xsd:integer ;
   skos:prefLabel "aantal vondsten"@nl ;
 .
-ceo:heeftActor
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2020-11-11"^^xsd:date ;
-  rdfs:comment "De property heeftActor wordt gebruikt om aan te geven de actor die een rol speelt bij een cultuurhistorisch object vast."@nl ;
+ceo:actor
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-06-04"^^xsd:date ;
+  rdfs:comment "De property actor wordt gebruikt om aan te geven de actor die een rol speelt bij een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:ActorEnRol ;
-  rdfs:label "Heeft actor"@nl ;
-  rdfs:range skos:Concept ;
+  rdfs:label "Actor"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:actorEnRolnummer
   rdf:type owl:DatatypeProperty ;
@@ -397,6 +399,14 @@ ceo:actorEnRolnummer
   rdfs:comment "De property actorEnRolnummer wordt gebruikt om aan te geven het unieke nummer waaronder de actor en rol instance bekend is."@nl ;
   rdfs:domain ceo:ActorEnRol ;
   rdfs:label "Actor en rolnummer"@nl ;
+  rdfs:range xsd:integer ;
+.
+ceo:adresgegevensnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-10-03"^^xsd:date ;
+  rdfs:comment "De property adresgegevensnummer wordt gebruikt om aan te geven het unieke nummer waaronder de adresgegevens instance bekend is."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Adresgegevensnummer"@nl ;
   rdfs:range xsd:integer ;
 .
 ceo:appartementAanduiding
@@ -472,14 +482,6 @@ ceo:basisregistratieRelatienummer
   rdfs:label "Basisregistratie relatienummer"@nl ;
   rdfs:range xsd:integer ;
 .
-ceo:plaats
-  rdf:type owl:DatatypeProperty ;
-  dcterms:created "2020-11-11"^^xsd:date ;
-  rdfs:comment "De property plaats wordt gebruikt om aan te geven welke plaats is gekoppeld aan de lbasisregistratie."@nl ;
-  rdfs:domain ceo:BasisregistratieRelatie ;
-  rdfs:label "Plaats"@nl ;
-  rdfs:range xsd:string ;
-.
 ceo:bevatObject
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-07-04"^^xsd:date ;
@@ -527,18 +529,16 @@ ceo:bronverwijzingnummer
 ceo:buurtOfWijkCode
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-05-24"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
   rdfs:comment "De property buurtOfWijkCode wordt gebruikt om aan te geven welke buurt of wijk code is gekoppeld aan het rijksmonument."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Buurt of wijk code"@nl ;
   rdfs:range xsd:string ;
 .
 ceo:buurtOfWijkNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-05-24"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
   rdfs:comment "De property buurtOfWijkNaam wordt gebruikt om aan te geven welke buurt of wijk naam is gekoppeld aan het rijksmonument."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Buurt of wijk naam"@nl ;
   rdfs:range xsd:string ;
 .
@@ -586,6 +586,15 @@ ceo:deelperceelnummer
   rdfs:label "Deelperceelnummer"@nl ;
   rdfs:range xsd:integer ;
 .
+ceo:einddatum
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-04-10"^^xsd:date ;
+  dcterms:modified "2018-06-28"^^xsd:date ;
+  rdfs:comment "De property einddatum wordt gebruikt om aan te geven welke einddatum is gekoppeld aan een instance."@nl ;
+  rdfs:domain ceo:Tijdvak ;
+  rdfs:label "Einddatum"@nl ;
+  rdfs:range xsd:date ;
+.
 ceo:formeelStandpunt
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-04-18"^^xsd:date ;
@@ -597,17 +606,8 @@ ceo:formeelStandpunt
 ceo:gemeenteCode
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-05-24"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
-  rdfs:comment "De property gemeenteCode wordt gebruikt om aan te geven welke gemeente code is gekoppeld... ."@nl ;
-  rdfs:domain ceo:BRKRelatie ;
-  rdfs:label "Gemeente code"@nl ;
-  rdfs:range xsd:string ;
-.
-ceo:gemeentenaam
-  rdf:type owl:DatatypeProperty ;
-  dcterms:created "2020-11-11"^^xsd:date ;
-  rdfs:comment "De property gemeentenaam wordt gebruikt om aan te geven welke gemeentenaam is gekoppeld... ."@nl ;
-  rdfs:domain ceo:BRKRelatie ;
+  rdfs:comment "De property gemeenteCode wordt gebruikt om aan te geven welke gemeente code is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Gemeente code"@nl ;
   rdfs:range xsd:string ;
 .
@@ -840,7 +840,7 @@ ceo:heeftFunctiePeriode
 ceo:heeftGaafheid
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-05-02"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
+  dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De property heeftGaafheid legt de relatie tussen de archeologische kwaliteit en de gaafheid met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:ArcheologischeKwaliteit ;
   rdfs:label "Heeft gaafheid"@nl ;
@@ -866,10 +866,10 @@ ceo:heeftGebeurtenisNaam
 ceo:heeftGemeente
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-02-02"^^xsd:date ;
-  dcterms:modified "2020-04-20"^^xsd:date ;
+  dcterms:modified "2020-04-20" ;
   rdfs:comment "De property heeftGemeente is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:comment "De property heeftGemeente legt de relatie tussen het adres van een cultuurhistorisch object en de gemeente waarin het cultuurhistorisch object zich bevindt."@nl ;
-  rdfs:domain ceo:BasisRegistratieRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Heeft gemeente"@nl ;
   rdfs:range <http://standaarden.overheid.nl/owms/terms/Gemeente> ;
   skos:editorialNote "Indien een cultuurhistorisch object rijksmonument is, dan heeft de property heeftGemeente, maar één waarde (functional property; cardinaliteit 1)."@nl ;
@@ -951,7 +951,7 @@ ceo:heeftIndicatieNauwkeurigheid
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-10"^^xsd:date ;
   dcterms:modified "2018-07-28"^^xsd:date ;
-  rdfs:comment "De property heeftIndicatieNauwkeurigheid legt de relatie tussen het datering en de indicatieve nauwkeurigheid vast."@nl ;
+  rdfs:comment "De property heeftIndicatieNauwkeurigheid legt de relatie tussen het tijdvak en de indicatieve nauwkeurigheid vast."@nl ;
   rdfs:domain ceo:Datering ;
   rdfs:label "Heeft indicatie nauwkeurigheid"@nl ;
   rdfs:range skos:Concept ;
@@ -1018,6 +1018,14 @@ ceo:heeftLocatieAanduidingStatus
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Heeft locatie aanduiding status"@nl ;
   rdfs:range skos:Concept ;
+.
+ceo:heeftLocatieAdres
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2018-03-21"^^xsd:date ;
+  rdfs:comment "De property heeftLocatieAdres legt de relatie tussen de locatie aanduiding en het adres met betrekking tot een cultuurhistorisch object vast."@nl ;
+  rdfs:domain ceo:LocatieAanduiding ;
+  rdfs:label "Heeft locatie adres"@nl ;
+  rdfs:range ceo:Adresgegevens ;
 .
 ceo:heeftMateOvername
   rdf:type owl:ObjectProperty ;
@@ -1118,18 +1126,19 @@ ceo:heeftOorspronkelijkeFunctie
 ceo:heeftPeriode
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-10"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
+  dcterms:modified "2018-06-28"^^xsd:date ;
   rdfs:comment "De property heeftPeriode legt de relatie tussen de datering en de periode aanduiding met betrekking tot een cultuurhistorisch object vast."@nl ;
+  rdfs:domain ceo:Datering ;
   rdfs:label "Heeft periode"@nl ;
   rdfs:range skos:Concept ;
 .
 ceo:heeftProvincie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-02-02"^^xsd:date ;
-  dcterms:modified "2020-04-20"^^xsd:date ;
+  dcterms:modified "2020-04-20" ;
   rdfs:comment "De property heeftProvincie legt de relatie tussen het adres van een cultuurhistorisch object en de provincie waarin het cultuurhistorisch object zich bevindt."@nl ;
   rdfs:comment "De property ceo:heeftProvincie is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:domain ceo:BasisRegistratieRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Heeft provincie"@nl ;
   rdfs:range <http://standaarden.overheid.nl/owms/terms/Provincie> ;
   rdfs:subPropertyOf locn:adminUnitL2 ;
@@ -1174,9 +1183,8 @@ ceo:heeftSchoonheid
 ceo:heeftSituering
   rdf:type owl:ObjectProperty ;
   dcterms:created "2019-05-15"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
   rdfs:comment "De property heeftSituering legt de relatie tussen een rijksmonument dat geen verblijfsobject in de BAG is met een verblijfsobject in de BAG."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Heeft situering"@nl ;
   rdfs:range skos:Concept ;
 .
@@ -1201,26 +1209,18 @@ ceo:heeftTemporeleRelatie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-10"^^xsd:date ;
   dcterms:modified "2018-06-28"^^xsd:date ;
-  rdfs:comment "De property heeftTemporeleRelatie legt de relatie tussen het datering en de temporele relatie met betrekking tot een cultuurhistorisch object vast."@nl ;
+  rdfs:comment "De property heeftTemporeleRelatie legt de relatie tussen het tijdvak en de temporele relatie met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:Datering ;
   rdfs:label "Heeft temporele relatie"@nl ;
   rdfs:range skos:Concept ;
 .
-ceo:heeftBeginDatering
+ceo:heeftTijdvak
   rdf:type owl:ObjectProperty ;
-  dcterms:created "2020-11-11"^^xsd:date ;
-  rdfs:comment "De property heeftBeginDatering legt de relatie tussen de datering en de begin datering met betrekking tot een cultuurhistorisch object vast."@nl ;
+  dcterms:created "2018-04-10"^^xsd:date ;
+  rdfs:comment "De property heeftTijdvak legt de relatie tussen de datering en het tijdvak met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:Datering ;
-  rdfs:label "Heeft begin datering"@nl ;
-  rdfs:range ceo:BeginDatering ;
-.
-ceo:heeftEindDatering
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2020-11-11"^^xsd:date ;
-  rdfs:comment "De property heeftEindDatering legt de relatie tussen de datering en de eind datering met betrekking tot een cultuurhistorisch object vast."@nl ;
-  rdfs:domain ceo:Datering ;
-  rdfs:label "Heeft eind datering"@nl ;
-  rdfs:range ceo:EindDatering ;
+  rdfs:label "Heeft tijdvak"@nl ;
+  rdfs:range ceo:Tijdvak ;
 .
 ceo:heeftToestand
   rdf:type owl:ObjectProperty ;
@@ -1367,9 +1367,8 @@ ceo:heeftZuiverheid
 ceo:hoofdadres
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2019-05-15"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
   rdfs:comment "De property hoofdadres wordt gebruikt om aan te geven het hoofdadres van een rijksmonument."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Hoofdadres @nl" ;
   rdfs:range xsd:boolean ;
 .
@@ -1402,10 +1401,10 @@ ceo:huidigeNaam
 ceo:huisnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
+  dcterms:modified "2020-04-20"^^xsd:date ;
   rdfs:comment "De property huisnummer wordt gebruikt om aan te geven het huisnummer, huisletter en huisnummer toevoeging van een cultuurhistorisch object."@nl ;
   rdfs:comment "De property huisnummer is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Huisnummer"@nl ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf locn:locatorDesignator ;
@@ -1579,10 +1578,10 @@ ceo:oorspronkelijkeNaam
 ceo:openbareRuimte
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
+  dcterms:mofified "2020-04-20"^^xsd:date ;
   rdfs:comment "De property openbareRuimte wordt gebruikt om aan te geven de openbare ruimte van een cultuurhistorisch object."@nl ;
   rdfs:comment "De property openbareRuimte is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Openbare ruimte"@nl ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf locn:thoroughfare ;
@@ -1617,13 +1616,21 @@ ceo:perceelnummer
   skos:editorialNote "Binnen de RCE data wordt het perceel nummer gegeven als kadastraal object nummer."@nl ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
+ceo:plaatsCode
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-05-24"^^xsd:date ;
+  rdfs:comment "De property plaatsCode wordt gebruikt om aan te geven welke plaats code is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:domain ceo:Adresgegevens ;
+  rdfs:label "Plaats code"@nl ;
+  rdfs:range xsd:string ;
+.
 ceo:postcode
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
+  dcterms:created "2020-04-20"^^xsd:date ;
   rdfs:comment "De property postcode is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:comment "De property postcode wordt gebruikt om aan te geven de postcode van een cultuurhistorisch object."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Postcode"@nl ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf locn:postCode ;
@@ -1664,13 +1671,13 @@ ceo:rijksmonumentnummer
   rdfs:range xsd:integer ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
-ceo:heeftRol
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2020-11-11"^^xsd:date ;
-  rdfs:comment "De property heeftRol wordt gebruikt om aan te geven de rol die een actor speelt bij een cultuurhistorisch object."@nl ;
+ceo:rol
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-06-04"^^xsd:date ;
+  rdfs:comment "De property rol wordt gebruikt om aan te geven de rol die een actor speelt bij een cultuurhistorisch object."@nl ;
   rdfs:domain ceo:ActorEnRol ;
-  rdfs:label "Heeft rol"@nl ;
-  rdfs:range skos:Concept ;
+  rdfs:label "Rol"@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:sectie
   rdf:type owl:DatatypeProperty ;
@@ -1683,11 +1690,13 @@ ceo:sectie
   rdfs:range xsd:string ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
-ceo:datum
+ceo:startdatum
   rdf:type owl:DatatypeProperty ;
-  dcterms:created "2020-11-11"^^xsd:date ;
-  rdfs:comment "De property Datum wordt gebruikt om aan te geven welke datum is gekoppeld aan een instance."@nl ;
-  rdfs:label "Datum"@nl ;
+  dcterms:created "2018-04-10"^^xsd:date ;
+  dcterms:modified "2018-06-28"^^xsd:date ;
+  rdfs:comment "De property startdatum wordt gebruikt om aan te geven welke startdatum is gekoppeld aan een instance."@nl ;
+  rdfs:domain ceo:Tijdvak ;
+  rdfs:label "Startdatum"@nl ;
   rdfs:range xsd:date ;
 .
 ceo:taal
@@ -1698,6 +1707,22 @@ ceo:taal
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Taal"@nl ;
   rdfs:range xsd:string ;
+.
+ceo:tijdvaknaam
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-11-06"^^xsd:date ;
+  rdfs:comment "De property tijdvaknaam wordt gebruikt om aan te geven de naam van het tijdvak."@nl ;
+  rdfs:domain ceo:Tijdvak ;
+  rdfs:label "Tijdvaknaam"@nl ;
+  rdfs:range xsd:string ;
+.
+ceo:tijdvaknummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-10-03"^^xsd:date ;
+  rdfs:comment "De property tijdvaknummer wordt gebruikt om aan te geven het unieke nummer waaronder de tijdvak instance bekend is."@nl ;
+  rdfs:domain ceo:Tijdvak ;
+  rdfs:label "Tijdvaknummer"@nl ;
+  rdfs:range xsd:integer ;
 .
 ceo:toelichting
   rdf:type owl:DatatypeProperty ;
@@ -1728,9 +1753,8 @@ ceo:verwijzing
 ceo:volledigAdres
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
   rdfs:comment "De property volledigAdres wordt gebruikt om aan te geven het volledige adres van een cultuurhistorisch object."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Volledig adres"@nl ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf locn:fullAddress ;
@@ -1746,10 +1770,10 @@ ceo:werelderfgoednummer
 ceo:woonplaatsnaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
-  dcterms:modified "2020-11-11"^^xsd:date ;
+  dcterms:modified "2020-04-20"^^xsd:date ;
   rdfs:comment "De property woonplaatsnaam wordt gebruikt om aan te geven de woonplaats van een cultuurhistorisch object."@nl ;
   rdfs:comment "De property woonplaatsnaam is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:domain ceo:Adresgegevens ;
   rdfs:label "Woonplaatsnaam"@nl ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf locn:postName ;
@@ -1769,6 +1793,7 @@ lxr:cbsProvinciecode
   rdfs:comment "De property cbsProvinciecode wordt gebruikt om aan te geven de CBS code bij de OWMS provincie uri."@nl ;
   rdfs:label "CBS provinciecode @nl" ;
 .
+
 
 
 
