@@ -81,7 +81,7 @@ gsp:wktLiteral
   dcterms:created "2018-04-23"^^xsd:date ;
   dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:description "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
-  #dcterms:hasVersion "1.0"^^xsd:integer ;
+  #dcterms:hasVersion "1.0"^^xsd:string ;
   dcterms:issued "2018-12-01"^^xsd:date ;
   dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
@@ -152,7 +152,7 @@ ceo:BAGRelatienummer
   rdfs:comment "De property BAGRelatienummer wordt gebruikt om aan te geven het unieke nummer waaronder de BAG relatie instance bekend is."@nl ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "BAG relatienummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:BRKRelatie
   rdf:type owl:Class ;
@@ -168,7 +168,7 @@ ceo:BRKRelatienummer
   rdfs:comment "De property BRKRelatienummer wordt gebruikt om aan te geven het unieke nummer waaronder de BRK relatie instance bekend is."@nl ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "BRK relatienummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:BasisregistratieRelatie
   rdf:type owl:Class ;
@@ -381,7 +381,7 @@ ceo:aantalVondsten
   rdfs:comment "De property aantalVondsten wordt gebruikt om aan te geven het aantal vondsten."@nl ;
   rdfs:domain ceo:Vondsten ;
   rdfs:label "Aantal vondsten"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:integer;
   skos:prefLabel "aantal vondsten"@nl ;
 .
 ceo:actorEnRolnummer
@@ -390,7 +390,7 @@ ceo:actorEnRolnummer
   rdfs:comment "De property actorEnRolnummer wordt gebruikt om aan te geven het unieke nummer waaronder de actor en rol instance bekend is."@nl ;
   rdfs:domain ceo:ActorEnRol ;
   rdfs:label "Actor en rolnummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:appartementAanduiding
   rdf:type owl:DatatypeProperty ;
@@ -463,7 +463,7 @@ ceo:basisregistratieRelatienummer
   rdfs:comment "De property basisregistratieRelatienummer wordt gebruikt om aan te geven het unieke nummer waaronder de basisregistratie relatie instance bekend is."@nl ;
   rdfs:domain ceo:BasisregistratieRelatie ;
   rdfs:label "Basisregistratie relatienummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:bevatObject
   rdf:type owl:ObjectProperty ;
@@ -507,7 +507,7 @@ ceo:bronverwijzingnummer
   rdfs:comment "De property bronverwijzingnummer wordt gebruikt om aan te geven het unieke nummer waaronder de bronverwijzing instance bekend is."@nl ;
   rdfs:domain ceo:Bronverwijzing ;
   rdfs:label "Bronverwijzingnummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string;
 .
 ceo:buurtOfWijkCode
   rdf:type owl:DatatypeProperty ;
@@ -532,7 +532,7 @@ ceo:complexnummer
   rdfs:comment "De property complexnummer wordt gebruikt om aan te geven het unieke nummer waaronder het complex van rijksmonumenten bekend is in het monumentenregister."@nl ;
   rdfs:domain ceo:Complex ;
   rdfs:label "Complexnummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:cultuurhistorischObjectnummer
   rdf:type owl:DatatypeProperty ;
@@ -541,7 +541,7 @@ ceo:cultuurhistorischObjectnummer
   rdfs:comment "De property cultuurhistorischObjectnummer wordt gebruikt om aan te geven of een cultuurhistorischObjectnummer aan een Cultuurhistorisch object is gegeven."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Cultuurhistorisch objectnummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:dateringnummer
   rdf:type owl:DatatypeProperty ;
@@ -549,7 +549,7 @@ ceo:dateringnummer
   rdfs:comment "De property dateringnummer wordt gebruikt om aan te geven het unieke nummer waaronder de datering instance bekend is."@nl ;
   rdfs:domain ceo:Datering ;
   rdfs:label "Dateringnummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:datum
   rdf:type owl:DatatypeProperty ;
@@ -575,7 +575,7 @@ ceo:deelperceelnummer
   rdfs:comment "De property deelperceelnummer wordt gebruikt om aan te geven of een deelperceelnummer aan een rijksmonument is gegeven."@nl ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Deelperceelnummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:formeelStandpunt
   rdf:type owl:DatatypeProperty ;
@@ -599,7 +599,7 @@ ceo:geometrienummer
   rdfs:comment "De property geometrienummer wordt gebruikt om aan te geven het unieke nummer waaronder de geometrie instance bekend is."@nl ;
   rdfs:domain ceo:Geometrie ;
   rdfs:label "Geometrienummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:gezichtsnummer
   rdf:type owl:DatatypeProperty ;
@@ -607,7 +607,7 @@ ceo:gezichtsnummer
   rdfs:comment "De property gezichtsnummer wordt gebruikt om aan te geven het unieke nummer waaronder het stads- of dorpsgezicht bekend is."@nl ;
   rdfs:domain ceo:Gezicht ;
   rdfs:label "Gezichtsnummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:stringgfr3q212§21q 1q                          D ;
 .
 ceo:heeftActor
   rdf:type owl:ObjectProperty ;
@@ -1494,7 +1494,7 @@ ceo:kennisregistratienummer
   rdfs:comment "De property kennisegistratienummer wordt gebruikt om aan te geven het unieke nummer waaronder de kennisregistratie instance bekend is."@nl ;
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Kennisegistratienummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string;
 .
 ceo:ligtInObject
   rdf:type owl:ObjectProperty ;
@@ -1512,7 +1512,7 @@ ceo:locatieAanduidingnummer
   rdfs:comment "De property locatieAanduidingnummer wordt gebruikt om aan te geven het unieke nummer waaronder de locatie aanduiding instance bekend is."@nl ;
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Locatie aanduidingnummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:locatienaam
   rdf:type owl:DatatypeProperty ;
@@ -1666,7 +1666,7 @@ ceo:rijksmonumentnummer
   rdfs:comment "De property rijksmonumentnummer wordt gebruikt om aan te geven het unieke nummer waaronder het rijksmonument bekend is in het monumentenregister."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Rijksmonumentnummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
 ceo:sectie
@@ -1730,7 +1730,7 @@ ceo:werelderfgoednummer
   rdfs:comment "De property wereldnummer wordt gebruikt om aan te geven het unieke nummer waaronder het werelderfgoed bekend is."@nl ;
   rdfs:domain ceo:Werelderfgoed ;
   rdfs:label "Werelderfgoednummer"@nl ;
-  rdfs:range xsd:integer ;
+  rdfs:range xsd:string ;
 .
 ceo:woonplaatsnaam
   rdf:type owl:DatatypeProperty ;
