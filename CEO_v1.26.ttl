@@ -607,7 +607,7 @@ ceo:gezichtsnummer
   rdfs:comment "De property gezichtsnummer wordt gebruikt om aan te geven het unieke nummer waaronder het stads- of dorpsgezicht bekend is."@nl ;
   rdfs:domain ceo:Gezicht ;
   rdfs:label "Gezichtsnummer"@nl ;
-  rdfs:range xsd:stringgfr3q212§21q 1q                          D ;
+  rdfs:range xsd:string ;
 .
 ceo:heeftActor
   rdf:type owl:ObjectProperty ;
