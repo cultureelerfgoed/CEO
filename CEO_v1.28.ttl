@@ -1130,7 +1130,7 @@ ceo:heeftOorspronkelijkeFunctie
 ceo:heeftPand
   rdf:type owl:ObjectProperty ;
   dcterms:created "2022-06-17"^^xsd:date ;
-  rdfs:comment rdfs:comment "De property heeftPand verwijst naar pandidentificatie uit de Basisregistratie Adressen en Gebouwen."@nl ;
+  rdfs:comment "De property heeftPand verwijst naar pandidentificatie uit de Basisregistratie Adressen en Gebouwen."@nl ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Heeft pand"@nl ;
 .
