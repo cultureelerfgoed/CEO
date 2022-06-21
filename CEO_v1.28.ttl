@@ -1693,15 +1693,6 @@ ceo:taal
   rdfs:label "Taal"@nl ;
   rdfs:range xsd:string ;
 .
-ceo:toelichting
-  rdf:type owl:DatatypeProperty ;
-  dcterms:created "2018-04-18"^^xsd:date ;
-  dcterms:modified "2018-06-28"^^xsd:date ;
-  rdfs:comment "De property toelichting wordt gebruikt om een toelichting te geven op de Kennisregistratie."@nl ;
-  rdfs:domain ceo:Kennisregistratie ;
-  rdfs:label "Toelichting"@nl ;
-  rdfs:range xsd:string ;
-.
 ceo:verblijfsobjectIdentificatie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-23"^^xsd:date ;
