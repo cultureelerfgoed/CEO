@@ -166,14 +166,6 @@ ceo:BouwkundigeKwaliteit
   rdfs:label "Bouwkundige kwaliteit"@nl ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
-ceo:Bronverwijzing
-  rdf:type owl:Class ;
-  dcterms:created "2018-05-02"^^xsd:date ;
-  dcterms:modified "2018-06-11"^^xsd:date ;
-  rdfs:comment "De class Bronverwijzing is een subclass van Kennisregistratie en is de representatie van de bronverwijzing met betrekking tot een cultuurhistorisch object."@nl ;
-  rdfs:label "Bronverwijzing"@nl ;
-  rdfs:subClassOf owl:Thing ;
-.
 ceo:Complex
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
