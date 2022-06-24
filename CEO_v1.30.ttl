@@ -91,13 +91,6 @@ ceo:ActorEnRol
   rdfs:label "Actor en rol"@nl ;
   rdfs:subClassOf owl:Thing ;
 .
-ceo:Afbeelding
-  rdf:type owl:Class ;
-  dcterms:created "2020-0428" ;
-  rdfs:comment "De class Afbeedling is de representatie van de afbeeldingen uit de RCE Beeldbank."@nl ;
-  rdfs:label "Afbeedling"@nl ;
-  rdfs:subClassOf owl:Thing ;
-.
 ceo:ArcheologischComplex
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
