@@ -1053,6 +1053,14 @@ ceo:heeftZuiverheid
   rdfs:label "Heeft zuiverheid"@nl ;
   rdfs:range skos:Concept ;
 .
+ceo:gezichtsnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2019-11-22"^^xsd:date ;
+  rdfs:comment "De property gezichtsnummer wordt gebruikt om aan te geven het unieke nummer waaronder het stads- of dorpsgezicht bekend is."@nl ;
+  rdfs:domain ceo:Gezicht ;
+  rdfs:label "Gezichtsnummer"@nl ;
+  rdfs:range xsd:string ;
+.
 ceo:hoofdfunctie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-13"^^xsd:date ;
