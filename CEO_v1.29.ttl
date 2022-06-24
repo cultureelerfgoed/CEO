@@ -79,8 +79,8 @@ gsp:wktLiteral
   dcterms:created "2018-04-23"^^xsd:date ;
   dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:description "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
-  #dcterms:hasVersion "1.28"^^xsd:string ;
-  dcterms:issued "2022-06-17"^^xsd:date ;
+  #dcterms:hasVersion "1.29"^^xsd:string ;
+  dcterms:issued "2022-06-22"^^xsd:date ;
   dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
