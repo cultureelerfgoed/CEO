@@ -522,6 +522,7 @@ ceo:heeftActor
   rdf:type owl:ObjectProperty ;
   dcterms:created "2020-11-16"^^xsd:date ;
   rdfs:comment "De property heeftActor legt de relatie tussen."@nl ;
+  skos:editorialNote "In de toekomst deze property omzetten naar een uri"@nl ;
   rdfs:domain ceo:ActorEnRol ;
   rdfs:label "Heeft actor"@nl ;
   rdfs:range skos:Concept ;
@@ -919,6 +920,7 @@ ceo:heeftRol
   rdf:type owl:ObjectProperty ;
   dcterms:created "2020-11-16"^^xsd:date ;
   rdfs:comment "De property heeftRol legt de relatie tussen."@nl ;
+  skos:editorialNote "In de toekomst deze property omzetten naar een uri"@nl ;
   rdfs:domain ceo:ActorEnRol ;
   rdfs:label "Heeft rol"@nl ;
   rdfs:range skos:Concept ;
