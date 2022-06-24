@@ -327,14 +327,7 @@ ceo:Werelderfgoed
   rdfs:label "Werelderfgoed"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
-ceo:Zichtbaarheid
-  rdf:type owl:Class ;
-  dcterms:created "2018-04-18"^^xsd:date ;
-  rdfs:comment "De class Zichtbaarheid is de representatie van de relatie tussen een cultuurhistorisch object en de Zichtbaarheid."@nl ;
-  rdfs:label "Zichtbaarheid"@nl ;
-  rdfs:subClassOf ceo:Kennisregistratie ;
-.
-ceo:aantalGrondsporen
+aantalGrondsporen
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
   dcterms:modified "2019-02-05"^^xsd:date ;
