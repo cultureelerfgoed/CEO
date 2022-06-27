@@ -1028,15 +1028,6 @@ ceo:heeftWerelderfgoedstatus
   rdfs:label "Heeft werelderfgoedstatus"@nl ;
   rdfs:range skos:Concept ;
 .
-ceo:heeftZaak
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-04-18"^^xsd:date ;
-  dcterms:modified "2018-06-08"^^xsd:date ;
-  rdfs:comment "De property heeftZaak legt de relatie tussen de kennisregistratie en de zaak vast."@nl ;
-  rdfs:domain ceo:Kennisregistratie ;
-  rdfs:label "Heeft zaak"@nl ;
-  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
-.
 ceo:heeftZekerheidsaanduiding
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-05-02"^^xsd:date ;
