@@ -319,7 +319,7 @@ ceo:Werelderfgoed
   rdfs:label "Werelderfgoed"@nl ; 
   rdfs:subClassOf ceo:CultuurhistorischObject ; 
 .
-aantalGrondsporen
+ceo:aantalGrondsporen
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
   dcterms:modified "2019-02-05"^^xsd:date ;
