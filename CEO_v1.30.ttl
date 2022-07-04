@@ -220,11 +220,11 @@ ceo:Geometrie
   rdfs:label "Geometrie"@nl ;
   rdfs:subClassOf gsp:Geometry ;
 .
-ceo:Gezicht
-  rdf:type owl:Class ;
-  dcterms:created "2019-11-05"^^xsd:date ;
-  rdfs:comment "De class Gezicht is een representatie van een"@nl ;
-  rdfs:label "Gezicht"@nl ;
+ceo:Gezicht 
+  rdf:type owl:Class ; 
+  dcterms:created "2019-11-05"^^xsd:date ; 
+  rdfs:comment "De class Gezicht is een representatie van een aangewezen, beschermd stads- en dorpsgezicht."@nl ; 
+  rdfs:label "Gezicht"@nl ; 
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:Grondsporen
@@ -312,12 +312,12 @@ ceo:Vondstlocatie
   rdfs:label "Vondstlocatie"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
-ceo:Werelderfgoed
-  rdf:type owl:Class ;
-  dcterms:created "2019-11-05"^^xsd:date ;
-  rdfs:comment "De class Werelderfgoed is een representatie van een"@nl ;
-  rdfs:label "Werelderfgoed"@nl ;
-  rdfs:subClassOf ceo:CultuurhistorischObject ;
+ceo:Werelderfgoed 
+  rdf:type owl:Class ; 
+  dcterms:created "2019-11-05"^^xsd:date ; 
+  rdfs:comment "De class Werelderfgoed is een representatie van een door het Werelderfgoedcomité van UNESCO op de Werelderfgoedlijst geplaats cultuurhistorisch object."@nl ; 
+  rdfs:label "Werelderfgoed"@nl ; 
+  rdfs:subClassOf ceo:CultuurhistorischObject ; 
 .
 aantalGrondsporen
   rdf:type owl:DatatypeProperty ;
@@ -757,15 +757,15 @@ ceo:heeftHuidigeFunctie
   rdfs:range ceo:Functie ;
   rdfs:subPropertyOf ceo:heeftFunctie ;
 .
-ceo:heeftIndicatieNauwkeurigheid
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-04-10"^^xsd:date ;
-  dcterms:modified "2018-07-28"^^xsd:date ;
-  rdfs:comment "De property heeftIndicatieNauwkeurigheid legt de relatie tussen het ...vast."@nl ;
-  rdfs:domain ceo:Datering ;
-  rdfs:label "Heeft indicatie nauwkeurigheid"@nl ;
-  rdfs:range skos:Concept ;
-.
+ceo:heeftIndicatieNauwkeurigheid 
+  rdf:type owl:ObjectProperty ; 
+  dcterms:created "2018-04-10"^^xsd:date ; 
+  dcterms:modified "2018-07-28"^^xsd:date ; 
+  rdfs:comment "De property heeftIndicatieNauwkeurigheid legt de relatie tussen het ...vast."@nl ; 
+  rdfs:domain ceo:Datering ; 
+  rdfs:label "Heeft indicatie nauwkeurigheid"@nl ; 
+  rdfs:range skos:Concept ; 
+. 
 ceo:heeftJuridischeStatus
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-01-30"^^xsd:date ;
@@ -887,15 +887,15 @@ ceo:heeftPand
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Heeft pand"@nl ;
 .
-ceo:heeftPeriode
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-04-10"^^xsd:date ;
-  dcterms:modified "2022-04-28"^^xsd:date ;
-  rdfs:comment "De property heeftPeriode legt de relatie tussen de datering ... vast."@nl ;
-  rdfs:domain ceo:BeginDatering, ceo:heeftEindDatering ;
-  rdfs:label "Heeft periode"@nl ;
-  rdfs:range skos:Concept ;
-.
+ceo:heeftPeriode 
+  rdf:type owl:ObjectProperty ; 
+  dcterms:created "2018-04-10"^^xsd:date ; 
+  dcterms:modified "2022-04-28"^^xsd:date ; 
+  rdfs:comment "De property heeftPeriode legt de relatie tussen de datering ... vast."@nl ; 
+  rdfs:domain ceo:BeginDatering, ceo:heeftEindDatering ; 
+  rdfs:label "Heeft periode"@nl ; 
+  rdfs:range skos:Concept ; 
+. 
 ceo:heeftProvincie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-02-02"^^xsd:date ;
@@ -950,15 +950,15 @@ ceo:heeftStijlEnCultuurNaam
   rdfs:label "Heeft stijl en cultuur naam"@nl ;
   rdfs:range skos:Concept ;
 .
-ceo:heeftTemporeleRelatie
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2018-04-10"^^xsd:date ;
-  dcterms:modified "2018-06-28"^^xsd:date ;
-  rdfs:comment "De property heeftTemporeleRelatie legt de relatie tussen het ... met betrekking tot een cultuurhistorisch object vast."@nl ;
-  rdfs:domain ceo:Datering ;
-  rdfs:label "Heeft temporele relatie"@nl ;
-  rdfs:range skos:Concept ;
-.
+ceo:heeftTemporeleRelatie 
+  rdf:type owl:ObjectProperty ; 
+  dcterms:created "2018-04-10"^^xsd:date ; 
+  dcterms:modified "2018-06-28"^^xsd:date ; 
+  rdfs:comment "De property heeftTemporeleRelatie legt de relatie tussen het ... met betrekking tot een cultuurhistorisch object vast."@nl ; 
+  rdfs:domain ceo:Datering ; 
+  rdfs:label "Heeft temporele relatie"@nl ; 
+  rdfs:range skos:Concept ; 
+. 
 ceo:heeftToestand
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
