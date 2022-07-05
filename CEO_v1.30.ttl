@@ -1124,17 +1124,6 @@ ceo:kaartbladcode
   rdfs:label "Kaartbladcode"@nl ;
   rdfs:range xsd:string ;
 .
-ceo:kadastraleGemeentecode
-  rdf:type owl:DatatypeProperty ;
-  dcterms:created "2018-10-23"^^xsd:date ;
-  dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property kadastraleGemeentecode is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "De property kadastraleGemeentecode wordt gebruikt om aan te geven of een kadastrale gemeente code aan een rijksmonument is gegeven."@nl ;
-  rdfs:domain ceo:BRKRelatie ;
-  rdfs:label "Kadastrale gemeentecode"@nl ;
-  rdfs:range xsd:string ;
-  ceo:registergegeven "true"^^xsd:boolean ;
-.
 ceo:kennisregistratieToelichting
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-23"^^xsd:date ;
