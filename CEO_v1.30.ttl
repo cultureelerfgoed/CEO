@@ -910,7 +910,7 @@ ceo:heeftProvincie
 ceo:heeftRijksmonument
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-09-25"^^xsd:date ;
-  rdfs:comment "De property heeftSamenhang legt de relatie tussen het complex met betrekking tot een rijksmonument vast."@nl ;
+  rdfs:comment "De property heeftRijksmonument legt de relatie tussen het complex met betrekking tot een rijksmonument vast."@nl ;
   rdfs:domain ceo:Complex ;
   rdfs:label "Heeft Rijksmonument"@nl ;
   rdfs:range ceo:Rijksmonument ;
