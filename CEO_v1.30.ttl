@@ -74,7 +74,7 @@ gsp:wktLiteral
   dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:description "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
   #dcterms:hasVersion "1.30"^^xsd:string ;
-  dcterms:issued "2022-06-24"^^xsd:date ;
+  dcterms:issued "2022-07-05"^^xsd:date ;
   dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
@@ -156,7 +156,7 @@ ceo:BasisregistratieRelatie
 ceo:BeginDatering
   rdf:type owl:Class ;
   dcterms:created "2022-04-28"^^xsd:date ;
-  rdfs:comment "De class BeginDatering is de representatie van."@nl ;
+  rdfs:comment "De class BeginDatering is de representatie van de begin datering van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
   rdfs:label "Begindatering"@nl ;
 .
 ceo:BouwkundigeKwaliteit
@@ -196,11 +196,11 @@ ceo:Datering
 ceo:EindDatering
   rdf:type owl:Class ;
   dcterms:created "2022-04-28"^^xsd:date ;
-  rdfs:comment "De class EindDatering is de representatie van."@nl ;
+  rdfs:comment "De class EindDatering is de representatie van de eind datering van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
   rdfs:label "Einddatering"@nl ;
 .
 ceo:Functie
-  rdf:type owl:Class ;
+  rdf:type owl:Class ; 
   dcterms:created "2018-02-19"^^xsd:date ;
   rdfs:comment "De class Functies is een subclass van kennisregistratie en is de representatie van de functie met betrekking tot een cultuurhistorisch object."@nl ;
   rdfs:label "Functie"@nl ;
@@ -430,7 +430,7 @@ ceo:bevatObject
 ceo:bijzonderGebied
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2019-11-05"^^xsd:date ;
-  rdfs:comment "De property bijzonderGebied wordt gebruikt om aan te geven"@nl ;
+  rdfs:comment "De property bijzonderGebied wordt gebruikt om aan te geven dat een beschermd stads- of dorpsgezicht een gebied in een stad of dorp is met een bijzonder cultuurhistorisch karakter"@nl ;
   rdfs:domain ceo:Gezicht ;
   rdfs:label "Bijzonder gebied"@nl ;
   rdfs:range xsd:boolean ;
@@ -464,7 +464,7 @@ ceo:dateringnummer
 ceo:datum
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2022-04-28"^^xsd:date ;
-  rdfs:comment "De property datum wordt gebruikt om aan te geven."@nl ;
+  rdfs:comment "De property datum wordt gebruikt om aan te geven de datum van een begin- of een einddatering."@nl ;
   rdfs:domain ceo:BeginDatering, ceo:EindDatering ;
   rdfs:label "datum"@nl ;
   rdfs:range xsd:date ;
@@ -521,7 +521,7 @@ ceo:gezichtsnummer
 ceo:heeftActor
   rdf:type owl:ObjectProperty ;
   dcterms:created "2020-11-16"^^xsd:date ;
-  rdfs:comment "De property heeftActor legt de relatie tussen."@nl ;
+  rdfs:comment "De property heeftActor legt de relatie tussen de actor en rol en de actor met betrekking tot een cultuurhistorisch object vast."@nl ;
   skos:editorialNote "In de toekomst deze property omzetten naar een uri"@nl ;
   rdfs:domain ceo:ActorEnRol ;
   rdfs:label "Heeft actor"@nl ;
@@ -724,7 +724,7 @@ ceo:heeftGeometrieStatus
 ceo:heeftGezichtsstatus
   rdf:type owl:ObjectProperty ;
   dcterms:created "2019-11-05"^^xsd:date ;
-  rdfs:comment "De property heeftGezichtsstatus legt de relatie tussen "@nl ;
+  rdfs:comment "De property heeftGezichtsstatus legt de relatie tussen het gezicht en het gezichtsstatus vast. "@nl ;
   rdfs:domain ceo:Gezicht ;
   rdfs:label "Heeft gezichtsstatus"@nl ;
   rdfs:range skos:Concept ;
@@ -761,7 +761,7 @@ ceo:heeftIndicatieNauwkeurigheid
   rdf:type owl:ObjectProperty ; 
   dcterms:created "2018-04-10"^^xsd:date ; 
   dcterms:modified "2018-07-28"^^xsd:date ; 
-  rdfs:comment "De property heeftIndicatieNauwkeurigheid legt de relatie tussen het ...vast."@nl ; 
+  rdfs:comment "De property heeftIndicatieNauwkeurigheid legt de relatie tussen de datering en de indicatie nauwkeurigheid vast."@nl ; 
   rdfs:domain ceo:Datering ; 
   rdfs:label "Heeft indicatie nauwkeurigheid"@nl ; 
   rdfs:range skos:Concept ; 
@@ -891,7 +891,7 @@ ceo:heeftPeriode
   rdf:type owl:ObjectProperty ; 
   dcterms:created "2018-04-10"^^xsd:date ; 
   dcterms:modified "2022-04-28"^^xsd:date ; 
-  rdfs:comment "De property heeftPeriode legt de relatie tussen de datering ... vast."@nl ; 
+  rdfs:comment "De property heeftPeriode legt de relatie tussen de datering en de periode vast."@nl ; 
   rdfs:domain ceo:BeginDatering, ceo:heeftEindDatering ; 
   rdfs:label "Heeft periode"@nl ; 
   rdfs:range skos:Concept ; 
@@ -919,7 +919,7 @@ ceo:heeftRijksmonument
 ceo:heeftRol
   rdf:type owl:ObjectProperty ;
   dcterms:created "2020-11-16"^^xsd:date ;
-  rdfs:comment "De property heeftRol legt de relatie tussen."@nl ;
+  rdfs:comment "De property heeftRol legt de relatie tussen de actor en rol en de rol met betrekking tot een cultuurhistorisch object vast."@nl ;
   skos:editorialNote "In de toekomst deze property omzetten naar een uri"@nl ;
   rdfs:domain ceo:ActorEnRol ;
   rdfs:label "Heeft rol"@nl ;
@@ -1062,16 +1062,6 @@ ceo:hoofdfunctie
   rdfs:label "Hoofdfunctie"@nl ;
   rdfs:range xsd:boolean ;
 .
-ceo:hoortBijZaak
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2019-03-12"^^xsd:date ;
-  dcterms:modified "2019-03-19"^^xsd:date ;
-  rdfs:comment "De property hoortBijZaak legt de relatie tussen kennisregistratie en zaak vast."@nl ;
-  rdfs:domain ceo:Kennisregistratie ;
-  rdfs:label "Hoort bij zaak"@nl ;
-  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
-  owl:inverseOf ceo:isKennisregistratieVanZaak ;
-.
 ceo:huidigeNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-02-06"^^xsd:date ;
@@ -1115,16 +1105,6 @@ ceo:isHoofdobjectVanComplex
   rdfs:label "Is hoofdobject van complex"@nl ;
   rdfs:range ceo:Complex ;
   owl:inverseOf ceo:heeftHoofdobject ;
-.
-ceo:isKennisregistratieVanZaak
-  rdf:type owl:ObjectProperty ;
-  dcterms:created "2019-03-18"^^xsd:date ;
-  dcterms:modified "2019-03-19"^^xsd:date ;
-  rdfs:comment "De property isKennisregistratieVanZaak legt de relatie tussen zaak en kennisregistratie vast."@nl ;
-  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
-  rdfs:label "Is kennisregistratie van zaak"@nl ;
-  rdfs:range ceo:Kennisregistratie ;
-  owl:inverseOf ceo:hoortBijZaak ;
 .
 ceo:isOnderdeelVanComplex
   rdf:type owl:ObjectProperty ;
@@ -1193,7 +1173,7 @@ ceo:locatienaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-21"^^xsd:date ;
   dcterms:modified "2018-06-28"^^xsd:date ;
-  rdfs:comment "De property locatienaam wordt gebruikt om aan te geven welke locatie naam is gekoppeld aan de locatie aanduiding"@nl ;
+  rdfs:comment "De property locatienaam wordt gebruikt om aan te geven welke locatie naam is gekoppeld aan de locatie aanduiding."@nl ;
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Locatienaam"@nl ;
   rdfs:range xsd:string ;
