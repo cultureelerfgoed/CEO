@@ -89,6 +89,7 @@ ceo:ActorEnRol
   dcterms:modified "2018-11-06"^^xsd:date ;
   rdfs:comment "De class ActorEnRol is de representatie van de actor en rol met betrekking tot een gebeurtenis."@nl ;
   rdfs:label "Actor en rol"@nl ;
+    rdfs:label "Actor and role"@en ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:ArcheologischComplex
