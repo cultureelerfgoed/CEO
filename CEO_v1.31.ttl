@@ -75,7 +75,7 @@ gsp:wktLiteral
   dcterms:description "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
   dcterms:description "The CEO is the complete semantic representation of the logical data models CHO and KENNIS from the data layer of the RCE."@en ;
   #dcterms:hasVersion "1.31"^^xsd:string ;
-  dcterms:issued "2022-06-24"^^xsd:date ;
+  dcterms:issued "2023-01-24"^^xsd:date ;
   dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
@@ -102,7 +102,7 @@ ceo:ArcheologischComplex
   dcterms:created "2018-01-30"^^xsd:date ;
   dcterms:modified "2019-05-13"^^xsd:date ;
   rdfs:comment "De class ArcheologischComplex is de representatie van een verzameling, in tijd en ruimte, geassocieerde vondsten en/of grondsporen."@nl ;
-  rdfs:comment "The class ArchaeologicalComplex is the representation of a collection, in time and space, of associated finds and/or archaeological soil traces."@en ;
+  rdfs:comment "The class ArcheologischComplex (ArchaeologicalComplex) is the representation of a collection, in time and space, of associated finds and/or archaeological soil traces."@en ;
   rdfs:label "Archeologisch complex"@nl ;
   rdfs:label "Archaeological complex"@en ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
@@ -111,7 +111,9 @@ ceo:ArcheologischOnderzoeksgebied
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class ArcheologischOnderzoeksgebied is de representatie van een ruimtelijk begrensd gebied, waarin archeologisch onderzoek wordt uitgevoerd door de vergunninghouder tot het doen van onderzoek."@nl ;
+  rdfs:comment "The class ArcheologischOnderzoeksgebied (ArchaeologicalResearchArea) is the representation of a spatially bounded area, in which archaeological research is carried out by the permit holder to conduct research."@en ;
   rdfs:label "Archeologisch onderzoeksgebied"@nl ;
+  rdfs:label "ArchaeologicalResearchArea"@en ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:ArcheologischTerrein
@@ -198,7 +200,9 @@ ceo:CultuurhistorischObject
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class CultuurhistorischObject is de representatie van een fenomeen in de werkelijkheid met een zekere cultuurhistorische waarde."@nl ;
+  rdfs:comment "The class CultuurhistorischObject (Cultural-historical Object) is the representation of a phenomenon in reality with a certain cultural-historical value."@en ;
   rdfs:label "Cultuurhistorisch object"@nl ;
+  rdfs:label "Culturalhistorical object"@en ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:Datering
