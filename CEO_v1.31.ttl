@@ -919,7 +919,7 @@ ceo:heeftPeriode
   dcterms:created "2018-04-10"^^xsd:date ;
   dcterms:modified "2022-04-28"^^xsd:date ;
   rdfs:comment "De property heeftPeriode legt de relatie tussen de datering en de periode vast. "@nl ;
-  rdfs:domain ceo:BeginDatering, ceo:heeftEindDatering ;
+  rdfs:domain ceo:BeginDatering, ceo:EindDatering ;
   rdfs:label "Heeft periode"@nl ;
   rdfs:range skos:Concept ;
 .
