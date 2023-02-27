@@ -191,7 +191,7 @@ ceo:Complex
   rdfs:label "Complex"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
-<https://linkeddata.cultureelerfgoed.nl/def/ceo#CreativeCommonslLicense4.0>
+<https://linkeddata.cultureelerfgoed.nl/def/ceo#CreativeCommonsLicense4.0>
   rdf:type dcterms:Agent ;
   dcterms:created "2018-04-23"^^xsd:date ;
   rdfs:label "Creative Common License 4.0"@nl ;
