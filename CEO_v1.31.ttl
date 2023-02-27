@@ -492,6 +492,7 @@ ceo:datum
 ceo:datumInschrijvingInMonumentenregister
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2020-04-20"^^xsd:date ;
+  rdfs:comment "De datum van inschrijving in monumentenregister is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:comment "De property datumInschrijvingInMonumentenregister wordt gebruikt om aan te geven het unieke nummer waaronder het rijksmonument bekend is in het monumentenregister."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Datum inschrijving in Monumentenregister"@nl ;
@@ -1352,6 +1353,7 @@ ceo:rijksmonumentnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-01-30"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
+  rdfs:comment "Het rijksmonumentnummer is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:comment "De property rijksmonumentnummer wordt gebruikt om aan te geven het unieke nummer waaronder het rijksmonument bekend is in het monumentenregister."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Rijksmonumentnummer"@nl ;
