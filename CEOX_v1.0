@@ -1,0 +1,431 @@
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
+@prefix ceox: <https://linkeddata.cultureelerfgoed.nl/def/ceox#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lxr: <https://linkeddata.cultureelerfgoed.nl/def/lxr#> .
+
+<https://linkeddata.cultureelerfgoed.nl/def/ceo>
+  rdf:type owl:Ontology ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:description "De CEOX is de semantische representatie van de aanvullende RCE data op het logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
+  dcterms:description "The CEOX is the semantic representation of the additional RCE data on the logical data models CHO and KNOWLEDGE from the data layer of the RCE."@en ;
+  #dcterms:hasVersion "0.10"^^xsd:string ;
+  dcterms:issued "2022-12-12"^^xsd:date ;
+  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:title "Cultureel Erfgoed Ontologie Extentie"@nl ;
+  dcterms:title "Cultural Heritage Ontology Extention"@en ;
+  rdfs:comment "De CEOX is de semantische representatie van de aanvullende RCE data op het logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
+  rdfs:comment "The CEOX is the semantic representation of the additional RCE data on the logical data models CHO and KNOWLEDGE from the data layer of the RCE."@en ;
+  rdfs:label "Cultureel Erfgoed Ontologie Extentie"@nl ;
+  rdfs:label "Cultural Heritage Ontology Extentie"@en ;
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
+.
+ceox:ActorEnRol
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De class ActorEnRol is de representatie van de actor en rol met betrekking tot een gebeurtenis."@nl ;
+  rdfs:label "Actor en rol"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceox:Adresgegevens
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De class Adresgegevens is de representatie van vastgelegde adressen met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:label Adresgegevens"@nl ;
+.
+ceox:Datering
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De class Datering is een representatie van de tijdsaanduiding die een cultuurhistorisch object kan hebben."@nl ;
+  rdfs:label "Datering"@nl ;
+  rdfs:subClassOf owl:Thing ;
+.
+ceox:Gebedshuis
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De class Gebedshuis is de representatie van de bedshuizen beschreven in de dataset Alle gebedshuizen NL."@nl ;
+  rdfs:label "Gebedshuis"@nl ;
+.
+ceox:Bevolking
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-05"^^xsd:date ;
+  rdfs:comment "De class Bevolking is de representatie van de bevolking die een gemeente, principe kan hebben."@nl ;
+  rdfs:label "Bevolking"@nl ;
+.
+ceox:Denominatie
+  rdf:type owl:Class ;
+  dcterms:created "2022-11-22"^^xsd:date ;
+  rdfs:comment "De class Denominatie is een representatie van de denominatie die een rijksmonument kan hebben."@nl ;
+  rdfs:label "Denominatie"@nl ;
+  rdfs:subClassOf ceo:Kennisregistratie ;
+.
+ceox:Functie
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De class Functies is de representatie van de functie met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:label "Functie"@nl ;
+  rdfs:subClassOf ceo:Kennisregistratie ;
+.
+ceox:Gebeurtenis
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De class Gebeurtenis is een representatie van vastgelegde gebeurtenissen met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:label "Gebeurtenis"@nl ;
+  rdfs:subClassOf ceo:Kennisregistratie ;
+.
+ceox:Geometrie
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De class Geometrie is de representatie van de geometrie van een cultuurhistorisch object."@nl ;
+  rdfs:label "Geometrie"@nl ;
+  rdfs:subClassOf gsp:Geometry ;
+.
+ceox:Naam
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De class Naam is de representatie van vastgelegde namen met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:label "Naam"@nl ;
+  rdfs:subClassOf ceo:Kennisregistratie ;
+.
+ceox:Type
+  rdf:type owl:Class ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De class Type is de representatie van vastgelegde typen met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:label "Type"@nl ;
+  rdfs:subClassOf ceo:Kennisregistratie ;
+.
+ceox:heeftAdresgegevens
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftAdresgegevens legt de relatie tussen een cultuurhistorisch object en de adresgegevens vast."@nl ;
+  rdfs:label "Heeft adresgegevens"@nl ;
+  rdfs:range ceox:Adresgegevens ;
+.
+ceox:heeftBevolking
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-05"^^xsd:date ;
+  rdfs:comment "De property"@nl ;
+  rdfs:range ceox:Bevolking ;
+  rdfs:label "Heeft bevolking"@nl ;
+.
+ceox:heeftDenominatie
+    rdf:type owl:ObjectProperty ;
+    dcterms:created "2022-11-22"^^xsd:date ;
+    rdfs:comment "De property heeftDenominatie legt de relatie tussen het rijksmonument en de denominatie vast."@nl ;
+    rdfs:label "Heeft denominatie"@nl ;
+    rdfs:range ceox:Denominatie ;
+    owl:inverseOf ceox:isDenominatieVan ;
+.
+ceox:heeftDenominatieNaam
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-11-22"^^xsd:date ;
+  rdfs:comment "De property heeftDenominatieNaam legt de relatie tussen de denominatie en de naam van de denominatie vast."@nl ;
+  rdfs:domain ceox:Denominatie ;
+  rdfs:label "Heeft denominatienaam"@nl ;
+  rdfs:range skos:Concept ;
+.
+ceox:heeftFunctie
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftFunctie legt de relatie tussen een cultuurhistorisch object en de functie vast."@nl ;
+  rdfs:label "Heeft functie"@nl ;
+  rdfs:range ceox:Functie ;
+.
+ceox:heeftGebeurtenis
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftGebeurtenis legt de relatie tussen een cultuurhistorisch object en de gebeurtenis vast."@nl ;
+  rdfs:label "Heeft gebeurtenis"@nl ;
+  rdfs:range ceox:Gebeurtenis ;
+.
+ceox:heeftGebeurtenisNaam
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftGebeurtenisNaam legt de relatie tussen een cultuurhistorisch object en de naam van de gebeurtenis vast."@nl ;
+  rdfs:domain ceox:Gebeurtenis ;
+  rdfs:label "Heeft gebeurtenis naam"@nl ;
+  rdfs:range ceox:Gebeurtenis ;
+.
+ceox:heeftGemeente
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  dcterms:modified "2022-04-28" ;
+  rdfs:comment "De property heeftGemeente ... ."@nl ;
+  rdfs:domain ceox:Adresgegevens ;
+  rdfs:label "Heeft gemeente"@nl ;
+  rdfs:range <http://standaarden.overheid.nl/owms/terms/Gemeente> ;
+.
+ceox:heeftGeometrie
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftGeometrie legt de relatie tussen een cultuurhistorisch object en de geometrie vast."@nl ;
+  rdfs:label "Heeft geometrie"@nl ;
+  rdfs:range ceox:Geometrie ;
+  rdfs:subPropertyOf gsp:hasGeometry ;
+.
+ceox:heeftNaam
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftNaam legt de relatie tussen een cultuurhistorisch object en de naam vast."@nl ;
+  rdfs:label "Heeft naam"@nl ;
+  rdfs:range ceox:Naam ;
+.
+ceox:heeftProvincie
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftProvincie legt de relatie ... ."@nl ;
+  rdfs:domain ceox:Adresgegevens ;
+  rdfs:label "Heeft provincie"@nl ;
+  rdfs:range <http://standaarden.overheid.nl/owms/terms/Provincie> ;
+.
+ceox:heeftRol
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftRol legt de relatie tussen de actor en rol en de rol met betrekking tot een cultuurhistorisch object vast."@nl ;
+  rdfs:domain ceox:ActorEnRol ;
+  rdfs:label "Heeft rol"@nl ;
+  rdfs:range skos:Concept ;
+.
+ceox:heeftSituering
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftSituering legt de relatie tussen een monument en ... ."@nl ;
+  rdfs:domain ceox:Adresgegevens ;
+  rdfs:label "Heeft situering"@nl ;
+  rdfs:range skos:Concept ;
+.
+ceox:heeftType
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftType legt de relatie tussen een cultuurhistorisch object en het type vast."@nl ;
+  rdfs:label "Heeft type"@nl ;
+  rdfs:range ceox:Type ;
+.
+ceox:heeftTypeNaam
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property heeftTypenaam legt de relatie tussen het type en de naam van het type met betrekking tot een cultuurhistorisch object vast."@nl ;
+  rdfs:domain ceox:Type ;
+  rdfs:label "Heeft type naam"@nl ;
+  rdfs:range skos:Concept ;
+.
+ceox:actor
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property actor wordt gebruikt om aan te geven de actor van een Cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:ActorEnRol ;
+  rdfs:label "Actor"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:bevolkingsaantal
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-05"^^xsd:date ;
+  rdfs:comment "De property bevolkingsaantal legt de relatie tussen de bevolking en bevolkingsaantal vast"@nl ;
+  rdfs:domain ceox:Bevolking ;
+  rdfs:label "Bevolkingsaantal"@nl ;
+  rdfs:range xsd:integer ;
+.
+ceox:databaseID
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-04-18"^^xsd:date ;
+  rdfs:comment "De property databaseID wordt gebruikt om aan te geven de database ID van een Cultuurhistorisch object."@nl ;
+  rdfs:domain ceo:Kennisregistratie ;
+  rdfs:label "Database ID"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:functienaam
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property functienaam wordt gebruikt om aan te geven de functie van een cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Functie ;
+  rdfs:label "Functienaam"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:gemeentelijkMonumentnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property gemeentelijkMonumentnummer wordt gebruikt om aan te geven het unieke nummer waaronder het gemeentelijk monument bekend is in het monumentenregister."@nl ;
+  rdfs:label "Gemeentelijk monumentnummer"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:huidigeDenominatie
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property huidigeDenominatie wordt gebruikt om aan te geven de huidige kerkelijke denominatie van het cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Denominatie ;
+  rdfs:label "Huidige denominatie"@nl ;
+  rdfs:range xsd:boolean ;
+.
+ceox:huidigeNaam
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property huidigeNaam wordt gebruikt om aan te geven de huidige naam van het cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Naam ;
+  rdfs:label "Huidige naam"@nl ;
+  rdfs:range xsd:boolean ;
+.
+ceox:huisnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property huisnummer wordt gebruikt om aan te geven het huisnummer, huisletter en huisnummer toevoeging van een cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Adresgegevens ;
+  rdfs:label "Huisnummer"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:isDenominatieVan
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2022-11-22"^^xsd:date ;
+  rdfs:comment "De property isDenominatieVan legt de relatie tussen de denominatie en het rijksmonument vast."@nl ;
+  rdfs:domain ceox:Denominatie ;
+  rdfs:label "Is denominatie van"@nl ;
+  owl:inverseOf ceox:heeftDenominatie ;
+.
+ceox:jaar
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property jaar wordt gebruikt om aan te geven het jaar van een cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Datering ;
+  rdfs:label "Jaar"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:kerkhof
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property kerkhof wordt gebruikt om aan te geven of er een kerkhof aanwezig bij een gebedshuis."@nl ;
+  rdfs:label "Kerkhof"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:monumentstatus
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property monumentstatus wordt gebruikt om aan te geven de status van een monument."@nl ;
+  rdfs:label "Monumentstatus"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:naam
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property naam wordt gebruikt om aan te geven de naam van het cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Naam ;
+  rdfs:label "Naam"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:oorspronkelijkeDenominatie
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property oorspronkelijkeDenominatie wordt gebruikt om aan te geven de oorspronkelijke denominatie van het cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:isDenominatieVan ;
+  rdfs:label "Oorspronkelijke denominatie"@nl ;
+  rdfs:range xsd:boolean ;
+.
+ceox:oorspronkelijkeNaam
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property oorspronkelijkeNaam wordt gebruikt om aan te geven de oorspronkelijke naam van het cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Naam ;
+  rdfs:label "Oorspronkelijke naam"@nl ;
+  rdfs:range xsd:boolean ;
+.
+ceox:openbareRuimte
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property openbareRuimte wordt gebruikt om aan te geven de openbare ruimte van een cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Adresgegevens ;
+  rdfs:label "Openbare ruimte"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:opmerkingen
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property opmerkingen wordt gebruikt om aan te geven opmerkingen over een cultuurhistorisch object."@nl ;
+  rdfs:label "Opmerkingen"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:periode
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property periode wordt gebruikt om aan te geven de periode van een cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Datering ;
+  rdfs:label "Periode"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:postcode
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property postcode wordt gebruikt om aan te geven de postcode van een cultuurhistorisch object. ."@nl ;
+  rdfs:domain ceox:Adresgegevens ;
+  rdfs:label "Postcode"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:provinciaalMonumentnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property provinciaalMonumentnummer wordt gebruikt om aan te geven het unieke nummer waaronder het provinciaal monument bekend is in het monumentenregister."@nl ;
+  rdfs:label "Provinciaal monumentnummer"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:registratiejaar
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-05"^^xsd:date ;
+  rdfs:comment "De property registratiejaar wordt gebruikt om aan te geven het registratiejaar van het bevolkingsaantal."@nl ;
+  rdfs:domain ceox:Bevolking ;
+  rdfs:label "Registratiejaar"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:registratiedatum
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-04-18"^^xsd:date ;
+  rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven de registratiedatum van de kennisregistratie."@nl ;
+  rdfs:domain ceo:Kennisregistratie ;
+  rdfs:label "Registratiedatum"@nl ;
+  rdfs:range xsd:date ;
+.
+ceox:rijksmonumentnummer
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property rijksmonumentnummer wordt gebruikt om aan te geven het unieke nummer waaronder het rijksmonument bekend is in het monumentenregister."@nl ;
+  rdfs:label "Rijksmonumentnummer"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:voorganger
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property voorganger wordt gebruikt om aan te geven of er een voorganger aanwezig bij een gebedshuis."@nl ;
+  rdfs:label "Voorganger"@nl ;
+  rdfs:range xsd:boolean ;
+.
+ceox:woonplaatsnaam
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  dcterms:modified "2020-04-20"^^xsd:date ;
+  rdfs:comment "De property woonplaatsnaam wordt gebruikt om aan te geven de woonplaats van een cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Adresgegevens ;
+  rdfs:label "Woonplaatsnaam"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:xcoordinaat
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property xcoordinaat wordt gebruikt om aan te geven de x-coordinaat van het cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Geometrie ;
+  rdfs:label "xcoordinaat"@nl ;
+  rdfs:range xsd:string ;
+.
+ceox:ycoordinaat
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2022-12-12"^^xsd:date ;
+  rdfs:comment "De property ycoordinaat wordt gebruikt om aan te geven de y-coordinaat van het cultuurhistorisch object."@nl ;
+  rdfs:domain ceox:Geometrie ;
+  rdfs:label "ycoordinaat"@nl ;
+  rdfs:range xsd:string ;
+.
