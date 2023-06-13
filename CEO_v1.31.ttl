@@ -129,7 +129,9 @@ ceo:BAGRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-10-23"^^xsd:date ;
   rdfs:comment "De class BAGRelatie is de representatie van vastgelegde Basisregistratie Adressen en Gebouwen (BAG) met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class BAGRelation is the representation of recorded Basisregistratie Adressen en Gebouwen (BAG) pertaining to a cultural heritage object."@en ; 
   rdfs:label "BAG relatie"@nl ;
+  rdfs:label "BAG relation"@en ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:BAGRelatienummer
@@ -137,15 +139,19 @@ ceo:BAGRelatienummer
   dcterms:created "2018-10-23"^^xsd:date ;
   dcterms:modified "2018-11-06"^^xsd:date ;
   rdfs:comment "De property BAGRelatienummer wordt gebruikt om aan te geven het unieke nummer waaronder de BAG relatie instance bekend is."@nl ;
+  rdfs:comment "The property BAGRelationNumber is used to indicate the unique number under which the BAG relation instance is known."@en ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "BAG relatienummer"@nl ;
+  rdfs:label "BAG relatienumber"@en ;
   rdfs:range xsd:string ;
 .
 ceo:BRKRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-10-23"^^xsd:date ;
   rdfs:comment "De class BRKRelatie is de representatie van vastgelegde Basisregistratie Kadaster (BRK) met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class BRKRelation is the representation of recorded Basisregistratie Kadaster (BRK) pertaining to a cultural heritage object."@en ;
   rdfs:label "BRK relatie"@nl ;
+  rdfs:label "BRK relation"@en ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:BRKRelatienummer
@@ -153,15 +159,19 @@ ceo:BRKRelatienummer
   dcterms:created "2018-10-23"^^xsd:date ;
   dcterms:modified "2018-11-06"^^xsd:date ;
   rdfs:comment "De property BRKRelatienummer wordt gebruikt om aan te geven het unieke nummer waaronder de BRK relatie instance bekend is."@nl ;
+  rdfs:comment "The property BRKRelationNumber is used to indicate the unique number under which the BRK relation instance is known."@en ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "BRK relatienummer"@nl ;
+  rdfs:label "BRK relatienumber"@en ;
   rdfs:range xsd:string ;
 .
 ceo:BasisregistratieRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-02-06"^^xsd:date ;
   rdfs:comment "De class BasisregistratieRelatie is de representatie van de administratieve vastlegging van de relatie tussen een cultuurhistorisch object en een instantie in een basisregistratie."@nl ;
+  rdfs:comment "The class RegistrationRelation is the representation of the administrative recording of the relationship between a cultural heritage object and an entity in a basic registration."@en ;
   rdfs:label "Basisregistratie relatie"@nl ;
+  rdfs:label "Base Registratie relation"@en ;
   rdfs:subClassOf owl:Thing ;
   skos:editorialNote "De Class komt overeen met de Basisobjectrelatie in de CHOI."@nl ;
 .
