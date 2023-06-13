@@ -120,6 +120,8 @@ ceo:ArcheologischTerrein
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class ArcheologischTerrein is de representatie van een ruimtelijk begrensd gebied waarbinnen zich archeologische informatie bevind."@nl ;
+  rdfs:comment "The class ArcheologicalSite is the representation of a spatially defined area in which archaeological information is located."@en ;
+  rdfs:label "Archaeological site"@en ;
   rdfs:label "Archeologisch terrein"@nl ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
