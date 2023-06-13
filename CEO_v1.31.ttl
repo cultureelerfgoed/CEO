@@ -728,11 +728,15 @@ ceo:heeftGemeente
   dcterms:created "2018-02-02"^^xsd:date ;
   dcterms:modified "2022-04-28" ;
   rdfs:comment "De property heeftGemeente is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "The property heeftGemeente is a registry entry within the class Rijksmonument."@en ;
   rdfs:comment "De property heeftGemeente legt de relatie tussen de basisregistratie relatie van een cultuurhistorisch object en de gemeente waarin het cultuurhistorisch object zich bevindt."@nl ;
+  rdfs:comment "The property heeftGemeente establishes the relationship between the base registration relationship of a cultural heritage object and the municipality in which the cultural heritage object is located."@en ;  
   rdfs:domain ceo:BasisregistratieRelatie ;
   rdfs:label "Heeft gemeente"@nl ;
+  rdfs:label "Has municipality"@en ;
   rdfs:range <http://standaarden.overheid.nl/owms/terms/Gemeente> ;
   skos:editorialNote "Indien een cultuurhistorisch object rijksmonument is, dan heeft de property heeftGemeente, maar één waarde (functional property; cardinaliteit 1)."@nl ;
+  skos:editorialNote "If a cultural-historical object is a national monument, then the property heeftGemeente, only one value (functional property; cardinality 1)."@en ;
   ceo:registergegeven "true"^^xsd:boolean ;
 .
 ceo:heeftGeometrie
@@ -1311,11 +1315,15 @@ ceo:perceelnummer
   dcterms:created "2018-02-20"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
   rdfs:comment "De property perceelnummer wordt gebruikt om aan te geven of het nummer dat aan een geheel perceel of een complex, uniek identificeert wordt binnen de sectie."@nl ;
+  rdfs:comment "The property plot number is used to indicate whether the number attached to an entire plot or a complex, uniquely identifies it within the section."@en ;
   rdfs:comment "De property perceelnummer is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "The property plot number is a registry entry within the class Rijksmonument."@en ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Perceelnummer"@nl ;
+  rdfs:label "Plot number"@en ;
   rdfs:range xsd:string ;
   skos:editorialNote "Binnen de RCE data wordt het perceel nummer gegeven als kadastraal object nummer."@nl ;
+  skos:editorialNote "Within the RCE data, the plot number is given as the cadastral object number."@en ; 
   ceo:registergegeven "true"^^xsd:boolean ;
 .
 ceo:plaatscode
@@ -1424,7 +1432,10 @@ lxr:cbsGemeentecode
   dcterms:created "2019-05-15"^^xsd:date ;
   rdfs:comment "De property cbsGemeentecode wordt gebruikt om aan te geven de CBS code bij de OWMS gemeente uri."@nl ;
   rdfs:label "CBS gemeentecode @nl" ;
-  skos:editorialNote "De officiele bron van de Gemeentecode is de Gemeentelijke Basisadministratie. (GBA)" ;
+  rdfs:comment "The property cbsGemeentecode is used to indicate the CBS code at the OWMS municipality uri."@en ;
+  rdfs:label "CBS municipality code @en" ;
+  skos:editorialNote "De officiele bron van de Gemeentecode is de Gemeentelijke Basisadministratie. (GBA)"@nl ;
+  skos:editorialNote "The official source of the Gemeentecode is the Gemeentelijke basisadministratie. (GBA)"@en ;
 .
 lxr:cbsProvinciecode
   rdf:type owl:DatatypeProperty ;
