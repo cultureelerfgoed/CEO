@@ -97,7 +97,7 @@ ceo:ActorEnRol
   dcterms:description "This class represents the association between an actor and a role in the context of an event."@en ;
   rdfs:label "Actor en rol"@nl ;
   rdfs:label "Actor and role"@en ;
-  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/actorenrol/55555"
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/actorenrol/55555" ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:ArcheologischComplex
