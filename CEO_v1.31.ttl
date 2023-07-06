@@ -87,6 +87,11 @@ gsp:wktLiteral
   rdfs:label "Cultural Heritage Ontology"@en ;
   foaf:mbox "thesauri@cultureelerfgoed.nl" ;
 .
+<https://linkeddata.cultureelerfgoed.nl/def/ceo#CreativeCommonsLicense4.0>
+  rdf:type dcterms:Agent ;
+  dcterms:created "2018-04-23"^^xsd:date ;
+  rdfs:label "Creative Common License 4.0"@nl ;
+.
 ceo:ActorEnRol
   rdf:type owl:Class ;
   dcterms:created "2018-05-02"^^xsd:date ;
@@ -212,7 +217,12 @@ ceo:BouwkundigeKwaliteit
   rdf:type owl:Class ;
   dcterms:created "2018-05-02"^^xsd:date ;
   rdfs:comment "De class BouwkundigeKwaliteit is een subclass van Kennisregistratie en is de representatie van de bouwkundige kwaliteit met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class BouwkundigeKwaliteit is a subclass of Kennisregistratie and represents the architectural quality associated with a cultural heritage object."@en ;
   rdfs:label "Bouwkundige kwaliteit"@nl ;
+  rdfs:label "Architectural quality"@en ;
+  dcterms:definition "De class BouwkundigeKwaliteit is een subclass van Kennisregistratie en vertegenwoordigt de bouwkundige kwaliteit met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:definition "The class BouwkundigeKwaliteit is a subclass of Kennisregistratie and represents the architectural quality associated with a cultural heritage object."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/bouwkundigekwaliteit/46374" ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
 ceo:Bronverwijzing
@@ -220,20 +230,26 @@ ceo:Bronverwijzing
   dcterms:created "2018-05-02"^^xsd:date ;
   dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De class Bronverwijzing is een subclass van Kennisregistratie en is de representatie van de bronverwijzing met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Bronverwijzing is a subclass of Kennisregistratie and represents the reference to a source associated with a cultural heritage object."@en ;
   rdfs:label "Bronverwijzing"@nl ;
+  rdfs:label "Reference to Source"@en ;
+  skos:editorialNote "Leeg."@nl ;
+  skos:editorialNote "Empty."@en ;
+  dcterms:description "De class Bronverwijzing is een subclass van Kennisregistratie en vertegenwoordigt de bronverwijzing met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:description "The class Bronverwijzing is a subclass of Kennisregistratie and represents the reference to a source associated with a cultural heritage object."@en ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:Complex
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class Complex is de representatie van beschrijvende of waarderende samenhang tussen rijksmonumenten, die als een complex zijn aangewezen. Deze samenhang is niet noodzakelijk voor de identificatie van die rijksmonumenten."@nl ;
+  rdfs:comment "The class Complex represents the descriptive or evaluative coherence between listed monuments that are designated as a complex. This coherence is not necessary for the identification of those listed monuments."@en ;
   rdfs:label "Complex"@nl ;
+  rdfs:label "Complex"@en ;
+  dcterms:description "De class Complex is de representatie van beschrijvende of waarderende samenhang tussen rijksmonumenten, die als een complex zijn aangewezen. Deze samenhang is niet noodzakelijk voor de identificatie van die rijksmonumenten."@nl ;
+  dcterms:description "The class Complex represents the descriptive or evaluative coherence between listed monuments that are designated as a complex. This coherence is not necessary for the identification of those listed monuments."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/complex/62476" ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
-.
-<https://linkeddata.cultureelerfgoed.nl/def/ceo#CreativeCommonsLicense4.0>
-  rdf:type dcterms:Agent ;
-  dcterms:created "2018-04-23"^^xsd:date ;
-  rdfs:label "Creative Common License 4.0"@nl ;
 .
 ceo:CultuurhistorischObject
   rdf:type owl:Class ;
