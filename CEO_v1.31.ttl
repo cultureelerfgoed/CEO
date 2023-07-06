@@ -167,6 +167,9 @@ ceo:BRKRelatie
   rdfs:comment "The class BRKRelation is the representation of recorded Basisregistratie Kadaster (BRK) pertaining to a cultural heritage object."@en ;
   rdfs:label "BRK relatie"@nl ;
   rdfs:label "BRK relation"@en ;
+  dcterms:description "This class represents recorded Basisregistratie Kadaster (BRK) pertaining to a cultural heritage object."@en ;
+  dcterms:description "Deze class representeert vastgelegde Basisregistratie Kadaster (BRK) met betrekking tot een cultuurhistorisch object."@nl ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/brkrelatie/10022247" ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:BRKRelatienummer
@@ -184,18 +187,26 @@ ceo:BasisregistratieRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-02-06"^^xsd:date ;
   rdfs:comment "De class BasisregistratieRelatie is de representatie van de administratieve vastlegging van de relatie tussen een cultuurhistorisch object en een instantie in een basisregistratie."@nl ;
-  rdfs:comment "The class RegistrationRelation is the representation of the administrative recording of the relationship between a cultural heritage object and an entity in a basic registration."@en ;
+  rdfs:comment "The class BaseRegistrationRelation is the representation of the administrative recording of the relationship between a cultural heritage object and an entity in a basic registration."@en ;
   rdfs:label "Basisregistratie relatie"@nl ;
   rdfs:label "Base Registratie relation"@en ;
-  rdfs:subClassOf owl:Thing ;
+  dcterms:description "This class represents the administrative recording of the relationship between a cultural heritage object and an entity in a basic registration."@en ;
+  dcterms:description "Deze class representeert de administratieve vastlegging van de relatie tussen een cultuurhistorisch object en een instantie in een basisregistratie."@nl ;
   skos:editorialNote "De Class komt overeen met de Basisobjectrelatie in de CHOI."@nl ;
   skos:editorialNote "The Class corresponds to the Basic object relationship in the CHOI."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/basisregistratierelatie/10000002" ;
+  rdfs:subClassOf owl:Thing ;
 .
 ceo:BeginDatering
   rdf:type owl:Class ;
   dcterms:created "2022-04-28"^^xsd:date ;
-  rdfs:comment "De class BeginDatering is de representatie van de begin datering van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben. "@nl ;
+  rdfs:comment "De class BeginDatering is de representatie van de begin datering van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
+  rdfs:comment "The class StartDate represents the start date of the time indication that a Cultural Heritage Object can have."@en ;
   rdfs:label "Begindatering"@nl ;
+  rdfs:label "Start date"@en ;
+  dcterms:description "This class represents the start date of the time indication that a Cultural Heritage Object can have."@en ;
+  dcterms:description "Deze class representeert de begindatum van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/begindatering/10115619" ;
 .
 ceo:BouwkundigeKwaliteit
   rdf:type owl:Class ;
