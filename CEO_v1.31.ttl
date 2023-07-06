@@ -85,8 +85,7 @@ gsp:wktLiteral
   rdfs:comment "The CEO is the complete semantic representation of the logical data models CHO and KENNIS from the data layer of the RCE."@en ;
   rdfs:label "Cultureel Erfgoed Ontologie"@nl ;
   rdfs:label "Cultural Heritage Ontology"@en ;
-  foaf:mbox "thesauri@cultureelerfgoed.nl" .
-
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
 .
 ceo:ActorEnRol
   rdf:type owl:Class ;
@@ -99,8 +98,7 @@ ceo:ActorEnRol
   rdfs:label "Actor en rol"@nl ;
   rdfs:label "Actor and role"@en ;
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/actorenrol/55555" ;
-  rdfs:subClassOf owl:Thing .
-
+  rdfs:subClassOf owl:Thing ;
 .
 ceo:ArcheologischComplex
   rdf:type owl:Class ;
@@ -113,8 +111,7 @@ ceo:ArcheologischComplex
   dcterms:description "This class represents an archaeological complex related to cultural heritage."@en ;
   dcterms:description "Deze class representeert een archeologisch complex met betrekking tot cultureel erfgoed."@nl ;
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/archeologischcomplex/2169591" ;
-  rdfs:subClassOf owl:Thing .
-
+  rdfs:subClassOf owl:Thing ;
 .
 ceo:ArcheologischOnderzoeksgebied
   rdf:type owl:Class ;
@@ -126,8 +123,7 @@ ceo:ArcheologischOnderzoeksgebied
   dcterms:description "This class represents a spatially bounded area in which archaeological research is carried out by the permit holder to conduct research."@en ;
   dcterms:description "Deze class representeert een ruimtelijk begrensd gebied, waarin archeologisch onderzoek wordt uitgevoerd door de vergunninghouder tot het doen van onderzoek."@nl ;
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/archeologischonderzoeksgebied/10000005" ;
-  rdfs:subClassOf ceo:CultuurhistorischObject .
-
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:ArcheologischTerrein
   rdf:type owl:Class ;
@@ -139,8 +135,7 @@ ceo:ArcheologischTerrein
   dcterms:description "This class represents a spatially defined area in which archaeological information is located."@en ;
   dcterms:description "Deze class representeert een ruimtelijk begrensd gebied waarbinnen zich archeologische informatie bevindt."@nl ;
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/archeologischterrein/6042545" ;
-  rdfs:subClassOf ceo:CultuurhistorischObject .
-
+  rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:BAGRelatie
   rdf:type owl:Class ;
@@ -152,8 +147,7 @@ ceo:BAGRelatie
   dcterms:description "This class represents recorded Basisregistratie Adressen en Gebouwen (BAG) pertaining to a cultural heritage object."@en ;
   dcterms:description "Deze class representeert vastgelegde Basisregistratie Adressen en Gebouwen (BAG) met betrekking tot een cultuurhistorisch object."@nl ;
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/bagrelatie/123425" ;
-  rdfs:subClassOf owl:Thing .
-
+  rdfs:subClassOf owl:Thing ;
 .
 ceo:BAGRelatienummer
   rdf:type owl:DatatypeProperty ;
@@ -239,8 +233,7 @@ ceo:CultuurhistorischObject
   rdfs:label "Culturalhistorical object"@en ;
   dcterms:description "This class represents a phenomenon in reality with a certain cultural-historical value."@en ;
   dcterms:description "Deze class representeert een fenomeen in de werkelijkheid met een zekere cultuurhistorische waarde."@nl ;
-  rdfs:subClassOf owl:Thing .
-
+  rdfs:subClassOf owl:Thing ;
 .
 ceo:Datering
   rdf:type owl:Class ;
