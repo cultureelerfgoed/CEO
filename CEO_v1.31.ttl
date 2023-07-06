@@ -85,7 +85,8 @@ gsp:wktLiteral
   rdfs:comment "The CEO is the complete semantic representation of the logical data models CHO and KENNIS from the data layer of the RCE."@en ;
   rdfs:label "Cultureel Erfgoed Ontologie"@nl ;
   rdfs:label "Cultural Heritage Ontology"@en ;
-  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
+  foaf:mbox "thesauri@cultureelerfgoed.nl" .
+
 .
 ceo:ActorEnRol
   rdf:type owl:Class ;
@@ -99,6 +100,7 @@ ceo:ActorEnRol
   rdfs:label "Actor and role"@en ;
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/actorenrol/55555" ;
   rdfs:subClassOf owl:Thing .
+
 .
 ceo:ArcheologischComplex
   rdf:type owl:Class ;
