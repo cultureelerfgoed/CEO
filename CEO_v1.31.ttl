@@ -98,7 +98,7 @@ ceo:ActorEnRol
   rdfs:label "Actor en rol"@nl ;
   rdfs:label "Actor and role"@en ;
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/actorenrol/55555" ;
-  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf owl:Thing .
 .
 ceo:ArcheologischComplex
   rdf:type owl:Class ;
