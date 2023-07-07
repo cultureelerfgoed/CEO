@@ -134,7 +134,7 @@ ceo:ArcheologischTerrein
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class ArcheologischTerrein is de representatie van een ruimtelijk begrensd gebied waarbinnen zich archeologische informatie bevindt."@nl ;
-  rdfs:comment "The class ArcheologicalSite is the representation of a spatially defined area in which archaeological information is located."@en ;
+  rdfs:comment "The class ArcheologischTerrein is the representation of a spatially defined area in which archaeological information is located."@en ;
   rdfs:label "Archaeological site"@en ;
   rdfs:label "Archeologisch terrein"@nl ;
   dcterms:description "This class represents a spatially defined area in which archaeological information is located."@en ;
@@ -146,7 +146,7 @@ ceo:BAGRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-10-23"^^xsd:date ;
   rdfs:comment "De class BAGRelatie is de representatie van vastgelegde Basisregistratie Adressen en Gebouwen (BAG) met betrekking tot een cultuurhistorisch object."@nl ;
-  rdfs:comment "The class BAGRelation is the representation of recorded Basisregistratie Adressen en Gebouwen (BAG) pertaining to a cultural heritage object."@en ;
+  rdfs:comment "The class BAGRelatie is the representation of recorded Basisregistratie Adressen en Gebouwen (BAG) pertaining to a cultural heritage object."@en ;
   rdfs:label "BAG relatie"@nl ;
   rdfs:label "BAG relation"@en ;
   dcterms:description "This class represents recorded Basisregistratie Adressen en Gebouwen (BAG) pertaining to a cultural heritage object."@en ;
@@ -169,7 +169,7 @@ ceo:BRKRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-10-23"^^xsd:date ;
   rdfs:comment "De class BRKRelatie is de representatie van vastgelegde Basisregistratie Kadaster (BRK) met betrekking tot een cultuurhistorisch object."@nl ;
-  rdfs:comment "The class BRKRelation is the representation of recorded Basisregistratie Kadaster (BRK) pertaining to a cultural heritage object."@en ;
+  rdfs:comment "The class BRKRelatie is the representation of recorded Basisregistratie Kadaster (BRK) pertaining to a cultural heritage object."@en ;
   rdfs:label "BRK relatie"@nl ;
   rdfs:label "BRK relation"@en ;
   dcterms:description "This class represents recorded Basisregistratie Kadaster (BRK) pertaining to a cultural heritage object."@en ;
@@ -192,7 +192,7 @@ ceo:BasisregistratieRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-02-06"^^xsd:date ;
   rdfs:comment "De class BasisregistratieRelatie is de representatie van de administratieve vastlegging van de relatie tussen een cultuurhistorisch object en een instantie in een basisregistratie."@nl ;
-  rdfs:comment "The class BaseRegistrationRelation is the representation of the administrative recording of the relationship between a cultural heritage object and an entity in a basic registration."@en ;
+  rdfs:comment "The class BasisregistratieRelatie is the representation of the administrative recording of the relationship between a cultural heritage object and an entity in a basic registration."@en ;
   rdfs:label "Basisregistratie relatie"@nl ;
   rdfs:label "Base Registratie relation"@en ;
   dcterms:description "This class represents the administrative recording of the relationship between a cultural heritage object and an entity in a basic registration."@en ;
@@ -206,7 +206,7 @@ ceo:BeginDatering
   rdf:type owl:Class ;
   dcterms:created "2022-04-28"^^xsd:date ;
   rdfs:comment "De class BeginDatering is de representatie van de begin datering van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
-  rdfs:comment "The class StartDate represents the start date of the time indication that a Cultural Heritage Object can have."@en ;
+  rdfs:comment "The class BeginDatering represents the start date of the time indication that a Cultural Heritage Object can have."@en ;
   rdfs:label "Begindatering"@nl ;
   rdfs:label "Start date"@en ;
   dcterms:description "This class represents the start date of the time indication that a Cultural Heritage Object can have."@en ;
@@ -267,62 +267,106 @@ ceo:Datering
   dcterms:created "2018-03-13"^^xsd:date ;
   dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De class Datering is een representatie van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
+  rdfs:comment "The class Datering represents the time indication that a Cultural Heritage Object can have."@en ;
   rdfs:label "Datering"@nl ;
+  rdfs:label "Dating"@en ;
+  dcterms:description "The class Datering represents the time indication associated with a Cultural Heritage Object."@en ;
+  dcterms:description "De class Datering is een representatie van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/datering/10696525" ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:EindDatering
   rdf:type owl:Class ;
   dcterms:created "2022-04-28"^^xsd:date ;
-  rdfs:comment "De class EindDatering is de representatie van de eind datering van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben. "@nl ;
+  rdfs:comment "De class EindDatering is de representatie van de eind datering van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
+  rdfs:comment "The class EindDatering represents the end date of the time indication that a Cultural Heritage Object can have."@en ;
   rdfs:label "Einddatering"@nl ;
+  rdfs:label "End date"@en ;
+  dcterms:description "The class EindDatering represents the end date of the time indication associated with a Cultural Heritage Object."@en ;
+  dcterms:description "De class EindDatering is de representatie van de eind datering van de tijdsaanduiding die een Cultuurhistorisch Object kan hebben."@nl ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/einddatering/10696521" ;
 .
 ceo:Functie
   rdf:type owl:Class ;
   dcterms:created "2018-02-19"^^xsd:date ;
-  rdfs:comment "De class Functies is een subclass van kennisregistratie en is de representatie van de functie met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "De class Functie is een subclass van kennisregistratie en is de representatie van de functie met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Functie is a subclass of kennisregistratie and represents the function associated with a cultural heritage object."@en ;
   rdfs:label "Functie"@nl ;
+  rdfs:label "Function"@en ;
+  dcterms:description "The class Functie is a subclass of kennisregistratie and represents the function associated with a cultural heritage object."@en ;
+  dcterms:description "De class Functie is een subclass van kennisregistratie en representeert de functie met betrekking tot een cultuurhistorisch object."@nl ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/functie/100000" ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
 ceo:Gebeurtenis
   rdf:type owl:Class ;
   dcterms:created "2018-04-10"^^xsd:date ;
   rdfs:comment "De class Gebeurtenis is een subclass van kennisregistratie en is de representatie van vastgelegde gebeurtenissen met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Gebeurtenis is a subclass of kennisregistratie and represents recorded events associated with a cultural heritage object."@en ;
   rdfs:label "Gebeurtenis"@nl ;
+  rdfs:label "Event"@en ;
+  dcterms:description "The class Gebeurtenis is a subclass of kennisregistratie and represents recorded events associated with a cultural heritage object."@en ;
+  dcterms:description "De class Gebeurtenis is een subclass van kennisregistratie en representeert vastgelegde gebeurtenissen met betrekking tot een cultuurhistorisch object."@nl ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/gebeurtenis/2128347" ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
 ceo:Geometrie
   rdf:type owl:Class ;
   dcterms:created "2018-02-19"^^xsd:date ;
   rdfs:comment "De class Geometrie is de representatie van de geometrie van een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Geometrie represents the geometry of a cultural heritage object."@en ;
   rdfs:label "Geometrie"@nl ;
+  rdfs:label "Geometry"@en ;
+  dcterms:description "De class Geometrie is de representatie van de geometrie van een cultuurhistorisch object."@nl ;
+  dcterms:description "The class Geometrie represents the geometry of a cultural heritage object."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/geometrie/10000029" ;
   rdfs:subClassOf gsp:Geometry ;
 .
 ceo:Gezicht
   rdf:type owl:Class ;
   dcterms:created "2019-11-05"^^xsd:date ;
-  rdfs:comment "De class Gezicht is een representatie van een aangewezen, beschermd stads- en dorpsgezicht. "@nl ;
+  rdfs:comment "De class Gezicht is een representatie van een aangewezen, beschermd stads- en dorpsgezicht."@nl ;
+  rdfs:comment "The class Gezicht represents a designated, protected urban or village landscape."@en ;
   rdfs:label "Gezicht"@nl ;
+  rdfs:label "Landscape"@en ;
+  dcterms:description "De class Gezicht is een representatie van een aangewezen, beschermd stads- en dorpsgezicht."@nl ;
+  dcterms:description "The class Gezicht represents a designated, protected urban or village landscape."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/gezicht/10134173" ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:Grondsporen
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class Grondsporen is een representatie van een duidelijk begrensbaar verschijnsel van antropogene of natuurlijke oorsprong."@nl ;
+  rdfs:comment "The class Grondsporen represents a clearly delineated phenomenon of anthropogenic or natural origin."@en ;
   rdfs:label "Grondsporen"@nl ;
+  rdfs:label "Ground Traces"@en ;
+  dcterms:description "De class Grondsporen is een representatie van een duidelijk begrensbaar verschijnsel van antropogene of natuurlijke oorsprong."@nl ;
+  dcterms:description "The class Grondsporen represents a clearly delineated phenomenon of anthropogenic or natural origin."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/grondsporen/2305911" ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:Kennisregistratie
   rdf:type owl:Class ;
   dcterms:created "2018-02-02"^^xsd:date ;
   rdfs:comment "De class Kennisregistratie is de representatie van vastgelegde kennis feiten met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Kennisregistratie represents recorded knowledge facts associated with a cultural heritage object."@en ;
   rdfs:label "Kennisregistratie"@nl ;
+  rdfs:label "Knowledge Registration"@en ;
+  dcterms:description "De class Kennisregistratie is de representatie van vastgelegde kennis feiten met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:description "The class Kennisregistratie represents recorded knowledge facts associated with a cultural heritage object."@en ;
 .
 ceo:LocatieAanduiding
   rdf:type owl:Class ;
   dcterms:created "2018-03-21"^^xsd:date ;
   dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De class LocatieAanduiding is de representatie van de locatie aanduiding met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class LocatieAanduiding represents the location indication associated with a cultural heritage object."@en ;
   rdfs:label "Locatie aanduiding"@nl ;
+  rdfs:label "Location Indication"@en ;
+  dcterms:description "De class LocatieAanduiding is de representatie van de locatie aanduiding met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:description "The class LocatieAanduiding represents the location indication associated with a cultural heritage object."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/locatieaanduiding/13586" ;
   rdfs:subClassOf owl:Thing ;
 .
 ceo:Materiaal
@@ -330,21 +374,36 @@ ceo:Materiaal
   dcterms:created "2018-05-02"^^xsd:date ;
   dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De class Materiaal is een subclass van kennisregistratie en is de representatie van vastgelegde materialen met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Materiaal is a subclass of kennisregistratie and represents recorded materials associated with a cultural heritage object."@en ;
   rdfs:label "Materiaal"@nl ;
+  rdfs:label "Material"@en ;
+  dcterms:description "De class Materiaal is een subclass van kennisregistratie en is de representatie van vastgelegde materialen met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:description "The class Materiaal is a subclass of kennisregistratie and represents recorded materials associated with a cultural heritage object."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/materiaal/4519892" ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
 ceo:Naam
   rdf:type owl:Class ;
   dcterms:created "2018-02-06"^^xsd:date ;
   rdfs:comment "De class Naam is een subclass van kennisregistratie en is de representatie van vastgelegde namen met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Naam is a subclass of kennisregistratie and represents recorded names associated with a cultural heritage object."@en ;
   rdfs:label "Naam"@nl ;
+  rdfs:label "Name"@en ;
+  dcterms:description "De class Naam is een subclass van kennisregistratie en is de representatie van vastgelegde namen met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:description "The class Naam is a subclass of kennisregistratie and represents recorded names associated with a cultural heritage object."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/naam/10136393" ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
 ceo:Omschrijving
   rdf:type owl:Class ;
   dcterms:created "2018-01-23"^^xsd:date ;
   rdfs:comment "De class Omschrijving is een subclass van kennisregistratie en is de representatie van vastgelegde omschrijvingen met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Omschrijving is a subclass of kennisregistratie and represents recorded descriptions associated with a cultural heritage object."@en ;
   rdfs:label "Omschrijving"@nl ;
+  rdfs:label "Description"@en ;
+  dcterms:description "De class Omschrijving is een subclass van kennisregistratie en is de representatie van vastgelegde omschrijvingen met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:description "The class Omschrijving is a subclass of kennisregistratie and represents recorded descriptions associated with a cultural heritage object."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/omschrijving/10000024" ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
 ceo:Rijksdienst_voor_het_Cultureel_Erfgoed
@@ -356,7 +415,12 @@ ceo:Rijksmonument
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class Rijksmonument is een representatie van onroerende cultuurhistorische objecten die als rijksmonument zijn aangewezen."@nl ;
+  rdfs:comment "The class Rijksmonument represents immovable cultural heritage objects designated as national monuments."@en ;
   rdfs:label "Rijksmonument"@nl ;
+  rdfs:label "National Monument"@en ;
+  dcterms:description "De class Rijksmonument is een representatie van onroerende cultuurhistorische objecten die als rijksmonument zijn aangewezen."@nl ;
+  dcterms:description "The class Rijksmonument represents immovable cultural heritage objects designated as national monuments."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/rijksmonument/10073" ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:StijlEnCultuur
@@ -364,7 +428,12 @@ ceo:StijlEnCultuur
   dcterms:created "2018-05-02"^^xsd:date ;
   dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De class StijlEnCultuur is een subclass van kennisregistratie en is de representatie van de stijl en cultuur met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class StijlEnCultuur is a subclass of kennisregistratie and represents the style and culture associated with a cultural heritage object."@en ;
   rdfs:label "Stijl en cultuur"@nl ;
+  rdfs:label "Style and Culture"@en ;
+  dcterms:description "De class StijlEnCultuur is een subclass van kennisregistratie en is de representatie van de stijl en cultuur met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:description "The class StijlEnCultuur is a subclass of kennisregistratie and represents the style and culture associated with a cultural heritage object."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/stijlencultuur/4525617" ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
 ceo:Type
@@ -372,28 +441,48 @@ ceo:Type
   dcterms:created "2018-05-02"^^xsd:date ;
   dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De class Type is een subclass van kennisregistratie en is de representatie van vastgelegde typen met betrekking tot een cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Type is a subclass of kennisregistratie and represents recorded types associated with a cultural heritage object."@en ;
   rdfs:label "Type"@nl ;
+  rdfs:label "Type"@en ;
+  dcterms:description "De class Type is een subclass van kennisregistratie en is de representatie van vastgelegde typen met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:description "The class Type is a subclass of kennisregistratie and represents recorded types associated with a cultural heritage object."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/type/2014382" ;
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
 ceo:Vondsten
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class Vondsten is een representatie van alle soorten mobilia: roerende of roerend geraakte onderdelen van onroerende goederen, afkomstig van archeologisch veldwerk of archeologische collecties."@nl ;
+  rdfs:comment "The class Vondsten represents all kinds of mobilia: movable or movable-affected parts of immovable property, originating from archaeological fieldwork or archaeological collections."@en ;
   rdfs:label "Vondsten"@nl ;
+  rdfs:label "Finds"@en ;
+  dcterms:description "De class Vondsten is een representatie van alle soorten mobilia: roerende of roerend geraakte onderdelen van onroerende goederen, afkomstig van archeologisch veldwerk of archeologische collecties."@nl ;
+  dcterms:description "The class Vondsten represents all kinds of mobilia: movable or movable-affected parts of immovable property, originating from archaeological fieldwork or archaeological collections."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/vondsten/2183090" ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:Vondstlocatie
   rdf:type owl:Class ;
   dcterms:created "2018-09-03"^^xsd:date ;
   rdfs:comment "De class Vondstlocatie is een representatie van geografisch begrensde gebieden, waar binnen min of meer aaneensluitend archeologisch sporen en/of vondsten zijn aangetroffen, eventueel van verschillende ouderdom."@nl ;
+  rdfs:comment "The class Vondstlocatie represents geographically bounded areas where contiguous or nearly contiguous archaeological traces and/or finds have been encountered, potentially of different ages."@en ;
   rdfs:label "Vondstlocatie"@nl ;
+  rdfs:label "Find Location"@en ;
+  dcterms:description "De class Vondstlocatie is een representatie van geografisch begrensde gebieden, waar binnen min of meer aaneensluitend archeologisch sporen en/of vondsten zijn aangetroffen, eventueel van verschillende ouderdom."@nl ;
+  dcterms:description "The class Vondstlocatie represents geographically bounded areas where contiguous or nearly contiguous archaeological traces and/or finds have been encountered, potentially of different ages."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/vondstlocatie/6108120" ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:Werelderfgoed
   rdf:type owl:Class ;
   dcterms:created "2019-11-05"^^xsd:date ;
-  rdfs:comment "De class Werelderfgoed is een representatie van een door het Werelderfgoedcomité van UNESCO op de Werelderfgoedlijst geplaats cultuurhistorisch object. "@nl ;
+  rdfs:comment "De class Werelderfgoed is een representatie van een door het Werelderfgoedcomité van UNESCO op de Werelderfgoedlijst geplaatst cultuurhistorisch object."@nl ;
+  rdfs:comment "The class Werelderfgoed represents a cultural heritage object placed on the World Heritage List by the UNESCO World Heritage Committee."@en ;
   rdfs:label "Werelderfgoed"@nl ;
+  rdfs:label "World Heritage"@en ;
+  dcterms:description "De class Werelderfgoed is een representatie van een door het Werelderfgoedcomité van UNESCO op de Werelderfgoedlijst geplaatst cultuurhistorisch object."@nl ;
+  dcterms:description "The class Werelderfgoed represents a cultural heritage object placed on the World Heritage List by the UNESCO World Heritage Committee."@en ;
+  skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/werelderfgoed/10134674" ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
 ceo:aantalGrondsporen
