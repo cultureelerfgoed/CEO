@@ -1458,7 +1458,7 @@ ceo:omschrijving
   rdfs:label "Description"@en ;
   rdfs:range xsd:string ;
   ceo:registergegeven "true"^^xsd:boolean ;
-  skos:example "HUIS der Twaalf Apostelen, genaamd De Belick. Drie lage vleugels om een binnenplaats, XVIII, met segmentboogomlijstingen van Naamse steen zonder sluitstenen. In de moderne voorgevel zijn de houten beelden opgenomen van Christus en de apostelen, XVI A." .
+  skos:example "HUIS der Twaalf Apostelen, genaamd De Belick. Drie lage vleugels om een binnenplaats, XVIII, met segmentboogomlijstingen van Naamse steen zonder sluitstenen. In de moderne voorgevel zijn de houten beelden opgenomen van Christus en de apostelen, XVI A." ;
 .
 ceo:openbareRuimte
   rdf:type owl:DatatypeProperty ;
