@@ -718,7 +718,7 @@ ceo:heeftActor
   rdfs:label "Heeft actor"@nl ;
   rdfs:range skos:Concept ;
   rdfs:label "Has actor"@en ;
-  rdfs:comment "The property hasActor establishes the relationship between the actor and role, and the actor in relation to a cultural heritage object."@en ;
+  rdfs:comment "The property heeftActor establishes the relationship between the actor and role, and the actor in relation to a cultural heritage object."@en ;
   skos:example "2e Commendement Genie ; Overijssel" ;
   dcterms:description "Een eigenschap die de relatie vastlegt tussen een actor en een rol, en de actor in relatie tot een cultuurhistorisch object."@nl ;
   dcterms:description "A property that establishes the relationship between an actor and a role, and the actor in relation to a cultural heritage object."@en ;
@@ -829,7 +829,7 @@ ceo:heeftBetrekkingOp
   rdfs:range ceo:CultuurhistorischObject ;
   owl:inverseOf ceo:heeftKennisregistratie ;
   rdfs:label "Has relation to"@en ;
-  rdfs:comment "The property has relation to establishes the relationship between the knowledge registration and the cultural heritage object."@en ;
+  rdfs:comment "The property heeftBetrekkingOp establishes the relationship between the knowledge registration and the cultural heritage object."@en ;
   skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/archeologischcomplex/10000011> ;
   dcterms:description "De property heeftBetrekkingOp legt de relatie tussen de kennisregistratie en het cultuurhistorisch object vast. Het wordt gebruikt om aan te geven dat een specifieke kennisregistratie betrekking heeft op een bepaald cultuurhistorisch object."@nl ;
   dcterms:description "The has relation to property establishes the relationship between the knowledge registration and the cultural heritage object. It is used to indicate that a specific knowledge registration has relation to a particular cultural heritage object."@en ;
@@ -884,7 +884,7 @@ ceo:heeftDatering
   rdfs:label "Heeft datering"@nl ;
   rdfs:range ceo:Datering ;
   rdfs:label "Has dating"@en ;
-  rdfs:comment "The property hasDating establishes the relationship between an event and the dating of a cultural heritage object."@en ;
+  rdfs:comment "The property heeftDatering establishes the relationship between an event and the dating of a cultural heritage object."@en ;
   skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/datering/10000008> ;
   dcterms:description "De property heeftDatering legt de relatie tussen een gebeurtenis en de datering met betrekking tot een cultuurhistorisch object vast. Het wordt gebruikt om de datering van een cultuurhistorisch object te beschrijven in relatie tot een gebeurtenis."@nl ;
   dcterms:description "The hasDating property establishes the relationship between an event and the dating of a cultural heritage object. It is used to describe the dating of a cultural heritage object in relation to an event."@en ;
@@ -923,8 +923,8 @@ ceo:heeftFunctie
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft functie"@nl ;
   rdfs:range ceo:Functie ;
-  skos:editorialNote "Data voort deze objectProperty is niet in de data."@nl ;
-  skos:editorialNote "This property has no data."@en ;
+  skos:editorialNote "Property heeft geen data."@nl ;
+  skos:editorialNote "Property has no data."@en ;
   rdfs:label "Has function"@en ;
   rdfs:comment "The property heeftFunctie establishes the relationship between a cultural-historical object and its function."@en ;
   dcterms:description "De property heeftFunctie legt de relatie vast tussen een cultuurhistorisch object en de functie ervan. Dit kan helpen bij het begrijpen van de betekenis en het gebruik van het object."@nl ;
@@ -1053,7 +1053,7 @@ ceo:heeftHerkomst
   rdfs:label "Heeft herkomst"@nl ;
   rdfs:range skos:Concept ;
   rdfs:label "Has geometry origin"@en ;
-  rdfs:comment "The property hasOrigin establishes the relationship between the geometry and the origin."@en ;
+  rdfs:comment "The property heeftHerkomst establishes the relationship between the geometry and the origin."@en ;
   skos:example <https://data.cultureelerfgoed.nl/term/id/rn/138847e6-bdc8-4ec3-a7a2-17e8910bdfa6> ;
   dcterms:description "Deze eigenschap legt de relatie tussen de geometrie en de herkomst vast. Het geeft aan waar de geometrie vandaan komt."@nl ;
   dcterms:description "This property establishes the relationship between the geometry and the origin. It indicates where the geometry comes from."@en ;
@@ -1091,10 +1091,15 @@ ceo:heeftIndicatieNauwkeurigheid
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-10"^^xsd:date ;
   dcterms:modified "2018-07-28"^^xsd:date ;
-  rdfs:comment "De property heeftIndicatieNauwkeurigheid legt de relatie tussen de datering en de indicatie nauwkeurigheid vast. "@nl ;
+  rdfs:comment "De property heeftIndicatieNauwkeurigheid legt de relatie tussen de datering en de indicatie nauwkeurigheid vast."@nl ;
   rdfs:domain ceo:Datering ;
   rdfs:label "Heeft indicatie nauwkeurigheid"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has indication accuracy"@en ;
+  rdfs:comment "The property heeftIndicatieNauwkeurigheid establishes the relationship between the dating and the indication accuracy."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/91c94a79-f300-4c50-abba-1b246f2d6b99> ;
+  dcterms:description "Heeft indicatie nauwkeurigheid: Deze eigenschap legt de relatie tussen de datering en de indicatie nauwkeurigheid vast."@nl ;
+  dcterms:description "Has indication accuracy: This property establishes the relationship between the dating and the indication accuracy."@en ;
 .
 ceo:heeftJuridischeStatus
   rdf:type owl:ObjectProperty ;
@@ -1103,16 +1108,28 @@ ceo:heeftJuridischeStatus
   rdfs:comment "De property heeftJuridischeStatus legt de relatie het rijksmonument en de juridische status, geeft aan of het rijksmonument voorbeschermd of rijksmonument is."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft juridische status"@nl ;
+  rdfs:label "Has legal status"@en ;
+  rdfs:comment "The property heeftJuridischeStatus defines the relationship between the national monument and its legal status, indicating whether the national monument is pre-protected or listed."@en ;
   rdfs:range skos:Concept ;
+  dcterms:description "De property heeftJuridischeStatus legt de relatie tussen het rijksmonument en de juridische status. Het geeft aan of het rijksmonument voorbeschermd is of een officieel rijksmonument is."@nl ;
+  dcterms:description "The property heeftJuridischeStatus defines the relationship between the national monument and its legal status. It indicates whether the national monument is pre-protected or an officially listed national monument."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/b2d9a59a-fe1e-4552-9a05-3c2acddff864> ;
 .
 ceo:heeftKennisdomein
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-18"^^xsd:date ;
   dcterms:modified "2018-06-08"^^xsd:date ;
   rdfs:comment "De property heeftKennisdomein legt de relatie tussen de kennisregistratie en het kennisdomein vast."@nl ;
-  rdfs:domain ceo:Kennisregistratie ;
+  rdfs:comment "The property heeftKennisdomein establishes the relationship between knowledge registration and the knowledge domain."@en ;
   rdfs:label "Heeft kennisdomein"@nl ;
+  rdfs:label "Has knowledge domain"@en ;
+  rdfs:domain ceo:Kennisregistratie ;
   rdfs:range skos:Concept ;
+  skos:example "Voorbeeld van een kennisregistratie en het bijbehorende kennisdomein."@nl ;
+  skos:editorialNote "Property heeft geen data."@nl ;
+  skos:editorialNote "Property has no data."@nl ;
+  dcterms:description "De property heeftKennisdomein legt de relatie tussen de kennisregistratie en het kennisdomein vast. Het beschrijft welk kennisdomein aan een specifieke kennisregistratie is gekoppeld."@nl ;
+  dcterms:description "The property heeftKennisdomein establishes the relationship between knowledge registration and the knowledge domain. It describes which knowledge domain is associated with a specific knowledge registration."@en ;
 .
 ceo:heeftKennisregistratie
   rdf:type owl:ObjectProperty ;
@@ -1121,16 +1138,26 @@ ceo:heeftKennisregistratie
   rdfs:comment "De property heeftKennisregistratie legt de relatie tussen het cultuurhistorisch object en de Kennisregistratie vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft kennisregistratie"@nl ;
+  rdfs:label "Has knowledge registration"@en ;
   rdfs:range ceo:Kennisregistratie ;
   owl:inverseOf ceo:heeftBetrekkingOp ;
+  rdfs:comment "The property heeftKennisregistratie establishes the relationship between the cultural heritage object and the Knowledge Registration."@en ;
+  dcterms:description "De property heeftKennisregistratie legt de relatie tussen het cultuurhistorisch object en de Kennisregistratie vast. Het geeft aan dat het cultuurhistorisch object is geregistreerd in de Kennisregistratie."@nl ;
+  dcterms:description "The property heeftKennisregistratie establishes the relationship between the cultural heritage object and the Knowledge Registration. It indicates that the cultural heritage object is registered in the Knowledge Registration."@en ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/omschrijving/230733> ;
 .
 ceo:heeftLocatieAanduiding
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-03-21"^^xsd:date ;
   rdfs:comment "De property heeftLocatieAanduiding legt de relatie tussen het cultuurhistorisch object en de locatie aanduiding vast."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft locatie aanduiding"@nl ;
+  rdfs:label "Has location indication"@en ;
+  rdfs:comment "The property heeftLocatieAanduiding establishes the relationship between the cultural heritage object and the location indication."@en ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:range ceo:LocatieAanduiding ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/locatieaanduiding/2000445> ;
+  dcterms:description "De property heeftLocatieAanduiding legt de relatie tussen het cultuurhistorisch object en de locatie aanduiding vast. Het wordt gebruikt om de specifieke locatie of plaats van het object aan te geven."@nl ;
+  dcterms:description "The property heeftLocatieAanduiding establishes the relationship between the cultural heritage object and the location indication. It is used to specify the specific location or place of the object."@en ;
 .
 ceo:heeftLocatieAanduidingStatus
   rdf:type owl:ObjectProperty ;
@@ -1140,14 +1167,24 @@ ceo:heeftLocatieAanduidingStatus
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Heeft locatie aanduiding status"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has location indication status"@en ;
+  rdfs:comment "The property heeftLocatieAanduidingStatus establishes the relationship between the location indication and the status of the location indication with respect to a cultural heritage object."@en ;
+  dcterms:description "De property heeftLocatieAanduidingStatus legt de relatie tussen de locatie aanduiding en de status van de locatie Aanduiding met betrekking tot een cultuurhistorisch object vast."@nl ;
+  dcterms:description "The property heeftLocatieAanduidingStatus establishes the relationship between the location indication and the status of the location indication with respect to a cultural heritage object."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/c023fe7d-fc15-459f-8061-091ccbfbfd54> ;
 .
 ceo:heeftMateriaal
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-05-02"^^xsd:date ;
   rdfs:comment "De property heeftMateriaal legt de relatie tussen een cultuurhistorisch object en het materiaal vast."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft materiaal"@nl ;
+  rdfs:label "Has material"@en ;
+  rdfs:comment "The property heeftMateriaal establishes the relationship between a cultural heritage object and its material."@en ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:range ceo:Materiaal ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/materiaal/2684190> ;
+  dcterms:description "De property heeftMateriaal legt de relatie tussen een cultuurhistorisch object en het materiaal vast. Het wordt gebruikt om aan te geven van welk materiaal een object is gemaakt."@nl ;
+  dcterms:description "The property heeftMateriaal establishes the relationship between a cultural heritage object and its material. It is used to indicate the material from which an object is made."@en ;
 .
 ceo:heeftMateriaalNaam
   rdf:type owl:ObjectProperty ;
@@ -1157,6 +1194,11 @@ ceo:heeftMateriaalNaam
   rdfs:domain ceo:Materiaal ;
   rdfs:label "Heeft materiaalnaam"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has material name"@en ;
+  rdfs:comment "The property heeftMateriaalNaam establishes the relationship between the material and its name."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/048d9346-5f86-4a80-8030-cec5f22d6b0b> ;
+  dcterms:description "De property heeftMateriaalNaam legt de relatie tussen het materiaal en de naam van het materiaal vast. Het wordt gebruikt om de naam van het materiaal te definiëren."@nl ;
+  dcterms:description "The property heeftMateriaalNaam establishes the relationship between the material and its name. It is used to define the name of the material."@en ;
 .
 ceo:heeftMonumentAard
   rdf:type owl:ObjectProperty ;
@@ -1166,6 +1208,11 @@ ceo:heeftMonumentAard
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Heeft monument aard"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has monument nature"@en ;
+  rdfs:comment "The property heeftMonumentAard establishes the relationship between a national monument and the nature of the monument, indicating whether the national monument is archaeological or immovable."@en ;
+  dcterms:description "De property heeftMonumentAard legt de relatie tussen een rijksmonument en de aard van het monument vast, geeft aan of het rijksmonument archeologisch of onroerend gebouwd is. Voorbeeld: <https://data.cultureelerfgoed.nl/term/id/rn/fc966a68-8863-4970-a83e-110f96006c21>."@nl ;
+  dcterms:description "The property heeftMonumentAard establishes the relationship between a national monument and the nature of the monument, indicating whether the national monument is archaeological or immovable. Example: <https://data.cultureelerfgoed.nl/term/id/rn/fc966a68-8863-4970-a83e-110f96006c21>."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/fc966a68-8863-4970-a83e-110f96006c21> ;
 .
 ceo:heeftNaam
   rdf:type owl:ObjectProperty ;
@@ -1174,6 +1221,11 @@ ceo:heeftNaam
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft naam"@nl ;
   rdfs:range ceo:Naam ;
+  rdfs:label "Has name"@en ;
+  rdfs:comment "The property heeftNaam establishes the relationship between a cultural heritage object and its name."@en ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/naam/10136393> ;
+  dcterms:description "De property heeftNaam legt de relatie tussen een cultuurhistorisch object en de naam vast. Het wordt gebruikt om de naam van een cultuurhistorisch object vast te leggen."@nl ;
+  dcterms:description "The property heeftNaam establishes the relationship between a cultural heritage object and its name. It is used to capture the name of a cultural heritage object."@en ;
 .
 ceo:heeftObservatiedatum
   rdf:type owl:ObjectProperty ;
@@ -1182,14 +1234,24 @@ ceo:heeftObservatiedatum
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Heeft observatiedatum"@nl ;
   rdfs:range ceo:Datering ;
+  rdfs:label "Has observation date"@en ;
+  rdfs:comment "The property heeftObservatiedatum establishes the relationship between the Knowledge Registration and the observation date of the registration."@en ;
+  skos:example "\"2015-04-15\"^^xsd:date" ;
+  dcterms:description "De property heeftObservatiedatum legt de relatie tussen de Kennisregistratie en de observatiedatum van de registratie vast. Deze eigenschap wordt gebruikt om de datum van een observatie vast te leggen in een kennisregistratie."@nl ;
+  dcterms:description "The property heeftObservatiedatum establishes the relationship between the Knowledge Registration and the observation date of the registration. This property is used to capture the date of an observation in a knowledge registration."@en ;
 .
 ceo:heeftOmschrijving
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-03-13"^^xsd:date ;
   rdfs:comment "De property heeftOmschrijving legt de relatie tussen een cultuurhistorisch object en de omschrijving vast."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft omschrijving"@nl ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:range ceo:Omschrijving ;
+  rdfs:label "Has description"@en ;
+  rdfs:comment "The property heeftOmschrijving establishes the relationship between a cultural heritage object and its description."@en ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/omschrijving/10003820> ;
+  dcterms:description "De property heeftOmschrijving legt de relatie tussen een cultuurhistorisch object en de omschrijving vast. Het wordt gebruikt om een beschrijving toe te kennen aan een specifiek object."@nl ;
+  dcterms:description "The property heeftOmschrijving establishes the relationship between a cultural heritage object and its description. It is used to assign a description to a specific object."@en ;
 .
 ceo:heeftOmschrijvingstype
   rdf:type owl:ObjectProperty ;
@@ -1199,6 +1261,11 @@ ceo:heeftOmschrijvingstype
   rdfs:domain ceo:Omschrijving ;
   rdfs:label "Heeft omschrijvingstype"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has description type"@en ;
+  rdfs:comment "The property heeftOmschrijvingstype establishes the relationship between the description and the type of description concerning a cultural heritage object."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/0273a12d-7259-4391-aee2-5dac264aebe9> ;
+  dcterms:description "De property heeftOmschrijvingstype legt de relatie tussen de omschrijving en de type omschrijving met betrekking tot een cultuurhistorisch object vast. Deze eigenschap wordt gebruikt om een bepaald type omschrijving te associëren met een specifieke omschrijving van een cultuurhistorisch object."@nl ;
+  dcterms:description "The property heeftOmschrijvingstype establishes the relationship between the description and the type of description concerning a cultural heritage object. This property is used to associate a specific type of description with a particular description of a cultural heritage object."@en ;
 .
 ceo:heeftOorspronkelijkeFunctie
   rdf:type owl:ObjectProperty ;
@@ -1209,22 +1276,36 @@ ceo:heeftOorspronkelijkeFunctie
   rdfs:label "Heeft oorspronkelijke functie"@nl ;
   rdfs:range ceo:Functie ;
   rdfs:subPropertyOf ceo:heeftFunctie ;
+  rdfs:label "Has original function"@en ;
+  rdfs:comment "The property heeftOorspronkelijkeFunctie establishes the relationship between a cultural heritage object and its original function."@en ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/functie/148336> ;
+  dcterms:description "De property heeftOorspronkelijkeFunctie legt de relatie tussen een cultuurhistorisch object en de oorspronkelijke functie vast. Het beschrijft de oorspronkelijke functie van een rijksmonument."@nl ;
+  dcterms:description "The property heeftOorspronkelijkeFunctie establishes the relationship between a cultural heritage object and its original function. It describes the original function of a national monument."@en ;
 .
 ceo:heeftPand
   rdf:type owl:ObjectProperty ;
   dcterms:created "2022-06-17"^^xsd:date ;
   rdfs:comment "De property heeftPand verwijst naar pandidentificatie uit de Basisregistratie Adressen en Gebouwen."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Heeft pand"@nl ;
+  rdfs:label "Has building"@en ;
+  rdfs:comment "The heeftPand property refers to building identification from the Basisregistratie Adressen en Gebouwen."@en ;
+  skos:example <http://bag.basisregistraties.overheid.nl/bag/id/pand/1672100000001123> ;
+  dcterms:description "De heeftPand property verwijst naar een specifiek pand in de Basisregistratie Adressen en Gebouwen. Het is een objectproperty gemaakt op 17 juni 2022."@nl ;
+  dcterms:description "The heeftPand property refers to a specific building in the Basisregistratie Adressen en Gebouwen. It is an object property created on June 17, 2022."@en ;
 .
 ceo:heeftPeriode
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-10"^^xsd:date ;
   dcterms:modified "2022-04-28"^^xsd:date ;
-  rdfs:comment "De property heeftPeriode legt de relatie tussen de datering en de periode vast. "@nl ;
+  rdfs:comment "De property heeftPeriode legt de relatie tussen de datering en de periode vast."@nl ;
   rdfs:domain ceo:BeginDatering, ceo:EindDatering ;
   rdfs:label "Heeft periode"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has period"@en ;
+  rdfs:comment "The property heeftPeriode establishes the relationship between the dating and the period."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/ab077a87-4056-4f69-a417-de8bbeb9765d> ;
+  dcterms:description "De property heeftPeriode legt de relatie tussen de datering en de periode vast. Het definieert dat een bepaalde datering een bepaalde periode omvat."@nl ;
+  dcterms:description "The property heeftPeriode establishes the relationship between the dating and the period. It defines that a certain dating encompasses a certain period."@en ;
 .
 ceo:heeftProvincie
   rdf:type owl:ObjectProperty ;
@@ -1247,17 +1328,28 @@ ceo:heeftRijksmonument
   rdfs:comment "De property heeftSamenhang legt de relatie tussen het complex met betrekking tot een rijksmonument vast."@nl ;
   rdfs:domain ceo:Complex ;
   rdfs:label "Heeft Rijksmonument"@nl ;
+  rdfs:label "Has National Monument"@en ;
+  rdfs:comment "The property heeftSamenhang establishes the relationship between the complex and a national monument."@en ;
   rdfs:range ceo:Rijksmonument ;
   owl:inverseOf ceo:isOnderdeelVanComplex ;
+  dcterms:description "Een complex heeft een relatie met een specifiek rijksmonument. Deze property legt die relatie vast."@nl ;
+  dcterms:description "A complex has a relationship with a specific national monument. This property establishes that relationship."@en ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/rijksmonument/72673> ;
 .
 ceo:heeftRol
   rdf:type owl:ObjectProperty ;
   dcterms:created "2020-11-16"^^xsd:date ;
-  rdfs:comment "De property heeftRol legt de relatie tussen de actor en rol en de rol met betrekking tot een cultuurhistorisch object vast. "@nl ;
-  skos:editorialNote "In de toekomst deze property omzetten naar een uri"@nl ;
-  rdfs:domain ceo:ActorEnRol ;
+  rdfs:comment "De property heeftRol legt de relatie tussen de actor en rol en de rol met betrekking tot een cultuurhistorisch object vast."@nl ;
+  rdfs:comment "The property heeftRol establishes the relationship between the actor and role, and the role with respect to a cultural heritage object."@en ;
   rdfs:label "Heeft rol"@nl ;
+  rdfs:label "Has role"@en ;
+  rdfs:domain ceo:ActorEnRol ;
   rdfs:range skos:Concept ;
+  skos:example "architect / bouwkundige / constructeur" ;
+  dcterms:description "De property heeftRol legt de relatie vast tussen de actor en rol, en de rol met betrekking tot een cultuurhistorisch object."@nl ;
+  dcterms:description "The heeftRol property establishes the relationship between the actor and role, and the role with respect to a cultural heritage object."@en ;
+  skos:editorialNote "Objectproperty heeft voorlopig nog strings als waarde."@nl ;
+  skos:editorialNote "The object property currently has strings as its value."@en ;
 .
 ceo:heeftSituering
   rdf:type owl:ObjectProperty ;
@@ -1266,6 +1358,11 @@ ceo:heeftSituering
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Heeft situering"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has siting"@en ;
+  rdfs:comment "The property heeftSituering establishes the relationship between a national monument that is not a dwelling object in the BAG and a dwelling object in the BAG."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/9b224792-62f8-4f85-8314-9c89425da3d6> ;
+  dcterms:description "De property heeftSituering legt de relatie tussen een rijksmonument dat geen verblijfsobject in de Basisregistratie Adressen en Gebouwen (BAG) is met een verblijfsobject in de BAG. Het wordt gebruikt om aan te geven waar een rijksmonument gelegen is ten opzichte van een verblijfsobject."@nl ;
+  dcterms:description "The property heeftSituering establishes the relationship between a national monument that is not a dwelling object in the Basisregistratie Adressen en Gebouwen (BAG) and a dwelling object in the BAG. It is used to indicate the location of a national monument in relation to a dwelling object."@en ;
 .
 ceo:heeftStijlEnCultuur
   rdf:type owl:ObjectProperty ;
@@ -1274,6 +1371,11 @@ ceo:heeftStijlEnCultuur
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft stijl en cultuur"@nl ;
   rdfs:range ceo:StijlEnCultuur ;
+  rdfs:label "Has style and culture"@en ;
+  rdfs:comment "The property heeftStijlEnCultuur establishes the relationship between a cultural heritage object and the style and culture."@en ;
+  dcterms:description "De property heeftStijlEnCultuur legt de relatie tussen een cultuurhistorisch object en de stijl en cultuur vast. Voorbeelden van objecten die deze relatie kunnen hebben zijn te vinden op [link naar voorbeeld]. De property is gecreëerd op 28 juni 2018."@nl ;
+  dcterms:description "The property heeftStijlEnCultuur establishes the relationship between a cultural heritage object and the style and culture. Examples of objects that can have this relationship can be found at [link to example]. The property was created on June 28, 2018."@en ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/stijlencultuur/2689910> ;
 .
 ceo:heeftStijlEnCultuurNaam
   rdf:type owl:ObjectProperty ;
@@ -1283,6 +1385,11 @@ ceo:heeftStijlEnCultuurNaam
   rdfs:domain ceo:StijlEnCultuur ;
   rdfs:label "Heeft stijl en cultuur naam"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has style and culture name"@en ;
+  rdfs:comment "The property heeftStijlEnCultuurNaam establishes the relationship between the style and culture and the name of the style and culture."@en ;
+  dcterms:description "De property heeftStijlEnCultuurNaam legt de relatie tussen de stijl en cultuur en de naam van de stijl en cultuur vast. Het vertegenwoordigt de naam van een specifieke stijl en cultuur."@nl ;
+  dcterms:description "The property heeftStijlEnCultuurNaam establishes the relationship between the style and culture and the name of the style and culture. It represents the name of a specific style and culture."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/02b02d71-02df-4d46-b427-357af27e7330> ;
 .
 ceo:heeftTemporeleRelatie
   rdf:type owl:ObjectProperty ;
@@ -1292,6 +1399,13 @@ ceo:heeftTemporeleRelatie
   rdfs:domain ceo:Datering ;
   rdfs:label "Heeft temporele relatie"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has temporal relationship"@en ;
+  rdfs:comment "The property heeftTemporeleRelatie defines the relationship between ... regarding a cultural heritage object."@en ;
+  skos:example "Example value" ;
+  dcterms:description "De property heeftTemporeleRelatie legt de relatie tussen het ... met betrekking tot een cultuurhistorisch object vast."@nl ;
+  dcterms:description "The property heeftTemporeleRelatie defines the relationship between ... regarding a cultural heritage object."@en ;
+  skos:editorialNote "Property heeft geen data." @nl ;
+  skos:editorialNote "Property has no data." @en ;
 .
 ceo:heeftToestand
   rdf:type owl:ObjectProperty ;
@@ -1301,14 +1415,24 @@ ceo:heeftToestand
   rdfs:domain ceo:Vondsten ;
   rdfs:label "Heeft toestand"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has condition"@en ;
+  rdfs:comment "The property heeftToestand establishes the relationship between the find and the condition."@en ;
+  dcterms:description "De property heeftToestand legt de relatie tussen de vondst en de toestand vast. Voorbeeld: <https://data.cultureelerfgoed.nl/term/id/rn/0a4eaca3-4dd3-48ad-a472-da658b2a6975>."@nl ;
+  dcterms:description "The property heeftToestand establishes the relationship between the find and the condition. Example: <https://data.cultureelerfgoed.nl/term/id/rn/0a4eaca3-4dd3-48ad-a472-da658b2a6975>."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/0a4eaca3-4dd3-48ad-a472-da658b2a6975> ;
 .
 ceo:heeftType
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-05-02"^^xsd:date ;
   rdfs:comment "De property heeftType legt de relatie tussen een cultuurhistorisch object en het type vast."@nl ;
+  rdfs:comment "The property heeftType establishes the relationship between a cultural heritage object and its type."@en ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft type"@nl ;
+  rdfs:label "Has type"@en ;
   rdfs:range ceo:Type ;
+  dcterms:description "De property heeftType legt de relatie tussen een cultuurhistorisch object en het type vast. Dit kan bijvoorbeeld worden gebruikt om aan te geven dat een object het type 'beeldhouwwerk' heeft."@nl ;
+  dcterms:description "The property heeftType establishes the relationship between a cultural heritage object and its type. It can be used to indicate that an object has the type 'sculpture', for example."@en ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/type/12440> ;
 .
 ceo:heeftTypeNaam
   rdf:type owl:ObjectProperty ;
@@ -1318,6 +1442,11 @@ ceo:heeftTypeNaam
   rdfs:domain ceo:Type ;
   rdfs:label "Heeft type naam"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has type name"@en ;
+  rdfs:comment "The property heeftTypenaam establishes the relationship between the type and the name of the type in relation to a cultural heritage object."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/88759e98-e8ed-475d-9759-d542e3f5dbe0> ;
+  dcterms:description "De property heeftTypenaam legt de relatie tussen het type en de naam van het type met betrekking tot een cultuurhistorisch object vast."@nl ;
+  dcterms:description "The property heeftTypenaam establishes the relationship between the type and the name of the type in relation to a cultural heritage object."@en ;
 .
 ceo:heeftTypekenmerk
   rdf:type owl:ObjectProperty ;
@@ -1327,13 +1456,23 @@ ceo:heeftTypekenmerk
   rdfs:domain ceo:Type ;
   rdfs:label "Heeft typekenmerk"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has type characteristic"@en ;
+  rdfs:comment "The property heeftTypekenmerk establishes the relationship between the type and the type characteristic of a cultural heritage object."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/e9546020-4b28-4819-b0c2-29e7c864c5c0> ;
+  dcterms:description "De property heeftTypekenmerk legt de relatie tussen het type en het typekenmerk met betrekking tot een cultuurhistorisch object vast. Het wordt gebruikt om specifieke kenmerken of eigenschappen van een cultuurhistorisch object aan te geven."@nl ;
+  dcterms:description "The property heeftTypekenmerk establishes the relationship between the type and the type characteristic of a cultural heritage object. It is used to indicate specific characteristics or properties of a cultural heritage object."@en ;
 .
 ceo:heeftVerblijfsobject
   rdf:type owl:ObjectProperty ;
   dcterms:created "2022-06-17"^^xsd:date ;
   rdfs:comment "De property heeftVerblijfsobject verwijst naar de verblijfsobjectidentificatie uit de Basisregistratie Adressen en Gebouwen."@nl ;
+  rdfs:comment "The property heeftVerblijfsobject refers to the dwelling object identification from the Basisregistratie Adressen en Gebouwen."@en ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "heeft verblijfsobject"@nl ;
+  rdfs:label "has dwelling object"@en ;
+  skos:example <http://bag.basisregistraties.overheid.nl/bag/id/verblijfsobject/1672010000008481> ;
+  dcterms:description "De property heeftVerblijfsobject verwijst naar de verblijfsobjectidentificatie uit de Basisregistratie Adressen en Gebouwen. Het wordt gebruikt om relaties tussen entiteiten in de basisregistratie vast te leggen."@nl ;
+  dcterms:description "The property heeftVerblijfsobject refers to the dwelling object identification from the Basisregistratie Adressen en Gebouwen. It is used to establish relationships between entities in the basic registration."@en ;
 .
 ceo:heeftVertrouwelijkAanduiding
   rdf:type owl:ObjectProperty ;
@@ -1341,9 +1480,14 @@ ceo:heeftVertrouwelijkAanduiding
   dcterms:modified "2018-10-23"^^xsd:date ;
   rdfs:comment "De property heeftVertrouwelijkAanduiding legt de relatie tussen het cultuurhistorisch object en de vertrouwelijkheid aanduiding vast."@nl ;
   rdfs:domain [a owl:Class ;
-  owl:unionOf (ceo:CultuurhistorischObject ceo:Kennisregistratie)] ;
+    owl:unionOf (ceo:CultuurhistorischObject ceo:Kennisregistratie)] ;
   rdfs:label "Heeft vertrouwelijk aanduiding"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has confidentiality indication"@en ;
+  rdfs:comment "The property heeftVertrouwelijkAanduiding establishes the relationship between the cultural heritage object and the confidentiality indication."@en ;
+  dcterms:description "De eigenschap heeftVertrouwelijkAanduiding legt de relatie tussen het cultuurhistorisch object en de vertrouwelijkheid aanduiding vast. Het geeft aan of het object een vertrouwelijke status heeft."@nl ;
+  dcterms:description "The property heeftVertrouwelijkAanduiding establishes the relationship between the cultural heritage object and the confidentiality indication. It indicates whether the object has a confidential status."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/62e59073-a069-42df-9eba-5e2699643345> ;
 .
 ceo:heeftVerwerving
   rdf:type owl:ObjectProperty ;
@@ -1352,24 +1496,40 @@ ceo:heeftVerwerving
   rdfs:comment "De property heeftVerwerving legt de relatie tussen de vondst of grondspoor en de verwerving vast."@nl ;
   rdfs:domain ceo:Vondstlocatie ;
   rdfs:label "Heeft verwerving"@nl ;
+  rdfs:label "Has acquisition"@en ;
+  rdfs:comment "The property heeftVerwerving establishes the relationship between the find or ground trace and the acquisition."@en ;
   rdfs:range skos:Concept ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/00714835-b307-4990-8f11-12b6d62bf1ba> ;
+  dcterms:description "De property heeftVerwerving legt de relatie tussen de vondst of grondspoor en de verwerving vast."@nl ;
+  dcterms:description "The property heeftVerwerving establishes the relationship between the find or ground trace and the acquisition."@en ;
 .
 ceo:heeftWerelderfgoedstatus
   rdf:type owl:ObjectProperty ;
   dcterms:created "2019-11-05"^^xsd:date ;
   rdfs:comment "De property heeftWerelderfgoedstatus legt de relatie tussen het werelderfgoed object en zijn status vast."@nl ;
-  rdfs:domain ceo:Werelderfgoed ;
   rdfs:label "Heeft werelderfgoedstatus"@nl ;
+  rdfs:label "Has World Heritage status"@en ;
+  rdfs:comment "The property heeftWerelderfgoedstatus establishes the relationship between the World Heritage object and its status."@en ;
+  rdfs:domain ceo:Werelderfgoed ;
   rdfs:range skos:Concept ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/3dc4e152-8f8b-410d-9d5c-f12e65138dd9> ;
+  dcterms:description "De property heeftWerelderfgoedstatus legt de relatie tussen het werelderfgoed object en zijn status vast. Het wordt gebruikt om aan te geven of een bepaald object de werelderfgoedstatus heeft of niet."@nl ;
+  dcterms:description "The property heeftWerelderfgoedstatus establishes the relationship between the World Heritage object and its status. It is used to indicate whether a certain object has World Heritage status or not."@en ;
 .
 ceo:heeftZaak
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-18"^^xsd:date ;
   dcterms:modified "2018-06-08"^^xsd:date ;
   rdfs:comment "De property heeftZaak legt de relatie tussen de kennisregistratie en de zaak vast."@nl ;
-  rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Heeft zaak"@nl ;
+  rdfs:label "Has case"@en ;
+  rdfs:comment "The property heeftZaak establishes the relationship between the knowledge registration and the case."@en ;
+  rdfs:domain ceo:Kennisregistratie ;
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
+  dcterms:description "De property heeftZaak legt de relatie vast tussen de kennisregistratie en de zaak."@nl ;
+  dcterms:description "The heeftZaak property establishes the relationship between the knowledge registration and the case."@en ;
+  skos:editorialNote "Property heeftnog geen data." @nl ;
+  skos:editorialNote "Property has no data yet." @en ;
 .
 ceo:heeftZekerheidsaanduiding
   rdf:type owl:ObjectProperty ;
@@ -1379,6 +1539,11 @@ ceo:heeftZekerheidsaanduiding
   rdfs:domain ceo:Type ;
   rdfs:label "Heeft zekerheidsaanduiding"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has security indication"@en ;
+  rdfs:comment "The property heeftZekerheidsaanduiding establishes the relationship between the type and the security indication of a cultural heritage object."@en ;
+  dcterms:description "De property heeftZekerheidsaanduiding legt de relatie tussen het type en de zekerheidsaanduiding met betrekking tot een cultuurhistorisch object vast. Het beschrijft de beveiligingsclassificatie van het object."@nl ;
+  dcterms:description "The property heeftZekerheidsaanduiding establishes the relationship between the type and the security indication of a cultural heritage object. It describes the security classification of the object."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/29ac3848-c34a-49e9-9436-a733492bcf3c> ;
 .
 ceo:heeftZuiverheid
   rdf:type owl:ObjectProperty ;
@@ -1388,6 +1553,11 @@ ceo:heeftZuiverheid
   rdfs:domain ceo:StijlEnCultuur ;
   rdfs:label "Heeft zuiverheid"@nl ;
   rdfs:range skos:Concept ;
+  rdfs:label "Has purity"@en ;
+  rdfs:comment "The property heeftZuiverheid establishes the relationship between style and culture and the purity regarding a cultural heritage object."@en ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/1eada057-de2e-42c4-ae2f-5838b0ad053c> ;
+  dcterms:description "De property heeftZuiverheid legt de relatie tussen de stijl en cultuur en de zuiverheid met betrekking tot een cultuurhistorisch object vast."@nl ;
+  dcterms:description "The property heeftZuiverheid establishes the relationship between style and culture and the purity regarding a cultural heritage object."@en ;
 .
 ceo:hoofdfunctie
   rdf:type owl:DatatypeProperty ;
