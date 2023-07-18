@@ -1576,6 +1576,12 @@ ceo:hoortBijZaak
   rdfs:label "Hoort bij zaak"@nl ;
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
   owl:inverseOf ceo:isKennisregistratieVanZaak ;
+  rdfs:label "Belongs to case"@en ;
+  rdfs:comment "The property hoortBijZaak establishes the relationship between knowledge registration and case."@en ;
+  skos:editorialNote "Property heeftnog geen data." @nl ;
+  skos:editorialNote "Property has no data yet." @en ;
+  dcterms:description "De eigenschap hoortBijZaak legt de relatie tussen kennisregistratie en zaak vast. Het geeft aan dat een kennisregistratie hoort bij een bepaalde zaak."@nl ;
+  dcterms:description "The hoortBijZaak property establishes the relationship between knowledge registration and case. It indicates that a knowledge registration belongs to a particular case."@en ;
 .
 ceo:huidigeNaam
   rdf:type owl:DatatypeProperty ;
@@ -1624,8 +1630,13 @@ ceo:isHoofdobjectVanComplex
   rdfs:comment "De property isHoofdobjectVanComplex legt de relatie tussen een rijksmonument en het hoofdobject met betrekking tot een complex vast."@nl ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Is hoofdobject van complex"@nl ;
+  rdfs:label "Is head object of complex"@en ;
   rdfs:range ceo:Complex ;
+  rdfs:comment "The isHoofdobjectVanComplex property defines the relationship between a national monument and the main object related to a complex."@en ;
+  dcterms:description "De property isHoofdobjectVanComplex legt de relatie tussen een rijksmonument en het hoofdobject met betrekking tot een complex vast. Het hoofdobject van een complex is het belangrijkste object binnen dat complex."@nl ;
+  dcterms:description "The isHoofdobjectVanComplex property defines the relationship between a national monument and the main object related to a complex. The main object of a complex is the most significant object within that complex."@en ;
   owl:inverseOf ceo:heeftHoofdobject ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/complex/62496> ;
 .
 ceo:isKennisregistratieVanZaak
   rdf:type owl:ObjectProperty ;
@@ -1636,6 +1647,12 @@ ceo:isKennisregistratieVanZaak
   rdfs:label "Is kennisregistratie van zaak"@nl ;
   rdfs:range ceo:Kennisregistratie ;
   owl:inverseOf ceo:hoortBijZaak ;
+  rdfs:label "Is kennisregistratie of case"@en ;
+  skos:editorialNote "Property heeftnog geen data." @nl ;
+  skos:editorialNote "Property has no data yet." @en ;
+  rdfs:comment "The property isKennisregistratieVanZaak establishes the relationship between case and knowledge registration."@en ;
+  dcterms:description "De property isKennisregistratieVanZaak legt de relatie tussen een zaak en de kennisregistratie van die zaak vast. Het geeft aan welke kennisregistratie betrekking heeft op een bepaalde zaak."@nl ;
+  dcterms:description "The property isKennisregistratieVanZaak establishes the relationship between a case and the knowledge registration associated with that case. It indicates which knowledge registration is related to a specific case."@en ;
 .
 ceo:isOnderdeelVanComplex
   rdf:type owl:ObjectProperty ;
@@ -1646,6 +1663,11 @@ ceo:isOnderdeelVanComplex
   rdfs:label "Is onderdeel van complex"@nl ;
   rdfs:range ceo:Complex ;
   owl:inverseOf ceo:heeftRijksmonument ;
+  rdfs:label "Is part of complex"@en ;
+  rdfs:comment "The isOnderdeelVanComplex property establishes the relationship between the national monument as part of a complex."@en ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/complex/62496> ;
+  dcterms:description "De property isOnderdeelVanComplex legt de relatie tussen het rijksmonument als onderdeel van een complex vast."@nl ;
+  dcterms:description "The isOnderdeelVanComplex property establishes the relationship between the national monument as part of a complex."@en ;
 .
 ceo:kaartbladcode
   rdf:type owl:DatatypeProperty ;
@@ -1694,8 +1716,13 @@ ceo:ligtInObject
   rdfs:comment "De property ligtInObject legt de relatie tussen de ligging van een cultuurhistorisch object met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Ligt in object"@nl ;
+  rdfs:label "Lies in object"@en ;
   rdfs:range ceo:CultuurhistorischObject ;
+  rdfs:comment "The ligtInObject property establishes the relationship between the location of a cultural heritage object in relation to another cultural heritage object."@en ;
+  dcterms:description "De eigenschap ligtInObject legt de relatie tussen de ligging van een cultuurhistorisch object met betrekking tot een cultuurhistorisch object vast. Deze eigenschap wordt gebruikt om de ruimtelijke relatie tussen objecten in een erfgoedcontext te modelleren."@nl ;
+  dcterms:description "The ligtInObject property establishes the relationship between the location of a cultural heritage object in relation to another cultural heritage object. This property is used to model the spatial relationship between objects in a heritage context."@en ;
   owl:inverseOf ceo:bevatObject ;
+  skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/rijksmonument/13194> ;
 .
 ceo:kadasterdeel
   rdf:type owl:DatatypeProperty ;
