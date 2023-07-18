@@ -1559,7 +1559,7 @@ ceo:registergegeven
   rdfs:label "registergegeven"@nl ;
   rdfs:label "Registry data"@en ;
   rdfs:range xsd:boolean ;
-  rdfs:domain https://linkeddata.cultureelerfgoed.nl/def/ceo#Rijksmonument ;
+  rdfs:domain ceo:Rijksmonument ;
   skos:example "\"1\"^^xsd:boolean" ;
 .
 ceo:rijksmonumentnummer
