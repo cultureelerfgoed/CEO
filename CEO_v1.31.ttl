@@ -885,7 +885,7 @@ ceo:heeftGemeente
   skos:editorialNote "Indien een cultuurhistorisch object rijksmonument is, dan heeft de property heeftGemeente, maar één waarde (functional property; cardinaliteit 1)."@nl ;
   skos:editorialNote "If a cultural-historical object is a national monument, then the property heeftGemeente has only one value (functional property; cardinality 1)."@en ;
   ceo:registergegeven "true"^^xsd:boolean ;
-  skos:example "<http://standaarden.overheid.nl/owms/terms/Gemeente/Rotterdam>" ;
+  skos:example <http://standaarden.overheid.nl/owms/terms/Gemeente/Rotterdam> ;
 .
 ceo:heeftGeometrie
   rdf:type owl:ObjectProperty ;
@@ -1102,7 +1102,7 @@ ceo:heeftProvincie
   rdfs:label "Has province"@en ;
   rdfs:range <http://standaarden.overheid.nl/owms/terms/Provincie> ;
   ceo:registergegeven "true"^^xsd:boolean ;
-  skos:example "<http://standaarden.overheid.nl/owms/terms/Provincie/Drenthe>" ;
+  skos:example <http://standaarden.overheid.nl/owms/terms/Provincie/Drenthe> ;
 .
 ceo:heeftRijksmonument
   rdf:type owl:ObjectProperty ;
@@ -1559,6 +1559,7 @@ ceo:registergegeven
   rdfs:label "registergegeven"@nl ;
   rdfs:label "Registry data"@en ;
   rdfs:range xsd:boolean ;
+  rdfs:domain https://linkeddata.cultureelerfgoed.nl/def/ceo#Rijksmonument
   skos:example "\"1\"^^xsd:boolean" ;
 .
 ceo:rijksmonumentnummer
