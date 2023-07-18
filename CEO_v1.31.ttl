@@ -233,8 +233,8 @@ ceo:Bronverwijzing
   rdfs:comment "The class Bronverwijzing is a subclass of Kennisregistratie and represents the reference to a source associated with a cultural heritage object."@en ;
   rdfs:label "Bronverwijzing"@nl ;
   rdfs:label "Reference to Source"@en ;
-  skos:editorialNote "Leeg."@nl ;
-  skos:editorialNote "Empty."@en ;
+  skos:editorialNote "Property heeft geen data."@nl ;
+  skos:editorialNote "Property has no data."@en ;
   dcterms:description "De class Bronverwijzing is een subclass van Kennisregistratie en vertegenwoordigt de bronverwijzing met betrekking tot een cultuurhistorisch object."@nl ;
   dcterms:description "The class Bronverwijzing is a subclass of Kennisregistratie and represents the reference to a source associated with a cultural heritage object."@en ;
   rdfs:subClassOf owl:Thing ;
@@ -626,9 +626,14 @@ ceo:cultuurhistorischObjectnummer
   dcterms:created "2018-03-28"^^xsd:date ;
   dcterms:modified "2018-06-28"^^xsd:date ;
   rdfs:comment "De property cultuurhistorischObjectnummer wordt gebruikt om aan te geven of een cultuurhistorischObjectnummer aan een Cultuurhistorisch object is gegeven."@nl ;
-  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Cultuurhistorisch objectnummer"@nl ;
+  rdfs:label "Cultural Historical Object Number"@en ;
+  rdfs:comment "The cultuurhistorischObjectnummer property is used to indicate whether a cultuurhistorischObjectnummer has been assigned to a Cultural Historical object."@en ;
+  rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:range xsd:string ;
+  skos:example "10073" ;
+  dcterms:description "Elk cultuurhistorisch object dat wordt erkend en geregistreerd door de RCE, krijgt een uniek objectnummer toegewezen. Dit objectnummer dient als een identificatienummer voor het betreffende object in de registratiedatabase van de RCE."@nl ;
+  dcterms:description "Each cultural historical object recognized and registered by the RCE is assigned a unique object number. This object number serves as an identification number for the respective object in the registration database of the RCE."@en ;
 .
 ceo:dateringnummer
   rdf:type owl:DatatypeProperty ;
@@ -1578,7 +1583,7 @@ ceo:hoortBijZaak
   owl:inverseOf ceo:isKennisregistratieVanZaak ;
   rdfs:label "Belongs to case"@en ;
   rdfs:comment "The property hoortBijZaak establishes the relationship between knowledge registration and case."@en ;
-  skos:editorialNote "Property heeftnog geen data." @nl ;
+  skos:editorialNote "Property heeft nog geen data." @nl ;
   skos:editorialNote "Property has no data yet." @en ;
   dcterms:description "De eigenschap hoortBijZaak legt de relatie tussen kennisregistratie en zaak vast. Het geeft aan dat een kennisregistratie hoort bij een bepaalde zaak."@nl ;
   dcterms:description "The hoortBijZaak property establishes the relationship between knowledge registration and case. It indicates that a knowledge registration belongs to a particular case."@en ;
@@ -1648,7 +1653,7 @@ ceo:isKennisregistratieVanZaak
   rdfs:range ceo:Kennisregistratie ;
   owl:inverseOf ceo:hoortBijZaak ;
   rdfs:label "Is kennisregistratie of case"@en ;
-  skos:editorialNote "Property heeftnog geen data." @nl ;
+  skos:editorialNote "Property heeft nog geen data." @nl ;
   skos:editorialNote "Property has no data yet." @en ;
   rdfs:comment "The property isKennisregistratieVanZaak establishes the relationship between case and knowledge registration."@en ;
   dcterms:description "De property isKennisregistratieVanZaak legt de relatie tussen een zaak en de kennisregistratie van die zaak vast. Het geeft aan welke kennisregistratie betrekking heeft op een bepaalde zaak."@nl ;
