@@ -1632,4 +1632,4 @@ ceo:woonplaatsnaam
   dcterms:description "De property 'woonplaatsnaam' wordt gebruikt om de woonplaats van een cultuurhistorisch object aan te geven, zoals geregistreerd in de Basisregistratie Adressen en Gebouwen (BAG)."@nl ;
   dcterms:description "The property 'woonplaatsnaam' is used to indicate the place of residence of a cultural heritage object, as registered in the Basisregistratie Adressen en Gebouwen (BAG)."@en ;
   skos:example "Borkeld" ;
-
+.
