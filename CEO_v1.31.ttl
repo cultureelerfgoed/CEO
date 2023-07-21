@@ -162,8 +162,11 @@ ceo:BAGRelatienummer
   rdfs:comment "The property BAGRelationNumber is used to indicate the unique number under which the BAG relation instance is known."@en ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "BAG relatienummer"@nl ;
-  rdfs:label "BAG relatienumber"@en ;
+  rdfs:label "BAG relationnumber"@en ;
   rdfs:range xsd:string ;
+  skos:example "16161" ;
+  dcterms:description "Een uniek nummer dat wordt gebruikt om de BAG relatie instance te identificeren."@nl ;
+  dcterms:description "A unique number used to identify the BAG relation instance."@en ;
 .
 ceo:BRKRelatie
   rdf:type owl:Class ;
@@ -185,9 +188,13 @@ ceo:BRKRelatienummer
   rdfs:comment "The property BRKRelationNumber is used to indicate the unique number under which the BRK relation instance is known."@en ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "BRK relatienummer"@nl ;
-  rdfs:label "BRK relatienumber"@en ;
+  rdfs:label "BRK relationnumber"@en ;
   rdfs:range xsd:string ;
+  skos:example "10013607" ;
+  dcterms:description "Een uniek nummer dat wordt gebruikt om de BRK relatie instance te identificeren."@nl ;
+  dcterms:description "A unique number used to identify the BRK relation instance."@en ;
 .
+
 ceo:BasisregistratieRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-02-06"^^xsd:date ;
@@ -326,11 +333,11 @@ ceo:Gezicht
   rdf:type owl:Class ;
   dcterms:created "2019-11-05"^^xsd:date ;
   rdfs:comment "De class Gezicht is een representatie van een aangewezen, beschermd stads- en dorpsgezicht."@nl ;
-  rdfs:comment "The class Gezicht represents a designated, protected urban or village landscape."@en ;
+  rdfs:comment "The class Gezicht represents a designated, protected urban or village townscape."@en ;
   rdfs:label "Gezicht"@nl ;
-  rdfs:label "Landscape"@en ;
+  rdfs:label "Townscape"@en ;
   dcterms:description "De class Gezicht is een representatie van een aangewezen, beschermd stads- en dorpsgezicht."@nl ;
-  dcterms:description "The class Gezicht represents a designated, protected urban or village landscape."@en ;
+  dcterms:description "The class Gezicht represents a designated, protected urban or village townscape."@en ;
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/gezicht/10134173" ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
@@ -490,104 +497,154 @@ ceo:aantalGrondsporen
   dcterms:created "2018-03-27"^^xsd:date ;
   dcterms:modified "2019-02-05"^^xsd:date ;
   rdfs:comment "De property aantalGrondsporen wordt gebruikt om het aantal grondsporen aan te geven."@nl ;
-  rdfs:domain ceo:Grondsporen ;
+  rdfs:comment "The property aantalGrondsporen is used to indicate the number of traces."@en ;
   rdfs:label "Aantal grondsporen"@nl ;
+  rdfs:label "Number of traces"@en ;
+  rdfs:domain ceo:Grondsporen ;
   rdfs:range xsd:integer ;
+  skos:example "\"2\"^^xsd:integer" ;
+  dcterms:description "Een eigenschap om het aantal grondsporen aan te geven."@nl ;
+  dcterms:description "A property used to indicate the number of traces."@en ;
 .
 ceo:aantalVondsten
   rdf:type owl:DatatypeProperty ;
   dcterms:modified "2019-05-13"^^xsd:date ;
   rdfs:comment "De property aantalVondsten wordt gebruikt om het aantal vondsten aan te geven."@nl ;
+  rdfs:comment "The property aantalVondsten is used to indicate the number of finds."@en ;
   rdfs:domain ceo:Vondsten ;
   rdfs:label "Aantal vondsten"@nl ;
-  rdfs:range xsd:integer;
+  rdfs:label "Number of finds"@en ;
+  rdfs:range xsd:integer ;
   skos:prefLabel "aantal vondsten"@nl ;
+  skos:example "\"1\"^^xsd:integer" ;
+  dcterms:description "Een eigenschap die het aantal vondsten aangeeft."@nl ;
+  dcterms:description "A property that indicates the number of finds."@en ;
 .
 ceo:actorEnRolnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-03"^^xsd:date ;
   rdfs:comment "De property actorEnRolnummer wordt gebruikt om aan te geven het unieke nummer waaronder de actor en rol instance bekend is."@nl ;
+  rdfs:comment "The property actorEnRolnummer is used to indicate the unique number under which the actor and role instance is known."@en ;
   rdfs:domain ceo:ActorEnRol ;
   rdfs:label "Actor en rolnummer"@nl ;
+  rdfs:label "Actor and rolenumber"@en ;
   rdfs:range xsd:string ;
+  skos:example "55555" ;
+  dcterms:description "Een uniek nummer dat wordt gebruikt om een specifieke actor en rol instance te identificeren."@nl ;
+  dcterms:description "A unique number used to identify a specific actor and role instance."@en ;
 .
 ceo:appartementAanduiding
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-21"^^xsd:date ;
   dcterms:modified "2018-10-23"^^xsd:date ;
   rdfs:comment "De property appartementAanduiding wordt gebruikt om aan te geven of een appartement aanduiding aan een rijksmonument is gegeven."@nl ;
+  rdfs:comment "The property appartementAanduiding is used to indicate whether an apartment designation has been assigned to a national monument."@en ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Appartement aanduiding"@nl ;
+  rdfs:label "Apartment designation"@en ;
   rdfs:range xsd:string ;
+  skos:example "9" ;
+  dcterms:description "De property appartementAanduiding wordt gebruikt om aan te geven of een appartement aanduiding aan een rijksmonument is gegeven. Voorbeelden van appartement aanduidingen zijn 9, 12A en B."@nl ;
+  dcterms:description "The property appartementAanduiding is used to indicate whether an apartment designation has been assigned to a national monument. Examples of apartment designations include 9, 12A, and B."@en ;
 .
 ceo:archis2Complexnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
   dcterms:modified "2018-09-03"^^xsd:date ;
   rdfs:comment "De property archis2Complexnummer wordt gebruikt om aan te geven of een complexnummer uit Archis 2 aan een archeologisch complex of vondstlocatie is gekoppeld."@nl ;
+  rdfs:comment "The property archis2Complexnummer is used to indicate whether a complex number from Archis 2 is linked to an archaeological complex or find location."@en ;
   rdfs:domain [a owl:Class ;
-  owl:unionOf (ceo:ArcheologischComplex ceo:Vondstlocatie)] ;
+               owl:unionOf (ceo:ArcheologischComplex ceo:Vondstlocatie)] ;
   rdfs:label "Archis2 complexnummer"@nl ;
+  rdfs:label "Archis2 complex number"@en ;
   rdfs:range xsd:string ;
+  skos:example "11161" ;
+  dcterms:description "Dit is het complexnummer uit Archis 2 dat is gekoppeld aan een archeologisch complex of vondstlocatie."@nl ;
+  dcterms:description "This is the complex number from Archis 2 that is linked to an archaeological complex or find location."@en ;
 .
 ceo:archis2Monumentnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-28"^^xsd:date ;
   rdfs:comment "De property archis2Monumentnummer wordt gebruikt om aan te geven of een monumentnummer uit Archis 2 aan een archeologisch terrein is gekoppeld."@nl ;
+  rdfs:comment "The archis2Monumentnummer property is used to indicate whether a monument number from Archis 2 is linked to an archaeological site."@en ;
   rdfs:domain ceo:ArcheologischTerrein ;
   rdfs:label "Archis2 monumentnummer"@nl ;
+  rdfs:label "Archis2 monument number"@en ;
   rdfs:range xsd:string ;
+  skos:example "20015" ;
+  dcterms:description "Een uniek monumentnummer uit Archis 2 dat aan een archeologisch terrein is gekoppeld. Het identificeert het terrein in het Archis 2-systeem."@nl ;
+  dcterms:description "A unique monument number from Archis 2 that is linked to an archaeological site. It identifies the site in the Archis 2 system."@en ;
 .
 ceo:archis2Vondstmeldingsnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-09-03"^^xsd:date ;
-  rdfs:comment "De property archis2Vondstmeldingsnummer wordt gebruikt om aan te geven of een vondstmeldingsnummer uit Archis 2 aan een vondstlocatie is gekoppeld."@nl ;
-  rdfs:domain ceo:Vondstlocatie ;
   rdfs:label "Archis2 vondstmeldingsnummer"@nl ;
+  rdfs:label "Archis2 discovery report number"@en ;
+  rdfs:comment "De property archis2Vondstmeldingsnummer wordt gebruikt om aan te geven of een vondstmeldingsnummer uit Archis 2 aan een vondstlocatie is gekoppeld."@nl ;
+  rdfs:comment "The archis2Vondstmeldingsnummer property is used to indicate whether a discovery report number from Archis 2 is linked to a discovery location."@en ;
+  rdfs:domain ceo:Vondstlocatie ;
   rdfs:range xsd:string ;
+  skos:example "1997" ;
+  dcterms:description "De Archis2 vondstmeldingsnummer eigenschap geeft aan of een vondstmeldingsnummer uit Archis 2 aan een vondstlocatie is gekoppeld. Dit is een tekstuele eigenschap."@nl ;
+  dcterms:description "The Archis2 discovery report number property indicates whether a discovery report number from Archis 2 is linked to a discovery location. This is a textual property."@en ;
 .
 ceo:archis2Vondstnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
   rdfs:comment "De property archis2Vondstnummer wordt gebruikt om aan te geven of een vondstnummer uit Archis 2 aan een vondst, grondspoor is gekoppeld."@nl ;
+  rdfs:comment "The property archis2Vondstnummer is used to indicate whether an Archis 2 discovery number is linked to a find, ground trace."@en ;
   rdfs:domain [a owl:Class ;
   owl:unionOf (ceo:Grondsporen ceo:Vondsten)] ;
   rdfs:label "Archis2 vondstnummer"@nl ;
+  rdfs:label "Archis2 discovery number"@en ;
   rdfs:range xsd:string ;
+  skos:example "2" ;
+  dcterms:description "Deze eigenschap geeft het vondstnummer uit Archis 2 aan dat aan een vondst of grondspoor is gekoppeld."@nl ;
+  dcterms:description "This property indicates the Archis 2 discovery number linked to a find or ground trace."@en ;
 .
 ceo:archis2Waarnemingsnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-09-03"^^xsd:date ;
   dcterms:modified "2019-05-13"^^xsd:date ;
   rdfs:comment "De property archis2Waarnemingsnummer wordt gebruikt om aan te geven of een waarnemingsnummer uit Archis 2 aan een vondstlocatie is gekoppeld."@nl ;
+  rdfs:comment "The property archis2Waarnemingsnummer is used to indicate whether an observation number from Archis 2 is linked to a find location."@en ;
   rdfs:domain ceo:Vondstlocatie ;
   rdfs:label "Archis2 waarnemingsnummer"@nl ;
+  rdfs:label "Archis2 observation number"@en ;
   rdfs:range xsd:string ;
+  dcterms:description "De property archis2Waarnemingsnummer is een datatype property die wordt gebruikt om aan te geven of een waarnemingsnummer uit Archis 2 aan een vondstlocatie is gekoppeld. Het waarnemingsnummer wordt vaak gebruikt als referentie bij archeologische vondsten."@nl ;
+  dcterms:description "The property archis2Waarnemingsnummer is a datatype property used to indicate whether an observation number from Archis 2 is linked to a find location. The observation number is often used as a reference for archaeological finds."@en ;
+  skos:example "45200" ;
 .
 ceo:asWKT-RD
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-28"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
   rdfs:comment "De geometrie is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "De property 'asWKT-RD' wordt gebruikt om de geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD) van een cultuurhistorisch object aan te geven."@nl ;
-  rdfs:comment "The geometry is a registry item within the 'Rijksmonument' class."@en ;
-  rdfs:comment "The property 'asWKT-RD' is used to indicate the geometry of a cultural heritage object in EPSG:28992; the Dutch Rijksdriehoekstelsel (RD) coordinate system."@en ;
+  rdfs:comment "De property asWKT-RD wordt gebruikt om de geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD) van een cultuurhistorisch object aan te geven."@nl ;
+  rdfs:comment "The geometry is a registry item within the Rijksmonument class."@en ;
+  rdfs:comment "The property asWKT-RD is used to indicate the geometry of a cultural heritage object in EPSG:28992; the Dutch Rijksdriehoekstelsel (RD) coordinate system."@en ;
   rdfs:domain ceo:Geometrie ;
   rdfs:label "asWKT-RD"@nl ;
   rdfs:label "asWKT-RD"@en ;
   rdfs:range xsd:string ;
   ceo:registergegeven "true"^^xsd:boolean ;
-  dcterms:description "De property 'asWKT-RD' wordt gebruikt om de geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD) van een cultuurhistorisch object aan te geven."@nl ;
-  dcterms:description "The property 'asWKT-RD' is used to indicate the geometry of a cultural heritage object in EPSG:28992; the Dutch Rijksdriehoekstelsel (RD) coordinate system."@en ;
+  dcterms:description "De property asWKT-RD wordt gebruikt om de geometrie volgens EPSG:28992; het Rijksdriehoekstelsel (RD) van een cultuurhistorisch object aan te geven."@nl ;
+  dcterms:description "The property asWKT-RD is used to indicate the geometry of a cultural heritage object in EPSG:28992; the Dutch Rijksdriehoekstelsel (RD) coordinate system."@en ;
   skos:example "MULTILINESTRING ((31585.6 370966.9, 31014.5 371091.1, 30605.4 370741.9, 30017.4 370954.2, 29813.2 370872.5, 29192.5 371338.1, 28874 371256.4, 28579.9 371019.5, 28294.1 371035.9, 28016.4 370807.2, 27861.2 370725.5, 27697.9 370611.2, 27567.2 370407, 27207.8 370284.5, 26660.6 370227.3, 26293.1 369778.1, 25133.3 371060.4, 24880.1 371019.5, 24659.6 370635.7, 24316.6 370276.3, 24055.2 370619.3, 23695.9 370684.7, 22960.8 370545.8, 22862.8 370382.5, 22805.7 370088.5), (35771.6 369418.3, 35308.6 369576.1, 32696.3 370088.5, 31928.5 370741.9, 31765.5 370893.2, 31675 370936.1, 31608.3 370950.4))" ;
 .
 ceo:basisregistratieRelatienummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-03"^^xsd:date ;
   rdfs:comment "De property basisregistratieRelatienummer wordt gebruikt om aan te geven het unieke nummer waaronder de basisregistratie relatie instance bekend is."@nl ;
+  rdfs:comment "The property basisregistratieRelatienummer is used to indicate the unique number under which the basic registration relationship instance is known."@en ;
   rdfs:domain ceo:BasisregistratieRelatie ;
   rdfs:label "Basisregistratie relatienummer"@nl ;
+  rdfs:label "Basic registration relationship number"@en ;
   rdfs:range xsd:string ;
+  skos:example "14590" ;
+  dcterms:description "Een uniek nummer waarmee de basisregistratie relatie instance bekend is in de basisregistratie."@nl ;
+  dcterms:description "A unique number through which the basic registration relationship instance is known in the basic registration."@en ;
 .
 ceo:bevatObject
   rdf:type owl:ObjectProperty ;
@@ -607,19 +664,29 @@ ceo:bevatObject
 ceo:bijzonderGebied
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2019-11-05"^^xsd:date ;
-  rdfs:comment "e property bijzonderGebied wordt gebruikt om aan te geven dat een beschermd stads- of dorpsgezicht een gebied in een stad of dorp is met een bijzonder cultuurhistorisch karakter. "@nl ;
+  rdfs:comment "De property bijzonderGebied wordt gebruikt om aan te geven dat een beschermd stads- of dorpsgezicht een gebied in een stad of dorp is met een bijzonder cultuurhistorisch karakter."@nl ;
+  rdfs:comment "The property bijzonderGebied is used to indicate that a protected city or village view is an area in a city or village (townscape) with a special cultural-historical character."@en ;
   rdfs:domain ceo:Gezicht ;
   rdfs:label "Bijzonder gebied"@nl ;
+  rdfs:label "Special area"@en ;
   rdfs:range xsd:boolean ;
+  skos:example "\"1\"^^xsd:boolean" ;
+  dcterms:description "Een bijzonder gebied is een gebied in een stad of dorp met een uitzonderlijk cultureel en historisch belang. Deze property geeft aan of een beschermd stads- of dorpsgezicht als bijzonder gebied wordt beschouwd."@nl ;
+  dcterms:description "A special area is an area in a city or village with exceptional cultural and historical significance. This property indicates whether a protected city or village view (townscape) is considered a special area."@en ;
 .
 ceo:complexnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-02-06"^^xsd:date ;
   dcterms:modified "2018-06-28"^^xsd:date ;
   rdfs:comment "De property complexnummer wordt gebruikt om aan te geven het unieke nummer waaronder het complex van rijksmonumenten bekend is in het monumentenregister."@nl ;
+  rdfs:comment "The property complexnummer is used to indicate the unique number under which the complex of national monuments is known in the monument register."@en ;
   rdfs:domain ceo:Complex ;
   rdfs:label "Complexnummer"@nl ;
+  rdfs:label "Complex Number"@en ;
   rdfs:range xsd:string ;
+  dcterms:description "De property complexnummer wordt gebruikt om aan te geven het unieke nummer waaronder het complex van rijksmonumenten bekend is in het monumentenregister."@nl ;
+  dcterms:description "The property complexnummer is used to indicate the unique number under which the complex of national monuments is known in the monument register."@en ;
+  skos:example "531014" ;
 .
 ceo:cultuurhistorischObjectnummer
   rdf:type owl:DatatypeProperty ;
@@ -639,81 +706,121 @@ ceo:dateringnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-03"^^xsd:date ;
   rdfs:comment "De property dateringnummer wordt gebruikt om aan te geven het unieke nummer waaronder de datering instance bekend is."@nl ;
+  rdfs:comment "The property dateringnummer is used to indicate the unique number under which the dating instance is known."@en ;
   rdfs:domain ceo:Datering ;
   rdfs:label "Dateringnummer"@nl ;
+  rdfs:label "Dating number"@en ;
   rdfs:range xsd:string ;
+  skos:example "3456793" ;
+  dcterms:description "Een uniek nummer dat wordt gebruikt om de datering instance te identificeren. Het kan worden gebruikt om de datering in een database te zoeken of te koppelen aan andere gerelateerde informatie."@nl ;
+  dcterms:description "A unique number used to identify the dating instance. It can be used to query the dating in a database or link it to other related information."@en ;
 .
 ceo:datum
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2022-04-28"^^xsd:date ;
-  rdfs:comment "De property datum wordt gebruikt om aan te geven de datum van een begin- of een einddatering. "@nl ;
-  rdfs:domain ceo:BeginDatering, ceo:EindDatering ;
+  rdfs:comment "De property datum wordt gebruikt om aan te geven de datum van een begin- of een einddatering."@nl ;
   rdfs:label "datum"@nl ;
+  rdfs:label "date"@en ;  # rdfs:label in @en (Engelse vertaling toevoegen)
+  rdfs:comment "The property datum is used to indicate the date of a start or end date."@en ;  # rdfs:comment in @en (Engelse vertaling toevoegen)
+  rdfs:domain ceo:BeginDatering, ceo:EindDatering ;
   rdfs:range xsd:date ;
+  dcterms:description "Een eigenschap om de datum van een begin- of een einddatering aan te geven."@nl ;  # dcterms:description in @nl
+  dcterms:description "A property to indicate the date of a start or end date."@en ;  # dcterms:description in @en
+  skos:example "\"1912-12-31\"^^xsd:date" ;
 .
 ceo:datumInschrijvingInMonumentenregister
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2020-04-20"^^xsd:date ;
   rdfs:comment "De datum van inschrijving in het monumentenregister is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "De property 'datumInschrijvingInMonumentenregister' wordt gebruikt om aan te geven onder welk uniek nummer het rijksmonument bekend is in het monumentenregister."@nl ;
-  rdfs:comment "The date of registration in the monument register is a registry item within the 'Rijksmonument' class."@en ;
-  rdfs:comment "The property 'datumInschrijvingInMonumentenregister' is used to indicate the unique number under which the national monument is known in the monument register."@en ;
+  rdfs:comment "De property datumInschrijvingInMonumentenregister wordt gebruikt om aan te geven onder welk uniek nummer het rijksmonument bekend is in het monumentenregister."@nl ;
+  rdfs:comment "The date of registration in the monument register is a registry item within the Rijksmonument class."@en ;
+  rdfs:comment "The property datumInschrijvingInMonumentenregister is used to indicate the unique number under which the national monument is known in the monument register."@en ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Datum inschrijving in Monumentenregister"@nl ;
   rdfs:label "Date of registration in Monument Register"@en ;
   rdfs:range xsd:date ;
   ceo:registergegeven "true"^^xsd:boolean ;
-  dcterms:description "De property 'datumInschrijvingInMonumentenregister' wordt gebruikt om aan te geven onder welk uniek nummer het rijksmonument bekend is in het monumentenregister."@nl ;
-  dcterms:description "The property 'datumInschrijvingInMonumentenregister' is used to indicate the unique number under which the national monument is known in the monument register."@en ;
+  dcterms:description "De property datumInschrijvingInMonumentenregister wordt gebruikt om aan te geven onder welk uniek nummer het rijksmonument bekend is in het monumentenregister."@nl ;
+  dcterms:description "The property datumInschrijvingInMonumentenregister is used to indicate the unique number under which the national monument is known in the monument register."@en ;
   skos:example "\"1965-05-10\"^^xsd:date" ;
 .
 ceo:formeelStandpunt
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-04-18"^^xsd:date ;
   rdfs:comment "De property formeelstandpunt wordt gebruikt om aan te geven of de kennisregistratie een formeel standpunt betreft."@nl ;
+  rdfs:comment "The property formeelstandpunt is used to indicate whether the knowledge registration concerns a formal standpoint."@en ;
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Formeel standpunt"@nl ;
+  rdfs:label "Formal standpoint"@en ;
   rdfs:range xsd:boolean ;
+  skos:example "\"0\"^^xsd:boolean" ;
+  dcterms:description "Een formeel standpunt van de kennisregistratie."@nl ;
+  dcterms:description "A formal standpoint of the knowledge registration."@en ;
 .
 ceo:gemeentecode
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-05-24"^^xsd:date ;
   rdfs:comment "De property BRK gemeenteCode wordt gebruikt om aan te geven welke gemeente code is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:comment "The BRK gemeenteCode property is used to indicate which municipality code is linked to the national monument."@en ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Gemeentecode"@nl ;
+  rdfs:label "Municipality code"@en ;
   rdfs:range xsd:string ;
+  skos:example "853" ;
+  dcterms:description "Dit is de gemeentecode van het rijksmonument."@nl ;
+  dcterms:description "This is the municipality code of the national monument."@en ;
 .
 ceo:gemeentenaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2022-06-17"^^xsd:date ;
   rdfs:comment "De property BRK gemeentenaam wordt gebruikt om aan te geven welke gemeentenaam is gekoppeld aan het rijksmonument."@nl ;
-  rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Gemeentenaam"@nl ;
+  rdfs:label "Gemeentenaam"@en ;
+  rdfs:comment "The BRK gemeentenaam property is used to indicate which municipality name is linked to the national monument."@en ;
+  rdfs:domain ceo:BRKRelatie ;
   rdfs:range xsd:string ;
+  skos:example "Schaesberg" ;
+  dcterms:description "Een datatype-eigenschap (datatype property) in het BRK vocabulaire om de naam van de gemeente aan te geven waaraan het rijksmonument is gelegen."@nl ;
+  dcterms:description "A datatype property in the BRK vocabulary used to indicate the name of the municipality where the national monument is located."@en ;
 .
 ceo:geometrienummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-03"^^xsd:date ;
   rdfs:comment "De property geometrienummer wordt gebruikt om aan te geven het unieke nummer waaronder de geometrie instance bekend is."@nl ;
-  rdfs:domain ceo:Geometrie ;
+  rdfs:comment "The property geometrienummer is used to indicate the unique number under which the geometry instance is known."@en ;
   rdfs:label "Geometrienummer"@nl ;
+  rdfs:label "Geometry Number"@en ;
   rdfs:range xsd:string ;
+  skos:example "10005052" ;
+  dcterms:description "Deze eigenschap geeft het unieke geometrienummer van de geometrie instance weer."@nl ;
+  dcterms:description "This property represents the unique geometry number of the geometry instance."@en ;
 .
 ceo:geometriebesluit
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2022-12-19"^^xsd:date ;
   rdfs:comment "De property geometriebesluit wordt gebruikt om aan te geven de besluit status van de geometrie."@nl ;
-  rdfs:domain ceo:Geometrie ;
   rdfs:label "Geometriebesluit"@nl ;
+  rdfs:label "Geometriebesluit"@en ;
+  rdfs:comment "The property geometriebesluit is used to indicate the decision status of the geometry."@en ;
+  rdfs:domain ceo:Geometrie ;
   rdfs:range xsd:boolean ;
-.
+  skos:editorialNote "geen data aanwezig"@nl ;
+  skos:editorialNote "no data"@en ;
+  dcterms:description "Eigenschap die de besluitstatus van de geometrie aangeeft."@nl ;
+  dcterms:description "Property indicating the decision status of the geometry."@en ;
+
 ceo:gezichtsnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2019-11-22"^^xsd:date ;
   rdfs:comment "De property gezichtsnummer wordt gebruikt om aan te geven het unieke nummer waaronder het stads- of dorpsgezicht bekend is."@nl ;
+  rdfs:comment "The property gezichtsnummer is used to indicate the unique number under which the urban or village townscape is known."@en ;
   rdfs:domain ceo:Gezicht ;
   rdfs:label "Gezichtsnummer"@nl ;
+  rdfs:label "Townscape number"@en ;
   rdfs:range xsd:string ;
+  skos:example "1439" ;
+  dcterms:description "Een gezichtsnummer is een uniek nummer dat wordt gebruikt om een specifiek stads- of dorpsgezicht te identificeren."@nl ;
+  dcterms:description "A gezichtsnummer is a unique number used to identify a specific urban or village townscape."@en ;
 .
 ceo:heeftActor
   rdf:type owl:ObjectProperty ;
@@ -980,12 +1087,12 @@ ceo:heeftGemeente
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-02-02"^^xsd:date ;
   dcterms:modified "2022-04-28" ;
-  rdfs:comment "De property 'heeftGemeente' is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "The property 'heeftGemeente' is a registry entry within the class Rijksmonument."@en ;
-  rdfs:comment "De property 'heeftGemeente' legt de relatie tussen de basisregistratie relatie van een cultuurhistorisch object en de gemeente waarin het cultuurhistorisch object zich bevindt."@nl ;
-  rdfs:comment "The property 'heeftGemeente' establishes the relationship between the base registration relationship of a cultural heritage object and the municipality in which the cultural heritage object is located."@en ;
-  dcterms:description "De property 'heeftGemeente' wordt gebruikt om de relatie tussen een cultuurhistorisch object en de gemeente waarin het object zich bevindt aan te geven. Het is een registergegeven binnen de class Rijksmonument."@nl ;
-  dcterms:description "The property 'heeftGemeente' is used to indicate the relationship between a cultural heritage object and the municipality in which the object is located. It is a registry entry within the class Rijksmonument."@en ;
+  rdfs:comment "De property heeftGemeente is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "The property heeftGemeente is a registry entry within the class Rijksmonument."@en ;
+  rdfs:comment "De property heeftGemeente legt de relatie tussen de basisregistratie relatie van een cultuurhistorisch object en de gemeente waarin het cultuurhistorisch object zich bevindt."@nl ;
+  rdfs:comment "The property heeftGemeente establishes the relationship between the base registration relationship of a cultural heritage object and the municipality in which the cultural heritage object is located."@en ;
+  dcterms:description "De property heeftGemeente wordt gebruikt om de relatie tussen een cultuurhistorisch object en de gemeente waarin het object zich bevindt aan te geven. Het is een registergegeven binnen de class Rijksmonument."@nl ;
+  dcterms:description "The property heeftGemeente is used to indicate the relationship between a cultural heritage object and the municipality in which the object is located. It is a registry entry within the class Rijksmonument."@en ;
   rdfs:domain ceo:BasisregistratieRelatie ;
   rdfs:label "Heeft gemeente"@nl ;
   rdfs:label "Has municipality"@en ;
@@ -1006,7 +1113,7 @@ ceo:heeftGeometrie
   rdfs:subPropertyOf gsp:hasGeometry ;
   skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/geometrie/10000224> ;
   dcterms:description "De eigenschap heeftGeometrie legt de relatie tussen een cultuurhistorisch object en de geometrie vast. Het wordt gebruikt om aan te geven dat een cultuurhistorisch object een bepaalde geometrie heeft."@nl ;
-  dcterms:description "The property 'heeftGeometrie' establishes the relationship between a cultural heritage object and its geometry. It is used to indicate that a cultural heritage object has a certain geometry."@en ;
+  dcterms:description "The property heeftGeometrie establishes the relationship between a cultural heritage object and its geometry. It is used to indicate that a cultural heritage object has a certain geometry."@en ;
 .
 ceo:heeftGeometrieKwaliteit
   rdf:type owl:ObjectProperty ;
@@ -1316,10 +1423,10 @@ ceo:heeftProvincie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-02-02"^^xsd:date ;
   dcterms:modified "2022-04-28" ;
-  rdfs:comment "De property 'heeftProvincie' legt de relatie tussen de BasisRegistratieRelatie van een cultuurhistorisch object en de provincie waarin het cultuurhistorisch object zich bevindt."@nl ;
-  rdfs:comment "The property 'heeftProvincie' establishes the relationship between the BaseRegistratieRelatie of a cultural heritage object and the province in which the cultural heritage object is located."@en ;
-  dcterms:description "De property 'heeftProvincie' wordt gebruikt om de relatie tussen een cultuurhistorisch object en de provincie waarin het object zich bevindt aan te geven. Het is een registergegeven binnen de class Rijksmonument."@nl ;
-  dcterms:description "The property 'heeftProvincie' is used to indicate the relationship between a cultural heritage object and the province in which the object is located. It is a registry entry within the class Rijksmonument."@en ;
+  rdfs:comment "De property heeftProvincie legt de relatie tussen de BasisRegistratieRelatie van een cultuurhistorisch object en de provincie waarin het cultuurhistorisch object zich bevindt."@nl ;
+  rdfs:comment "The property heeftProvincie establishes the relationship between the BaseRegistratieRelatie of a cultural heritage object and the province in which the cultural heritage object is located."@en ;
+  dcterms:description "De property heeftProvincie wordt gebruikt om de relatie tussen een cultuurhistorisch object en de provincie waarin het object zich bevindt aan te geven. Het is een registergegeven binnen de class Rijksmonument."@nl ;
+  dcterms:description "The property heeftProvincie is used to indicate the relationship between a cultural heritage object and the province in which the object is located. It is a registry entry within the class Rijksmonument."@en ;
   rdfs:domain ceo:BasisregistratieRelatie ;
   rdfs:label "Heeft provincie"@nl ;
   rdfs:label "Has province"@en ;
@@ -1435,8 +1542,8 @@ ceo:heeftType
   rdfs:label "Heeft type"@nl ;
   rdfs:label "Has type"@en ;
   rdfs:range ceo:Type ;
-  dcterms:description "De property heeftType legt de relatie tussen een cultuurhistorisch object en het type vast. Dit kan bijvoorbeeld worden gebruikt om aan te geven dat een object het type 'beeldhouwwerk' heeft."@nl ;
-  dcterms:description "The property heeftType establishes the relationship between a cultural heritage object and its type. It can be used to indicate that an object has the type 'sculpture', for example."@en ;
+  dcterms:description "De property heeftType legt de relatie tussen een cultuurhistorisch object en het type vast. Dit kan bijvoorbeeld worden gebruikt om aan te geven dat een object het type beeldhouwwerk heeft."@nl ;
+  dcterms:description "The property heeftType establishes the relationship between a cultural heritage object and its type. It can be used to indicate that an object has the type sculpture, for example."@en ;
   skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/type/12440> ;
 .
 ceo:heeftTypeNaam
@@ -1568,9 +1675,14 @@ ceo:hoofdfunctie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-13"^^xsd:date ;
   rdfs:comment "De property hoofdfunctie wordt gebruikt om aan te geven of een functie de hoofdfunctie van een Cultuurhistorisch Object is."@nl ;
-  rdfs:domain ceo:Functie ;
   rdfs:label "Hoofdfunctie"@nl ;
+  rdfs:label "Main function"@en ;
+  rdfs:comment "The main function property is used to indicate whether a function is the main function of a Cultural Heritage Object."@en ;
+  rdfs:domain ceo:Functie ;
   rdfs:range xsd:boolean ;
+  skos:example "\"0\"^^xsd:boolean" ;
+  dcterms:description "De property hoofdfunctie wordt gebruikt om aan te geven of een functie de hoofdfunctie van een Cultuurhistorisch Object is. Deze eigenschap heeft een waardebereik van booleaanse waarden (true of false). Wanneer een functie als hoofdfunctie wordt gemarkeerd, geeft dit aan dat het Cultuurhistorisch Object primair geassocieerd is met die functie."@nl ;
+  dcterms:description "The main function property is used to indicate whether a function is the main function of a Cultural Heritage Object. This property has a value range of boolean values (true or false). When a function is marked as the main function, it indicates that the Cultural Heritage Object is primarily associated with that function."@en ;
 .
 ceo:hoortBijZaak
   rdf:type owl:ObjectProperty ;
@@ -1592,43 +1704,58 @@ ceo:huidigeNaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-02-06"^^xsd:date ;
   rdfs:comment "De property huidigeNaam wordt gebruikt om aan te geven of de naam, de huidige naam is van een cultuurhistorisch object."@nl ;
+  rdfs:comment "The property huidigeNaam is used to indicate whether the name is the current name of a cultural heritage object."@en ;
   rdfs:domain ceo:Naam ;
   rdfs:label "Huidige naam"@nl ;
+  rdfs:label "Current name"@en ;
   rdfs:range xsd:boolean ;
+  dcterms:description "Deze eigenschap geeft aan of de naam van het cultuurhistorisch object de huidige naam is."@nl ;
+  dcterms:description "This property indicates whether the name of the cultural heritage object is the current name."@en ;
+  skos:example "\"1\"^^xsd:boolean" ;
 .
 ceo:huisnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property 'huisnummer' wordt gebruikt om het huisnummer, huisletter en huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
-  rdfs:comment "De property 'huisnummer' is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "The property 'huisnummer' is a registry data within the class Rijksmonument."@en ;
-  rdfs:comment "The property 'huisnummer' is used to indicate the house number, house letter, and house number addition of a cultural heritage object."@en ;
+  rdfs:comment "De property huisnummer wordt gebruikt om het huisnummer, huisletter en huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
+  rdfs:comment "De property huisnummer is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "The property huisnummer is a registry data within the class Rijksmonument."@en ;
+  rdfs:comment "The property huisnummer is used to indicate the house number, house letter, and house number addition of a cultural heritage object."@en ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Huisnummer"@nl ;
   rdfs:label "House number"@en ;
   rdfs:range xsd:string ;
   ceo:registergegeven "true"^^xsd:boolean ;
-  dcterms:description "De property 'huisnummer' wordt gebruikt om het huisnummer, huisletter en huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
-  dcterms:description "The property 'huisnummer' is used to indicate the house number, house letter, and house number addition of a cultural heritage object."@en ;
+  dcterms:description "De property huisnummer wordt gebruikt om het huisnummer, huisletter en huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
+  dcterms:description "The property huisnummer is used to indicate the house number, house letter, and house number addition of a cultural heritage object."@en ;
   skos:example "2" ;
 .
 ceo:indicatieArcheologischeMonumentenKaartWaardig
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
   rdfs:comment "De property indicatieArcheologischeMonumentenKaartWaardig wordt gebruikt om aan te geven of een archeologisch onderzoeksgebied AMK waardig is."@nl ;
+  rdfs:comment "The property indicatieArcheologischeMonumentenKaartWaardig is used to indicate whether an archaeological research area is AMK worthy."@en ;
   rdfs:domain ceo:ArcheologischOnderzoeksgebied ;
   rdfs:label "Indicatie archeologische monumenten kaart waardig"@nl ;
+  rdfs:label "Indication of archaeological monument map worthy"@en ;
   rdfs:range xsd:boolean ;
+  skos:example "0"^^xsd:boolean" ;
+  dcterms:description "Geeft aan of het archeologisch onderzoeksgebied AMK waardig is."@nl ;
+  dcterms:description "Indicates whether the archaeological research area is AMK worthy."@en ;
 .
 ceo:internationaalKenteken
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
   rdfs:comment "De property internationaalKenteken wordt gebruikt om aan te geven of een internationaal kenteken aan een Cultuurhistorisch object is gegeven."@nl ;
+  rdfs:comment "The property internationaalKenteken is used to indicate whether an international plate has been assigned to a Cultural Heritage object."@en ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Internationaal kenteken"@nl ;
+  rdfs:label "International plate"@en ;
   rdfs:range xsd:boolean ;
-.
+  skos:example "\"1\"^^xsd:boolean" ;
+  dcterms:description "De property internationaalKenteken wordt gebruikt om aan te geven of een internationaal kenteken aan een Cultuurhistorisch object is gegeven. Bijvoorbeeld, als een Cultuurhistorisch object internationaal erkend is, kan het de status 'true' hebben voor deze property."@nl ;
+  dcterms:description "The property internationaalKenteken is used to indicate whether an international plate has been assigned to a Cultural Heritage object. For instance, if a Cultural Heritage object is internationally recognized, it can have a 'true' value for this property."@en .
+
 ceo:isHoofdobjectVanComplex
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-09-25"^^xsd:date ;
@@ -1678,18 +1805,23 @@ ceo:kaartbladcode
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-21"^^xsd:date ;
   rdfs:comment "De property kaartbladcode wordt gebruikt om aan te geven welke kaartbladcode is gekoppeld aan de locatie aanduiding."@nl ;
-  rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Kaartbladcode"@nl ;
+  rdfs:label "Card code"@en ; 
+  rdfs:comment "The property card code is used to indicate the associated card code of the location identifier."@en ; 
+  rdfs:domain ceo:LocatieAanduiding ;
   rdfs:range xsd:string ;
+  skos:example "39H" ;
+  dcterms:description "Een kaartbladcode is een code die wordt gebruikt om een specifiek kaartblad of een deel daarvan aan te duiden."@nl ;  # dcterms:description in het Nederlands
+  dcterms:description "A card code is a code used to identify a specific map sheet or a part thereof."@en ;  # dcterms:description in het Engels
 .
 ceo:kadastraleGemeentecode
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-23"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property 'kadastraleGemeentecode' is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "De property 'kadastraleGemeentecode' wordt gebruikt om aan te geven of een kadastrale gemeente code is toegewezen aan een rijksmonument."@nl ;
-  rdfs:comment "The property 'kadastraleGemeentecode' is a registry data within the class Rijksmonument."@en ;
-  rdfs:comment "The property 'kadastraleGemeentecode' is used to indicate whether a cadastral municipality code is assigned to a rijksmonument."@en ;
+  rdfs:comment "De property kadastraleGemeentecode is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "De property kadastraleGemeentecode wordt gebruikt om aan te geven of een kadastrale gemeente code is toegewezen aan een rijksmonument."@nl ;
+  rdfs:comment "The property kadastraleGemeentecode is a registry data within the class Rijksmonument."@en ;
+  rdfs:comment "The property kadastraleGemeentecode is used to indicate whether a cadastral municipality code is assigned to a rijksmonument."@en ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Kadastrale gemeentecode"@nl ;
   rdfs:label "Cadastral municipality code"@en ;
@@ -1702,17 +1834,27 @@ ceo:kennisregistratieToelichting
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-23"^^xsd:date ;
   rdfs:comment "De property kennisegistratieToelichting wordt gebruikt om aan te geven de toelichting op de kennisregistratie instance."@nl ;
-  rdfs:domain ceo:Kennisregistratie ;
+  rdfs:comment "The property kennisregistratieToelichting is used to indicate the explanation of the knowledge registration instance."@en ;
   rdfs:label "Kennisregistratie toelichting"@nl ;
+  rdfs:label "Knowledge registration explanation"@en ;
+  rdfs:domain ceo:Kennisregistratie ;
   rdfs:range xsd:string ;
+  skos:example "Toevoeging vanuit Shipwreck Database Flevoland 3" ;
+  dcterms:description "Dit is een eigenschap die wordt gebruikt om de toelichting op de kennisregistratie-instantie vast te leggen. Het beschrijft het doel of de inhoud van de kennisregistratie."@nl ;
+  dcterms:description "This is a property used to capture the explanation of the knowledge registration instance. It describes the purpose or content of the knowledge registration."@en ;
 .
 ceo:kennisregistratienummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-03"^^xsd:date ;
-  rdfs:comment "De property kennisegistratienummer wordt gebruikt om aan te geven het unieke nummer waaronder de kennisregistratie instance bekend is."@nl ;
+  rdfs:comment "De property kennisregistratienummer wordt gebruikt om aan te geven het unieke nummer waaronder de kennisregistratie instance bekend is."@nl ;
+  rdfs:comment "The property kennisregistratienummer is used to indicate the unique number under which the knowledge registration instance is known."@en ;
   rdfs:domain ceo:Kennisregistratie ;
-  rdfs:label "Kennisegistratienummer"@nl ;
+  rdfs:label "Kennisregistratienummer"@nl ;
+  rdfs:label "Knowledge Registration Number"@en ;
   rdfs:range xsd:string;
+  skos:example "5177345" ;
+  dcterms:description "Dit is het unieke nummer waaronder de kennisregistratie instance bekend is: 5177345."@nl ;
+  dcterms:description "This is the unique number under which the knowledge registration instance is known: 5177345."@en ;
 .
 ceo:ligtInObject
   rdf:type owl:ObjectProperty ;
@@ -1733,52 +1875,77 @@ ceo:kadasterdeel
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2022-12-19"^^xsd:date ;
   rdfs:comment "De property kadasterdeel wordt gebruikt om aan te geven het kadasterdeel waaronder het rijksmonument bekend is."@nl ;
+  rdfs:comment "The property kadasterdeel is used to indicate the cadastral parcel under which the national monument is known."@en ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Kadasterdeel"@nl ;
+  rdfs:label "Cadastral parcel"@en ;
   rdfs:range xsd:string ;
+  skos:example "82650" ;
+  dcterms:description "De property kadasterdeel wordt gebruikt om aan te geven het kadasterdeel waaronder het rijksmonument bekend is. Voorbeeldelement: 82650"@nl ;
+  dcterms:description "The property kadasterdeel is used to indicate the cadastral parcel under which the national monument is known. Example element: 82650"@en ;
 .
 ceo:kadasterdeelnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2022-12-19"^^xsd:date ;
   rdfs:comment "De property kadasterdeelnummer wordt gebruikt om aan te geven het kadasterdeelnummer waaronder het rijksmonument bekend is."@nl ;
-  rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Kadasterdeelnummer"@nl ;
+  rdfs:label "Kadasterdeelnummer"@en ;
+  rdfs:comment "The property kadasterdeelnummer is used to indicate the cadastral parcel number under which the national monument is known."@en ;
+  rdfs:domain ceo:Rijksmonument ;
   rdfs:range xsd:string ;
+  skos:example "95" ;
+  dcterms:description "Eigenschap voor het weergeven van het kadasterdeelnummer van het rijksmonument."@nl ;
+  dcterms:description "Property for indicating the cadastral parcel number of the national monument."@en ;
 .
 ceo:locatieAanduidingnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-03"^^xsd:date ;
   rdfs:comment "De property locatieAanduidingnummer wordt gebruikt om aan te geven het unieke nummer waaronder de locatie aanduiding instance bekend is."@nl ;
+  rdfs:comment "The property locatieAanduidingnummer is used to indicate the unique number under which the location indication instance is known."@en ;
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Locatie aanduidingnummer"@nl ;
+  rdfs:label "Location indication number"@en ;
   rdfs:range xsd:string ;
+  skos:example "10006987" ;
+  dcterms:description "Een datatype-eigenschap die wordt gebruikt om het unieke nummer waaronder de locatieaanduiding-instantie bekend is, aan te geven."@nl ;
+  dcterms:description "A datatype property used to indicate the unique number under which the location indication instance is known."@en ;
 .
 ceo:locatienaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-21"^^xsd:date ;
   dcterms:modified "2018-06-28"^^xsd:date ;
   rdfs:comment "De property locatienaam wordt gebruikt om aan te geven welke locatie naam is gekoppeld aan de locatie aanduiding"@nl ;
+  rdfs:comment "The property locatienaam is used to indicate the location name linked to the location indication"@en ;
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:label "Locatienaam"@nl ;
+  rdfs:label "Location Name"@en ;
   rdfs:range xsd:string ;
+  skos:example "Hamburgerstraat 1958, 25" ;
+  dcterms:description "Deze eigenschap geeft de naam van de locatie weer. Het datatype is een string."@nl ;
+  dcterms:description "This property represents the name of the location. The datatype is string."@en ;
 .
 ceo:locatieomschrijving
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-02-02"^^xsd:date ;
   dcterms:modified "2018-06-28"^^xsd:date ;
-  rdfs:comment "De property locatieomschrijving wordt gebruikt om aan te geven de locatie registratie van een rijksmonument, wanneer het rijksmonument geen verblijfsobject in de BAG is."@nl ;
-  rdfs:domain ceo:LocatieAanduiding ;
+  rdfs:comment "De property locatieomschrijving wordt gebruikt om aan te geven de locatie registratie van een rijksmonument, wanneer het rijksmonument geen 'verblijfsobject' in de BAG is."@nl ;
   rdfs:label "Locatieomschrijving"@nl ;
+  rdfs:label "Location Description"@en ;
+  rdfs:comment "The property locatieomschrijving is used to indicate the location registration of a national monument when the national monument is not a 'verblijfsobject' in the BAG (the Dutch Building and Address Database)."@en ;
+  rdfs:domain ceo:LocatieAanduiding ;
   rdfs:range xsd:string ;
+  dcterms:description "De property locatieomschrijving wordt gebruikt om aan te geven de locatie registratie van een rijksmonument, wanneer het rijksmonument geen 'verblijfsobject' in de BAG is."@nl ;
+  dcterms:description "The property locatieomschrijving is used to indicate the location registration of a national monument when the national monument is not a 'verblijfsobject' in the BAG (the Dutch Building and Address Database)."@en ;
+  skos:example "Gracht en omwalling noordzijde stad" ;
 .
 ceo:naam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-02-06"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property 'naam' is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "De property 'naam' wordt gebruikt om aan te geven de naam van het cultuurhistorisch object."@nl ;
-  rdfs:comment "The property 'naam' is a registry data within the class Rijksmonument."@en ;
-  rdfs:comment "The property 'naam' is used to indicate the name of the cultural heritage object."@en ;
+  rdfs:comment "De property naam is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "De property naam wordt gebruikt om aan te geven de naam van het cultuurhistorisch object."@nl ;
+  rdfs:comment "The property naam is a registry data within the class Rijksmonument."@en ;
+  rdfs:comment "The property naam is used to indicate the name of the cultural heritage object."@en ;
   dcterms:description "De naam van het cultuurhistorisch object."@nl ;
   dcterms:description "The name of the cultural heritage object."@en ;
   rdfs:domain ceo:Naam ;
@@ -1792,8 +1959,8 @@ ceo:omschrijving
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-02-06"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property 'omschrijving' wordt gebruikt om aan te geven de omschrijving van een cultuurhistorisch object."@nl ;
-  rdfs:comment "The property 'omschrijving' is used to indicate the description of a cultural heritage object."@en ;
+  rdfs:comment "De property omschrijving wordt gebruikt om aan te geven de omschrijving van een cultuurhistorisch object."@nl ;
+  rdfs:comment "The property omschrijving is used to indicate the description of a cultural heritage object."@en ;
   dcterms:description "Een tekstuele beschrijving van een cultuurhistorisch object."@nl ;
   dcterms:description "A textual description of a cultural heritage object."@en ;
   rdfs:domain ceo:Omschrijving ;
@@ -1807,10 +1974,10 @@ ceo:openbareRuimte
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property 'openbareRuimte' wordt gebruikt om aan te geven de openbare ruimte van een cultuurhistorisch object."@nl ;
-  rdfs:comment "De property 'openbareRuimte' is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "The property 'openbareRuimte' is used to indicate the public space of a cultural heritage object."@en ;
-  rdfs:comment "The property 'openbareRuimte' is a registry data within the class Rijksmonument."@en ;
+  rdfs:comment "De property openbareRuimte wordt gebruikt om aan te geven de openbare ruimte van een cultuurhistorisch object."@nl ;
+  rdfs:comment "De property openbareRuimte is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "The property openbareRuimte is used to indicate the public space of a cultural heritage object."@en ;
+  rdfs:comment "The property openbareRuimte is a registry data within the class Rijksmonument."@en ;
   dcterms:description "De openbare ruimte waarin het cultuurhistorisch object zich bevindt."@nl ;
   dcterms:description "The public space in which the cultural heritage object is located."@en ;
   rdfs:domain ceo:BAGRelatie ;
@@ -1824,18 +1991,22 @@ ceo:pandIdentificatie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-23"^^xsd:date ;
   rdfs:comment "De property pandIdentificatie wordt gebruikt om aan te geven welke pand identificatie aan de Basisregistratie Adressen en Gebouwen is gekoppeld."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Pand identificatie"@nl ;
+  rdfs:label "Pand identification"@en ; // Engelse vertaling van de label toegevoegd
+  rdfs:comment "The property pandIdentificatie is used to indicate which building identification is linked to the Basisregistratie Adressen en Gebouwen."@en ; // Engelse vertaling van de comment toegevoegd
   rdfs:range xsd:string ;
+  skos:example "0448100000005673" ;
+  dcterms:description "Een unieke identificatie van een pand gekoppeld aan de Basisregistratie Adressen en Gebouwen."@nl ; // Nederlandse beschrijving gegenereerd met informatie uit comment en label
+  dcterms:description "A unique identification of a building linked to the Basisregistratie Adressen en Gebouwen."@en ; // Engelse beschrijving gegenereerd met informatie uit comment en label
 .
 ceo:perceelnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-02-20"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property 'perceelnummer' wordt gebruikt om aan te geven of het nummer dat aan een geheel perceel of een complex, uniek identificeert wordt binnen de sectie."@nl ;
-  rdfs:comment "The property 'plot number' is used to indicate whether the number attached to an entire plot or a complex, uniquely identifies it within the section."@en ;
-  rdfs:comment "De property 'perceelnummer' is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "The property 'plot number' is a registry entry within the class Rijksmonument."@en ;
+  rdfs:comment "De property perceelnummer wordt gebruikt om aan te geven of het nummer dat aan een geheel perceel of een complex, uniek identificeert wordt binnen de sectie."@nl ;
+  rdfs:comment "The property plot number is used to indicate whether the number attached to an entire plot or a complex, uniquely identifies it within the section."@en ;
+  rdfs:comment "De property perceelnummer is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "The property plot number is a registry entry within the class Rijksmonument."@en ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Perceelnummer"@nl ;
   rdfs:label "Plot number"@en ;
@@ -1848,18 +2019,24 @@ ceo:plaatscode
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-05-24"^^xsd:date ;
   rdfs:comment "De property plaatsCode wordt gebruikt om aan te geven welke plaats code is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:comment "The property placeCode is used to indicate which place code is linked to the national monument."@en ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Plaatscode"@nl ;
+  rdfs:label "Place code"@en ;
   rdfs:range xsd:string ;
+  skos:editorialNote "geen data aanwezig"@nl ;
+  skos:editorialNote "no data"@en ;
+  dcterms:description "Een code die de plaats aangeeft waaraan het rijksmonument is gekoppeld."@nl ;
+  dcterms:description "A code indicating the place to which the national monument is linked."@en ;
 .
 ceo:postcode
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property 'postcode' is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "De property 'postcode' wordt gebruikt om aan te geven de postcode van een cultuurhistorisch object."@nl ;
-  rdfs:comment "The property 'postcode' is a registry data within the class Rijksmonument."@en ;
-  rdfs:comment "The property 'postcode' is used to indicate the postcode of a cultural heritage object."@en ;
+  rdfs:comment "De property postcode is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "De property postcode wordt gebruikt om aan te geven de postcode van een cultuurhistorisch object."@nl ;
+  rdfs:comment "The property postcode is a registry data within the class Rijksmonument."@en ;
+  rdfs:comment "The property postcode is used to indicate the postcode of a cultural heritage object."@en ;
   dcterms:description "De postcode van de locatie van het cultuurhistorisch object."@nl ;
   dcterms:description "The postcode of the location of the cultural heritage object."@en ;
   rdfs:domain ceo:BAGRelatie ;
@@ -1874,25 +2051,35 @@ ceo:provinciecode
   dcterms:created "2018-05-24"^^xsd:date ;
   dcterms:modified "2018-05-11"^^xsd:date ;
   rdfs:comment "De property provincieCode wordt gebruikt om aan te geven welke provincie code is gekoppeld aan het rijksmonument."@nl ;
+  rdfs:comment "The property provinceCode is used to indicate which province code is linked to the national monument."@en ;
   rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Provinciecode"@nl ;
+  rdfs:label "Province code"@en ;
   rdfs:range xsd:string ;
+  skos:example "zh" ;
+  dcterms:description "De provinciecode is een stringwaarde die de code van de provincie waar het rijksmonument zich bevindt, aangeeft."@nl ;
+  dcterms:description "The province code is a string value that indicates the code of the province where the national monument is located."@en ;
 .
 ceo:registratiedatum
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-04-18"^^xsd:date ;
   dcterms:modified "2022-12-19"^^xsd:date ;
-  rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven de registratiedatum van de kennisregistratie."@nl ;
   rdfs:label "Registratiedatum"@nl ;
+  rdfs:label "Registration date"@en ;
+  rdfs:comment "De property registratiedatum wordt gebruikt om aan te geven de registratiedatum van de kennisregistratie."@nl ;
+  rdfs:comment "The registratiedatum property is used to indicate the registration date of the knowledge registration."@en ;
   rdfs:range xsd:date ;
+  skos:example "\"2015-04-22\"^^xsd:date" ;
+  dcterms:description "De registratiedatum property geeft de datum aan waarop de kennisregistratie is geregistreerd."@nl ;
+  dcterms:description "The registratiedatum property indicates the date when the knowledge registration was recorded."@en ;
 .
 ceo:registergegeven
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2020-04-20"^^xsd:date ;
   rdfs:comment "De property is alleen van toepassing binnen de class Rijksmonument."@nl ;
   rdfs:comment "De property registergegeven wordt gebruikt om aan te geven of een property een registergegeven is."@nl ;
-  rdfs:comment "The property 'registergegeven' is only applicable within the class Rijksmonument."@en ;
-  rdfs:comment "The property 'registergegeven' is used to indicate whether a property is a registry data."@en ;
+  rdfs:comment "The property registergegeven is only applicable within the class Rijksmonument."@en ;
+  rdfs:comment "The property registergegeven is used to indicate whether a property is a registry data."@en ;
   dcterms:description "Een boolean-waarde die aangeeft of de property een registergegeven is."@nl ;
   dcterms:description "A boolean value indicating whether the property is a registry data."@en ;
   rdfs:label "registergegeven"@nl ;
@@ -1906,9 +2093,9 @@ ceo:rijksmonumentnummer
   dcterms:created "2018-01-30"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
   rdfs:comment "Het rijksmonumentnummer is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "De property 'rijksmonumentnummer' wordt gebruikt om aan te geven het unieke nummer waaronder het rijksmonument bekend is in het monumentenregister."@nl ;
-  rdfs:comment "The property 'rijksmonumentnummer' is a registry data within the class Rijksmonument."@en ;
-  rdfs:comment "The property 'rijksmonumentnummer' is used to indicate the unique number under which the national monument is known in the monument register."@en ;
+  rdfs:comment "De property rijksmonumentnummer wordt gebruikt om aan te geven het unieke nummer waaronder het rijksmonument bekend is in het monumentenregister."@nl ;
+  rdfs:comment "The property rijksmonumentnummer is a registry data within the class Rijksmonument."@en ;
+  rdfs:comment "The property rijksmonumentnummer is used to indicate the unique number under which the national monument is known in the monument register."@en ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Rijksmonumentnummer"@nl ;
   rdfs:label "Rijksmonument number"@en ;
@@ -1920,56 +2107,71 @@ ceo:sectie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-23"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "The property 'sectie' is used to indicate the section within a plot."@en ;
-  rdfs:comment "The property 'sectie' is a registry item within the 'Rijksmonument' class."@en ;
-  rdfs:comment "De property 'sectie' wordt gebruikt om de sectie binnen een perceel aan te geven."@nl ;
-  rdfs:comment "De property 'sectie' is een registergegeven binnen de class 'Rijksmonument'."@nl ;
+  rdfs:comment "The property sectie is used to indicate the section within a plot."@en ;
+  rdfs:comment "The property sectie is a registry item within the Rijksmonument class."@en ;
+  rdfs:comment "De property sectie wordt gebruikt om de sectie binnen een perceel aan te geven."@nl ;
+  rdfs:comment "De property sectie is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:label "sectie"@nl ;
   rdfs:label "section"@en ;
   rdfs:range xsd:string ;
   ceo:registergegeven "true"^^xsd:boolean ;
-  dcterms:description "De property 'sectie' wordt gebruikt om de sectie binnen een perceel aan te geven, zoals gedefinieerd in de BRK-registratie."@nl ;
-  dcterms:description "The property 'sectie' is used to indicate the section within a plot, as defined in the BRK registration."@en ;
+  dcterms:description "De property sectie wordt gebruikt om de sectie binnen een perceel aan te geven, zoals gedefinieerd in de BRK-registratie."@nl ;
+  dcterms:description "The property sectie is used to indicate the section within a plot, as defined in the BRK registration."@en ;
   skos:example "G" ;
 .
 ceo:verblijfsobjectIdentificatie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-23"^^xsd:date ;
   rdfs:comment "De property verblijfsobjectIdentificatie wordt gebruikt om aan te geven welke verblijfsobject identificatie aan de Basisregistratie Adressen en Gebouwen is gekoppeld."@nl ;
+  rdfs:comment "The property verblijfsobjectIdentificatie is used to indicate which residential object identification is linked to the Basisregistratie Adressen en Gebouwen."@en ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Verblijfsobject identificatie"@nl ;
+  rdfs:label "Residential object identification"@en ;
   rdfs:range xsd:string ;
+  dcterms:description "Deze eigenschap geeft de identificatie van het verblijfsobject weer zoals vastgelegd in de Basisregistratie Adressen en Gebouwen."@nl ;
+  dcterms:description "This property represents the identification of the residential object as recorded in the Basisregistratie Adressen en Gebouwen."@en ;
+  skos:example "0363010000588383" ;
 .
 ceo:volledigAdres
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
   rdfs:comment "De property volledigAdres wordt gebruikt om aan te geven het volledige adres van een cultuurhistorisch object."@nl ;
-  rdfs:domain ceo:BAGRelatie ;
+  rdfs:comment "The property volledigAdres is used to indicate the full address of a cultural heritage object."@en ;
   rdfs:label "Volledig adres"@nl ;
+  rdfs:label "Full address"@en ;
   rdfs:range xsd:string ;
+  skos:example "Eerste Bloemdwarsstraat 10"@nl ;
+  skos:example "Eerste Bloemdwarsstraat 10"@en ;
+  dcterms:description "De property volledigAdres wordt gebruikt om aan te geven het volledige adres van een cultuurhistorisch object."@nl ;
+  dcterms:description "The property volledigAdres is used to indicate the full address of a cultural heritage object."@en ;
 .
 ceo:werelderfgoednummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2019-11-22"^^xsd:date ;
   rdfs:comment "De property wereldnummer wordt gebruikt om aan te geven het unieke nummer waaronder het werelderfgoed bekend is."@nl ;
-  rdfs:domain ceo:Werelderfgoed ;
+  rdfs:comment "The property world number is used to indicate the unique number under which the world heritage is known."@en ;
   rdfs:label "Werelderfgoednummer"@nl ;
+  rdfs:label "World Heritage Number"@en ;
+  rdfs:domain ceo:Werelderfgoed ;
   rdfs:range xsd:string ;
+  skos:example "759" ;
+  dcterms:description "Een uniek nummer dat wordt gebruikt om dit specifieke werelderfgoed te identificeren."@nl ;
+  dcterms:description "A unique number used to identify this specific world heritage."@en ;
 .
 ceo:woonplaatsnaam
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
   dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property 'woonplaatsnaam' wordt gebruikt om de woonplaats van een cultuurhistorisch object aan te geven."@nl ;
-  rdfs:comment "De property 'woonplaatsnaam' is een registergegeven binnen de class Rijksmonument."@nl ;
-  rdfs:comment "The property 'woonplaatsnaam' is used to indicate the place of residence of a cultural heritage object."@en ;
-  rdfs:comment "The property 'woonplaatsnaam' is a registry item within the 'Rijksmonument' class."@en ;
+  rdfs:comment "De property woonplaatsnaam wordt gebruikt om de woonplaats van een cultuurhistorisch object aan te geven."@nl ;
+  rdfs:comment "De property woonplaatsnaam is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "The property woonplaatsnaam is used to indicate the place of residence of a cultural heritage object."@en ;
+  rdfs:comment "The property woonplaatsnaam is a registry item within the Rijksmonument class."@en ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Woonplaatsnaam"@nl ;
   rdfs:label "Place of Residence"@en ;
   rdfs:range xsd:string ;
   ceo:registergegeven "true"^^xsd:boolean ;
-  dcterms:description "De property 'woonplaatsnaam' wordt gebruikt om de woonplaats van een cultuurhistorisch object aan te geven, zoals geregistreerd in de Basisregistratie Adressen en Gebouwen (BAG)."@nl ;
-  dcterms:description "The property 'woonplaatsnaam' is used to indicate the place of residence of a cultural heritage object, as registered in the Basisregistratie Adressen en Gebouwen (BAG)."@en ;
+  dcterms:description "De property woonplaatsnaam wordt gebruikt om de woonplaats van een cultuurhistorisch object aan te geven, zoals geregistreerd in de Basisregistratie Adressen en Gebouwen (BAG)."@nl ;
+  dcterms:description "The property woonplaatsnaam is used to indicate the place of residence of a cultural heritage object, as registered in the Basisregistratie Adressen en Gebouwen (BAG)."@en ;
   skos:example "Borkeld" ;
 .
