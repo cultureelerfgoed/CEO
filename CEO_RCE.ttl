@@ -1582,7 +1582,7 @@ ceo:heeftZaak
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
   dcterms:description "De property heeftZaak legt de relatie vast tussen de kennisregistratie en de zaak."@nl ;
   dcterms:description "The heeftZaak property establishes the relationship between the knowledge registration and the case."@en ;
-  skos:editorialNote "Property heeftnog geen data." @nl ;
+  skos:editorialNote "Property heeft nog geen data." @nl ;
   skos:editorialNote "Property has no data yet." @en ;
 .
 ceo:heeftZekerheidsaanduiding
@@ -1771,6 +1771,8 @@ ceo:kadastraleGemeentecode
   dcterms:description "De naam van de kadastrale gemeente."@nl ;
   dcterms:description "The name of the cadastral municipality."@en ;
   ceo:registergegeven "true"^^xsd:boolean ;
+  skos:editorialNote "Property heeft geen data. Lijkt foutief" @nl ;
+  skos:editorialNote "Property has no data. Looks like a fault" @en ;
 .
 ceo:kennisregistratieToelichting
   rdf:type owl:DatatypeProperty ;
@@ -1817,27 +1819,27 @@ ceo:kadasterdeel
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2022-12-19"^^xsd:date ;
   rdfs:comment "De property kadasterdeel wordt gebruikt om aan te geven het kadasterdeel waaronder het rijksmonument bekend is."@nl ;
-  rdfs:comment "The property kadasterdeel is used to indicate the cadastral parcel under which the national monument is known."@en ;
+  rdfs:comment "The property kadasterdeel is used to indicate the cadastral plot under which the national monument is known."@en ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "Kadasterdeel"@nl ;
-  rdfs:label "Cadastral parcel"@en ;
+  rdfs:label "Cadastral plot"@en ;
   rdfs:range xsd:string ;
   skos:example "82650" ;
   dcterms:description "De property kadasterdeel wordt gebruikt om aan te geven het kadasterdeel waaronder het rijksmonument bekend is. Voorbeeldelement: 82650"@nl ;
-  dcterms:description "The property kadasterdeel is used to indicate the cadastral parcel under which the national monument is known. Example element: 82650"@en ;
+  dcterms:description "The property kadasterdeel is used to indicate the cadastral plot under which the national monument is known. Example element: 82650"@en ;
 .
 ceo:kadasterdeelnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2022-12-19"^^xsd:date ;
   rdfs:comment "De property kadasterdeelnummer wordt gebruikt om aan te geven het kadasterdeelnummer waaronder het rijksmonument bekend is."@nl ;
   rdfs:label "Kadasterdeelnummer"@nl ;
-  rdfs:label "Kadasterdeelnummer"@en ;
-  rdfs:comment "The property kadasterdeelnummer is used to indicate the cadastral parcel number under which the national monument is known."@en ;
+  rdfs:label "Cadastre plot number"@en ;
+  rdfs:comment "The property kadasterdeelnummer is used to indicate the cadastral plot number under which the national monument is known."@en ;
   rdfs:domain ceo:Rijksmonument ;
   rdfs:range xsd:string ;
   skos:example "95" ;
   dcterms:description "Eigenschap voor het weergeven van het kadasterdeelnummer van het rijksmonument."@nl ;
-  dcterms:description "Property for indicating the cadastral parcel number of the national monument."@en ;
+  dcterms:description "Property for indicating the cadastral plot number of the national monument."@en ;
 .
 ceo:locatieAanduidingnummer
   rdf:type owl:DatatypeProperty ;
