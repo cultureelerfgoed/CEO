@@ -9,60 +9,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-gsp:Geometry
-  rdf:type rdfs:Class ;
-  dc:contributor "Matthew Perry" ;
-  dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-  dc:date "2011-06-16" ;
-  dc:description """The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."""@en ;
-  rdfs:comment """The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."""@en ;
-  rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
-  rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
-  rdfs:label "Geometry"@en ;
-  rdfs:subClassOf rdfs:Resource ;
-.
-gsp:asWKT
-  rdf:type owl:DatatypeProperty ;
-  dc:contributor "Matthew Perry" ;
-  dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-  dc:date "2011-06-16" ;
-  dc:description "The WKT serialization of a geometry" ;
-  rdfs:comment "The WKT serialization of a geometry" ;
-  rdfs:domain gsp:Geometry ;
-  rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
-  rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
-  rdfs:label "asWKT"@en ;
-  rdfs:range gsp:wktLiteral ;
-.
-gsp:hasGeometry
-  rdf:type owl:ObjectProperty ;
-  dc:contributor "Matthew Perry" ;
-  dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-  dc:date "2011-06-16"^^xsd:date ;
-  dc:description "A spatial representation for a given feature."@en ;
-  rdfs:comment "A spatial representation for a given feature."@en ;
-  rdfs:domain gsp:Feature ;
-  rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
-  rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
-  rdfs:label "hasGeometry"@en ;
-  rdfs:range gsp:Geometry ;
-.
-gsp:wktLiteral
-  rdf:type rdfs:Datatype ;
-  dc:contributor "Matthew Perry" ;
-  dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-  dc:date "2011-06-16"^^xsd:date ;
-  dc:description "A Well-known Text serialization of a geometry object."@en ;
-  rdfs:comment "A Well-known Text serialization of a geometry object."@en ;
-  rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
-  rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
-  rdfs:label "Well-known Text Literal"@en ;
-.
-<https://creativecommons.org/licenses/by/4.0/>
-  rdf:type dcterms:License ;
-  dcterms:created "2018-04-23"^^xsd:date ;
-  rdfs:label "Creative Commons Licenses 4.0"@nl ;
-.
 <https://linkeddata.cultureelerfgoed.nl/def/ceo>
   rdf:type owl:Ontology ;
   dcterms:created "2018-04-23"^^xsd:date ;
@@ -81,6 +27,11 @@ gsp:wktLiteral
   rdfs:label "Cultureel Erfgoed Ontologie"@nl ;
   rdfs:label "Cultural Heritage Ontology"@en ;
   foaf:mbox "thesauri@cultureelerfgoed.nl" ;
+.
+<https://creativecommons.org/licenses/by/4.0/>
+  rdf:type dcterms:License ;
+  dcterms:created "2018-04-23"^^xsd:date ;
+  rdfs:label "Creative Commons Licenses 4.0"@nl ;
 .
 ceo:ActorEnRol
   rdf:type owl:Class ;
@@ -112,7 +63,7 @@ ceo:ArcheologischOnderzoeksgebied
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class ArcheologischOnderzoeksgebied is de representatie van een ruimtelijk begrensd gebied, waarin archeologisch onderzoek wordt uitgevoerd door de vergunninghouder tot het doen van onderzoek."@nl ;
-  rdfs:comment "The class ArcheologischOnderzoeksgebied (ArchaeologicalResearchArea) is the representation of a spatially bounded area, in which archaeological research is carried out by the permit holder to conduct research."@en ;
+  rdfs:comment "The class ArcheologischOnderzoeksgebied is the representation of a spatially bounded area, in which archaeological research is carried out by the permit holder to conduct research."@en ;
   rdfs:label "Archeologisch onderzoeksgebied"@nl ;
   rdfs:label "ArchaeologicalResearchArea"@en ;
   dcterms:description "This class represents a spatially bounded area in which archaeological research is carried out by the permit holder to conduct research."@en ;
@@ -251,7 +202,7 @@ ceo:CultuurhistorischObject
   rdf:type owl:Class ;
   dcterms:created "2018-01-30"^^xsd:date ;
   rdfs:comment "De class CultuurhistorischObject is de representatie van een fenomeen in de werkelijkheid met een zekere cultuurhistorische waarde."@nl ;
-  rdfs:comment "The class CultuurhistorischObject (Cultural-historical Object) is the representation of a phenomenon in reality with a certain cultural-historical value."@en ;
+  rdfs:comment "The class CultuurhistorischObject is the representation of a phenomenon in reality with a certain cultural-historical value."@en ;
   rdfs:label "Cultuurhistorisch object"@nl ;
   rdfs:label "Culturalhistorical object"@en ;
   dcterms:description "This class represents a phenomenon in reality with a certain cultural-historical value."@en ;
@@ -711,12 +662,12 @@ ceo:datum
   dcterms:created "2022-04-28"^^xsd:date ;
   rdfs:comment "De property datum wordt gebruikt om aan te geven de datum van een begin- of een einddatering."@nl ;
   rdfs:label "datum"@nl ;
-  rdfs:label "date"@en ;  # rdfs:label in @en (Engelse vertaling toevoegen)
-  rdfs:comment "The property datum is used to indicate the date of a start or end date."@en ;  # rdfs:comment in @en (Engelse vertaling toevoegen)
+  rdfs:label "date"@en ;
+  rdfs:comment "The property datum is used to indicate the date of a start or end date."@en ;
   rdfs:domain ceo:BeginDatering, ceo:EindDatering ;
   rdfs:range xsd:date ;
-  dcterms:description "Een eigenschap om de datum van een begin- of een einddatering aan te geven."@nl ;  # dcterms:description in @nl
-  dcterms:description "A property to indicate the date of a start or end date."@en ;  # dcterms:description in @en
+  dcterms:description "Een eigenschap om de datum van een begin- of een einddatering aan te geven."@nl ;
+  dcterms:description "A property to indicate the date of a start or end date."@en ;
   skos:example "\"1912-12-31\"^^xsd:date" ;
 .
 ceo:datumInschrijvingInMonumentenregister
@@ -771,7 +722,7 @@ ceo:gemeentenaam
   rdfs:domain ceo:BRKRelatie ;
   rdfs:range xsd:string ;
   skos:example "Schaesberg" ;
-  dcterms:description "Een datatype-eigenschap (datatype property) in het BRK vocabulaire om de naam van de gemeente aan te geven waaraan het rijksmonument is gelegen."@nl ;
+  dcterms:description "Een datatype-eigenschap in het BRK vocabulaire om de naam van de gemeente aan te geven waaraan het rijksmonument is gelegen."@nl ;
   dcterms:description "A datatype property in the BRK vocabulary used to indicate the name of the municipality where the national monument is located."@en ;
 .
 ceo:geometrienummer
@@ -974,10 +925,10 @@ ceo:heeftBouwkundigeStaat
   rdfs:label "Heeft bouwkundige staat"@nl ;
   rdfs:range skos:Concept ;
   rdfs:label "Has architectural state"@en ;
-  rdfs:comment "The property heeftBouwkundigeStaat establishes the relationship between the BouwkundigeKwaliteit (Architectural Quality) and the architectural state of a cultural heritage object."@en ;
+  rdfs:comment "The property heeftBouwkundigeStaat establishes the relationship between the BouwkundigeKwaliteit and the architectural state of a cultural heritage object."@en ;
   skos:example <https://data.cultureelerfgoed.nl/term/id/rn/ed0abe81-4466-44c3-a8c4-2f1a0e63176d> ;
   dcterms:description "Deze eigenschap legt de relatie tussen de BouwkundigeKwaliteit en de bouwkundige staat van een cultuurhistorisch object vast."@nl ;
-  dcterms:description "This property establishes the relationship between the BouwkundigeKwaliteit (Architectural Quality) and the architectural state of a cultural heritage object."@en ;
+  dcterms:description "This property establishes the relationship between the BouwkundigeKwaliteit and the architectural state of a cultural heritage object."@en ;
 .
 ceo:heeftDatering
   rdf:type owl:ObjectProperty ;
@@ -1802,8 +1753,8 @@ ceo:kaartbladcode
   rdfs:domain ceo:LocatieAanduiding ;
   rdfs:range xsd:string ;
   skos:example "39H" ;
-  dcterms:description "Een kaartbladcode is een code die wordt gebruikt om een specifiek kaartblad of een deel daarvan aan te duiden."@nl ;  # dcterms:description in het Nederlands
-  dcterms:description "A card code is a code used to identify a specific map sheet or a part thereof."@en ;  # dcterms:description in het Engels
+  dcterms:description "Een kaartbladcode is een code die wordt gebruikt om een specifiek kaartblad of een deel daarvan aan te duiden."@nl ;
+  dcterms:description "A card code is a code used to identify a specific map sheet or a part thereof."@en ;
 .
 ceo:kadastraleGemeentecode
   rdf:type owl:DatatypeProperty ;
