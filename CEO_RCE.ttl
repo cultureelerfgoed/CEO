@@ -139,13 +139,13 @@ ceo:BasisregistratieRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-02-06"^^xsd:date ;
   rdfs:comment "De class BasisregistratieRelatie is de representatie van de administratieve vastlegging van de relatie tussen een cultuurhistorisch object en een instantie in een basisregistratie."@nl ;
-  rdfs:comment "The class BasisregistratieRelatie is the representation of the administrative recording of the relationship between a cultural heritage object and an entity in a basic registration."@en ;
+  rdfs:comment "The class BasisregistratieRelatie is the representation of the administrative recording of the relationship between a cultural heritage object and an entity in a base registration."@en ;
   rdfs:label "Basisregistratie relatie"@nl ;
   rdfs:label "Base Registratie relation"@en ;
-  dcterms:description "This class represents the administrative recording of the relationship between a cultural heritage object and an entity in a basic registration."@en ;
+  dcterms:description "This class represents the administrative recording of the relationship between a cultural heritage object and an entity in a base registration."@en ;
   dcterms:description "Deze class representeert de administratieve vastlegging van de relatie tussen een cultuurhistorisch object en een instantie in een basisregistratie."@nl ;
   skos:editorialNote "De Class komt overeen met de Basisobjectrelatie in de CHOI."@nl ;
-  skos:editorialNote "The Class corresponds to the Basic object relationship in the CHOI."@en ;
+  skos:editorialNote "The Class corresponds to the base object relationship in the CHOI."@en ;
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/basisregistratierelatie/10000002" ;
   rdfs:subClassOf owl:Thing ;
 .
@@ -579,14 +579,14 @@ ceo:basisregistratieRelatienummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-10-03"^^xsd:date ;
   rdfs:comment "De property basisregistratieRelatienummer wordt gebruikt om aan te geven het unieke nummer waaronder de basisregistratie relatie instance bekend is."@nl ;
-  rdfs:comment "The property basisregistratieRelatienummer is used to indicate the unique number under which the basic registration relationship instance is known."@en ;
+  rdfs:comment "The property basisregistratieRelatienummer is used to indicate the unique number under which the base registration relationship instance is known."@en ;
   rdfs:domain ceo:BasisregistratieRelatie ;
   rdfs:label "Basisregistratie relatienummer"@nl ;
   rdfs:label "Basic registration relationship number"@en ;
   rdfs:range xsd:string ;
   skos:example "14590" ;
   dcterms:description "Een uniek nummer waarmee de basisregistratie relatie instance bekend is in de basisregistratie."@nl ;
-  dcterms:description "A unique number through which the basic registration relationship instance is known in the basic registration."@en ;
+  dcterms:description "A unique number through which the base registration relationship instance is known in the base registration."@en ;
 .
 ceo:bevatObject
   rdf:type owl:ObjectProperty ;
@@ -815,22 +815,22 @@ ceo:heeftBAGRelatie
   rdfs:label "Heeft BAG relatie"@nl ;
   rdfs:range ceo:BAGRelatie ;
   rdfs:label "Has BAG relationship"@en ;
-  rdfs:comment "The property heeftBAGRelatie establishes the relationship between the basic registration and the BAG relationship."@en ;
+  rdfs:comment "The property heeftBAGRelatie establishes the relationship between the base registration and the BAG relationship."@en ;
   skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/bagrelatie/10056641> ;
   dcterms:description "Een eigenschap die de relatie tussen de basisregistratie en de BAG relatie definieert."@nl ;
-  dcterms:description "A property that defines the relationship between the basic registration and the BAG relationship."@en ;
+  dcterms:description "A property that defines the relationship between the base registration and the BAG relationship."@en ;
 .
 ceo:heeftBRKRelatie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-10-23"^^xsd:date ;
   rdfs:comment "De property heeftBRKRelatie legt de relatie tussen de basisregistratie en de BRK relatie vast."@nl ;
-  rdfs:comment "The heeftBRKRelatie property establishes the relationship between the basic registration and the BRK relationship."@en ;
+  rdfs:comment "The heeftBRKRelatie property establishes the relationship between the base registration and the BRK relationship."@en ;
   rdfs:domain ceo:BasisregistratieRelatie ;
   rdfs:label "Heeft BRK relatie"@nl ;
   rdfs:label "Has BRK relationship"@en ;
   rdfs:range ceo:BRKRelatie ;
   dcterms:description "De eigenschap heeftBRKRelatie legt de relatie vast tussen de basisregistratie en de Basisregistratie Kadaster (BRK) relatie. Deze eigenschap wordt gebruikt om informatie over de relatie tussen de basisregistratie en de BRK relatie vast te leggen."@nl ;
-  dcterms:description "The heeftBRKRelatie property establishes the relationship between the basic registration and the Basic Registration Cadastre (BRK) relationship. This property is used to capture information about the relationship between the basic registration and the BRK relationship."@en ;
+  dcterms:description "The heeftBRKRelatie property establishes the relationship between the base registration and the Base Registration Cadastre (BRK) relationship. This property is used to capture information about the relationship between the base registration and the BRK relationship."@en ;
   skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/brkrelatie/69918> ;
 .
 ceo:heeftBasisregistratieRelatie
@@ -838,13 +838,13 @@ ceo:heeftBasisregistratieRelatie
   dcterms:created "2018-03-16"^^xsd:date ;
   dcterms:modified "2018-06-11"^^xsd:date ;
   rdfs:comment "De property heeftBasisregistratieRelatie legt de relatie tussen het cultuurhistorisch object en de basisregistratie relatie vast."@nl ;
-  rdfs:comment "The property heeftBasisregistratieRelatie establishes the relationship between the cultural heritage object and the basic registration relationship."@en ;
+  rdfs:comment "The property heeftBasisregistratieRelatie establishes the relationship between the cultural heritage object and the base registration relationship."@en ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Heeft basisregistratie relatie"@nl ;
-  rdfs:label "Has basic registration relationship"@en ;
+  rdfs:label "Has base registration relationship"@en ;
   rdfs:range ceo:BasisregistratieRelatie ;
   dcterms:description "De property heeftBasisregistratieRelatie legt de relatie tussen het cultuurhistorisch object en de basisregistratie relatie vast."@nl ;
-  dcterms:description "The property heeftBasisregistratieRelatie establishes the relationship between the cultural heritage object and the basic registration relationship."@en ;
+  dcterms:description "The property heeftBasisregistratieRelatie establishes the relationship between the cultural heritage object and the base registration relationship."@en ;
   skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/basisregistratierelatie/10034> ;
 .
 ceo:heeftBebouwdeKomType
@@ -1526,7 +1526,7 @@ ceo:heeftVerblijfsobject
   rdfs:label "has dwelling object"@en ;
   skos:example <http://bag.basisregistraties.overheid.nl/bag/id/verblijfsobject/1672010000008481> ;
   dcterms:description "De property heeftVerblijfsobject verwijst naar de verblijfsobjectidentificatie uit de Basisregistratie Adressen en Gebouwen. Het wordt gebruikt om relaties tussen entiteiten in de basisregistratie vast te leggen."@nl ;
-  dcterms:description "The property heeftVerblijfsobject refers to the dwelling object identification from the Basisregistratie Adressen en Gebouwen. It is used to establish relationships between entities in the basic registration."@en ;
+  dcterms:description "The property heeftVerblijfsobject refers to the dwelling object identification from the Basisregistratie Adressen en Gebouwen. It is used to establish relationships between entities in the base registration."@en ;
 .
 ceo:heeftVertrouwelijkAanduiding
   rdf:type owl:ObjectProperty ;
