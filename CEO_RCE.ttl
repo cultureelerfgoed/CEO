@@ -2139,8 +2139,8 @@ ceo:volledigAdres
 ceo:werelderfgoednummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2019-11-22"^^xsd:date ;
-  rdfs:comment "De property wereldnummer wordt gebruikt om aan te geven het unieke nummer waaronder het werelderfgoed bekend is."@nl ;
-  rdfs:comment "The property world number is used to indicate the unique number under which the world heritage is known."@en ;
+  rdfs:comment "De property werelderfgoednummer wordt gebruikt om aan te geven het unieke nummer waaronder het werelderfgoed bekend is."@nl ;
+  rdfs:comment "The property werelderfgoednummer is used to indicate the unique number under which the world heritage is known."@en ;
   rdfs:label "Werelderfgoednummer"@nl ;
   rdfs:label "World Heritage Number"@en ;
   rdfs:domain ceo:Werelderfgoed ;
