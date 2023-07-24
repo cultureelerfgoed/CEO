@@ -8,19 +8,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix lxr: <https://linkeddata.cultureelerfgoed.nl/def/lxr#> .
 
 gsp:Geometry
   rdf:type rdfs:Class ;
   dc:contributor "Matthew Perry" ;
   dc:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
   dc:date "2011-06-16" ;
-  dc:description """The class represents the top-level geometry type. This class is
-  equivalent to the UML class GM_Object defined in ISO 19107, and
-  it is superclass of all geometry types."""@en ;
-  rdfs:comment """The class represents the top-level geometry type. This class is
-  equivalent to the UML class GM_Object defined in ISO 19107, and
-  it is superclass of all geometry types."""@en ;
+  dc:description """The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."""@en ;
+  rdfs:comment """The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."""@en ;
   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
   rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql/1.0> ;
   rdfs:label "Geometry"@en ;
@@ -64,7 +59,7 @@ gsp:wktLiteral
   rdfs:label "Well-known Text Literal"@en ;
 .
 <https://creativecommons.org/licenses/by/4.0/>
-  rdf:type dcterms:Agent ;
+  rdf:type dcterms:License ;
   dcterms:created "2018-04-23"^^xsd:date ;
   rdfs:label "Creative Commons Licenses 4.0"@nl ;
 .
@@ -74,10 +69,10 @@ gsp:wktLiteral
   dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:description "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
   dcterms:description "The CEO is the complete semantic representation of the logical data models CHO and KENNIS from the data layer of the RCE."@en ;
-  dcterms:hasVersion "1.40"^^xsd:string ;
-  dcterms:issued "2023-07-21"^^xsd:date ;
+  dcterms:hasVersion "1.41"^^xsd:string ;
+  dcterms:issued "2023-07-24"^^xsd:date ;
   dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
-  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:title "Cultureel Erfgoed Ontologie"@nl ;
   dcterms:title "Cultural Heritage Ontology"@en ;
@@ -86,11 +81,6 @@ gsp:wktLiteral
   rdfs:label "Cultureel Erfgoed Ontologie"@nl ;
   rdfs:label "Cultural Heritage Ontology"@en ;
   foaf:mbox "thesauri@cultureelerfgoed.nl" ;
-.
-<https://linkeddata.cultureelerfgoed.nl/def/ceo#CreativeCommonsLicense4.0>
-  rdf:type dcterms:Agent ;
-  dcterms:created "2018-04-23"^^xsd:date ;
-  rdfs:label "Creative Common License 4.0"@nl ;
 .
 ceo:ActorEnRol
   rdf:type owl:Class ;
@@ -194,7 +184,6 @@ ceo:BRKRelatienummer
   dcterms:description "Een uniek nummer dat wordt gebruikt om de BRK relatie instance te identificeren."@nl ;
   dcterms:description "A unique number used to identify the BRK relation instance."@en ;
 .
-
 ceo:BasisregistratieRelatie
   rdf:type owl:Class ;
   dcterms:created "2018-02-06"^^xsd:date ;
@@ -414,9 +403,11 @@ ceo:Omschrijving
   rdfs:subClassOf ceo:Kennisregistratie ;
 .
 ceo:Rijksdienst_voor_het_Cultureel_Erfgoed
-  rdf:type dcterms:Agent ;
+  rdf:type foaf:Agent ;
   dcterms:created "2018-04-23"^^xsd:date ;
-  rdfs:label "Rijksdienst_voor_het_Cultureel_Erfgoed"@nl ;
+  dcterms:modified "2023-07-24"^^xsd:date ;
+  rdfs:label "Rijksdienst voor het Cultureel Erfgoed"@nl ;
+  owl:sameAs <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
 .
 ceo:Rijksmonument
   rdf:type owl:Class ;
@@ -1747,15 +1738,15 @@ ceo:internationaalKenteken
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
   rdfs:comment "De property internationaalKenteken wordt gebruikt om aan te geven of een internationaal kenteken aan een Cultuurhistorisch object is gegeven."@nl ;
-  rdfs:comment "The property internationaalKenteken is used to indicate whether an international plate has been assigned to a Cultural Heritage object."@en ;
+  rdfs:comment "The property internationaalKenteken is used to indicate whether a distinctive emblem has been assigned to a Cultural Heritage object."@en ;
   rdfs:domain ceo:CultuurhistorischObject ;
   rdfs:label "Internationaal kenteken"@nl ;
-  rdfs:label "International plate"@en ;
+  rdfs:label "Distinctive emblem"@en ;
   rdfs:range xsd:boolean ;
   skos:example "\"1\"^^xsd:boolean" ;
   dcterms:description "De property internationaalKenteken wordt gebruikt om aan te geven of een internationaal kenteken aan een Cultuurhistorisch object is gegeven. Bijvoorbeeld, als een Cultuurhistorisch object internationaal erkend is, kan het de status 'true' hebben voor deze property."@nl ;
-  dcterms:description "The property internationaalKenteken is used to indicate whether an international plate has been assigned to a Cultural Heritage object. For instance, if a Cultural Heritage object is internationally recognized, it can have a 'true' value for this property."@en .
-
+  dcterms:description "The property internationaalKenteken is used to indicate whether a distictive emblem has been assigned to a Cultural Heritage object. For instance, if a Cultural Heritage object is internationally recognized, it can have a 'true' value for this property."@en ;
+.
 ceo:isHoofdobjectVanComplex
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-09-25"^^xsd:date ;
