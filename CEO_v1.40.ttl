@@ -1876,7 +1876,7 @@ ceo:kadasterdeel
   dcterms:created "2022-12-19"^^xsd:date ;
   rdfs:comment "De property kadasterdeel wordt gebruikt om aan te geven het kadasterdeel waaronder het rijksmonument bekend is."@nl ;
   rdfs:comment "The property kadasterdeel is used to indicate the cadastral parcel under which the national monument is known."@en ;
-  rdfs:domain ceo:Rijksmonument ;
+  rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Kadasterdeel"@nl ;
   rdfs:label "Cadastral parcel"@en ;
   rdfs:range xsd:string ;
@@ -1891,7 +1891,7 @@ ceo:kadasterdeelnummer
   rdfs:label "Kadasterdeelnummer"@nl ;
   rdfs:label "Kadasterdeelnummer"@en ;
   rdfs:comment "The property kadasterdeelnummer is used to indicate the cadastral parcel number under which the national monument is known."@en ;
-  rdfs:domain ceo:Rijksmonument ;
+  rdfs:domain ceo:BRKRelatie ;
   rdfs:range xsd:string ;
   skos:example "95" ;
   dcterms:description "Eigenschap voor het weergeven van het kadasterdeelnummer van het rijksmonument."@nl ;
