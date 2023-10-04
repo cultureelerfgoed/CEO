@@ -2137,6 +2137,7 @@ ceo:volledigAdres
   dcterms:created "2018-06-14"^^xsd:date ;
   rdfs:comment "De property volledigAdres wordt gebruikt om aan te geven het volledige adres van een cultuurhistorisch object."@nl ;
   rdfs:comment "The property volledigAdres is used to indicate the full address of a cultural heritage object."@en ;
+  rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Volledig adres"@nl ;
   rdfs:label "Full address"@en ;
   rdfs:range xsd:string ;
