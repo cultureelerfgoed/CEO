@@ -1819,7 +1819,7 @@ ceo:kadasterdeel
   dcterms:created "2022-12-19"^^xsd:date ;
   rdfs:comment "De property kadasterdeel wordt gebruikt om aan te geven het kadasterdeel waaronder het rijksmonument bekend is."@nl ;
   rdfs:comment "The property kadasterdeel is used to indicate the cadastral plot under which the national monument is known."@en ;
-  rdfs:domain ceo:Rijksmonument ;
+  rdfs:domain ceo:BRKRelatie ;
   rdfs:label "Kadasterdeel"@nl ;
   rdfs:label "Cadastral plot"@en ;
   rdfs:range xsd:string ;
@@ -1834,7 +1834,7 @@ ceo:kadasterdeelnummer
   rdfs:label "Kadasterdeelnummer"@nl ;
   rdfs:label "Cadastre plot number"@en ;
   rdfs:comment "The property kadasterdeelnummer is used to indicate the cadastral plot number under which the national monument is known."@en ;
-  rdfs:domain ceo:Rijksmonument ;
+  rdfs:domain ceo:BRKRelatie ;
   rdfs:range xsd:string ;
   skos:example "95" ;
   dcterms:description "Eigenschap voor het weergeven van het kadasterdeelnummer van het rijksmonument."@nl ;
@@ -2080,6 +2080,7 @@ ceo:volledigAdres
   dcterms:created "2018-06-14"^^xsd:date ;
   rdfs:comment "De property volledigAdres wordt gebruikt om aan te geven het volledige adres van een cultuurhistorisch object."@nl ;
   rdfs:comment "The property volledigAdres is used to indicate the full address of a cultural heritage object."@en ;
+  rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Volledig adres"@nl ;
   rdfs:label "Full address"@en ;
   rdfs:range xsd:string ;
