@@ -1088,6 +1088,14 @@ ceo:heeftGeometrieStatus
   dcterms:description "De property heeftGeometrieStatus legt de relatie tussen de geometrie en de geometrische status vast. Het beschrijft de status van de geometrie."@nl ;
   dcterms:description "The property heeftGeometrieStatus establishes the relationship between the geometry and the geometric status. It describes the status of the geometry."@en ;
 .
+ceo:heeftGeometrieType
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2024-01-23"^^xsd:date ;
+  rdfs:comment "De property heeftGeometrieType legt de relatie tussen een cultuurhistorisch object en de  geometrie type vast."@nl ;
+  rdfs:label "Heeft geometrie type"@nl ;
+  rdfs:domain ceo:Geometrie ;
+  rdfs:subPropertyOf gsp:hasGeometry ;
+.
 ceo:heeftGezichtsstatus
   rdf:type owl:ObjectProperty ;
   dcterms:created "2019-11-05"^^xsd:date ;
@@ -1324,6 +1332,14 @@ ceo:heeftOmschrijvingstype
   dcterms:description "De property heeftOmschrijvingstype legt de relatie tussen de omschrijving en de type omschrijving met betrekking tot een cultuurhistorisch object vast. Deze eigenschap wordt gebruikt om een bepaald type omschrijving te associëren met een specifieke omschrijving van een cultuurhistorisch object."@nl ;
   dcterms:description "The property heeftOmschrijvingstype establishes the relationship between the description and the type of description concerning a cultural heritage object. This property is used to associate a specific type of description with a particular description of a cultural heritage object."@en ;
 .
+ceo:heeftOndergrondGezicht
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2024-01-29"^^xsd:date ;
+  rdfs:label "Heeft ondergrond gezicht"@nl ;
+  rdfs:comment "De property heeftOndergrondGezicht legt de relatie tussen de ondergrond van de kaarlaag en het Gezicht vast."@nl ;
+  rdfs:domain ceo:Geometrie ;
+  rdfs:range skos:Concept ;
+.
 ceo:heeftOorspronkelijkeFunctie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-05-08"^^xsd:date ;
@@ -1461,8 +1477,8 @@ ceo:heeftTemporeleRelatie
   skos:example "Example value" ;
   dcterms:description "De property heeftTemporeleRelatie legt de relatie tussen het ... met betrekking tot een cultuurhistorisch object vast."@nl ;
   dcterms:description "The property heeftTemporeleRelatie defines the relationship between ... regarding a cultural heritage object."@en ;
-  skos:editorialNote "Property heeft geen data." @nl ;
-  skos:editorialNote "Property has no data." @en ;
+  skos:editorialNote "Property heeft geen data."@nl ;
+  skos:editorialNote "Property has no data."@en ;
 .
 ceo:heeftToestand
   rdf:type owl:ObjectProperty ;
@@ -1616,6 +1632,14 @@ ceo:heeftZuiverheid
   dcterms:description "De property heeftZuiverheid legt de relatie tussen de stijl en cultuur en de zuiverheid met betrekking tot een cultuurhistorisch object vast."@nl ;
   dcterms:description "The property heeftZuiverheid establishes the relationship between style and culture and the purity regarding a cultural heritage object."@en ;
 .
+ceo:begrenzingsdatumGezicht
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2024-01-29"^^xsd:date ;
+  rdfs:label "Begrenzingsdatum gezicht"@nl ;
+  rdfs:comment "De property begrenzingsdatumGezicht wordt gebruikt om aan te geven de begrenzingsdatum van het Gezicht."@nl ;
+  rdfs:domain ceo:Geometrie ;
+  rdfs:range xsd:date ;
+.
 ceo:hoofdfunctie
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-13"^^xsd:date ;
@@ -1688,6 +1712,16 @@ ceo:indicatieArcheologischeMonumentenKaartWaardig
   dcterms:description "Geeft aan of het archeologisch onderzoeksgebied AMK waardig is."@nl ;
   dcterms:description "Indicates whether the archaeological research area is AMK worthy."@en ;
 .
+ceo:inProceduredatumGezicht
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2024-01-29"^^xsd:date ;
+  rdfs:label "In proceduredatum gezicht"@nl ;
+  rdfs:comment "De property inProceduredatumGezicht wordt gebruikt om aan te geven de in proceduredatum van het Gezicht."@nl ;
+  rdfs:range xsd:date ;
+  rdfs:comment "Dit predicaat is tijdelijk, in de toekomst moet dit worden gemodelleerd in de Zaak Ontologie."@nl ;
+  rdfs:domain ceo:Gezicht ;
+  rdfs:range xsd:date ;
+.
 ceo:internationaalKenteken
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-03-27"^^xsd:date ;
@@ -1700,6 +1734,16 @@ ceo:internationaalKenteken
   skos:example "\"1\"^^xsd:boolean" ;
   dcterms:description "De property internationaalKenteken wordt gebruikt om aan te geven of een internationaal kenteken aan een Cultuurhistorisch object is gegeven. Bijvoorbeeld, als een Cultuurhistorisch object internationaal erkend is, kan het de status 'true' hebben voor deze property."@nl ;
   dcterms:description "The property internationaalKenteken is used to indicate whether a distictive emblem has been assigned to a Cultural Heritage object. For instance, if a Cultural Heritage object is internationally recognized, it can have a 'true' value for this property."@en ;
+.
+ceo:intrekkingsdatumGezicht
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2024-01-29"^^xsd:date ;
+  rdfs:label "Intrekkingsdatum gezicht"@nl ;
+  rdfs:comment "De property intrekkingsdatumGezicht wordt gebruikt om aan te geven de intrekkingsdatum van het Gezicht."@nl ;
+  rdfs:range xsd:date ;
+  rdfs:comment "Dit predicaat is tijdelijk, in de toekomst moet dit worden gemodelleerd in de Zaak Ontologie."@nl ;
+  rdfs:domain ceo:Gezicht ;
+  rdfs:range xsd:date ;
 .
 ceo:isHoofdobjectVanComplex
   rdf:type owl:ObjectProperty ;
@@ -1745,6 +1789,13 @@ ceo:isOnderdeelVanComplex
   skos:example <https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/complex/62496> ;
   dcterms:description "De property isOnderdeelVanComplex legt de relatie tussen het rijksmonument als onderdeel van een complex vast."@nl ;
   dcterms:description "The isOnderdeelVanComplex property establishes the relationship between the national monument as part of a complex."@en ;
+.
+ceo:jaarVanInschrijving
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2024-01-29"^^xsd:date ;
+  rdfs:label "Jaar van inschrijving"@nl ;
+  rdfs:comment "De property jaarVanInschrijving wordt gebruikt om aan te geven de jaar van inschrijving van een cultuurhistorische object."@nl ;
+  rdfs:range xsd:string ;
 .
 ceo:kaartbladcode
   rdf:type owl:DatatypeProperty ;
@@ -1929,6 +1980,30 @@ ceo:openbareRuimte
   rdfs:range xsd:string ;
   ceo:registergegeven "true"^^xsd:boolean ;
   skos:example "Biesbosch" ;
+.
+ceo:oppervlakteInHectare
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2024-01-23"^^xsd:date ;
+  rdfs:comment "De property oppervlakteInHectare wordt gebruikt om aan te geven de oppervlakte in hectare van een cultuurhistorisch object."@nl ;
+  rdfs:label "Oppervlakte in vierkante hectare"@nl ;
+ rdfs:domain ceo:Geometrie ;
+  rdfs:range xsd:decimal ;
+.
+ceo:oppervlakteInVierkanteMeters
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2024-01-23"^^xsd:date ;
+  rdfs:comment "De property oppervlakteInVierkanteMeters wordt gebruikt om aan te geven de oppervlakte in vierkante meters van een cultuurhistorisch object."@nl ;
+  rdfs:label "Oppervlakte in vierkante meters"@nl ;
+ rdfs:domain ceo:Geometrie ;
+  rdfs:range xsd:decimal ;
+.
+ceo:oppervlakteInVierkanteKilometers
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2024-01-23"^^xsd:date ;
+  rdfs:comment "De property oppervlakteInVierkanteKilometers wordt gebruikt om aan te geven de oppervlakte in vierkante kilometers van een cultuurhistorisch object."@nl ;
+  rdfs:label "Oppervlakte in vierkante kilometers"@nl ;
+ rdfs:domain ceo:Geometrie ;
+  rdfs:range xsd:decimal ;
 .
 ceo:pandIdentificatie
   rdf:type owl:DatatypeProperty ;
