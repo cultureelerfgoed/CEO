@@ -10,6 +10,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+
 <https://linkeddata.cultureelerfgoed.nl/def/ceo>
   rdf:type owl:Ontology ;
   dcterms:created "2018-04-23"^^xsd:date ;
@@ -1828,7 +1829,7 @@ ceo:jaarVanInschrijving
   dcterms:description "This property represents the year in which a cultural-historical object was registered."@en ;
   dcterms:description "Deze property geeft het jaar aan waarin een cultuurhistorisch object is ingeschreven."@nl ;
   rdfs:range xsd:gYear ;
-  skos:example "2021"^^gYear ;
+  skos:example "2021"^^xsd:gYear ;
 .
 ceo:kaartbladcode
   rdf:type owl:DatatypeProperty ;
