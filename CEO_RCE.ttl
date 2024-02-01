@@ -1646,7 +1646,7 @@ ceo:begrenzingsdatumGezicht
   dcterms:created "2024-01-29"^^xsd:date ;
   rdfs:label "Begrenzingsdatum gezicht"@nl ;
   rdfs:comment "De property begrenzingsdatumGezicht wordt gebruikt om aan te geven wanneer de begrenzingsdatum van het Gezicht is vastgesteld."@nl ;
-  rdfs:comment "The property "begrenzingsdatumGezicht" is used to indicate when the boundary of the townscape is determined."@en ;
+  rdfs:comment "The property begrenzingsdatumGezicht is used to indicate when the boundary of the townscape is determined."@en ;
   rdfs:label "Limitation date of the townscape"@en ;
   dcterms:description "This property specifies the date on which the boundary of the townscape is determined."@en ;
   dcterms:description "Deze eigenschap geeft de datum aan waarop de begrenzingsdatum van het Gezicht is vastgesteld."@nl ;
