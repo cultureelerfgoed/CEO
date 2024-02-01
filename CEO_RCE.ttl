@@ -2026,7 +2026,7 @@ ceo:oppervlakteInHectare
   dcterms:description "Deze property vertegenwoordigt de oppervlakte in hectare van een cultuurhistorisch object en is bedoeld voor gebruik door zowel ontwikkelaars als niet-ontwikkelaars."@nl ;
   rdfs:domain ceo:Geometrie ;
   rdfs:range xsd:decimal ;
-  skos:example "3,1"^^decimal ;
+  skos:example "3,1"^^xsd:decimal ;
 .
 ceo:oppervlakteInVierkanteMeters
   rdf:type owl:DatatypeProperty ;
