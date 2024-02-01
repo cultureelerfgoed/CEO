@@ -2026,7 +2026,7 @@ ceo:oppervlakteInHectare
   dcterms:description "Deze property vertegenwoordigt de oppervlakte in hectare van een cultuurhistorisch object en is bedoeld voor gebruik door zowel ontwikkelaars als niet-ontwikkelaars."@nl ;
   rdfs:domain ceo:Geometrie ;
   rdfs:range xsd:decimal ;
-  skos:example "3,1"^^xsd:decimal ;
+  skos:example "3.1"^^xsd:decimal ;
 .
 ceo:oppervlakteInVierkanteMeters
   rdf:type owl:DatatypeProperty ;
@@ -2034,12 +2034,12 @@ ceo:oppervlakteInVierkanteMeters
   rdfs:comment "De property oppervlakteInVierkanteMeters wordt gebruikt om aan te geven de oppervlakte in vierkante meters van een cultuurhistorisch object."@nl ;
   rdfs:label "Oppervlakte in vierkante meters"@nl ;
   rdfs:domain ceo:Geometrie ;
-  rdfs:range xsd:decimal ;
   rdfs:comment "The property oppervlakteInVierkanteMeters is used to indicate the area in square meters of a cultural-historical object."@en ;
   rdfs:label "Area in square meters"@en ;
   dcterms:description "This property represents the area in square meters of a cultural-historical object."@en ;
   dcterms:description "Deze property vertegenwoordigt de oppervlakte in vierkante meters van een cultuurhistorisch object. Het is bedoeld om toegankelijker te zijn voor niet-ontwikkelaars."@nl ;
-  skos:example "10,1"^^xsd:decimal ;
+  rdfs:range xsd:decimal ;
+  skos:example "10.1"^^xsd:decimal ;
 .
 ceo:oppervlakteInVierkanteKilometers
   rdf:type owl:DatatypeProperty ;
