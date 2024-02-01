@@ -1091,10 +1091,15 @@ ceo:heeftGeometrieStatus
 ceo:heeftGeometrieType
   rdf:type owl:ObjectProperty ;
   dcterms:created "2024-01-23"^^xsd:date ;
-  rdfs:comment "De property heeftGeometrieType legt de relatie tussen een cultuurhistorisch object en de  geometrie type vast."@nl ;
+  rdfs:comment "De property heeftGeometrieType legt de relatie tussen een cultuurhistorisch object en de geometrie type vast."@nl ;
   rdfs:label "Heeft geometrie type"@nl ;
   rdfs:domain ceo:Geometrie ;
   rdfs:subPropertyOf gsp:hasGeometry ;
+  rdfs:comment "The property heeftGeometrieType establishes the relationship between a cultural-historical object and its geometry type."@en ;
+  rdfs:label "Has geometry type"@en ;
+  dcterms:description "This property relates a cultural-historical object to its geometry type."@en ;
+  dcterms:description "Deze eigenschap relateert een cultuurhistorisch object aan zijn geometrietype."@nl ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/527ff989-36b8-4a60-a38c-c236b924ebee> ;
 .
 ceo:heeftGezichtsstatus
   rdf:type owl:ObjectProperty ;
@@ -1103,11 +1108,11 @@ ceo:heeftGezichtsstatus
   rdfs:domain ceo:Gezicht ;
   rdfs:label "Heeft gezichtsstatus"@nl ;
   rdfs:range skos:Concept ;
-  rdfs:label "Has landscape status"@en ;
-  rdfs:comment "The property heeftGezichtsstatus establishes the relationship between the face and the facial status."@en ;
+  rdfs:label "Has townscape status"@en ;
+  rdfs:comment "The property heeftGezichtsstatus establishes the relationship between the townscape and the townscape status."@en ;
   skos:example <https://data.cultureelerfgoed.nl/term/id/rn/fd968529-bf70-4afa-8564-7c6c2fcfcc54> ;
   dcterms:description "De property heeftGezichtsstatus legt de relatie tussen het gezicht en het gezichtsstatus vast. Het beschrijft of het gezicht een bepaalde status heeft, zoals erfgoedwaarde, beschermd monument, etc."@nl ;
-  dcterms:description "The property heeftGezichtsstatus establishes the relationship between the landscape and the landscape status. It describes whether the face has a certain status, such as heritage value, protected monument, etc."@en ;
+  dcterms:description "The property heeftGezichtsstatus establishes the relationship between the townscape and the townscape status. It describes whether the townscape has a certain status, such as heritage value, protected monument, etc."@en ;
 .
 ceo:heeftHerkomst
   rdf:type owl:ObjectProperty ;
@@ -1335,10 +1340,14 @@ ceo:heeftOmschrijvingstype
 ceo:heeftOndergrondGezicht
   rdf:type owl:ObjectProperty ;
   dcterms:created "2024-01-29"^^xsd:date ;
+  rdfs:label "Has layer townscape"@en ;
   rdfs:label "Heeft ondergrond gezicht"@nl ;
-  rdfs:comment "De property heeftOndergrondGezicht legt de relatie tussen de ondergrond van de kaarlaag en het Gezicht vast."@nl ;
+  rdfs:comment "De property heeftOndergrondGezicht legt de relatie tussen de ondergrond van de kaartlaag en het Gezicht vast."@nl ;
   rdfs:domain ceo:Geometrie ;
   rdfs:range skos:Concept ;
+  dcterms:description "This property establishes the relationship between the layer of the map and the townscape."@en ;
+  dcterms:description "Deze eigenschap legt de relatie vast tussen de ondergrond van de kaartlaag en het Gezicht."@nl ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/f4c9d8a2-c9ab-46cb-9134-7ee38294da97> ;
 .
 ceo:heeftOorspronkelijkeFunctie
   rdf:type owl:ObjectProperty ;
@@ -1601,8 +1610,8 @@ ceo:heeftZaak
   rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
   dcterms:description "De property heeftZaak legt de relatie vast tussen de kennisregistratie en de zaak."@nl ;
   dcterms:description "The heeftZaak property establishes the relationship between the knowledge registration and the case."@en ;
-  skos:editorialNote "Property heeft nog geen data." @nl ;
-  skos:editorialNote "Property has no data yet." @en ;
+  skos:editorialNote "Property heeft nog geen data."@nl ;
+  skos:editorialNote "Property has no data yet."@en ;
 .
 ceo:heeftZekerheidsaanduiding
   rdf:type owl:ObjectProperty ;
@@ -1636,9 +1645,14 @@ ceo:begrenzingsdatumGezicht
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2024-01-29"^^xsd:date ;
   rdfs:label "Begrenzingsdatum gezicht"@nl ;
-  rdfs:comment "De property begrenzingsdatumGezicht wordt gebruikt om aan te geven de begrenzingsdatum van het Gezicht."@nl ;
+  rdfs:comment "De property begrenzingsdatumGezicht wordt gebruikt om aan te geven wanneer de begrenzingsdatum van het Gezicht is vastgesteld."@nl ;
+  rdfs:comment "The property "begrenzingsdatumGezicht" is used to indicate when the boundary of the townscape is determined."@en ;
+  rdfs:label "Limitation date of the townscape"@en ;
+  dcterms:description "This property specifies the date on which the boundary of the townscape is determined."@en ;
+  dcterms:description "Deze eigenschap geeft de datum aan waarop de begrenzingsdatum van het Gezicht is vastgesteld."@nl ;
   rdfs:domain ceo:Geometrie ;
   rdfs:range xsd:date ;
+  skos:example "2004-12-31"^^xsd:date ;
 .
 ceo:hoofdfunctie
   rdf:type owl:DatatypeProperty ;
@@ -1664,8 +1678,8 @@ ceo:hoortBijZaak
   owl:inverseOf ceo:isKennisregistratieVanZaak ;
   rdfs:label "Belongs to case"@en ;
   rdfs:comment "The property hoortBijZaak establishes the relationship between knowledge registration and case."@en ;
-  skos:editorialNote "Property heeft nog geen data." @nl ;
-  skos:editorialNote "Property has no data yet." @en ;
+  skos:editorialNote "Property heeft nog geen data."@nl ;
+  skos:editorialNote "Property has no data yet."@en ;
   dcterms:description "De eigenschap hoortBijZaak legt de relatie tussen kennisregistratie en zaak vast. Het geeft aan dat een kennisregistratie hoort bij een bepaalde zaak."@nl ;
   dcterms:description "The hoortBijZaak property establishes the relationship between knowledge registration and case. It indicates that a knowledge registration belongs to a particular case."@en ;
 .
@@ -1721,6 +1735,13 @@ ceo:inProceduredatumGezicht
   rdfs:comment "Dit predicaat is tijdelijk, in de toekomst moet dit worden gemodelleerd in de Zaak Ontologie."@nl ;
   rdfs:domain ceo:Gezicht ;
   rdfs:range xsd:date ;
+  rdfs:label "In procedure date face"@en ;
+  rdfs:comment "The property inProcedureDateFace is used to indicate the in-procedure date of the townscape."@en ;
+  skos:editorialNote "This predicate is temporary and should be modeled in the ZAAK Ontology in the future."@en ;
+  skos:editorialNote "Dit predicaat is tijdelijk, in de toekomst moet dit worden gemodelleerd in de Zaak Ontologie."@nl ;
+  skos:example "2004-12-31"^^xsd:date ;
+  dcterms:description "Specifies the date on which the townscape enters a procedural stage or process."@en ;
+  dcterms:description "Geeft de datum aan waarop het gezicht een procedurele fase of proces ingaat."@nl ;
 .
 ceo:internationaalKenteken
   rdf:type owl:DatatypeProperty ;
@@ -1741,9 +1762,16 @@ ceo:intrekkingsdatumGezicht
   rdfs:label "Intrekkingsdatum gezicht"@nl ;
   rdfs:comment "De property intrekkingsdatumGezicht wordt gebruikt om aan te geven de intrekkingsdatum van het Gezicht."@nl ;
   rdfs:range xsd:date ;
-  rdfs:comment "Dit predicaat is tijdelijk, in de toekomst moet dit worden gemodelleerd in de Zaak Ontologie."@nl ;
+  rdfs:comment "The property "intrekkingsdatumGezicht" is used to indicate the withdrawal date of the face."@en ;
   rdfs:domain ceo:Gezicht ;
   rdfs:range xsd:date ;
+  rdfs:label "Withdrawal date of townscape"@en ;
+  rdfs:comment "The property withdrawalDateFace is used to indicate the withdrawal date of the townscape."@en ;
+  skos:editorialNote "This predicate is temporary and should be modeled in the ZAAK Ontology in the future. It represents the date on which the face is withdrawn."@en ;
+  skos:editorialNote "Dit predicaat is tijdelijk en moet in de toekomst worden gemodelleerd in de ZAAK Ontologie. Het geeft de datum aan waarop het gezicht wordt ingetrokken."@nl ;
+  skos:example "2004-12-31"^^xsd:date ;
+  dcterms:description "A property indicating the date on which the townscape is withdrawn."@en ;
+  dcterms:description "Een eigenschap die de datum aangeeft waarop het gezicht wordt ingetrokken."@nl ;
 .
 ceo:isHoofdobjectVanComplex
   rdf:type owl:ObjectProperty ;
@@ -1769,8 +1797,8 @@ ceo:isKennisregistratieVanZaak
   rdfs:range ceo:Kennisregistratie ;
   owl:inverseOf ceo:hoortBijZaak ;
   rdfs:label "Is kennisregistratie of case"@en ;
-  skos:editorialNote "Property heeft nog geen data." @nl ;
-  skos:editorialNote "Property has no data yet." @en ;
+  skos:editorialNote "Property heeft nog geen data."@nl ;
+  skos:editorialNote "Property has no data yet."@en ;
   rdfs:comment "The property isKennisregistratieVanZaak establishes the relationship between case and knowledge registration."@en ;
   dcterms:description "De property isKennisregistratieVanZaak legt de relatie tussen een zaak en de kennisregistratie van die zaak vast. Het geeft aan welke kennisregistratie betrekking heeft op een bepaalde zaak."@nl ;
   dcterms:description "The property isKennisregistratieVanZaak establishes the relationship between a case and the knowledge registration associated with that case. It indicates which knowledge registration is related to a specific case."@en ;
@@ -1793,9 +1821,14 @@ ceo:isOnderdeelVanComplex
 ceo:jaarVanInschrijving
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2024-01-29"^^xsd:date ;
+  rdfs:label "Year of Registration"@en ;
   rdfs:label "Jaar van inschrijving"@nl ;
-  rdfs:comment "De property jaarVanInschrijving wordt gebruikt om aan te geven de jaar van inschrijving van een cultuurhistorische object."@nl ;
-  rdfs:range xsd:string ;
+  rdfs:comment "The property jaarVanInschrijving is used to indicate the year of registration of a cultural-historical object."@nl ;
+  rdfs:comment "The property jaarVanInschrijving is used to specify the year of registration of a cultural-historical object."@en ;
+  dcterms:description "This property represents the year in which a cultural-historical object was registered."@en ;
+  dcterms:description "Deze property geeft het jaar aan waarin een cultuurhistorisch object is ingeschreven."@nl ;
+  rdfs:range xsd:gYear ;
+  skos:example "2021"^^gYear ;
 .
 ceo:kaartbladcode
   rdf:type owl:DatatypeProperty ;
@@ -1986,24 +2019,39 @@ ceo:oppervlakteInHectare
   dcterms:created "2024-01-23"^^xsd:date ;
   rdfs:comment "De property oppervlakteInHectare wordt gebruikt om aan te geven de oppervlakte in hectare van een cultuurhistorisch object."@nl ;
   rdfs:label "Oppervlakte in vierkante hectare"@nl ;
- rdfs:domain ceo:Geometrie ;
+  rdfs:comment "The property oppervlakteInHectare is used to indicate the surface area in hectares of a cultural-historical object."@en ;
+  rdfs:label "Surface area in square hectares"@en ;
+  dcterms:description "This property represents the surface area in hectares of a cultural-historical object."@en ;
+  dcterms:description "Deze property vertegenwoordigt de oppervlakte in hectare van een cultuurhistorisch object en is bedoeld voor gebruik door zowel ontwikkelaars als niet-ontwikkelaars."@nl ;
+  rdfs:domain ceo:Geometrie ;
   rdfs:range xsd:decimal ;
+  skos:example "3,1"^^decimal ;
 .
 ceo:oppervlakteInVierkanteMeters
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2024-01-23"^^xsd:date ;
   rdfs:comment "De property oppervlakteInVierkanteMeters wordt gebruikt om aan te geven de oppervlakte in vierkante meters van een cultuurhistorisch object."@nl ;
   rdfs:label "Oppervlakte in vierkante meters"@nl ;
- rdfs:domain ceo:Geometrie ;
+  rdfs:domain ceo:Geometrie ;
   rdfs:range xsd:decimal ;
+  rdfs:comment "The property oppervlakteInVierkanteMeters is used to indicate the area in square meters of a cultural-historical object."@en ;
+  rdfs:label "Area in square meters"@en ;
+  dcterms:description "This property represents the area in square meters of a cultural-historical object."@en ;
+  dcterms:description "Deze property vertegenwoordigt de oppervlakte in vierkante meters van een cultuurhistorisch object. Het is bedoeld om toegankelijker te zijn voor niet-ontwikkelaars."@nl ;
+  skos:example "10,1"^^xsd:decimal ;
 .
 ceo:oppervlakteInVierkanteKilometers
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2024-01-23"^^xsd:date ;
   rdfs:comment "De property oppervlakteInVierkanteKilometers wordt gebruikt om aan te geven de oppervlakte in vierkante kilometers van een cultuurhistorisch object."@nl ;
   rdfs:label "Oppervlakte in vierkante kilometers"@nl ;
- rdfs:domain ceo:Geometrie ;
+  rdfs:comment "The property oppervlakteInVierkanteKilometers is used to indicate the surface area in square kilometers of a cultural-historical object."@en ;
+  rdfs:label "Surface area in square kilometers"@en ;
+  dcterms:description "This property represents the surface area in square kilometers of a cultural-historical object."@en ;
+  dcterms:description "Deze property vertegenwoordigt de oppervlakte in vierkante kilometers van een cultuurhistorisch object en is bedoeld om toegankelijker te zijn voor niet-ontwikkelaars."@nl ;
+  rdfs:domain ceo:Geometrie ;
   rdfs:range xsd:decimal ;
+  skos:example "0.1"^^xsd:decimal ;
 .
 ceo:pandIdentificatie
   rdf:type owl:DatatypeProperty ;
