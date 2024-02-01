@@ -2263,10 +2263,10 @@ ceo:wordtGetoondOp
   rdfs:comment "The property isShownAt is used to specify the web address of a resource related to a cultural heritage object."@en ;
   rdfs:label "Wordt getoond op"@nl ;
   rdfs:label "isShownAt"@en ;
-  rdfs:range xsd:aniURI ;
+  rdfs:range xsd:anyURI ;
   dcterms:description "De property wordtGetoondOp wordt gebruikt om het webadres van een resource van een cultuurhistorisch object aan te geven."@nl ;
   dcterms:description "The property isShownAt is used to specify the web address of a resource related to a cultural heritage object."@en ;
-  skos:example <https://archisarchief.cultureelerfgoed.nl/Beschermde_Gezichten/BG1439>^^xsd:anyURI ;
+  skos:example "https://archisarchief.cultureelerfgoed.nl/Beschermde_Gezichten/BG1439"^^xsd:anyURI ;
 .
 # Short Properties
 ceosp:geometrie
