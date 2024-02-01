@@ -1762,7 +1762,7 @@ ceo:intrekkingsdatumGezicht
   rdfs:label "Intrekkingsdatum gezicht"@nl ;
   rdfs:comment "De property intrekkingsdatumGezicht wordt gebruikt om aan te geven de intrekkingsdatum van het Gezicht."@nl ;
   rdfs:range xsd:date ;
-  rdfs:comment "The property "intrekkingsdatumGezicht" is used to indicate the withdrawal date of the face."@en ;
+  rdfs:comment "The property intrekkingsdatumGezicht is used to indicate the withdrawal date of the face."@en ;
   rdfs:domain ceo:Gezicht ;
   rdfs:range xsd:date ;
   rdfs:label "Withdrawal date of townscape"@en ;
