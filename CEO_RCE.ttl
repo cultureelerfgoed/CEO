@@ -1599,6 +1599,19 @@ ceo:heeftWerelderfgoedstatus
   dcterms:description "De property heeftWerelderfgoedstatus legt de relatie tussen het werelderfgoed object en zijn status vast. Het wordt gebruikt om aan te geven of een bepaald object de werelderfgoedstatus heeft of niet."@nl ;
   dcterms:description "The property heeftWerelderfgoedstatus establishes the relationship between the World Heritage object and its status. It is used to indicate whether a certain object has World Heritage status or not."@en ;
 .
+ceo:heeftWerelderfgoedType
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2019-11-05"^^xsd:date ;
+  rdfs:comment "De property heeftWerelderfgoedstatus legt de relatie tussen het werelderfgoed object en zijn type vast."@nl ;
+  rdfs:label "Heeft werelderfgoed type"@nl ;
+  rdfs:label "Has World Heritage type"@en ;
+  rdfs:comment "The property heeftWerelderfgoedstatus establishes the relationship between the World Heritage object and its type."@en ;
+  rdfs:domain ceo:Werelderfgoed ;
+  rdfs:range skos:Concept ;
+  skos:example <https://data.cultureelerfgoed.nl/term/id/rn/d9819d3c-c7b4-4dcc-83d4-7dfb7e3b7f52> ;
+  dcterms:description "De property heeftWerelderfgoedstatus legt de relatie tussen het werelderfgoed object en zijn type vast. Het wordt gebruikt om aan te geven van welk type een bepaald werelderfgoed object is."@nl ;
+  dcterms:description "The property heeftWerelderfgoedstatus establishes the relationship between the World Heritage object and its type. It is used to indicate which type a certain World Heritage object is."@en ;
+.
 ceo:heeftZaak
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-18"^^xsd:date ;
@@ -2242,6 +2255,18 @@ ceo:woonplaatsnaam
   dcterms:description "De property woonplaatsnaam wordt gebruikt om de woonplaats van een cultuurhistorisch object aan te geven, zoals geregistreerd in de Basisregistratie Adressen en Gebouwen (BAG)."@nl ;
   dcterms:description "The property woonplaatsnaam is used to indicate the place of residence of a cultural heritage object, as registered in the Basisregistratie Adressen en Gebouwen (BAG)."@en ;
   skos:example "Borkeld" ;
+.  
+ceo:wordtGetoondOp
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2024-02-01"^^xsd:date ;
+  rdfs:comment "De property wordtGetoondOp wordt gebruikt om het webadres van een resource van een cultuurhistorisch object aan te geven."@nl ;
+  rdfs:comment "The property isShownAt is used to specify the web address of a resource related to a cultural heritage object."@en ;
+  rdfs:label "Wordt getoond op"@nl ;
+  rdfs:label "isShownAt"@en ;
+  rdfs:range xsd:aniURI ;
+  dcterms:description "De property wordtGetoondOp wordt gebruikt om het webadres van een resource van een cultuurhistorisch object aan te geven."@nl ;
+  dcterms:description "The property isShownAt is used to specify the web address of a resource related to a cultural heritage object."@en ;
+  skos:example <https://archisarchief.cultureelerfgoed.nl/Beschermde_Gezichten/BG1439>^^xsd:anyURI ;
 .
 # Short Properties
 ceosp:geometrie
