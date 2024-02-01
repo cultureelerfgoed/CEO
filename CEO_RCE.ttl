@@ -2262,7 +2262,7 @@ ceo:wordtGetoondOp
   rdfs:comment "De property wordtGetoondOp wordt gebruikt om het webadres van een resource van een cultuurhistorisch object aan te geven."@nl ;
   rdfs:comment "The property isShownAt is used to specify the web address of a resource related to a cultural heritage object."@en ;
   rdfs:label "Wordt getoond op"@nl ;
-  rdfs:label "isShownAt"@en ;
+  rdfs:label "Is shown at"@en ;
   rdfs:range xsd:anyURI ;
   dcterms:description "De property wordtGetoondOp wordt gebruikt om het webadres van een resource van een cultuurhistorisch object aan te geven."@nl ;
   dcterms:description "The property isShownAt is used to specify the web address of a resource related to a cultural heritage object."@en ;
