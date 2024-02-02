@@ -8,7 +8,7 @@
 
 # https://linkeddata.cultureelerfgoed.nl/
 
-# change log; ony for major changes
+# change log; only for major changes
 # 2024-01 version 1.5: added former ceox properties to the ceo for the hvdl
 
 # Namespace Declarations
@@ -28,8 +28,8 @@
   rdf:type owl:Ontology ;
   dcterms:created "2018-04-23"^^xsd:date ;
   dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
-  dcterms:description "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
-  dcterms:description "The CEO is the complete semantic representation of the logical data models CHO and KENNIS from the data layer of the RCE."@en ;
+  dcterms:description "De Cultureel Erfgoed Ontologie (CEO) vormt de volledige semantische representatie van de logische datamodellen CHO en KENNIS, afkomstig uit de datalaag van de Rijksdienst voor het Cultureel Erfgoed (RCE)."@nl ;
+  dcterms:description "The Cultural Heritage Ontology (CEO) serves as the complete semantic representation of the logical data models CHO and KENNIS derived from the data layer of the Cultural Heritage Agency of the Netherlands (RCE)."@en ;
   dcterms:hasVersion "1.5"^^xsd:string ;
   dcterms:issued "2023-07-24"^^xsd:date ;
   dcterms:modified "2024-02-01"^^xsd:date ;
@@ -2282,6 +2282,28 @@ ceo:wordtGetoondOp
   dcterms:description "The property isShownAt is used to specify the web address of a resource related to a cultural heritage object."@en ;
   skos:example "https://archisarchief.cultureelerfgoed.nl/Beschermde_Gezichten/BG1439"^^xsd:anyURI ;
 .
+
+# Metadata for CEO Shortened Property Paths Ontology (CEOSP)
+<https://linkeddata.cultureelerfgoed.nl/def/ceosp>
+  rdf:type owl:Ontology ;
+  dcterms:created "2024-01-01"^^xsd:date ; 
+  dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:description "Deze ceo ontologie is ontwikkeld met verkorte propertie paden."@en ;
+  dcterms:description "This ceo ontology is developed with shortened property paths."@nl ; 
+  dcterms:hasVersion "1.0"^^xsd:string ;  
+  dcterms:issued "2024-01-01"^^xsd:date ; 
+  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:title "Cultureel Erfgoed Ontologie verkorte paden"@nl ; 
+  dcterms:title "Cultural Heritage Ontology short properties"@en ; 
+  rdfs:comment "Deze ceo ontologie is ontwikkeld met verkorte propertie paden."@nl ;
+  rdfs:comment "This ceo ontology is developed with shortened property paths."@en ; 
+  rdfs:label "Cultureel Erfgoed Ontologie verkorte paden"@nl ; 
+  rdfs:label "Cultural Heritage Ontology short properties"@en ; 
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
+.  
+
 # Short Properties
 ceosp:geometrie
   rdf:type owl:DatatypeProperty ;
