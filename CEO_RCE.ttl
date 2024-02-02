@@ -1,3 +1,17 @@
+# Cultural Heritage Ontology (CEO) Document
+# This file represents the complete semantic representation of the logical data models CHO and KENNIS from the data layer of the RCE.
+# Version: 1.5
+# Issued: 2023-07-24
+# Modified: 2024-02-01
+# License: Creative Commons Licenses 4.0
+# Publisher: Rijksdienst voor het Cultureel Erfgoed
+
+# https://linkeddata.cultureelerfgoed.nl/
+
+# change log; ony for major changes
+# 2024-01 version 1.5: added former ceox properties to the ceo for the hvdl
+
+# Namespace Declarations
 @prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
 @prefix ceosp: <https://linkeddata.cultureelerfgoed.nl/def/ceosp/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -10,15 +24,15 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-
 <https://linkeddata.cultureelerfgoed.nl/def/ceo>
   rdf:type owl:Ontology ;
   dcterms:created "2018-04-23"^^xsd:date ;
   dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
   dcterms:description "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
   dcterms:description "The CEO is the complete semantic representation of the logical data models CHO and KENNIS from the data layer of the RCE."@en ;
-  dcterms:hasVersion "1.41"^^xsd:string ;
+  dcterms:hasVersion "1.5"^^xsd:string ;
   dcterms:issued "2023-07-24"^^xsd:date ;
+  dcterms:modified "2024-02-01"^^xsd:date ;
   dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
@@ -1478,15 +1492,15 @@ ceo:heeftTemporeleRelatie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2018-04-10"^^xsd:date ;
   dcterms:modified "2018-06-28"^^xsd:date ;
-  rdfs:comment "De property heeftTemporeleRelatie legt de relatie tussen het ... met betrekking tot een cultuurhistorisch object vast."@nl ;
+  rdfs:comment "De property heeftTemporeleRelatie legt de relatie tussen het historische tijdperk met betrekking tot een cultuurhistorisch object vast."@nl ;
   rdfs:domain ceo:Datering ;
   rdfs:label "Heeft temporele relatie"@nl ;
   rdfs:range skos:Concept ;
   rdfs:label "Has temporal relationship"@en ;
-  rdfs:comment "The property heeftTemporeleRelatie defines the relationship between ... regarding a cultural heritage object."@en ;
+  rdfs:comment "The property heeftTemporeleRelatie defines the relationship between the historical period regarding a cultural heritage object."@en ;
   skos:example "Example value" ;
-  dcterms:description "De property heeftTemporeleRelatie legt de relatie tussen het ... met betrekking tot een cultuurhistorisch object vast."@nl ;
-  dcterms:description "The property heeftTemporeleRelatie defines the relationship between ... regarding a cultural heritage object."@en ;
+  dcterms:description "De property heeftTemporeleRelatie legt de relatie tussen het historische tijdperk met betrekking tot een cultuurhistorisch object vast."@nl ;
+  dcterms:description "The property heeftTemporeleRelatie defines the relationship between historical period regarding a cultural heritage object."@en ;
   skos:editorialNote "Property heeft geen data."@nl ;
   skos:editorialNote "Property has no data."@en ;
 .
