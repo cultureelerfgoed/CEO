@@ -12,8 +12,8 @@
 # 2024-01 version 1.5: added former ceox properties to the ceo for the hvdl
 
 # Namespace Declarations
-@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
-#@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo/> .
+#@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo/> .
 @prefix ceosp: <https://linkeddata.cultureelerfgoed.nl/def/ceosp/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
