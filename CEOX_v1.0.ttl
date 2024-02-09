@@ -180,6 +180,22 @@ ceox:heeftNaam
   rdfs:label "Heeft naam"@nl ;
   rdfs:range ceox:Naam ;
 .
+ceox:heeftOmschrijvingOnderwerp
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2024-02-09"^^xsd:date ;
+  rdfs:comment "De property heeftOmschrijvingOnderwerp legt de relatie tussen een ceo:Omschrijving en een skos:Concept uit de CHT vast."@nl ;
+  rdfs:domain ceo:Omschrijving ;
+  rdfs:label "Heeft omschrijving onderwerp"@nl ;
+  rdfs:range skos:Concept ;
+.
+ceox:isOmschrijvingOnderwerpVan
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2024-02-09"^^xsd:date ;
+  rdfs:comment "De property isOmschrijvingOnderwerpVan legt de relatie tussen een skos:Concept uit de CHT en een ceo:Omschrijving vast."@nl ;
+  rdfs:domain skos:Concept ;
+  rdfs:label "Is omschrijving onderwerp van"@nl ;
+  rdfs:range ceo:Omschrijving ;
+.
 ceox:heeftProvincie
   rdf:type owl:ObjectProperty ;
   dcterms:created "2022-12-12"^^xsd:date ;
