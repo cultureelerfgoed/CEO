@@ -1764,8 +1764,8 @@ ceo:inProceduredatumGezicht
   rdfs:comment "Dit predicaat is tijdelijk, in de toekomst moet dit worden gemodelleerd in de Zaak Ontologie."@nl ;
   rdfs:domain ceo:Gezicht ;
   rdfs:range xsd:date ;
-  rdfs:label "In procedure date face"@en ;
-  rdfs:comment "The property inProcedureDateFace is used to indicate the in-procedure date of the townscape."@en ;
+  rdfs:label "In procedure date townscape"@en ;
+  rdfs:comment "The property inProceduredatumGezicht is used to indicate the in-procedure date of the townscape."@en ;
   skos:editorialNote "This predicate is temporary and should be modeled in the ZAAK Ontology in the future."@en ;
   skos:editorialNote "Dit predicaat is tijdelijk, in de toekomst moet dit worden gemodelleerd in de Zaak Ontologie."@nl ;
   skos:example "2004-12-31"^^xsd:date ;
@@ -1791,12 +1791,12 @@ ceo:intrekkingsdatumGezicht
   rdfs:label "Intrekkingsdatum gezicht"@nl ;
   rdfs:comment "De property intrekkingsdatumGezicht wordt gebruikt om aan te geven de intrekkingsdatum van het Gezicht."@nl ;
   rdfs:range xsd:date ;
-  rdfs:comment "The property intrekkingsdatumGezicht is used to indicate the withdrawal date of the face."@en ;
+  rdfs:comment "The property intrekkingsdatumGezicht is used to indicate the withdrawal date of the townscape."@en ;
   rdfs:domain ceo:Gezicht ;
   rdfs:range xsd:date ;
   rdfs:label "Withdrawal date of townscape"@en ;
-  rdfs:comment "The property withdrawalDateFace is used to indicate the withdrawal date of the townscape."@en ;
-  skos:editorialNote "This predicate is temporary and should be modeled in the ZAAK Ontology in the future. It represents the date on which the face is withdrawn."@en ;
+  rdfs:comment "The property intrekkingsdatumGezicht is used to indicate the withdrawal date of the townscape."@en ;
+  skos:editorialNote "This predicate is temporary and should be modeled in the ZAAK Ontology in the future. It represents the date on which the townscape is withdrawn."@en ;
   skos:editorialNote "Dit predicaat is tijdelijk en moet in de toekomst worden gemodelleerd in de ZAAK Ontologie. Het geeft de datum aan waarop het gezicht wordt ingetrokken."@nl ;
   skos:example "2004-12-31"^^xsd:date ;
   dcterms:description "A property indicating the date on which the townscape is withdrawn."@en ;
