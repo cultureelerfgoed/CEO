@@ -1299,9 +1299,9 @@ zo:kardinaliteitEigenschaptype
   a owl:DatatypeProperty ;
   dcterms:created "2019-06-24" ;
   rdfs:comment "De property kardinaliteitEigenschaptype wordt gebruikt om aan te geven welke kardinaliteit is gekoppeld aan een eigenschaptype."@nl ;
-  rdfs:domain zo:Eigenschaptype ;
+  rdfs:domain ztceo:Eigenschaptype ;
   rdfs:label "Kardinaliteit eigenschaptype"@nl ;
-  rdfs:range xsd:integer ;startdatum
+  rdfs:range xsd:integer ;
   skos:definition "Het aantal mogelijke voorkomens van deze eigenschap binnen het zaaktype."@nl ;
 .
 zo:lengteEigenschaptype
