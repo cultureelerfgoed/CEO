@@ -26,6 +26,21 @@ ceo:heeftZaakobject
   owl:inverseOf zo:betreftCultuurhistorischObject ;
   skos:definition "Het zaakobject waarop een zaak betrekking heeft."@nl ;
 .
+<https://linkeddata.cultureelerfgoed.nl/def/zo>
+  a owl:Ontology ;
+  dcterms:created "2019-01-01" ;
+  dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:description "De ZO is de volledige semantische representatie van het logische datamodel Zaak uit de datalaag van de RCE"@nl ;
+  dcterms:hasVersion "1.0" ;
+  dcterms:issued "2024-04-08" ;
+  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:title "Zaak Ontologie"@nl ;
+  rdfs:label "Zaak Ontologie"@nl ;
+  owl:imports <http://purl.org/dc/elements/1.1/> ;
+  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
+.
 zo:Betrokkene
   a owl:Class ;
   dcterms:created "2019-01-01"^^xsd:date ;
@@ -54,21 +69,6 @@ zo:OrganisatorischeEenheid
   rdfs:subClassOf zo:Betrokkene ;
   skos:definition "Definitie RGBZ: Het deel van een functioneel afgebakend onderdeel binnen de organisatie dat haar activiteiten uitvoert binnen een vestiging van zaakbehandelende organisatie en die verantwoordelijk is voor de behandeling van zaken."@nl ;
   skos:definition "Een organisatorische eenheid als specialisatie van betrokkene."@nl ;
-.
-<https://linkeddata.cultureelerfgoed.nl/def/zo>
-  a owl:Ontology ;
-  dcterms:created "2019-01-01" ;
-  dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
-  dcterms:description "De ZO is de volledige semantische representatie van het logische datamodel Zaak uit de datalaag van de RCE"@nl ;
-  dcterms:hasVersion "1.0" ;
-  dcterms:issued "2019-05-06" ;
-  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
-  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
-  dcterms:title "Zaak Ontologie"@nl ;
-  rdfs:label "Zaak Ontologie"@nl ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
-  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
 .
 zo:Besluit
   a owl:Class ;
