@@ -601,7 +601,7 @@ ceo:basisregistratieRelatienummer
   rdfs:comment "The property basisregistratieRelatienummer is used to indicate the unique number under which the base registration relationship instance is known."@en ;
   rdfs:domain ceo:BasisregistratieRelatie ;
   rdfs:label "Basisregistratie relatienummer"@nl ;
-  rdfs:label "Basic registration relationship number"@en ;
+  rdfs:label "Base registration relationship number"@en ;
   rdfs:range xsd:string ;
   skos:example "14590" ;
   dcterms:description "Een uniek nummer waarmee de basisregistratie relatie instance bekend is in de basisregistratie."@nl ;
@@ -2360,7 +2360,7 @@ ceosp:heeftGemeente
   rdfs:comment "De property heeftGemeente is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:comment "The property heeftGemeente is a registry entry within the class Rijksmonument."@en ;
   rdfs:comment "De property heeftGemeente legt de relatie tussen de basisregistratie relatie van een rijksmonument en de gemeente waarin het rijksmonument zich bevindt."@nl ;
-  rdfs:comment "The property heeftGemeente establishes the relationship between the basic registration relationship of a national monument and the municipality in which the national monument is located."@en ;
+  rdfs:comment "The property heeftGemeente establishes the relationship between the base registration relationship of a national monument and the municipality in which the national monument is located."@en ;
   rdfs:comment "De property is een verkort property pad van ceo:heeftBasisregistratieRelatie/ceo:heeftGemeente."@nl ;
   rdfs:comment "The property is a shortened property path of ceo:heeftBasisregistratieRelatie/ceo:heeftGemeente."@en ;
   dcterms:description "De property heeftGemeente wordt gebruikt om de relatie tussen een rijksmonument en de gemeente waarin het object zich bevindt aan te geven. Het is een registergegeven binnen de class Rijksmonument."@nl ;
@@ -2380,7 +2380,7 @@ ceosp:heeftProvincie
   rdfs:comment "De property heeftProvincie is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:comment "The property heeftProvincie is a registry entry within the class Rijksmonument."@en ;
   rdfs:comment "De property heeftProvincie legt de relatie tussen de basisregistratie relatie van een rijksmonument en de provincie waarin het rijksmonument zich bevindt."@nl ;
-  rdfs:comment "The property hasProvince establishes the relationship between the basic registration relationship of a national monument and the province in which the national monument is located."@en ;
+  rdfs:comment "The property hasProvince establishes the relationship between the base registration relationship of a national monument and the province in which the national monument is located."@en ;
   rdfs:comment "De property is een verkort property pad van ceo:heeftBasisregistratieRelatie/ceo:heeftProvincie."@nl ;
   rdfs:comment "The property is a shortened property path of ceo:heeftBasisregistratieRelatie/ceo:heeftProvincie."@en ;
   dcterms:description "De property heeftProvincie wordt gebruikt om de relatie tussen een rijksmonument en de provincie waarin het object zich bevindt aan te geven. Het is een registergegeven binnen de class Rijksmonument."@nl ;
