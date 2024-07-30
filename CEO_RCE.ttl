@@ -1456,7 +1456,7 @@ ceo:heeftSituering
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Heeft situering"@nl ;
   rdfs:range skos:Concept ;
-  rdfs:label "Has siting"@en ;
+  rdfs:label "Is situated"@en ;
   rdfs:comment "The property heeftSituering establishes the relationship between a national monument that is not a dwelling object in the BAG and a dwelling object in the BAG."@en ;
   skos:example <https://data.cultureelerfgoed.nl/term/id/rn/9b224792-62f8-4f85-8314-9c89425da3d6> ;
   dcterms:description "De property heeftSituering legt de relatie tussen een rijksmonument dat geen verblijfsobject in de Basisregistratie Adressen en Gebouwen (BAG) is met een verblijfsobject in de BAG. Het wordt gebruikt om aan te geven waar een rijksmonument gelegen is ten opzichte van een verblijfsobject."@nl ;
@@ -2399,7 +2399,7 @@ ceosp:situering
   rdfs:domain ceo:Rijksmonument ;
   rdfs:label "situering"@nl ;
   rdfs:range xsd:string ;
-  rdfs:label "siting"@en ;
+  rdfs:label "situated"@en ;
   rdfs:comment "The property situering establishes the relationship between a national monument that is not a dwelling object in the BAG and a dwelling object in the BAG."@en ;
   rdfs:comment "De property is een verkort property pad van ceo:heeftBasisregistratieRelatie/ceo:heeftBAGRelatie/ceo:heeftSituering/skos:prefLabel."@nl ;
   rdfs:comment "The property is a shortened property path of ceo:heeftBasisregistratieRelatie/ceo:heeftBAGRelatie/ceo:heeftSituering/skos:prefLabel."@en ;
