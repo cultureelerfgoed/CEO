@@ -1741,7 +1741,7 @@ ceo:huisnummer
   dcterms:description "De property huisnummer wordt gebruikt om het huisnummer, huisletter en huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
   dcterms:description "The property huisnummer is used to indicate the house number, house letter, and house number addition of a cultural heritage object."@en ;
   skos:example "2" ;
-
+.
 ceo:huisletter
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
@@ -1758,7 +1758,7 @@ ceo:huisletter
   dcterms:description "De property huisletter wordt gebruikt om de huisletter aan te geven van een cultuurhistorisch object."@nl ;
   dcterms:description "The property huisletter is used to indicate the house letter of a cultural heritage object."@en ;
   skos:example "M" ;
-  
+.
 ceo:huisnummerToevoeging
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
