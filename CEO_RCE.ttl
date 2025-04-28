@@ -1741,6 +1741,40 @@ ceo:huisnummer
   dcterms:description "De property huisnummer wordt gebruikt om het huisnummer, huisletter en huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
   dcterms:description "The property huisnummer is used to indicate the house number, house letter, and house number addition of a cultural heritage object."@en ;
   skos:example "2" ;
+
+ceo:huisletter
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-06-14"^^xsd:date ;
+  dcterms:modified "2020-04-20"^^xsd:date ;
+  rdfs:comment "De property huisletter wordt gebruikt om de huisletter aan te geven van een cultuurhistorisch object."@nl ;
+  rdfs:comment "De property huisletter is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "The property huisletter is a registry data within the class Rijksmonument."@en ;
+  rdfs:comment "The property huisletter is used to indicate the house letter of a cultural heritage object."@en ;
+  rdfs:domain ceo:BAGRelatie ;
+  rdfs:label "Huisletter"@nl ;
+  rdfs:label "House letter"@en ;
+  rdfs:range xsd:string ;
+  ceo:registergegeven "true"^^xsd:boolean ;
+  dcterms:description "De property huisletter wordt gebruikt om de huisletter aan te geven van een cultuurhistorisch object."@nl ;
+  dcterms:description "The property huisletter is used to indicate the house letter of a cultural heritage object."@en ;
+  skos:example "M" ;
+  
+ceo:huisnummerToevoeging
+  rdf:type owl:DatatypeProperty ;
+  dcterms:created "2018-06-14"^^xsd:date ;
+  dcterms:modified "2020-04-20"^^xsd:date ;
+  rdfs:comment "De property huisnummerToevoeging wordt gebruikt om de huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
+  rdfs:comment "De property huisnummerToevoeging is een registergegeven binnen de class Rijksmonument."@nl ;
+  rdfs:comment "The property huisnummerToevoeging is a registry data within the class Rijksmonument."@en ;
+  rdfs:comment "The property huisnummerToevoeging is used to indicate the house number, house letter, and house number addition of a cultural heritage object."@en ;
+  rdfs:domain ceo:BAGRelatie ;
+  rdfs:label "Huisnummer toevoeging"@nl ;
+  rdfs:label "House number addition"@en ;
+  rdfs:range xsd:string ;
+  ceo:registergegeven "true"^^xsd:boolean ;
+  dcterms:description "De property huisnummerToevoeging wordt gebruikt om de huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
+  dcterms:description "The property huisnummerToevoeging is used to indicate the house number addition of a cultural heritage object."@en ;
+  skos:example "09" ;
 .
 ceo:indicatieArcheologischeMonumentenKaartWaardig
   rdf:type owl:DatatypeProperty ;
