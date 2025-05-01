@@ -1728,11 +1728,11 @@ ceo:huidigeNaam
 ceo:huisnummer
   rdf:type owl:DatatypeProperty ;
   dcterms:created "2018-06-14"^^xsd:date ;
-  dcterms:modified "2020-04-20"^^xsd:date ;
-  rdfs:comment "De property huisnummer wordt gebruikt om het huisnummer, huisletter en huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
+  dcterms:modified "2025-05-01"^^xsd:date ;
+  rdfs:comment "De property huisnummer wordt gebruikt om het huisnummer aan te geven van een cultuurhistorisch object."@nl ;
   rdfs:comment "De property huisnummer is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:comment "The property huisnummer is a registry data within the class Rijksmonument."@en ;
-  rdfs:comment "The property huisnummer is used to indicate the house number, house letter, and house number addition of a cultural heritage object."@en ;
+  rdfs:comment "The property huisnummer is used to indicate the house number of a cultural heritage object."@en ;
   rdfs:domain ceo:BAGRelatie ;
   rdfs:label "Huisnummer"@nl ;
   rdfs:label "House number"@en ;
@@ -1744,8 +1744,7 @@ ceo:huisnummer
 .
 ceo:huisletter
   rdf:type owl:DatatypeProperty ;
-  dcterms:created "2018-06-14"^^xsd:date ;
-  dcterms:modified "2020-04-20"^^xsd:date ;
+  dcterms:created "2025-04-28"^^xsd:date ;
   rdfs:comment "De property huisletter wordt gebruikt om de huisletter aan te geven van een cultuurhistorisch object."@nl ;
   rdfs:comment "De property huisletter is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:comment "The property huisletter is a registry data within the class Rijksmonument."@en ;
@@ -1761,8 +1760,7 @@ ceo:huisletter
 .
 ceo:huisnummerToevoeging
   rdf:type owl:DatatypeProperty ;
-  dcterms:created "2018-06-14"^^xsd:date ;
-  dcterms:modified "2020-04-20"^^xsd:date ;
+  dcterms:created "2025-04-28"^^xsd:date ;
   rdfs:comment "De property huisnummerToevoeging wordt gebruikt om de huisnummertoevoeging aan te geven van een cultuurhistorisch object."@nl ;
   rdfs:comment "De property huisnummerToevoeging is een registergegeven binnen de class Rijksmonument."@nl ;
   rdfs:comment "The property huisnummerToevoeging is a registry data within the class Rijksmonument."@en ;
