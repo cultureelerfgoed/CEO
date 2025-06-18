@@ -390,6 +390,15 @@ ceo:Rijksmonument
   skos:example "https://linkeddata.cultureelerfgoed.nl/cho-kennis/id/rijksmonument/10073" ;
   rdfs:subClassOf ceo:CultuurhistorischObject ;
 .
+ceo:StedenbouwkundigeMorfologischeAanduiding
+  rdf:type owl:Class ;
+  dcterms:created "2025-06-18"^^xsd:date ;
+  rdfs:comment "De class StedenbouwkundigeMorfologischeAanduiding is een subclass van kennisregistratie en is de representatie van de stedebouwkundige morfologische aanduiding met betrekking tot een stads- en dorpsgezicht."@nl ;
+  rdfs:comment "The class StedenbouwkundigeMorfologischeAanduiding is a subclass of kennisregistratie and represents the urban planning morphological designation associated with an urban or village townscape."@en ;
+  rdfs:label "Stedenbouwkundige morfologische aanduiding"@nl ;
+  rdfs:label "Urban planning morphological designation"@en ;
+  rdfs:subClassOf ceo:Kennisregistratie ;
+.
 ceo:StijlEnCultuur
   rdf:type owl:Class ;
   dcterms:created "2018-05-02"^^xsd:date ;
@@ -1461,6 +1470,15 @@ ceo:heeftSituering
   skos:example <https://data.cultureelerfgoed.nl/term/id/rn/9b224792-62f8-4f85-8314-9c89425da3d6> ;
   dcterms:description "De property heeftSituering legt de relatie tussen een rijksmonument dat geen verblijfsobject in de Basisregistratie Adressen en Gebouwen (BAG) is met een verblijfsobject in de BAG. Het wordt gebruikt om aan te geven waar een rijksmonument gelegen is ten opzichte van een verblijfsobject."@nl ;
   dcterms:description "The property heeftSituering establishes the relationship between a national monument that is not a dwelling object in the Basisregistratie Adressen en Gebouwen (BAG) and a dwelling object in the BAG. It is used to indicate the location of a national monument in relation to a dwelling object."@en ;
+.
+ceo:heeftStedebouwkundigeMorfologischeAanduidingNaam
+  rdf:type owl:ObjectProperty ;
+  dcterms:created "2025-06-18"^^xsd:date ;
+  rdfs:comment "De property heeftStedebouwkundigeMorfologischeNaam legt de relatie tussen een ceo:StedebouwkundigeMorfologischeAanduiding en skos:Concept."@nl ;
+  rdfs:domain ceo:StedebouwkundigeMorfologischeAanduiding ;
+  rdfs:label "Heeft stedebouwkundige morfologische aanduiding naam"@nl ;
+  rdfs:range skos:Concept ;
+  rdfs:label "Has urban planning morphological designation name"@en ;
 .
 ceo:heeftStijlEnCultuur
   rdf:type owl:ObjectProperty ;
