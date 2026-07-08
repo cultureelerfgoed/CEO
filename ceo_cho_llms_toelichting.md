@@ -1,7 +1,6 @@
 # AI-ready erfgoeddata: toelichting in gewone taal
 
-*Leeswijzer bij `ceo_cho_llms.txt` en de bijbehorende bestanden en hulpmiddelen.
-Bedoeld voor collega's zonder linked-data-achtergrond.*
+*Leeswijzer bij `ceo_cho_llms.txt` en de bijbehorende bestanden en hulpmiddelen.*
 
 ## Waar gaat dit over?
 
