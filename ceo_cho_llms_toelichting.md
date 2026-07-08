@@ -1,4 +1,4 @@
-# AI-ready erfgoeddata: toelichting in gewone taal
+# AI-ready erfgoeddata: toelichting
 
 *Leeswijzer bij `ceo_cho_llms.txt` en de bijbehorende bestanden en hulpmiddelen.*
 
