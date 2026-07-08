@@ -14,7 +14,6 @@
 
 # Namespace Declarations
 @prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
-#@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -25,26 +24,32 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rn: <https://data.cultureelerfgoed.nl/term/id/rn/2/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix schema: <https://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 
 <https://linkeddata.cultureelerfgoed.nl/def/ceo>
   rdf:type owl:Ontology ;
   dcterms:created "2018-04-23"^^xsd:date ;
+  dcterms:issued "2023-07-24"^^xsd:date ;
+  dcterms:modified "2026-06-24"^^xsd:date ;
+  owl:versionInfo "1.5.1" ;
   dcterms:creator <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
+  dcterms:title "Cultureel Erfgoed Ontologie"@nl , "Cultural Heritage Ontology"@en ;
   dcterms:description "De Cultureel Erfgoed Ontologie (CEO) vormt de volledige semantische representatie van de logische datamodellen CHO en KENNIS, afkomstig uit de datalaag van de Rijksdienst voor het Cultureel Erfgoed (RCE)."@nl ;
   dcterms:description "The Cultural Heritage Ontology (CEO) serves as the complete semantic representation of the logical data models CHO and KENNIS derived from the data layer of the Cultural Heritage Agency of the Netherlands (RCE)."@en ;
-  dcterms:hasVersion "1.5"^^xsd:string ;
-  dcterms:issued "2023-07-24"^^xsd:date ;
-  dcterms:modified "2024-02-01"^^xsd:date ;
-  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/nl> ;
-  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
-  dcterms:title "Cultureel Erfgoed Ontologie"@nl ;
-  dcterms:title "Cultural Heritage Ontology"@en ;
-  rdfs:comment "De CEO is de volledige semantische representatie van de logische datamodellen CHO en KENNIS uit de datalaag van de RCE."@nl ;
-  rdfs:comment "The CEO is the complete semantic representation of the logical data models CHO and KENNIS from the data layer of the RCE."@en ;
-  rdfs:label "Cultureel Erfgoed Ontologie"@nl ;
-  rdfs:label "Cultural Heritage Ontology"@en ;
-  foaf:mbox "thesauri@cultureelerfgoed.nl" ;
+  rdfs:label "Cultureel Erfgoed Ontologie"@nl , "Cultural Heritage Ontology"@en ;
+  vann:preferredNamespacePrefix "ceo" ;
+  vann:preferredNamespaceUri "https://linkeddata.cultureelerfgoed.nl/def/ceo#" ;
+  foaf:mbox <mailto:thesauri@cultureelerfgoed.nl> ;
+  rdfs:seeAlso <https://linkeddata.cultureelerfgoed.nl/> ,
+               <https://github.com/cultureelerfgoed/ceo> ;
+  skos:changeNote "2024-01, versie 1.5: voormalige ceox-properties toegevoegd aan de ceo t.b.v. de HVDL."@nl ;
+  skos:changeNote "2026-06, versie 1.5.1: /rn/ gewijzigd naar /rn/2."@nl ;
 .
 <https://creativecommons.org/licenses/by/4.0/>
   rdf:type dcterms:License ;
@@ -2333,4 +2338,200 @@ ceo:wordtGetoondOp
   dcterms:description "De property wordtGetoondOp wordt gebruikt om het webadres van een resource van een cultuurhistorisch object aan te geven."@nl ;
   dcterms:description "The property isShownAt is used to specify the web address of a resource related to a cultural heritage object."@en ;
   skos:example "https://archisarchief.cultureelerfgoed.nl/Beschermde_Gezichten/BG1439"^^xsd:anyURI ;
+.
+
+# =============================================================================
+# Externe mappings en registerannotaties (toegevoegd in v1.6.0)
+# Conventies:
+#   rdfs:subClassOf  -> alleen bij harde, verdedigbare specialisatie
+#   skos:closeMatch  -> semantisch vrijwel gelijk, geen reasoning-gevolgen
+#   skos:broadMatch  -> externe term is ruimer dan de CEO-klasse
+#   skos:relatedMatch-> verwant, maar structureel anders gemodelleerd
+# -----------------------------------------------------------------------------
+
+## --- Kernklassen -------------------------------------------------------------
+
+ceo:CultuurhistorischObject
+  skos:closeMatch crm:E18_Physical_Thing ;
+  skos:relatedMatch schema:Thing ;
+.
+
+ceo:Rijksmonument
+  rdfs:subClassOf schema:LandmarksOrHistoricalBuildings ;
+  skos:closeMatch wd:Q916333 ;          # rijksmonument (NL)
+  skos:broadMatch crm:E24_Physical_Human-Made_Thing ;
+.
+
+ceo:Werelderfgoed
+  skos:closeMatch wd:Q9259 ;            # UNESCO-werelderfgoed
+  skos:broadMatch schema:LandmarksOrHistoricalBuildings ;
+.
+
+ceo:Gezicht
+  skos:closeMatch wd:Q2584998 ;         # beschermd stads- of dorpsgezicht ("heritage district in the Netherlands")
+  skos:broadMatch schema:Place ;
+  skos:relatedMatch crm:E53_Place ;
+.
+
+ceo:Complex
+  skos:closeMatch schema:Collection ;
+  skos:relatedMatch crm:E78_Curated_Holding ;
+.
+
+## --- Archeologie -------------------------------------------------------------
+
+ceo:ArcheologischTerrein
+  skos:closeMatch crm:E27_Site ;
+  skos:broadMatch schema:Place ;
+.
+
+ceo:Vondstlocatie
+  skos:closeMatch crm:E27_Site ;
+  skos:broadMatch schema:Place ;
+.
+
+ceo:ArcheologischOnderzoeksgebied
+  skos:broadMatch crm:E53_Place ;
+  skos:broadMatch schema:Place ;
+.
+
+ceo:ArcheologischComplex
+  skos:relatedMatch crm:E27_Site ;
+.
+
+ceo:Vondsten
+  skos:broadMatch crm:E18_Physical_Thing ;
+  skos:relatedMatch schema:Product ;
+.
+
+ceo:Grondsporen
+  skos:broadMatch crm:E26_Physical_Feature ;
+.
+
+## --- Kennisregistratie-patroon ----------------------------------------------
+# Het CEO-patroon 'vastgelegde kennisfeiten over een object' komt overeen met
+# het CIDOC-CRM attribute-assignment-patroon. Dit is de mapping met de meeste
+# hefboomwerking: alle subklassen erven de betekenis.
+
+ceo:Kennisregistratie
+  skos:closeMatch crm:E13_Attribute_Assignment ;
+.
+
+ceo:BouwkundigeKwaliteit
+  skos:closeMatch crm:E14_Condition_Assessment ;
+.
+
+ceo:Type
+  skos:closeMatch crm:E17_Type_Assignment ;
+.
+
+ceo:Naam
+  skos:relatedMatch crm:E41_Appellation ;   # de toekenning van een benaming
+.
+
+ceo:Materiaal
+  skos:relatedMatch crm:E57_Material ;      # registratie verwijst naar materiaal
+.
+
+ceo:Functie
+  skos:relatedMatch crm:E55_Type ;
+.
+
+ceo:StijlEnCultuur
+  skos:relatedMatch crm:E55_Type ;
+.
+
+ceo:Omschrijving
+  skos:relatedMatch crm:E33_Linguistic_Object ;
+  skos:relatedMatch schema:description ;    # NB: property, alleen als hint
+.
+
+ceo:StedenbouwkundigeMorfologischeAanduiding
+  skos:relatedMatch crm:E55_Type ;
+.
+
+ceo:Bronverwijzing
+  skos:closeMatch crm:E31_Document ;
+  skos:relatedMatch schema:CreativeWork ;
+.
+
+## --- Gebeurtenissen en actoren ------------------------------------------------
+
+ceo:Gebeurtenis
+  skos:closeMatch crm:E5_Event ;
+  skos:closeMatch schema:Event ;
+.
+
+ceo:ActorEnRol
+  skos:closeMatch schema:Role ;             # gekwalificeerde actor-relatie
+  skos:relatedMatch crm:E39_Actor ;
+.
+
+## --- Tijd en ruimte ------------------------------------------------------------
+
+ceo:Datering
+  skos:closeMatch crm:E52_Time-Span ;
+.
+
+ceo:BeginDatering
+  skos:broadMatch crm:E52_Time-Span ;
+.
+
+ceo:EindDatering
+  skos:broadMatch crm:E52_Time-Span ;
+.
+
+ceo:Geometrie
+  # bestaande mapping naar gsp:Geometry blijft; aanvullend:
+  skos:relatedMatch schema:GeoShape ;
+.
+
+ceo:LocatieAanduiding
+  skos:closeMatch crm:E53_Place ;
+  skos:relatedMatch schema:PostalAddress ;
+.
+
+## --- Bewust niet extern gemapt --------------------------------------------------
+# NL-specifieke administratieve koppelconstructies zonder zinnig extern
+# equivalent. De comment-aanvulling maakt dit expliciet voor mens en machine.
+
+ceo:BasisregistratieRelatie
+  rdfs:comment "Bewust niet gemapt naar externe vocabulaires: NL-specifieke administratieve koppelconstructie naar stelsel van basisregistraties."@nl ;
+.
+
+ceo:BAGRelatie
+  rdfs:comment "Bewust niet gemapt naar externe vocabulaires: koppeling naar de Basisregistratie Adressen en Gebouwen (BAG)."@nl ;
+.
+
+ceo:BRKRelatie
+  rdfs:comment "Bewust niet gemapt naar externe vocabulaires: koppeling naar de Basisregistratie Kadaster (BRK)."@nl ;
+.
+
+## --- Externe registers en thesauri (addendum) ---------------------------------
+# Documenteert machine-leesbaar naar welke externe bronnen de CEO/CHO-data
+# verwijst. De feitelijke linkset-aantallen komen uit de VoID (genereer_void.py).
+
+<https://linkeddata.cultureelerfgoed.nl/def/ceo>
+  rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/rn/2/> ;      # Rijksmonumenten-referentienetwerk (waardenlijsten)
+  rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/cht/> ;       # Cultuurhistorische Thesaurus
+  rdfs:seeAlso <https://data.cultureelerfgoed.nl/term/id/abr/> ;       # Archeologisch Basisregister
+  rdfs:seeAlso <https://termennetwerk.netwerkdigitaalerfgoed.nl/> ;    # NDE Termennetwerk (zoeken/reconcilieren)
+.
+
+ceo:heeftGemeente
+  rdfs:comment "Waarden zijn OWMS-URI's (standaarden.overheid.nl/owms/terms/Gemeente/...). Let op: OWMS is opgevolgd door TOOI; gebruik bij querygeneratie de OWMS-URI's zoals ze in de data staan, niet TOOI-equivalenten."@nl ;
+  rdfs:seeAlso <https://identifier.overheid.nl/tooi/def/thes/kern/c_c9d6b9a3> ;  # TOOI-concept 'gemeente', t.b.v. toekomstige migratie
+.
+
+ceo:heeftProvincie
+  rdfs:comment "Waarden zijn OWMS-URI's (standaarden.overheid.nl/owms/terms/Provincie/...). Let op: OWMS is opgevolgd door TOOI; gebruik bij querygeneratie de OWMS-URI's zoals ze in de data staan."@nl ;
+.
+
+ceo:heeftBAGRelatie
+  rdfs:comment "Verbindt via de BAGRelatie naar de Basisregistratie Adressen en Gebouwen; pand- en verblijfsobject-URI's volgen het patroon bag.basisregistraties.overheid.nl/bag/id/{pand|verblijfsobject}/{identificatie}."@nl ;
+  rdfs:seeAlso <https://bag.basisregistraties.overheid.nl/> ;
+.
+
+ceo:heeftBRKRelatie
+  rdfs:seeAlso <https://brk.basisregistraties.overheid.nl/> ;
 .

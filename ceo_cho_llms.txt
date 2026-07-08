@@ -1,0 +1,120 @@
+# Cultureel Erfgoed Ontologie (CEO) — Rijksdienst voor het Cultureel Erfgoed
+
+> De CEO is de semantische representatie van de logische datamodellen CHO en
+> KENNIS van de Rijksdienst voor het Cultureel Erfgoed (RCE). De bijbehorende
+> CHO-dataset in de Linked Data Voorziening (LDV) bevat linked open data over
+> rijksmonumenten, beschermde stads- en dorpsgezichten, werelderfgoed,
+> archeologische terreinen, vondsten en vondstlocaties in Nederland (~58 miljoen
+> triples, dagelijks bijgewerkt, licentie CC BY 4.0).
+> The CEO is the ontology behind the Dutch national heritage linked data;
+> all labels and definitions are available in Dutch and English.
+
+Dit bestand is bedoeld voor AI-systemen (LLM's, agents, RAG-pipelines) die met
+de CEO en de CHO-dataset willen werken. Gebruik de onderstaande bronnen in
+deze volgorde: eerst de ontologie (structuur), dan de VoID (inhoud), dan de
+padenkaart (feitelijke paden), dan de queryvoorbeelden (gebruik).
+
+## Kernfeiten
+
+- Namespace: `https://linkeddata.cultureelerfgoed.nl/def/ceo#` (prefix `ceo:`)
+- SPARQL-endpoint (Virtuoso, geospatiaal):
+  `https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql`
+- SPARQL-endpoint (Speedy, standaardconform):
+  `https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/sparql`
+- Belangrijkste klassen: `ceo:Rijksmonument`, `ceo:CultuurhistorischObject`,
+  `ceo:Gezicht` (beschermd stads-/dorpsgezicht), `ceo:Werelderfgoed`,
+  `ceo:Complex`, `ceo:ArcheologischTerrein`, `ceo:Vondstlocatie`
+- Kennispatroon: registraties over objecten (functie, materiaal, naam, type,
+  omschrijving, datering) zijn gemodelleerd als subklassen van
+  `ceo:Kennisregistratie`, gekoppeld via `ceo:heeftBetrekkingOp` en de
+  `ceo:heeft...`-properties op `ceo:CultuurhistorischObject`
+- Waardenlijsten: veel properties verwijzen naar SKOS-concepten
+  (`skos:prefLabel` voor mensleesbare waarden)
+- Identificatie: `ceo:rijksmonumentnummer`, `ceo:complexnummer`,
+  `ceo:gezichtsnummer`, `ceo:werelderfgoednummer`
+- De ontologie bevat mappings naar schema.org, CIDOC-CRM en Wikidata
+  (skos:closeMatch / skos:broadMatch / rdfs:subClassOf)
+
+## Ontologie
+
+- [CEO_RCE.ttl](https://raw.githubusercontent.com/cultureelerfgoed/ceo/master/CEO_RCE.ttl):
+  de volledige ontologie in Turtle. Alle klassen en properties hebben
+  rdfs:label en rdfs:comment in NL en EN, en vrijwel alle een skos:example.
+
+## Datasetbeschrijving (VoID)
+
+- [ceo-void.ttl](https://raw.githubusercontent.com/cultureelerfgoed/ceo/master/ceo-void.ttl):
+  VoID-beschrijving van de CHO-dataset met void:classPartition en
+  void:propertyPartition per CEO-klasse en -property. Raadpleeg dit bestand
+  om te bepalen welke klassen en properties daadwerkelijk gevuld zijn
+  voordat je een query opstelt: een klasse die hier ontbreekt bevat geen
+  instanties.
+
+## Padenkaart (data-gedreven SHACL-shapes)
+
+- [ceo-padenkaart.ttl](https://raw.githubusercontent.com/cultureelerfgoed/ceo/master/ceo-padenkaart.ttl):
+  per klasse een sh:NodeShape met de daadwerkelijk in de data aangetroffen
+  paden: welk predicaat, naar welke doelklasse of welk datatype, en de
+  vullingsgraad (sh:description). Afgeleid uit steekproeven, transitief
+  verkend vanaf de tien kernklassen. Gebruik dit als primaire bron voor
+  het opbouwen van querypaden: anders dan de ontologie toont dit wat er
+  feitelijk in de data zit. Voor paden die hier ontbreken: verken live
+  via de MCP-tools ldv_verken_klasse en ldv_verken_inkomend.
+
+## Queryvoorbeelden
+
+- [ceo-queryvoorbeelden.ttl](https://raw.githubusercontent.com/cultureelerfgoed/ceo/master/ceo-queryvoorbeelden.ttl):
+  tien natuurlijke-taalvragen (NL/EN) met bijbehorende geteste SPARQL-queries,
+  in sh:SPARQLExecutable-formaat (geschikt voor sparql-llm en vergelijkbare
+  tools). Volg de querypatronen uit dit bestand; de paden lopen via de
+  domain/range-declaraties van de ontologie. Voorbeeld van het kernpatroon
+  voor adressen: Rijksmonument -> heeftBasisregistratieRelatie ->
+  heeftBAGRelatie -> volledigAdres.
+
+## Live toegang voor AI-agents (MCP)
+
+- [ldv_mcp.py](https://raw.githubusercontent.com/cultureelerfgoed/ldv-tools/main/ldv_mcp.py):
+  MCP-server (Model Context Protocol) die het SPARQL-endpoint ontsluit met
+  tools voor vrije lezende queries en VoID-statistieken
+  (ldv_sparql_select, ldv_dataset_totalen, ldv_klasse_partities,
+  ldv_property_partities). Draait lokaal (stdio) of centraal
+  (streamable HTTP); zie de docstring voor configuratie.
+
+## Externe registers en thesauri
+
+De CHO-dataset verwijst naar externe bronnen; de VoID bevat void:Linksets
+met de feitelijke aantallen per verbinding.
+
+- **Waardenlijsten/thesauri (RCE)**: concept-waarden (functie, type, materiaal,
+  stijl, gebeurtenis) komen uit RCE-thesauri onder
+  `https://data.cultureelerfgoed.nl/term/id/` (o.a. `rn/2/` referentienetwerk,
+  `cht/` Cultuurhistorische Thesaurus, `abr/` Archeologisch Basisregister).
+  Deze zijn doorzoekbaar en reconcilieerbaar via het NDE Termennetwerk:
+  https://termennetwerk.netwerkdigitaalerfgoed.nl/ (met API). Zoek concepten
+  op via skos:prefLabel; filter in queries op label, niet op URI-strings.
+- **Gemeenten en provincies**: waarden van `ceo:heeftGemeente` en
+  `ceo:heeftProvincie` zijn OWMS-URI's
+  (`http://standaarden.overheid.nl/owms/terms/...`). Let op: OWMS is
+  opgevolgd door TOOI, maar de data gebruikt OWMS — genereer dus geen
+  TOOI-URI's in queries op deze dataset.
+- **BAG en BRK (Kadaster)**: via `ceo:heeftBasisregistratieRelatie` linkt de
+  dataset naar de Basisregistratie Adressen en Gebouwen
+  (`https://bag.basisregistraties.overheid.nl/bag/id/pand/...` en
+  `.../verblijfsobject/...`) en de Basisregistratie Kadaster. Adresvelden
+  (postcode, huisnummer, volledigAdres) staan op de BAGRelatie zelf.
+
+## Richtlijnen voor querygeneratie
+
+- Gebruik altijd `PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>`
+- Test onbekende paden eerst met LIMIT 10 voordat je aggregeert
+- Objectwaarden zijn vaak SKOS-concepten: filter op `skos:prefLabel`,
+  niet op de URI-string
+- Geometrie is beschikbaar via `ceo:heeftGeometrie`; gebruik het
+  Virtuoso-endpoint voor geospatiale functies
+- De dataset wordt dagelijks ververst; cache aantallen niet langdurig
+
+## Contact
+
+- Publicatie: https://linkeddata.cultureelerfgoed.nl/
+- Repository: https://github.com/cultureelerfgoed/ceo
+- E-mail: thesauri@cultureelerfgoed.nl
