@@ -1,0 +1,998 @@
+@prefix ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ceo:ArcheologischComplexShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Vondstlocatie ;
+            sh:description "Gevuld bij 483/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:ligtInObject ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 2226/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 226/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:Type ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 323/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:archis2Complexnummer ],
+        [ sh:class ceo:ArcheologischOnderzoeksgebied ;
+            sh:description "Gevuld bij 194/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:ligtInObject ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 226/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftType ],
+        [ sh:class ceo:Type ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftType ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:Gebeurtenis ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGebeurtenis ],
+        [ sh:class ceo:ArcheologischTerrein ;
+            sh:description "Gevuld bij 323/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:ligtInObject ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 226/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class ceo:Gebeurtenis ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGebeurtenis ] ;
+    sh:targetClass ceo:ArcheologischComplex .
+
+ceo:ArcheologischOnderzoeksgebiedShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 380/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftVertrouwelijkAanduiding ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 380/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:ArcheologischComplex ;
+            sh:description "Gevuld bij 1322/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:bevatObject ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class ceo:Geometrie ;
+            sh:description "Gevuld bij 999/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGeometrie ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 380/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 338/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:indicatieArcheologischeMonumentenKaartWaardig ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 380/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:Vondstlocatie ;
+            sh:description "Gevuld bij 1055/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:bevatObject ],
+        [ sh:class ceo:BasisregistratieRelatie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBasisregistratieRelatie ] ;
+    sh:targetClass ceo:ArcheologischOnderzoeksgebied .
+
+ceo:ArcheologischTerreinShape a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 795/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftVertrouwelijkAanduiding ],
+        [ sh:class ceo:LocatieAanduiding ;
+            sh:description "Gevuld bij 961/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftLocatieAanduiding ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class ceo:ArcheologischComplex ;
+            sh:description "Gevuld bij 2819/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:bevatObject ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 806/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 806/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 806/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftArcheologischeWaardering ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 806/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Rijksmonument ;
+            sh:description "Gevuld bij 416/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:ligtInObject ],
+        [ sh:class ceo:BasisregistratieRelatie ;
+            sh:description "Gevuld bij 989/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBasisregistratieRelatie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:archis2Monumentnummer ] ;
+    sh:targetClass ceo:ArcheologischTerrein .
+
+ceo:BAGRelatieShape a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 958/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:verblijfsobjectIdentificatie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 439/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:pandIdentificatie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:postcode ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:openbareRuimte ],
+        [ sh:description "Gevuld bij 958/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftVerblijfsobject ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:BAGRelatienummer ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:volledigAdres ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:woonplaatsnaam ],
+        [ sh:description "Gevuld bij 439/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftPand ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 182/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftSituering ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 82/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:huisletter ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:huisnummer ] ;
+    sh:targetClass ceo:BAGRelatie .
+
+ceo:BasisregistratieRelatieShape a sh:NodeShape ;
+    sh:property [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:basisregistratieRelatienummer ],
+        [ sh:class ceo:BAGRelatie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBAGRelatie ] ;
+    sh:targetClass ceo:BasisregistratieRelatie .
+
+ceo:BeginDateringShape a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftPeriode ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ] ;
+    sh:targetClass ceo:BeginDatering .
+
+ceo:BouwkundigeKwaliteitShape a sh:NodeShape ;
+    sh:property [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:Rijksmonument ;
+            sh:description "Gevuld bij 2195/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBouwkundigeStaat ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratienummer ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:formeelStandpunt ] ;
+    sh:targetClass ceo:BouwkundigeKwaliteit .
+
+ceo:ComplexShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Rijksmonument ;
+            sh:description "Gevuld bij 2744/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftHoofdobject ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class ceo:Naam ;
+            sh:description "Gevuld bij 976/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2998/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:Rijksmonument ;
+            sh:description "Gevuld bij 26017/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftRijksmonument ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1999/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:complexnummer ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1820/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 976/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftNaam ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 999/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#RCEBuitenplaats> ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 844/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 844/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 844/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Naam ;
+            sh:description "Gevuld bij 976/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftNaam ] ;
+    sh:targetClass ceo:Complex .
+
+ceo:DateringShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:EindDatering ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftEindDatering ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:BeginDatering ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBeginDatering ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:dateringnummer ] ;
+    sh:targetClass ceo:Datering .
+
+ceo:EindDateringShape a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftPeriode ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ] ;
+    sh:targetClass ceo:EindDatering .
+
+ceo:FunctieShape a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:hoofdfunctie ],
+        [ sh:class ceo:Rijksmonument ;
+            sh:description "Gevuld bij 2520/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratienummer ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftFunctieNaam ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:formeelStandpunt ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ] ;
+    sh:targetClass ceo:Functie .
+
+ceo:GebeurtenisShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:ArcheologischComplex ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGebeurtenisNaam ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:formeelStandpunt ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratienummer ],
+        [ sh:class ceo:Datering ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftDatering ] ;
+    sh:targetClass ceo:Gebeurtenis .
+
+ceo:GeometrieShape a sh:NodeShape ;
+    sh:property [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1999/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:geometrienummer ],
+        [ sh:datatype <http://www.openlinksw.com/schemas/virtrdf#Geometry> ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path geo:asWKT ],
+        [ sh:datatype xsd:decimal ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:oppervlakteInVierkanteMeters ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 483/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:begrenzingsdatumGezicht ],
+        [ sh:datatype xsd:decimal ;
+            sh:description "Gevuld bij 999/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:oppervlakteInHectare ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 963/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOndergrondGezicht ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1963/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:asWKT-RD ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 72/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGeometrieType ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 999/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGeometrieKwaliteit ],
+        [ sh:datatype xsd:decimal ;
+            sh:description "Gevuld bij 999/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:oppervlakteInVierkanteKilometers ] ;
+    sh:targetClass ceo:Geometrie .
+
+ceo:GezichtShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftNaam ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 18/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:intrekkingsdatumGezicht ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:gezichtsnummer ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGezichtsstatus ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1928/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:wordtGetoondOp ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 948/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:inProceduredatumGezicht ],
+        [ sh:class ceo:Naam ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftNaam ],
+        [ sh:class ceo:Naam ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Geometrie ;
+            sh:description "Gevuld bij 3856/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGeometrie ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 964/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:bijzonderGebied ] ;
+    sh:targetClass ceo:Gezicht .
+
+ceo:GrondsporenShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Type ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 434/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Gebeurtenis ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Gebeurtenis ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGebeurtenis ],
+        [ sh:class ceo:Type ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftType ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 434/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:aantalGrondsporen ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 434/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGebeurtenis ],
+        [ sh:class ceo:Vondstlocatie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:ligtInObject ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftType ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 2434/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ] ;
+    sh:targetClass ceo:Grondsporen .
+
+ceo:KennisregistratieShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Rijksmonument ;
+            sh:description "Gevuld bij 24/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:class ceo:ArcheologischComplex ;
+            sh:description "Gevuld bij 32/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:class ceo:Vondstlocatie ;
+            sh:description "Gevuld bij 605/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 993/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:omschrijving ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratienummer ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 993/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijvingstype ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:Grondsporen ;
+            sh:description "Gevuld bij 14/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 992/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:oudeOmschrijving ],
+        [ sh:class ceo:Vondsten ;
+            sh:description "Gevuld bij 17/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:formeelStandpunt ],
+        [ sh:class ceo:ArcheologischOnderzoeksgebied ;
+            sh:description "Gevuld bij 326/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ] ;
+    sh:targetClass ceo:Kennisregistratie .
+
+ceo:LocatieAanduidingShape a sh:NodeShape ;
+    sh:property [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:locatienaam ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:locatieAanduidingnummer ] ;
+    sh:targetClass ceo:LocatieAanduiding .
+
+ceo:MateriaalShape a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:formeelStandpunt ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftMateriaalNaam ],
+        [ sh:class ceo:Vondsten ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratienummer ] ;
+    sh:targetClass ceo:Materiaal .
+
+ceo:NaamShape a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:formeelStandpunt ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:naam ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratienummer ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:Werelderfgoed ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 18/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:huidigeNaam ],
+        [ sh:class ceo:Rijksmonument ;
+            sh:description "Gevuld bij 2310/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ] ;
+    sh:targetClass ceo:Naam .
+
+ceo:OmschrijvingShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Vondsten ;
+            sh:description "Gevuld bij 19/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:class ceo:ArcheologischOnderzoeksgebied ;
+            sh:description "Gevuld bij 326/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijvingstype ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class ceo:Vondstlocatie ;
+            sh:description "Gevuld bij 607/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:ArcheologischComplex ;
+            sh:description "Gevuld bij 31/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratienummer ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 999/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:oudeOmschrijving ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:formeelStandpunt ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:omschrijving ],
+        [ sh:class ceo:Grondsporen ;
+            sh:description "Gevuld bij 16/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ] ;
+    sh:targetClass ceo:Omschrijving .
+
+ceo:RijksmonumentShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 1272/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class foaf:Image ;
+            sh:description "Gevuld bij 38/1000 instanties in de steekproef"@nl ;
+            sh:path foaf:depiction ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 6/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftCategorieGroenaanlegLegenda ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 19/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:internationaalKenteken ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:datumInschrijvingInMonumentenregister ],
+        [ sh:class ceo:Functie ;
+            sh:description "Gevuld bij 365/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftHuidigeFunctie ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftMonumentAard ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 38/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftTypeAanleg ],
+        [ sh:class ceo:BouwkundigeKwaliteit ;
+            sh:description "Gevuld bij 498/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 58/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#jaarInGebruikname> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 2994/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:rijksmonumentnummer ],
+        [ sh:class ceo:StijlEnCultuur ;
+            sh:description "Gevuld bij 1051/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kadasterdeelnummer ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftJuridischeStatus ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1880/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGebeurtenis ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 498/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBouwkundigeKwaliteit ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 905/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:msp_indicatie ],
+        [ sh:datatype xsd:decimal ;
+            sh:description "Gevuld bij 24/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#hoogte> ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1268/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:Type ;
+            sh:description "Gevuld bij 426/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftType ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 7005/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:BouwkundigeKwaliteit ;
+            sh:description "Gevuld bij 498/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBouwkundigeKwaliteit ],
+        [ sh:class ceo:LocatieAanduiding ;
+            sh:description "Gevuld bij 974/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftLocatieAanduiding ],
+        [ sh:class ceo:StijlEnCultuur ;
+            sh:description "Gevuld bij 1051/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftStijlEnCultuur ],
+        [ sh:description "Gevuld bij 99/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#heeftFunctieNaam> ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2581/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 80/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#bouwjaar> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 28/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#jaarBuitendienststelling> ],
+        [ sh:class ceo:Functie ;
+            sh:description "Gevuld bij 1538/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Type ;
+            sh:description "Gevuld bij 426/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Geometrie ;
+            sh:description "Gevuld bij 38/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftAanlegGeometrie ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Gevuld bij 58/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#hoogte> ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 426/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftType ],
+        [ sh:description "Gevuld bij 99/1000 instanties in de steekproef"@nl ;
+            sh:path rdfs:label ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 99/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#ARLHS_id> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 38/1000 instanties in de steekproef"@nl ;
+            sh:path dcterms:identifier ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Gevuld bij 60/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#aantalVerdiepingen> ],
+        [ sh:class ceo:Naam ;
+            sh:description "Gevuld bij 344/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftNaam ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 87/1000 instanties in de steekproef"@nl ;
+            sh:path <https://linkeddata.cultureelerfgoed.nl/def/ceox#MarineTraffic_id> ],
+        [ sh:class ceo:Gebeurtenis ;
+            sh:description "Gevuld bij 1880/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kadasterdeel ],
+        [ sh:class ceo:Complex ;
+            sh:description "Gevuld bij 12/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:isOnderdeelVanComplex ],
+        [ sh:class ceo:Gebeurtenis ;
+            sh:description "Gevuld bij 1880/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGebeurtenis ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 38/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:naam ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 1272/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 365/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftHuidigeFunctie ],
+        [ sh:class ceo:Naam ;
+            sh:description "Gevuld bij 344/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1173/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOorspronkelijkeFunctie ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 38/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftCategorieGroenaanleg ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 344/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftNaam ],
+        [ sh:class ceo:Functie ;
+            sh:description "Gevuld bij 1173/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOorspronkelijkeFunctie ],
+        [ sh:class ceo:BasisregistratieRelatie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBasisregistratieRelatie ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1051/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftStijlEnCultuur ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBebouwdeKomType ],
+        [ sh:class ceo:Geometrie ;
+            sh:description "Gevuld bij 3963/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGeometrie ] ;
+    sh:targetClass ceo:Rijksmonument .
+
+ceo:StijlEnCultuurShape a sh:NodeShape ;
+    sh:property [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftZuiverheid ],
+        [ sh:class ceo:Rijksmonument ;
+            sh:description "Gevuld bij 2164/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:formeelStandpunt ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 142/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratieToelichting ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratienummer ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftStijlEnCultuurNaam ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ] ;
+    sh:targetClass ceo:StijlEnCultuur .
+
+ceo:TypeShape a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:boolean ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:formeelStandpunt ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 2000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:kennisregistratienummer ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1001/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftTypekenmerk ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1001/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftTypeNaam ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class ceo:ArcheologischComplex ;
+            sh:description "Gevuld bij 999/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBetrekkingOp ] ;
+    sh:targetClass ceo:Type .
+
+ceo:VondstenShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Materiaal ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftMateriaal ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:Materiaal ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGebeurtenis ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftType ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 523/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 523/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftToestand ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:aantalVondsten ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 3523/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Vondstlocatie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:ligtInObject ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 523/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:Gebeurtenis ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class ceo:Type ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftMateriaal ],
+        [ sh:class ceo:Gebeurtenis ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGebeurtenis ],
+        [ sh:class ceo:Type ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftType ] ;
+    sh:targetClass ceo:Vondsten .
+
+ceo:VondstlocatieShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:LocatieAanduiding ;
+            sh:description "Gevuld bij 979/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftLocatieAanduiding ],
+        [ sh:class ceo:BasisregistratieRelatie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftBasisregistratieRelatie ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftOmschrijving ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class ceo:ArcheologischComplex ;
+            sh:description "Gevuld bij 1295/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:bevatObject ],
+        [ sh:class ceo:Vondsten ;
+            sh:description "Gevuld bij 9083/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:bevatObject ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 999/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftVertrouwelijkAanduiding ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ],
+        [ sh:class ceo:Omschrijving ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Grondsporen ;
+            sh:description "Gevuld bij 3485/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:bevatObject ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftVerwerving ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 1000/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:ArcheologischOnderzoeksgebied ;
+            sh:description "Gevuld bij 937/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:ligtInObject ] ;
+    sh:targetClass ceo:Vondstlocatie .
+
+ceo:WerelderfgoedShape a sh:NodeShape ;
+    sh:property [ sh:class ceo:Geometrie ;
+            sh:description "Gevuld bij 144/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftGeometrie ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Kennisregistratie ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftNaam ],
+        [ sh:class ceo:Naam ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftKennisregistratie ],
+        [ sh:class ceo:Naam ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftNaam ],
+        [ sh:datatype xsd:gYear ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:jaarVanInschrijving ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:cultuurhistorischObjectnummer ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftWerelderfgoedstatus ],
+        [ sh:datatype xsd:string ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:werelderfgoednummer ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:wordtGetoondOp ],
+        [ sh:class skos:Concept ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:heeftWerelderfgoedType ],
+        [ sh:class owl:Class ;
+            sh:description "Gevuld bij 72/1000 instanties in de steekproef"@nl ;
+            sh:path rdf:type ],
+        [ sh:datatype xsd:date ;
+            sh:description "Gevuld bij 36/1000 instanties in de steekproef"@nl ;
+            sh:path ceo:registratiedatum ] ;
+    sh:targetClass ceo:Werelderfgoed .
+
+<https://linkeddata.cultureelerfgoed.nl/id/padenkaart/cho> dcterms:created "2026-07-08"^^xsd:date ;
+    dcterms:description "Data-gedreven SHACL-shapes, afgeleid uit steekproeven van 1000 instanties per klasse, transitief verkend vanaf de tien CHO-kernklassen."@nl ;
+    dcterms:title "Padenkaart CHO-dataset"@nl .
+

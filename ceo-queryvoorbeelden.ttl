@@ -1,0 +1,292 @@
+# =============================================================================
+# SPARQL-voorbeeldqueries voor de CHO-dataset (CEO-ontologie) in de RCE LDV
+# Formaat: SIB/sparql-llm-conventie — sh:SPARQLExecutable met sh:select,
+# rdfs:comment (natuurlijke-taalvraag) en schema:target (endpoint).
+# sparql-llm indexeert deze paren (vraag + query) als few-shot-voorbeelden.
+#
+# LET OP: controleer de endpoint-URL in schema:target voordat je dit laadt.
+# Querypaden zijn afgeleid uit de domain/range-declaraties van CEO v1.5.1.
+# =============================================================================
+
+@prefix ex:     <https://linkeddata.cultureelerfgoed.nl/def/ceo/queryvoorbeelden#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+
+ex:q01 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Zoek het rijksmonument met rijksmonumentnummer 12345."@nl ;
+  rdfs:comment "Find the national monument with monument number 12345."@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+SELECT ?monument WHERE {
+  ?monument a ceo:Rijksmonument ;
+            ceo:rijksmonumentnummer "12345" .
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q02 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Geef alle rijksmonumenten in de woonplaats Utrecht, met hun adres."@nl ;
+  rdfs:comment "List all national monuments in the town of Utrecht, with their address."@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+SELECT ?monument ?adres WHERE {
+  ?monument a ceo:Rijksmonument ;
+            ceo:heeftBasisregistratieRelatie ?br .
+  ?br ceo:heeftBAGRelatie ?bag .
+  ?bag ceo:woonplaatsnaam "Utrecht" ;
+       ceo:volledigAdres ?adres .
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q03 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Geef de (redengevende) omschrijving van rijksmonument 12345."@nl ;
+  rdfs:comment "Give the designation description of national monument 12345."@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+SELECT ?tekst WHERE {
+  ?monument a ceo:Rijksmonument ;
+            ceo:rijksmonumentnummer "12345" ;
+            ceo:heeftOmschrijving ?omschrijving .
+  ?omschrijving ceo:omschrijving ?tekst .
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q04 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Hoeveel rijksmonumenten zijn er in totaal?"@nl ;
+  rdfs:comment "How many national monuments are there in total?"@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+SELECT (COUNT(DISTINCT ?monument) AS ?aantal) WHERE {
+  ?monument a ceo:Rijksmonument .
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q05 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Welke rijksmonumenten hadden oorspronkelijk de functie kerk?"@nl ;
+  rdfs:comment "Which national monuments originally functioned as a church?"@en ;
+  sh:select """
+PREFIX ceo:  <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?monument ?functieLabel WHERE {
+  ?monument a ceo:Rijksmonument ;
+            ceo:heeftOorspronkelijkeFunctie ?functie .
+  ?functie ceo:heeftFunctieNaam ?concept .
+  ?concept skos:prefLabel ?functieLabel .
+  FILTER(CONTAINS(LCASE(STR(?functieLabel)), "kerk"))
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q06 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Welke rijksmonumenten horen bij complex 512345, en welk monument is het hoofdobject?"@nl ;
+  rdfs:comment "Which national monuments belong to complex 512345, and which one is the main object?"@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+SELECT ?monument ?hoofdobject WHERE {
+  ?complex a ceo:Complex ;
+           ceo:complexnummer "512345" ;
+           ceo:heeftRijksmonument ?monument .
+  OPTIONAL { ?complex ceo:heeftHoofdobject ?hoofdobject . }
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q07 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Geef de geometrie van rijksmonument 12345 als WKT."@nl ;
+  rdfs:comment "Return the geometry of national monument 12345 as WKT."@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX gsp: <http://www.opengis.net/ont/geosparql#>
+SELECT ?wkt WHERE {
+  ?monument a ceo:Rijksmonument ;
+            ceo:rijksmonumentnummer "12345" ;
+            ceo:heeftGeometrie ?geometrie .
+  { ?geometrie gsp:asWKT ?wkt . }
+  UNION
+  { ?geometrie ceo:asWKT-RD ?wkt . }
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q08 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Geef alle beschermde stads- en dorpsgezichten met hun naam en gezichtsnummer."@nl ;
+  rdfs:comment "List all protected townscapes and village views with their name and number."@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+SELECT ?gezicht ?naam ?nummer WHERE {
+  ?gezicht a ceo:Gezicht ;
+           ceo:gezichtsnummer ?nummer .
+  OPTIONAL {
+    ?gezicht ceo:heeftNaam ?naamRegistratie .
+    ?naamRegistratie ceo:naam ?naam .
+  }
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q09 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Welke rijksmonumenten zijn na 1 januari 2000 ingeschreven in het monumentenregister?"@nl ;
+  rdfs:comment "Which national monuments were registered in the monuments register after 1 January 2000?"@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?monument ?datum WHERE {
+  ?monument a ceo:Rijksmonument ;
+            ceo:datumInschrijvingInMonumentenregister ?datum .
+  FILTER(?datum > "2000-01-01"^^xsd:date)
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q10 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Welke gebeurtenissen zijn vastgelegd voor rijksmonument 12345, met datering?"@nl ;
+  rdfs:comment "Which events are recorded for national monument 12345, with dating?"@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?gebeurtenisNaam ?beginDatum WHERE {
+  ?monument a ceo:Rijksmonument ;
+            ceo:rijksmonumentnummer "12345" ;
+            ceo:heeftGebeurtenis ?gebeurtenis .
+  OPTIONAL {
+    ?gebeurtenis ceo:heeftGebeurtenisNaam ?concept .
+    ?concept skos:prefLabel ?gebeurtenisNaam .
+  }
+  OPTIONAL {
+    ?gebeurtenis ceo:heeftDatering ?datering .
+    ?datering ceo:heeftBeginDatering ?begin .
+    ?begin ceo:datum ?beginDatum .
+  }
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q11 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Welke gemeente-URI's komen voor in de data? (Gebruik dit om de juiste OWMS-URI te vinden voordat je op gemeente filtert.)"@nl ;
+  rdfs:comment "Which municipality URIs occur in the data? (Use this to find the correct OWMS URI before filtering by municipality.)"@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+SELECT DISTINCT ?gemeente WHERE {
+  ?br ceo:heeftGemeente ?gemeente .
+  FILTER(CONTAINS(LCASE(STR(?gemeente)), "utrecht"))
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q12 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Geef alle werelderfgoederen met hun werelderfgoednummer en status."@nl ;
+  rdfs:comment "List all world heritage sites with their number and status."@en ;
+  sh:select """
+PREFIX ceo:  <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?erfgoed ?nummer ?status WHERE {
+  ?erfgoed a ceo:Werelderfgoed ;
+           ceo:werelderfgoednummer ?nummer .
+  OPTIONAL {
+    ?erfgoed ceo:heeftWerelderfgoedstatus ?statusConcept .
+    ?statusConcept skos:prefLabel ?status .
+  }
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q13 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Geef archeologische terreinen met hun archeologische waardering en Archis-monumentnummer."@nl ;
+  rdfs:comment "List archaeological sites with their archaeological valuation and Archis monument number."@en ;
+  sh:select """
+PREFIX ceo:  <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?terrein ?waardering ?archisNummer WHERE {
+  ?terrein a ceo:ArcheologischTerrein .
+  OPTIONAL {
+    ?terrein ceo:heeftArcheologischeWaardering ?w .
+    ?w skos:prefLabel ?waardering .
+  }
+  OPTIONAL { ?terrein ceo:archis2Monumentnummer ?archisNummer . }
+} LIMIT 100""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q14 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Zoek de vondstlocatie met Archis-waarnemingsnummer 123456, met wijze van verwerving."@nl ;
+  rdfs:comment "Find the find location with Archis observation number 123456, including method of acquisition."@en ;
+  sh:select """
+PREFIX ceo:  <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?locatie ?verwerving WHERE {
+  ?locatie a ceo:Vondstlocatie ;
+           ceo:archis2Waarnemingsnummer "123456" .
+  OPTIONAL {
+    ?locatie ceo:heeftVerwerving ?v .
+    ?v skos:prefLabel ?verwerving .
+  }
+}""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q15 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Geef vondsten met hun aantal en toestand, gesorteerd op aantal (grootste eerst)."@nl ;
+  rdfs:comment "List finds with their quantity and condition, sorted by quantity (largest first)."@en ;
+  sh:select """
+PREFIX ceo:  <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?vondsten ?aantal ?toestand WHERE {
+  ?vondsten a ceo:Vondsten ;
+            ceo:aantalVondsten ?aantal .
+  OPTIONAL {
+    ?vondsten ceo:heeftToestand ?t .
+    ?t skos:prefLabel ?toestand .
+  }
+} ORDER BY DESC(?aantal) LIMIT 100""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q16 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Geef grondsporen met hun aantal, en in welk object ze liggen."@nl ;
+  rdfs:comment "List soil features with their count, and the object they are located in."@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+SELECT ?grondsporen ?aantal ?ligtIn WHERE {
+  ?grondsporen a ceo:Grondsporen .
+  OPTIONAL { ?grondsporen ceo:aantalGrondsporen ?aantal . }
+  OPTIONAL { ?grondsporen ceo:ligtInObject ?ligtIn . }
+} LIMIT 100""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q17 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Geef archeologische complexen met hun naam en complextype."@nl ;
+  rdfs:comment "List archaeological complexes with their name and complex type."@en ;
+  sh:select """
+PREFIX ceo:  <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?complex ?naam ?type WHERE {
+  ?complex a ceo:ArcheologischComplex .
+  OPTIONAL {
+    ?complex ceo:heeftNaam ?n .
+    ?n ceo:naam ?naam .
+  }
+  OPTIONAL {
+    ?complex ceo:heeftType ?t .
+    ?t ceo:heeftTypeNaam ?tc .
+    ?tc skos:prefLabel ?type .
+  }
+} LIMIT 100""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
+
+ex:q18 a sh:SPARQLExecutable, sh:SPARQLSelectExecutable ;
+  rdfs:comment "Welke archeologische onderzoeksgebieden zijn waardig bevonden voor de Archeologische Monumentenkaart?"@nl ;
+  rdfs:comment "Which archaeological research areas have been deemed worthy of the Archaeological Monuments Map?"@en ;
+  sh:select """
+PREFIX ceo: <https://linkeddata.cultureelerfgoed.nl/def/ceo#>
+SELECT ?gebied WHERE {
+  ?gebied a ceo:ArcheologischOnderzoeksgebied ;
+          ceo:indicatieArcheologischeMonumentenKaartWaardig true .
+} LIMIT 100""" ;
+  schema:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+.
