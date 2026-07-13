@@ -1,1 +1,51 @@
+# Naam zoals de workflow in het Actions-tabblad verschijnt.
+name: VoID en padenkaart verversen
+
+# Deze workflow draait ALLEEN handmatig, via de "Run workflow"-knop.
+# (Geen schema, want modelwijzigingen komen zelden.)
+on:
+  workflow_dispatch:
+
+# De workflow mag de bijgewerkte bestanden terugschrijven naar de repo.
+permissions:
+  contents: write
+
+jobs:
+  verversen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: Python installeren
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pakketten installeren
+        run: pip install SPARQLWrapper rdflib
+
+      - name: VoID genereren
+        run: |
+          cd Scripts
+          python genereer_void.py
+          mv ceo-void.ttl ../ceo-void.ttl
+
+      - name: Padenkaart genereren
+        run: |
+          cd Scripts
+          python genereer_padenkaart.py
+          mv ceo-padenkaart.ttl ../ceo-padenkaart.ttl
+
+      - name: Wijzigingen committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ceo-void.ttl ceo-padenkaart.ttl
+          if git diff --staged --quiet; then
+            echo "Geen wijzigingen; niets te committen."
+          else
+            git commit -m "VoID en padenkaart automatisch ververst"
+            git push
+          fi
 
