@@ -59,7 +59,7 @@ padenkaart (feitelijke paden), dan de queryvoorbeelden (gebruik).
   verkend vanaf de tien kernklassen. Gebruik dit als primaire bron voor
   het opbouwen van querypaden: anders dan de ontologie toont dit wat er
   feitelijk in de data zit. Voor paden die hier ontbreken: verken live
-  via de MCP-tools ldv_verken_klasse en ldv_verken_inkomend.
+  via het SPARQL-endpoint (voor intern gebruik is hiervoor een MCP-server beschikbaar).
 
 ## Queryvoorbeelden
 
@@ -71,14 +71,12 @@ padenkaart (feitelijke paden), dan de queryvoorbeelden (gebruik).
   voor adressen: Rijksmonument -> heeftBasisregistratieRelatie ->
   heeftBAGRelatie -> volledigAdres.
 
-## Live toegang voor AI-agents (MCP)
+## Live toegang voor AI-agents
 
-- [ldv_mcp.py](https://raw.githubusercontent.com/cultureelerfgoed/ldv-tools/main/ldv_mcp.py):
-  MCP-server (Model Context Protocol) die het SPARQL-endpoint ontsluit met
-  tools voor vrije lezende queries en VoID-statistieken
-  (ldv_sparql_select, ldv_dataset_totalen, ldv_klasse_partities,
-  ldv_property_partities). Draait lokaal (stdio) of centraal
-  (streamable HTTP); zie de docstring voor configuratie.
+Voor intern gebruik binnen de RCE is een MCP-server (Model Context Protocol)
+beschikbaar waarmee AI-assistenten de LDV rechtstreeks kunnen bevragen. Deze
+server is niet publiek. Externe gebruikers kunnen de dataset bevragen via het
+SPARQL-endpoint dat hierboven en in de queryvoorbeelden staat vermeld.
 
 ## Externe registers en thesauri
 
