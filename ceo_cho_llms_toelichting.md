@@ -1,6 +1,7 @@
-# AI-ready erfgoeddata: toelichting
+# AI-ready erfgoeddata: toelichting in gewone taal
 
-*Leeswijzer bij `ceo_cho_llms.txt` en de bijbehorende bestanden en hulpmiddelen.*
+*Leeswijzer bij `ceo_cho_llms.txt` en de bijbehorende bestanden en hulpmiddelen.
+Bedoeld voor collega's zonder linked-data-achtergrond.*
 
 ## Waar gaat dit over?
 
@@ -60,7 +61,7 @@ op beschrijvingen die verouderd kunnen zijn, maar kan de werkelijke, actuele
 situatie raadplegen. De databank wordt dagelijks ververst; deze hulpmiddelen
 verversen mee.
 
-**De live-verbinding voor AI** (`ldv_mcp.py`). Een koppelstuk volgens de
+**De live-verbinding voor AI** (interne MCP-server). Een koppelstuk volgens de
 MCP-standaard — de opkomende industriestandaard waarmee AI-assistenten
 veilig met databronnen praten. Hiermee kan een AI-assistent, met
 toestemming van de gebruiker, rechtstreeks in de actuele erfgoeddata
@@ -79,7 +80,9 @@ geblokkeerd) en biedt zeven functies, waaronder:
 - *Vrij vragen stellen* — voor alles wat de andere functies niet dekken.
 
 Dit koppelstuk kan lokaal draaien (op één werkplek) of centraal gehost
-worden, zodat álle medewerkers en AI-toepassingen er gebruik van maken.
+worden, zodat álle medewerkers en AI-toepassingen er gebruik van maken. Het
+wordt om veiligheidsredenen apart en niet-openbaar beheerd, los van de
+openbare beschrijvingen van de data.
 
 **Twee "verversbare foto's" van de databank.** Sommige overzichten zijn te
 zwaar om bij elke vraag live te berekenen. Daarvoor zijn twee hulpprogramma's
