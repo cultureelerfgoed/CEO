@@ -32,7 +32,16 @@ CEO_NS = "https://linkeddata.cultureelerfgoed.nl/def/ceo#"
 
 # Klassen- en propertylijst komen uit de lokale ontologie (naast dit script),
 # niet uit een DISTINCT-scan over de hele dataset (die geeft een timeout).
-ONTOLOGIE_BESTAND = "CEO_RCE.ttl"
+# Zoek CEO_RCE.ttl op meerdere plek­ken: werkdirectory, naast dit script,
+# en een map hoger (script in Scripts/, ontologie in de repo-root).
+import os as _os
+_KANDIDATEN = [
+    "CEO_RCE.ttl",
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "CEO_RCE.ttl"),
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "CEO_RCE.ttl"),
+]
+ONTOLOGIE_BESTAND = next((p for p in _KANDIDATEN if _os.path.exists(p)),
+                         _KANDIDATEN[0])
 
 VOID = Namespace("http://rdfs.org/ns/void#")
 FORMATS = Namespace("http://www.w3.org/ns/formats/")
