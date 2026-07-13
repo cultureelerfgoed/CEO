@@ -63,14 +63,14 @@
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftLocatieAanduidingStatus> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 58005 .
+    void:triples 57972 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/18> a void:Linkset ;
     dcterms:description "Links naar RCE-referentienetwerk (rn)"@nl ;
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftMateriaalNaam> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 444648 .
+    void:triples 444721 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/19> a void:Linkset ;
     dcterms:description "Links naar RCE-referentienetwerk (rn)"@nl ;
@@ -91,7 +91,7 @@
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftOmschrijvingstype> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 549262 .
+    void:triples 549472 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/21> a void:Linkset ;
     dcterms:description "Links naar RCE-referentienetwerk (rn)"@nl ;
@@ -105,7 +105,7 @@
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftPeriode> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 1793276 .
+    void:triples 1793530 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/23> a void:Linkset ;
     dcterms:description "Links naar OWMS (gemeenten/provincies)"@nl ;
@@ -126,7 +126,7 @@
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftSituering> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 8212 .
+    void:triples 8210 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/26> a void:Linkset ;
     dcterms:description "Links naar RCE-referentienetwerk (rn)"@nl ;
@@ -140,21 +140,21 @@
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftToestand> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 444648 .
+    void:triples 444721 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/28> a void:Linkset ;
     dcterms:description "Links naar RCE-referentienetwerk (rn)"@nl ;
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftTypeNaam> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 907619 .
+    void:triples 907746 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/29> a void:Linkset ;
     dcterms:description "Links naar RCE-referentienetwerk (rn)"@nl ;
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftTypekenmerk> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 907619 .
+    void:triples 907746 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/3> a void:Linkset ;
     dcterms:description "Links naar RCE-referentienetwerk (rn)"@nl ;
@@ -168,14 +168,14 @@
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftVertrouwelijkAanduiding> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 250529 .
+    void:triples 250631 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/31> a void:Linkset ;
     dcterms:description "Links naar RCE-referentienetwerk (rn)"@nl ;
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftVerwerving> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 111470 .
+    void:triples 111490 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/32> a void:Linkset ;
     dcterms:description "Links naar RCE-referentienetwerk (rn)"@nl ;
@@ -238,7 +238,7 @@
     void:linkPredicate <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGebeurtenisNaam> ;
     void:objectsTarget <https://data.cultureelerfgoed.nl/term/id/rn/> ;
     void:subjectsTarget <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> ;
-    void:triples 929511 .
+    void:triples 929638 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/linkset/9> a void:Linkset ;
     dcterms:description "Links naar OWMS (gemeenten/provincies)"@nl ;
@@ -251,25 +251,25 @@
     void:entities 21448 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/ArcheologischComplex> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#ArcheologischComplex> ;
-    void:entities 360244 .
+    void:entities 360258 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/ArcheologischOnderzoeksgebied> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#ArcheologischOnderzoeksgebied> ;
-    void:entities 111751 .
+    void:entities 111850 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/ArcheologischTerrein> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#ArcheologischTerrein> ;
     void:entities 13025 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/BAGRelatie> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BAGRelatie> ;
-    void:entities 357800 .
+    void:entities 357927 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/BRKRelatie> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BRKRelatie> ;
-    void:entities 148157 .
+    void:entities 148319 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/BasisregistratieRelatie> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BasisregistratieRelatie> ;
-    void:entities 303728 .
+    void:entities 303847 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/BeginDatering> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BeginDatering> ;
-    void:entities 917930 .
+    void:entities 918057 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/BouwkundigeKwaliteit> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BouwkundigeKwaliteit> ;
     void:entities 9178 .
@@ -284,40 +284,40 @@
     void:entities 0 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Datering> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Datering> ;
-    void:entities 917930 .
+    void:entities 918057 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/EindDatering> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#EindDatering> ;
-    void:entities 917930 .
+    void:entities 918057 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Functie> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Functie> ;
     void:entities 75506 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Gebeurtenis> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Gebeurtenis> ;
-    void:entities 929511 .
+    void:entities 929638 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Geometrie> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Geometrie> ;
-    void:entities 242851 .
+    void:entities 242948 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Gezicht> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Gezicht> ;
     void:entities 964 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Grondsporen> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Grondsporen> ;
-    void:entities 91746 .
+    void:entities 91786 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Kennisregistratie> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Kennisregistratie> ;
-    void:entities 3304879 .
+    void:entities 3305416 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/LocatieAanduiding> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#LocatieAanduiding> ;
-    void:entities 217021 .
+    void:entities 217007 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Materiaal> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Materiaal> ;
-    void:entities 444648 .
+    void:entities 444721 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Naam> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Naam> ;
     void:entities 12528 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Omschrijving> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Omschrijving> ;
-    void:entities 550428 .
+    void:entities 550638 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Rijksmonument> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Rijksmonument> ;
     void:entities 163266 .
@@ -329,34 +329,34 @@
     void:entities 376627 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Type> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Type> ;
-    void:entities 907619 .
+    void:entities 907746 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Vondsten> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Vondsten> ;
-    void:entities 444648 .
+    void:entities 444721 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Vondstlocatie> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Vondstlocatie> ;
-    void:entities 111470 .
+    void:entities 111490 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Werelderfgoed> void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Werelderfgoed> ;
     void:entities 36 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/BAGRelatienummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#BAGRelatienummer> ;
-    void:triples 357800 .
+    void:triples 357927 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/BRKRelatienummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#BRKRelatienummer> ;
-    void:triples 148157 .
+    void:triples 148319 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/aantalGrondsporen> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#aantalGrondsporen> ;
-    void:triples 91746 .
+    void:triples 91786 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/aantalVondsten> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#aantalVondsten> ;
-    void:triples 444648 .
+    void:triples 444721 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/actorEnRolnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#actorEnRolnummer> ;
     void:triples 11581 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/appartementAanduiding> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#appartementAanduiding> ;
-    void:triples 39539 .
+    void:triples 39698 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/archis2Complexnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#archis2Complexnummer> ;
     void:triples 18588 .
@@ -374,16 +374,16 @@
     void:triples 88649 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/asWKT-RD> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#asWKT-RD> ;
-    void:triples 179966 .
+    void:triples 180063 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/basisregistratieRelatienummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#basisregistratieRelatienummer> ;
-    void:triples 303728 .
+    void:triples 303847 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/begrenzingsdatumGezicht> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#begrenzingsdatumGezicht> ;
     void:triples 242 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/bevatObject> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#bevatObject> ;
-    void:triples 938381 .
+    void:triples 938525 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/bijzonderGebied> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#bijzonderGebied> ;
     void:triples 482 .
@@ -392,31 +392,31 @@
     void:triples 3682 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/cultuurhistorischObjectnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#cultuurhistorischObjectnummer> ;
-    void:triples 1203712 .
+    void:triples 1203958 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/dateringnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#dateringnummer> ;
-    void:triples 917930 .
+    void:triples 918057 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/datum> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#datum> ;
     void:triples 43987 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/datumInschrijvingInMonumentenregister> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#datumInschrijvingInMonumentenregister> ;
-    void:triples 65567 .
+    void:triples 65568 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/formeelStandpunt> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#formeelStandpunt> ;
-    void:triples 3304879 .
+    void:triples 3305416 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/gemeentecode> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#gemeentecode> ;
-    void:triples 148157 .
+    void:triples 148319 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/gemeentenaam> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#gemeentenaam> ;
-    void:triples 148157 .
+    void:triples 148319 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/geometriebesluit> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#geometriebesluit> ;
     void:triples 0 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/geometrienummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#geometrienummer> ;
-    void:triples 177790 .
+    void:triples 177887 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/gezichtsnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#gezichtsnummer> ;
     void:triples 482 .
@@ -431,22 +431,22 @@
     void:triples 13018 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftBAGRelatie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBAGRelatie> ;
-    void:triples 357800 .
+    void:triples 357927 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftBRKRelatie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBRKRelatie> ;
-    void:triples 148157 .
+    void:triples 148319 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftBasisregistratieRelatie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBasisregistratieRelatie> ;
-    void:triples 303728 .
+    void:triples 303847 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftBebouwdeKomType> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBebouwdeKomType> ;
     void:triples 67384 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftBeginDatering> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBeginDatering> ;
-    void:triples 917930 .
+    void:triples 918057 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftBetrekkingOp> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBetrekkingOp> ;
-    void:triples 3304879 .
+    void:triples 3305416 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftBetrouwbaarheid> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBetrouwbaarheid> ;
     void:triples 35771 .
@@ -458,13 +458,13 @@
     void:triples 9178 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftDatering> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftDatering> ;
-    void:triples 917930 .
+    void:triples 918057 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftDateringsmethode> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftDateringsmethode> ;
     void:triples 21292 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftEindDatering> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftEindDatering> ;
-    void:triples 917930 .
+    void:triples 918057 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftFunctie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftFunctie> ;
     void:triples 0 .
@@ -473,16 +473,16 @@
     void:triples 75506 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftGebeurtenis> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGebeurtenis> ;
-    void:triples 929511 .
+    void:triples 929638 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftGebeurtenisNaam> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGebeurtenisNaam> ;
-    void:triples 929511 .
+    void:triples 929638 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftGemeente> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGemeente> ;
     void:triples 67492 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftGeometrie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGeometrie> ;
-    void:triples 241448 .
+    void:triples 241545 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftGeometrieKwaliteit> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGeometrieKwaliteit> ;
     void:triples 66281 .
@@ -515,19 +515,19 @@
     void:triples 0 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftKennisregistratie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftKennisregistratie> ;
-    void:triples 3304879 .
+    void:triples 3305416 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftLocatieAanduiding> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftLocatieAanduiding> ;
-    void:triples 217021 .
+    void:triples 217007 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftLocatieAanduidingStatus> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftLocatieAanduidingStatus> ;
-    void:triples 58005 .
+    void:triples 57972 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftMateriaal> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftMateriaal> ;
-    void:triples 444648 .
+    void:triples 444721 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftMateriaalNaam> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftMateriaalNaam> ;
-    void:triples 444648 .
+    void:triples 444721 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftMonumentAard> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftMonumentAard> ;
     void:triples 67494 .
@@ -539,10 +539,10 @@
     void:triples 1 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftOmschrijving> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftOmschrijving> ;
-    void:triples 549262 .
+    void:triples 549472 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftOmschrijvingstype> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftOmschrijvingstype> ;
-    void:triples 549262 .
+    void:triples 549472 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftOndergrondGezicht> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftOndergrondGezicht> ;
     void:triples 482 .
@@ -551,10 +551,10 @@
     void:triples 69876 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftPand> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftPand> ;
-    void:triples 48291 .
+    void:triples 48422 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftPeriode> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftPeriode> ;
-    void:triples 1793276 .
+    void:triples 1793530 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftProvincie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftProvincie> ;
     void:triples 67492 .
@@ -566,7 +566,7 @@
     void:triples 19754 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftSituering> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftSituering> ;
-    void:triples 8212 .
+    void:triples 8210 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftStedenbouwkundigeMorfologischeAanduidingNaam> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftStedenbouwkundigeMorfologischeAanduidingNaam> ;
     void:triples 0 .
@@ -581,25 +581,25 @@
     void:triples 0 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftToestand> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftToestand> ;
-    void:triples 444648 .
+    void:triples 444721 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftType> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftType> ;
-    void:triples 907619 .
+    void:triples 907746 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftTypeNaam> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftTypeNaam> ;
-    void:triples 907619 .
+    void:triples 907746 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftTypekenmerk> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftTypekenmerk> ;
-    void:triples 907619 .
+    void:triples 907746 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftVerblijfsobject> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftVerblijfsobject> ;
-    void:triples 114877 .
+    void:triples 114932 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftVertrouwelijkAanduiding> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftVertrouwelijkAanduiding> ;
-    void:triples 250529 .
+    void:triples 250631 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftVerwerving> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftVerwerving> ;
-    void:triples 111470 .
+    void:triples 111490 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/heeftWerelderfgoedType> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftWerelderfgoedType> ;
     void:triples 18 .
@@ -626,13 +626,13 @@
     void:triples 500 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/huisletter> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#huisletter> ;
-    void:triples 24661 .
+    void:triples 24670 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/huisnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#huisnummer> ;
-    void:triples 121566 .
+    void:triples 121574 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/huisnummerToevoeging> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#huisnummerToevoeging> ;
-    void:triples 2443 .
+    void:triples 2447 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/inProceduredatumGezicht> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#inProceduredatumGezicht> ;
     void:triples 474 .
@@ -662,10 +662,10 @@
     void:triples 1553 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/kadasterdeel> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#kadasterdeel> ;
-    void:triples 65566 .
+    void:triples 65567 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/kadasterdeelnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#kadasterdeelnummer> ;
-    void:triples 65566 .
+    void:triples 65567 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/kadastraleGemeentecode> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#kadastraleGemeentecode> ;
     void:triples 0 .
@@ -674,28 +674,28 @@
     void:triples 29862 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/kennisregistratienummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#kennisregistratienummer> ;
-    void:triples 3304879 .
+    void:triples 3305416 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/ligtInObject> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#ligtInObject> ;
-    void:triples 938381 .
+    void:triples 938525 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/locatieAanduidingnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#locatieAanduidingnummer> ;
-    void:triples 217021 .
+    void:triples 217007 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/locatienaam> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#locatienaam> ;
-    void:triples 206899 .
+    void:triples 206881 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/locatieomschrijving> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#locatieomschrijving> ;
-    void:triples 8533 .
+    void:triples 8537 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/naam> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#naam> ;
     void:triples 13931 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/omschrijving> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#omschrijving> ;
-    void:triples 531635 .
+    void:triples 531755 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/openbareRuimte> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#openbareRuimte> ;
-    void:triples 121566 .
+    void:triples 121574 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/oppervlakteInHectare> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#oppervlakteInHectare> ;
     void:triples 500 .
@@ -707,43 +707,43 @@
     void:triples 1421 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/pandIdentificatie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#pandIdentificatie> ;
-    void:triples 48291 .
+    void:triples 48422 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/perceelnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#perceelnummer> ;
-    void:triples 148157 .
+    void:triples 148319 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/plaatscode> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#plaatscode> ;
     void:triples 0 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/postcode> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#postcode> ;
-    void:triples 121291 .
+    void:triples 121298 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/provinciecode> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#provinciecode> ;
-    void:triples 148155 .
+    void:triples 148317 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/registergegeven> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#registergegeven> ;
     void:triples 15 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/registratiedatum> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#registratiedatum> ;
-    void:triples 4508591 .
+    void:triples 4509374 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/rijksmonumentnummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#rijksmonumentnummer> ;
     void:triples 328218 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/sectie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#sectie> ;
-    void:triples 148157 .
+    void:triples 148319 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/verblijfsobjectIdentificatie> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#verblijfsobjectIdentificatie> ;
-    void:triples 114877 .
+    void:triples 114932 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/volledigAdres> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#volledigAdres> ;
-    void:triples 121566 .
+    void:triples 121574 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/werelderfgoednummer> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#werelderfgoednummer> ;
     void:triples 18 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/woonplaatsnaam> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#woonplaatsnaam> ;
-    void:triples 357800 .
+    void:triples 357927 .
 
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/wordtGetoondOp> void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#wordtGetoondOp> ;
     void:triples 500 .
@@ -751,7 +751,7 @@
 <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho> a void:Dataset ;
     dcterms:description "Linked-data-publicatie van cultuurhistorische objecten van de RCE, beschreven volgens de Cultureel Erfgoed Ontologie (CEO)."@nl ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified "2026-07-08"^^xsd:date ;
+    dcterms:modified "2026-07-13"^^xsd:date ;
     dcterms:publisher <http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed> ;
     dcterms:title "CHO-dataset (Cultuurhistorische Objecten)"@nl ;
     void:classPartition <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/ActorEnRol>,
@@ -786,9 +786,9 @@
         <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Vondstlocatie>,
         <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/klasse/Werelderfgoed> ;
     void:classes 133 ;
-    void:entities 8643391 ;
+    void:entities 8645047 ;
     void:feature <http://www.w3.org/ns/formats/Turtle> ;
-    void:properties 403 ;
+    void:properties 408 ;
     void:propertyPartition <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/BAGRelatienummer>,
         <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/BRKRelatienummer>,
         <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/aantalGrondsporen>,
@@ -926,7 +926,7 @@
         <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/woonplaatsnaam>,
         <https://linkeddata.cultureelerfgoed.nl/id/dataset/cho/property/wordtGetoondOp> ;
     void:sparqlEndpoint <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
-    void:triples 58235180 ;
+    void:triples 58245937 ;
     void:uriSpace "https://linkeddata.cultureelerfgoed.nl/" ;
     void:vocabulary <http://www.opengis.net/ont/geosparql>,
         <http://www.w3.org/2004/02/skos/core>,
