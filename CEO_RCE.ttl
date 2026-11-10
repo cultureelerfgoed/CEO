@@ -1660,7 +1660,7 @@ ceo:heeftZaak
   rdfs:label "Has case"@en ;
   rdfs:comment "The property heeftZaak establishes the relationship between the knowledge registration and the case."@en ;
   rdfs:domain ceo:Kennisregistratie ;
-  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo/Zaak> ;
   dcterms:description "De property heeftZaak legt de relatie vast tussen de kennisregistratie en de zaak."@nl ;
   dcterms:description "The heeftZaak property establishes the relationship between the knowledge registration and the case."@en ;
   skos:editorialNote "Property heeft nog geen data."@nl ;
@@ -1727,7 +1727,7 @@ ceo:hoortBijZaak
   rdfs:comment "De property hoortBijZaak legt de relatie tussen kennisregistratie en zaak vast."@nl ;
   rdfs:domain ceo:Kennisregistratie ;
   rdfs:label "Hoort bij zaak"@nl ;
-  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
+  rdfs:range <https://linkeddata.cultureelerfgoed.nl/def/zo/Zaak> ;
   owl:inverseOf ceo:isKennisregistratieVanZaak ;
   rdfs:label "Belongs to case"@en ;
   rdfs:comment "The property hoortBijZaak establishes the relationship between knowledge registration and case."@en ;
@@ -1877,7 +1877,7 @@ ceo:isKennisregistratieVanZaak
   dcterms:created "2019-03-18"^^xsd:date ;
   dcterms:modified "2019-03-19"^^xsd:date ;
   rdfs:comment "De property isKennisregistratieVanZaak legt de relatie tussen zaak en kennisregistratie vast."@nl ;
-  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zo#Zaak> ;
+  rdfs:domain <https://linkeddata.cultureelerfgoed.nl/def/zo/Zaak> ;
   rdfs:label "Is kennisregistratie van zaak"@nl ;
   rdfs:range ceo:Kennisregistratie ;
   owl:inverseOf ceo:hoortBijZaak ;
